@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <statement id="DAO00313_GetAll" resultClass="DataObject">
+      select *
+      from TT_PHACDO_CHUKY_DICHVU
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      order by CHUKY_DICHVU_ID
+    </statement>
+    <statement id="DAO00313_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TT_PHACDO_CHUKY_DICHVU (
+      CHUKY_ID
+      , PHACDO_ID
+      , PHIENBAN_ID
+      , DICHVU_ID
+      , SOLUONG
+      , BENHVIEN_ID
+      , NGAYTAO
+      , NGUOITAO_ID
+      , NGAYCAPNHAT
+      , NGUOICAPNHAT_ID
+      ) values (
+      #CHUKY_ID#
+      , #PHACDO_ID#
+      , #PHIENBAN_ID#
+      , #DICHVU_ID#
+      , #SOLUONG#
+      , #BENHVIEN_ID#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      , #NGAYCAPNHAT#
+      , #NGUOICAPNHAT_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+
+    <update id="DAO00313_Update" parameterClass="System.Collections.IDictionary">
+      update TT_PHACDO_CHUKY_DICHVU set
+      CHUKY_ID = #CHUKY_ID#
+      , PHACDO_ID = #PHACDO_ID#
+      , DICHVU_ID = #DICHVU_ID#
+      , SOLUONG = #SOLUONG#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      CHUKY_DICHVU_ID = '$CHUKY_DICHVU_ID$'
+    </update>
+
+    <statement id="DAO00313_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_PHACDO_CHUKY_DICHVU
+      where
+      CHUKY_DICHVU_ID IN (SELECT * FROM DBO.SPLIT('$CHUKY_DICHVU_ID$',', '))
+    </statement>
+    <statement id="DAO00313_AddChuKy" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TM_PHACDO_CHUKY (
+       PHACDO_ID
+      , MACHUKY
+      , TENCHUKY
+      , THUTU
+      , NGUOITAO_ID
+      , NGAYTAO
+      , NGUOICAPNHAT_ID
+      , NGAYCAPNHAT
+      , BENHVIEN_ID
+      ) values (
+       #PHACDO_ID#
+      , #MACHUKY#
+      , #TENCHUKY#
+      , #THUTU#
+      , #NGUOITAO_ID#
+      , #NGAYTAO#
+      , #NGUOICAPNHAT_ID#
+      , #NGAYCAPNHAT#
+      , #BENHVIEN_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+
+    <update id="DAO00313_UpdateChuKy" parameterClass="System.Collections.IDictionary">
+      update TM_PHACDO_CHUKY set
+      PHACDO_ID = #PHACDO_ID#
+      , MACHUKY = #MACHUKY#
+      , TENCHUKY = #TENCHUKY#
+      , THUTU = #THUTU#
+      , NGUOITAO_ID = #NGUOITAO_ID#
+      , NGAYTAO = #NGAYTAO#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      where
+      CHUKY_ID = '$CHUKY_ID$'
+    </update>
+
+    <statement id="DAO00313_DeleteChuKy" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TM_PHACDO_CHUKY
+      where
+      CHUKY_ID = '$CHUKY_ID$'
+    </statement>
+    </statements>
+</sqlMap>

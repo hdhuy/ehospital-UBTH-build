@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,7004e701e7e8ab25c36d6b12e16db2fb-->
+        <statement id="DAO00006_GetList" resultClass="DataObject">
+            select dv.*, loaiDV.MALOAIDICHVU, captren.NHOMDICHVU_ID as NHOMDICHVU_CAPTREN_ID, captren.TENNHOMDICHVU as NHOMDICHVU_CAPTREN,
+            nhom_dv.TENNHOMDICHVU as TENNHOMDICHVU, nhom_dv.MANHOMDICHVU,
+            case when dv.ATTRIBUTE5 is null then 'TT' else 'KTC' end as LOAI_CHIPHI
+            from TM_DICHVU as dv
+            left join TM_NHOMDICHVU as nhom_dv on nhom_dv.NHOMDICHVU_ID = dv.NHOMDICHVU_ID and nhom_dv.BENHVIEN_ID = '$BENHVIEN_ID$'
+            left join TM_NHOMDICHVU as captren on nhom_dv.CAPTREN_ID = captren.NHOMDICHVU_ID and captren.BENHVIEN_ID = '$BENHVIEN_ID$'
+            left join TM_LOAIDICHVU loaiDV on nhom_dv.LOAIDICHVU_ID = loaiDV.LOAIDICHVU_ID and loaiDV.BENHVIEN_ID = '$BENHVIEN_ID$'
+            where nhom_dv.TAMNGUNG = '0' and dv.BENHVIEN_ID = '$BENHVIEN_ID$'
+            and dv.TAMNGUNG = '0'
+            <isPropertyAvailable prepend="AND" property="MALOAIDICHVU">
+                loaiDV.MALOAIDICHVU = '$MALOAIDICHVU$'
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="AND" property="MADICHVU">
+                dv.MADICHVU = '$MADICHVU$'
+            </isPropertyAvailable>
+        </statement>
+        <!--Revision:0,4f97c68d484ebf27865a69461a99a7a1-->
+        <statement id="DAO00006_GetListDuocTyle" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select DUOC_ID, DOITUONG_ID, (TYLE/100) as TYLE from TM_DOITUONG_GIADUOC_TYLE
+            where
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+            and DOITUONG_ID = '$DOITUONG_ID$'
+        </statement>
+        <!--Revision:0,0723fadfa547460602d2ce35960603f6-->
+        <statement id="DAO00006_GetDSNhomDichVu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TM_NHOMDICHVU
+            where captren_id =
+            (select top (1) NHOMDICHVU_ID from TM_NHOMDICHVU where MANHOMDICHVU = '$MANHOMDICHVU$')
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

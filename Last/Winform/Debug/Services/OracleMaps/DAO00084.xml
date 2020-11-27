@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,e7edb39b068b926984b606f9c48422f5-->
+        <statement id="DAO00084_GetListLoaiThanhVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select THE.*, THE.THETHANHVIEN_ID as LOAITHANHVIEN_ID, THE.TENTHETHANHVIEN as TENLOAITHANHVIEN
+            from TM_CSKH_THETHANHVIEN THE
+            where THE.BENHVIEN_ID = '$BENHVIEN_ID$' and (THE.TAMNGUNG = '0' or THE.TAMNGUNG is null)
+            and trunc(SYSDATE) &gt; trunc(THE.THOIGIANBANTHE)
+            order by THE.THETHANHVIEN_ID
+        </statement>
+        <!--Revision:0,78ca554ad9239c6ec30897f37ef44daa-->
+        <statement id="DAO00084_GetListLoaiThanhVienDanhMuc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select THE.*, THE.THETHANHVIEN_ID as LOAITHANHVIEN_ID, THE.TENTHETHANHVIEN as TENLOAITHANHVIEN
+            from TM_CSKH_THETHANHVIEN THE
+            where THE.BENHVIEN_ID = '$BENHVIEN_ID$' and (THE.TAMNGUNG = '0' or THE.TAMNGUNG is null)
+            order by THE.THETHANHVIEN_ID
+        </statement>
+    </statements>
+</sqlMap>

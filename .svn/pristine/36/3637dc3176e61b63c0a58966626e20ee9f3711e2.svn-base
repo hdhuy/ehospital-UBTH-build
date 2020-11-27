@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <statement id="DAO00311_GetAll" resultClass="DataObject">
+      select *
+      from TT_PHACDO_DIEUTRI
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      order by PHACDO_DIEUTRI_ID
+    </statement>
+    <statement id="DAO00311_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TT_PHACDO_DIEUTRI (
+      BENHNHAN_ID
+      , PHACDO_ID
+      , CHUKY_ID
+      , PHIENBAN_ID
+      , NGAYCHIDINH
+      , NGUOICHIDINH_ID
+      , LYDO
+      , DANHGIA
+      , GHICHU
+      , TRANGTHAI
+      , BENHVIEN_ID
+      , NGAYTAO
+      , NGUOITAO_ID
+      , NGAYCAPNHAT
+      , NGUOICAPNHAT_ID
+      ) values (
+      #BENHNHAN_ID#
+      , #PHACDO_ID#
+      , #CHUKY_ID#
+      , #PHIENBAN_ID#
+      , #NGAYCHIDINH#
+      , #NGUOICHIDINH_ID#
+      , #LYDO#
+      , #DANHGIA#
+      , #GHICHU#
+      , #TRANGTHAI#
+      , #BENHVIEN_ID#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      , #NGAYCAPNHAT#
+      , #NGUOICAPNHAT_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+
+    <update id="DAO00311_Update" parameterClass="System.Collections.IDictionary">
+      update TT_PHACDO_DIEUTRI set
+      BENHNHAN_ID = #BENHNHAN_ID#
+      , PHACDO_ID = #PHACDO_ID#
+      , CHUKY_ID = #CHUKY_ID#
+      , PHIENBAN_ID = #PHIENBAN_ID#
+      , NGAYCHIDINH = #NGAYCHIDINH#
+      , NGUOICHIDINH_ID = #NGUOICHIDINH_ID#
+      , LYDO = #LYDO#
+      , DANHGIA = #DANHGIA#
+      , GHICHU = #GHICHU#
+      , TRANGTHAI = #TRANGTHAI#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      PHACDO_DIEUTRI_ID = '$PHACDO_DIEUTRI_ID$'
+    </update>
+
+    <statement id="DAO00311_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_PHACDO_DIEUTRI
+      where
+      PHACDO_DIEUTRI_ID = '$PHACDO_DIEUTRI_ID$'
+    </statement>
+    <statement id="DAO00311_GetList" resultClass="DataObject">
+      select *
+      from TM_PHACDO_CHUKY
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <update id="DAO00311_UpdateStatus" parameterClass="System.Collections.IDictionary">
+      update TT_PHACDO_DIEUTRI set
+      TRANGTHAI = #TRANGTHAI#
+      , LYDO = #LYDO#
+      , DANHGIA = #DANHGIA#
+      where PHACDO_DIEUTRI_ID = '$PHACDO_DIEUTRI_ID$'
+    </update>
+    <statement id="DAO00311_GetPhacDoWithPatientID" resultClass="DataObject">
+      select pd_dt.NGAYCHIDINH, pd.MAPHACDO, pd.MAPHACDO + ' - ' + pd.TENPHACDO as PHACDO, nv.TENNHANVIEN as NGUOICHIDINH
+      , case when pd_dt.TRANGTHAI = 'DADONG' then N'Đã đóng' else N'Đang dùng' end as TRANGTHAIPHACDO
+      , lst.DICTIONARY_NAME as DANHGIAPHACDO, pd_dt.LYDO, pd_dt.GHICHU
+      , pd_dt.PHACDO_DIEUTRI_ID, pd.PHACDO_ID, pd_dt.BENHNHAN_ID, pd.ICD_ID, pd_ck.CHUKY_ID, pd_dt.TRANGTHAI, pd_dt.DANHGIA
+      from TM_PHACDO pd
+      inner join TT_PHACDO_DIEUTRI pd_dt on pd.PHACDO_ID = pd_dt.PHACDO_ID
+      left join TM_PHACDO_CHUKY pd_ck on pd_ck.PHACDO_ID = pd.PHACDO_ID and pd_ck.CHUKY_ID = pd_dt.CHUKY_ID
+      left join TM_NHANVIEN nv on nv.NHANVIEN_ID = pd_dt.NGUOICHIDINH_ID
+      left join LST_DICTIONARY lst on lst.DICTIONARY_ID = pd_dt.DANHGIA
+      where pd_dt.BENHNHAN_ID = '$BENHNHAN_ID$'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        pd_dt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      order by pd_dt.PHACDO_DIEUTRI_ID DESC
+    </statement>
+    <statement id="DAO00311_GetAllPDWithCode" resultClass="DataObject">
+      select *
+      from TM_PHACDO
+      where MAPHACDO = '$MAPHACDO$'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      order by PHACDO_ID
+    </statement>
+  </statements>
+</sqlMap>

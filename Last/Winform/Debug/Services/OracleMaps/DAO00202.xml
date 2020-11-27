@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,d2a3fe89b36a117914bfe5bcafaccd5c-->
+        <statement id="DAO00202_GetList_NhanVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT N.NHANVIEN_ID, N.MANHANVIEN, N.HO, N.TEN, N.BENHVIEN_ID
+            , P.MAPHONGBAN, D1.DICTIONARY_CODE AS MACHUCDANH, D2.DICTIONARY_CODE AS MATRINHDOCHUYENMON
+            , N.EMAIL, N.TAMNGUNG, N.NGAYCAPNHAT
+            FROM TM_NHANVIEN_iHRP N
+            LEFT JOIN TM_PHONGBAN_iHRP P ON N.PHONGBAN_ID = P.PHONGBAN_ID
+            LEFT JOIN LST_DICTIONARY D1 ON D1.DICTIONARY_TYPE_CODE = 'ChucDanh_iHRP' AND D1.DICTIONARY_ID = N.CHUCDANH_ID
+            LEFT JOIN LST_DICTIONARY D2 ON D2.DICTIONARY_TYPE_CODE = 'TrinhDoChuyenMon_iHRP' AND D2.DICTIONARY_ID = N.TRINHDOCHUYENMON_ID
+            WHERE N.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,5f32cc9a59b34c6378ab375926ff873f-->
+        <statement id="DAO00202_GetList_PhongBan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            WITH PhongBanRec(PHONGBAN_ID, MAPHONGBAN, TENPHONGBAN, TENPHONGBAN_EN, CAP, MAPHONGBAN_PARENT, NGAYCAPNHAT, BENHVIEN_ID, TAMNGUNG) AS
+            (
+            SELECT P.PHONGBAN_ID, P.MAPHONGBAN, P.TENPHONGBAN, P.TENPHONGBAN_EN, 1 AS CAP, NULL AS MAPHONGBAN_PARENT, P.NGAYCAPNHAT, P.BENHVIEN_ID
+            , P.TAMNGUNG
+            FROM TM_PHONGBAN_iHRP P
+            WHERE P.BENHVIEN_ID = '$BENHVIEN_ID$' AND P.CAPTREN_ID IS NULL AND P.CAP = 1
+            UNION ALL
+            SELECT P.PHONGBAN_ID, P.MAPHONGBAN, P.TENPHONGBAN, P.TENPHONGBAN_EN, (P2.CAP + 1) AS CAP, P2.MAPHONGBAN AS MAPHONGBAN_PARENT, P.NGAYCAPNHAT, P.BENHVIEN_ID
+            , P.TAMNGUNG
+            FROM TM_PHONGBAN_iHRP P
+            INNER JOIN TM_PHONGBAN_iHRP  P1 ON P1.PHONGBAN_ID = P.CAPTREN_ID
+            INNER JOIN PhongBanRec P2 ON P2.MAPHONGBAN = P1.MAPHONGBAN
+            WHERE P.BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            SELECT * FROM PhongBanRec
+        </statement>
+        <!--Revision:0,1d2cf10ed77684113ff518dcbe4a2bac-->
+        <statement id="DAO00202_GetList_DonVi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT P.PHONGBAN_ID, P.MAPHONGBAN, P.TENPHONGBAN, P.TENPHONGBAN_EN, 1 AS CAP, NULL AS MAPHONGBAN_PARENT, P.NGAYCAPNHAT, P.BENHVIEN_ID
+            , P.TAMNGUNG
+            FROM TM_PHONGBAN_iHRP P
+            WHERE P.BENHVIEN_ID = '$BENHVIEN_ID$' AND P.CAPTREN_ID IS NULL
+        </statement>
+        <!--Revision:0,e380cc7c156fe9363c3572d122217172-->
+        <statement id="DAO00202_GetList_ChucDanh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DICTIONARY_ID, DICTIONARY_CODE, DICTIONARY_NAME, DICTIONARY_NAME_EN, LAST_UPDATE_DATE
+            FROM LST_DICTIONARY
+            WHERE DICTIONARY_TYPE_CODE = 'ChucDanh_iHRP'
+        </statement>
+        <!--Revision:0,babcc3583061adb8036dbfe4b6fc9004-->
+        <statement id="DAO00202_GetList_TrinhDoChuyenMon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DICTIONARY_ID, DICTIONARY_CODE, DICTIONARY_NAME, DICTIONARY_NAME_EN
+            FROM LST_DICTIONARY
+            WHERE DICTIONARY_TYPE_CODE = 'TrinhDoChuyenMon_iHRP'
+        </statement>
+        <!--Revision:0,e140e5ce0d9f6dc28f62536c1cd6b1a1-->
+        <statement id="DAO00202_GetDictionaryType" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT *
+            FROM LST_DICTIONARY_TYPE
+            WHERE DICTIONARY_TYPE_CODE = '$DICTIONARY_TYPE_CODE$'
+        </statement>
+        <!--Revision:0,15200df21bfd58defe72fa2de93bcec4-->
+        <insert id="DAO00202_Dictionary_Add" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            <selectKey property="ID" type="pre" resultClass="System.Int64">
+                select LST_DICTIONARY_S.nextval as value from dual
+            </selectKey>
+            INSERT INTO LST_DICTIONARY(
+            DICTIONARY_ID
+            ,DICTIONARY_TYPE_ID
+            ,DICTIONARY_TYPE_CODE
+            ,DICTIONARY_CODE
+            ,DICTIONARY_NAME
+            ,DICTIONARY_NAME_EN
+            ,ENABLED
+            ,CREATION_DATE
+            ,CREATED_BY
+            ,LAST_UPDATE_DATE
+            ,LAST_UPDATED_BY
+            ,BENHVIEN_ID)
+            VALUES
+            (
+            #ID#
+            ,#DICTIONARY_TYPE_ID#
+            ,#DICTIONARY_TYPE_CODE#
+            ,#DICTIONARY_CODE#
+            ,#DICTIONARY_NAME#
+            ,#DICTIONARY_NAME_EN#
+            ,#ENABLED#
+            ,#CREATION_DATE#
+            ,#CREATED_BY#
+            ,#LAST_UPDATE_DATE#
+            ,#LAST_UPDATED_BY#
+            ,#BENHVIEN_ID#
+            )
+        </insert>
+        <!--Revision:0,4f02e585777bbe3a759b7e09b104d0fc-->
+        <update id="DAO00202_Dictionary_Update" parameterClass="System.Collections.IDictionary">
+            update LST_DICTIONARY set
+            DICTIONARY_NAME = #DICTIONARY_NAME#
+            , DICTIONARY_NAME_EN = #DICTIONARY_NAME_EN#
+            , LAST_UPDATE_DATE = #LAST_UPDATE_DATE#
+            , LAST_UPDATED_BY = #LAST_UPDATED_BY#
+            where
+            DICTIONARY_CODE = '$DICTIONARY_CODE$' AND DICTIONARY_TYPE_CODE = '$DICTIONARY_TYPE_CODE$'
+        </update>
+        <!--Revision:0,50a1b4b28ff8f720f9a7e7a8e2aec75c-->
+        <statement id="DAO00202_Dictionary_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from LST_DICTIONARY
+            where
+            DICTIONARY_CODE = '$DICTIONARY_CODE$' AND DICTIONARY_TYPE_CODE = '$DICTIONARY_TYPE_CODE$'
+        </statement>
+        <!--Revision:0,c4fbaf9d3e39874853e7f5b6a7cf1c15-->
+        <insert id="DAO00202_PhongBan_Add" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            <selectKey property="ID" type="pre" resultClass="System.Int64">
+                select TM_PHONGBAN_S.nextval as value from dual
+            </selectKey>
+            INSERT INTO TM_PHONGBAN_iHRP
+            (PHONGBAN_ID
+            ,MAPHONGBAN
+            ,TENPHONGBAN
+            ,TENPHONGBAN_EN
+            ,CAP
+            ,CAPTREN_ID
+            ,TAMNGUNG
+            ,NGAYTAO
+            ,NGUOITAO_ID
+            ,NGAYCAPNHAT
+            ,NGUOICAPNHAT_ID
+            ,BENHVIEN_ID)
+            VALUES
+            (
+            #ID#
+            ,#MAPHONGBAN#
+            ,#TENPHONGBAN#
+            ,#TENPHONGBAN_EN#
+            ,#CAP#
+            ,#CAPTREN_ID#
+            ,#TAMNGUNG#
+            ,#NGAYTAO#
+            ,#NGUOITAO_ID#
+            ,#NGAYCAPNHAT#
+            ,#NGUOICAPNHAT_ID#
+            ,#BENHVIEN_ID#
+            )
+        </insert>
+        <!--Revision:0,b92d09b8a25b7cd87043ba25a5c95355-->
+        <update id="DAO00202_PhongBan_Update" parameterClass="System.Collections.IDictionary">
+            update TM_PHONGBAN_iHRP set
+            TENPHONGBAN = #TENPHONGBAN#
+            , TENPHONGBAN_EN = #TENPHONGBAN_EN#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            MAPHONGBAN = '$MAPHONGBAN$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </update>
+        <!--Revision:0,db7c3b76347e412077e92959380af765-->
+        <statement id="DAO00202_PhongBan_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_PHONGBAN_iHRP
+            where
+            MAPHONGBAN = '$MAPHONGBAN$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,f4ead1365ca427ab599aea6a919042a9-->
+        <insert id="DAO00202_NhanVien_Add" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            <selectKey property="ID" type="pre" resultClass="System.Int64">
+                select TM_NHANVIEN_S.nextval as value from dual
+            </selectKey>
+            INSERT INTO TM_NHANVIEN_iHRP
+            (NHANVIEN_ID
+            ,MANHANVIEN
+            ,HO
+            ,TEN
+            ,TENNHANVIEN
+            ,PHONGBAN_ID
+            ,CHUCDANH_ID
+            ,TRINHDOCHUYENMON_ID
+            ,EMAIL
+            ,TAMNGUNG
+            ,NGAYTAO
+            ,NGUOITAO_ID
+            ,NGAYCAPNHAT
+            ,NGUOICAPNHAT_ID
+            ,BENHVIEN_ID)
+            VALUES
+            (
+            #ID#
+            ,#MANHANVIEN#
+            ,#HO#
+            ,#TEN#
+            ,#TENNHANVIEN#
+            ,#PHONGBAN_ID#
+            ,#CHUCDANH_ID#
+            ,#TRINHDOCHUYENMON_ID#
+            ,#EMAIL#
+            ,#TAMNGUNG#
+            ,#NGAYTAO#
+            ,#NGUOITAO_ID#
+            ,#NGAYCAPNHAT#
+            ,#NGUOICAPNHAT_ID#
+            ,#BENHVIEN_ID#
+            )
+        </insert>
+        <!--Revision:0,ac51e83fcf57375689f3c255e035ba33-->
+        <update id="DAO00202_NhanVien_Update" parameterClass="System.Collections.IDictionary">
+            update TM_NHANVIEN_iHRP set
+            HO = #HO#
+            , TEN = #TEN#
+            , TENNHANVIEN = #TENNHANVIEN#
+            , PHONGBAN_ID = #PHONGBAN_ID#
+            , CHUCDANH_ID = #CHUCDANH_ID#
+            , TRINHDOCHUYENMON_ID = #TRINHDOCHUYENMON_ID#
+            , EMAIL = #EMAIL#
+            , TAMNGUNG = #TAMNGUNG#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            MANHANVIEN = '$MANHANVIEN$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </update>
+        <!--Revision:0,85ff72ef16e59e30a0d274e981334520-->
+        <statement id="DAO00202_NhanVien_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_NHANVIEN_iHRP
+            where
+            MANHANVIEN = '$MANHANVIEN$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

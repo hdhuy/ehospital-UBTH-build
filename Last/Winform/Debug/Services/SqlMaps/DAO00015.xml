@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,c591a19479f65d694ff619aeaffdab72-->
+        <statement id="DAO00015_GetList" resultClass="DataObject">
+            select n.MANHOMICD, n.ICD_NHOM_ID as NHOM_ICD_ID, n.TENNHOMICD,
+            c.MACHUONGICD, c.ICD_CHUONG_ID, c.TENCHUONGICD, i.*
+            from TM_ICD i
+            left join TM_ICD_NHOM n on i.ICD_NHOM_ID = n.ICD_NHOM_ID
+            left join TM_ICD_CHUONG c on n.ICD_CHUONG_ID = c.ICD_CHUONG_ID
+            where i.TAMNGUNG = 0
+            and n.TAMNGUNG = 0
+            and c.TAMNGUNG = 0
+            and i.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+      <statement id="DAO00015_GetList_YHCT" resultClass="DataObject">
+        select n.MANHOMICD, n.ICD_NHOM_ID as NHOM_ICD_ID, n.TENNHOMICD,
+        c.MACHUONGICD, c.ICD_CHUONG_ID, c.TENCHUONGICD, i.TENICD, CONCAT(i.MAICD, i.MAICD_U) MAICD,
+        i.ICD_ID, i.MAICD ICDSEACR, i.MAICD_U, i.TENICD_U
+        from TM_ICD i
+        left join TM_ICD_NHOM n on i.ICD_NHOM_ID = n.ICD_NHOM_ID
+        left join TM_ICD_CHUONG c on n.ICD_CHUONG_ID = c.ICD_CHUONG_ID
+        where i.TAMNGUNG = 0
+        and n.TAMNGUNG = 0
+        and c.TAMNGUNG = 0
+        and i.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Localization>
+  <vi-vn>
+    <!--Tên trường-->
+    <string id="F0000001" string="Tên"/>
+    <string id="F0000002" string="Họ"/>
+    <string id="F0000003" string="Đơn vị hành chính"/>
+    <string id="F0000004" string="Ngày sinh"/>
+    <string id="F0000005" string="Họ tên"/>
+    <string id="F0000006" string="Ngày tháng năm sinh"/>
+    <string id="F0000007" string="Thời gian tiếp nhận"/>
+    <string id="F0000008" string="Chẩn đoán ICD"/>
+    <string id="F0000009" string="Hướng giải quyết"/>
+    <string id="F0000010" string="Tài khoản"/>
+    <string id="F0000011" string="Thông tin dược"/>
+    <string id="F0000012" string="Số lượng"/>
+    <string id="F0000013" string="Khoa diều trị"/>
+    <string id="F0000014" string="Số ngày hẹn"/>
+    <string id="F0000015" string="Bệnh viện chuyển đến"/>
+    <string id="F0000016" string="Ngày bắt đầu nghỉ ốm"/>
+    <string id="F0000017" string="Ngày kết thúc nghỉ ốm"/>
+    <string id="F0000018" string="Loại phẫu thuật"/>
+    <string id="F0000019" string="Thời gian bắt đầu phẫu thuật "/>
+    <string id="F0000020" string="Thời gian kết thúc phẫu thuật"/>
+    <string id="F0000021" string="BHYT từ ngày"/>
+    <string id="F0000022" string="BHYT dến ngày"/>
+    <string id="F0000023" string="Ngày y lệnh"/>
+    <string id="F0000024" string="Lí do nhập viện"/>
+    <string id="F0000025" string="Ngày hẹn"/>
+    <string id="F0000026" string="Phòng chuyển đến"/>
+    <string id="F0000027" string="Ngày thực hiện"/>
+    <string id="F0000028" string="Phòng ban thực hiện"/>
+    <string id="F0000029" string="Bác sĩ thực hiện"/>
+    <string id="F0000030" string="Chẩn đoán khoa khám"/>
+    <string id="F0000031" string="Lý do huỷ"/>
+    <string id="F0000032" string="Thời gian cấp cứu"/>
+    <string id="F0000033" string="Khoa điều trị"/>
+    <string id="F0000034" string="Nơi nhập viện"/>
+    <string id="F0000035" string="Người chỉ định"/>
+    <string id="F0000036" string="Khoa nhập viện"/>
+    <string id="F0000037" string="Ngày nhập viện"/>
+    <string id="F0000038" string="Thời gian"/>
+    <string id="F0000039" string="Khoa nằm viện"/>
+    <string id="F0000040" string="Thời gian nhập viện"/>
+    <string id="F0000041" string="Bác sĩ khám"/>
+    <string id="F0000042" string="Giới tính"/>
+    <string id="F0000043" string="Mã báo cáo"/>
+    <string id="F0000044" string="Tập tin báo cáo"/>
+    <string id="F0000045" string="Tập tin dữ liệu"/>
+    <string id="F0000046" string="Loại tham số"/>
+    <string id="F0000047" string="Kiểu dữ liệu mặc định"/>
+    <string id="F0000048" string="Tên tham số"/>
+    <string id="F0000049" string="Tên bác sĩ đề xuất"/>
+    <string id="F0000050" string="Thời gian hội chẩn"/>
+    <string id="F0000051" string="Hình thức hội chẩn"/>
+    <string id="F0000052" string="Địa điểm hội chẩn"/>
+    <string id="F0000053" string="Người liên hệ"/>
+    <string id="F0000054" string="Mã danh mục"/>
+    <string id="F0000055" string="Tên danh mục"/>
+    <string id="F0000056" string="Bảng dữ liệu"/>
+    <string id="F0000057" string="Tên cột"/>
+    <string id="F0000058" string="Giá trị lọc"/>
+    <string id="F0000059" string="Cấp thư mục và thư mục"/>
+    <string id="F0000060" string="Mục đích thanh toán"/>
+    <string id="F0000061" string="Ngày lập"/>
+    <string id="F0000062" string="Người lập"/>
+    <string id="F0000063" string="Sổ biên lai"/>
+    <string id="F0000064" string="Tổng giá trị thanh toán"/>
+    <string id="F0000065" string="Trạng thái"/>
+    <string id="F0000066" string="Ngày chứng từ"/>
+    <string id="F0000067" string="Đơn vị nhận"/>
+    <string id="F0000068" string="Người nhận"/>
+    <string id="F0000069" string="Nhà cung cấp"/>
+    <string id="F0000070" string="Nguồn dược"/>
+    <string id="F0000071" string="Trạng thái chứng từ"/>
+    <string id="F0000072" string="Đơn vị giao"/>
+    <string id="F0000073" string="Số phiếu nhập"/>
+    <string id="F0000074" string="Ngày lập phiếu "/>
+    <string id="F0000075" string="Loại phiếu lĩnh"/>
+    <string id="F0000076" string="Nơi sẽ giao"/>
+    <string id="F0000077" string="Nơi lập phiếu"/>
+    <string id="F0000078" string="Người lập phiếu"/>
+    <string id="F0000079" string="Nguồn dược"/>
+    <string id="F0000080" string="Mục đích chứng từ"/>
+    <string id="F0000081" string="Tháng tính"/>
+    <string id="F0000082" string="Năm tính"/>
+    <string id="F0000083" string="Tên báo cáo"/>
+    <string id="F0000084" string="Giá trị mặc định"/>
+    <string id="F0000085" string="Khoa chuyển đến"/>
+    <string id="F0000086" string="Thời gian chuyển đến"/>
+    <string id="F0000087" string="Loại danh mục"/>
+    <string id="F0000088" string="Thời gian thực hiện"/>
+    <string id="F0000089" string="Từ ngày"/>
+    <string id="F0000090" string="Đến ngày"/>
+    <string id="F0000091" string="Thời gian thực hiện"/>
+    <string id="F0000092" string="Tên điều dưỡng"/>
+    <string id="F0000093" string="Ngày xác nhận"/>
+    <string id="F0000094" string="Bác sĩ điều trị"/>
+    <string id="F0000095" string="Loại biên lai"/>
+    <string id="F0000096" string="Ký hiệu"/>
+    <string id="F0000097" string="Số bắt đầu"/>
+    <string id="F0000098" string="Số quyển"/>
+    <string id="F0000099" string="Số kết thúc"/>
+    <string id="F0000100" string="Thời gian phát hành"/>
+    <string id="F0000101" string="Ngày hiệu lực"/>
+    <string id="F0000102" string="Ngày hết hiệu lực"/>
+    <string id="F0000103" string="Ngày cấp"/>
+    <string id="F0000104" string="Ngày miễn đồng chi trả"/>
+    <string id="F0000105" string="Mã số"/>
+    <string id="F0000106" string="Tên mẫu kết quả"/>
+    <string id="F0000107" string="Kỹ thuật"/>
+    <string id="F0000108" string="Kết quả"/>
+    <string id="F0000109" string="Kết luận"/>
+    <string id="F0000110" string="Thời điểm cấp cứu"/>
+    <string id="F0000111" string="Thời gian ra khoa"/>
+    <string id="F0000112" string="Thời điểm đến khám"/>
+    <string id="F0000113" string="Thời điểm xảy ra tai nạn"/>
+    <string id="F0000114" string="Ngày lập phiếu"/>
+    <string id="F0000115" string="Hoạt chất 1"/>
+    <string id="F0000116" string="Hoạt chất 2"/>
+    <string id="F0000117" string="Mức độ tác hại"/>
+    <string id="F0000118" string="Cấp độ chứng từ"/>
+    <string id="F0000119" string="Nguồn"/>
+    <string id="F0000120" string="Phạm vi"/>
+    <string id="F0000121" string="Loại vật tư"/>
+    <string id="F0000122" string="Và"/>
+    <string id="F0000123" string="Loại 1"/>
+    <string id="F0000124" string="Loại 2"/>
+    <string id="F0000125" string="Kho dược"/>
+    <string id="F0000126" string="Phạm vi"/>
+    <string id="F0000127" string="Loại DV"/>
+    <string id="F0000128" string="Nhóm DV"/>
+    <string id="F0000129" string="Chẩn đoán ra viện"/>
+    <string id="F0000130" string="Lý do ra viện"/>
+    <string id="F0000131" string="Chuyển viện"/>
+    <string id="F0000132" string="Bác sĩ điều trị"/>
+    <string id="F0000133" string="ICD Vào khoa"/>
+    <string id="F0000134" string="ICD Chính"/>
+    <string id="F0000135" string="Kết quả điều trị"/>
+    <string id="F0000136" string="Thời điểm xảy ra tai nạn"/>
+    <string id="F0000137" string="Điểm xảy ra"/>
+    <string id="F0000138" string="Nguyên nhân trực tiếp"/>
+    <string id="F0000139" string="Nguyên nhân chi tiết"/>
+    <string id="F0000140" string="Xuất lúc"/>
+    <string id="F0000141" string="Kết quả điều trị"/>
+    <string id="F0000142" string="Nhập khoa"/>
+    <string id="F0000143" string="Phân nhóm DV"/>
+    <string id="F0000144" string="Chỉ định thường quy"/>
+    <string id="F0000145" string="Chỉ định hẹn"/>
+    <string id="F0000146" string="Chỉ định bên ngoài"/>
+    <string id="F0000147" string="Nhóm"/>
+    <string id="F0000148" string="Cấp trên"/>
+    <string id="F0000149" string="Nhà cung cấp"/>
+    <string id="F0000150" string="Ngày cung cấp"/>
+    <string id="F0000151" string="Ngày hết hạn"/>
+    <string id="F0000152" string="Mã nhóm"/>
+    <string id="F0000153" string="Tên nhóm"/>
+    <string id="F0000154" string="Phân nhóm"/>
+    <string id="F0000155" string="Mã ICD"/>
+    <string id="F0000156" string="Thời gian đo"/>
+    <string id="F0000157" string="Ngày ban hành"/>
+    <string id="F0000158" string="Ngày hiệu lực"/>
+    <string id="F0000159" string="Loại thành viên"/>
+    <string id="F0000160" string="Ngày tạo thành viên"/>
+    <string id="F0000161" string="Người giao"/>
+    <string id="F0000162" string="Người nhận"/>
+    <string id="F0000163" string="Người chuyển"/>
+    <string id="F0000164" string="Ngày chuyển"/>
+    <string id="F0000165" string="Thời gian trả"/>
+    <string id="F0000166" string="Loại DN"/>
+    <string id="F0000167" string="Hình thức mượn"/>
+    <string id="F0000168" string="Người yêu cầu"/>
+    <string id="F0000169" string="Khoa phòng"/>
+    <string id="F0000170" string="Chuỗi gõ tắt"/>
+    <string id="F0000171" string="Nội dung đầy đủ"/>
+    <string id="F0000172" string="Mật khẩu hiện tại"/>
+    <string id="F0000173" string="Mật khẩu mới"/>
+    <string id="F0000174" string="Xác nhận mật khẩu mới"/>
+    <string id="F0000175" string="Ngày hợp đồng"/>
+    <!--Administration fields-->
+    <string id="F0000176" string="Tên nhóm"/>
+    <string id="F0000177" string="Tên truy cập"/>
+    <string id="F0000178" string="Mật khẩu"/>
+
+    <string id="F0000179" string="tháng tuổi"/>
+    <string id="F0000180" string="tuổi"/>
+    <string id="F0000181" string="kg"/>
+
+    <string id="F0000182" string="Chiều cao"/>
+    <string id="F0000183" string="Cân nặng"/>
+    <string id="F0000184" string="Nhịp thở"/>
+    <string id="F0000185" string="HA tối đa"/>
+    <string id="F0000186" string="HA Tối thiểu"/>
+    <string id="F0000187" string="Nhiệt độ"/>
+    <string id="F0000188" string="Tiền sử bệnh"/>
+    <string id="F0000189" string="Triệu chứng lâm sàng"/>
+    <string id="F0000190" string="Tập tin"/>
+    <string id="F0000191" string="Mạch"/>
+    <string id="F0000192" string="Cơ sở dữ liệu"/>
+    <string id="F0000193" string="Ngày khoá"/>
+
+    <string id="F0000194" string="Thời gian nhận mẫu"/>
+    <string id="F0000195" string="Thời gian cố định bệnh phẩm"/>
+    <string id="F0000196" string="Thời gian dự kiến trả kết quả"/>
+    <string id="F0000197" string="Nơi thực hiện"/>
+    <string id="F0000198" string="Thời gian lấy mẫu"/>
+
+    <string id="F0000199" string="Dược"/>
+    <string id="F0000200" string="Số lượng"/>
+    <string id="F0000201" string="Ngày lập"/>
+    <string id="F0000202" string="Người lập"/>
+    <string id="F0000203" string="Người nhận"/>
+    <string id="F0000204" string="Tháng"/>
+    <string id="F0000205" string="Phạm vi"/>
+
+    <string id="F0000206" string="Người lấy mẫu"/>
+
+    <string id="F0000207" string="Ám số GPB"/>
+    <string id="F0000208" string="Thời gian nhận mẫu"/>
+
+    <string id="F0000209" string="Phân cấp chăm sóc"/>
+    <string id="F0000210" string="Loại hồ sơ"/>
+    <string id="F0000211" string="Người cho mượn"/>
+    <string id="F0000212" string="Danh sách"/>
+    <string id="F0000213" string="Người trả"/>
+    <string id="F0000214" string="Người nhận trả"/>
+    <string id="F0000215" string="Nhóm từ điển"/>
+    <string id="F0000216" string="Số phiếu"/>
+    <string id="F0000217" string="Tài khoản email"/>
+    <string id="F0000218" string="Người quản lý báo cáo"/>
+    <string id="F0000219" string="Mã hàng hóa"/>
+    <string id="F0000220" string="Tên hàng hóa"/>
+    <string id="F0000221" string="Đơn vị tính"/>
+    <string id="F0000222" string="Số lượng tối thiểu"/>
+    <string id="F0000223" string="Nhóm hàng hóa"/>
+    <string id="F0000224" string="Loại hàng hóa"/>
+    
+    
+    <!--Gói-->
+    <string id="F0000225" string="Thời gian bắt đầu bán gói"/>
+    <string id="F0000226" string="Thời gian kết thúc bán gói"/>
+    <string id="F0000227" string="Mã gói"/>
+    <string id="F0000228" string="Tên gói"/>
+    <string id="F0000229" string="Thời gian sử dụng gói"/>
+    <string id="F0000230" string="Thành tiền gói"/>
+    
+
+    <string id="F0000231" string="Màn hình"/>
+    <string id="F0000232" string="Báo cáo"/>
+    <string id="F0000233" string="Số BHYT"/>
+    <string id="F0000234" string="Bác sĩ kết luận"/>
+    <string id="F0000235" string="Số lượng yêu cầu"/>
+    <string id="F0000236" string="Nơi giao"/>
+    <string id="F0000237" string="Số lượng xuất"/>
+    <string id="F0000238" string="Kho xuất"/>
+    <string id="F0000239" string="Nơi nhận"/>
+
+    <string id="F0000240" string="Lí do hội chẩn"/>
+    <string id="F0000241" string="Người dùng"/>
+    <string id="F0000242" string="Phòng ban"/>
+    <string id="F0000243" string="Kho dược"/>
+    <string id="F0000244" string="Cho phép"/>
+    <string id="F0000245" string="Quyền nhóm"/>
+
+    <string id="F0000246" string="Nơi chỉ định"/>
+    <string id="F0000247" string="Người duyệt"/>
+    <string id="F0000248" string="Công ty chi trả"/>
+    <string id="F0000249" string="Tên hoạt chất"/>
+    <string id="F0000250" string="Tên"/>
+    
+    <string id="F0000251" string="Loại gói"/>
+    <string id="F0000252" string="Mã người bệnh"/>
+
+    <string id="F0000253" string="Ghi chú"/>
+    <string id="F0000254" string="Kho kiểm kê"/>
+    <string id="F0000255" string="Ngày kiểm kê"/>
+    <string id="F0000256" string="Tên khách hàng"/>
+
+    <string id="F0000257" string="Sớm hẹn"/>
+    <string id="F0000258" string="Đúng hẹn"/>
+    <string id="F0000259" string="Trễ hẹn"/>
+
+    <string id="F0000260" string="Nhà cung cấp"/>
+    <string id="F0000261" string="Đơn giá"/>
+    <string id="F0000262" string="Tỷ lệ"/>
+
+    <string id="F0000263" string="Tỷ lệ miễn giảm"/>
+    <string id="F0000264" string="Kiểu hồ sơ"/>
+    <string id="F0000265" string="Tổng số người dùng:"/>
+    <string id="F0000266" string="Mật khẩu"/>
+    
+    <string id="F0000267" string="Công ty BHTN"/>
+    <string id="F0000268" string="Số BHTN"/>
+    <string id="F0000269" string="Ngày hiệu lực"/>
+    <string id="F0000270" string="Ngày hết hạn"/>
+    <string id="F0000271" string="Ngày tạo"/>
+    <string id="F0000272" string="Người tạo"/>
+    <string id="F0000273" string="Công ty chi trả"/>
+    <string id="F0000274" string="Lý do"/>
+    <string id="F0000275" string="Người duyệt:"/>
+    <string id="F0000276" string="Người bỏ duyệt:"/>
+    <!--OPT-->
+    <string id="F0000277" string="Thời gian bắt đầu"/>
+    <string id="F0000278" string="ICD khám bệnh"/>
+    <string id="F0000279" string="Tên đợt điều trị"/>
+    <string id="F0000280" string="Tên bệnh nhân"/>
+    <string id="F0000281" string="Ngày hẹn"/>
+    <string id="F0000282" string="Hôn nhân"/>
+    <string id="F0000283" string="Số HĐ"/>
+    <string id="F0000284" string="Công ty"/>
+    <string id="F0000285" string="Hình thức phát sinh"/>
+    <string id="F0000286" string="Ngày hiệu lực"/>
+    <string id="F0000287" string="Ngày hết hạn"/>
+    <string id="F0000288" string="Ngày hợp đồng"/>
+    <string id="F0000289" string="Giá trị HĐ"/>
+    <string id="F0000290" string="Số BN"/>
+    <string id="F0000291" string="Trạng thái"/>
+    <string id="F0000292" string="Loại HĐ"/>
+    <string id="F0000293" string="Mẫu checklist"/>
+    <string id="F0000294" string="Giá tiền từng BN"/>
+    <string id="F0000295" string="Hãng sản xuất"/>
+    <string id="F0000296" string="Loại dược"/>
+    <string id="F0000297" string="Đơn vị tính"/>
+    <string id="F0000298" string="Nhóm dược"/>
+    <string id="F0000299" string="Phân nhóm dược"/>
+    <string id="F0000300" string="Nhóm phát hành giá"/>
+    <string id="F0000301" string="Phân loại dược"/>
+    <string id="F0000302" string="Loại thẻ thành viên"/>
+    <string id="F0000303" string="STT bệnh nhân"/>
+    <string id="F0000304" string="Gói khám sức khỏe"/>
+    <string id="F0000305" string="Mã phác đồ"/>
+    <string id="F0000306" string="Tên phác đồ"/>
+    <string id="F0000307" string="Mã ICD"/>
+    <string id="F0000308" string="Mã chu kỳ"/>
+    <string id="F0000309" string="Tên chu kỳ"/>
+    <string id="F0000310" string="Số thứ tự chu kỳ"/>
+    <string id="F0000311" string="Mã công ty"/>
+    <string id="F0000312" string="Tên công ty"/>
+    <string id="F0000313" string="Loại công ty"/>
+    <string id="F0000314" string="Phân loại báo cáo"/>
+    <string id="F0000315" string="Loại thầu"/>
+
+    <!--BBM-->
+    <string id="F0000316" string="Nhóm máu"/>
+    <string id="F0000317" string="Nhóm RhD"/>
+
+    <string id="F0000318" string="Tên phiếu, báo cáo"/>
+    <string id="F0000319" string="Xã, huyện, tỉnh"/>
+    <string id="F0000320" string="Bác sĩ chỉ định"/>
+    <string id="F0000321" string="Nơi giới thiệu"/>
+    <string id="F0000322" string="Ngày chuyển tuyến"/>
+    
+    <string id="F0000323" string="Mạch"/>
+    <string id="F0000324" string="Nhiệt độ"/>
+    <string id="F0000325" string="Tuần hoàn"/>
+    <string id="F0000326" string="Tuần hoàn"/>
+    <string id="F0000327" string="Bác sĩ khám nội"/>
+    <string id="F0000328" string="Ngoại khoa"/>
+    <string id="F0000329" string="Bác sĩ khám ngoại khoa"/>
+    <string id="F0000330" string="Sản phụ khoa"/>
+    <string id="F0000331" string="Bác sĩ sản phụ khoa"/>
+    <string id="F0000332" string="Có kính mắt trái"/>
+    <string id="F0000333" string="Có kính mắt phải"/>
+    <string id="F0000334" string="Không kính mắt trái"/>
+    <string id="F0000335" string="Không kính mắt phải"/>
+    <string id="F0000336" string="Bác sĩ mắt"/>
+    <string id="F0000337" string="Tai trái nói thường"/>
+    <string id="F0000338" string="Tai trái nói thầm"/>
+    <string id="F0000339" string="Tai phải nói thường"/>
+    <string id="F0000340" string="Tai phải nói thầm"/>
+    <string id="F0000341" string="Bác sĩ Tai - Mũi - Họng"/>
+    <string id="F0000342" string="Hàm trên"/>
+    <string id="F0000343" string="Hàm dưới"/>
+    <string id="F0000344" string="Bác sĩ Răng - Hàm - Mặt"/>
+    <string id="F0000345" string="Da liễu"/>
+    <string id="F0000346" string="Bác sĩ da liễu"/>
+    <string id="F0000347" string="Nguồn người bệnh"/>
+    <string id="F0000348" string="Chẩn đoán"/>
+    <string id="F0000349" string="Đường dẫn lưu tệp"/>
+    <string id="F0000350" string="Hệ thống danh mục"/>
+    <string id="F0000351" string="Diễn giải"/>
+    <string id="F0000352" string="Loại bệnh án"/>
+    <string id="F0000353" string="Kho khác"/>
+    <string id="F0000354" string="Số hợp đồng"/>
+    <string id="F0000355" string="Thị lực mắt trái"/>
+    <string id="F0000356" string="Thị lực mắt phải"/>
+    <string id="F0000357" string="Nghề nghiệp"/>
+    <string id="F0000358" string="Gói thầu"/>
+    <string id="F0000359" string="Thiết bị"/>
+    <string id="F0000360" string="Số dây máu"/>
+    <string id="F0000361" string="Diễn biến"/>
+    <string id="F0000362" string="Số lượng nhập"/>
+    <string id="F0000363" string="Thành tiền sau VAT"/>
+    <string id="F0000364" string="Tìm"/>
+    <string id="F0000365" string="Người nhận"/>
+    <string id="F0000366" string="Loại phiếu"/>
+    <string id="F0000367" string="Diễn giải"/>
+    <string id="F0000368" string="Số lượng xuất"/>
+    <string id="F0000369" string="Nơi nhận"/>
+    <string id="F0000370" string="Ngày giờ"/>
+    <string id="F0000371" string="Thời gian kết thúc"/>
+    <string id="F0000372" string="Khoa khám bệnh ngoại trú"/>
+    <string id="F0000373" string="Ngày trị liệu"/>
+    <string id="F0000374" string="Lý do đến tư vấn"/>
+    <string id="F0000375" string="Nguời can thiệp"/>
+    <string id="F0000376" string="Quận/Huyện"/>
+    <string id="F0000377" string="Xã/Phường"/>
+    <string id="F0000378" string="Mã mẫu bệnh án"/>
+    <string id="F0000379" string="Tên mẫu bệnh án"/>
+    <string id="F0000380" string="Phẫu thuật viên chính 1"/>
+    <string id="F0000381" string="Phẫu thuật viên chính 2"/>
+    <string id="F0000382" string="Ngày mổ"/>
+    <string id="F0000383" string="Loại dị ứng"/>
+    <string id="F0000384" string="Tiêu đề dị ứng"/>
+    <string id="F0000385" string="Mã cảnh báo dị ứng"/>
+    <string id="F0000386" string="Thời gian cố định"/>
+    <string id="F0000387" string="Bác sĩ cố định"/>
+  </vi-vn>
+</Localization>

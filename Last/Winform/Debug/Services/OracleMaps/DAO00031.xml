@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,3ecd57175d197c97bc6a4fe1ab1ba031-->
+        <statement id="DAO00031_GetList" resultClass="DataObject">
+            select *
+            from TM_DOITUONG
+            where ACTIVE = 1 and BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isNotEmpty prepend="and" property="MADOITUONG_SEARCH">
+                MADOITUONG like '%$MADOITUONG_SEARCH$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MADOITUONG_NOT_SEARCH">
+                MADOITUONG not like '%$MADOITUONG_NOT_SEARCH$%'
+            </isNotEmpty>
+        </statement>
+        <!--Revision:0,9283c4823071d761e50b26d072495db5-->
+        <statement id="DAO00031_GetMaDoiTuong" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_DOITUONG
+            where DOITUONG_ID = '$DOITUONG_ID$'
+        </statement>
+    </statements>
+</sqlMap>

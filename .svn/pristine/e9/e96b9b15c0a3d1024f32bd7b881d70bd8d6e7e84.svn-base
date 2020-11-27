@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,e8f4c800007ef0d09d2aa34b1d51c9d2-->
+        <statement id="DAO00201_GetAll" resultClass="DataObject">
+            select *
+            from TM_REPORT_DETAIL
+            order by REPORT_DETAIL_ID
+        </statement>
+        <!--Revision:0,ddc854c681bc30bea478f979e7a77375-->
+        <statement id="DAO00201_GetListByParentReportID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select RD.*
+            from TM_REPORT AS R
+            INNER JOIN TM_REPORT_SUB_DEFINITION AS RS ON R.REPORT_CODE = RS.REPORT_CODE AND R.BENHVIEN_ID = RS.BENHVIEN_ID
+            INNER JOIN TM_REPORT_DETAIL AS RD ON RD.REPORT_CODE = RS.SUB_REPORT_CODE AND RD.BENHVIEN_ID = RS.BENHVIEN_ID
+            where R.REPORT_CODE  = '$REPORT_CODE$' AND R.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,15e32daff4e3e0ac3ff4e2c4d4e4e7bf-->
+        <statement id="DAO00201_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_REPORT_DETAIL
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="REPORT_DETAIL_ID">
+                        TM_REPORT_DETAIL.REPORT_DETAIL_ID = '$REPORT_DETAIL_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PARAMETER_CODE">
+                        TM_REPORT_DETAIL.PARAMETER_CODE = '$PARAMETER_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PARAMETER_NAME">
+                        TM_REPORT_DETAIL.PARAMETER_NAME = '$PARAMETER_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CONTROL_TYPE">
+                        TM_REPORT_DETAIL.CONTROL_TYPE = '$CONTROL_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PARAMETER_INDEX">
+                        TM_REPORT_DETAIL.PARAMETER_INDEX = '$PARAMETER_INDEX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LENGTH">
+                        TM_REPORT_DETAIL.LENGTH = '$LENGTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DEFAULT_VALUE_TYPE">
+                        TM_REPORT_DETAIL.DEFAULT_VALUE_TYPE = '$DEFAULT_VALUE_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DEFAULT_VALUE">
+                        TM_REPORT_DETAIL.DEFAULT_VALUE = '$DEFAULT_VALUE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="READ_ONLY">
+                        TM_REPORT_DETAIL.READ_ONLY = '$READ_ONLY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_NOTNULL">
+                        TM_REPORT_DETAIL.IS_NOTNULL = '$IS_NOTNULL$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_REPORT_PARAMETER">
+                        TM_REPORT_DETAIL.IS_REPORT_PARAMETER = '$IS_REPORT_PARAMETER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_DB_PARAMETER">
+                        TM_REPORT_DETAIL.IS_DB_PARAMETER = '$IS_DB_PARAMETER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRIVATE_PARAMETER_CODE">
+                        TM_REPORT_DETAIL.PRIVATE_PARAMETER_CODE = '$PRIVATE_PARAMETER_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRIVATE_PARAMETER_NAME">
+                        TM_REPORT_DETAIL.PRIVATE_PARAMETER_NAME = '$PRIVATE_PARAMETER_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_DATA_GROUP">
+                        TM_REPORT_DETAIL.IS_DATA_GROUP = '$IS_DATA_GROUP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DATA_GROUP">
+                        TM_REPORT_DETAIL.DATA_GROUP = '$DATA_GROUP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="RELATION_PARAMETER_CODE">
+                        TM_REPORT_DETAIL.RELATION_PARAMETER_CODE = '$RELATION_PARAMETER_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="RELATION_INDEX_LIST">
+                        TM_REPORT_DETAIL.RELATION_INDEX_LIST = '$RELATION_INDEX_LIST$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_1">
+                        TM_REPORT_DETAIL.ATTRIBUTE_1 = '$ATTRIBUTE_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_2">
+                        TM_REPORT_DETAIL.ATTRIBUTE_2 = '$ATTRIBUTE_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_3">
+                        TM_REPORT_DETAIL.ATTRIBUTE_3 = '$ATTRIBUTE_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_4">
+                        TM_REPORT_DETAIL.ATTRIBUTE_4 = '$ATTRIBUTE_4$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_5">
+                        TM_REPORT_DETAIL.ATTRIBUTE_5 = '$ATTRIBUTE_5$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_CODE">
+                        TM_REPORT_DETAIL.REPORT_CODE = '$REPORT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DESCRIPTION">
+                        TM_REPORT_DETAIL.DESCRIPTION = '$DESCRIPTION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_REPORT_DETAIL.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by PARAMETER_INDEX
+        </statement>
+        <!--Revision:0,378065c02b7664d15a3a3c3bdf75530c-->
+        <statement id="DAO00201_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_REPORT_DETAIL
+            where TM_REPORT_DETAIL.REPORT_DETAIL_ID  = '$value$'
+            order by REPORT_DETAIL_ID
+        </statement>
+        <!--Revision:0,c937065c5825744bd172fb8e1df9e227-->
+        <statement id="DAO00201_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_REPORT_DETAIL
+            where TM_REPORT_DETAIL.REPORT_DETAIL_ID  = '$REPORT_DETAIL_ID$'
+            order by REPORT_DETAIL_ID
+        </statement>
+        <!--Revision:0,5008fc986fd8af3dc75e10d9a562f7ef-->
+        <statement id="DAO00201_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_REPORT_DETAIL (
+            PARAMETER_CODE
+            , PARAMETER_NAME
+            , CONTROL_TYPE
+            , PARAMETER_INDEX
+            , LENGTH
+            , DEFAULT_VALUE_TYPE
+            , DEFAULT_VALUE
+            , READ_ONLY
+            , IS_NOTNULL
+            , IS_REPORT_PARAMETER
+            , IS_DB_PARAMETER
+            , PRIVATE_PARAMETER_CODE
+            , PRIVATE_PARAMETER_NAME
+            , IS_DATA_GROUP
+            , DATA_GROUP
+            , RELATION_PARAMETER_CODE
+            , RELATION_INDEX_LIST
+            , ATTRIBUTE_1
+            , ATTRIBUTE_2
+            , ATTRIBUTE_3
+            , ATTRIBUTE_4
+            , ATTRIBUTE_5
+            , REPORT_ID
+            , REPORT_CODE
+            , DESCRIPTION
+            , BENHVIEN_ID
+            ) values (
+            #PARAMETER_CODE#
+            , #PARAMETER_NAME#
+            , #CONTROL_TYPE#
+            , #PARAMETER_INDEX#
+            , #LENGTH#
+            , #DEFAULT_VALUE_TYPE#
+            , #DEFAULT_VALUE#
+            , #READ_ONLY#
+            , #IS_NOTNULL#
+            , #IS_REPORT_PARAMETER#
+            , #IS_DB_PARAMETER#
+            , #PRIVATE_PARAMETER_CODE#
+            , #PRIVATE_PARAMETER_NAME#
+            , #IS_DATA_GROUP#
+            , #DATA_GROUP#
+            , #RELATION_PARAMETER_CODE#
+            , #RELATION_INDEX_LIST#
+            , #ATTRIBUTE_1#
+            , #ATTRIBUTE_2#
+            , #ATTRIBUTE_3#
+            , #ATTRIBUTE_4#
+            , #ATTRIBUTE_5#
+            , #REPORT_ID#
+            , #REPORT_CODE#
+            , #DESCRIPTION#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,54514ba2c9629d30943aea20c3668d8b-->
+        <update id="DAO00201_Update" parameterClass="System.Collections.IDictionary">
+            update TM_REPORT_DETAIL set
+            PARAMETER_CODE = #PARAMETER_CODE#
+            , PARAMETER_NAME = #PARAMETER_NAME#
+            , CONTROL_TYPE = #CONTROL_TYPE#
+            , PARAMETER_INDEX = #PARAMETER_INDEX#
+            , LENGTH = #LENGTH#
+            , DEFAULT_VALUE_TYPE = #DEFAULT_VALUE_TYPE#
+            , DEFAULT_VALUE = #DEFAULT_VALUE#
+            , READ_ONLY = #READ_ONLY#
+            , IS_NOTNULL = #IS_NOTNULL#
+            , IS_REPORT_PARAMETER = #IS_REPORT_PARAMETER#
+            , IS_DB_PARAMETER = #IS_DB_PARAMETER#
+            , PRIVATE_PARAMETER_CODE = #PRIVATE_PARAMETER_CODE#
+            , PRIVATE_PARAMETER_NAME = #PRIVATE_PARAMETER_NAME#
+            , IS_DATA_GROUP = #IS_DATA_GROUP#
+            , DATA_GROUP = #DATA_GROUP#
+            , RELATION_PARAMETER_CODE = #RELATION_PARAMETER_CODE#
+            , RELATION_INDEX_LIST = #RELATION_INDEX_LIST#
+            , ATTRIBUTE_1 = #ATTRIBUTE_1#
+            , ATTRIBUTE_2 = #ATTRIBUTE_2#
+            , ATTRIBUTE_3 = #ATTRIBUTE_3#
+            , ATTRIBUTE_4 = #ATTRIBUTE_4#
+            , ATTRIBUTE_5 = #ATTRIBUTE_5#
+            , REPORT_ID = #REPORT_ID#
+            , REPORT_CODE = #REPORT_CODE#
+            , DESCRIPTION = #DESCRIPTION#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            REPORT_DETAIL_ID = '$REPORT_DETAIL_ID$'
+        </update>
+        <!--Revision:0,d526a7b9ea9567884308842eb65daf76-->
+        <statement id="DAO00201_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_REPORT_DETAIL
+            where
+            REPORT_DETAIL_ID = '$REPORT_DETAIL_ID$'
+        </statement>
+        <!--Revision:0,8f4658401c4dc3e956d034a6cd1685b6-->
+        <statement id="DAO00201_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_REPORT_DETAIL
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="REPORT_DETAIL_ID">
+                        TM_REPORT_DETAIL.REPORT_DETAIL_ID = '$REPORT_DETAIL_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PARAMETER_CODE">
+                        TM_REPORT_DETAIL.PARAMETER_CODE = '$PARAMETER_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PARAMETER_NAME">
+                        TM_REPORT_DETAIL.PARAMETER_NAME = '$PARAMETER_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CONTROL_TYPE">
+                        TM_REPORT_DETAIL.CONTROL_TYPE = '$CONTROL_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PARAMETER_INDEX">
+                        TM_REPORT_DETAIL.PARAMETER_INDEX = '$PARAMETER_INDEX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LENGTH">
+                        TM_REPORT_DETAIL.LENGTH = '$LENGTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DEFAULT_VALUE_TYPE">
+                        TM_REPORT_DETAIL.DEFAULT_VALUE_TYPE = '$DEFAULT_VALUE_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DEFAULT_VALUE">
+                        TM_REPORT_DETAIL.DEFAULT_VALUE = '$DEFAULT_VALUE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="READ_ONLY">
+                        TM_REPORT_DETAIL.READ_ONLY = '$READ_ONLY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_NOTNULL">
+                        TM_REPORT_DETAIL.IS_NOTNULL = '$IS_NOTNULL$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_REPORT_PARAMETER">
+                        TM_REPORT_DETAIL.IS_REPORT_PARAMETER = '$IS_REPORT_PARAMETER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_DB_PARAMETER">
+                        TM_REPORT_DETAIL.IS_DB_PARAMETER = '$IS_DB_PARAMETER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRIVATE_PARAMETER_CODE">
+                        TM_REPORT_DETAIL.PRIVATE_PARAMETER_CODE = '$PRIVATE_PARAMETER_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRIVATE_PARAMETER_NAME">
+                        TM_REPORT_DETAIL.PRIVATE_PARAMETER_NAME = '$PRIVATE_PARAMETER_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_DATA_GROUP">
+                        TM_REPORT_DETAIL.IS_DATA_GROUP = '$IS_DATA_GROUP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DATA_GROUP">
+                        TM_REPORT_DETAIL.DATA_GROUP = '$DATA_GROUP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="RELATION_PARAMETER_CODE">
+                        TM_REPORT_DETAIL.RELATION_PARAMETER_CODE = '$RELATION_PARAMETER_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="RELATION_INDEX_LIST">
+                        TM_REPORT_DETAIL.RELATION_INDEX_LIST = '$RELATION_INDEX_LIST$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_1">
+                        TM_REPORT_DETAIL.ATTRIBUTE_1 = '$ATTRIBUTE_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_2">
+                        TM_REPORT_DETAIL.ATTRIBUTE_2 = '$ATTRIBUTE_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_3">
+                        TM_REPORT_DETAIL.ATTRIBUTE_3 = '$ATTRIBUTE_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_4">
+                        TM_REPORT_DETAIL.ATTRIBUTE_4 = '$ATTRIBUTE_4$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_5">
+                        TM_REPORT_DETAIL.ATTRIBUTE_5 = '$ATTRIBUTE_5$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_ID">
+                        TM_REPORT_DETAIL.REPORT_ID = '$REPORT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DESCRIPTION">
+                        TM_REPORT_DETAIL.DESCRIPTION = '$DESCRIPTION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_REPORT_DETAIL.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,a58414ff5fa00cdade6a9d574af1bddc-->
+        <statement id="DAO00087_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select CODE, VALUE, BENHVIEN_ID
+            from TM_SYS_APPSETTINGS
+            where LOCKED = '0' and BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by SETTING_ID
+        </statement>
+        <!--Revision:0,27e3f0e2790c11c9cd31634b7ba9d93c-->
+        <statement id="DAO00087_GetServiceParams" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select CODE, VALUE
+            from TM_SYS_APPSETTINGS
+            where LOCKED = '0' and BENHVIEN_ID = '$BENHVIEN_ID$'
+            <!--and TYPE = '2'-->
+        </statement>
+    </statements>
+</sqlMap>

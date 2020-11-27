@@ -1,0 +1,72 @@
+FPT.Framework.Presentation.GridViewStyle, FPT.Framework.Presentation
+{
+  "RowHeaderCellStyle": {
+    "ForeColor": "255,255,255,255",
+    "BackColor": "255,0,155,159",
+    "SelectionForeColor": "255,255,255,255",
+    "SelectionBackColor": "255,51,153,255",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": true,
+    "Padding": "0, 0, 0, 0"
+  },
+  "ColumnHeaderCellStyle": {
+    "ForeColor": "@gridhdrfg",
+    "BackColor": "@gridhdrbg",
+    "SelectionForeColor": "@white",
+    "SelectionBackColor": "255,51,153,255",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": true,
+    "Padding": "0, 0, 0, 0"
+  },
+  "CellStyle": {
+    "ForeColor": "@gridcellfg1",
+    "BackColor": "@gridcellbg1",
+    "SelectionForeColor": "@gridselfg",
+    "SelectionBackColor": "@gridselbg",
+	"HoverForeColor": "@gridhoverfg",
+    "HoverBackColor": "@gridhoverbg",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": false,
+    "Padding": "0, 0, 0, 0"
+  },
+  "AlternativeCellStyle": {
+    "ForeColor": "@gridcellfg2",
+    "BackColor": "@gridcellbg2",
+    "SelectionForeColor": "@gridselfg",
+    "SelectionBackColor": "@gridselbg",
+	"HoverForeColor": "@gridhoverfg",
+    "HoverBackColor": "@gridhoverbg",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": false,
+    "Padding": "0, 0, 0, 0"
+  },
+  "GridColor": "@gridline",
+  "BackColor": "@gridbg",
+  "ForeColor": "255,0,0,0",
+  "RowHeight": 24,
+  "ColumnHeadersHeight": 26,
+  "RowHeadersWidth": 25,
+  "ColumnHeadersVisible": true,
+  "RowHeadersVisible": false,
+  "ConditionFormats": []
+}

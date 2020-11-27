@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>        
+        <statement id="DAO00406_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          SELECT
+          KN.TENKHO AS TENKHONGUON
+          ,KD.TENKHO AS TENKHODICH
+          ,MP.KHONGUON_ID
+          ,MP.KHODICH_ID
+          ,MP.NGUONTINHTIEN
+          ,MP.NGUONMIENPHI
+          ,MP.T
+          ,MP.V
+          ,MP.H
+          ,MP.K
+          FROM TM_KHODUOC_MAPPING MP
+          inner join TM_KHODUOC KN on KN.KHODUOC_ID = MP.KHONGUON_ID
+          inner join TM_KHODUOC KD on KD.KHODUOC_ID = MP.KHODICH_ID
+          where
+          MP.TAMNGUNG = '0'
+          and kn.TAMNGUNG = '0'
+          and kd.TAMNGUNG = '0'
+          and MP.BENHVIEN_ID = '$BENHVIEN_ID$'
+          order by MP.KHONGUON_ID
+        </statement>
+      <statement id="DAO00406_GetListDichVuByNhomDichVu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        DECLARE @x int, @y int;
+        SET @x = 100000000;
+        SET @y = 200000000;
+        WITH DichvuRec AS
+        (
+        SELECT D.DICHVU_ID AS CATEGORY_ID, D.MADICHVU AS CATEGORY_CODE, D.TENDICHVU AS CATEGORY_NAME, (ND.CAP + 1) AS FOLDER_LEVEL, ISNULL(D.CAPTREN_ID,D.NHOMDICHVU_ID + @x) AS PARENT_ID, '0' AS IS_FOLDER, D.IDX
+        FROM TM_DICHVU AS D
+        INNER JOIN TM_NHOMDICHVU AS ND ON D.NHOMDICHVU_ID = ND.NHOMDICHVU_ID
+        WHERE D.CAP = 1 AND D.CAPTREN_ID IS NULL AND D.BENHVIEN_ID = '$BENHVIEN_ID$'  AND D.TAMNGUNG = '0' AND ND.NHOMDICHVU_ID = $NHOMDICHVU_ID$
+        UNION ALL
+        SELECT D.DICHVU_ID AS CATEGORY_ID, D.MADICHVU AS CATEGORY_CODE, D.TENDICHVU AS CATEGORY_NAME, (DR.FOLDER_LEVEL + 1) AS FOLDER_LEVEL, D.CAPTREN_ID AS PARENT_ID, '0' AS IS_FOLDER, D.IDX
+        FROM DichvuRec AS DR
+        INNER JOIN dbo.TM_DICHVU AS D ON D.CAPTREN_ID = DR.CATEGORY_ID AND D.BENHVIEN_ID = '$BENHVIEN_ID$'
+        )
+        , NhomdichvuRec AS
+        (
+        SELECT (ND.NHOMDICHVU_ID + @x) AS CATEGORY_ID, ND.MANHOMDICHVU AS CATEGORY_CODE, ND.TENNHOMDICHVU AS CATEGORY_NAME, ND.CAP AS FOLDER_LEVEL, ISNULL(ND.CAPTREN_ID,ND.LOAIDICHVU_ID + @y) AS PARENT_ID, '1' AS IS_FOLDER, NULL AS IDX
+        FROM TM_NHOMDICHVU AS ND
+        WHERE ND.CAP = 1 AND ND.CAPTREN_ID IS NULL AND ND.BENHVIEN_ID = '$BENHVIEN_ID$' AND ND.NHOMDICHVU_ID = $NHOMDICHVU_ID$
+        UNION ALL
+        SELECT (ND.NHOMDICHVU_ID + @x) AS CATEGORY_ID, ND.MANHOMDICHVU AS CATEGORY_CODE, ND.TENNHOMDICHVU AS CATEGORY_NAME, (DR.FOLDER_LEVEL + 1) AS FOLDER_LEVEL, (ND.CAPTREN_ID + @x) AS PARENT_ID, '1' AS IS_FOLDER, NULL AS IDX
+        FROM NhomdichvuRec AS DR
+        INNER JOIN dbo.TM_NHOMDICHVU AS ND ON (ND.CAPTREN_ID + @x) = DR.CATEGORY_ID AND ND.BENHVIEN_ID = '$BENHVIEN_ID$'
+        )
+        SELECT 0 AS CHON,* FROM DichvuRec
+        UNION ALL
+        SELECT 0 AS CHON,* FROM NhomdichvuRec
+        UNION ALL
+        SELECT 0 AS CHON,(LD.LOAIDICHVU_ID + @y) AS CATEGORY_ID, LD.MALOAIDICHVU AS CATEGORY_CODE, LD.TENLOAIDICHVU AS CATEGORY_NAME, 0 AS FOLDER_LEVEL, 0 AS PARENT_ID, '1' AS IS_FOLDER, NULL AS IDX
+        FROM TM_LOAIDICHVU AS LD
+        WHERE LD.BENHVIEN_ID = '$BENHVIEN_ID$'
+        ORDER BY IDX, CATEGORY_ID
+      </statement>
+    </statements>
+</sqlMap>

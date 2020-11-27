@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,44fa6477fd5c9ee7b9eaf818ccb3f9b9-->
+        <statement id="DAO00000_GetDOITUONGBHYT" resultClass="DataObject">
+            select *
+            from TM_DOITUONG
+            where
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isNotEmpty prepend="and" property="DOITUONG_ID">
+                DOITUONG_ID = '$DOITUONG_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MADOITUONG">
+                MADOITUONG = '$MADOITUONG$'
+            </isNotEmpty>
+        </statement>
+        <!--Revision:0,1308eee8b624ff91a90855b53e7eed3d-->
+        <statement id="DAO00000_GetLoaiGiaBHYT" resultClass="DataObject">
+            select lg.LOAIGIA_ID, lg.TENLOAIGIA, lg.MALOAIGIA, dic.DICTIONARY_CODE
+            from TM_LOAIGIA lg
+            inner join LST_DICTIONARY dic on lg.NHOMGIA_ID = dic.DICTIONARY_ID
+            where
+            lg.TAMNGUNG = '0'
+            and dic.DICTIONARY_TYPE_CODE = 'NhomGia'
+            and dic.DICTIONARY_CODE = 'BHYT' and lg.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,a08b4e2a386cc24cce16ec37ea249f46-->
+        <statement id="DAO00000_GetDICHVU_DONGIA" resultClass="DataObject">
+            select A.LOAIGIA_ID, A.BANGGIA_ID, A.GIAVON, A.TYLEVAT as TYLE_VAT, A.TYLE_LOINHUAN,
+            A.DONGIA as DONGIA_DOANHTHU, NULL as DONGIA_KHAC, NVL(C.MAPHANNHOMDICHVU, 'TT') as LOAI_CHIPHI
+            from TM_DICHVU_DONGIA A
+            inner join TM_DICHVU B on A.DICHVU_ID = B.DICHVU_ID
+            left join (select B.MAPHANNHOMDICHVU, A.*
+            from TM_DICHVU_PHANNHOMDICHVU A
+            inner join TM_PHANNHOMDICHVU B on  B.PHANNHOMDICHVU_ID = A.PHANNHOMDICHVU_ID
+            where A.DICHVU_ID = '$DICHVU_ID$' and A.BENHVIEN_ID = '$BENHVIEN_ID$') C on A.DICHVU_ID = C.DICHVU_ID
+            where A.TAMNGUNG = '0' AND A.DICHVU_ID = '$DICHVU_ID$' AND A.BENHVIEN_ID = '$BENHVIEN_ID$' AND
+            A.LOAIGIA_ID in (select LOAIGIA_ID from TM_DOITUONG_GIADICHVU where
+            DOITUONG_ID = '$DOITUONG_VIENPHI_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$' AND DICHVU_ID = '$DICHVU_ID$')
+            union select A.LOAIGIA_ID, null as BANGGIA_ID, null as GIAVON, null as TYLE_VAT, null as TYLE_LOINHUAN,
+            NULL as DONGIA_DOANHTHU, A.DONGIA as DONGIA_KHAC, NVL(C.MAPHANNHOMDICHVU, 'TT') as LOAI_CHIPHI
+            from TM_DICHVU_DONGIA A
+            inner join TM_DICHVU B on A.DICHVU_ID = B.DICHVU_ID
+            left join (select B.MAPHANNHOMDICHVU, A.*
+            from TM_DICHVU_PHANNHOMDICHVU A
+            inner join TM_PHANNHOMDICHVU B on  B.PHANNHOMDICHVU_ID = A.PHANNHOMDICHVU_ID
+            where A.DICHVU_ID = '$DICHVU_ID$' and A.BENHVIEN_ID = '$BENHVIEN_ID$') C on A.DICHVU_ID = C.DICHVU_ID
+            where A.TAMNGUNG = '0' AND A.DICHVU_ID = '$DICHVU_ID$' AND A.BENHVIEN_ID = '$BENHVIEN_ID$' AND
+            A.LOAIGIA_ID in (select LOAIGIA_ID from TM_DOITUONG_GIADICHVU where
+            DOITUONG_ID = '$DOITUONG_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$' AND DICHVU_ID = '$DICHVU_ID$')
+        </statement>
+        <!--Revision:0,b6f113d16e9f8b1e00d5c2740b4e9246-->
+        <statement id="DAO00000_GetDONGIA_BY_DICHVU_LOAIGIA" resultClass="DataObject">
+            SELECT DD.*
+            FROM TM_DICHVU_DONGIA DD
+            WHERE DD.DICHVU_ID = '$DICHVU_ID$' AND DD.LOAIGIA_ID = '$LOAIGIA_ID$' AND DD.BENHVIEN_ID = '$BENHVIEN_ID$' AND DD.TAMNGUNG = '0'
+        </statement>
+        <!--Revision:0,b1e816c4b038d280756238b4f37f6955-->
+        <statement id="DAO00000_GetDICHVU_DONGIA_LOAIGIA" resultClass="DataObject">
+            select A.LOAIGIA_ID, A.BANGGIA_ID, A.GIAVON, A.TYLEVAT  as TYLE_VAT, A.TYLE_LOINHUAN,
+            A.DONGIA as DONGIA_DOANHTHU, NULL as DONGIA_KHAC, NVL(D.MAPHANNHOMDICHVU, 'TT') as LOAI_CHIPHI
+            from TM_DICHVU_DONGIA A
+            inner join TM_BANGGIA B on B.LOAIGIA_ID = A.LOAIGIA_ID AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            left join (select B.MAPHANNHOMDICHVU, A.* from TM_DICHVU_PHANNHOMDICHVU A
+            inner join TM_PHANNHOMDICHVU B on  B.PHANNHOMDICHVU_ID = A.PHANNHOMDICHVU_ID
+            where A.DICHVU_ID = '$DICHVU_ID$' AND A.BENHVIEN_ID = '$BENHVIEN_ID$') D on A.DICHVU_ID = D.DICHVU_ID
+            where A.LOAIGIA_ID = '$LOAIGIA_ID$' and A.DICHVU_ID = '$DICHVU_ID$'
+            union
+            select A.LOAIGIA_ID, null as BANGGIA_ID, null as GIAVON, null as TYLE_VAT, null as TYLE_LOINHUAN,
+            null as DONGIA_DOANHTHU, C.DONGIA as DONGIA_KHAC, NVL(D.MAPHANNHOMDICHVU, 'TT') as LOAI_CHIPHI
+            from TM_DOITUONG_GIADICHVU A
+            inner join TM_BANGGIA B on B.LOAIGIA_ID = A.LOAIGIA_ID AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            left join TM_DICHVU_DONGIA C on C.LOAIGIA_ID = A.LOAIGIA_ID AND C.BENHVIEN_ID = '$BENHVIEN_ID$'
+            and C.BANGGIA_ID = B.BANGGIA_ID and C.DICHVU_ID = A.DICHVU_ID
+            left join (select B.MAPHANNHOMDICHVU, A.* from TM_DICHVU_PHANNHOMDICHVU A
+            inner join TM_PHANNHOMDICHVU B on  B.PHANNHOMDICHVU_ID = A.PHANNHOMDICHVU_ID
+            where A.DICHVU_ID = '$DICHVU_ID$' AND A.BENHVIEN_ID = '$BENHVIEN_ID$') D on A.DICHVU_ID = D.DICHVU_ID
+            where A.DOITUONG_ID = '$DOITUONG_ID$'  and A.DICHVU_ID = '$DICHVU_ID$' and A.LOAIGIA_ID
+            in (select LOAIGIA_ID from TM_DOITUONG_LOAIGIA
+            where DOITUONG_ID = '$DOITUONG_ID$' and GIAHOTRO = '1'  AND BENHVIEN_ID = '$BENHVIEN_ID$' and ROWNUM = 1
+            and LOAIGIA_ID
+            in (select LOAIGIA_ID from TM_BANGGIA
+            where LOAIBANGGIA in
+            (select LOAIBANGGIA from TM_BANGGIA where LOAIGIA_ID = '$LOAIGIA_ID$'  AND BENHVIEN_ID = '$BENHVIEN_ID$')
+            and TAMNGUNG = '0')  AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+        </statement>
+        <!--Revision:0,fc240da84bf9de28f54e9333f25e2880-->
+        <statement id="DAO00000_GetLOAIGIATHUOC_NOI_NGOAI_VIEN" resultClass="DataObject">
+            SELECT LOAIGIA_ID
+            FROM TM_LOAIGIA
+            WHERE MALOAIGIA = '$LOAIGIATHUOC$' and BENHVIEN_ID = '$BENHVIEN_ID$'
+            <!-- chi co 2 loai GiaThuoc_NoiVien/ GiaThuoc_NgoaiVien-->
+        </statement>
+        <!--Revision:0,cee0446f152dadb8fe519b10301a57ea-->
+        <statement id="DAO00000_GetCHECK_DUOC_BHYT" resultClass="DataObject">
+            select BHYT as BHYT_FLAG from TM_DUOC where DUOC_ID = '$DUOC_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,1453f863e286e726ce1de7ac1e578abd-->
+        <statement id="DAO00000_GetCHECK_DOITUONG_BHYT" resultClass="DataObject">
+            SELECT count(*) as DOITUONG_BHYT FROM TM_DOITUONG A
+            JOIN LST_DICTIONARY B ON B.DICTIONARY_ID = A.NHOMDICHVU
+            WHERE B.DICTIONARY_CODE = 'BHYT'
+            AND A.DOITUONG_ID = '$DOITUONG_ID$' and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,b572653edba6b2b3f7b127c3bdb6bdb4-->
+        <statement id="DAO00000_GetDUOC_DONGIADOANHTHU_NOIVIEN" resultClass="DataObject">
+            SELECT  NVL(B.DONGIA,0.0) as DONGIA_DOANHTHU, A.BHYT as BHYT_FLAG
+            FROM TM_DUOC_DONGIA B
+            LEFT JOIN TM_DUOC A ON A.DUOC_ID = B.DUOC_ID
+            WHERE B.LOAIGIA_ID =
+            (SELECT LOAIGIA_ID FROM TM_DOITUONG_LOAIGIA WHERE DOITUONG_ID = '$DOITUONG_ID$' AND LOAIGIA_ID = '$LOAIGIA_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$')
+            AND B.DUOC_ID = '$DUOC_ID$' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,4008523ca3b87a2fef78d90df424cc98-->
+        <statement id="DAO00000_GetDUOC_DONGIADOANHTHU_NGOAIVIEN" resultClass="DataObject">
+            <!--SELECT  ISNULL(B.DONGIA,0.0) as DONGIA_DOANHTHU
+      FROM TM_DUOC_DONGIA B      
+      WHERE B.LOAIGIA_ID = '$LOAIGIA_ID$'
+      AND B.DUOC_ID = '$DUOC_ID$' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            <!--select TOP 1 B.DONGIAVONVAT as DONGIA_KHAC,
+      ROUND(B.DONGIABAN + B.DONGIABAN*tmduoc.TYLE_VAT/100, 0) as DONGIA_DOANHTHU,
+      B.DONGIAVON, tmduoc.TYLE_VAT, dg.DONGIA as DONGIATHAU, tmduoc.BHYT
+      from TT_DUOC_CHUNGTU_SOLONHAP A
+      inner join TT_DUOC_SOLONHAP_GIABAN B on A.SOLONHAP_ID = B.SOLONHAP_ID
+      inner join TM_DUOC tmduoc on A.DUOC_ID = tmduoc.DUOC_ID
+      left JOIN TM_DUOC_DONGIA dg on dg.DUOC_ID = A.DUOC_ID
+      left JOIN TM_BANGGIA bg on (bg.BANGGIA_ID = dg.BANGGIA_ID)
+      where A.DUOC_ID = '$DUOC_ID$'-->
+            select a.DONGIA as DONGIA_DOANHTHU from TM_DUOC_DONGIA A
+            inner join TM_DUOC tmduoc on A.DUOC_ID = tmduoc.DUOC_ID
+            where A.DUOC_ID = '$DUOC_ID$' and tmduoc.NHATHUOC = '1' and tmduoc.BENHVIEN = '0' and ROWNUM = 1
+            order by A.BANGGIA_ID desc
+        </statement>
+        <!--Revision:0,f15d0161c2fc6c3f1cfd803eacd2d8c1-->
+        <statement id="DAO00000_GetDOITUONG_DUOC_TYLE" resultClass="DataObject">
+            SELECT TYLE as TYLE_HOTRO FROM TM_DOITUONG_GIADUOC_TYLE
+            WHERE DOITUONG_ID = '$DOITUONG_ID$'
+            AND DUOC_ID = '$DUOC_ID$'
+            AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,aa172d2dfc4e3b3d93b6173626a32a2d-->
+        <statement id="DAO00000_GetDichVu" resultClass="DataObject">
+            SELECT *
+            FROM TM_DICHVU
+        </statement>
+        <!--Revision:0,1cc792714d0b468c4b53b38cdbfa4535-->
+        <statement id="DAO00000_GetNhomDoiTuong" resultClass="DataObject">
+            SELECT DOITUONG_ID
+            ,TENDOITUONG
+            ,NHOMDICHVU
+            ,TYLE_VUOT_LCB
+            ,GIOIHAN_VUOT_LCB
+            ,GIOIHAN_VUOT_DVKTC
+            ,TYLE_THUOC_UT
+            ,CPVC
+            ,CHIPHINGOAI_BHYT
+            ,NGANSACH_TL
+            ,MIENGIAM_TL
+            ,TAITRO_TL
+            ,BHTN_TL
+            FROM TM_DOITUONG
+        </statement>
+        <!--Revision:0,5e109ce7d17eede9ed3cebfb286de431-->
+        <statement id="DAO00000_GetHinhThucThanhToan" resultClass="DataObject">
+            select
+            DICTIONARY_ID,
+            DICTIONARY_CODE,
+            DICTIONARY_NAME
+            from LST_DICTIONARY
+            where DICTIONARY_TYPE_CODE = 'HinhThucThanhToan'
+        </statement>
+        <!--Revision:0,9714b4b05d5fbf81361b364efd0f879c-->
+        <statement id="DAO00000_GetNgheNghiep" resultClass="DataObject">
+            select
+            DICTIONARY_ID,
+            DICTIONARY_CODE,
+            DICTIONARY_NAME
+            from LST_DICTIONARY
+            where DICTIONARY_TYPE_CODE = 'NgheNghiep'
+            <!--and BENHVIEN_ID = '$BENHVIEN_ID$'-->
+        </statement>
+        <!--Revision:0,439e269392e573585b36eace071f4a65-->
+        <statement id="DAO00000_GetTienTe" resultClass="DataObject">
+            select
+            DICTIONARY_ID,
+            DICTIONARY_CODE,
+            DICTIONARY_NAME
+            from LST_DICTIONARY
+            where DICTIONARY_TYPE_CODE = 'TienTe'
+            <!--and BENHVIEN_ID = '$BENHVIEN_ID$'-->
+        </statement>
+        <!--Revision:0,652ed0c022ca948d0c59a0bde9f2d3db-->
+        <statement id="DAO00000_GetPhongBan" resultClass="DataObject">
+            select * from TM_PHONGBAN  where BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,68b389680f1bf7731c53f58e67100895-->
+        <statement id="DAO00000_GetKyHieuBHYT" resultClass="DataObject">
+            SELECT D.*, DT.DOITUONG_ID, DT.MADOITUONG, DT.TENDOITUONG
+            FROM LST_DICTIONARY D
+            LEFT JOIN TM_DOITUONG DT ON DT.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE D.DICTIONARY_TYPE_CODE = 'CauHinhDoiTuong' AND (D.DICTIONARY_NAME || D.DICTIONARY_NAME_EN) = '$MATHEBHYT$'
+            AND DT.NHOMTHE LIKE '%$MATHEBHYT$%'
+        </statement>
+        <!--Revision:0,70828a06377a55ba1e9a4fb88787c6f4-->
+        <statement id="DAO00000_GetDoiTuongWithMaThe" resultClass="DataObject">
+            select * from TM_DOITUONG where INSTR(NHOMTHE, '$MATHEBHYT$') &gt; 0  and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,be45da01b086ce2e86738b8bf9572ba2-->
+        <statement id="DAO00000_GetDoiTuongIsBHYT" resultClass="DataObject">
+            select *
+            from TM_DOITUONG
+            Where
+            DOITUONG_ID = $DOITUONG_ID$ AND
+            NHOMDICHVU in (SELECT DICTIONARY_ID
+            FROM LST_DICTIONARY
+            where DICTIONARY_TYPE_CODE = 'nhomdoituong' and DICTIONARY_CODE = 'BHYT')
+            <!--and BENHVIEN_ID = '$BENHVIEN_ID$'-->
+        </statement>
+        <!--Revision:0,599df62fefd9c4895d04d63ccfd918aa-->
+        <statement id="DAO00000_GetAppSettingValue" resultClass="DataObject">
+            select *
+            from TM_SYS_APPSETTINGS
+            Where CODE = '$CODE$'  and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

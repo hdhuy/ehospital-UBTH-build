@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,676328de4e3654b86f5137c92bb3f9b0-->
+        <statement id="DAO00205_GetAll" resultClass="DataObject">
+            select *
+            from TM_CATEGORY
+            order by CATEGORY_ID
+        </statement>
+        <!--Revision:3,496f6cd8e5416ef21a617d9769636c81-->
+        <statement id="DAO00205_GetAllWithCodeAndParentID" resultClass="DataObject">
+            SELECT C.CATEGORY_ID AS CATEGORY_ID, ISNULL(C.PARENT_ID,0) AS PARENT_ID, C.CATEGORY_CODE, C.CATEGORY_NAME AS CATEGORY_NAME, C.FOLDER_LEVEL, C.IS_FOLDER, C.FOLDER_CODE, C.CATEGORY_TYPE
+            FROM TM_CATEGORY AS C
+            WHERE C.CATEGORY_ID != 0 AND C.BENHVIEN_ID = '$BENHVIEN_ID$'
+            ORDER BY C.CATEGORY_ID
+        </statement>
+        <!--Revision:3,af390751a92d65862049c6eb4b85455d-->
+        <statement id="DAO00205_GetAllWithoutDeactive" resultClass="DataObject">
+            SELECT C.CATEGORY_ID AS CATEGORY_ID, ISNULL(C.PARENT_ID,0) AS PARENT_ID, C.CATEGORY_CODE, C.CATEGORY_NAME AS CATEGORY_NAME, C.FOLDER_LEVEL, C.IS_FOLDER, C.FOLDER_CODE, C.CATEGORY_TYPE
+            FROM TM_CATEGORY AS C
+            WHERE C.CATEGORY_ID != 0 AND C.BENHVIEN_ID = '$BENHVIEN_ID$' AND C.ENABLED = '1'
+            ORDER BY C.CATEGORY_ID
+        </statement>
+        <!--Revision:0,a3f2730d644be6c81be3989d6b8be097-->
+        <statement id="DAO00205_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_CATEGORY
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CATEGORY_ID">
+                        TM_CATEGORY.CATEGORY_ID = '$CATEGORY_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_CODE">
+                        TM_CATEGORY.CATEGORY_CODE = '$CATEGORY_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_NAME">
+                        TM_CATEGORY.CATEGORY_NAME = '$CATEGORY_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ENABLED">
+                        TM_CATEGORY.ENABLED = '$ENABLED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="READ_ONLY">
+                        TM_CATEGORY.READ_ONLY = '$READ_ONLY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_FOLDER">
+                        TM_CATEGORY.IS_FOLDER = '$IS_FOLDER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_TYPE">
+                        TM_CATEGORY.CATEGORY_TYPE = '$CATEGORY_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TABLE_NAME">
+                        TM_CATEGORY.TABLE_NAME = '$TABLE_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PARENT_ID">
+                        TM_CATEGORY.PARENT_ID = '$PARENT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FOLDER_LEVEL">
+                        TM_CATEGORY.FOLDER_LEVEL = '$FOLDER_LEVEL$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FOLDER_CODE">
+                        TM_CATEGORY.FOLDER_NAME = '$FOLDER_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LIST_DATA">
+                        TM_CATEGORY.LIST_DATA = '$LIST_DATA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_BASE">
+                        TM_CATEGORY.FIELD_BASE = '$FIELD_BASE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_DETAIL">
+                        TM_CATEGORY.FIELD_DETAIL = '$FIELD_DETAIL$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_1">
+                        TM_CATEGORY.ATTRIBUTE_1 = '$ATTRIBUTE_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_2">
+                        TM_CATEGORY.ATTRIBUTE_2 = '$ATTRIBUTE_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_3">
+                        TM_CATEGORY.ATTRIBUTE_3 = '$ATTRIBUTE_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_4">
+                        TM_CATEGORY.ATTRIBUTE_4 = '$ATTRIBUTE_4$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_5">
+                        TM_CATEGORY.ATTRIBUTE_5 = '$ATTRIBUTE_5$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_CATEGORY.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_CATEGORY.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_CATEGORY.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_CATEGORY.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_CATEGORY.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by CATEGORY_ID
+        </statement>
+        <!--Revision:0,e0f3803b5204b5430f9ad469e999a871-->
+        <statement id="DAO00205_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_CATEGORY
+            where TM_CATEGORY.CATEGORY_ID  = '$value$'
+            order by CATEGORY_ID
+        </statement>
+        <!--Revision:0,9a6718ced671fa4cef9510b9ae8e6878-->
+        <statement id="DAO00205_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_CATEGORY
+            where TM_CATEGORY.CATEGORY_ID  = '$CATEGORY_ID$'
+            order by CATEGORY_ID
+        </statement>
+        <!--Revision:0,08d540a6d0ca0a1c79a701ed23dde30e-->
+        <statement id="DAO00205_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_CATEGORY (
+            CATEGORY_CODE
+            , CATEGORY_NAME
+            , ENABLED
+            , READ_ONLY
+            , IS_FOLDER
+            , CATEGORY_TYPE
+            , TABLE_NAME
+            , PARENT_ID
+            , FOLDER_LEVEL
+            , FOLDER_CODE
+            , LIST_DATA
+            , FIELD_BASE
+            , FIELD_DETAIL
+            , ATTRIBUTE_1
+            , ATTRIBUTE_2
+            , ATTRIBUTE_3
+            , ATTRIBUTE_4
+            , ATTRIBUTE_5
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            ) values (
+            #CATEGORY_CODE#
+            , #CATEGORY_NAME#
+            , #ENABLED#
+            , #READ_ONLY#
+            , #IS_FOLDER#
+            , #CATEGORY_TYPE#
+            , #TABLE_NAME#
+            , #PARENT_ID#
+            , #FOLDER_LEVEL#
+            , #FOLDER_CODE#
+            , #LIST_DATA#
+            , #FIELD_BASE#
+            , #FIELD_DETAIL#
+            , #ATTRIBUTE_1#
+            , #ATTRIBUTE_2#
+            , #ATTRIBUTE_3#
+            , #ATTRIBUTE_4#
+            , #ATTRIBUTE_5#
+            , #BENHVIEN_ID#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,3a36b5ce77ab6b92552033467208dba2-->
+        <update id="DAO00205_Update" parameterClass="System.Collections.IDictionary">
+            update TM_CATEGORY set
+            CATEGORY_CODE = #CATEGORY_CODE#
+            , CATEGORY_NAME = #CATEGORY_NAME#
+            , ENABLED = #ENABLED#
+            , READ_ONLY = #READ_ONLY#
+            , IS_FOLDER = #IS_FOLDER#
+            , CATEGORY_TYPE = #CATEGORY_TYPE#
+            , TABLE_NAME = #TABLE_NAME#
+            , PARENT_ID = #PARENT_ID#
+            , FOLDER_LEVEL = #FOLDER_LEVEL#
+            , FOLDER_CODE = #FOLDER_CODE#
+            , LIST_DATA = #LIST_DATA#
+            , FIELD_BASE = #FIELD_BASE#
+            , FIELD_DETAIL = #FIELD_DETAIL#
+            , ATTRIBUTE_1 = #ATTRIBUTE_1#
+            , ATTRIBUTE_2 = #ATTRIBUTE_2#
+            , ATTRIBUTE_3 = #ATTRIBUTE_3#
+            , ATTRIBUTE_4 = #ATTRIBUTE_4#
+            , ATTRIBUTE_5 = #ATTRIBUTE_5#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            CATEGORY_ID = '$CATEGORY_ID$'
+        </update>
+        <!--Revision:0,5b581c9896bc4d7d292ffe06cf77aa06-->
+        <statement id="DAO00205_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_CATEGORY
+            where
+            CATEGORY_ID = '$CATEGORY_ID$'
+        </statement>
+        <!--Revision:0,b13e6bfa26dcffcab7817c81a53afb72-->
+        <statement id="DAO00205_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_CATEGORY
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CATEGORY_ID">
+                        TM_CATEGORY.CATEGORY_ID = '$CATEGORY_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_CODE">
+                        TM_CATEGORY.CATEGORY_CODE = '$CATEGORY_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_NAME">
+                        TM_CATEGORY.CATEGORY_NAME = '$CATEGORY_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ENABLED">
+                        TM_CATEGORY.ENABLED = '$ENABLED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="READ_ONLY">
+                        TM_CATEGORY.READ_ONLY = '$READ_ONLY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_FOLDER">
+                        TM_CATEGORY.IS_FOLDER = '$IS_FOLDER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_TYPE">
+                        TM_CATEGORY.CATEGORY_TYPE = '$CATEGORY_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TABLE_NAME">
+                        TM_CATEGORY.TABLE_NAME = '$TABLE_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PARENT_ID">
+                        TM_CATEGORY.PARENT_ID = '$PARENT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FOLDER_LEVEL">
+                        TM_CATEGORY.FOLDER_LEVEL = '$FOLDER_LEVEL$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FOLDER_NAME">
+                        TM_CATEGORY.FOLDER_CODE = '$FOLDER_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LIST_DATA">
+                        TM_CATEGORY.LIST_DATA = '$LIST_DATA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_BASE">
+                        TM_CATEGORY.FIELD_BASE = '$FIELD_BASE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_DETAIL">
+                        TM_CATEGORY.FIELD_DETAIL = '$FIELD_DETAIL$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_1">
+                        TM_CATEGORY.ATTRIBUTE_1 = '$ATTRIBUTE_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_2">
+                        TM_CATEGORY.ATTRIBUTE_2 = '$ATTRIBUTE_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_3">
+                        TM_CATEGORY.ATTRIBUTE_3 = '$ATTRIBUTE_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_4">
+                        TM_CATEGORY.ATTRIBUTE_4 = '$ATTRIBUTE_4$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_5">
+                        TM_CATEGORY.ATTRIBUTE_5 = '$ATTRIBUTE_5$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_CATEGORY.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_CATEGORY.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_CATEGORY.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_CATEGORY.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_CATEGORY.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:2,b4f9f090e1b853f08eadcecd47a12522-->
+        <statement id="DAO00205_GetTableColumns" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT c.name AS COLUMN_NAME, t.name AS TABLE_NAME, d.definition AS COLUMN_DEFAULT, CAST(c.is_nullable AS char(1)) AS IS_NULLABLE
+            , dt.name AS DATA_TYPE, c.max_length AS CHARACTER_MAXIMUM_LENGTH, CAST(c.is_identity AS char(1)) AS IS_IDENTITY
+            , CHARACTER_SET_NAME = (case dt.name when 'nvarchar' then 'UNICODE' else NULL end), t2.name as PRIMARY_TABLE, c2.name as PRIMARY_COLUMN
+            , IS_PRIMARY = CASE WHEN i.column_id IS NULL THEN 0 ELSE 1 END
+            FROM sys.columns as c
+            inner join sys.tables as t on c.object_id = t.object_id
+            left join sys.default_constraints as d on d.object_id = c.default_object_id
+            inner join sys.types as dt on c.system_type_id = dt.system_type_id and c.user_type_id = dt.user_type_id
+            left join sys.foreign_key_columns as fk on fk.parent_object_id = c.object_id and c.column_id = fk.parent_column_id
+            left join sys.tables as t2 on t2.object_id = fk.referenced_object_id
+            left join sys.columns as c2 on c2.object_id = t2.object_id and c2.column_id = fk.referenced_column_id
+            left join sys.key_constraints as k on k.parent_object_id = t.object_id and k.type = 'PK'
+            left join sys.index_columns as i on i.object_id = t.object_id and i.index_id = k.unique_index_id and i.column_id = c.column_id
+            WHERE t.name = '$TABLE_NAME$'
+            ORDER BY c.column_id
+        </statement>
+        <!--Revision:1,c0806c591389d8d976e756d41778f05b-->
+        <statement id="DAO00205_GetTableColumns_Exclude" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT c.name AS COLUMN_NAME, t.name AS TABLE_NAME, d.definition AS COLUMN_DEFAULT, CAST(c.is_nullable AS char(1)) AS IS_NULLABLE
+            , dt.name AS DATA_TYPE, c.max_length AS CHARACTER_MAXIMUM_LENGTH, CAST(c.is_identity AS char(1)) AS IS_IDENTITY
+            , CHARACTER_SET_NAME = (case dt.name when 'nvarchar' then 'UNICODE' else NULL end), t2.name as PRIMARY_TABLE, c2.name as PRIMARY_COLUMN
+            , IS_PRIMARY = CASE WHEN i.column_id IS NULL THEN 0 ELSE 1 END
+            FROM sys.columns as c
+            inner join sys.tables as t on c.object_id = t.object_id
+            left join sys.default_constraints as d on d.object_id = c.default_object_id
+            inner join sys.types as dt on c.system_type_id = dt.system_type_id and c.user_type_id = dt.user_type_id
+            left join sys.foreign_key_columns as fk on fk.parent_object_id = c.object_id and c.column_id = fk.parent_column_id
+            left join sys.tables as t2 on t2.object_id = fk.referenced_object_id
+            left join sys.columns as c2 on c2.object_id = t2.object_id and c2.column_id = fk.referenced_column_id
+            left join sys.key_constraints as k on k.parent_object_id = t.object_id and k.type = 'PK'
+            left join sys.index_columns as i on i.object_id = t.object_id and i.index_id = k.unique_index_id and i.column_id = c.column_id
+            WHERE t.name = '$TABLE_NAME$' AND c.name NOT IN
+            (
+            SELECT DICTIONARY_CODE
+            FROM LST_DICTIONARY
+            WHERE (DICTIONARY_TYPE_ID IN ('2362','2363','2364','2365','2366','2367') AND ENABLED = '1')
+            AND (('$TABLE_NAME$' != 'TM_BENHVIEN') OR ('$TABLE_NAME$' = 'TM_BENHVIEN' AND DICTIONARY_CODE != 'BENHVIEN_ID'))
+            )
+            ORDER BY c.column_id
+        </statement>
+        <!--Revision:1,f485c0b1f13e97ac5e6bbe4e5558e054-->
+        <statement id="DAO00205_InsertDM_Ibatis" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            INSERT INTO $TABLE_NAME$
+            <iterate property="COLUMN_LIST" open=" (" close=") " conjunction=",">
+                $COLUMN_LIST[]$
+            </iterate>
+            VALUES
+            <iterate property="COLUMN_VALUE" open=" (" close=") " conjunction=",">
+                #COLUMN_VALUE[]#
+            </iterate>
+            SELECT CASE ISNULL('$COLUMN_ID$','') WHEN '' THEN 1 ELSE SCOPE_IDENTITY() END
+        </statement>
+        <!--Revision:1,5bf8f4943a59c02f9b740906f7be8627-->
+        <statement id="DAO00205_InsertDM" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            INSERT INTO $TABLE_NAME$ ($COLUMN_LIST$)
+            VALUES (#COLUMN_VALUE#)
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,42dae017df6f214b76c0c17d9f8b5d12-->
+        <update id="DAO00205_UpdateDM_iBatis" parameterClass="System.Collections.IDictionary">
+            UPDATE $TABLE_NAME$
+            SET
+            <iterate property="SET_LIST" conjunction=",">
+                $SET_LIST[]$
+            </iterate>
+            WHERE
+            <iterate property="WHERE_LIST" conjunction=",">
+                $WHERE_LIST[]$
+            </iterate>
+        </update>
+        <!--Revision:0,6a1e03437377043e8d1c9e2d10da3065-->
+        <statement id="DAO00205_DeleteDM_iBatis" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            DELETE $TABLE_NAME$
+            WHERE
+            <iterate property="WHERE_LIST" conjunction=",">
+                $WHERE_LIST[]$
+            </iterate>
+        </statement>
+        <!--Revision:0,77a4ecbe5a9df5ff990d2eb0b8fe15f8-->
+        <statement id="DAO00205_GetLSTDictionary" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DICTIONARY_ID AS FIELDCODE, DICTIONARY_NAME AS FIELDNAME, PARENT_ID AS RELATION_CODE
+            FROM LST_DICTIONARY
+            WHERE DICTIONARY_TYPE_CODE = '$DICTIONARY_TYPE_CODE$'
+            <!--AND BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            AND ENABLED = '1'
+        </statement>
+    </statements>
+</sqlMap>

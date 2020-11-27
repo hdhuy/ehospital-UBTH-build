@@ -1,0 +1,102 @@
+﻿--------------------------------------------------------------------------------
+2018-11-06 17:25:10,055 [1] ERROR - Can't create control ADM01004.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.TreeListView.BindData()
+   at DevXUI.TreeListView.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-06 17:25:10,748 [1] ERROR - Can't create control ADM01011.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-06 17:25:11,080 [1] ERROR - Can't create control ADM01041.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-06 18:02:53,920 [1] ERROR - Can't create control QMS01003.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-06 18:02:56,904 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.LoadDataSource() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 217
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 126
+   at FPT.eHospital.Forms.QMS.VMQMS08.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS08.cs:line 52
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 254
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-06 18:03:05,048 [1] ERROR - Can't create control QMS01003.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-06 18:03:05,942 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.LoadDataSource() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 217
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 126
+   at FPT.eHospital.Forms.QMS.VMQMS02.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS02.cs:line 43
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 254
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-06 18:03:11,637 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-06 18:03:11,686 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-06 18:03:11,707 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+--------------------------------------------------------------------------------
+2018-11-06 18:04:07,232 [1] INFO  - [Application started.]
+2018-11-06 18:04:07,479 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-06 18:04:10,938 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-06 18:04:10,954 [1] INFO  - LoadMasters() took 8 ms.
+2018-11-06 18:04:10,955 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-06 18:04:17,807 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-11-06 18:04:20,404 [1] INFO  - [test] Session is starting.
+2018-11-06 18:04:20,984 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:21,297 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:21,335 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:21,374 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:21,411 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:21,445 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:21,483 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:21,520 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:21,556 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:22,048 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:22,095 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:22,324 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-06 18:04:24,964 [6] INFO  - LoadMasters() took 4,558 ms.
+2018-11-06 18:04:24,972 [1] INFO  - [test] Session started.
+2018-11-06 18:04:41,781 [1] ERROR - Can't create control QMS01003.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-06 18:04:44,634 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.LoadDataSource() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 217
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 126
+   at FPT.eHospital.Forms.QMS.VMQMS02.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS02.cs:line 43
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 254
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-06 18:05:00,475 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-06 18:05:00,477 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-06 18:05:00,495 [1] INFO  - [test] Session stopped.
+2018-11-06 18:05:00,498 [1] INFO  - Memory used before collection:  37,057,064
+2018-11-06 18:05:00,551 [1] INFO  - Memory used after collection:  8,793,348
+2018-11-06 18:05:00,646 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------

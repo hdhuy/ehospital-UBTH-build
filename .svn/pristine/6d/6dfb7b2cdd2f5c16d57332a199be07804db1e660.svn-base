@@ -1,0 +1,19 @@
+FPT.Framework.Presentation.ButtonStyle, FPT.Framework.Presentation
+{
+  "ForeColor": "@buttonfg",
+  "BackColor": "@button",
+  "HoverForeColor": "@buttonfg",
+  "HoverBackColor": "@buttonHover",
+  "PressForeColor": "@buttonfg",
+  "PressBackColor": "@buttonPress",
+  "DisableForeColor": "@buttonDisablefg",
+  "DisableBackColor": "@buttonDisable",
+  "FocusColor": "@white",
+  "Font": "button",
+  "TextMargin": "5,0,5,0",
+  "ImageMargin": "3,3,3,3",
+  "TextAlign": "MiddleRight",
+  "ImageAlign": "MiddleLeft",
+  "FocusWidth": 1,
+  "WrapText": true
+}

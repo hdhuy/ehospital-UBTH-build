@@ -1,0 +1,208 @@
+﻿--------------------------------------------------------------------------------
+2018-11-28 13:43:55,311 [1] INFO  - [Application started.]
+2018-11-28 13:43:57,530 [1] ERROR - Session initialized fail!
+System.ArgumentNullException: Value cannot be null.
+Parameter name: Path of ServiceProvider can't be null or empty.
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\eHosDataContainer.cs:line 103
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataContainer.cs:line 35
+   at FPT.Framework.Application.ApplicationSession.OpenProfile() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 188
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 167
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-28 13:44:02,978 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-28 13:44:13,776 [1] INFO  - [Application started.]
+2018-11-28 13:44:15,717 [1] ERROR - Session initialized fail!
+System.Collections.Generic.KeyNotFoundException: The given key (SYS001) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\ExtendedDictionary.cs:line 35
+   at FPT.eHospital.Application.RemoteServiceRouter.GetServiceUrl(String svcName) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\RemoteServiceRouter.cs:line 45
+   at FPT.Framework.DataService.WebServiceProvider.GetServiceInfo(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\WebServiceProvider.cs:line 67
+   at FPT.Framework.DataService.WebServiceProvider.GetService(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\WebServiceProvider.cs:line 56
+   at FPT.eHospital.Application.AppService.GetControlList(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 72
+   at FPT.eHospital.Application.PageManager.LoadFromDB(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 202
+   at FPT.eHospital.Application.PageManager.GetPage(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 177
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 69
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, String strAssembly, String strClass) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 347
+   at FPT.eHospital.Forms.Base.VMFrame.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 108
+   at FPT.eHospital.Forms.Base.VMFrame.OnShow() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 71
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 175
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-28 13:44:18,607 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-28 14:31:10,802 [1] INFO  - [Application started.]
+2018-11-28 14:31:12,607 [1] ERROR - Session initialized fail!
+System.Collections.Generic.KeyNotFoundException: The given key (SYS001) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\ExtendedDictionary.cs:line 35
+   at FPT.eHospital.Application.RemoteServiceRouter.GetServiceUrl(String svcName) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\RemoteServiceRouter.cs:line 45
+   at FPT.Framework.DataService.WebServiceProvider.GetServiceInfo(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\WebServiceProvider.cs:line 67
+   at FPT.Framework.DataService.WebServiceProvider.GetService(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\WebServiceProvider.cs:line 56
+   at FPT.eHospital.Application.AppService.GetControlList(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 72
+   at FPT.eHospital.Application.PageManager.LoadFromDB(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 202
+   at FPT.eHospital.Application.PageManager.GetPage(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 177
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 69
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, String strAssembly, String strClass) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 347
+   at FPT.eHospital.Forms.Base.VMFrame.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 108
+   at FPT.eHospital.Forms.Base.VMFrame.OnShow() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 71
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 175
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-28 14:31:14,537 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-28 14:32:00,805 [1] INFO  - [Application started.]
+2018-11-28 14:32:02,430 [1] ERROR - Session initialized fail!
+System.Collections.Generic.KeyNotFoundException: The given key (SYS001) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\ExtendedDictionary.cs:line 35
+   at FPT.eHospital.Application.RemoteServiceRouter.GetServiceUrl(String svcName) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\RemoteServiceRouter.cs:line 45
+   at FPT.Framework.DataService.WebServiceProvider.GetServiceInfo(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\WebServiceProvider.cs:line 67
+   at FPT.Framework.DataService.WebServiceProvider.GetService(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\WebServiceProvider.cs:line 56
+   at FPT.eHospital.Application.AppService.GetControlList(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 72
+   at FPT.eHospital.Application.PageManager.LoadFromDB(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 202
+   at FPT.eHospital.Application.PageManager.GetPage(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 177
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 69
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, String strAssembly, String strClass) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 347
+   at FPT.eHospital.Forms.Base.VMFrame.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 108
+   at FPT.eHospital.Forms.Base.VMFrame.OnShow() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 71
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 175
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-28 14:32:08,611 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-28 14:33:25,821 [1] INFO  - [Application started.]
+2018-11-28 14:33:27,786 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-28 14:33:27,956 [1] INFO  - LoadMasters() took 162 ms.
+2018-11-28 14:33:27,974 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-28 14:33:38,067 [1] INFO  - [admin] Session is starting.
+2018-11-28 14:33:59,197 [5] INFO  - LoadMasters() took 21,121 ms.
+2018-11-28 14:33:59,211 [1] INFO  - [admin] Session started.
+2018-11-28 14:34:06,731 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-28 14:34:06,768 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-28 14:36:53,767 [1] INFO  - Print report on: Default Printer
+2018-11-28 14:36:53,927 [1] ERROR - Download file error!
+System.Net.WebException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'. ---> System.Net.WebException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'. ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.Net.FileWebStream..ctor(FileWebRequest request, String path, FileMode mode, FileAccess access, FileShare sharing, Int32 length, Boolean async)
+   at System.Net.FileWebResponse..ctor(FileWebRequest request, Uri uri, FileAccess access, Boolean asyncHint)
+   --- End of inner exception stack trace ---
+   at System.Net.FileWebResponse..ctor(FileWebRequest request, Uri uri, FileAccess access, Boolean asyncHint)
+   at System.Net.FileWebRequest.GetResponseCallback(Object state)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   at WinformUI.ReportViewer.DownLoadAndGetTemplatePath(String pathTemplate, DateTime lastUpdatedDate) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ReportViewer.cs:line 854
+2018-11-28 14:36:53,958 [1] ERROR - Print report error!
+System.Net.WebException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'. ---> System.Net.WebException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'. ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.Net.FileWebStream..ctor(FileWebRequest request, String path, FileMode mode, FileAccess access, FileShare sharing, Int32 length, Boolean async)
+   at System.Net.FileWebResponse..ctor(FileWebRequest request, Uri uri, FileAccess access, Boolean asyncHint)
+   --- End of inner exception stack trace ---
+   at System.Net.FileWebResponse..ctor(FileWebRequest request, Uri uri, FileAccess access, Boolean asyncHint)
+   at System.Net.FileWebRequest.GetResponseCallback(Object state)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   at WinformUI.ReportViewer.DownLoadAndGetTemplatePath(String pathTemplate, DateTime lastUpdatedDate) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ReportViewer.cs:line 860
+   at WinformUI.ReportViewer.DownloadFiles(List`1 templates) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ReportViewer.cs:line 821
+   at WinformUI.ReportViewer.RptRebind() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ReportViewer.cs:line 258
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ReportViewer.cs:line 240
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\ViewModel.cs:line 18
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\ModelBaseImpl.cs:line 220
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTDATA(IReportInfo value) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 24
+   at FPT.eHospital.Forms.Reporting.VMRPT01.ShowReportOnReportViewer(Boolean skipPaperCheck) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 97
+   at FPT.eHospital.Forms.Reporting.VMRPT01.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 48
+2018-11-28 14:37:25,515 [1] INFO  - Print report on: Default Printer
+2018-11-28 14:37:25,540 [1] ERROR - Download file error!
+System.Net.WebException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'. ---> System.Net.WebException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'. ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.Net.FileWebStream..ctor(FileWebRequest request, String path, FileMode mode, FileAccess access, FileShare sharing, Int32 length, Boolean async)
+   at System.Net.FileWebResponse..ctor(FileWebRequest request, Uri uri, FileAccess access, Boolean asyncHint)
+   --- End of inner exception stack trace ---
+   at System.Net.FileWebResponse..ctor(FileWebRequest request, Uri uri, FileAccess access, Boolean asyncHint)
+   at System.Net.FileWebRequest.GetResponseCallback(Object state)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   at WinformUI.ReportViewer.DownLoadAndGetTemplatePath(String pathTemplate, DateTime lastUpdatedDate) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ReportViewer.cs:line 854
+2018-11-28 14:37:25,563 [1] ERROR - Print report error!
+System.Net.WebException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'. ---> System.Net.WebException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'. ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48015\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.Net.FileWebStream..ctor(FileWebRequest request, String path, FileMode mode, FileAccess access, FileShare sharing, Int32 length, Boolean async)
+   at System.Net.FileWebResponse..ctor(FileWebRequest request, Uri uri, FileAccess access, Boolean asyncHint)
+   --- End of inner exception stack trace ---
+   at System.Net.FileWebResponse..ctor(FileWebRequest request, Uri uri, FileAccess access, Boolean asyncHint)
+   at System.Net.FileWebRequest.GetResponseCallback(Object state)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   at WinformUI.ReportViewer.DownLoadAndGetTemplatePath(String pathTemplate, DateTime lastUpdatedDate) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ReportViewer.cs:line 860
+   at WinformUI.ReportViewer.DownloadFiles(List`1 templates) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ReportViewer.cs:line 821
+   at WinformUI.ReportViewer.RptRebind() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ReportViewer.cs:line 258
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ReportViewer.cs:line 240
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\ViewModel.cs:line 18
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\ModelBaseImpl.cs:line 220
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTDATA(IReportInfo value) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 24
+   at FPT.eHospital.Forms.Reporting.VMRPT01.ShowReportOnReportViewer(Boolean skipPaperCheck) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 97
+   at FPT.eHospital.Forms.Reporting.VMRPT01.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 48
+--------------------------------------------------------------------------------
+2018-11-28 14:39:32,081 [1] INFO  - [Application started.]
+2018-11-28 14:39:33,559 [1] ERROR - Session initialized fail!
+System.ArgumentNullException: Value cannot be null.
+Parameter name: Path of ServiceProvider can't be null or empty.
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\eHosDataContainer.cs:line 103
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataContainer.cs:line 35
+   at FPT.Framework.Application.ApplicationSession.OpenProfile() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 188
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 167
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-28 14:39:35,353 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-28 14:40:01,930 [1] INFO  - [Application started.]
+2018-11-28 14:40:02,244 [1] ERROR - Session created fail!
+System.ArgumentNullException: Path cannot be null.
+Parameter name: path
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath) in E:\Working\eHospital\trunk\01.Framework\01.Framework\10.WinPlatform\WinStorage.cs:line 61
+   at FPT.Framework.Application.ApplicationBase.CreateDefaultTheme() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 264
+2018-11-28 14:40:03,891 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-28 14:40:32,080 [1] INFO  - [Application started.]
+2018-11-28 14:40:34,884 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-28 14:40:34,953 [1] INFO  - LoadMasters() took 57 ms.
+2018-11-28 14:40:34,954 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-28 14:40:51,561 [1] INFO  - [admin] Session is starting.
+2018-11-28 14:40:55,731 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:40:55,911 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:40:56,008 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:40:56,097 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:40:56,222 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:40:56,314 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:40:56,390 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:40:56,486 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:40:56,565 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:41:03,927 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:41:04,096 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:41:05,356 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-28 14:41:10,626 [5] INFO  - LoadMasters() took 19,051 ms.
+2018-11-28 14:41:10,635 [1] INFO  - [admin] Session started.
+2018-11-28 14:41:26,573 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-28 14:41:26,591 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)

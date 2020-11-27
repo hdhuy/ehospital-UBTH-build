@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,edac2da8d2a3ab32314e348f6df4fbc0-->
+        <statement id="DAO00065_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT NHOMDICHVU_ID
+            ,MANHOMDICHVU
+            ,LOAIDICHVU_ID
+            ,TENNHOMDICHVU
+            ,CAP
+            ,CAPTREN_ID
+            ,TRALOIKETQUARIENG
+            ,TAMNGUNG
+            ,TENKHONGDAU
+            ,NGAYTAO
+            ,NGUOITAO_ID
+            ,NGAYCAPNHAT
+            ,NGUOICAPNHAT_ID
+            FROM TM_NHOMDICHVU
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by NHOMDICHVU_ID
+        </statement>
+    </statements>
+</sqlMap>

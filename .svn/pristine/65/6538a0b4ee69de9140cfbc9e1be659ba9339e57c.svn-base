@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,a4dfca3774c4300da15c07c1821a8e8a-->
+        <statement id="DAO00056_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TM_LOAIGIA where BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

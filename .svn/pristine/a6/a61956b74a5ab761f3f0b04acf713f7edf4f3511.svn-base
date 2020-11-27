@@ -1,0 +1,1400 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <!--Revision:0,cb27ca05ef510cd2d6edf8fa475cc7b1-->
+    <statement id="DAO00020_ListKhoDuocPhongBan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select top 1 *
+      from TM_PHONGBAN_KHODUOC
+      where
+      PHONGBAN_ID = $PHONGBAN_ID$
+      and BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <!--Revision:0,42d1343becd270674f4b0acb91335d2e-->
+    <statement id="DAO00020_ListKhoDuocOfPhongBan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select B.* from TM_PHONGBAN_KHODUOC A
+      inner join TM_KHODUOC B on B.KHODUOC_ID = A.KHODUOC_ID
+      where
+      A.PHONGBAN_ID = '$PHONGBAN_ID$'
+      and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <!--Revision:0,1b1715d84024652dab31010ae4d496f8-->
+    <statement id="DAO00020_PhieuDangKyKham" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      exec sp_PhieuDangKyKham '$TIEPNHAN_ID$'
+    </statement>
+    <!--Revision:0,bc1d0d1bc43a1f4aa6c1b6c052d0d9af-->
+    <statement id="DAO00020_UpdateSoHangDoiCuaTiepNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      update TT_TIEPNHAN
+      set SOTHUTU = #SOTHUTU#
+      where TIEPNHAN_ID = $TIEPNHAN_ID$
+    </statement>
+    <!--Revision:0,de640edf2ff91e6724aaedc2d191e506-->
+    <statement id="DAO00020_UpdateSoHangDoiDvYeuCau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      update TT_DVYEUCAU
+      set SOTHUTU = #SOTHUTU#
+      where DVYEUCAU_ID = $DVYEUCAU_ID$
+    </statement>
+    <!--Revision:0,11cefe4ce4cc13250a657465929c5dce-->
+    <statement id="DAO00020_GetAll" resultClass="DataObject">
+      select *
+      from TT_DVYEUCAU
+      order by DVYEUCAU_ID
+    </statement>
+    <!--Revision:0,7fc7cf5afd9c9c30f7f5d10501cc964e-->
+    <statement id="DAO00020_UpdateKhamBenhIDInDVYC" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      update TT_DVYEUCAU
+      set KHAMBENH_NGOAITRU_ID = #KHAMBENH_ID#
+      <!--, CHANDOAN = #CHANDOAN#-->
+      , TRANGTHAI = #TRANGTHAI#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      where TIEPNHAN_ID = $TIEPNHAN_ID$
+      and DVYEUCAU_ID = $DVYEUCAU_ID$
+      <!--Update column DATHUCHIEN o table TT_VIENPHI-->
+      update TT_VIENPHI
+      set DATHUCHIEN = #DATHUCHIEN#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      where REF_ID = $DVYEUCAU_ID$
+      and REF_TABLE = 'TT_DVYEUCAU'
+    </statement>
+    <!--Revision:0,4c368af8b79b6c77385289a58d28091e-->
+    <statement id="DAO00020_LayThongTinSoluongDichVuPhongKham" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select CHUAKETQUA.NUMBER as CHUAKETQUA, HOANTAT.NUMBER as HOANTAT, DANGDIEUTRI.NUMBER as DANGTHUCHIEN,
+      CHUAKETQUA.NOITHUCHIEN_ID, CHUAKETQUA.TENPHONGBAN
+      from
+      (select count(A.TRANGTHAI) as NUMBER, A.NOITHUCHIEN_ID, B.TENPHONGBAN, A.TRANGTHAI
+      from TT_DVYEUCAU A inner join TM_PHONGBAN B on B.PHONGBAN_ID = A.NOITHUCHIEN_ID
+      where A.TRANGTHAI = 'CHUAKETQUA' and A.BENHVIEN_ID ='$BENHVIEN_ID$' and A.NGAYYEUCAU = CONVERT(date, getdate())
+      and A.NOITHUCHIEN_ID in ($PHONGBAN_LIST$)
+      group by A.NOITHUCHIEN_ID, B.TENPHONGBAN, A.TRANGTHAI) CHUAKETQUA
+      left join
+      (select count(A.TRANGTHAI) as NUMBER, A.NOITHUCHIEN_ID, B.TENPHONGBAN, A.TRANGTHAI
+      from TT_DVYEUCAU A inner join TM_PHONGBAN B on B.PHONGBAN_ID = A.NOITHUCHIEN_ID
+      where A.TRANGTHAI = 'HOANTAT' and A.BENHVIEN_ID ='$BENHVIEN_ID$' and A.NGAYYEUCAU = CONVERT(date, getdate())
+      and A.NOITHUCHIEN_ID in ($PHONGBAN_LIST$)
+      group by A.NOITHUCHIEN_ID, B.TENPHONGBAN, A.TRANGTHAI) HOANTAT on HOANTAT.NOITHUCHIEN_ID = CHUAKETQUA.NOITHUCHIEN_ID
+      left join
+      (select count(A.TRANGTHAI) as NUMBER, A.NOITHUCHIEN_ID, B.TENPHONGBAN, A.TRANGTHAI
+      from TT_DVYEUCAU A inner join TM_PHONGBAN B on B.PHONGBAN_ID = A.NOITHUCHIEN_ID
+      where A.TRANGTHAI = 'DANGTHUCHIEN' and A.BENHVIEN_ID ='$BENHVIEN_ID$' and A.NGAYYEUCAU = CONVERT(date, getdate())
+      and A.NOITHUCHIEN_ID in ($PHONGBAN_LIST$)
+      group by A.NOITHUCHIEN_ID, B.TENPHONGBAN, A.TRANGTHAI) DANGDIEUTRI on DANGDIEUTRI.NOITHUCHIEN_ID = CHUAKETQUA.NOITHUCHIEN_ID
+    </statement>
+    <!--Revision:0,ed0f448ae62895ebfaca59d8c406268e-->
+    <statement id="DAO00020_HuyChuyenPhongKham" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      delete TT_DVYEUCAU_THAYDOI
+      where DVYEUCAU_THAYDOI_ID = $DVYEUCAU_THAYDOI_ID$
+      update TT_DVYEUCAU
+      set NOITHUCHIEN_ID = $PHONGBAN_ID$
+      where DVYEUCAU_ID = $DVYEUCAU_ID$
+    </statement>
+    <!--Revision:0,99c9290824df24fbd35f9f94b6bd9e12-->
+    <statement id="DAO00020_GetDSDichVuYC" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select dvyc.*,
+      dv.TENDICHVU, dv.MADICHVU, dv.NORESULT, ndv.MANHOMDICHVU, ndv.TENNHOMDICHVU
+      from TT_DVYEUCAU dvyc
+      left join TM_DICHVU dv on dvyc.DICHVU_ID = dv.DICHVU_ID
+      left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = dv.NHOMDICHVU_ID
+      left join (select * from TT_VIENPHI where TIEPNHAN_ID = '$TIEPNHAN_ID$') vp on dvyc.DVYEUCAU_ID = vp.REF_ID
+      <!--left join TM_DICHVU dv on dv.DICHVU_ID = dvyc.DICHVU_ID-->
+      where
+      dvyc.TIEPNHAN_ID = $TIEPNHAN_ID$
+      and REF_TABLE = 'TT_DVYEUCAU'
+      <dynamic>
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="BENHAN_ID">
+            vp.BENHAN_ID = $BENHAN_ID$
+          </isNotEmpty>
+        </isParameterPresent>
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="DATHANHTOAN">
+            vp.DATHANHTOAN = '$DATHANHTOAN$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      order by DVYEUCAU_ID desc
+    </statement>
+    <statement id="DAO00020_GetDSDichVuYC_TN" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select top 1 dvyc.TIEPNHAN_ID, dvyc.BENHNHAN_ID, ntba.BENHAN_ID, dvyc.DICHVU_ID, dvyc.HUYYEUCAU,
+      case when ntba.SOBENHAN is null then N'ngoại trú'
+      when ntba.SOBENHAN like '%CC' then N'cấp cứu'
+      when ntba.SOBENHAN is not null then N'nội trú'
+      else N'' end as SUDUNGTAI
+      from TT_DVYEUCAU dvyc
+      left join TT_NOITRU_BENHAN ntba on dvyc.BENHAN_ID = ntba.BENHAN_ID
+      where
+      dvyc.TIEPNHAN_ID = $TIEPNHAN_ID$
+      and dvyc.HUYYEUCAU = 0
+      and dvyc.DICHVU_ID = $DICHVU_ID$
+      order by dvyc.NGAYGIOYEUCAU desc
+    </statement>
+
+    <!--Revision:0,44ba9040a756788fe29853170b9b5ea0-->
+    <statement id="DAO00020_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_DVYEUCAU
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+            TT_DVYEUCAU.DVYEUCAU_ID = $DVYEUCAU_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+            TT_DVYEUCAU.TIEPNHAN_ID = $TIEPNHAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHAN_ID">
+            TT_DVYEUCAU.BENHAN_ID = $BENHAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHAMBENH_ID">
+            TT_DVYEUCAU.KHAMBENH_ID = $KHAMBENH_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SODICHVUYEUCAU">
+            TT_DVYEUCAU.SODICHVUYEUCAU = '$SODICHVUYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOPHIEUYEUCAU">
+            TT_DVYEUCAU.SOPHIEUYEUCAU = '$SOPHIEUYEUCAU$'
+          </isNotEmpty>
+          <!--<isNotEmpty prepend="and" property="SOTHUTU">
+            TT_DVYEUCAU.SOTHUTU = '$SOTHUTU$'
+          </isNotEmpty>-->
+          <isNotEmpty prepend="and" property="BENHNHAN_ID">
+            TT_DVYEUCAU.BENHNHAN_ID = $BENHNHAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DOITUONG_ID">
+            TT_DVYEUCAU.DOITUONG_ID = $DOITUONG_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DICHVU_ID">
+            TT_DVYEUCAU.DICHVU_ID = $DICHVU_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BACSICHIDINH_ID">
+            TT_DVYEUCAU.BACSICHIDINH_ID = $BACSICHIDINH_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIOYEUCAU">
+            TT_DVYEUCAU.GIOYEUCAU = '$GIOYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYYEUCAU">
+            TT_DVYEUCAU.NGAYYEUCAU = '$NGAYYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THANGYEUCAU">
+            TT_DVYEUCAU.THANGYEUCAU = '$THANGYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NAMYEUCAU">
+            TT_DVYEUCAU.NAMYEUCAU = '$NAMYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYGIOYEUCAU">
+            TT_DVYEUCAU.NGAYGIOYEUCAU = '$NGAYGIOYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THUTUYEUCAU">
+            TT_DVYEUCAU.THUTUYEUCAU = '$THUTUYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NOIYEUCAU_ID">
+            TT_DVYEUCAU.NOIYEUCAU_ID = $NOIYEUCAU_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NOITHUCHIEN_ID">
+            TT_DVYEUCAU.NOITHUCHIEN_ID = $NOITHUCHIEN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TRANGTHAI_HANGDOI">
+            TT_DVYEUCAU.TRANGTHAI_HANGDOI = '$TRANGTHAI_HANGDOI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NOIDUNGCHITIET">
+            TT_DVYEUCAU.NOIDUNGCHITIET = '$NOIDUNGCHITIET$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="CHANDOAN">
+            TT_DVYEUCAU.CHANDOAN = '$CHANDOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LUUTRU_ID">
+            TT_DVYEUCAU.LUUTRU_ID = $LUUTRU_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SODICHVUDONGTIEN">
+            TT_DVYEUCAU.SODICHVUDONGTIEN = '$SODICHVUDONGTIEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DICHVU_KHAMBENH_ID">
+            TT_DVYEUCAU.DICHVU_KHAMBENH_ID = '$DICHVU_KHAMBENH_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DALAYMAU">
+            TT_DVYEUCAU.DALAYMAU = '$DALAYMAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SINHTHIET">
+            TT_DVYEUCAU.SINHTHIET = '$SINHTHIET$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="CLOTEST">
+            TT_DVYEUCAU.CLOTEST = '$CLOTEST$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEMCANQUANG">
+            TT_DVYEUCAU.TIEMCANQUANG = '$TIEMCANQUANG$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TRIEUCHUNG">
+            TT_DVYEUCAU.TRIEUCHUNG = '$TRIEUCHUNG$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DAITHE">
+            TT_DVYEUCAU.DAITHE = '$DAITHE$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="VITHE">
+            TT_DVYEUCAU.VITHE = '$VITHE$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHPHAM">
+            TT_DVYEUCAU.BENHPHAM = '$BENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DANHANBENHPHAM">
+            TT_DVYEUCAU.DANHANBENHPHAM = '$DANHANBENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYNHANBENHPHAM">
+            TT_DVYEUCAU.NGAYNHANBENHPHAM = '$NGAYNHANBENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THOIGIANNHANBENHPHAM">
+            TT_DVYEUCAU.THOIGIANNHANBENHPHAM = '$THOIGIANNHANBENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOINHANBENHPHAM_ID">
+            TT_DVYEUCAU.NGUOINHANBENHPHAM_ID = $NGUOINHANBENHPHAM_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MANGUOINHAPBENHPHAM">
+            TT_DVYEUCAU.MANGUOINHAPBENHPHAM = '$MANGUOINHAPBENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TENNGUOINHAPBENHPHAM">
+            TT_DVYEUCAU.TENNGUOINHAPBENHPHAM = '$TENNGUOINHAPBENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KETQUAXNKHAC">
+            TT_DVYEUCAU.KETQUAXNKHAC = '$KETQUAXNKHAC$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="YEUCAUBENNGOAI">
+            TT_DVYEUCAU.YEUCAUBENNGOAI = '$YEUCAUBENNGOAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THUCHIENBENNGOAI">
+            TT_DVYEUCAU.THUCHIENBENNGOAI = '$THUCHIENBENNGOAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DONVIBENNGOAI_ID">
+            TT_DVYEUCAU.DONVIBENNGOAI_ID = $DONVIBENNGOAI_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BACSIBENNGOAI_ID">
+            TT_DVYEUCAU.BACSIBENNGOAI_ID = $BACSIBENNGOAI_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TENBACSIBENNGOAI">
+            TT_DVYEUCAU.TENBACSIBENNGOAI = '$TENBACSIBENNGOAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHOABENNGOAI_ID">
+            TT_DVYEUCAU.KHOABENNGOAI_ID = $KHOABENNGOAI_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHOABENNGOAI">
+            TT_DVYEUCAU.KHOABENNGOAI = '$KHOABENNGOAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NOITHUCHIENTHAYDOI_ID">
+            TT_DVYEUCAU.NOITHUCHIENTHAYDOI_ID = $NOITHUCHIENTHAYDOI_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LOAIKHACHHANG_ID">
+            TT_DVYEUCAU.LOAIKHACHHANG_ID = $LOAIKHACHHANG_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THE_ID">
+            TT_DVYEUCAU.THE_ID = $THE_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BARCODEID">
+            TT_DVYEUCAU.BARCODEID = '$BARCODEID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HOPDONG_ID">
+            TT_DVYEUCAU.HOPDONG_ID = $HOPDONG_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HOPDONG_BENHNHAN_ID">
+            TT_DVYEUCAU.HOPDONG_BENHNHAN_ID = $HOPDONG_BENHNHAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HINHTHUCTHANHTOAN_ID">
+            TT_DVYEUCAU.HINHTHUCTHANHTOAN_ID = $HINHTHUCTHANHTOAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DANGKY_ID">
+            TT_DVYEUCAU.DANGKY_ID = $DANGKY_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DANGKY_CHITIET_ID">
+            TT_DVYEUCAU.DANGKY_CHITIET_ID = $DANGKY_CHITIET_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LICHHEN_ID">
+            TT_DVYEUCAU.LICHHEN_ID = $LICHHEN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THOIGIANLICHHEN">
+            TT_DVYEUCAU.THOIGIANLICHHEN = '$THOIGIANLICHHEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BNKHONGDENBV">
+            TT_DVYEUCAU.BNKHONGDENBV = '$BNKHONGDENBV$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GHICHU">
+            TT_DVYEUCAU.GHICHU = '$GHICHU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THANHTOANTRUOC">
+            TT_DVYEUCAU.THANHTOANTRUOC = '$THANHTOANTRUOC$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHAN">
+            TT_DVYEUCAU.KHAN = '$KHAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUOCPHEPTHUCHIEN">
+            TT_DVYEUCAU.DUOCPHEPTHUCHIEN = '$DUOCPHEPTHUCHIEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HUYYEUCAU">
+            TT_DVYEUCAU.HUYYEUCAU = '$HUYYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LYDOHUY">
+            TT_DVYEUCAU.LYDOHUY = '$LYDOHUY$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TRANGTHAI">
+            TT_DVYEUCAU.TRANGTHAI = '$TRANGTHAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHOADULIEU">
+            TT_DVYEUCAU.KHOADULIEU = '$KHOADULIEU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYKHOADULIEU">
+            TT_DVYEUCAU.NGAYKHOADULIEU = '$NGAYKHOADULIEU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THOIGIANKHOADULIEU">
+            TT_DVYEUCAU.THOIGIANKHOADULIEU = '$THOIGIANKHOADULIEU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOIKHOA_ID">
+            TT_DVYEUCAU.NGUOIKHOA_ID = $NGUOIKHOA_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MANGUOIKHOA">
+            TT_DVYEUCAU.MANGUOIKHOA = '$MANGUOIKHOA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TENNGUOIKHOA">
+            TT_DVYEUCAU.TENNGUOIKHOA = '$TENNGUOIKHOA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            TT_DVYEUCAU.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYTAO">
+            TT_DVYEUCAU.NGAYTAO = '$NGAYTAO$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOITAO_ID">
+            TT_DVYEUCAU.NGUOITAO_ID = $NGUOITAO_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+            TT_DVYEUCAU.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+            TT_DVYEUCAU.NGUOICAPNHAT_ID = $NGUOICAPNHAT_ID$
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      order by DVYEUCAU_ID
+    </statement>
+    <!--Revision:0,8cf249666f90e451b6350b4182c4dfa7-->
+    <statement id="DAO00020_GetDetail" parameterClass="System.String" resultClass="DataObject">
+      select *
+      from TT_DVYEUCAU
+      where TT_DVYEUCAU.DVYEUCAU_ID  = '$value$'
+      order by DVYEUCAU_ID
+    </statement>
+    <!--Revision:0,e4f83ad2369292045393727369a3ef6c-->
+    <statement id="DAO00020_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_DVYEUCAU
+      where TT_DVYEUCAU.DVYEUCAU_ID  = $DVYEUCAU_ID$
+      order by DVYEUCAU_ID
+    </statement>
+    <!--Revision:0,3e111cf8f773f3c1fe8af9b5ec37a712-->
+    <statement id="DAO00020_GetTTDVYeuCauByID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_DVYEUCAU
+      where TT_DVYEUCAU.DVYEUCAU_ID  = $DVYEUCAU_ID$
+      order by DVYEUCAU_ID
+    </statement>
+    <statement id="DAO00020_GetNhomdichvuIDByManhom" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      select NHOMDICHVU_ID from TM_NHOMDICHVU where MANHOMDICHVU = '$MANHOMDICHVU$'
+    </statement>
+    <!--Revision:0,d7b711c9609366894cdfd1935ff6247d-->
+    <statement id="DAO00020_GetDSDVChuaThucHien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select dvyc.*
+      from TT_DVYEUCAU dvyc
+      inner join TT_VIENPHI vp on dvyc.DVYEUCAU_ID = vp.REF_ID and vp.REF_TABLE = 'TT_DVYEUCAU'
+      where vp.DATHUCHIEN = 0 and dvyc.HUYYEUCAU = 0
+      and dvyc.BENHAN_ID = $BENHAN_ID$
+      and dvyc.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and dvyc.TRANGTHAI != 'HOANTAT'
+    </statement>
+    <!--Revision:0,95af020ea50d82b45a406ef8cce39c72-->
+    <statement id="DAO00020_GetSTTDVByTiepNhan_ID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT TOP (1) THUTUYEUCAU
+      FROM TT_DVYEUCAU
+      WHERE TIEPNHAN_ID = $TIEPNHAN_ID$
+      ORDER BY THUTUYEUCAU DESC
+    </statement>
+    <!--Revision:0,7cc6c4c208b83dd3ea87b5de48702695-->
+    <statement id="DAO00020_CheckExistDVYeuCau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select DVYEUCAU_ID
+      from TT_DVYEUCAU
+      where TIEPNHAN_ID  = $TIEPNHAN_ID$
+      <!--and NGUOITAO_ID = '$NGUOITAO_ID$'-->
+      and DVYEUCAU_ID != $DVYEUCAU_ID$
+      and KHAMBENH_ID = '$KHAMBENH_ID$'
+    </statement>
+    <!--Revision:0,34993b93b9a2499d8302668164f74138-->
+    <statement id="DAO00020_Add" parameterClass="DataObject" resultClass="DataObject">
+      <!--Get so phieu yeu cau-->
+      declare
+      @keyValue int, @BenhVienId varchar(10), @yearNow int, @SoPhieuYeu varchar(20), @SoRender varchar(20), @MaNhomDichVu varchar(20)
+      set @keyValue = 0;
+      set @BenhVienId = '$BENHVIEN_ID$'
+      set @yearNow = YEAR(getdate())
+      set @MaNhomDichVu = '$NHOMDICHVU_ID$'
+      <!--BEGIN TRANSACTION-->
+      select @keyValue = KEYVALUE from LST_KEYDATA
+      where KEYTYPE = 'SOPHIEUYEUCAU' and KEYYEAR = @yearNow and SEGMENT_1 = @MaNhomDichVu and BENHVIEN_ID = @BenhVienId
+      if @keyValue = 0
+      Insert into LST_KEYDATA values ('SOPHIEUYEUCAU', @yearNow, '0', '0', @MaNhomDichVu, '0', '0', 0, @BenhVienId);
+
+      Update LST_KEYDATA set KEYVALUE = KEYVALUE + 1, @keyValue = (KEYVALUE + 1) where KEYTYPE = 'SOPHIEUYEUCAU' and KEYYEAR = @yearNow and SEGMENT_1 = @MaNhomDichVu and BENHVIEN_ID = @BenhVienId
+      set @SoRender = right('000000'+convert(varchar(6), @keyValue), 6)
+      set @SoPhieuYeu = RIGHT(@yearNow, 2) + '.' + @MaNhomDichVu + '.' + @SoRender
+      <!--COMMIT TRANSACTION-->
+      <!--insert vao db-->
+      insert into TT_DVYEUCAU (
+      TIEPNHAN_ID
+      , BENHAN_ID
+      , KHAMBENH_ID
+      , SODICHVUYEUCAU
+      , KHAMBENH_NGOAITRU_ID
+      , SOPHIEUYEUCAU
+      , BENHNHAN_ID
+      , DOITUONG_ID
+      , DICHVU_ID
+      <isPropertyAvailable prepend="," property="NGUOICHIDINH_ID">
+        NGUOICHIDINH_ID
+      </isPropertyAvailable>
+      , BACSICHIDINH_ID
+      , GIOYEUCAU
+      , NGAYYEUCAU
+      , THANGYEUCAU
+      , NAMYEUCAU
+      , NGAYGIOYEUCAU
+      , THUTUYEUCAU
+      , NOIYEUCAU_ID
+      , NOITHUCHIEN_ID
+      , TRANGTHAI_HANGDOI
+      , NOIDUNGCHITIET
+      , CHANDOAN
+      , LUUTRU_ID
+      , SODICHVUDONGTIEN
+      , DICHVU_KHAMBENH_ID
+      , DALAYMAU
+      , SINHTHIET
+      , CLOTEST
+      , TIEMCANQUANG
+      , TRIEUCHUNG
+      , DAITHE
+      , VITHE
+      , BENHPHAM
+      , DANHANBENHPHAM
+      , NGAYNHANBENHPHAM
+      , THOIGIANNHANBENHPHAM
+      , NGUOINHANBENHPHAM_ID
+      , MANGUOINHAPBENHPHAM
+      , TENNGUOINHAPBENHPHAM
+      , KETQUAXNKHAC
+      , YEUCAUBENNGOAI
+      , THUCHIENBENNGOAI
+      , DONVIBENNGOAI_ID
+      , BACSIBENNGOAI_ID
+      , TENBACSIBENNGOAI
+      , KHOABENNGOAI_ID
+      , KHOABENNGOAI
+      <isPropertyAvailable prepend="," property="NGUOIGIOITHIEU_ID">
+        NGUOIGIOITHIEU_ID
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="DONVIGIOITHIEU_ID">
+        DONVIGIOITHIEU_ID
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="NGUONDICHVU_ID">
+        NGUONDICHVU_ID
+      </isPropertyAvailable>
+      , NOITHUCHIENTHAYDOI_ID
+      , LOAIKHACHHANG_ID
+      , THE_ID
+      , BARCODEID
+      , HOPDONG_ID
+      , HOPDONG_BENHNHAN_ID
+      , HINHTHUCTHANHTOAN_ID
+      , DANGKY_ID
+      , DANGKY_CHITIET_ID
+      , LICHHEN_ID
+      , THOIGIANLICHHEN
+      , BNKHONGDENBV
+      , GHICHU
+      , THANHTOANTRUOC
+      , KHAN
+      , DUOCPHEPTHUCHIEN
+      , HUYYEUCAU
+      , LYDOHUY
+      , TRANGTHAI
+      , KHOADULIEU
+      , NGAYKHOADULIEU
+      , THOIGIANKHOADULIEU
+      , NGUOIKHOA_ID
+      , MANGUOIKHOA
+      , TENNGUOIKHOA
+      , BENHVIEN_ID
+      , NGAYTAO
+      , NGUOITAO_ID
+      , NGAYHENCLS
+      , CREATININEMAU
+      , VUNGCANKHAOSAT
+      , BHYTDONGTIEN
+      , THUTIENSAU
+      <isPropertyAvailable prepend="," property="DV30">
+        DV30
+      </isPropertyAvailable>
+      , DVKEMTHEO
+      , DVKEMTHEO_KHACEKIP
+      , LIENCHUYENKHOA
+      <isPropertyAvailable prepend="," property="BHYT_TYLETHANHTOAN_ID">
+        BHYT_TYLETHANHTOAN_ID
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="CHUADUYET_BHYT">
+        CHUADUYET_BHYT
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="SOPHIEUGOINGOAI">
+        SOPHIEUGOINGOAI
+      </isPropertyAvailable>
+      )
+      OUTPUT INSERTED.DVYEUCAU_ID, INSERTED.SOPHIEUYEUCAU
+      values (
+      #TIEPNHAN_ID#
+      , #BENHAN_ID#
+      , #KHAMBENH_ID#
+      , #SODICHVUYEUCAU#
+      , #KHAMBENH_NGOAITRU_ID#
+      , @SoPhieuYeu
+      , #BENHNHAN_ID#
+      , #DOITUONG_ID#
+      , #DICHVU_ID#
+      <isPropertyAvailable prepend="," property="NGUOICHIDINH_ID">
+        #NGUOICHIDINH_ID#
+      </isPropertyAvailable>
+      , #BACSICHIDINH_ID#
+      , #GIOYEUCAU#
+      , #NGAYYEUCAU#
+      , #THANGYEUCAU#
+      , #NAMYEUCAU#
+      , #NGAYGIOYEUCAU#
+      , #THUTUYEUCAU#
+      , #NOIYEUCAU_ID#
+      , #NOITHUCHIEN_ID#
+      , #TRANGTHAI_HANGDOI#
+      , #NOIDUNGCHITIET#
+      , #CHANDOAN#
+      , #LUUTRU_ID#
+      , #SODICHVUDONGTIEN#
+      , #DICHVU_KHAMBENH_ID#
+      , #DALAYMAU#
+      , #SINHTHIET#
+      , #CLOTEST#
+      , #TIEMCANQUANG#
+      , #TRIEUCHUNG#
+      , #DAITHE#
+      , #VITHE#
+      , #BENHPHAM#
+      , #DANHANBENHPHAM#
+      , #NGAYNHANBENHPHAM#
+      , #THOIGIANNHANBENHPHAM#
+      , #NGUOINHANBENHPHAM_ID#
+      , #MANGUOINHAPBENHPHAM#
+      , #TENNGUOINHAPBENHPHAM#
+      , #KETQUAXNKHAC#
+      , #YEUCAUBENNGOAI#
+      , #THUCHIENBENNGOAI#
+      , #DONVIBENNGOAI_ID#
+      , #BACSIBENNGOAI_ID#
+      , #TENBACSIBENNGOAI#
+      , #KHOABENNGOAI_ID#
+      , #KHOABENNGOAI#
+      <isPropertyAvailable prepend="," property="NGUOIGIOITHIEU_ID">
+        #NGUOIGIOITHIEU_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="DONVIGIOITHIEU_ID">
+        #DONVIGIOITHIEU_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="NGUONDICHVU_ID">
+        #NGUONDICHVU_ID#
+      </isPropertyAvailable>
+      , #NOITHUCHIENTHAYDOI_ID#
+      , #LOAIKHACHHANG_ID#
+      , #THE_ID#
+      , #BARCODEID#
+      , #HOPDONG_ID#
+      , #HOPDONG_BENHNHAN_ID#
+      , #HINHTHUCTHANHTOAN_ID#
+      , #DANGKY_ID#
+      , #DANGKY_CHITIET_ID#
+      , #LICHHEN_ID#
+      , #THOIGIANLICHHEN#
+      , #BNKHONGDENBV#
+      , #GHICHU#
+      , #THANHTOANTRUOC#
+      , #KHAN#
+      , #DUOCPHEPTHUCHIEN#
+      , #HUYYEUCAU#
+      , #LYDOHUY#
+      , #TRANGTHAI#
+      , #KHOADULIEU#
+      , #NGAYKHOADULIEU#
+      , #THOIGIANKHOADULIEU#
+      , #NGUOIKHOA_ID#
+      , #MANGUOIKHOA#
+      , #TENNGUOIKHOA#
+      , #BENHVIEN_ID#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      , #NGAYHENCLS#
+      , #CREATININEMAU#
+      , #VUNGCANKHAOSAT#
+      , #BHYTDONGTIEN#
+      , #THUTIENSAU#
+      <isPropertyAvailable prepend="," property="DV30">
+        #DV30#
+      </isPropertyAvailable>
+      , #DVKEMTHEO#
+      , #DVKEMTHEO_KHACEKIP#
+      , #LIENCHUYENKHOA#
+      <isPropertyAvailable prepend="," property="BHYT_TYLETHANHTOAN_ID">
+        #BHYT_TYLETHANHTOAN_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="CHUADUYET_BHYT">
+        #CHUADUYET_BHYT#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="SOPHIEUGOINGOAI">
+        #SOPHIEUGOINGOAI#
+      </isPropertyAvailable>
+      );
+    </statement>
+    <!--Revision:0,63975cbb1460448e4999a625c0f4479d-->
+    <statement id="DAO00020_GetDVYeuCau_ByDvYeuCau_id" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_DVYEUCAU where DVYEUCAU_ID = $DVYEUCAU_ID$
+    </statement>
+    <!--Revision:0,c4c0139f1137734b0b023dbf8819f0ec-->
+    <update id="DAO00020_CapMaRIS" parameterClass="HashTable">
+      update TT_DVYEUCAU set
+      MARIS = #MARIS#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      where
+      DVYEUCAU_ID = $DVYEUCAU_ID$
+    </update>
+    <!--Revision:0,3b59e8285d49fec4add79a8e694cd185-->
+    <statement id="DAO00020_KiemTraTrungMaRIS" parameterClass="HashTable" resultClass="DataObject">
+      select DVYEUCAU_ID
+      from TT_DVYEUCAU
+      where
+      MARIS = '$MARIS$'
+      and BENHVIEN_ID = '$BENHVIEN_ID$'
+      and DVYEUCAU_ID != $DVYEUCAU_ID$
+      and HUYYEUCAU != 1
+    </statement>
+    <!--Revision:0,aa9cfe26088f8ebb990f2fa22751b9ba-->
+    <update id="DAO00020_Update" parameterClass="HashTable">
+      update TT_DVYEUCAU set
+      TIEPNHAN_ID = #TIEPNHAN_ID#
+      , BENHAN_ID = #BENHAN_ID#
+      , KHAMBENH_ID = #KHAMBENH_ID#
+      <isPropertyAvailable prepend="," property="SOPHIEUYEUCAU">
+        SOPHIEUYEUCAU = #SOPHIEUYEUCAU#
+      </isPropertyAvailable>
+      <!--, SOTHUTU = #SOTHUTU#-->
+      , BENHNHAN_ID = #BENHNHAN_ID#
+      , DOITUONG_ID = #DOITUONG_ID#
+      , DICHVU_ID = #DICHVU_ID#
+      , BACSICHIDINH_ID = #BACSICHIDINH_ID#
+      <isPropertyAvailable prepend="," property="NGUOICHIDINH_ID">
+        NGUOICHIDINH_ID = #NGUOICHIDINH_ID#
+      </isPropertyAvailable>
+      , GIOYEUCAU = #GIOYEUCAU#
+      , NGAYYEUCAU = #NGAYYEUCAU#
+      , THANGYEUCAU = #THANGYEUCAU#
+      , NAMYEUCAU = #NAMYEUCAU#
+      , NGAYGIOYEUCAU = #NGAYGIOYEUCAU#
+      , THUTUYEUCAU = #THUTUYEUCAU#
+      , NOIYEUCAU_ID = #NOIYEUCAU_ID#
+      , NOITHUCHIEN_ID = #NOITHUCHIEN_ID#
+      , TRANGTHAI_HANGDOI = #TRANGTHAI_HANGDOI#
+      , NOIDUNGCHITIET = #NOIDUNGCHITIET#
+      , CHANDOAN = #CHANDOAN#
+      , LUUTRU_ID = #LUUTRU_ID#
+      , SODICHVUDONGTIEN = #SODICHVUDONGTIEN#
+      , DICHVU_KHAMBENH_ID = #DICHVU_KHAMBENH_ID#
+      , DALAYMAU = #DALAYMAU#
+      , SINHTHIET = #SINHTHIET#
+      , CLOTEST = #CLOTEST#
+      , TIEMCANQUANG = #TIEMCANQUANG#
+      , TRIEUCHUNG = #TRIEUCHUNG#
+      , DAITHE = #DAITHE#
+      , VITHE = #VITHE#
+      , BENHPHAM = #BENHPHAM#
+      , DANHANBENHPHAM = #DANHANBENHPHAM#
+      , NGAYNHANBENHPHAM = #NGAYNHANBENHPHAM#
+      , THOIGIANNHANBENHPHAM = #THOIGIANNHANBENHPHAM#
+      , NGUOINHANBENHPHAM_ID = #NGUOINHANBENHPHAM_ID#
+      , MANGUOINHAPBENHPHAM = #MANGUOINHAPBENHPHAM#
+      , TENNGUOINHAPBENHPHAM = #TENNGUOINHAPBENHPHAM#
+      , KETQUAXNKHAC = #KETQUAXNKHAC#
+      , YEUCAUBENNGOAI = #YEUCAUBENNGOAI#
+      , THUCHIENBENNGOAI = #THUCHIENBENNGOAI#
+      , DONVIBENNGOAI_ID = #DONVIBENNGOAI_ID#
+      , BACSIBENNGOAI_ID = #BACSIBENNGOAI_ID#
+      , TENBACSIBENNGOAI = #TENBACSIBENNGOAI#
+      , KHOABENNGOAI_ID = #KHOABENNGOAI_ID#
+      , KHOABENNGOAI = #KHOABENNGOAI#
+      <isPropertyAvailable prepend="," property="NGUOIGIOITHIEU_ID">
+        NGUOIGIOITHIEU_ID = #NGUOIGIOITHIEU_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="DONVIGIOITHIEU_ID">
+        DONVIGIOITHIEU_ID = #DONVIGIOITHIEU_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="NGUONDICHVU_ID">
+        NGUONDICHVU_ID = #NGUONDICHVU_ID#
+      </isPropertyAvailable>
+      , NOITHUCHIENTHAYDOI_ID = #NOITHUCHIENTHAYDOI_ID#
+      , LOAIKHACHHANG_ID = #LOAIKHACHHANG_ID#
+      , THE_ID = #THE_ID#
+      , BARCODEID = #BARCODEID#
+      , HOPDONG_ID = #HOPDONG_ID#
+      , HOPDONG_BENHNHAN_ID = #HOPDONG_BENHNHAN_ID#
+      , HINHTHUCTHANHTOAN_ID = #HINHTHUCTHANHTOAN_ID#
+      <!--, GOIDICHVU_DANGKY_ID = #GOIDICHVU_DANGKY_ID#
+      , GOIDICHVU_DANGKY_CHITIET_ID = #GOIDICHVU_DANGKY_CHITIET_ID#-->
+      , LICHHEN_ID = #LICHHEN_ID#
+      , THOIGIANLICHHEN = #THOIGIANLICHHEN#
+      , BNKHONGDENBV = #BNKHONGDENBV#
+      , GHICHU = #GHICHU#
+      , THANHTOANTRUOC = #THANHTOANTRUOC#
+      , KHAN = #KHAN#
+      , DUOCPHEPTHUCHIEN = #DUOCPHEPTHUCHIEN#
+      , HUYYEUCAU = #HUYYEUCAU#
+      , LYDOHUY = #LYDOHUY#
+      , TRANGTHAI = #TRANGTHAI#
+      , KHOADULIEU = #KHOADULIEU#
+      , NGAYKHOADULIEU = #NGAYKHOADULIEU#
+      , THOIGIANKHOADULIEU = #THOIGIANKHOADULIEU#
+      , NGUOIKHOA_ID = #NGUOIKHOA_ID#
+      , MANGUOIKHOA = #MANGUOIKHOA#
+      , TENNGUOIKHOA = #TENNGUOIKHOA#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , NGAYHENCLS = #NGAYHENCLS#
+      , CREATININEMAU = #CREATININEMAU#
+      , VUNGCANKHAOSAT = #VUNGCANKHAOSAT#
+      , BHYTDONGTIEN = #BHYTDONGTIEN#
+      , THUTIENSAU = #THUTIENSAU#
+      <isPropertyAvailable prepend="," property="DV30">
+        DV30 = #DV30#
+      </isPropertyAvailable>
+      , DVKEMTHEO = #DVKEMTHEO#
+      , DVKEMTHEO_KHACEKIP = #DVKEMTHEO_KHACEKIP#
+      , LIENCHUYENKHOA = #LIENCHUYENKHOA#
+      <isPropertyAvailable prepend="," property="BHYT_TYLETHANHTOAN_ID">
+        BHYT_TYLETHANHTOAN_ID = #BHYT_TYLETHANHTOAN_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="CHUADUYET_BHYT">
+        CHUADUYET_BHYT = #CHUADUYET_BHYT#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="SOPHIEUGOINGOAI">
+        SOPHIEUGOINGOAI = #SOPHIEUGOINGOAI#
+      </isPropertyAvailable>
+      where
+      DVYEUCAU_ID = $DVYEUCAU_ID$
+    </update>
+    <!--Revision:0,98b6616191556f8ec4ed6ebc867ffeb7-->
+    <update id="DAO00020_UpdateTrangThaiDVYeuCau" parameterClass="HashTable">
+      update TT_DVYEUCAU set
+      TRANGTHAI = #TRANGTHAI#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , KHOADULIEU = #KHOADULIEU#
+      , NGAYKHOADULIEU = #NGAYKHOADULIEU#
+      , THOIGIANKHOADULIEU = #THOIGIANKHOADULIEU#
+      , NGUOIKHOA_ID = #NGUOIKHOA_ID#
+      , MANGUOIKHOA = #MANGUOIKHOA#
+      , TENNGUOIKHOA = #TENNGUOIKHOA#
+      where
+      DVYEUCAU_ID = #DVYEUCAU_ID#
+    </update>
+    <!--Revision:0,ec08e386885aa49f75532637decc7eba-->
+    <update id="DAO00020_UpdateTienSuBenhNhan" parameterClass="HashTable">
+      update TT_BENHNHAN set
+      TIENSUDIUNG = #TIENSUDIUNG#
+      , TIENSUBENH = #TIENSUBENH#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      where
+      BENHNHAN_ID = #BENHNHAN_ID#
+    </update>
+    <!--Revision:0,0760471102ca5a662b10fbf80094a9d7-->
+    <statement id="DAO00020_DeleteAll" parameterClass="System.String" resultClass="System.Int32">
+      delete from TT_VIENPHI where DICHVU_ID = $DICHVU_ID$ and TIEPNHAN_ID = $TIEPNHAN_ID$
+      delete from TT_DVYEUCAU where DICHVU_ID = $DICHVU_ID$ and TIEPNHAN_ID = $TIEPNHAN_ID$
+    </statement>
+    <!--Revision:0,ae1094b403e1e7ab1271e4d4a46e743b-->
+    <statement id="DAO00020_Delete" parameterClass="System.String" resultClass="System.Int32">
+      delete from TT_DVYEUCAU
+      where
+      DVYEUCAU_ID = $DVYEUCAU_ID$;
+      delete from TT_VIENPHI
+      where
+      REF_ID = $DVYEUCAU_ID$ and REF_TABLE = 'TT_DVYEUCAU';
+    </statement>
+    <!--Revision:0,11cf2b197846b9bd70798f10b4328a61-->
+    <delete id="DAO00020_DeleteDVYeuCauInList" parameterClass="HashTable">
+      delete from TT_DVYEUCAU_THAYDOI
+      where DVYEUCAU_ID in
+      <iterate open="(" close=")" conjunction=",  " property="LSTDELETEDDVYCID">
+        #LSTDELETEDDVYCID[]#
+      </iterate>
+      delete from TT_DVYEUCAU
+      where DVYEUCAU_ID in
+      <iterate open="(" close=")" conjunction=",  " property="LSTDELETEDDVYCID">
+        #LSTDELETEDDVYCID[]#
+      </iterate>
+    </delete>
+    <!--Revision:0,58da5a7a5caaa216e11a1ab89f460607-->
+    <statement id="DAO00020_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_DVYEUCAU
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+            TT_DVYEUCAU.DVYEUCAU_ID = $DVYEUCAU_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+            TT_DVYEUCAU.TIEPNHAN_ID = $TIEPNHAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHAN_ID">
+            TT_DVYEUCAU.BENHAN_ID = $BENHAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHAMBENH_ID">
+            TT_DVYEUCAU.KHAMBENH_ID = $KHAMBENH_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SODICHVUYEUCAU">
+            TT_DVYEUCAU.SODICHVUYEUCAU = '$SODICHVUYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOPHIEUYEUCAU">
+            TT_DVYEUCAU.SOPHIEUYEUCAU = '$SOPHIEUYEUCAU$'
+          </isNotEmpty>
+          <!--<isNotEmpty prepend="and" property="SOTHUTU">
+            TT_DVYEUCAU.SOTHUTU = '$SOTHUTU$'
+          </isNotEmpty>-->
+          <isNotEmpty prepend="and" property="BENHNHAN_ID">
+            TT_DVYEUCAU.BENHNHAN_ID = $BENHNHAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DOITUONG_ID">
+            TT_DVYEUCAU.DOITUONG_ID = $DOITUONG_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DICHVU_ID">
+            TT_DVYEUCAU.DICHVU_ID = $DICHVU_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BACSICHIDINH_ID">
+            TT_DVYEUCAU.BACSICHIDINH_ID = $BACSICHIDINH_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIOYEUCAU">
+            TT_DVYEUCAU.GIOYEUCAU = '$GIOYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYYEUCAU">
+            TT_DVYEUCAU.NGAYYEUCAU = '$NGAYYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THANGYEUCAU">
+            TT_DVYEUCAU.THANGYEUCAU = '$THANGYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NAMYEUCAU">
+            TT_DVYEUCAU.NAMYEUCAU = '$NAMYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYGIOYEUCAU">
+            TT_DVYEUCAU.NGAYGIOYEUCAU = '$NGAYGIOYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THUTUYEUCAU">
+            TT_DVYEUCAU.THUTUYEUCAU = '$THUTUYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NOIYEUCAU_ID">
+            TT_DVYEUCAU.NOIYEUCAU_ID = $NOIYEUCAU_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NOITHUCHIEN_ID">
+            TT_DVYEUCAU.NOITHUCHIEN_ID = $NOITHUCHIEN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TRANGTHAI_HANGDOI">
+            TT_DVYEUCAU.TRANGTHAI_HANGDOI = '$TRANGTHAI_HANGDOI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NOIDUNGCHITIET">
+            TT_DVYEUCAU.NOIDUNGCHITIET = '$NOIDUNGCHITIET$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="CHANDOAN">
+            TT_DVYEUCAU.CHANDOAN = '$CHANDOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LUUTRU_ID">
+            TT_DVYEUCAU.LUUTRU_ID = $LUUTRU_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SODICHVUDONGTIEN">
+            TT_DVYEUCAU.SODICHVUDONGTIEN = '$SODICHVUDONGTIEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DICHVU_KHAMBENH_ID">
+            TT_DVYEUCAU.DICHVU_KHAMBENH_ID = $DICHVU_KHAMBENH_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DALAYMAU">
+            TT_DVYEUCAU.DALAYMAU = '$DALAYMAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SINHTHIET">
+            TT_DVYEUCAU.SINHTHIET = '$SINHTHIET$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="CLOTEST">
+            TT_DVYEUCAU.CLOTEST = '$CLOTEST$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEMCANQUANG">
+            TT_DVYEUCAU.TIEMCANQUANG = '$TIEMCANQUANG$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TRIEUCHUNG">
+            TT_DVYEUCAU.TRIEUCHUNG = '$TRIEUCHUNG$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DAITHE">
+            TT_DVYEUCAU.DAITHE = '$DAITHE$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="VITHE">
+            TT_DVYEUCAU.VITHE = '$VITHE$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHPHAM">
+            TT_DVYEUCAU.BENHPHAM = '$BENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DANHANBENHPHAM">
+            TT_DVYEUCAU.DANHANBENHPHAM = '$DANHANBENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYNHANBENHPHAM">
+            TT_DVYEUCAU.NGAYNHANBENHPHAM = '$NGAYNHANBENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THOIGIANNHANBENHPHAM">
+            TT_DVYEUCAU.THOIGIANNHANBENHPHAM = '$THOIGIANNHANBENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOINHANBENHPHAM_ID">
+            TT_DVYEUCAU.NGUOINHANBENHPHAM_ID = $NGUOINHANBENHPHAM_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MANGUOINHAPBENHPHAM">
+            TT_DVYEUCAU.MANGUOINHAPBENHPHAM = '$MANGUOINHAPBENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TENNGUOINHAPBENHPHAM">
+            TT_DVYEUCAU.TENNGUOINHAPBENHPHAM = '$TENNGUOINHAPBENHPHAM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KETQUAXNKHAC">
+            TT_DVYEUCAU.KETQUAXNKHAC = '$KETQUAXNKHAC$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="YEUCAUBENNGOAI">
+            TT_DVYEUCAU.YEUCAUBENNGOAI = '$YEUCAUBENNGOAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THUCHIENBENNGOAI">
+            TT_DVYEUCAU.THUCHIENBENNGOAI = '$THUCHIENBENNGOAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DONVIBENNGOAI_ID">
+            TT_DVYEUCAU.DONVIBENNGOAI_ID = $DONVIBENNGOAI_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BACSIBENNGOAI_ID">
+            TT_DVYEUCAU.BACSIBENNGOAI_ID = $BACSIBENNGOAI_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TENBACSIBENNGOAI">
+            TT_DVYEUCAU.TENBACSIBENNGOAI = '$TENBACSIBENNGOAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHOABENNGOAI_ID">
+            TT_DVYEUCAU.KHOABENNGOAI_ID = $KHOABENNGOAI_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHOABENNGOAI">
+            TT_DVYEUCAU.KHOABENNGOAI = '$KHOABENNGOAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NOITHUCHIENTHAYDOI_ID">
+            TT_DVYEUCAU.NOITHUCHIENTHAYDOI_ID = $NOITHUCHIENTHAYDOI_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LOAIKHACHHANG_ID">
+            TT_DVYEUCAU.LOAIKHACHHANG_ID = $LOAIKHACHHANG_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THE_ID">
+            TT_DVYEUCAU.THE_ID = $THE_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BARCODEID">
+            TT_DVYEUCAU.BARCODEID = '$BARCODEID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HOPDONG_ID">
+            TT_DVYEUCAU.HOPDONG_ID = $HOPDONG_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HOPDONG_BENHNHAN_ID">
+            TT_DVYEUCAU.HOPDONG_BENHNHAN_ID = $HOPDONG_BENHNHAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HINHTHUCTHANHTOAN_ID">
+            TT_DVYEUCAU.HINHTHUCTHANHTOAN_ID = $HINHTHUCTHANHTOAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DANGKY_ID">
+            TT_DVYEUCAU.DANGKY_ID = $DANGKY_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DANGKY_CHITIET_ID">
+            TT_DVYEUCAU.DANGKY_CHITIET_ID = $DANGKY_CHITIET_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LICHHEN_ID">
+            TT_DVYEUCAU.LICHHEN_ID = $LICHHEN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THOIGIANLICHHEN">
+            TT_DVYEUCAU.THOIGIANLICHHEN = '$THOIGIANLICHHEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BNKHONGDENBV">
+            TT_DVYEUCAU.BNKHONGDENBV = '$BNKHONGDENBV$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GHICHU">
+            TT_DVYEUCAU.GHICHU = '$GHICHU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THANHTOANTRUOC">
+            TT_DVYEUCAU.THANHTOANTRUOC = '$THANHTOANTRUOC$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHAN">
+            TT_DVYEUCAU.KHAN = '$KHAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUOCPHEPTHUCHIEN">
+            TT_DVYEUCAU.DUOCPHEPTHUCHIEN = '$DUOCPHEPTHUCHIEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HUYYEUCAU">
+            TT_DVYEUCAU.HUYYEUCAU = '$HUYYEUCAU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LYDOHUY">
+            TT_DVYEUCAU.LYDOHUY = '$LYDOHUY$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TRANGTHAI">
+            TT_DVYEUCAU.TRANGTHAI = '$TRANGTHAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHOADULIEU">
+            TT_DVYEUCAU.KHOADULIEU = '$KHOADULIEU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYKHOADULIEU">
+            TT_DVYEUCAU.NGAYKHOADULIEU = '$NGAYKHOADULIEU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THOIGIANKHOADULIEU">
+            TT_DVYEUCAU.THOIGIANKHOADULIEU = '$THOIGIANKHOADULIEU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOIKHOA_ID">
+            TT_DVYEUCAU.NGUOIKHOA_ID = $NGUOIKHOA_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MANGUOIKHOA">
+            TT_DVYEUCAU.MANGUOIKHOA = '$MANGUOIKHOA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TENNGUOIKHOA">
+            TT_DVYEUCAU.TENNGUOIKHOA = '$TENNGUOIKHOA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            TT_DVYEUCAU.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYTAO">
+            TT_DVYEUCAU.NGAYTAO = '$NGAYTAO$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOITAO_ID">
+            TT_DVYEUCAU.NGUOITAO_ID = $NGUOITAO_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+            TT_DVYEUCAU.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+            TT_DVYEUCAU.NGUOICAPNHAT_ID = $NGUOICAPNHAT_ID$
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <!--Revision:0,4c01d8f34c2d0830ecd00beb7a623b37-->
+    <statement id="DAO00020_GetTTinDVYCByKhamBenhID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_DVYEUCAU
+      where KhAMBENH_ID = $KHAMBENH_ID$
+    </statement>
+    <!--Revision:0,54277a687dc17acda5f586df8fe27999-->
+    <statement id="DAO00020_GetDVYCByTiepNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select DVYEUCAU_ID, DICHVU_ID
+      from TT_DVYEUCAU
+      where TIEPNHAN_ID = $TIEPNHAN_ID$
+    </statement>
+    <!--Revision:0,73018ee9d0c84b258b8be48768ad379f-->
+    <statement id="DAO00020_TT_TIEPNHAN_GetTTTiepNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_TIEPNHAN
+      where TIEPNHAN_ID = $TIEPNHAN_ID$
+    </statement>
+    <!--Revision:0,a4af2c4e485668f0d81b5189fdc58b3e-->
+    <statement id="DAO00020_GetDSDVThayDoiByBenhNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_DVYEUCAU_THAYDOI
+      where DVYEUCAU_ID in
+      (select DVYEUCAU_ID from TT_DVYEUCAU
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+            TT_DVYEUCAU.DVYEUCAU_ID = $DVYEUCAU_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+            TT_DVYEUCAU.TIEPNHAN_ID = $TIEPNHAN_ID$
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      )
+    </statement>
+    <!--Revision:0,93d355ee6ec59e36d6b9162d83f4b774-->
+    <statement id="DAO00020_AddDVYeuCauThayDoi" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TT_DVYEUCAU_THAYDOI (
+      DVYEUCAU_ID
+      , PHONGBAN_ID
+      , PHONGBAN_THAYDOI_ID
+      , LANTHAYDOI
+      , NGAYTHAYDOI
+      , THOIGIANTHAYDOI
+      , NGUOITHAYDOI_ID
+      , BENHVIEN_ID
+      , NGAYTAO
+      , NGUOITAO_ID
+      ) values (
+      #DVYEUCAU_ID#
+      , #PHONGBAN_ID#
+      , #PHONGBAN_THAYDOI_ID#
+      , #LANTHAYDOI#
+      , #NGAYTHAYDOI#
+      , #THOIGIANTHAYDOI#
+      , #NGUOITHAYDOI_ID#
+      , #BENHVIEN_ID#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      )
+      SELECT SCOPE_IDENTITY()
+
+      update TT_DVYEUCAU set
+      NOITHUCHIEN_ID = #NOITHUCHIEN_ID#
+      where
+      DVYEUCAU_ID = #DVYEUCAU_ID#
+      <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+    </statement>
+    <!--Revision:0,56381f1f5f02ae134fc1ead6fdf0ffa6-->
+    <update id="DAO00020_UpdateNoiThucHienByDVYeuCauID" parameterClass="HashTable">
+      update TT_DVYEUCAU set
+      NOITHUCHIEN_ID = #NOITHUCHIEN_ID#
+      where
+      DVYEUCAU_ID = #DVYEUCAU_ID#
+    </update>
+    <!--Revision:0,e256d549504ddbf90359386c5fce3db0-->
+    <delete id="DAO00020_DeleteDVYCGiuong" parameterClass="HashTable">
+      delete from TT_DVYEUCAU
+      where
+      DVYEUCAU_ID = #DVYEUCAU_ID#
+    </delete>
+    <!--Revision:0,0123f92befca0c30fdca7b035ca1f72c-->
+    <statement id="DAO00020_GetDVChuaLayMau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_DVYEUCAU
+      where (DALAYMAU is null or DALAYMAU = 0) and HUYYEUCAU != '1'
+      and TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      and BENHVIEN_ID = '$BENHVIEN_ID$'
+      and exists (select A.DICHVU_ID from TM_DICHVU A left join TM_NHOMDICHVU B on A.NHOMDICHVU_ID = B.NHOMDICHVU_ID
+      where TT_DVYEUCAU.DICHVU_ID = DICHVU_ID and left(B.MANHOMDICHVU,2) = '01')
+      <!--<iterate open="(" close=")" conjunction=",  " property="LSTDVXETNGHIEM_ID">
+                #LSTDVXETNGHIEM_ID[]#
+            </iterate>-->
+    </statement>
+    <!--Revision:0,0d8c38a55ec628bf8809cc2106e3ad45-->
+    <statement id="DAO00020_GetDVChuaThucHien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_DVYEUCAU TT where not exists (select TC.DVYEUCAU_ID from TT_CLSKETQUACHITIET TC where TC.BENHVIEN_ID = '$BENHVIEN_ID$' and TC.DVYEUCAU_ID = TT.DVYEUCAU_ID)
+      and TT.TIEPNHAN_ID = $TIEPNHAN_ID$
+      and TT.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and TT.HUYYEUCAU != '1'
+      <dynamic prepend="and">
+        <isParameterPresent>
+          <isNotEmpty property="DALAYMAU">
+            TT.DALAYMAU = '$DALAYMAU$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      and TT.DICHVU_ID in
+      (
+      select A.DICHVU_ID from TM_DICHVU A
+      left join TM_NHOMDICHVU B on A.NHOMDICHVU_ID = B.NHOMDICHVU_ID
+      where (left(B.MANHOMDICHVU,2) = '01'
+      <isNotEmpty prepend="" property="MANHOMDICHVU">
+        and B.MANHOMDICHVU = '$MANHOMDICHVU$'
+      </isNotEmpty>
+      )
+      <isNotEmpty prepend="" property="NOT_MANHOMDICHVU">
+        and B.MANHOMDICHVU NOT IN ($NOT_MANHOMDICHVU$)
+      </isNotEmpty>
+      )
+
+      <!--<iterate open="(" close=")" conjunction=",  " property="LSTDVXETNGHIEM_ID">
+                #LSTDVXETNGHIEM_ID[]#
+            </iterate>-->
+    </statement>
+    <statement id="DAO00020_GetDVChuaThucHien_True" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_DVYEUCAU TT where
+      (not exists (select TC.DVYEUCAU_ID from TT_CLSKETQUACHITIET TC where TC.BENHVIEN_ID = '$BENHVIEN_ID$' and TC.DVYEUCAU_ID = TT.DVYEUCAU_ID)
+      or TT.TRANGTHAI = 'DALAYMAU')
+      and TT.TIEPNHAN_ID = $TIEPNHAN_ID$
+      and TT.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <dynamic prepend="and">
+        <isParameterPresent>
+          <isNotEmpty property="DALAYMAU">
+            TT.DALAYMAU = '$DALAYMAU$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      and exists (select A.DICHVU_ID from TM_DICHVU A left join TM_NHOMDICHVU B on A.NHOMDICHVU_ID = B.NHOMDICHVU_ID where
+      TT.DICHVU_ID = A.DICHVU_ID and (left(B.MANHOMDICHVU,2) = '01'
+      <isNotEmpty prepend="" property="MANHOMDICHVU">
+        and B.MANHOMDICHVU = '$MANHOMDICHVU$'
+      </isNotEmpty>
+      )
+      )
+
+      <!--<iterate open="(" close=")" conjunction=",  " property="LSTDVXETNGHIEM_ID">
+                #LSTDVXETNGHIEM_ID[]#
+            </iterate>-->
+    </statement>
+    <!--Revision:0,03dc23fcef4deeaa2c8f91d17cc4c810-->
+    <statement id="DAO00020_KiemTraMaRIS" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from LST_KEYDATA
+      where KEYTYPE = '$KEYTYPE$'
+      and KEYYEAR = '$KEYYEAR$'
+      and KEYMONTH = '$KEYMONTH$'
+      and KEYDAY = '$KEYDAY$'
+      and SEGMENT_1 = '$SEGMENT_1$'
+      and KEYVALUE &gt;= '$KEYVALUE$'
+    </statement>
+    <!--Revision:0,a16176da60fee8a90d80135ed946553d-->
+    <update id="DAO00020_CapNhatMaRIS" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      update LST_KEYDATA
+      set KEYVALUE = '$KEYVALUE$'
+      where KEYTYPE = '$KEYTYPE$'
+      and KEYYEAR = '$KEYYEAR$'
+      and KEYMONTH = '$KEYMONTH$'
+      and KEYDAY = '$KEYDAY$'
+      and SEGMENT_1 = '$SEGMENT_1$'
+    </update>
+    <statement id="DAO00020_GetDanhsachVPCuaDichvuYeucau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select V.*, CASE WHEN A.VIENPHI_ID IS NULL AND B.VIENPHI_ID IS NULL THEN '0' ELSE '1' END AS EXIST_HOADON_HUY,
+      dv.TENDICHVU, dv.MADICHVU, dv.NORESULT, ndv.MANHOMDICHVU, ndv.TENNHOMDICHVU
+      from TT_VIENPHI AS V
+      left join TM_DICHVU dv on V.DICHVU_ID = dv.DICHVU_ID and V.REF_TABLE = 'TT_DVYEUCAU'
+      left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = dv.NHOMDICHVU_ID
+      left join (select DISTINCT HD.VIENPHI_ID from TT_HOADON_CHITIET_NGOAITRU AS HD
+      inner join TT_HOADON AS H ON H.HOADON_ID = HD.HOADON_ID AND H.HUYHOADON = '1'
+      where H.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      ) AS A ON A.VIENPHI_ID = V.VIENPHI_ID
+      left join (select DISTINCT HD.VIENPHI_ID from TT_HOADON_CHITIET_NOITRU AS HD
+      inner join TT_HOADON AS H ON H.HOADON_ID = HD.HOADON_ID AND H.HUYHOADON = '1'
+      where H.TIEPNHAN_ID = $TIEPNHAN_ID$
+      <isNotEmpty prepend="and" property="BENHAN_ID">
+      H.BENHAN_ID = $BENHAN_ID$
+      </isNotEmpty>
+      ) AS B ON B.VIENPHI_ID = V.VIENPHI_ID
+      <!--select * , CASE WHEN VIENPHI_ID IS NULL AND B.VIENPHI_ID IS NULL THEN '0' ELSE '1' END AS EXIST_HOADON_HUY
+        from TT_VIENPHI-->
+      where
+      V.TIEPNHAN_ID = $TIEPNHAN_ID$ and V.REF_TABLE = 'TT_DVYEUCAU'
+      <isNotEmpty prepend="and" property="BENHAN_ID">
+        V.BENHAN_ID = $BENHAN_ID$
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00020_GetDanhsachVPCuaToaThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_VIENPHI where
+      BENHAN_ID = $BENHAN_ID$ and REF_TABLE = 'TT_NOITRU_TOATHUOC'
+
+      <!--select V.*, CASE WHEN A.VIENPHI_ID IS NULL AND B.VIENPHI_ID IS NULL THEN '0' ELSE '1' END AS EXIST_HOADON_HUY
+        from TT_VIENPHI AS V
+        left join (select DISTINCT HD.VIENPHI_ID from TT_HOADON_CHITIET_NGOAITRU AS HD
+        inner join TT_HOADON AS H ON H.HOADON_ID = HD.HOADON_ID AND H.HUYHOADON = '1'
+        where H.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        ) AS A ON A.VIENPHI_ID = V.VIENPHI_ID
+        left join (select DISTINCT HD.VIENPHI_ID from TT_HOADON_CHITIET_NOITRU AS HD
+        inner join TT_HOADON AS H ON H.HOADON_ID = HD.HOADON_ID AND H.HUYHOADON = '1'
+        where H.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        ) AS B ON B.VIENPHI_ID = V.VIENPHI_ID
+        --><!--select * , CASE WHEN VIENPHI_ID IS NULL AND B.VIENPHI_ID IS NULL THEN '0' ELSE '1' END AS EXIST_HOADON_HUY
+        from TT_VIENPHI--><!--
+        where
+        V.TIEPNHAN_ID = '$TIEPNHAN_ID$' and V.REF_TABLE = 'TT_NOITRU_TOATHUOC'
+        <isNotEmpty prepend="and" property="BENHAN_ID">
+          V.BENHAN_ID = '$BENHAN_ID$'
+        </isNotEmpty>-->
+    </statement>
+    <!--Revision:0,9b56dff1e0387354163e079ad73474ce-->
+    <statement id="DAO00020_GetDSTTDichVuByBenhNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select ba.SOBENHAN, isnull(isnull(clskq.NGAYCAPNHAT, clskq.NGAYGIOTHUCHIEN), pt.THOIGIANBATDAU) as THOIGIANTHUCHIEN, clskq.BACSITHUCHIEN_ID,
+      tn.SOTIEPNHAN, dv.*, vp.SOLUONG
+      from TT_DVYEUCAU dv
+      left join TT_NOITRU_BENHAN ba on dv.BENHAN_ID = ba.BENHAN_ID
+      left join TT_CLSKETQUA clskq on (clskq.CLSKETQUA_ID in (select CLSKETQUA_ID from TT_CLSKETQUACHITIET where DVYEUCAU_ID = dv.DVYEUCAU_ID) or clskq.DVYEUCAU_ID = dv.DVYEUCAU_ID)
+      left join TT_NGOAITRU_KHAMBENH kb on dv.KHAMBENH_NGOAITRU_ID = kb.KHAMBENH_ID
+      left join TT_PHAUTHUAT pt on pt.PHAUTHUAT_ID in (select PHAUTHUAT_ID from TT_PHAUTHUAT_YEUCAU where DVYEUCAU_ID = dv.DVYEUCAU_ID)
+      left join TT_TIEPNHAN tn on dv.TIEPNHAN_ID = tn.TIEPNHAN_ID
+      left join TT_VIENPHI vp on vp.REF_ID = dv.DVYEUCAU_ID and REF_TABLE = 'TT_DVYEUCAU'
+      where tn.BENHNHAN_ID = $BENHNHAN_ID$
+      and dv.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isNotEmpty prepend="and" property="TUNGAY">
+        dv.NGAYYEUCAU &gt;= '$TUNGAY$'
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="DENNGAY">
+        dv.NGAYYEUCAU &lt;= '$DENNGAY$'
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="BACSICHIDINH_ID">
+        dv.BACSICHIDINH_ID = $BACSICHIDINH_ID$
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="NOIYEUCAU_ID">
+        dv.NOIYEUCAU_ID = $NOIYEUCAU_ID$
+      </isNotEmpty>
+      order by DVYEUCAU_ID
+      desc
+    </statement>
+    <!--Revision:0,6e2d6efd339357babfcc2d19739b7a21-->
+    <statement id="DAO00020_GetDichVuYeuCauDaTonTai" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select dvyc.*, vp.KHONGTHUTIEN from TT_DVYEUCAU dvyc
+      left join TT_VIENPHI vp on vp.REF_ID = dvyc.DVYEUCAU_ID and vp.REF_TABLE = 'TT_DVYEUCAU'
+      where dvyc.DVYEUCAU_ID = $DVYEUCAU_ID$
+    </statement>
+    <!--Revision:0,abb574879f98ccbab37177000458fa86-->
+    <statement id="DAO00020_GetDSYeuCauDaLayMau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_DVYEUCAU
+      where DVYEUCAU_ID in (SELECT * FROM DBO.SPLIT('$DS_DVYEUCAU$',', ')) and (TRANGTHAI != 'CHUAKETQUA')
+    </statement>
+    <!--Revision:0,c27656eae941c76969447340579fc9e5-->
+    <statement id="DAO00020_GetBNDaChiDinhDV" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select TIEPNHAN_ID
+      from TT_DVYEUCAU
+      where TIEPNHAN_ID IN (  $TIEPNHAN_LIST$  ) AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <!--Revision:0,908f1d9ac5b691d029adf9e7a9a75a6b-->
+    <statement id="DAO00020_GetBNDaCoVPChuaThanhToan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select TIEPNHAN_ID, VIENPHI_ID, REF_ID, DICHVU_ID
+      from TT_VIENPHI
+      where TIEPNHAN_ID IN (  $TIEPNHAN_LIST$  ) AND BENHVIEN_ID = '$BENHVIEN_ID$' AND DATHANHTOAN = '0'
+    </statement>
+    <statement id="DAO00020_GetListAllDvYeucau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.*, B.KHONGTHUTIEN, B.SOLUONG, B.YEUCAUVP, B.DICHVU_TL
+      from TT_DVYEUCAU A
+      left join
+      (select * from TT_VIENPHI where TIEPNHAN_ID = #TIEPNHAN_ID# and BENHVIEN_ID = '$BENHVIEN_ID$') B on B.REF_ID = A.DVYEUCAU_ID and B.REF_TABLE = 'TT_DVYEUCAU'
+      where A.TIEPNHAN_ID = #TIEPNHAN_ID# and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isPropertyAvailable prepend="and" property="BENHAN_ID">
+        A.BENHAN_ID = #BENHAN_ID#
+      </isPropertyAvailable>
+    </statement>
+    <statement id="DAO00020_GetListTrangThaiDV" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select vp.*,
+      <!--vp.HUY, vp.DATHANHTOAN, vp.DATHUCHIEN, vp.HOADON_ID, vp.MIENGIAM_GIATRI,-->
+      mgct.MIENGIAMCHITIET_ID
+      from TT_VIENPHI vp
+      left join (select VIENPHI_ID, MIENGIAMCHITIET_ID from TT_MIENGIAM_CHITIET where REF_TABLE = 'TT_MIENGIAM'
+      or REF_TABLE = 'TT_MIENGIAM_CONGTY'
+      or REF_TABLE = 'TT_MIENGIAM_BHTN') mgct
+      on vp.VIENPHI_ID = mgct.VIENPHI_ID
+      where REF_TABLE = 'TT_DVYEUCAU'
+      and vp.TIEPNHAN_ID = $TIEPNHAN_ID$
+      <isNotEmpty prepend="and" property="BENHAN_ID">
+        vp.BENHAN_ID = $BENHAN_ID$
+      </isNotEmpty>
+      order by vp.VIENPHI_ID
+    </statement>
+    <statement id="DAO00020_GetListTrangthaiDvKhamBenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select dvyc.KHAMBENH_NGOAITRU_ID, dvyc.TRANGTHAI, dvyc.DVYEUCAU_ID, dvyc.DICHVU_ID, dvyc.NOITHUCHIEN_ID, dvyc.DALAYMAU, dv.TENDICHVU
+      from TT_DVYEUCAU dvyc
+      left join TM_DICHVU dv on dv.DICHVU_ID = dvyc.DICHVU_ID
+      left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = dv.NHOMDICHVU_ID
+      where left(ndv.MANHOMDICHVU, 2) = '04'
+      and TIEPNHAN_ID = $TIEPNHAN_ID$
+      <isNotEmpty prepend="and" property="BENHAN_ID">
+        BENHAN_ID = $BENHAN_ID$
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00020_KiemtrangaychidinhdvHople" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_TIEPNHAN where  THOIGIANTIEPNHAN > #NGAYGIOYEUCAU# and TIEPNHAN_ID = #TIEPNHAN_ID#
+    </statement>
+  </statements>
+</sqlMap>

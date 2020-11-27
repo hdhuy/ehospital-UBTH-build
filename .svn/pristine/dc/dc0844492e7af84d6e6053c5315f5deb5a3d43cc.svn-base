@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,52d8f28d163bbc1b900cb5926cda7a4d-->
+        <statement id="DAO00210_SVC01_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            DECLARE @x int, @y int;
+            SET @x = 100000000;
+            SET @y = 200000000;
+            WITH DichvuRec AS
+            (
+            SELECT D.DICHVU_ID AS CATEGORY_ID, D.MADICHVU AS CATEGORY_CODE, D.TENDICHVU AS CATEGORY_NAME, (ND.CAP + 1) AS FOLDER_LEVEL, ISNULL(D.CAPTREN_ID,D.NHOMDICHVU_ID + @x) AS PARENT_ID, '0' AS IS_FOLDER
+            FROM TM_DICHVU AS D
+            INNER JOIN TM_NHOMDICHVU AS ND ON D.NHOMDICHVU_ID = ND.NHOMDICHVU_ID
+            WHERE D.CAP = 1 AND D.CAPTREN_ID IS NULL AND D.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT D.DICHVU_ID AS CATEGORY_ID, D.MADICHVU AS CATEGORY_CODE, D.TENDICHVU AS CATEGORY_NAME, (DR.FOLDER_LEVEL + 1) AS FOLDER_LEVEL, D.CAPTREN_ID AS PARENT_ID, '0' AS IS_FOLDER
+            FROM DichvuRec AS DR
+            INNER JOIN TM_DICHVU AS D ON D.CAPTREN_ID = DR.CATEGORY_ID AND D.BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            , NhomdichvuRec AS
+            (
+            SELECT (ND.NHOMDICHVU_ID + @x) AS CATEGORY_ID, ND.MANHOMDICHVU AS CATEGORY_CODE, ND.TENNHOMDICHVU AS CATEGORY_NAME, ND.CAP AS FOLDER_LEVEL, ISNULL(ND.CAPTREN_ID,ND.LOAIDICHVU_ID + @y) AS PARENT_ID, '1' AS IS_FOLDER
+            FROM TM_NHOMDICHVU AS ND WHERE ND.CAP = 1 AND ND.CAPTREN_ID IS NULL AND ND.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT (ND.NHOMDICHVU_ID + @x) AS CATEGORY_ID, ND.MANHOMDICHVU AS CATEGORY_CODE, ND.TENNHOMDICHVU AS CATEGORY_NAME, ND.CAP AS FOLDER_LEVEL, (ND.CAPTREN_ID + @x) AS PARENT_ID, '1' AS IS_FOLDER
+            FROM NhomdichvuRec AS DR
+            INNER JOIN TM_NHOMDICHVU AS ND ON (ND.CAPTREN_ID + @x) = DR.CATEGORY_ID AND ND.BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            SELECT * FROM DichvuRec
+            UNION ALL
+            SELECT * FROM NhomdichvuRec
+            UNION ALL
+            SELECT (LD.LOAIDICHVU_ID + @y) AS CATEGORY_ID, LD.MALOAIDICHVU AS CATEGORY_CODE, LD.TENLOAIDICHVU AS CATEGORY_NAME, 0 AS FOLDER_LEVEL, 0 AS PARENT_ID, '1' AS IS_FOLDER
+            FROM TM_LOAIDICHVU AS LD
+            WHERE LD.BENHVIEN_ID = '$BENHVIEN_ID$'
+            ORDER BY CATEGORY_ID
+        </statement>
+        <!--Revision:0,58c6bcf87c9c27d68834373c0b9cfac7-->
+        <statement id="DAO00210_SVC01_GetDetailByID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT * FROM TM_DICHVU WHERE DICHVU_ID = '$DICHVU_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,f5de012ae6f31541cf919c8a2bdcb48f-->
+        <statement id="DAO00210_SVC01_GetMaxMaDichVu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT MAX(MADICHVU) AS MAX
+            FROM TM_DICHVU
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND CAP = '$CAP$'
+            AND ((ISNULL('$CAPTREN_ID$','')= '' AND CAP = 1) OR (CAPTREN_ID = '$CAPTREN_ID$' AND CAP &gt; 1))
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="CAPTREN_CODE">
+                    MADICHVU LIKE '$CAPTREN_CODE$%'
+                </isNotEmpty>
+            </isParameterPresent>
+        </statement>
+        <!--Revision:2,d9983a292d4b5765074c12a8aedca85a-->
+        <statement id="DAO00210_SVC01_Insert" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            DECLARE @x int;
+            SET @x = CONVERT(int, $NHOMDICHVU_ID$);
+            IF (@x &gt;= 100000000) SET @x = (@x - 100000000);
+            insert into TM_DICHVU (
+            NHOMDICHVU_ID
+            , MADICHVU
+            , MADICHVU_SEG01
+            , MADICHVU_SEG02
+            , MADICHVU_SEG03
+            , MADICHVU_SEG04
+            , TENDICHVU
+            , TENDICHVU_EN
+            , TENDICHVU_RU
+            , CAP
+            , CAPTREN_ID
+            , DONVITINH
+            , IDX
+            , CHONHETCAPDUOI
+            , COGIADICHVU
+            , GIACODINH
+            , THUCHIENBENNGOAI
+            , SOPHIM
+            , MAQUIDINH
+            , TAMNGUNG
+            , TENKHONGDAU
+            , COGIATRICHUAN
+            , TEST
+            , ATTRIBUTE1
+            , ATTRIBUTE2
+            , ATTRIBUTE3
+            , ATTRIBUTE4
+            , ATTRIBUTE5
+            , NHOMDICHVU_REPORT_LOCAL_ID
+            , NHOMDICHVU_REPORT_GLOBAL_ID
+            , SHORTNAME
+            , INPUTCODE
+            , NORESULT
+            , APPLYFOR
+            , PRINTWHENNULL
+            , REPORTCODE
+            , REPORTTITLE
+            , DOUUTIENDICHVU
+            , MAMAY
+            , BHYT
+            , ISTHONGSO
+            , COSTCENTER_ID
+            , TEN_BHYT
+            , THONGTUBOYTE
+            , CHUYENKHOA_ID
+            , NHOMPHATHANHGIA_ID
+            , LOAIHE
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            @x
+            , #MADICHVU#
+            , SUBSTRING(#MADICHVU#,1,4)
+            , #MADICHVU_SEG02#
+            , #MADICHVU_SEG03#
+            , #MADICHVU_SEG04#
+            , #TENDICHVU#
+            , #TENDICHVU_EN#
+            , #TENDICHVU_RU#
+            , #CAP#
+            , #CAPTREN_ID#
+            , #DONVITINH#
+            , #IDX#
+            , #CHONHETCAPDUOI#
+            , #COGIADICHVU#
+            , #GIACODINH#
+            , #THUCHIENBENNGOAI#
+            , #SOPHIM#
+            , #MAQUIDINH#
+            , #TAMNGUNG#
+            , #TENKHONGDAU#
+            , #COGIATRICHUAN#
+            , #TEST#
+            , #ATTRIBUTE1#
+            , #ATTRIBUTE2#
+            , #ATTRIBUTE3#
+            , #ATTRIBUTE4#
+            , #ATTRIBUTE5#
+            , #NHOMDICHVU_REPORT_LOCAL_ID#
+            , #NHOMDICHVU_REPORT_GLOBAL_ID#
+            , #SHORTNAME#
+            , #INPUTCODE#
+            , #NORESULT#
+            , #APPLYFOR#
+            , #PRINTWHENNULL#
+            , #REPORTCODE#
+            , #REPORTTITLE#
+            , #DOUUTIENDICHVU#
+            , #MAMAY#
+            , #BHYT#
+            , #ISTHONGSO#
+            , #COSTCENTER_ID#
+            , #TEN_BHYT#
+            , #THONGTUBOYTE#
+            , #CHUYENKHOA_ID#
+            , #NHOMPHATHANHGIA_ID#
+            , #LOAIHE#
+            , #NGAYTAO#
+            , #USER_ID#
+            , #NGAYCAPNHAT#
+            , #USER_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:2,d9c78a5c362fc9163121a80f1cb034f8-->
+        <statement id="DAO00210_SVC01_InsertDichVuNguon" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            DECLARE @x int;
+            SET @x = (SELECT TOP 1 NGUON_ID FROM TM_NGUONDICHVU WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND MANGUON = 'BV')
+            insert into TM_DICHVU_NGUON (
+            DICHVU_ID
+            ,NGUON_ID
+            ,NGAYTAO
+            ,NGUOITAO_ID
+            ,BENHVIEN_ID
+            ) values (
+            #DICHVU_ID#
+            ,@x
+            ,#NGAYTAO#
+            ,#NGUOITAO_ID#
+            ,#BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:2,4329f07c1ade176dd1ea3d249052fc8c-->
+        <update id="DAO00210_SVC01_Update" parameterClass="System.Collections.IDictionary">
+            DECLARE @x int;
+            SET @x = CONVERT(int, $NHOMDICHVU_ID$);
+            IF (@x &gt;= 100000000) SET @x = (@x - 100000000);
+            update TM_DICHVU set
+            NHOMDICHVU_ID = @x
+            , MADICHVU = #MADICHVU#
+            , MADICHVU_SEG01 = #MADICHVU_SEG01#
+            , MADICHVU_SEG02 = #MADICHVU_SEG02#
+            , MADICHVU_SEG03 = #MADICHVU_SEG03#
+            , MADICHVU_SEG04 = #MADICHVU_SEG04#
+            , TENDICHVU = #TENDICHVU#
+            , TENDICHVU_EN = #TENDICHVU_EN#
+            , TENDICHVU_RU = #TENDICHVU_RU#
+            , CAP = #CAP#
+            , CAPTREN_ID = #CAPTREN_ID#
+            , DONVITINH = #DONVITINH#
+            , IDX = #IDX#
+            , CHONHETCAPDUOI = #CHONHETCAPDUOI#
+            , COGIADICHVU = #COGIADICHVU#
+            , GIACODINH = #GIACODINH#
+            , THUCHIENBENNGOAI = #THUCHIENBENNGOAI#
+            , SOPHIM = #SOPHIM#
+            , MAQUIDINH = #MAQUIDINH#
+            , TAMNGUNG = #TAMNGUNG#
+            , TENKHONGDAU = #TENKHONGDAU#
+            , COGIATRICHUAN = #COGIATRICHUAN#
+            , TEST = #TEST#
+            , ATTRIBUTE1 = #ATTRIBUTE1#
+            , ATTRIBUTE2 = #ATTRIBUTE2#
+            , ATTRIBUTE3 = #ATTRIBUTE3#
+            , ATTRIBUTE4 = #ATTRIBUTE4#
+            , ATTRIBUTE5 = #ATTRIBUTE5#
+            , NHOMDICHVU_REPORT_LOCAL_ID = #NHOMDICHVU_REPORT_LOCAL_ID#
+            , NHOMDICHVU_REPORT_GLOBAL_ID = #NHOMDICHVU_REPORT_GLOBAL_ID#
+            , SHORTNAME = #SHORTNAME#
+            , INPUTCODE = #INPUTCODE#
+            , NORESULT = #NORESULT#
+            , APPLYFOR = #APPLYFOR#
+            , PRINTWHENNULL = #PRINTWHENNULL#
+            , REPORTCODE = #REPORTCODE#
+            , REPORTTITLE = #REPORTTITLE#
+            , DOUUTIENDICHVU = #DOUUTIENDICHVU#
+            , MAMAY = #MAMAY#
+            , BHYT = #BHYT#
+            , ISTHONGSO = #ISTHONGSO#
+            , COSTCENTER_ID = #COSTCENTER_ID#
+            , TEN_BHYT = #TEN_BHYT#
+            , THONGTUBOYTE = #THONGTUBOYTE#
+            , CHUYENKHOA_ID = #CHUYENKHOA_ID#
+            , NHOMPHATHANHGIA_ID = #NHOMPHATHANHGIA_ID#
+            , LOAIHE = #LOAIHE#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #USER_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            DICHVU_ID = '$DICHVU_ID$'
+        </update>
+        <!--Revision:0,55ddba91fd0c24ee53f3a213775c59f5-->
+        <statement id="DAO00210_SVC01_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DICHVU
+            where
+            DICHVU_ID = '$DICHVU_ID$'
+        </statement>
+        <!--Revision:0,2dadb83e3ef77d432baaa77fd141090f-->
+        <statement id="DAO00210_DEP01_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            WITH PhongbanRec AS
+            (
+            SELECT P.PHONGBAN_ID AS CATEGORY_ID, P.MAPHONGBAN AS CATEGORY_CODE, P.TENPHONGBAN AS CATEGORY_NAME, P.CAP AS FOLDER_LEVEL, ISNULL(P.CAPTREN_ID,0) AS PARENT_ID, '0' AS IS_FOLDER, P.LOAIPHONGBAN_ID
+            , P.TAMNGUNG
+            FROM TM_PHONGBAN AS P
+            WHERE P.CAP = 1 AND ISNULL(P.CAPTREN_ID,0) = 0 AND P.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT P.PHONGBAN_ID AS CATEGORY_ID, P.MAPHONGBAN AS CATEGORY_CODE, P.TENPHONGBAN AS CATEGORY_NAME, P.CAP AS FOLDER_LEVEL, P.CAPTREN_ID AS PARENT_ID, '0' AS IS_FOLDER, P.LOAIPHONGBAN_ID
+            , P.TAMNGUNG
+            FROM PhongbanRec AS PR
+            INNER JOIN TM_PHONGBAN AS P ON P.CAPTREN_ID = PR.CATEGORY_ID AND P.BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            SELECT P.* FROM PhongbanRec AS P
+            INNER JOIN LST_DICTIONARY AS D on P.LOAIPHONGBAN_ID = D.DICTIONARY_ID AND D.DICTIONARY_TYPE_CODE = 'LoaiPhongBan'
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="LOAIPHONGBAN_CODE">
+                        D.DICTIONARY_CODE IN $LOAIPHONGBAN_CODE$
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIPHONGBAN">
+                        D.DICTIONARY_CODE NOT IN $LOAIPHONGBAN$
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,9d06b9c01e4ab941a420a82bd7cdfe48-->
+        <statement id="DAO00210_DEP01_GetDetailByID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT * FROM TM_PHONGBAN WHERE PHONGBAN_ID = '$PHONGBAN_ID$'
+        </statement>
+        <!--Revision:0,f3fab5504f83bdf3c5ae51abe5541c72-->
+        <statement id="DAO00210_DEP01_GetLoaiPhongBanByCode" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT * FROM LST_DICTIONARY WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND ENABLED = '1' AND DICTIONARY_TYPE_CODE = '$DICTIONARY_TYPE_CODE$' AND DICTIONARY_CODE = '$DICTIONARY_CODE$'
+        </statement>
+        <!--Revision:0,aff117e2de13e68eb1bbe1bd82ee5093-->
+        <statement id="DAO00210_DEP01_Insert" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_PHONGBAN (
+            MAPHONGBAN
+            , TENPHONGBAN
+            , TENPHONGBAN_EN
+            , TENPHONGBAN_RU
+            , LOAIPHONGBAN_ID
+            , CAP
+            , CAPTREN_ID
+            , TRUONGPHONG
+            , LOAIPHONGBENH_ID
+            , TAMNGUNG
+            , TENKHONGDAU
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , COTHUCHIENDICHVU
+            , IDX
+            , QUANLYNHANSU
+            , ISKHOADIEUTRI
+            , ISCHUYENKHOA
+            , COSTCENTER_ID
+            , CHUYENKHOA_ID
+            , DIADIEMLAMVIEC_ID
+            , ISKHOACAPCUU
+            , BENHVIEN_ID
+            ) values (
+            #MAPHONGBAN#
+            , #TENPHONGBAN#
+            , #TENPHONGBAN_EN#
+            , #TENPHONGBAN_RU#
+            , #LOAIPHONGBAN_ID#
+            , #CAP#
+            , #CAPTREN_ID#
+            , #TRUONGPHONG#
+            , #LOAIPHONGBENH_ID#
+            , #TAMNGUNG#
+            , #TENKHONGDAU#
+            , #NGAYTAO#
+            , #USER_ID#
+            , #NGAYCAPNHAT#
+            , #USER_ID#
+            , #COTHUCHIENDICHVU#
+            , #IDX#
+            , #QUANLYNHANSU#
+            , #ISKHOADIEUTRI#
+            , #ISCHUYENKHOA#
+            , #COSTCENTER_ID#
+            , #CHUYENKHOA_ID#
+            , #DIADIEMLAMVIEC_ID#
+            , #ISKHOACAPCUU#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,29187f8f0ce962e25a4e052f5782c42f-->
+        <update id="DAO00210_DEP01_Update" parameterClass="System.Collections.IDictionary">
+            update TM_PHONGBAN set
+            MAPHONGBAN = #MAPHONGBAN#
+            , TENPHONGBAN = #TENPHONGBAN#
+            , TENPHONGBAN_EN = #TENPHONGBAN_EN#
+            , TENPHONGBAN_RU = #TENPHONGBAN_RU#
+            , LOAIPHONGBAN_ID = #LOAIPHONGBAN_ID#
+            , CAP = #CAP#
+            , CAPTREN_ID = #CAPTREN_ID#
+            , TRUONGPHONG = #TRUONGPHONG#
+            , LOAIPHONGBENH_ID = #LOAIPHONGBENH_ID#
+            , TAMNGUNG = #TAMNGUNG#
+            , TENKHONGDAU = #TENKHONGDAU#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #USER_ID#
+            , COTHUCHIENDICHVU = #COTHUCHIENDICHVU#
+            , IDX = #IDX#
+            , QUANLYNHANSU = #QUANLYNHANSU#
+            , ISKHOADIEUTRI = #ISKHOADIEUTRI#
+            , ISCHUYENKHOA = #ISCHUYENKHOA#
+            , COSTCENTER_ID = #COSTCENTER_ID#
+            , CHUYENKHOA_ID = #CHUYENKHOA_ID#
+            , DIADIEMLAMVIEC_ID = #DIADIEMLAMVIEC_ID#
+            , ISKHOACAPCUU = #ISKHOACAPCUU#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            PHONGBAN_ID = '$PHONGBAN_ID$'
+        </update>
+        <!--Revision:0,f22391579c81e215d59f63c27caede4b-->
+        <statement id="DAO00210_DEP01_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_PHONGBAN
+            where
+            PHONGBAN_ID = '$PHONGBAN_ID$'
+        </statement>
+        <!--Revision:0,b5eb596843f57873ee2d9d2336437eba-->
+        <statement id="DAO00210_PHA56_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            DECLARE @x int;
+            SET @x = 100000000;
+            WITH LoaivattuRec AS
+            (
+            SELECT ROW_NUMBER() OVER (ORDER BY LOAIVATTU_ID) + @x AS CATEGORY_ID, LOAIVATTU_ID AS CATEGORY_CODE, TENLOAIVATTU AS CATEGORY_NAME, 0 AS FOLDER_LEVEL, 0 AS PARENT_ID, '1' AS IS_FOLDER
+            FROM TM_LOAIVATTU
+            WHERE TAMNGUNG = '0' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            , HoatchatRec AS
+            (
+            SELECT DH.HOATCHAT_ID AS CATEGORY_ID, DH.MAHOATCHAT AS CATEGORY_CODE, DH.TENHOATCHAT AS CATEGORY_NAME, DH.CAP AS FOLDER_LEVEL, ISNULL(DH.CAPTREN_ID,LVT.ID) AS PARENT_ID, '0' AS IS_FOLDER
+            FROM TM_DUOC_HOATCHAT AS DH
+            INNER JOIN
+            (
+            SELECT  ROW_NUMBER() OVER (ORDER BY LOAIVATTU_ID) + @x AS ID, LOAIVATTU_ID
+            FROM TM_LOAIVATTU
+            WHERE TAMNGUNG = '0' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            AS LVT ON DH.LOAIVATTU_ID = LVT.LOAIVATTU_ID
+            WHERE DH.CAP = 1 AND ISNULL(DH.CAPTREN_ID,0) = 0 AND DH.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT DH.HOATCHAT_ID AS CATEGORY_ID, DH.MAHOATCHAT AS CATEGORY_CODE, DH.TENHOATCHAT AS CATEGORY_NAME, DH.CAP AS FOLDER_LEVEL, DH.CAPTREN_ID AS PARENT_ID, '0' AS IS_FOLDER
+            FROM HoatchatRec AS HCR
+            INNER JOIN TM_DUOC_HOATCHAT AS DH ON DH.CAPTREN_ID = HCR.CATEGORY_ID AND DH.BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            SELECT * FROM LoaivattuRec
+            UNION ALL
+            SELECT * FROM HoatchatRec
+        </statement>
+        <!--Revision:0,d68ee3430acdb56d71c80c78052635c0-->
+        <statement id="DAO00210_PHA56_GetDetailByID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            DECLARE @x int;
+            SET @x = 100000000;
+            SELECT DH.HOATCHAT_ID, DH.MAHOATCHAT, DH.MAHOATCHATREF, DH.TENHOATCHAT, DH.TENHOATCHAT_1, DH.TENHOATCHAT_2, LVT.ID AS LOAIVATTU_ID
+            , DH.IDX, DH.CAP, DH.CAPTREN_ID, DH.HOATCHAT, DH.NGAYTAO, DH.NGUOITAO_ID, DH.NGAYCAPNHAT, DH.NGUOICAPNHAT_ID, DH.BENHVIEN_ID
+            FROM TM_DUOC_HOATCHAT AS DH
+            INNER JOIN
+            (
+            SELECT  ROW_NUMBER() OVER (ORDER BY LOAIVATTU_ID) + @x AS ID, LOAIVATTU_ID
+            FROM TM_LOAIVATTU
+            WHERE TAMNGUNG = '0' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            ) AS LVT ON DH.LOAIVATTU_ID = LVT.LOAIVATTU_ID
+            WHERE DH.HOATCHAT_ID = '$HOATCHAT_ID$' AND DH.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,1dcb034b419d35354b5d1e2501d540b3-->
+        <statement id="DAO00210_PHA56_GetListTuongTacThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT *
+            FROM TM_DUOC_INTERACTIONDETAIL
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND (HOATCHAT_FIRST_ID = '$HOATCHAT_ID$' OR HOATCHAT_SECOND_ID = '$HOATCHAT_ID$' )
+        </statement>
+        <!--Revision:0,e67cd1a72e6dd71be239674315b7e54b-->
+        <statement id="DAO00210_PHA56_GetListHoatChatInDuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT *
+            FROM TM_DUOC
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND TENHOATCHAT LIKE '%$MAHOATCHAT$%'
+        </statement>
+        <!--Revision:1,1d5f60a042226f15ff7ecd52f9a02618-->
+        <statement id="DAO00210_PHA56_Insert" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            DECLARE @x int, @LVT_ID VARCHAR(1);
+            SET @x = CONVERT(int, $LOAIVATTU_ID$);
+            IF (@x &gt;= 100000000) SET @x = (@x - 100000000);
+            SET @LVT_ID =
+            (
+            SELECT TBL1.LOAIVATTU_ID
+            FROM
+            (
+            SELECT  ROW_NUMBER() OVER (ORDER BY LOAIVATTU_ID) AS ID, LOAIVATTU_ID
+            FROM TM_LOAIVATTU
+            WHERE TAMNGUNG = '0' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            ) AS TBL1 WHERE TBL1.ID = @x
+            )
+            insert into TM_DUOC_HOATCHAT (
+            MAHOATCHAT
+            , MAHOATCHATREF
+            , TENHOATCHAT
+            , TENHOATCHAT_1
+            , TENHOATCHAT_2
+            , LOAIVATTU_ID
+            , IDX
+            , CAP
+            , CAPTREN_ID
+            , HOATCHAT
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #MAHOATCHAT#
+            , #MAHOATCHATREF#
+            , #TENHOATCHAT#
+            , #TENHOATCHAT_1#
+            , #TENHOATCHAT_2#
+            , @LVT_ID
+            , #IDX#
+            , #CAP#
+            , #CAPTREN_ID#
+            , #HOATCHAT#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:1,d8f5abf3082a82c06a15ccfb9f9e441e-->
+        <update id="DAO00210_PHA56_Update" parameterClass="System.Collections.IDictionary">
+            DECLARE @x int, @LVT_ID VARCHAR(1);
+            SET @x = CONVERT(int, $LOAIVATTU_ID$);
+            IF (@x &gt;= 100000000) SET @x = (@x - 100000000);
+            SET @LVT_ID =
+            (
+            SELECT TBL1.LOAIVATTU_ID
+            FROM
+            (
+            SELECT  ROW_NUMBER() OVER (ORDER BY LOAIVATTU_ID) AS ID, LOAIVATTU_ID
+            FROM TM_LOAIVATTU
+            WHERE TAMNGUNG = '0' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            ) AS TBL1 WHERE TBL1.ID = @x
+            )
+            update TM_DUOC_HOATCHAT set
+            MAHOATCHAT = #MAHOATCHAT#
+            , MAHOATCHATREF = #MAHOATCHATREF#
+            , TENHOATCHAT = #TENHOATCHAT#
+            , TENHOATCHAT_1 = #TENHOATCHAT_1#
+            , TENHOATCHAT_2 = #TENHOATCHAT_2#
+            , LOAIVATTU_ID = @LVT_ID
+            , IDX = #IDX#
+            , CAP = #CAP#
+            , CAPTREN_ID = #CAPTREN_ID#
+            , HOATCHAT = #HOATCHAT#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            HOATCHAT_ID = '$HOATCHAT_ID$'
+        </update>
+        <!--Revision:0,99b1a1e32686605e035d1f0cbb23eb55-->
+        <statement id="DAO00210_PHA56_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DUOC_HOATCHAT
+            where
+            HOATCHAT_ID = '$HOATCHAT_ID$'
+        </statement>
+        <!--Revision:0,34cf6a8906287805cdac7df67e0ee39f-->
+        <statement id="DAO00210_SVC02_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            DECLARE @x int, @y int;
+            SET @x = 100000000;
+            SET @y = 200000000;
+            WITH DichvuRec AS
+            (
+            SELECT D.DICHVU_ID AS CATEGORY_ID, D.MADICHVU AS CATEGORY_CODE, D.TENDICHVU AS CATEGORY_NAME, (ND.CAP + 1) AS FOLDER_LEVEL, ISNULL(D.CAPTREN_ID,D.NHOMDICHVU_ID + @x) AS PARENT_ID, '0' AS IS_FOLDER
+            , D.COGIATRICHUAN
+            FROM TM_DICHVU AS D
+            INNER JOIN TM_NHOMDICHVU AS ND ON D.NHOMDICHVU_ID = ND.NHOMDICHVU_ID
+            INNER JOIN TM_LOAIDICHVU AS LD ON LD.LOAIDICHVU_ID = ND.LOAIDICHVU_ID
+            WHERE D.CAP = 1 AND D.CAPTREN_ID IS NULL AND D.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT D.DICHVU_ID AS CATEGORY_ID, D.MADICHVU AS CATEGORY_CODE, D.TENDICHVU AS CATEGORY_NAME, (DR.FOLDER_LEVEL + 1) AS FOLDER_LEVEL, D.CAPTREN_ID AS PARENT_ID, '0' AS IS_FOLDER
+            , D.COGIATRICHUAN
+            FROM DichvuRec AS DR
+            INNER JOIN TM_DICHVU AS D ON D.CAPTREN_ID = DR.CATEGORY_ID AND D.BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            , NhomdichvuRec AS
+            (
+            SELECT (ND.NHOMDICHVU_ID + @x) AS CATEGORY_ID, ND.MANHOMDICHVU AS CATEGORY_CODE, ND.TENNHOMDICHVU AS CATEGORY_NAME, ND.CAP AS FOLDER_LEVEL, ISNULL(ND.CAPTREN_ID,ND.LOAIDICHVU_ID + @y) AS PARENT_ID, '1' AS IS_FOLDER
+            , '0' AS COGIATRICHUAN
+            FROM TM_NHOMDICHVU AS ND
+            INNER JOIN TM_LOAIDICHVU AS LD ON LD.LOAIDICHVU_ID = ND.LOAIDICHVU_ID
+            WHERE ND.CAP = 1 AND ND.CAPTREN_ID IS NULL AND ND.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT (ND.NHOMDICHVU_ID + @x) AS CATEGORY_ID, ND.MANHOMDICHVU AS CATEGORY_CODE, ND.TENNHOMDICHVU AS CATEGORY_NAME, ND.CAP AS FOLDER_LEVEL, (ND.CAPTREN_ID + @x) AS PARENT_ID, '1' AS IS_FOLDER
+            , '0' AS COGIATRICHUAN
+            FROM NhomdichvuRec AS DR
+            INNER JOIN TM_NHOMDICHVU AS ND ON (ND.CAPTREN_ID + @x) = DR.CATEGORY_ID AND ND.BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            SELECT * FROM DichvuRec
+            UNION ALL
+            SELECT * FROM NhomdichvuRec
+            UNION ALL
+            SELECT (LD.LOAIDICHVU_ID + @y) AS CATEGORY_ID, LD.MALOAIDICHVU AS CATEGORY_CODE, LD.TENLOAIDICHVU AS CATEGORY_NAME, 0 AS FOLDER_LEVEL, 0 AS PARENT_ID, '1' AS IS_FOLDER
+            , '0' AS COGIATRICHUAN
+            FROM TM_LOAIDICHVU AS LD
+            WHERE LD.BENHVIEN_ID = '$BENHVIEN_ID$'
+            ORDER BY CATEGORY_ID
+        </statement>
+        <!--Revision:0,e34c19f0f0db31cc84c25fe90a1f8252-->
+        <statement id="DAO00210_SVC02_GetDetailByID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT D.TENDICHVU, D.DONVITINH, D.DICHVU_ID, D.COGIATRICHUAN
+            , DG.NAM_MIN, DG.NAM_MAX, DG.NU_MIN, DG.NU_MAX, DG.TREEM_MIN, DG.TREEM_MAX, DG.KIEUDULIEU
+            , DG.GHICHU, DG.NGAYTAO, DG.NGUOITAO_ID, DG.NGAYCAPNHAT, DG.NGUOICAPNHAT_ID, DG.BENHVIEN_ID
+            FROM TM_DICHVU AS D
+            LEFT JOIN TM_DICHVU_GIATRICHUAN AS DG ON DG.DICHVU_ID = D.DICHVU_ID
+            WHERE D.DICHVU_ID = '$DICHVU_ID$' AND D.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,1fc688b588f5a72cb46b198d8e549d60-->
+        <statement id="DAO00210_SVC02_GetGiaTriChuan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DG.*
+            FROM TM_DICHVU_GIATRICHUAN AS DG
+            WHERE DG.DICHVU_ID = '$DICHVU_ID$' AND DG.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,ce8730a70e6df08b88e777007c3f684a-->
+        <statement id="DAO00210_SVC02_Insert" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DICHVU_GIATRICHUAN (
+            DICHVU_ID
+            , NAM_MIN
+            , NAM_MAX
+            , NU_MIN
+            , NU_MAX
+            , TREEM_MIN
+            , TREEM_MAX
+            , KIEUDULIEU
+            , GHICHU
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #DICHVU_ID#
+            , #NAM_MIN#
+            , #NAM_MAX#
+            , #NU_MIN#
+            , #NU_MAX#
+            , #TREEM_MIN#
+            , #TREEM_MAX#
+            , #KIEUDULIEU#
+            , #GHICHU#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,4e7e7539586922cce11584f3fe5e80b3-->
+        <update id="DAO00210_SVC02_Update" parameterClass="System.Collections.IDictionary">
+            update TM_DICHVU_GIATRICHUAN set
+            DICHVU_ID = #DICHVU_ID#
+            , NAM_MIN = #NAM_MIN#
+            , NAM_MAX = #NAM_MAX#
+            , NU_MIN = #NU_MIN#
+            , NU_MAX = #NU_MAX#
+            , TREEM_MIN = #TREEM_MIN#
+            , TREEM_MAX = #TREEM_MAX#
+            , KIEUDULIEU = #KIEUDULIEU#
+            , GHICHU = #GHICHU#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            DICHVU_GIATRICHUAN_ID = '$DICHVU_GIATRICHUAN_ID$'
+        </update>
+        <!--Revision:0,f38f7b091f1dd53916d8094b5a7897b4-->
+        <statement id="DAO00210_SVC02_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DICHVU_GIATRICHUAN
+            where
+            DICHVU_GIATRICHUAN_ID = '$DICHVU_GIATRICHUAN_ID$'
+        </statement>
+        <!--Revision:0,ac9febbdf34c8975936ef87647bcfa53-->
+        <statement id="DAO00210_MKT07_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select
+            THETHANHVIEN_ID AS CATEGORY_ID, MATHETHANHVIEN AS CATEGORY_CODE,
+            TENTHETHANHVIEN AS CATEGORY_NAME, 0 AS PARENT_ID, '0' AS IS_FOLDER, 0 AS FOLDER_LEVEL
+            from TM_CSKH_THETHANHVIEN
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,b897253a9519bdadf66d4b9fd14d13b9-->
+        <statement id="DAO00210_MKT07_GetDetailByID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT * FROM TM_CSKH_THETHANHVIEN WHERE THETHANHVIEN_ID = '$THETHANHVIEN_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,966a21f0f3e214f52ca4371758d26604-->
+        <statement id="DAO00210_MKT07_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_CSKH_THETHANHVIEN
+            where
+            THETHANHVIEN_ID = '$THETHANHVIEN_ID$'
+        </statement>
+        <!--Revision:0,3514625e28922b7205236e2adcc5d2fa-->
+        <statement id="DAO00210_MKT07_Insert" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_CSKH_THETHANHVIEN (
+            MATHETHANHVIEN
+            , TENTHETHANHVIEN
+            , SOTIEN
+            , TAMNGUNG
+            , THOIGIANBANTHE
+            , THOIHAN
+            , GHICHU
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            ) values (
+            #MATHETHANHVIEN#
+            , #TENTHETHANHVIEN#
+            , #SOTIEN#
+            , #TAMNGUNG#
+            , #THOIGIANBANTHE#
+            , #THOIHAN#
+            , #GHICHU#
+            , #BENHVIEN_ID#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,6bffc01ddaa1ba123811e4e59b69f65c-->
+        <update id="DAO00210_MKT07_Update" parameterClass="System.Collections.IDictionary">
+            update TM_CSKH_THETHANHVIEN set
+            MATHETHANHVIEN = #MATHETHANHVIEN#
+            <isPropertyAvailable prepend="," property="TENTHETHANHVIEN">
+                TENTHETHANHVIEN = #TENTHETHANHVIEN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="SOTIEN">
+                SOTIEN = #SOTIEN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="TAMNGUNG">
+                TAMNGUNG = #TAMNGUNG#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="THOIGIANBANTHE">
+                THOIGIANBANTHE = #THOIGIANBANTHE#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="THOIHAN">
+                THOIHAN = #THOIHAN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="GHICHU">
+                GHICHU = #GHICHU#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="BENHVIEN_ID">
+                BENHVIEN_ID = #BENHVIEN_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGAYTAO">
+                NGAYTAO = #NGAYTAO#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGUOITAO_ID">
+                NGUOITAO_ID = #NGUOITAO_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGAYCAPNHAT">
+                NGAYCAPNHAT = #NGAYCAPNHAT#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGUOICAPNHAT_ID">
+                NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            </isPropertyAvailable>
+            where
+            THETHANHVIEN_ID = '$THETHANHVIEN_ID$'
+        </update>
+    </statements>
+</sqlMap>

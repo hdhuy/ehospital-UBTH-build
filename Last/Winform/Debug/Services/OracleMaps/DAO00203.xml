@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,ec378cae8e9c2ede1099ad62b238bac4-->
+        <statement id="DAO00203_GetAll" resultClass="DataObject">
+            select *
+            from TM_REPORT_SUB_DEFINITION
+            order by REPORT_SUB_DEFINITION_ID
+        </statement>
+        <!--Revision:0,b84fb3b69cf8eae0d956f871a410dfc7-->
+        <statement id="DAO00203_GetListReportSubFileByReportID" resultClass="DataObject">
+            select R.*
+            from TM_REPORT_SUB_DEFINITION RS
+            inner join TM_REPORT R ON RS.SUB_REPORT_CODE = R.REPORT_CODE AND R.BENHVIEN_ID = RS.BENHVIEN_ID
+            where RS.REPORT_CODE = '$REPORT_CODE$' AND RS.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,647ab35cb806d864bd9dc02697b3190b-->
+        <statement id="DAO00203_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_REPORT_SUB_DEFINITION
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="REPORT_SUB_DEFINITION_ID">
+                        TM_REPORT_SUB_DEFINITION.REPORT_SUB_DEFINITION_ID = '$REPORT_SUB_DEFINITION_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_CODE">
+                        TM_REPORT_SUB_DEFINITION.REPORT_CODE = '$REPORT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SUB_REPORT_CODE">
+                        TM_REPORT_SUB_DEFINITION.SUB_REPORT_CODE = '$SUB_REPORT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_REPORT_SUB_DEFINITION.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by REPORT_SUB_DEFINITION_ID
+        </statement>
+        <!--Revision:0,a670434f930f3b594bccb73d24ae70ec-->
+        <statement id="DAO00203_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_REPORT_SUB_DEFINITION
+            where TM_REPORT_SUB_DEFINITION.REPORT_SUB_DEFINITION_ID  = '$value$'
+            order by REPORT_SUB_DEFINITION_ID
+        </statement>
+        <!--Revision:0,7714de7d7883826799d980c5102133d9-->
+        <statement id="DAO00203_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_REPORT_SUB_DEFINITION
+            where TM_REPORT_SUB_DEFINITION.REPORT_SUB_DEFINITION_ID  = '$REPORT_SUB_DEFINITION_ID$'
+            order by REPORT_SUB_DEFINITION_ID
+        </statement>
+        <!--Revision:0,384fa38aa83a2745dd5fd858397f5abe-->
+        <insert id="DAO00203_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            <selectKey property="ID" type="pre" resultClass="System.Int64">
+                select TM_REPORT_SUB_DEFINITION_S.nextval as value from dual
+            </selectKey>
+            insert into TM_REPORT_SUB_DEFINITION (
+            REPORT_SUB_DEFINITION_ID
+            , REPORT_ID
+            , REPORT_CODE
+            , SUB_REPORT_ID
+            , SUB_REPORT_CODE
+            , BENHVIEN_ID
+            ) values (
+            #ID#
+            , #REPORT_ID#
+            , #REPORT_CODE#
+            , #SUB_REPORT_ID#
+            , #SUB_REPORT_CODE#
+            , #BENHVIEN_ID#
+            )
+        </insert>
+        <!--Revision:0,803631dcae92578f28cf3eae62bb0c6b-->
+        <update id="DAO00203_Update" parameterClass="System.Collections.IDictionary">
+            update TM_REPORT_SUB_DEFINITION set
+            REPORT_ID = #REPORT_ID#
+            , REPORT_CODE = #REPORT_CODE#
+            , SUB_REPORT_ID = #SUB_REPORT_ID#
+            , SUB_REPORT_CODE = #SUB_REPORT_CODE#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            REPORT_SUB_DEFINITION_ID = '$REPORT_SUB_DEFINITION_ID$'
+        </update>
+        <!--Revision:0,342203d2b217072c4d2320d7d6add24d-->
+        <statement id="DAO00203_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_REPORT_SUB_DEFINITION
+            where
+            REPORT_SUB_DEFINITION_ID = '$REPORT_SUB_DEFINITION_ID$'
+        </statement>
+        <!--Revision:0,c8a3b7044c406b2a492bf3de2521696a-->
+        <statement id="DAO00203_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_REPORT_SUB_DEFINITION
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="REPORT_SUB_DEFINITION_ID">
+                        TM_REPORT_SUB_DEFINITION.REPORT_SUB_DEFINITION_ID = '$REPORT_SUB_DEFINITION_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_ID">
+                        TM_REPORT_SUB_DEFINITION.REPORT_ID = '$REPORT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_CODE">
+                        TM_REPORT_SUB_DEFINITION.REPORT_CODE = '$REPORT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SUB_REPORT_ID">
+                        TM_REPORT_SUB_DEFINITION.SUB_REPORT_ID = '$SUB_REPORT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SUB_REPORT_CODE">
+                        TM_REPORT_SUB_DEFINITION.SUB_REPORT_CODE = '$SUB_REPORT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_REPORT_SUB_DEFINITION.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

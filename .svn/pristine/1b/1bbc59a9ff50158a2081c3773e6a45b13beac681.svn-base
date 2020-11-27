@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,b545ffba43b891fafef890ce4ad6d9fb-->
+        <statement id="DAO00214_ETT04_DOITUONG_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DT.DOITUONG_ID AS CATEGORY_ID, DT.MADOITUONG AS CATEGORY_CODE, DT.TENDOITUONG AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, 0 AS PARENT_ID, '0' AS IS_FOLDER
+            FROM TM_DOITUONG AS DT
+            WHERE DT.ACTIVE = '1' AND DT.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,7cbbfb21936e76152cada59f04ceca1e-->
+        <statement id="DAO00214_ETT04_DOITUONG_GIADICHVU_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            WITH TABLE_PIVOT AS
+            (
+            SELECT D.DICHVU_ID, D.MADICHVU, D.TENDICHVU, D.NHOMDICHVU_ID, ND.TENNHOMDICHVU, L.LOAIGIA_ID, L.TENLOAIGIA, L.MALOAIGIA
+            , DD.DONGIA, SELECTED = CASE WHEN DG.DOITUONG_GIADICHVU_ID IS NULL THEN 0 ELSE 1 END, DG.DOITUONG_GIADICHVU_ID
+            FROM TM_DICHVU AS D
+            INNER JOIN TM_NHOMDICHVU AS ND ON ND.NHOMDICHVU_ID = D.NHOMDICHVU_ID AND ND.BENHVIEN_ID = '$BENHVIEN_ID$' AND ND.TAMNGUNG = '0'
+            INNER JOIN (SELECT * FROM TM_LOAIGIA WHERE TAMNGUNG = '0' AND BENHVIEN_ID = '$BENHVIEN_ID$' AND LOAIGIA_ID IN ($COLUMNID_LIST$)) AS L ON 1=1
+            LEFT JOIN TM_BANGGIA AS B ON B.LOAIGIA_ID = L.LOAIGIA_ID AND B.TAMNGUNG = '0' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN TM_DICHVU_DONGIA AS DD ON DD.DICHVU_ID = D.DICHVU_ID AND DD.LOAIGIA_ID = L.LOAIGIA_ID AND DD.BANGGIA_ID = B.BANGGIA_ID AND DD.TAMNGUNG = '0' AND DD.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN TM_DOITUONG_GIADICHVU AS DG ON DG.DOITUONG_ID = '$DOITUONG_ID$' AND DG.DICHVU_ID = D.DICHVU_ID AND L.LOAIGIA_ID = DG.LOAIGIA_ID AND DG.TAMNGUNG = '0' AND DG.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE D.TAMNGUNG = '0' AND D.BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            SELECT DICHVU_ID, MADICHVU, TENDICHVU, NHOMDICHVU_ID, TENNHOMDICHVU
+            $SELECT_LIST$
+            FROM TABLE_PIVOT
+            GROUP BY DICHVU_ID, MADICHVU, TENDICHVU, NHOMDICHVU_ID, TENNHOMDICHVU
+        </statement>
+        <!--Revision:0,6796652e2a1cdf7545a1cdadb1bad021-->
+        <statement id="DAO00214_ETT04_GETLOAIGIADICHVU_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT L1.* FROM TM_LOAIGIA AS L1
+            INNER JOIN TM_LOAIGIA AS L2 ON L1.CAPTREN_ID = L2.LOAIGIA_ID AND L2.MALOAIGIA = 'GiaDichVu' AND L2.TAMNGUNG = '0' AND L2.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE L1.TAMNGUNG = '0' AND L1.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,b099409fe1525a81b3a8339aa8792f70-->
+        <statement id="DAO00214_ETT04_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DOITUONG_GIADICHVU (
+            DOITUONG_ID
+            , DICHVU_ID
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGUOITAO_ID
+            , NGAYTAO
+            , NGUOICAPNHAT_ID
+            , NGAYCAPNHAT
+            , BENHVIEN_ID
+            ) values (
+            #DOITUONG_ID#
+            , #DICHVU_ID#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGUOITAO_ID#
+            , #NGAYTAO#
+            , #NGUOICAPNHAT_ID#
+            , #NGAYCAPNHAT#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,37b69a66fde2a55af642a5bce6c71869-->
+        <update id="DAO00214_ETT04_Update" parameterClass="System.Collections.IDictionary">
+            update TM_DOITUONG_GIADICHVU set
+            DOITUONG_ID = #DOITUONG_ID#
+            , DICHVU_ID = #DICHVU_ID#
+            , LOAIGIA_ID = #LOAIGIA_ID#
+            , TIENTE_ID = #TIENTE_ID#
+            , TRANGTHAI = #TRANGTHAI#
+            , TAMNGUNG = #TAMNGUNG#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            DOITUONG_GIADICHVU_ID = '$DOITUONG_GIADICHVU_ID$'
+        </update>
+        <!--Revision:0,4728bc88cd6b7766aad2de16ac6b6612-->
+        <statement id="DAO00214_ETT04_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            DELETE FROM TM_DOITUONG_GIADICHVU
+            WHERE DOITUONG_ID = '$DOITUONG_ID$' AND LOAIGIA_ID = '$LOAIGIA_ID$' AND DICHVU_ID = '$DICHVU_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,a65058fb4b49cd596678d3bd8154355b-->
+        <statement id="DAO00214_ETT04_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT *
+            FROM TM_DOITUONG_GIADICHVU
+            WHERE DOITUONG_ID = '$DOITUONG_ID$' AND LOAIGIA_ID = '$LOAIGIA_ID$' AND DICHVU_ID = '$DICHVU_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,a2bd30332087bef1e66ed2aa03c6de15-->
+        <statement id="DAO00214_ETT05_DOITUONG_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DT.DOITUONG_ID AS CATEGORY_ID, DT.MADOITUONG AS CATEGORY_CODE, DT.TENDOITUONG AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, 0 AS PARENT_ID, '0' AS IS_FOLDER
+            FROM TM_DOITUONG AS DT
+            WHERE DT.ACTIVE = '1' AND DT.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+      <statement id="DAO00214_ETT04_Select_Delete_byJSON" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+
+        select CONCAT(DOITUONG_ID, DICHVU_ID, LOAIGIA_ID, BENHVIEN_ID) KEY_DATA FROM TM_DOITUONG_GIADICHVU
+        WHERE
+        CONCAT(DOITUONG_ID, DICHVU_ID, LOAIGIA_ID, BENHVIEN_ID)
+        in
+        (
+        SELECT CONCAT(DOITUONG_ID, DICHVU_ID, LOAIGIA_ID, BENHVIEN_ID)
+        FROM OPENJSON(@jsonVienPhi) WITH (DOITUONG_ID int, DICHVU_ID int, LOAIGIA_ID int, BENHVIEN_ID nvarchar(10))
+        )
+      </statement>
+        <statement id="DAO00214_ETT04_Delete_byJSON" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+          declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+
+          DELETE FROM TM_DOITUONG_GIADICHVU
+          WHERE
+          CONCAT(DOITUONG_ID, DICHVU_ID, LOAIGIA_ID, BENHVIEN_ID)
+          in
+          (
+          SELECT KEY_DATA
+          FROM OPENJSON(@jsonVienPhi) WITH (KEY_DATA nvarchar(50))
+          )
+        </statement>
+      <statement id="DAO00214_ETT04_Add_byJSON" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+
+        INSERT INTO TM_DOITUONG_GIADICHVU
+        SELECT *
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (
+        DOITUONG_ID int,
+        DICHVU_ID int,
+        LOAIGIA_ID int,
+        TIENTE_ID nchar(3),
+        TRANGTHAI varchar(20),
+        TAMNGUNG char(1),
+        NGUOITAO_ID int,
+        NGAYTAO datetime,
+        NGUOICAPNHAT_ID int,
+        NGAYCAPNHAT datetime,
+        BENHVIEN_ID nvarchar(10)
+        )
+      </statement>
+        <!--Revision:0,48aa91a48d78529f0bbcffafd3a838f6-->
+        <statement id="DAO00214_ETT05_DOITUONG_GIAPHONGBENH_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            WITH TABLE_PIVOT AS
+            (
+            SELECT PB.PHONGBAN_ID AS PHONGBENH_ID, PB.TENPHONGBAN AS TENPHONGBENH, PB2.PHONGBAN_ID AS KHOA_ID, PB2.TENPHONGBAN AS TENKHOA, L.LOAIGIA_ID, L.TENLOAIGIA, L.MALOAIGIA
+            , PD.DONGIA, SELECTED = CASE WHEN DG.DOITUONG_GIAPHONGBENH_ID IS NULL THEN 0 ELSE 1 END, DG.DOITUONG_GIAPHONGBENH_ID
+            FROM TM_PHONGBAN AS PB
+            INNER JOIN LST_DICTIONARY AS D ON D.DICTIONARY_ID = PB.LOAIPHONGBAN_ID AND D.DICTIONARY_CODE IN ('PhongBenh') AND D.ENABLED = '1'
+            <!--AND D.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            INNER JOIN TM_PHONGBAN AS PB2 ON PB2.PHONGBAN_ID = PB.CAPTREN_ID AND PB2.TAMNGUNG = '0' AND PB2.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN (SELECT * FROM TM_LOAIGIA WHERE TAMNGUNG = '0' AND BENHVIEN_ID = '$BENHVIEN_ID$' AND LOAIGIA_ID IN ($COLUMNID_LIST$)) AS L ON 1=1
+            INNER JOIN TM_BANGGIA AS B ON B.LOAIGIA_ID = L.LOAIGIA_ID AND B.TAMNGUNG = '0' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN TM_PHONGBENH_DONGIA AS PD ON PD.PHONGBENH_ID = PB.PHONGBAN_ID AND PD.LOAIGIA_ID = L.LOAIGIA_ID AND PD.BANGGIA_ID = B.BANGGIA_ID AND PD.TAMNGUNG = '0' AND PD.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN TM_DOITUONG_GIAPHONGBENH AS DG ON DG.DOITUONG_ID = '$DOITUONG_ID$' AND DG.PHONGBENH_ID = PB.PHONGBAN_ID AND L.LOAIGIA_ID = DG.LOAIGIA_ID AND DG.TAMNGUNG = '0' AND DG.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE PB.TAMNGUNG = '0' AND PB.BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            SELECT PHONGBENH_ID, TENPHONGBENH, KHOA_ID, TENKHOA
+            $SELECT_LIST$
+            FROM TABLE_PIVOT
+            GROUP BY PHONGBENH_ID, TENPHONGBENH, KHOA_ID, TENKHOA
+        </statement>
+        <!--Revision:0,c05343068fa062492d03b2fe42f23662-->
+        <statement id="DAO00214_ETT05_GETLOAIGIAPHONGBENH_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT L1.* FROM TM_LOAIGIA AS L1
+            INNER JOIN TM_LOAIGIA AS L2 ON L1.CAPTREN_ID = L2.LOAIGIA_ID AND L2.MALOAIGIA = 'GiaPhong' AND L2.TAMNGUNG = '0' AND L2.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE L1.TAMNGUNG = '0' AND L1.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,e113c0c87a394ffc1855d5dd57435213-->
+        <statement id="DAO00214_ETT05_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DOITUONG_GIAPHONGBENH (
+            DOITUONG_ID
+            , PHONGBENH_ID
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGUOITAO_ID
+            , NGAYTAO
+            , NGUOICAPNHAT_ID
+            , NGAYCAPNHAT
+            , BENHVIEN_ID
+            ) values (
+            #DOITUONG_ID#
+            , #PHONGBENH_ID#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGUOITAO_ID#
+            , #NGAYTAO#
+            , #NGUOICAPNHAT_ID#
+            , #NGAYCAPNHAT#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,43362bc723feca45fd6dd820911e8da5-->
+        <update id="DAO00214_ETT05_Update" parameterClass="System.Collections.IDictionary">
+            update TM_DOITUONG_GIAPHONGBENH set
+            DOITUONG_ID = #DOITUONG_ID#
+            , PHONGBENH_ID = #PHONGBENH_ID#
+            , LOAIGIA_ID = #LOAIGIA_ID#
+            , TIENTE_ID = #TIENTE_ID#
+            , TRANGTHAI = #TRANGTHAI#
+            , TAMNGUNG = #TAMNGUNG#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            DOITUONG_GIAPHONGBENH_ID = '$DOITUONG_GIAPHONGBENH_ID$'
+        </update>
+        <!--Revision:0,5e7d9f9d212a1f681d28413b03134c99-->
+        <statement id="DAO00214_ETT05_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            DELETE FROM TM_DOITUONG_GIAPHONGBENH
+            WHERE DOITUONG_ID = '$DOITUONG_ID$' AND LOAIGIA_ID = '$LOAIGIA_ID$' AND PHONGBENH_ID = '$PHONGBENH_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,9bd987e5d4f37d6bb99dc3b7b1e6f252-->
+        <statement id="DAO00214_ETT05_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT *
+            FROM TM_DOITUONG_GIAPHONGBENH
+            WHERE DOITUONG_ID = '$DOITUONG_ID$' AND LOAIGIA_ID = '$LOAIGIA_ID$' AND PHONGBENH_ID = '$PHONGBENH_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,de0836c00aeaec4bcbded31e32255e88-->
+        <statement id="DAO00214_ETT06_DOITUONG_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DT.DOITUONG_ID AS CATEGORY_ID, DT.MADOITUONG AS CATEGORY_CODE, DT.TENDOITUONG AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, 0 AS PARENT_ID, '0' AS IS_FOLDER
+            FROM TM_DOITUONG AS DT
+            WHERE DT.ACTIVE = '1' AND DT.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,21e080a74719fb53a0fa138596af2f80-->
+        <statement id="DAO00214_ETT06_DOITUONG_GIAGIUONGBENH_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            WITH TABLE_PIVOT AS
+            (
+            SELECT GB.GIUONGBENH_ID, GB.MAGIUONG, PB1.PHONGBAN_ID AS PHONGBENH_ID, PB1.TENPHONGBAN AS TENPHONGBENH, PB2.PHONGBAN_ID AS KHOA_ID, PB2.TENPHONGBAN AS TENKHOA
+            , L.LOAIGIA_ID, L.TENLOAIGIA, L.MALOAIGIA, GD.DONGIA, SELECTED = CASE WHEN DG.DOITUONG_GIAGIUONG_ID IS NULL THEN 0 ELSE 1 END, DG.DOITUONG_GIAGIUONG_ID
+            FROM TM_GIUONGBENH AS GB
+            INNER JOIN TM_PHONGBAN AS PB1 ON PB1.PHONGBAN_ID = GB.PHONGBENH_ID AND PB1.TAMNGUNG = '0' AND PB1.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN TM_PHONGBAN AS PB2 ON PB2.PHONGBAN_ID = GB.KHOADIEUTRI_ID AND PB2.TAMNGUNG = '0' AND PB2.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN (SELECT * FROM TM_LOAIGIA WHERE TAMNGUNG = '0' AND BENHVIEN_ID = '$BENHVIEN_ID$' AND LOAIGIA_ID IN ($COLUMNID_LIST$)) AS L ON 1=1
+            INNER JOIN TM_BANGGIA AS B ON B.LOAIGIA_ID = L.LOAIGIA_ID AND B.TAMNGUNG = '0' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN TM_GIUONGBENH_DONGIA AS GD ON GB.GIUONGBENH_ID = GD.GIUONGBENH_ID AND GD.LOAIGIA_ID = L.LOAIGIA_ID AND GD.BANGGIA_ID = B.BANGGIA_ID AND GD.TAMNGUNG = '0' AND GD.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN TM_DOITUONG_GIAGIUONG AS DG ON DG.DOITUONG_ID = '$DOITUONG_ID$' AND DG.GIUONGBENH_ID = GB.GIUONGBENH_ID AND L.LOAIGIA_ID = DG.LOAIGIA_ID AND DG.TAMNGUNG = '0' AND DG.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE GB.TAMNGUNG = '0' AND GB.BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            SELECT GIUONGBENH_ID, MAGIUONG, PHONGBENH_ID, TENPHONGBENH, KHOA_ID, TENKHOA
+            $SELECT_LIST$
+            FROM TABLE_PIVOT
+            GROUP BY GIUONGBENH_ID, MAGIUONG, PHONGBENH_ID, TENPHONGBENH, KHOA_ID, TENKHOA
+        </statement>
+        <!--Revision:0,02c73edbeacf1de59dc497fac7b14192-->
+        <statement id="DAO00214_ETT06_GETLOAIGIAGIUONGBENH_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT L1.* FROM TM_LOAIGIA AS L1
+            INNER JOIN TM_LOAIGIA AS L2 ON L1.CAPTREN_ID = L2.LOAIGIA_ID AND L2.MALOAIGIA = 'GiaGiuong' AND L2.TAMNGUNG = '0' AND L2.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE L1.TAMNGUNG = '0' AND L1.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,424fc4d11d371e6121855c1d97eeb21a-->
+        <statement id="DAO00214_ETT06_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DOITUONG_GIAGIUONG (
+            DOITUONG_ID
+            , GIUONGBENH_ID
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGUOITAO_ID
+            , NGAYTAO
+            , NGUOICAPNHAT_ID
+            , NGAYCAPNHAT
+            , BENHVIEN_ID
+            ) values (
+            #DOITUONG_ID#
+            , #GIUONGBENH_ID#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGUOITAO_ID#
+            , #NGAYTAO#
+            , #NGUOICAPNHAT_ID#
+            , #NGAYCAPNHAT#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,791afdc563630de94b88a34bba6e412e-->
+        <update id="DAO00214_ETT06_Update" parameterClass="System.Collections.IDictionary">
+            update TM_DOITUONG_GIAGIUONG set
+            DOITUONG_ID = #DOITUONG_ID#
+            , GIUONGBENH_ID = #GIUONGBENH_ID#
+            , LOAIGIA_ID = #LOAIGIA_ID#
+            , TIENTE_ID = #TIENTE_ID#
+            , TRANGTHAI = #TRANGTHAI#
+            , TAMNGUNG = #TAMNGUNG#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            DOITUONG_GIAGIUONG_ID = '$DOITUONG_GIAGIUONG_ID$'
+        </update>
+        <!--Revision:0,6736e6de49ee3b33469f9f29fc756313-->
+        <statement id="DAO00214_ETT06_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            DELETE FROM TM_DOITUONG_GIAGIUONG
+            WHERE DOITUONG_ID = '$DOITUONG_ID$' AND LOAIGIA_ID = '$LOAIGIA_ID$' AND GIUONGBENH_ID = '$GIUONGBENH_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,f5ddb44602d86f5b69d001449ef48704-->
+        <statement id="DAO00214_ETT06_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT *
+            FROM TM_DOITUONG_GIAGIUONG
+            WHERE DOITUONG_ID = '$DOITUONG_ID$' AND LOAIGIA_ID = '$LOAIGIA_ID$' AND GIUONGBENH_ID = '$GIUONGBENH_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,19 @@
+FPT.Framework.Presentation.RoomListStyle, FPT.Framework.Presentation
+{
+  "ForeColor": "@labelfg",
+  "BackColor": "@textboxbg",
+  "Font": "default",
+  "TextAlign": "MiddleLeft",
+  "BorderColor": "@labelfg",
+  "ItemHeight": 40,  
+  "CompletedBGColor": "46, 150, 150",
+  "CompletedFGColor": "@white",
+  "InProgressBGColor": "255, 128, 128",
+  "InProgressFGColor": "@black",
+  "WaitingBGColor": "0, 185, 185",
+  "WaitingFGColor": "@red",  
+  "RoomPropertyName": "Name",
+  "RoomWaitingPropertyName": "Pending",
+  "RoomCompletedPropertyName": "Completed",
+  "RoomInProgressPropertyName": "InProgress"
+}

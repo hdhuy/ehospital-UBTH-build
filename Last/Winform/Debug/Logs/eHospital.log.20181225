@@ -1,0 +1,62 @@
+﻿--------------------------------------------------------------------------------
+2018-12-25 09:43:52,892 [1] INFO  - [Application started.]
+2018-12-25 09:43:56,868 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-25 09:43:56,927 [1] INFO  - LoadMasters() took 40 ms.
+2018-12-25 09:43:56,929 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-25 09:44:09,808 [1] INFO  - [admin] Session is starting.
+2018-12-25 09:44:11,015 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:11,327 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:11,411 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:11,493 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:11,569 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:11,645 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:11,721 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:11,797 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:11,870 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:12,347 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:12,466 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:13,073 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 09:44:19,156 [6] INFO  - LoadMasters() took 9,338 ms.
+2018-12-25 09:44:19,171 [1] INFO  - [admin] Session started.
+2018-12-25 09:44:25,761 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-25 09:44:25,785 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-25 09:44:59,714 [1] ERROR - The given key (DONGIA) was not present in the dictionary
+System.Collections.Generic.KeyNotFoundException: The given key (DONGIA) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\ExtendedDictionary.cs:line 35
+   at FPT.Framework.DataRepository.DataRepository.DocumentToResult(SearchResultBase retBase) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepository.cs:line 269
+   at FPT.Framework.DataRepository.DataRepository.Search(String strText, Int32 maxRecords) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepository.cs:line 254
+   at WinformUI.SearchEntry2.OnInternalTextChanged() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\SearchEntry2.cs:line 274
+--------------------------------------------------------------------------------
+2018-12-25 10:03:39,293 [1] INFO  - [Application started.]
+2018-12-25 10:03:41,635 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-25 10:03:41,691 [1] INFO  - LoadMasters() took 42 ms.
+2018-12-25 10:03:41,693 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-25 10:03:57,408 [1] INFO  - [admin] Session is starting.
+2018-12-25 10:04:01,571 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:04:03,729 [5] DEBUG - Loading 'REFBENHNHAN_DY'...
+2018-12-25 10:04:10,647 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:04:12,328 [5] DEBUG - Loading 'REFBENHNHAN_GROUP_DICHVU'...
+2018-12-25 10:04:17,820 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:04:19,434 [5] DEBUG - Loading 'REFBENHNHAN_MN'...
+2018-12-25 10:04:20,187 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:04:21,563 [5] DEBUG - Loading 'REFBENHNHAN_NT_CC'...
+2018-12-25 10:04:23,380 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:04:24,786 [5] DEBUG - Loading 'REFBENHNHAN_NT_DY'...
+2018-12-25 10:04:25,982 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:04:27,156 [5] DEBUG - Loading 'REFBENHNHAN_TIEPNHAN'...
+2018-12-25 10:04:57,133 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:04:58,124 [5] DEBUG - Loading 'REFBENHNHAN_TIEPNHAN_ALL'...
+2018-12-25 10:04:58,838 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:04:59,871 [5] DEBUG - Loading 'REFBENHNHAN_TIEPNHAN_DV_VTYT'...
+2018-12-25 10:05:01,795 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:05:03,325 [5] DEBUG - Loading 'REFBENHNHAN_TOATHUOC'...
+2018-12-25 10:05:10,975 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:05:12,231 [5] DEBUG - Loading 'REFDUOC_KYGUI_TONKHO'...
+2018-12-25 10:05:12,338 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:05:13,584 [5] DEBUG - Loading 'REFDUOC_TONKHO'...
+2018-12-25 10:05:16,197 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-25 10:05:17,297 [5] DEBUG - Loading 'REFDUOC_TONKHO_BOOKING'...
+2018-12-25 10:05:23,667 [5] INFO  - LoadMasters() took 86,249 ms.
+2018-12-25 10:05:23,676 [1] INFO  - [admin] Session started.
+2018-12-25 10:05:27,393 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-25 10:05:27,417 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)

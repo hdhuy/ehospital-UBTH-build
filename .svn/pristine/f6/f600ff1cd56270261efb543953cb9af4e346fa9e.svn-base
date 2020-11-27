@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,c06fe90633b222278e4fa464f2991477-->
+        <statement id="DAO00059_GetAll" resultClass="DataObject">
+            select *
+            from TM_PHONGBAN
+            order by PHONGBAN_ID
+        </statement>
+        <!--Revision:0,8bfd8f11d464129b761b9f3f51a1e86b-->
+        <statement id="DAO00059_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select A.* from TM_PHONGBAN A
+            inner join LST_DICTIONARY B on A.LOAIPHONGBAN_ID = B.DICTIONARY_ID
+            and B.DICTIONARY_TYPE_CODE = 'LoaiPhongBan' and B.DICTIONARY_CODE = 'KhoaNoi'
+            where A.BENHVIEN_ID = '$BENHVIEN_ID$'
+            and A.MAPHONGBAN != '$MAPHONGBAN$' AND A.TAMNGUNG = '0'
+        </statement>
+        <!--Revision:0,106a1da433e7fac15c8b6b0b7fa52623-->
+        <statement id="DAO00059_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_PHONGBAN
+            where TM_PHONGBAN.PHONGBAN_ID  = '$value$'
+            order by PHONGBAN_ID
+        </statement>
+        <!--Revision:0,380ffa9a9b6e533920c51cab2a20a8a6-->
+        <statement id="DAO00059_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_PHONGBAN
+            where TM_PHONGBAN.PHONGBAN_ID  = '$PHONGBAN_ID$'
+            order by PHONGBAN_ID
+        </statement>
+        <!--Revision:0,ef072a9451236135d7dcd77e8f254a7c-->
+        <insert id="DAO00059_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_PHONGBAN (
+            PHONGBAN_ID
+            , MAPHONGBAN
+            , TENPHONGBAN
+            , TENPHONGBAN_EN
+            , TENPHONGBAN_RU
+            , LOAIPHONGBAN_ID
+            , CAP
+            , CAPTREN_ID
+            , TRUONGPHONG
+            , LOAIPHONGBENH_ID
+            , TAMNGUNG
+            , TENKHONGDAU
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , COTHUCHIENDICHVU
+            , IDX
+            , QUANLYNHANSU
+            , ISKHOADIEUTRI
+            , ISCHUYENKHOA
+            , COSTCENTER_ID
+            , CHUYENKHOA_ID
+            , DIADIEMLAMVIEC_ID
+            , ISKHOACAPCUU
+            ) values (
+            #PHONGBAN_ID#
+            , #MAPHONGBAN#
+            , #TENPHONGBAN#
+            , #TENPHONGBAN_EN#
+            , #TENPHONGBAN_RU#
+            , #LOAIPHONGBAN_ID#
+            , #CAP#
+            , #CAPTREN_ID#
+            , #TRUONGPHONG#
+            , #LOAIPHONGBENH_ID#
+            , #TAMNGUNG#
+            , #TENKHONGDAU#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #COTHUCHIENDICHVU#
+            , #IDX#
+            , #QUANLYNHANSU#
+            , #ISKHOADIEUTRI#
+            , #ISCHUYENKHOA#
+            , #COSTCENTER_ID#
+            , #CHUYENKHOA_ID#
+            , #DIADIEMLAMVIEC_ID#
+            , #ISKHOACAPCUU#
+            )
+        </insert>
+        <!--Revision:0,ad01ec609203833986b4ea8d3cce6fd7-->
+        <update id="DAO00059_Update" parameterClass="System.Collections.IDictionary">
+            update TM_PHONGBAN set
+            MAPHONGBAN = #MAPHONGBAN#
+            , TENPHONGBAN = #TENPHONGBAN#
+            , TENPHONGBAN_EN = #TENPHONGBAN_EN#
+            , TENPHONGBAN_RU = #TENPHONGBAN_RU#
+            , LOAIPHONGBAN_ID = #LOAIPHONGBAN_ID#
+            , CAP = #CAP#
+            , CAPTREN_ID = #CAPTREN_ID#
+            , TRUONGPHONG = #TRUONGPHONG#
+            , LOAIPHONGBENH_ID = #LOAIPHONGBENH_ID#
+            , TAMNGUNG = #TAMNGUNG#
+            , TENKHONGDAU = #TENKHONGDAU#
+            <!--, NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#-->
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , COTHUCHIENDICHVU = #COTHUCHIENDICHVU#
+            , IDX = #IDX#
+            , QUANLYNHANSU = #QUANLYNHANSU#
+            , ISKHOADIEUTRI = #ISKHOADIEUTRI#
+            , ISCHUYENKHOA = #ISCHUYENKHOA#
+            , COSTCENTER_ID = #COSTCENTER_ID#
+            , CHUYENKHOA_ID = #CHUYENKHOA_ID#
+            , DIADIEMLAMVIEC_ID = #DIADIEMLAMVIEC_ID#
+            , ISKHOACAPCUU = #ISKHOACAPCUU#
+            where
+            PHONGBAN_ID = '$PHONGBAN_ID$'
+        </update>
+        <!--Revision:0,1d60effd4f6fedb3479a985b5efa729e-->
+        <statement id="DAO00059_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_PHONGBAN
+            where
+            PHONGBAN_ID = '$PHONGBAN_ID$'
+        </statement>
+        <!--Revision:0,513b2ccd4f0cd838e54f94b271b10ba7-->
+        <statement id="DAO00059_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_PHONGBAN
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="PHONGBAN_ID">
+                        TM_PHONGBAN.PHONGBAN_ID = '$PHONGBAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAPHONGBAN">
+                        TM_PHONGBAN.MAPHONGBAN = '$MAPHONGBAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENPHONGBAN">
+                        TM_PHONGBAN.TENPHONGBAN = '$TENPHONGBAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENPHONGBAN_EN">
+                        TM_PHONGBAN.TENPHONGBAN_EN = '$TENPHONGBAN_EN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENPHONGBAN_RU">
+                        TM_PHONGBAN.TENPHONGBAN_RU = '$TENPHONGBAN_RU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIPHONGBAN_ID">
+                        TM_PHONGBAN.LOAIPHONGBAN_ID = '$LOAIPHONGBAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CAP">
+                        TM_PHONGBAN.CAP = '$CAP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CAPTREN_ID">
+                        TM_PHONGBAN.CAPTREN_ID = '$CAPTREN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRUONGPHONG">
+                        TM_PHONGBAN.TRUONGPHONG = '$TRUONGPHONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIPHONGBENH_ID">
+                        TM_PHONGBAN.LOAIPHONGBENH_ID = '$LOAIPHONGBENH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAMNGUNG">
+                        TM_PHONGBAN.TAMNGUNG = '$TAMNGUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENKHONGDAU">
+                        TM_PHONGBAN.TENKHONGDAU = '$TENKHONGDAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_PHONGBAN.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_PHONGBAN.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_PHONGBAN.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_PHONGBAN.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="COTHUCHIENDICHVU">
+                        TM_PHONGBAN.COTHUCHIENDICHVU = '$COTHUCHIENDICHVU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IDX">
+                        TM_PHONGBAN.IDX = '$IDX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="QUANLYNHANSU">
+                        TM_PHONGBAN.QUANLYNHANSU = '$QUANLYNHANSU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ISKHOADIEUTRI">
+                        TM_PHONGBAN.ISKHOADIEUTRI = '$ISKHOADIEUTRI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ISCHUYENKHOA">
+                        TM_PHONGBAN.ISCHUYENKHOA = '$ISCHUYENKHOA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="COSTCENTER_ID">
+                        TM_PHONGBAN.COSTCENTER_ID = '$COSTCENTER_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHUYENKHOA_ID">
+                        TM_PHONGBAN.CHUYENKHOA_ID = '$CHUYENKHOA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DIADIEMLAMVIEC_ID">
+                        TM_PHONGBAN.DIADIEMLAMVIEC_ID = '$DIADIEMLAMVIEC_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ISKHOACAPCUU">
+                        TM_PHONGBAN.ISKHOACAPCUU = '$ISKHOACAPCUU$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

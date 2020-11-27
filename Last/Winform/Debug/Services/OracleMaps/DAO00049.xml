@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,83dd537c6c1d04d71e979f8585e5d429-->
+        <statement id="DAO00049_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT
+            DV.DICHVU_ID, DV.MADICHVU, DV.TENDICHVU, DV.ATTRIBUTE5 , DV.NHOMDICHVU_ID,
+            NDV.TENNHOMDICHVU,DV.CAP,
+            LDV.LOAIDICHVU_ID,LDV.MALOAIDICHVU, LDV.TENLOAIDICHVU
+            FROM
+            TM_DICHVU DV,
+            TM_NHOMDICHVU NDV,
+            TM_LOAIDICHVU LDV
+            WHERE
+            DV.NHOMDICHVU_ID = NDV.NHOMDICHVU_ID
+            AND NDV.LOAIDICHVU_ID = LDV.LOAIDICHVU_ID
+            AND DV.TAMNGUNG = 0
+            and DV.BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isNotEmpty prepend="and" property="MALOAIDICHVU">
+                MALOAIDICHVU = '$MALOAIDICHVU$'
+            </isNotEmpty>
+            ORDER BY LOAIDICHVU_ID
+        </statement>
+        <!--Revision:0,d0d720da9d1b36c1c7a703f5e296d494-->
+        <statement id="DAO00049_KiemtraloaiDV" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select DICHVU_ID AS HA, null AS XN, null as TDCN, null as TT, null as KB from VIEW_DICHVU_NHOMDV
+            where CAPTREN_ID in (select NHOMDICHVU_ID from TM_NHOMDICHVU where (MANHOMDICHVU = '02')) AND DICHVU_ID = '$DICHVU_ID$'
+            union
+            select  null as HA, DICHVU_ID AS XN, null as TDCN, null as TT, null as KB from VIEW_DICHVU_NHOMDV
+            where CAPTREN_ID in (select NHOMDICHVU_ID from TM_NHOMDICHVU where (MANHOMDICHVU = '01')) AND DICHVU_ID = '$DICHVU_ID$'
+            union
+            select  null as HA, null AS XN, DICHVU_ID as TDCN, null as TT, null as KB from VIEW_DICHVU_NHOMDV
+            where CAPTREN_ID in (select NHOMDICHVU_ID from TM_NHOMDICHVU where (MANHOMDICHVU = '03')) AND DICHVU_ID = '$DICHVU_ID$'
+            union
+            SELECT null as HA, null AS XN,null as TDCN,  DV.DICHVU_ID as TT, null as KB
+            FROM  TM_DICHVU DV, TM_NHOMDICHVU NDV, TM_LOAIDICHVU LDV
+            WHERE DV.NHOMDICHVU_ID = NDV.NHOMDICHVU_ID
+            AND NDV.LOAIDICHVU_ID = LDV.LOAIDICHVU_ID
+            AND DV.TAMNGUNG = 0
+            AND (MALOAIDICHVU = 'PhauThuat' OR MALOAIDICHVU = 'ThuThuat')
+            AND DV.DICHVU_ID = '$DICHVU_ID$'
+            union
+            SELECT null as HA, null AS XN,null as TDCN,  null as TT, DV.DICHVU_ID as KB
+            FROM  TM_DICHVU DV, TM_NHOMDICHVU NDV, TM_LOAIDICHVU LDV
+            WHERE DV.NHOMDICHVU_ID = NDV.NHOMDICHVU_ID
+            AND NDV.LOAIDICHVU_ID = LDV.LOAIDICHVU_ID
+            AND DV.TAMNGUNG = 0
+            AND MALOAIDICHVU = 'KhamBenh'
+            AND DV.DICHVU_ID = '$DICHVU_ID$'
+        </statement>
+    </statements>
+</sqlMap>

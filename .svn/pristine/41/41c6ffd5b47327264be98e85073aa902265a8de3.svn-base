@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0-->
+        <statement id="DAO00095_TM_CATEGORY_DOCUMENT_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TM_CATEGORY_DOCUMENT
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CATEGORY_DOCUMENT_ID">
+                        TM_CATEGORY_DOCUMENT.CATEGORY_DOCUMENT_ID = '$CATEGORY_DOCUMENT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_DOCUMENT_CODE">
+                        TM_CATEGORY_DOCUMENT.CATEGORY_DOCUMENT_CODE = '$CATEGORY_DOCUMENT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_DOCUMENT_NAME">
+                        TM_CATEGORY_DOCUMENT.CATEGORY_DOCUMENT_NAME = '$CATEGORY_DOCUMENT_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MOTA">
+                        TM_CATEGORY_DOCUMENT.MOTA = '$MOTA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TINHTRANG">
+                        TM_CATEGORY_DOCUMENT.TINHTRANG = '$TINHTRANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_CATEGORY_DOCUMENT.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_CATEGORY_DOCUMENT.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_CATEGORY_DOCUMENT.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_CATEGORY_DOCUMENT.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_CATEGORY_DOCUMENT.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_TT_DOCUMENTS_Get" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TT_DOCUMENTS
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="DOCUMENT_ID">
+                        TT_DOCUMENTS.DOCUMENT_ID = '$DOCUMENT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_DOCUMENT_CODE">
+                        TT_DOCUMENTS.CATEGORY_DOCUMENT_CODE = '$CATEGORY_DOCUMENT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHNHAN_ID">
+                        TT_DOCUMENTS.BENHNHAN_ID = '$BENHNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MABENHNHAN">
+                        TT_DOCUMENTS.MABENHNHAN = '$MABENHNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_DOCUMENTS.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_TT_DOCUMENTS_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select A.CATEGORY_DOCUMENT_NAME,B.*
+            , bn.TENBENHNHAN
+            , CASE ISNULL(BN.NGAYSINH,' ')
+            WHEN ' ' THEN CONVERT(VARCHAR(10), BN.NAMSINH)
+            ELSE CONVERT(VARCHAR(10), BN.NGAYSINH, 103)
+            END AS NAMSINH
+            , gt.DESCRIPTION as GIOITINH, bn.MAYTE
+            from TT_DOCUMENTS B
+            left join TM_CATEGORY_DOCUMENT A on A.CATEGORY_DOCUMENT_CODE = B.CATEGORY_DOCUMENT_CODE and B.BENHNHAN_ID = '$BENHNHAN_ID$'
+            left join TT_BENHNHAN bn on bn.BENHNHAN_ID = b.BENHNHAN_ID
+            left join TM_GENDER gt on gt.ID = bn.GIOITINH
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="DOCUMENT_ID">
+                        B.DOCUMENT_ID = '$DOCUMENT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_DOCUMENT_CODE">
+                        B.CATEGORY_DOCUMENT_CODE = '$CATEGORY_DOCUMENT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MABENHNHAN">
+                        B.MABENHNHAN = '$MABENHNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        A.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by B.NGAYCAPNHAT
+        </statement>
+        <!--Revision:0-->
+        <update id="DAO00095_TT_DOCUMENT_Update" parameterClass="System.Collections.IDictionary">
+            update TT_DOCUMENTS
+            set
+            TT_DOCUMENTS.FILE_NAME = '$FILE_NAME$'
+            ,TT_DOCUMENTS.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+            ,TT_DOCUMENTS.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="DOCUMENT_ID">
+                        TT_DOCUMENTS.DOCUMENT_ID = '$DOCUMENT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_DOCUMENTS.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </update>
+        <!--Revision:0-->
+        <insert id="DAO00095_TT_DOCUMENT_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            INSERT INTO TT_DOCUMENTS
+            (CATEGORY_DOCUMENT_CODE
+            ,BENHNHAN_ID
+            ,MABENHNHAN
+            ,FILE_NAME_ORI
+            ,FILE_NAME
+            ,TYPE
+            ,FILE_NAME_PATH
+            ,MOTA
+            ,TINHTRANG
+            ,BENHVIEN_ID
+            ,NGAYTAO
+            ,NGUOITAO_ID
+            ,NGAYCAPNHAT
+            ,NGUOICAPNHAT_ID
+            ,FILE_NAME_UPLOAD)
+            VALUES
+            (#CATEGORY_DOCUMENT_CODE#
+            ,#BENHNHAN_ID#
+            ,#MABENHNHAN#
+            ,#FILE_NAME_ORI#
+            ,#FILE_NAME#
+            ,#TYPE#
+            ,#FILE_NAME_PATH#
+            ,#MOTA#
+            ,#TINHTRANG#
+            ,#BENHVIEN_ID#
+            ,#NGAYTAO#
+            ,#NGUOITAO_ID#
+            ,#NGAYCAPNHAT#
+            ,#NGUOICAPNHAT_ID#
+            ,#FILE_NAME_UPLOAD#)
+        </insert>
+        <!--Revision:0-->
+        <statement id="DAO00095_TT_DOCUMENT_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            DELETE FROM TT_DOCUMENTS
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="DOCUMENT_ID">
+                        TT_DOCUMENTS.DOCUMENT_ID = '$DOCUMENT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_DOCUMENTS.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_GopMaBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            DECLARE
+            @BenhnhanIdHuy VARCHAR(10),
+            @BenhnhanIdSuDung VARCHAR(10),
+            @para1 VARCHAR(50),
+            @UpdateData VARCHAR(300)
+            DECLARE Data_Cursor CURSOR FOR
+            SELECT      T.NAME AS 'TABLENAME'
+            FROM        SYS.COLUMNS C
+            JOIN        SYS.TABLES  T   ON C.OBJECT_ID = T.OBJECT_ID
+            WHERE       C.NAME LIKE 'BENHNHAN_ID' and T.NAME != 'TT_BENHNHAN'
+            ORDER BY TABLENAME;
+            set @BenhnhanIdHuy = '$BENHNHAN_IDHUY$';
+            set @BenhnhanIdSuDung = '$BENHNHAN_IDSUDUNG$'
+            OPEN Data_Cursor;
+            FETCH NEXT FROM Data_Cursor into @para1;
+            WHILE @@FETCH_STATUS = 0
+            BEGIN
+            set @UpdateData = 'update ' + @para1 + ' set BENHNHAN_ID = ' + @BenhnhanIdSuDung
+            + ' where BENHNHAN_ID = ' + @BenhnhanIdHuy
+            print(@UpdateData)
+            exec( @UpdateData)
+            FETCH NEXT FROM Data_Cursor into @para1;
+            end
+            CLOSE Data_Cursor;
+            DEALLOCATE Data_Cursor;
+            update TT_BENHNHAN set ACTIVE = '0' where BENHNHAN_ID = @BenhnhanIdHuy
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_GetListTiepNhanGopMaBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select A.TIEPNHAN_ID, B.DVYEUCAU_ID, B.DICHVU_ID, A.SOTIEPNHAN
+            from TT_TIEPNHAN A
+            left join (select * from TT_DVYEUCAU where BENHNHAN_ID = '$BENHNHAN_ID$') B on B.TIEPNHAN_ID = A.TIEPNHAN_ID and (B.TRANGTHAI = 'CHUAKETQUA' or B.TRANGTHAI = 'DANGTHUCHIEN')
+            where A.BENHNHAN_ID = '$BENHNHAN_ID$' and (A.TRANGTHAI = 'DATIEPNHAN' or A.TRANGTHAI = 'NOITRU' or A.TRANGTHAI = 'CAPCUU')
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_GetListDuyetToaThuocBHYTGopMaBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select distinct A.SOTIEPNHAN, A.TRAITUYEN, A.NGAYMIENDONGCHITRA, A.TIEPNHAN_ID, A.DOITUONG_ID,
+            A.LOAITHANHVIEN_ID, A.SUDUNG_BHTN, A.THE_ID, A.THANHVIEN_ID, A.VIP, A.NGUON_BENHNHAN_ID, A.BAOLANH_VIENPHI,
+            B.*, 'NGOAITRU' as LOAITOA, C.KHOXUAT_ID as KHOXUAT_ID
+            from TT_NGOAITRU_KHAMBENH_TOATHUOC C
+            inner join TT_NGOAITRU_KHAMBENH D on C.KHAMBENH_ID = D.KHAMBENH_ID
+            inner join TT_TIEPNHAN A on D.TIEPNHAN_ID = A.TIEPNHAN_ID and (A.TRANGTHAI = 'DATIEPNHAN' or A.TRANGTHAI = 'NOITRU' or A.TRANGTHAI = 'CAPCUU')
+            inner join TT_BENHNHAN B on B.BENHNHAN_ID = A.BENHNHAN_ID
+            where C.DUYET = '1' and C.TRANGTHAI = 'CHUAXUAT' and C.BENHVIEN_ID = '$BENHVIEN_ID$' and (A.SOBHYT is not null or A.SOBHYT != '')
+            union
+            select distinct A.SOTIEPNHAN, A.TRAITUYEN, A.NGAYMIENDONGCHITRA, A.TIEPNHAN_ID, A.DOITUONG_ID,
+            A.LOAITHANHVIEN_ID, A.SUDUNG_BHTN, A.THE_ID, A.THANHVIEN_ID, A.VIP, A.NGUON_BENHNHAN_ID, A.BAOLANH_VIENPHI,
+            B.*, 'NOITRU' as LOAITOA, C.KHOPHAT_ID as KHOXUAT_ID
+            from TT_NOITRU_TOATHUOC C
+            inner join TT_TIEPNHAN A on C.TIEPNHAN_ID = A.TIEPNHAN_ID and (A.TRANGTHAI = 'DATIEPNHAN' or A.TRANGTHAI = 'NOITRU' or A.TRANGTHAI = 'CAPCUU')
+            inner join TT_BENHNHAN B on B.BENHNHAN_ID = A.BENHNHAN_ID
+            where
+            (C.TRANGTHAI = 'DADUYET' or C.TRANGTHAI = 'CHUAXUAT')
+            and C.BENHVIEN_ID = '$BENHVIEN_ID$' and (A.SOBHYT is not null or A.SOBHYT != '')
+            and A.BENHNHAN_ID = '$BENHNHAN_ID$'
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_LayThongTinSearch" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select
+            B.MAYTE, A.SOTIEPNHAN, C.SOBENHAN, B.TENBENHNHAN, F.TENPHONGBAN as KHOADIEUTRI,
+            E.TENDOITUONG, A.SOBHYT, B.SODIENTHOAI, B.DIACHILIENLAC, G.MAGIUONG, B.NGUOILIENHE
+            from TT_TIEPNHAN A
+            inner join TT_BENHNHAN B on B.BENHNHAN_ID = A.BENHNHAN_ID and B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            left join TT_NOITRU_BENHAN C on C.TIEPNHAN_ID = A.TIEPNHAN_ID
+            left join TT_NOITRU_LUUTRUCHITIET D
+            on D.LUUTRU_ID in (select top 1 LUUTRU_ID from TT_NOITRU_LUUTRU where BENHAN_ID = C.BENHAN_ID order by LUUTRU_ID desc)
+            left join TM_DOITUONG E on E.DOITUONG_ID = A.DOITUONG_ID
+            left join TM_PHONGBAN F on F.PHONGBAN_ID = ISNULL(C.KHOACHUYENDEN_ID, C.KHOAVAO_ID)
+            left join TM_GIUONGBENH G on G.GIUONGBENH_ID = D.GIUONGBENH_ID
+            where
+            A.BENHVIEN_ID = '$BENHVIEN_ID$' AND
+            (C.SOBENHAN like N'%$THONGTINTIMKIEM$%' or A.SOTIEPNHAN like N'%$THONGTINTIMKIEM$%'
+            or B.TENBENHNHAN like N'%$THONGTINTIMKIEM$%' or B.SODIENTHOAI like N'%$THONGTINTIMKIEM$%'
+            or B.DIACHILIENLAC like N'%$THONGTINTIMKIEM$%' or A.SOBHYT like '%$THONGTINTIMKIEM$%'
+            or B.HO like N'%$THONGTINTIMKIEM$%' or B.TEN like N'%$THONGTINTIMKIEM$%' or B.MAYTE like N'%$THONGTINTIMKIEM$%')
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_GetDanhSachBenhNhan_Count" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select count(*) as TOTALROWS from TT_BENHNHAN
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="THONGTINTIMKIEM">
+                    (TT_BENHNHAN.MAYTE like '%$THONGTINTIMKIEM$%'
+                    or TT_BENHNHAN.TENBENHNHAN like N'%$THONGTINTIMKIEM$%'
+                    or TT_BENHNHAN.DIACHITHUONGTRU like N'%$THONGTINTIMKIEM$%'
+                    or TT_BENHNHAN.SODIENTHOAI like '%$THONGTINTIMKIEM$%')
+                </isNotEmpty>
+            </isParameterPresent>
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_GetDanhSachBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from
+            (
+            select ROW_NUMBER() OVER(order by MAYTE) as ROWNUMBER, TT_BENHNHAN.*, B.DESCRIPTION as TENGIOITINH
+            from TT_BENHNHAN
+            left join TM_GENDER as B on TT_BENHNHAN.GIOITINH = B.ID
+            where TT_BENHNHAN.BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="THONGTINTIMKIEM">
+                    (TT_BENHNHAN.MAYTE like '%$THONGTINTIMKIEM$%'
+                    or TT_BENHNHAN.TENBENHNHAN like N'%$THONGTINTIMKIEM$%'
+                    or TT_BENHNHAN.DIACHITHUONGTRU like N'%$THONGTINTIMKIEM$%'
+                    or TT_BENHNHAN.SODIENTHOAI like '%$THONGTINTIMKIEM$%')
+                </isNotEmpty>
+            </isParameterPresent>
+            ) lst
+            <isNotEmpty prepend="" property="FROMROW">
+                where
+                lst.ROWNUMBER between $FROMROW$ and $TOROW$
+            </isNotEmpty>
+            order by lst.MAYTE asc
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_GetBenhNhanChuaHoanThanh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select top 1 A.*
+            from TT_TIEPNHAN A
+            left join TT_BENHNHAN B on A.BENHNHAN_ID = B.BENHNHAN_ID
+            where
+            A.BENHNHAN_ID = '$BENHNHAN_ID$' and A.TRANGTHAI != 'HOANTHANH'
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_AddBenhManTinh" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TT_BENHNHAN_BENHMANTINH (
+            BENHNHAN_ID
+            , BENHMANTINH_ID
+            , BACSIPHATHIEN_ID
+            , NGAYPHATHIEN
+            , TINHTRANG
+            , GHICHU
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #BENHNHAN_ID#
+            , #BENHMANTINH_ID#
+            , #BACSIPHATHIEN_ID#
+            , #NGAYPHATHIEN#
+            , #TINHTRANG#
+            , #GHICHU#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0-->
+        <update id="DAO00095_UpdateBenhManTinh" parameterClass="System.Collections.IDictionary">
+            update TT_BENHNHAN_BENHMANTINH set
+            BENHMANTINH_ID = #BENHMANTINH_ID#
+            , BACSIPHATHIEN_ID = #BACSIPHATHIEN_ID#
+            , NGAYPHATHIEN = #NGAYPHATHIEN#
+            , TINHTRANG = #TINHTRANG#
+            , GHICHU = #GHICHU#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            BENHNHAN_BENHMANTINH_ID = '$BENHNHAN_BENHMANTINH_ID$'
+        </update>
+        <!--Revision:0-->
+        <statement id="DAO00095_GetDSBenhManTinh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_BENHNHAN_BENHMANTINH
+            where BENHNHAN_ID  = '$BENHNHAN_ID$'
+            and BENHVIEN_ID  = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_GetDSDocuments" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_DOCUMENTS
+            where BENHNHAN_ID  = '$BENHNHAN_ID$'
+            and BENHVIEN_ID  = '$BENHVIEN_ID$'
+            <isNotEmpty prepend="and" property="TUNGAY">
+                convert(date, NGAYTAO) &gt;= convert(date, '$TUNGAY$')
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="DENNGAY">
+                convert(date, NGAYTAO) &lt;= convert(date, '$DENNGAY$')
+            </isNotEmpty>
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_DeleteListBenhManTinh" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_BENHNHAN_BENHMANTINH
+            where
+            BENHNHAN_BENHMANTINH_ID in
+            <iterate property="LIST_BENHNHAN_BENHMANTINH_ID" open="(" close=")" conjunction=",">
+                #LIST_BENHNHAN_BENHMANTINH_ID[]#
+            </iterate>
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_GetDetails_BNBH" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select top 1 bn.*, bhyt.BENHVIEN_KCB_ID,
+            isnull(convert(varchar, bn.NGAYSINH, 103), convert(varchar, bn.NAMSINH)) as NGAYTHANGNAMSINH,
+            bhyt.SOTHE, bhyt.NGAYHIEULUC, bhyt.NGAYHETHIEULUC, bhyt.TINHTHANH_CAPTHE_ID, bhyt.NGAYCAP,
+            bhyt.TREN3NAM, bhyt.TREN5NAM, bhyt.NGAYMIENDONGCHITRA, tn.SOTIEPNHAN
+            from TT_BENHNHAN as bn
+            left join TT_BENHNHAN_BHYT as bhyt on bn.BENHNHAN_ID = bhyt.BENHNHAN_ID
+            left join TT_TIEPNHAN as tn on bn.BENHNHAN_ID = tn.BENHNHAN_ID
+            where bn.MAYTE = '$MAYTE$' and ACTIVE = '1'
+            order by bhyt.NGAYCAPNHAT desc, bhyt.NGAYTAO desc
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00095_GetTTDiUngThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_BENHNHAN_DIUNG_THUOC
+            where BENHNHAN_ID = '$BENHNHAN_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

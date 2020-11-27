@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,f216cabbed6f38a41b861427a8fa32a0-->
+        <statement id="DAO00300_GetShortcutListByUserID" resultClass="DataObject">
+            SELECT S.SHORTCUT_CODE, S.SHORTCUT_VALUE
+            FROM TM_SHORTCUT AS S
+            WHERE S.BENHVIEN_ID = '$BENHVIEN_ID$' AND S.USER_ID = '$USER_ID$' AND TAMNGUNG = '0'
+        </statement>
+        <!--Revision:0,971079305cdb9a3bc4248b32e03399d1-->
+        <statement id="DAO00300_GetAllByUserID" resultClass="DataObject">
+            SELECT S.*, N'DELETE' AS XOA
+            FROM TM_SHORTCUT AS S
+            WHERE S.BENHVIEN_ID = '$BENHVIEN_ID$' AND S.USER_ID = '$USER_ID$'
+        </statement>
+        <!--Revision:0,ebdaa764caa2e558ae49783bb69ed470-->
+        <statement id="DAO00300_GetAll" resultClass="DataObject">
+            select *
+            from TM_SHORTCUT
+            order by SHORTCUT_ID
+        </statement>
+        <!--Revision:0,488b118e3e260e752338d9643a83f799-->
+        <statement id="DAO00300_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_SHORTCUT
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="SHORTCUT_ID">
+                        TM_SHORTCUT.SHORTCUT_ID = '$SHORTCUT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SHORTCUT_CODE">
+                        TM_SHORTCUT.SHORTCUT_CODE = '$SHORTCUT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SHORTCUT_VALUE">
+                        TM_SHORTCUT.SHORTCUT_VALUE = '$SHORTCUT_VALUE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="USER_ID">
+                        TM_SHORTCUT.USER_ID = '$USER_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAMNGUNG">
+                        TM_SHORTCUT.TAMNGUNG = '$TAMNGUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_SHORTCUT.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_SHORTCUT.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_SHORTCUT.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_SHORTCUT.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_SHORTCUT.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by SHORTCUT_ID
+        </statement>
+        <!--Revision:0,8dcb2c7bc956f3b718ad2806843e0c09-->
+        <statement id="DAO00300_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_SHORTCUT
+            where TM_SHORTCUT.SHORTCUT_ID  = '$value$'
+            order by SHORTCUT_ID
+        </statement>
+        <!--Revision:0,60274b7af15728289c9e7838aa473eda-->
+        <statement id="DAO00300_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_SHORTCUT
+            where TM_SHORTCUT.SHORTCUT_ID  = '$SHORTCUT_ID$'
+            order by SHORTCUT_ID
+        </statement>
+        <!--Revision:1,f2cde18c093a68589ad4b4fe395d1318-->
+        <statement id="DAO00300_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_SHORTCUT (
+            SHORTCUT_CODE
+            , SHORTCUT_VALUE
+            , USER_ID
+            , TAMNGUNG
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #SHORTCUT_CODE#
+            , #SHORTCUT_VALUE#
+            , #USER_ID#
+            , #TAMNGUNG#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,b6a1f3f6f37b404b46a25deca7bfb5d7-->
+        <update id="DAO00300_Update" parameterClass="System.Collections.IDictionary">
+            update TM_SHORTCUT set
+            SHORTCUT_CODE = #SHORTCUT_CODE#
+            , SHORTCUT_VALUE = #SHORTCUT_VALUE#
+            , USER_ID = #USER_ID#
+            , TAMNGUNG = #TAMNGUNG#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            SHORTCUT_ID = '$SHORTCUT_ID$'
+        </update>
+        <!--Revision:0,0b532d527c8f5f0fa1d7f7fda4960b1d-->
+        <statement id="DAO00300_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_SHORTCUT
+            where
+            SHORTCUT_ID = '$SHORTCUT_ID$'
+        </statement>
+        <!--Revision:0,1010ed6ecbaff87e85ceed794a81986d-->
+        <statement id="DAO00300_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_SHORTCUT
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="SHORTCUT_ID">
+                        TM_SHORTCUT.SHORTCUT_ID = '$SHORTCUT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SHORTCUT_CODE">
+                        TM_SHORTCUT.SHORTCUT_CODE = '$SHORTCUT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SHORTCUT_VALUE">
+                        TM_SHORTCUT.SHORTCUT_VALUE = '$SHORTCUT_VALUE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="USER_ID">
+                        TM_SHORTCUT.USER_ID = '$USER_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAMNGUNG">
+                        TM_SHORTCUT.TAMNGUNG = '$TAMNGUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_SHORTCUT.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_SHORTCUT.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_SHORTCUT.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_SHORTCUT.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_SHORTCUT.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+      <statement id="DAO00300_UpdatePhamarcy" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        update TT_NOITRU_TOATHUOC set TINHTIEN = '$TINHTIEN$', BHYTDONGTIEN = '$BHYTDONGTIEN$' where TOATHUOC_ID = '$TOATHUOC_ID$'
+        update TT_VIENPHI set BHYTDONGTIEN = '$BHYTDONGTIEN$', KHONGTHUTIEN = '$KHONGTHUTIEN$' where REF_ID = '$TOATHUOC_ID$' and REF_TABLE = 'TT_NOITRU_TOATHUOC'
+      </statement>
+      <statement id="DAO00300_DeletePhamarcy" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        delete TT_NOITRU_TOATHUOC where TOATHUOC_ID = '$TOATHUOC_ID$'
+        delete TT_VIENPHI where REF_ID = '$TOATHUOC_ID$' and REF_TABLE = 'TT_NOITRU_TOATHUOC'
+      </statement>
+      <statement id="DAO00300_UpdatePhamarcyPhauThuat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        update TT_PHAUTHUAT_VTYT set TINHTIEN = '$TINHTIEN$', BNTUCHITRA = '$BHYTDONGTIEN$' where PHAUTHUAT_VTYT_ID = '$PHAUTHUAT_VTYT_ID$'
+        update TT_VIENPHI set BHYTDONGTIEN = '$BHYTDONGTIEN$', KHONGTHUTIEN = '$KHONGTHUTIEN$' where REF_ID = '$PHAUTHUAT_VTYT_ID$' and REF_TABLE = 'TT_PHAUTHUAT_VTYT'
+      </statement>
+      <statement id="DAO00300_DeletePhamarcyPhauThuat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        delete TT_PHAUTHUAT_VTYT where PHAUTHUAT_VTYT_ID = '$PHAUTHUAT_VTYT_ID$'
+        delete TT_VIENPHI where REF_ID = '$PHAUTHUAT_VTYT_ID$' and REF_TABLE = 'TT_PHAUTHUAT_VTYT'
+      </statement>
+      <statement id="DAO00300_UpdatePhamarcyCls" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        update TT_CLSKETQUA_VTYT set TINHTIEN = '$TINHTIEN$', BNTUCHITRA = '$BHYTDONGTIEN$' where CLSKETQUA_VTYT_ID = '$CLSKETQUA_VTYT_ID$'
+        update TT_VIENPHI set BHYTDONGTIEN = '$BHYTDONGTIEN$', KHONGTHUTIEN = '$KHONGTHUTIEN$'
+        where REF_ID = '$CLSKETQUA_VTYT_ID$' and REF_TABLE = 'TT_CLSKETQUA_VTYT'
+      </statement>
+      <statement id="DAO00300_DeletePhamarcyCls" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        delete TT_CLSKETQUA_VTYT where CLSKETQUA_VTYT_ID = '$CLSKETQUA_VTYT_ID$'
+        delete TT_VIENPHI where REF_ID = '$CLSKETQUA_VTYT_ID$' and REF_TABLE = 'CLSKETQUA_VTYT_ID'
+      </statement>
+      <statement id="DAO00300_GetYLenhThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select d.TENDUOCDAYDU, d.MADUOC, a.*
+        , N'Thời gian khám: ' + convert(varchar(10),c.THOIGIANKHAM,103) + ' ' + convert(varchar(10),c.THOIGIANKHAM,108) as THOIGIANKHAM
+        from TT_NOITRU_TOATHUOC a
+        join TM_DUOC d on d.DUOC_ID = a.DUOC_ID
+        join TT_NOITRU_KHAMBENH c on c.KHAMBENH_ID = a.KHAMBENH_ID
+        join TT_VIENPHI b on b.REF_ID = a.TOATHUOC_ID and b.REF_TABLE = 'TT_NOITRU_TOATHUOC'
+        where b.TIEPNHAN_ID = '$TIEPNHAN_ID$' and b.BENHAN_ID = '$BENHAN_ID$'
+        and c.ISYLENHVTYT = '0'
+      </statement>
+      <statement id="DAO00300_GetYLenhVTYT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select d.TENDUOCDAYDU, d.MADUOC, a.*
+        , N'Thời gian khám: ' + convert(varchar(10),c.THOIGIANKHAM,103) + ' ' + convert(varchar(10),c.THOIGIANKHAM,108) as THOIGIANKHAM
+        from TT_NOITRU_TOATHUOC a
+        join TM_DUOC d on d.DUOC_ID = a.DUOC_ID
+        join TT_NOITRU_KHAMBENH c on c.KHAMBENH_ID = a.KHAMBENH_ID
+        join TT_VIENPHI b on b.REF_ID = a.TOATHUOC_ID and b.REF_TABLE = 'TT_NOITRU_TOATHUOC'
+        where b.TIEPNHAN_ID = '$TIEPNHAN_ID$' and b.BENHAN_ID = '$BENHAN_ID$'
+        and c.ISYLENHVTYT = '1'
+      </statement>
+      <statement id="DAO00300_GetPhauThuatVTYT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select d.TENDUOCDAYDU, d.MADUOC, a.BNTUCHITRA as BHYTDONGTIEN, b.KHONGTHUTIEN, a.*
+        from TT_PHAUTHUAT_VTYT a
+        join TM_DUOC d on d.DUOC_ID = a.DUOC_ID
+        join TT_PHAUTHUAT c on c.PHAUTHUAT_ID = a.PHAUTHUAT_ID
+        join TT_VIENPHI b on b.REF_ID = a.PHAUTHUAT_VTYT_ID and b.REF_TABLE = 'TT_PHAUTHUAT_VTYT'
+        where b.TIEPNHAN_ID = '$TIEPNHAN_ID$' and b.BENHAN_ID = '$BENHAN_ID$'
+      </statement>
+      <statement id="DAO00300_GetClsVTYT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select d.TENDUOCDAYDU, d.MADUOC, a.BHYTDONGTIEN, b.KHONGTHUTIEN, a.*
+        from TT_CLSKETQUA_VTYT a
+        join TM_DUOC d on d.DUOC_ID = a.DUOC_ID
+        join TT_CLSKETQUA c on c.CLSKETQUA_ID = a.CLSKETQUA_ID
+        join TT_VIENPHI b on b.REF_ID = a.CLSKETQUA_VTYT_ID and b.REF_TABLE = 'TT_CLSKETQUA_VTYT'
+        where b.TIEPNHAN_ID = '$TIEPNHAN_ID$' and b.BENHAN_ID = '$BENHAN_ID$'
+      </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,630 @@
+﻿--------------------------------------------------------------------------------
+2018-12-18 09:28:12,304 [1] INFO  - [Application started.]
+2018-12-18 09:28:17,871 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 09:28:17,891 [1] INFO  - LoadMasters() took 9 ms.
+2018-12-18 09:28:17,893 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 09:28:20,103 [1] INFO  - [_SYSTEM_] Session stopped.
+2018-12-18 09:28:20,114 [1] INFO  - Memory used before collection:  5,013,168
+2018-12-18 09:28:20,137 [1] INFO  - Memory used after collection:  3,102,680
+2018-12-18 09:28:20,193 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-12-18 09:29:30,567 [1] INFO  - [Application started.]
+2018-12-18 09:29:33,476 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 09:29:33,500 [1] INFO  - LoadMasters() took 12 ms.
+2018-12-18 09:29:33,501 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 09:31:14,086 [1] INFO  - [admin] Session is starting.
+2018-12-18 09:31:16,441 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:16,737 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:16,785 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:16,828 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:16,862 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:16,897 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:16,934 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:16,968 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:17,001 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:21,662 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:21,898 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:22,128 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 09:31:23,756 [5] INFO  - LoadMasters() took 9,662 ms.
+2018-12-18 09:31:23,771 [1] INFO  - [admin] Session started.
+2018-12-18 09:31:30,692 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 09:31:30,713 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-18 09:33:56,756 [1] ERROR - Input string was not in a correct format.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s, IFormatProvider provider)
+   at FPT.Framework.Data.StringConverter.ToInt32(String s) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\Converters\StringConverter.cs:line 104
+   at FPT.Framework.Data.StringConverter.ConvertTo(String value, Type destinationType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\Converters\StringConverter.cs:line 21
+   at FPT.Framework.Data.ObjectConverter.ConvertTo(Object value, Type destinationType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\Converters\ObjectConverter.cs:line 23
+   at FPT.Framework.Data.ObjectConverter.ConvertTo[T](Object value) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\Converters\ObjectConverter.cs:line 82
+   at FPT.Framework.Data.DictionaryExtension.GetInteger(IDictionary`2 dic, String prop, Int32 iDef) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DataObject.cs:line 56
+   at FPT.eHospital.Forms.Pharmacy.VMPHA05.BindQuyCach() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA05.cs:line 388
+   at FPT.eHospital.Forms.Pharmacy.VMPHA05.txtDuocPham_TextChanged(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA05.cs:line 270
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-12-18 10:03:30,273 [1] INFO  - [Application started.]
+2018-12-18 10:03:32,924 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 10:03:32,998 [1] INFO  - LoadMasters() took 58 ms.
+2018-12-18 10:03:32,999 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 10:03:49,356 [1] INFO  - [admin] Session is starting.
+2018-12-18 10:03:50,191 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:50,348 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:50,442 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:50,527 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:50,610 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:50,694 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:50,782 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:50,864 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:50,953 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:51,518 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:51,664 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:52,447 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 10:03:54,650 [5] INFO  - LoadMasters() took 5,283 ms.
+2018-12-18 10:03:54,664 [1] INFO  - [admin] Session started.
+2018-12-18 10:03:57,817 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 10:03:57,834 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-12-18 11:04:58,498 [1] INFO  - [Application started.]
+2018-12-18 11:05:02,147 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 11:05:02,217 [1] INFO  - LoadMasters() took 60 ms.
+2018-12-18 11:05:02,219 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 11:07:34,772 [1] INFO  - [admin] Session is starting.
+2018-12-18 11:07:35,568 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:35,714 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:35,802 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:35,904 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:36,141 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:36,242 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:36,334 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:36,431 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:36,526 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:37,004 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:37,142 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:37,972 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:07:40,177 [5] INFO  - LoadMasters() took 5,394 ms.
+2018-12-18 11:07:40,189 [1] INFO  - [admin] Session started.
+2018-12-18 11:07:43,885 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 11:07:43,908 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-18 11:09:26,303 [1] ERROR - The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Localization.HotKeyManager.Get(String id) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\HotKeyManager.cs:line 29
+   at FPT.Framework.Presentation.UIInfo.CopyFrom(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 150
+   at FPT.Framework.Presentation.UIInfo..ctor(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 54
+   at FPT.Framework.Presentation.UIInfo.Create(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 195
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 77
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 246
+   at FPT.eHospital.Forms.IPD.VMIPD03.CmdToolbarSoket15(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD03.cs:line 1551
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-18 11:16:52,885 [1] ERROR - The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Localization.HotKeyManager.Get(String id) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\HotKeyManager.cs:line 29
+   at FPT.Framework.Presentation.UIInfo.CopyFrom(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 150
+   at FPT.Framework.Presentation.UIInfo..ctor(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 54
+   at FPT.Framework.Presentation.UIInfo.Create(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 195
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 77
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 246
+   at FPT.eHospital.Forms.IPD.VMIPD03.CmdToolbarSoket15(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD03.cs:line 1551
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-18 11:17:11,152 [1] ERROR - The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Localization.HotKeyManager.Get(String id) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\HotKeyManager.cs:line 29
+   at FPT.Framework.Presentation.UIInfo.CopyFrom(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 150
+   at FPT.Framework.Presentation.UIInfo..ctor(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 54
+   at FPT.Framework.Presentation.UIInfo.Create(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 195
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 77
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 246
+   at FPT.eHospital.Forms.IPD.VMIPD03.CmdToolbarSoket15(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD03.cs:line 1551
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-18 11:17:33,871 [1] ERROR - The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Localization.HotKeyManager.Get(String id) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\HotKeyManager.cs:line 29
+   at FPT.Framework.Presentation.UIInfo.CopyFrom(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 150
+   at FPT.Framework.Presentation.UIInfo..ctor(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 54
+   at FPT.Framework.Presentation.UIInfo.Create(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 195
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 77
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 246
+   at FPT.eHospital.Forms.IPD.VMIPD03.CmdToolbarSoket15(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD03.cs:line 1551
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-18 11:19:26,106 [1] ERROR - The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Localization.HotKeyManager.Get(String id) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\HotKeyManager.cs:line 29
+   at FPT.Framework.Presentation.UIInfo.CopyFrom(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 150
+   at FPT.Framework.Presentation.UIInfo..ctor(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 54
+   at FPT.Framework.Presentation.UIInfo.Create(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 195
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 77
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 246
+   at FPT.eHospital.Forms.IPD.VMIPD03.CmdToolbarSoket15(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD03.cs:line 1551
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-12-18 11:21:37,432 [1] INFO  - [Application started.]
+2018-12-18 11:21:41,057 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 11:21:41,128 [1] INFO  - LoadMasters() took 56 ms.
+2018-12-18 11:21:41,129 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 11:23:48,502 [1] INFO  - [admin] Session is starting.
+2018-12-18 11:23:49,303 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:49,466 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:49,562 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:49,646 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:49,730 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:49,820 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:49,921 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:50,012 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:50,117 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:50,594 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:50,730 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:51,544 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:23:53,974 [5] INFO  - LoadMasters() took 5,456 ms.
+2018-12-18 11:23:54,001 [1] INFO  - [admin] Session started.
+2018-12-18 11:23:57,143 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 11:23:57,162 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-18 11:24:22,643 [1] ERROR - The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Localization.HotKeyManager.Get(String id) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\HotKeyManager.cs:line 29
+   at FPT.Framework.Presentation.UIInfo.CopyFrom(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 150
+   at FPT.Framework.Presentation.UIInfo..ctor(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 54
+   at FPT.Framework.Presentation.UIInfo.Create(DataObject m, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\UIInfo.cs:line 195
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 77
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 246
+   at FPT.eHospital.Forms.IPD.VMIPD03.CmdToolbarSoket15(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD03.cs:line 1551
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-18 11:24:38,131 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-12-18 11:24:38,132 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-12-18 11:24:38,174 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-18 11:24:59,271 [1] INFO  - [admin] Session stopped.
+2018-12-18 11:24:59,274 [1] INFO  - Memory used before collection:  22,239,680
+2018-12-18 11:24:59,326 [1] INFO  - Memory used after collection:  9,196,744
+2018-12-18 11:24:59,390 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-12-18 11:25:44,861 [1] INFO  - [Application started.]
+2018-12-18 11:25:48,001 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 11:25:48,067 [1] INFO  - LoadMasters() took 53 ms.
+2018-12-18 11:25:48,069 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 11:25:58,322 [1] INFO  - [admin] Session is starting.
+2018-12-18 11:25:59,122 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:25:59,284 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:25:59,366 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:25:59,449 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:25:59,534 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:25:59,625 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:25:59,719 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:25:59,800 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:25:59,885 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:26:00,388 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:26:00,536 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:26:01,583 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:26:03,807 [5] INFO  - LoadMasters() took 5,473 ms.
+2018-12-18 11:26:03,818 [1] INFO  - [admin] Session started.
+2018-12-18 11:26:07,488 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 11:26:07,506 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-12-18 11:32:02,803 [1] INFO  - [Application started.]
+2018-12-18 11:32:06,106 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 11:32:06,177 [1] INFO  - LoadMasters() took 56 ms.
+2018-12-18 11:32:06,178 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 11:32:13,224 [1] INFO  - [admin] Session is starting.
+2018-12-18 11:32:14,810 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:14,970 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:15,053 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:15,141 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:15,229 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:15,322 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:15,409 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:15,491 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:15,583 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:16,071 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:16,212 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:19,474 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:32:21,973 [7] INFO  - LoadMasters() took 8,740 ms.
+2018-12-18 11:32:21,987 [1] INFO  - [admin] Session started.
+2018-12-18 11:32:25,503 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 11:32:25,523 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-18 11:36:01,651 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-12-18 11:36:01,653 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-12-18 11:36:01,699 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-18 11:36:01,903 [1] INFO  - [admin] Session stopped.
+2018-12-18 11:36:01,907 [1] INFO  - Memory used before collection:  24,743,492
+2018-12-18 11:36:01,952 [1] INFO  - Memory used after collection:  9,100,520
+2018-12-18 11:36:02,037 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-12-18 11:37:29,025 [1] INFO  - [Application started.]
+2018-12-18 11:37:31,500 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 11:37:31,559 [1] INFO  - LoadMasters() took 51 ms.
+2018-12-18 11:37:31,560 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 11:37:48,837 [1] INFO  - [admin] Session is starting.
+2018-12-18 11:37:49,662 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:49,822 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:49,905 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:49,998 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:50,081 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:50,169 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:50,260 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:50,346 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:50,434 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:50,937 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:51,076 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:51,896 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 11:37:54,168 [7] INFO  - LoadMasters() took 5,320 ms.
+2018-12-18 11:37:54,178 [1] INFO  - [admin] Session started.
+2018-12-18 11:37:57,581 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 11:37:57,600 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-12-18 15:40:00,867 [1] INFO  - [Application started.]
+2018-12-18 15:40:05,671 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 15:40:05,842 [1] INFO  - LoadMasters() took 162 ms.
+2018-12-18 15:40:05,844 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 15:41:42,068 [1] INFO  - [admin] Session is starting.
+2018-12-18 15:41:43,457 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:43,613 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:43,700 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:43,796 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:43,884 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:43,986 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:44,085 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:44,179 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:44,277 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:44,770 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:44,925 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:46,983 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:41:50,343 [5] INFO  - LoadMasters() took 8,261 ms.
+2018-12-18 15:41:50,366 [1] INFO  - [admin] Session started.
+2018-12-18 15:41:53,954 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 15:41:53,973 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-18 15:42:28,090 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.IPD.VMIPD36.CmdSearch_Click(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD36.cs:line 210
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-12-18 15:55:38,959 [1] INFO  - [Application started.]
+2018-12-18 15:55:42,599 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 15:55:42,669 [1] INFO  - LoadMasters() took 56 ms.
+2018-12-18 15:55:42,671 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 15:55:53,113 [1] INFO  - [admin] Session is starting.
+2018-12-18 15:55:56,458 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:55:56,633 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:55:56,725 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:55:56,824 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:55:56,910 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:55:57,008 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:55:57,095 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:55:57,196 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:55:57,280 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:55:57,790 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:55:57,954 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:56:00,150 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 15:56:04,892 [5] INFO  - LoadMasters() took 11,769 ms.
+2018-12-18 15:56:04,906 [1] INFO  - [admin] Session started.
+2018-12-18 15:56:09,170 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 15:56:09,195 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-18 15:57:44,133 [1] ERROR - Error when executing 'DAO00030_Search_PhieuXuatNB'
+2018-12-18 15:57:44,175 [1] ERROR - Lỗi kết nối database: A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)
+System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.) ---> System.ComponentModel.Win32Exception (0x80004005): The semaphore timeout period has expired
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForList[T](RequestScope request, ISqlMapSession session, Object parameterObject, IList`1 resultObject, RowDelegate`1 rowDelegate)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 195
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForList[T](String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 47
+   at FPT.Framework.DataAccess.DaoBase.QueryForList(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 202
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForList(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 123
+   at FPT.eHospital.Services.PHABASE.ExecuteForList(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHABase.cs:line 23
+   at FPT.Framework.DataService.DirectService.ExecuteForList(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 64
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForList(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 129
+   at FPT.eHospital.Forms.Pharmacy.VMPHA74.Search() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA74.cs:line 91
+   at FPT.eHospital.Forms.Pharmacy.VMPHA74.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA74.cs:line 24
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 98
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.Pharmacy.VMPHA22.CmdToolbarTimKiem(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA22.cs:line 425
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+ClientConnectionId:e852668b-49d4-4673-9c5c-ff2fd63fad80
+Error Number:121,State:0,Class:20
+2018-12-18 15:59:03,070 [1] ERROR - Error when executing 'DAO00002_ScreenList'
+--------------------------------------------------------------------------------
+2018-12-18 15:59:46,836 [1] INFO  - [Application started.]
+2018-12-18 15:59:51,005 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 15:59:51,070 [1] INFO  - LoadMasters() took 54 ms.
+2018-12-18 15:59:51,072 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 16:00:37,462 [1] INFO  - [admin] Session is starting.
+2018-12-18 16:00:38,286 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:38,455 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:38,573 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:38,661 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:38,748 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:38,829 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:38,913 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:38,998 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:39,083 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:39,558 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:39,703 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:40,500 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:00:42,722 [5] INFO  - LoadMasters() took 5,249 ms.
+2018-12-18 16:00:42,759 [1] INFO  - [admin] Session started.
+2018-12-18 16:00:46,179 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 16:00:46,198 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-12-18 16:08:11,114 [1] INFO  - [Application started.]
+2018-12-18 16:08:14,160 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 16:08:14,233 [1] INFO  - LoadMasters() took 59 ms.
+2018-12-18 16:08:14,234 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 16:09:02,539 [1] INFO  - [admin] Session is starting.
+2018-12-18 16:09:03,384 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:03,534 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:03,617 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:03,721 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:03,804 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:03,885 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:03,968 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:04,052 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:04,143 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:04,656 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:04,813 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+--------------------------------------------------------------------------------
+2018-12-18 16:09:20,453 [1] INFO  - [Application started.]
+2018-12-18 16:09:23,504 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 16:09:23,573 [1] INFO  - LoadMasters() took 54 ms.
+2018-12-18 16:09:23,576 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 16:09:30,903 [1] INFO  - [admin] Session is starting.
+2018-12-18 16:09:31,739 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:31,920 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:32,016 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:32,120 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:32,210 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:32,307 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:32,391 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:32,476 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:32,562 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:33,048 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:33,184 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:33,949 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:09:36,138 [7] INFO  - LoadMasters() took 5,226 ms.
+2018-12-18 16:09:36,149 [1] INFO  - [admin] Session started.
+2018-12-18 16:09:40,544 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 16:09:40,573 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-12-18 16:16:42,142 [1] INFO  - [Application started.]
+2018-12-18 16:16:45,322 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 16:16:45,390 [1] INFO  - LoadMasters() took 55 ms.
+2018-12-18 16:16:45,392 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 16:16:53,127 [1] INFO  - [admin] Session is starting.
+2018-12-18 16:16:53,964 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:54,134 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:54,215 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:54,297 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:54,391 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:54,494 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:54,579 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:54,661 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:54,751 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:55,242 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:55,378 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:56,218 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:16:58,558 [5] INFO  - LoadMasters() took 5,421 ms.
+2018-12-18 16:16:58,570 [1] INFO  - [admin] Session started.
+2018-12-18 16:17:02,319 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 16:17:02,341 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-18 16:18:10,005 [1] FATAL - System.UnhandledExceptionEventArgs
+--------------------------------------------------------------------------------
+2018-12-18 16:24:28,702 [1] INFO  - [Application started.]
+2018-12-18 16:24:31,287 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 16:24:31,352 [1] INFO  - LoadMasters() took 54 ms.
+2018-12-18 16:24:31,354 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 16:24:38,866 [1] INFO  - [admin] Session is starting.
+2018-12-18 16:24:39,802 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:39,975 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:40,120 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:40,209 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:40,290 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:40,400 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:40,502 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:40,585 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:40,676 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:41,172 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:41,309 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:42,667 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:24:45,572 [7] INFO  - LoadMasters() took 6,698 ms.
+2018-12-18 16:24:45,583 [1] INFO  - [admin] Session started.
+2018-12-18 16:24:49,418 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 16:24:49,443 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-12-18 16:31:00,102 [1] INFO  - [Application started.]
+2018-12-18 16:31:02,641 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 16:31:02,710 [1] INFO  - LoadMasters() took 54 ms.
+2018-12-18 16:31:02,711 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 16:44:00,116 [1] INFO  - [admin] Session is starting.
+2018-12-18 16:44:01,153 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:01,376 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:01,465 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:01,556 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:01,642 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:01,725 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:01,812 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:01,893 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:01,980 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:02,469 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:02,610 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:03,987 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 16:44:07,190 [5] INFO  - LoadMasters() took 6,969 ms.
+2018-12-18 16:44:07,201 [1] INFO  - [admin] Session started.
+2018-12-18 16:44:12,029 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 16:44:12,054 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-18 16:57:55,827 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-12-18 16:57:55,832 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-12-18 16:57:55,895 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+--------------------------------------------------------------------------------
+2018-12-18 16:59:59,108 [1] INFO  - [Application started.]
+2018-12-18 17:00:02,543 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 17:00:02,574 [1] INFO  - LoadMasters() took 15 ms.
+2018-12-18 17:00:02,576 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 17:00:43,798 [1] INFO  - [admin] Session is starting.
+2018-12-18 17:00:44,223 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:44,339 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:44,372 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:44,408 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:44,443 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:44,479 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:44,513 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:44,546 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:44,580 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:45,007 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:45,239 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:45,461 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:00:47,070 [5] INFO  - LoadMasters() took 3,263 ms.
+2018-12-18 17:00:47,081 [1] INFO  - [admin] Session started.
+2018-12-18 17:00:49,809 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 17:00:49,827 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-18 17:02:40,021 [1] ERROR - ComboBox:  No DataBindingName or DataRefName is set.
+2018-12-18 17:02:51,924 [1] ERROR - Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FPT.eHospital.Forms.IPD.VMIPD22.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD22.cs:line 110
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 98
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.IPD.VMIPD19Base.rlpDSPhongBenh_SelectedChanged(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD19Base.cs:line 263
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-18 17:04:13,239 [1] ERROR - Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FPT.eHospital.Forms.IPD.VMIPD22.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD22.cs:line 110
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 98
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.IPD.VMIPD19Base.rlpDSPhongBenh_SelectedChanged(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD19Base.cs:line 263
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-18 17:06:31,634 [1] ERROR - Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FPT.eHospital.Forms.IPD.VMIPD22.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD22.cs:line 110
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 98
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.IPD.VMIPD19Base.rlpDSPhongBenh_SelectedChanged(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD19Base.cs:line 263
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-12-18 17:21:27,970 [1] INFO  - [Application started.]
+2018-12-18 17:21:31,131 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 17:21:31,148 [1] INFO  - LoadMasters() took 7 ms.
+2018-12-18 17:21:31,149 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 17:21:44,491 [1] INFO  - [admin] Session is starting.
+2018-12-18 17:21:44,952 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:45,177 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:45,213 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:45,331 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:45,393 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:45,439 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:45,482 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:45,520 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:45,592 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:46,064 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:46,892 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:47,119 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2018-12-18 17:21:48,733 [5] INFO  - LoadMasters() took 4,234 ms.
+2018-12-18 17:21:48,744 [1] INFO  - [admin] Session started.
+2018-12-18 17:21:51,882 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 17:21:51,918 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-18 17:22:12,027 [1] ERROR - ComboBox:  No DataBindingName or DataRefName is set.
+--------------------------------------------------------------------------------
+2018-12-18 17:43:00,962 [1] INFO  - [Application started.]
+2018-12-18 17:43:03,643 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 17:43:03,667 [1] INFO  - LoadMasters() took 9 ms.
+2018-12-18 17:43:03,669 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 17:43:09,187 [1] INFO  - [_SYSTEM_] Session stopped.
+2018-12-18 17:43:09,196 [1] INFO  - Memory used before collection:  4,010,380
+2018-12-18 17:43:09,210 [1] INFO  - Memory used after collection:  3,087,024
+2018-12-18 17:43:09,241 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-12-18 17:44:23,455 [1] INFO  - [Application started.]
+2018-12-18 17:44:26,365 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-18 17:44:26,444 [1] INFO  - LoadMasters() took 63 ms.
+2018-12-18 17:44:26,445 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-18 17:44:40,546 [1] INFO  - [admin] Session is starting.
+2018-12-18 17:44:41,354 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:41,529 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:41,611 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:41,691 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:41,772 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:41,858 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:41,939 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:42,031 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:42,116 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:42,607 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:42,745 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:43,592 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-18 17:44:45,888 [5] INFO  - LoadMasters() took 5,332 ms.
+2018-12-18 17:44:45,899 [1] INFO  - [admin] Session started.
+2018-12-18 17:44:49,400 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-18 17:44:49,426 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------

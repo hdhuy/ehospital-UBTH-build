@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,24cc77fb78c10f962dcbef016d8befda-->
+        <statement id="DAO00028_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select KHODUOC_ID,MAKHO, TENKHO, LOAIKHO_ID, LOAIDUOC, PHAMVI_ID, CHUYENKHOA_ID, PHONGBAN_ID,
+            CASE WHEN KHOQUANLY_ID IS NULL THEN 0  ELSE KHOQUANLY_ID  END  AS KHOQUANLY_ID,
+            lst.DICTIONARY_CODE  LOAIKHO
+            from TM_KHODUOC kd
+            left join LST_DICTIONARY lst on lst.DICTIONARY_ID = kd.LOAIKHO_ID
+            where kd.TAMNGUNG = '0'
+            and lst.DICTIONARY_TYPE_CODE = 'LoaiKhoDuoc'
+            and kd.BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by kd.TENKHO
+        </statement>
+    </statements>
+</sqlMap>

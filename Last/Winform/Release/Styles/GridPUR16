@@ -1,0 +1,168 @@
+FPT.Framework.Presentation.GridViewStyle, FPT.Framework.Presentation
+{
+  "RowHeaderCellStyle": {
+    "ForeColor": "@gridhdrfg",
+    "BackColor": "@gridhdrbg",
+    "SelectionForeColor": "@white",
+    "SelectionBackColor": "255,51,153,255",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": true,
+    "Padding": "0, 0, 0, 0"
+  },
+  "ColumnHeaderCellStyle": {
+    "ForeColor": "@gridhdrfg",
+    "BackColor": "@gridhdrbg",
+    "SelectionForeColor": "@white",
+    "SelectionBackColor": "255,51,153,255",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": false,
+    "Padding": "0, 0, 0, 0"
+  },
+  "CellStyle": {
+    "ForeColor": "@gridcellfg1",
+    "BackColor": "@gridcellbg1",
+    "SelectionForeColor": "@gridselfg",
+    "SelectionBackColor": "@gridselbg",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": false,
+    "Padding": "0, 0, 0, 0"
+  },
+  "AlternativeCellStyle": {
+    "ForeColor": "@gridcellfg2",
+    "BackColor": "@gridcellbg2",
+    "SelectionForeColor": "@gridselfg",
+    "SelectionBackColor": "@gridselbg",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": false,
+    "Padding": "0, 0, 0, 0"
+  },
+  "GridColor": "@gridline",
+  "BackColor": "@gridbg",
+  "ForeColor": "255,0,0,0",
+  "RowHeight": 24,
+  "ColumnHeadersHeight": 26,
+  "RowHeadersWidth": 25,
+  "ColumnHeadersVisible": true,
+  "RowHeadersVisible": false,
+  "Groups": 
+	[
+	  {
+		"ForeColor": "@gridgroupfg1",
+		"BackColor": "@gridgroupbg1",
+		"SelectionForeColor": "@gridgroupselfg1",
+		"SelectionBackColor": "@gridgroupselbg1",
+		"Font": {
+		  "Name": "Segoe UI",
+		  "Size": 9.75,
+		  "Style": 0,
+		  "Weight": 400
+		},
+		"WrapMode": false,
+		"Padding": "0, 0, 0, 0"
+      },
+	],
+  "RowFormats": 
+    [
+	  {
+	    "Row": {
+		  "Type": 2,
+		  "Value": 0,
+		},
+		"ReferenceCell": {
+		  "Type": 1,
+		  "Value": "NGUOIDUYETCAP1_ID",
+	    },
+		"AppliesTo": {
+		  "Type": 0,
+		  "Value": 6,
+		},
+		"Expression": {
+		  "Type": 0,
+		  "Value": {
+		    "Type": 0,
+		    "Value": null,
+		  },
+		},
+		"Style": {
+		  "ForeColor": "@red",
+		  "BackColor": "@green",
+		},
+	  }
+	],
+  "RowFormats": 
+    [
+	  {
+	    "Row": {
+		  "Type": 2,
+		  "Value": 0,
+		},
+		"ReferenceCell": {
+		  "Type": 1,
+		  "Value": "NGUOIDUYETCAP2_ID",
+	    },
+		"AppliesTo": {
+		  "Type": 0,
+		  "Value": 7,
+		},
+		"Expression": {
+		  "Type": 0,
+		  "Value": {
+		    "Type": 0,
+		    "Value": null,
+		  },
+		},
+		"Style": {
+		  "ForeColor": "@red",
+		  "BackColor": "@green",
+		},
+	  }
+	],
+  "RowFormats": 
+    [
+	  {
+	    "Row": {
+		  "Type": 2,
+		  "Value": 0,
+		},
+		"ReferenceCell": {
+		  "Type": 1,
+		  "Value": "NGUOIDUYETCAP3_ID",
+	    },
+		"AppliesTo": {
+		  "Type": 0,
+		  "Value": 8,
+		},
+		"Expression": {
+		  "Type": 0,
+		  "Value": {
+		    "Type": 0,
+		    "Value": null,
+		  },
+		},
+		"Style": {
+		  "ForeColor": "@red",
+		  "BackColor": "@green",
+		},
+	  }
+	]
+}

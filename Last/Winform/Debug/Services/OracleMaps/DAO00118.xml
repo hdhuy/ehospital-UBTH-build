@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0-->
+        <statement id="DAO00118_Add_BenhNhan" parameterClass="DataObject" resultClass="System.Int64">
+            if not exists (select 1 from TT_BENHNHAN where BENHNHAN_ID = '$BENHNHAN_ID$')
+            THEN
+            insert into TT_BENHNHAN (
+            BENHNHAN_ID
+            , MAYTE
+            , SOVAOVIEN
+            , TENBENHNHAN
+            , HO
+            , TEN
+            , GIOITINH
+            , NGAYSINH
+            , NAMSINH
+            , SONHA
+            , DIACHI
+            , SODIENTHOAI
+            , XAPHUONG_ID
+            , QUANHUYEN_ID
+            , TINHTHANH_ID
+            , DANTOC_ID
+            , QUOCTICH_ID
+            , SOLUUTRUNOITRU
+            , SOLUUTRUNGOAITRU
+            , NGHENGHIEP_ID
+            , CMND
+            , HOCHIEU
+            , VIETKIEU
+            , NGUOINUOCNGOAI
+            , DIACHITHUONGTRU
+            , DIACHILIENLAC
+            , DIACHICOQUAN
+            , EMAIL
+            , NHOMMAU_ID
+            , YEUTORH_ID
+            , TIENSUDIUNG
+            , TIENSUBENH
+            , TIENSUHUTTHUOCLA
+            , TUVONG
+            , NGAYTUVONG
+            , THOIGIANTUVONG
+            , NGUYENNHANTUVONG_ID
+            , NGUOIGHINHANTUVONG_ID
+            , THOIGIANGHINHANTUVONG
+            , NHANVIEN_ID
+            , DONVICONGTAC_ID
+            , DIENTHOAIBAN
+            , TINHTRANGHONNHAN_ID
+            , NGUOILIENHE_ID
+            , MOIQUANHE_ID
+            , NGUOILIENHE
+            , THONGTIN_NLH
+            , GHICHU
+            , HINHANH_DAIDIEN
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYGIOSINH
+            ) values (
+            #BENHNHAN_ID#
+            , #MAYTE#
+            , #SOVAOVIEN#
+            , #TENBENHNHAN#
+            , #HO#
+            , #TEN#
+            , #GIOITINH#
+            , #NGAYSINH#
+            , #NAMSINH#
+            , #SONHA#
+            , #DIACHI#
+            , #SODIENTHOAI#
+            , #XAPHUONG_ID#
+            , #QUANHUYEN_ID#
+            , #TINHTHANH_ID#
+            , #DANTOC_ID#
+            , #QUOCTICH_ID#
+            , #SOLUUTRUNOITRU#
+            , #SOLUUTRUNGOAITRU#
+            , #NGHENGHIEP_ID#
+            , #CMND#
+            , #HOCHIEU#
+            , #VIETKIEU#
+            , #NGUOINUOCNGOAI#
+            , #DIACHITHUONGTRU#
+            , #DIACHILIENLAC#
+            , #DIACHICOQUAN#
+            , #EMAIL#
+            , #NHOMMAU_ID#
+            , #YEUTORH_ID#
+            , #TIENSUDIUNG#
+            , #TIENSUBENH#
+            , #TIENSUHUTTHUOCLA#
+            , #TUVONG#
+            , #NGAYTUVONG#
+            , #THOIGIANTUVONG#
+            , #NGUYENNHANTUVONG_ID#
+            , #NGUOIGHINHANTUVONG_ID#
+            , #THOIGIANGHINHANTUVONG#
+            , #NHANVIEN_ID#
+            , #DONVICONGTAC_ID#
+            , #DIENTHOAIBAN#
+            , #TINHTRANGHONNHAN_ID#
+            , #NGUOILIENHE_ID#
+            , #MOIQUANHE_ID#
+            , #NGUOILIENHE#
+            , #THONGTIN_NLH#
+            , #GHICHU#
+            , #HINHANH_DAIDIEN#
+            , #BENHVIEN_ID#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYGIOSINH#
+            )
+            else
+            update TT_BENHNHAN set
+            MAYTE = #MAYTE#
+            <isPropertyAvailable prepend="," property="SOVAOVIEN">
+                SOVAOVIEN = #SOVAOVIEN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="TENBENHNHAN">
+                TENBENHNHAN = #TENBENHNHAN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="HO">
+                HO = #HO#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="TEN">
+                TEN = #TEN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="GIOITINH">
+                GIOITINH = #GIOITINH#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGAYSINH">
+                NGAYSINH = #NGAYSINH#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NAMSINH">
+                NAMSINH = #NAMSINH#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="SONHA">
+                SONHA = #SONHA#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="DIACHI">
+                DIACHI = #DIACHI#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="SODIENTHOAI">
+                SODIENTHOAI = #SODIENTHOAI#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="XAPHUONG_ID">
+                XAPHUONG_ID = #XAPHUONG_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="QUANHUYEN_ID">
+                QUANHUYEN_ID = #QUANHUYEN_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="TINHTHANH_ID">
+                TINHTHANH_ID = #TINHTHANH_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="DANTOC_ID">
+                DANTOC_ID = #DANTOC_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="QUOCTICH_ID">
+                QUOCTICH_ID = #QUOCTICH_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="SOLUUTRUNOITRU">
+                SOLUUTRUNOITRU = #SOLUUTRUNOITRU#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="SOLUUTRUNGOAITRU">
+                SOLUUTRUNGOAITRU = #SOLUUTRUNGOAITRU#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGHENGHIEP_ID">
+                NGHENGHIEP_ID = #NGHENGHIEP_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="CMND">
+                CMND = #CMND#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="HOCHIEU">
+                HOCHIEU = #HOCHIEU#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="VIETKIEU">
+                VIETKIEU = #VIETKIEU#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGUOINUOCNGOAI">
+                NGUOINUOCNGOAI = #NGUOINUOCNGOAI#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="DIACHITHUONGTRU">
+                DIACHITHUONGTRU = #DIACHITHUONGTRU#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="DIACHILIENLAC">
+                DIACHILIENLAC = #DIACHILIENLAC#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="DIACHICOQUAN">
+                DIACHICOQUAN = #DIACHICOQUAN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="EMAIL">
+                EMAIL = #EMAIL#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NHOMMAU_ID">
+                NHOMMAU_ID = #NHOMMAU_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="YEUTORH_ID">
+                YEUTORH_ID = #YEUTORH_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="TIENSUDIUNG">
+                TIENSUDIUNG = #TIENSUDIUNG#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="TIENSUBENH">
+                TIENSUBENH = #TIENSUBENH#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="TIENSUHUTTHUOCLA">
+                TIENSUHUTTHUOCLA = #TIENSUHUTTHUOCLA#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="TUVONG">
+                TUVONG = #TUVONG#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGAYTUVONG">
+                NGAYTUVONG = #NGAYTUVONG#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="THOIGIANTUVONG">
+                THOIGIANTUVONG = #THOIGIANTUVONG#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGUYENNHANTUVONG_ID">
+                NGUYENNHANTUVONG_ID = #NGUYENNHANTUVONG_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGUOIGHINHANTUVONG_ID">
+                NGUOIGHINHANTUVONG_ID = #NGUOIGHINHANTUVONG_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="THOIGIANGHINHANTUVONG">
+                THOIGIANGHINHANTUVONG = #THOIGIANGHINHANTUVONG#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NHANVIEN_ID">
+                NHANVIEN_ID = #NHANVIEN_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="DONVICONGTAC_ID">
+                DONVICONGTAC_ID = #DONVICONGTAC_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="DIENTHOAIBAN">
+                DIENTHOAIBAN = #DIENTHOAIBAN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="TINHTRANGHONNHAN_ID">
+                TINHTRANGHONNHAN_ID = #TINHTRANGHONNHAN_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGUOILIENHE_ID">
+                NGUOILIENHE_ID = #NGUOILIENHE_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="MOIQUANHE_ID">
+                MOIQUANHE_ID = #MOIQUANHE_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGUOILIENHE">
+                NGUOILIENHE = #NGUOILIENHE#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="THONGTIN_NLH">
+                THONGTIN_NLH = #THONGTIN_NLH#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="GHICHU">
+                GHICHU = #GHICHU#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="BENHVIEN_ID">
+                BENHVIEN_ID = #BENHVIEN_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="ACTIVE">
+                ACTIVE = #ACTIVE#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGAYCAPNHAT">
+                NGAYCAPNHAT = #NGAYCAPNHAT#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGUOICAPNHAT_ID">
+                NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            </isPropertyAvailable>
+            where
+            BENHNHAN_ID = '$BENHNHAN_ID$'
+            END IF
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00118_Add_Update_BHYT" parameterClass="DataObject" resultClass="System.Int64">
+            if not exists (select 1
+            from TT_BENHNHAN_BHYT
+            where SOTHE = '$SOTHE$' and BENHNHAN_ID = '$BENHNHAN_ID$')
+            THEN
+            insert into TT_BENHNHAN_BHYT (
+            BENHNHAN_ID
+            , LOAIBHYT
+            , SOTHE
+            , NGAYCAP
+            , NGAYHIEULUC
+            , NGAYHETHIEULUC
+            , TINHTHANH_CAPTHE_ID
+            , BENHVIEN_ID
+            , BENHVIEN_KCB_ID
+            , TREN3NAM
+            , TREN5NAM
+            , TREN6THANG
+            , NGAYMIENDONGCHITRA
+            , TAMNGUNG
+            , NGAYTAO
+            , NGUOITAO_ID
+            , KHUVUCSONG_ID
+            ) values (
+            #BENHNHAN_ID#
+            , #LOAIBHYT#
+            , #SOTHE#
+            , #NGAYCAP#
+            , #NGAYHIEULUC#
+            , #NGAYHETHIEULUC#
+            , #TINHTHANH_CAPTHE_ID#
+            , #BENHVIEN_ID#
+            , #BENHVIEN_KCB_ID#
+            , #TREN3NAM#
+            , #TREN5NAM#
+            , #TREN6THANG#
+            , #NGAYMIENDONGCHITRA#
+            , #TAMNGUNG#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #KHUVUCSONG_ID#
+            )
+            else
+            update TT_BENHNHAN_BHYT set
+            LOAIBHYT = #LOAIBHYT#
+            , SOTHE = #SOTHE#
+            , NGAYCAP = #NGAYCAP#
+            , NGAYHIEULUC = #NGAYHIEULUC#
+            , NGAYHETHIEULUC = #NGAYHETHIEULUC#
+            , TINHTHANH_CAPTHE_ID = #TINHTHANH_CAPTHE_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            , BENHVIEN_KCB_ID = #BENHVIEN_KCB_ID#
+            , TREN3NAM = #TREN3NAM#
+            , TREN5NAM = #TREN5NAM#
+            , TREN6THANG = #TREN6THANG#
+            , NGAYMIENDONGCHITRA = #NGAYMIENDONGCHITRA#
+            , TAMNGUNG = #TAMNGUNG#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , KHUVUCSONG_ID = #KHUVUCSONG_ID#
+            where
+            SOTHE = '$SOTHE$' and BENHNHAN_ID = '$BENHNHAN_ID$'
+            <!--SELECT SCOPE_IDENTITY()-->
+            <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+            END IF
+        </statement>
+        <!--Revision:0-->
+        <update id="DAO00118_Update" parameterClass="DataObject">
+            update TT_BENHNHAN_BHYT set
+            BENHNHAN_ID = #BENHNHAN_ID#
+            , LOAIBHYT = #LOAIBHYT#
+            , SOTHE = #SOTHE#
+            , NGAYCAP = #NGAYCAP#
+            , NGAYHIEULUC = #NGAYHIEULUC#
+            , NGAYHETHIEULUC = #NGAYHETHIEULUC#
+            , TINHTHANH_CAPTHE_ID = #TINHTHANH_CAPTHE_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            , BENHVIEN_KCB_ID = #BENHVIEN_KCB_ID#
+            , TREN3NAM = #TREN3NAM#
+            , TREN5NAM = #TREN5NAM#
+            , TREN6THANG = #TREN6THANG#
+            , TAMNGUNG = #TAMNGUNG#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , KHUVUCSONG_ID = #KHUVUCSONG_ID#
+            where
+            BENHNHAN_BHYT_ID = '$BENHNHAN_BHYT_ID$'
+        </update>
+    </statements>
+</sqlMap>

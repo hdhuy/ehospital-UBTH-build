@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>        
+        <statement id="DAO00323_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_NGUONMAU
+            where
+            TAMNGUNG = '0'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'                        
+        </statement>
+      <statement id="DAO00323_InsertPhieuTruyenMau" parameterClass="System.String" resultClass="System.Int32">
+        INSERT INTO TT_MAU_PHIEUTRUYENMAU
+        (MACHUNGTU,NGAYCHUNGTU,CHUNGTUXUAT_ID,LANTRUYEN,NHOMDONVIMAU,NHOMMAUNGUOINHAN,PHANUNGCHEO,BATDAUHOI,BATDAUGIO,BATDAUNGAY,NGUNGHOI,NGUNGGIO,NGUNGNGAY,SOLUONGTHUCTE,NHANXET,BENHVIEN_ID,NGAYTAO,NGUOITAO_ID)
+        VALUES
+        (#MACHUNGTU#,#NGAYCHUNGTU#,#CHUNGTUXUAT_ID#,#LANTRUYEN#,#NHOMDONVIMAU#,#NHOMMAUNGUOINHAN#,#PHANUNGCHEO#,#BATDAUHOI#,#BATDAUGIO#,#BATDAUNGAY#,#NGUNGHOI#,#NGUNGGIO#,#NGUNGNGAY#,#SOLUONGTHUCTE#,#NHANXET#,#BENHVIEN_ID#,GETDATE(),#NGUOITAO_ID#)
+        select SCOPE_identity() as value
+      </statement>
+      <statement id="DAO00323_DelInsPhieuTruyenMauChiTiet" parameterClass="System.String" resultClass="System.Int32">
+        BEGIN
+        BEGIN TRY
+        BEGIN TRANSACTION
+
+        declare @jsonChiTiet nvarchar(max) = #JSON_DATA#;
+        BEGIN
+        delete FROM TT_MAU_PHIEUTRUYENMAU_CHITIET WHERE PHIEUTRUYENMAU_ID=#PHIEUTRUYENMAU_ID#
+        insert into TT_MAU_PHIEUTRUYENMAU_CHITIET
+        SELECT #PHIEUTRUYENMAU_ID#,json.THOIGIAN,json.TOCDOTRUYEN,json.MAUDA,json.NHIPTHO,json.MACH,json.HUYETAP,json.THANNHIET,json.DIENBIENKHAC,'$BENHVIEN_ID$',GETDATE(),#NGUOITAO_ID#,NULL,-1
+        FROM OPENJSON(@jsonChiTiet)
+        WITH (
+        THOIGIAN varchar(50),TOCDOTRUYEN int,MAUDA nvarchar(100),NHIPTHO int,MACH int,HUYETAP varchar(50),THANNHIET numeric(5,2),DIENBIENKHAC nvarchar(254)
+        ) json
+        END
+
+        COMMIT TRANSACTION
+        END TRY
+        BEGIN CATCH
+        IF @@TRANCOUNT &gt; 0
+        ROLLBACK TRANSACTION
+        END CATCH
+        END
+      </statement>
+      <statement id="DAO00323_UpdPhieuTruyenMau" parameterClass="System.String" resultClass="System.Int32">
+        UPDATE TT_MAU_PHIEUTRUYENMAU
+        SET MACHUNGTU = #MACHUNGTU#,NGAYCHUNGTU = #NGAYCHUNGTU#,CHUNGTUXUAT_ID = #CHUNGTUXUAT_ID#,LANTRUYEN = #LANTRUYEN#,NHOMDONVIMAU = #NHOMDONVIMAU#,
+        NHOMMAUNGUOINHAN = #NHOMMAUNGUOINHAN#,PHANUNGCHEO = #PHANUNGCHEO#,BATDAUHOI = #BATDAUHOI#,BATDAUGIO = #BATDAUGIO#,BATDAUNGAY = #BATDAUNGAY#,NGUNGHOI = #NGUNGHOI#,
+        NGUNGGIO = #NGUNGGIO#,NGUNGNGAY = #NGUNGNGAY#,SOLUONGTHUCTE = #SOLUONGTHUCTE#, NHANXET = #NHANXET#,BENHVIEN_ID = #BENHVIEN_ID#,NGAYCAPNHAT = GETDATE(),
+        NGUOICAPNHAT_ID = #NGUOITAO_ID#
+        WHERE PHIEUTRUYENMAU_ID=#PHIEUTRUYENMAU_ID#
+      </statement>
+      <statement id="DAO00323_DelPhieuTruyenMau" parameterClass="System.String" resultClass="System.Int32">
+        BEGIN
+        BEGIN TRY
+        BEGIN TRANSACTION
+
+        delete FROM TT_MAU_PHIEUTRUYENMAU_CHITIET WHERE PHIEUTRUYENMAU_ID=#PHIEUTRUYENMAU_ID#
+        delete FROM TT_MAU_PHIEUTRUYENMAU WHERE PHIEUTRUYENMAU_ID=#PHIEUTRUYENMAU_ID#
+
+        COMMIT TRANSACTION
+        END TRY
+        BEGIN CATCH
+        IF @@TRANCOUNT &gt; 0
+        ROLLBACK TRANSACTION
+        END CATCH
+        END
+      </statement>
+      <statement id="DAO00323_GetPhieuTruyenMau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT PP.PHIEUTRUYENMAU_ID,PP.MACHUNGTU,PP.NGAYCHUNGTU,PP.CHUNGTUXUAT_ID,PP.LANTRUYEN,PP.NHOMDONVIMAU,PP.NHOMMAUNGUOINHAN,PP.PHANUNGCHEO,
+        PP.BATDAUHOI,PP.BATDAUGIO,PP.BATDAUNGAY,PP.NGUNGHOI,PP.NGUNGGIO,PP.NGUNGNGAY,PP.SOLUONGTHUCTE,
+        PP.NHANXET,PP.BENHVIEN_ID,PP.NGAYTAO,PP.NGUOITAO_ID,PP.NGAYCAPNHAT,PP.NGUOICAPNHAT_ID,
+        CT.PHIEUTRUYENMAU_CHITIET_ID,CT.THOIGIAN,CT.TOCDOTRUYEN,CT.MAUDA,CT.NHIPTHO,CT.MACH,CT.HUYETAP,CT.THANNHIET,CT.DIENBIENKHAC
+        FROM TT_MAU_PHIEUTRUYENMAU PP
+        INNER JOIN TT_MAU_PHIEUTRUYENMAU_CHITIET CT ON PP.PHIEUTRUYENMAU_ID=CT.PHIEUTRUYENMAU_ID
+        where PP.BENHVIEN_ID = '$BENHVIEN_ID$' 
+        <isParameterPresent>
+        <isNotEmpty prepend="and" property="PHIEUTRUYENMAU_ID">
+          PP.PHIEUTRUYENMAU_ID = #PHIEUTRUYENMAU_ID#
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="CHUNGTUXUAT_ID">
+          PP.CHUNGTUXUAT_ID = #CHUNGTUXUAT_ID#
+        </isNotEmpty>
+      </isParameterPresent>
+      </statement>
+      <statement id="DAO00323_GetPhieuTruyenMau_Search" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT DISTINCT BN.MAYTE,BN.TENBENHNHAN,PX.MACHUNGTU AS MACHUNGTUXUAT,PX.NGAYCHUNGTU AS NGAYXUAT, PP.PHIEUTRUYENMAU_ID, PP.NGAYCHUNGTU, NV.TENNHANVIEN AS NGUOILAPPHIEU,dk.TIEPNHAN_ID, dk.BENHAN_ID
+        FROM TT_MAU_PHIEUTRUYENMAU PP
+        INNER JOIN TT_MAU_CHUNGTU PX ON PP.CHUNGTUXUAT_ID=PX.CHUNGTU_ID
+        INNER JOIN TT_MAU_DANGKYMAU DK ON PX.DANGKYMAU_ID=DK.DANGKYMAU_ID
+        INNER JOIN TT_BENHNHAN BN ON DK.BENHNHAN_ID=BN.BENHNHAN_ID
+        INNER JOIN TT_MAU_PHIEUTRUYENMAU_CHITIET CT ON PP.PHIEUTRUYENMAU_ID=CT.PHIEUTRUYENMAU_ID
+        left join TM_NHANVIEN NV on NV.NHANVIEN_ID = PP.NGUOITAO_ID
+        where PP.BENHVIEN_ID = '$BENHVIEN_ID$' AND PX.KHOXUAT_ID=#KHOMAU_ID#
+        AND CONVERT(date, PP.NGAYCHUNGTU) BETWEEN CONVERT(date, '$TUNGAY$')  and  CONVERT(date, '$DENNGAY$')
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="KEYSEARCH">
+            (BN.TENBENHNHAN LIKE N'%$KEYSEARCH$%' or BN.MAYTE LIKE '%$KEYSEARCH$%' or PX.MACHUNGTU LIKE N'%$KEYSEARCH$%' OR PP.MACHUNGTU LIKE '%$KEYSEARCH$%')
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="PHONGBAN_ID">
+            DK.NOICHIDINH_ID = $PHONGBAN_ID$
+          </isNotEmpty>
+        </isParameterPresent>
+      </statement>
+      
+    </statements>
+</sqlMap>

@@ -1,0 +1,20 @@
+﻿{
+	"Type": "System.Windows.Forms.Panel",	
+	"Size" : "250, 40",	
+   "Controls": [
+        {
+          "Type": "WinformUI.PictureControl, WinformUI",
+          "ImageUrl": "@NurseImage",
+          "Bounds": "0,2,40,38",		  
+        },
+        {
+          "Type": "System.Windows.Forms.Label",
+          "ForeColor": "7,55,99",
+          "TextAlign": "MiddleLeft",
+          "Text": "@NurseName",
+          "Font": "Segoe UI, 14pt, style=Regular",
+          "Bounds": "40,5,245,38",
+		  "Anchor" : 15,
+        }
+      ]
+}

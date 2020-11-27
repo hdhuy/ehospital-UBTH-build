@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,17160527a1958a745fbd0a492a390d21-->
+        <statement id="DAO00040_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TT_TOATHUOCMAU (
+            BACSI_ID
+            , MATOATHUOC
+            , TENTOATHUOC
+            , DUOC_ID
+            , NGUONDUOC_ID
+            , SOLUONG_BUOISANG
+            , SOLUONG_BUOITRUA
+            , SOLUONG_BUOICHIEU
+            , SOLUONG_BUOITOI
+            , SONGAY
+            , SOLUONG
+            , DUONGDUNG_ID
+            , GHICHU
+            , DIENGIAI
+            , IDX
+            , LOAITOATHUOC
+            , BENHVIEN_ID
+            ) values (
+            #BACSI_ID#
+            , #MATOATHUOC#
+            , #TENTOATHUOC#
+            , #DUOC_ID#
+            , #NGUONDUOC_ID#
+            , #SOLUONG_BUOISANG#
+            , #SOLUONG_BUOITRUA#
+            , #SOLUONG_BUOICHIEU#
+            , #SOLUONG_BUOITOI#
+            , #SONGAY#
+            , #SOLUONG#
+            , #DUONGDUNG_ID#
+            , #GHICHU#
+            , #DIENGIAI#
+            , #IDX#
+            , #LOAITOATHUOC#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+            <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+        </statement>
+        <!--Revision:0,bb9de3417fc8fb4ada96253504eb648d-->
+        <statement id="DAO00040_CheckExistByMaToaThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select MATOATHUOC
+            from TT_TOATHUOCMAU
+            where MATOATHUOC  = '$MATOATHUOC$'
+        </statement>
+        <!--Revision:0,05f528be1f5277ddf1b8b237ac722510-->
+        <statement id="DAO00040_LayListToaMau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select A.*, dc.TENDUOCDAYDU, dc.BHYT DUOC_BHYT, ld.LOAIVATTU_ID, ld.MALOAIDUOC, dd.DICTIONARY_NAME DUONGDUNG, dc.TAMNGUNG
+          from TT_TOATHUOCMAU A
+          left join TM_DUOC dc on A.DUOC_ID = dc.DUOC_ID
+          left join TM_LOAIDUOC ld on dc.LOAIDUOC_ID = ld.LOAIDUOC_ID
+          left join (select * from LST_DICTIONARY where DICTIONARY_TYPE_CODE like 'DuongDung') dd on dd.DICTIONARY_ID = dc.DUONGDUNG_ID
+          where (1=1)
+          <isNotEmpty prepend="and" property="BACSI_ID">
+            A.BACSI_ID  = $BACSI_ID$
+          </isNotEmpty>
+            <dynamic prepend=" and A.LOAITOATHUOC in ">
+                <iterate open="(" close=")" conjunction=",  " property="LSTLOAITOATHUOC">
+                    #LSTLOAITOATHUOC[]#
+                </iterate>
+            </dynamic>
+        </statement>
+        <!--Revision:0,68fa9c4602ecb58e57444bf0428bb076-->
+        <statement id="DAO00040_DeleteToaMauNotInList" parameterClass="HashTable">
+            delete from TT_TOATHUOCMAU
+            where BACSI_ID = $BACSI_ID$
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+            and MATOATHUOC = '$MATOATHUOC$'
+            <dynamic prepend=" and DUOC_ID not in ">
+                <iterate open="(" close=")" conjunction=",  " property="LISTREMOVED_ID">
+                    #LISTREMOVED_ID[]#
+                </iterate>
+            </dynamic>
+        </statement>
+        <!--Revision:0,4fadeec0e87c8c0dbf1bd77d0bfd1f20-->
+        <statement id="DAO00040_DeleteToaMauByMaToa" parameterClass="HashTable">
+            delete from TT_TOATHUOCMAU
+            where BACSI_ID = #BACSI_ID#
+            and BENHVIEN_ID = #BENHVIEN_ID#
+            and MATOATHUOC = #MATOATHUOC#
+            and LOAITOATHUOC = #LOAITOATHUOC#
+        </statement>
+        <!--Revision:0,55cc0a8df1c54dc6681518e91f71c3f7-->
+        <statement id="DAO00040_GetThuocInfoInToaMau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select TOATHUOCMAU_ID
+            from TT_TOATHUOCMAU
+            where BACSI_ID = #BACSI_ID#
+            and BENHVIEN_ID = #BENHVIEN_ID#
+            and MATOATHUOC = #MATOATHUOC#
+            and DUOC_ID = #DUOC_ID#
+            and NGUONDUOC_ID = #NGUONDUOC_ID#
+        </statement>
+        <!--Revision:0,2204b5075ce04c4f15982d9ca0380b31-->
+        <statement id="DAO00040_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select MATOATHUOC, TENTOATHUOC, LOAITOATHUOC, DIENGIAI, BACSI_ID from TT_TOATHUOCMAU
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            group by MATOATHUOC, TENTOATHUOC, LOAITOATHUOC, DIENGIAI, BACSI_ID
+        </statement>
+        <!--Revision:0,0123716ef180836be7b69dec388a8f35-->
+        <update id="DAO00040_Update" parameterClass="System.Collections.IDictionary">
+            update TT_TOATHUOCMAU set
+            BACSI_ID = #BACSI_ID#
+            , MATOATHUOC = #MATOATHUOC#
+            , TENTOATHUOC = #TENTOATHUOC#
+            , DUOC_ID = #DUOC_ID#
+            , NGUONDUOC_ID = #NGUONDUOC_ID#
+            , SOLUONG_BUOISANG = #SOLUONG_BUOISANG#
+            , SOLUONG_BUOITRUA = #SOLUONG_BUOITRUA#
+            , SOLUONG_BUOICHIEU = #SOLUONG_BUOICHIEU#
+            , SOLUONG_BUOITOI = #SOLUONG_BUOITOI#
+            , SONGAY = #SONGAY#
+            , SOLUONG = #SOLUONG#
+            , DUONGDUNG_ID = #DUONGDUNG_ID#
+            , GHICHU = #GHICHU#
+            , DIENGIAI = #DIENGIAI#
+            , IDX = #IDX#
+            , LOAITOATHUOC = #LOAITOATHUOC#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            TOATHUOCMAU_ID = $TOATHUOCMAU_ID$
+        </update>
+      <statement id="DAO00040_LayListToaMauVTYT_TheoLoaitoathuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select A.*, dc.TENDUOCDAYDU, dc.BHYT DUOC_BHYT, ld.LOAIVATTU_ID, ld.MALOAIDUOC, dd.DICTIONARY_NAME DUONGDUNG, dc.TAMNGUNG
+        from TT_TOATHUOCMAU A
+        left join TM_DUOC dc on A.DUOC_ID = dc.DUOC_ID
+        left join TM_LOAIDUOC ld on dc.LOAIDUOC_ID = ld.LOAIDUOC_ID
+        left join (select * from LST_DICTIONARY where DICTIONARY_TYPE_CODE like 'DuongDung') dd on dd.DICTIONARY_ID = dc.DUONGDUNG_ID
+        where (1=1)
+        <isNotEmpty prepend="and" property="BACSI_ID">
+          A.BACSI_ID  = $BACSI_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="LOAITOATHUOC">
+          A.LOAITOATHUOC = '$LOAITOATHUOC$'
+        </isNotEmpty>       
+      </statement>
+    </statements>
+</sqlMap>

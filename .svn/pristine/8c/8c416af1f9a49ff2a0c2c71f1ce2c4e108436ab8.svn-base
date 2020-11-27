@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,9807dd0221e5d66dc34c8fb4d6113b5a-->
+        <statement id="DAO00019_ThongTinBenhNhanDvYeuCau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select distinct A.SOTIEPNHAN, A.TIEPNHAN_ID, A.DOITUONG_ID, A.TRANGTHAI,
+            A.LOAITHANHVIEN_ID, A.SUDUNG_BHTN, A.THE_ID, A.THANHVIEN_ID, A.VIP, A.NGUON_BENHNHAN_ID, A.BAOLANH_VIENPHI, A.NGAYMIENDONGCHITRA,
+            B.*,  C.DICHVU_ID, C.DVYEUCAU_ID, C.NOITHUCHIEN_ID
+            from TT_TIEPNHAN A
+            inner join TT_DVYEUCAU C on C.TIEPNHAN_ID = A.TIEPNHAN_ID
+            inner join TT_BENHNHAN B on B.BENHNHAN_ID = A.BENHNHAN_ID and B.ACTIVE = '1'
+            where
+            <isPropertyAvailable property="DVYEUCAU_ID">
+                C.DVYEUCAU_ID = '$DVYEUCAU_ID$'
+            </isPropertyAvailable>
+            and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,a95e360fe07fe35bff636b18f95baca9-->
+        <statement id="DAO00019_ThongTinBenhNhanTiepNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select distinct A.SOTIEPNHAN, A.TIEPNHAN_ID, A.DOITUONG_ID, A.TRANGTHAI,
+            A.LOAITHANHVIEN_ID, A.SUDUNG_BHTN, A.THE_ID, A.THANHVIEN_ID, A.VIP, A.NGUON_BENHNHAN_ID, A.BAOLANH_VIENPHI,
+            B.*
+            from TT_TIEPNHAN A
+            inner join TT_BENHNHAN B on B.BENHNHAN_ID = A.BENHNHAN_ID and B.ACTIVE = '1'
+            where
+            <isPropertyAvailable property="TIEPNHAN_ID">
+                A.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+            </isPropertyAvailable>
+            <isPropertyAvailable property="SOTIEPNHAN">
+                A.SOTIEPNHAN = '$SOTIEPNHAN$'
+            </isPropertyAvailable>
+            and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+            <!--where A.BENHNHAN_ID not in (select BENHNHAN_ID from TT_NOITRU_BENHAN where (TRANGTHAI='DATHANHTOAN' OR TRANGTHAI='DANGDIEUTRI'))-->
+        </statement>
+        <!--Revision:0,e75b53e23699e732701fffa5eddfc305-->
+        <statement id="DAO00019_ThongTinBenhNhanBenhAn" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select distinct C.SOBENHAN, C.BENHAN_ID, A.SOTIEPNHAN, A.TIEPNHAN_ID, A.DOITUONG_ID, A.TRANGTHAI,
+            A.LOAITHANHVIEN_ID, A.SUDUNG_BHTN, A.THE_ID, A.THANHVIEN_ID, A.VIP, A.NGUON_BENHNHAN_ID, A.BAOLANH_VIENPHI,
+            B.*
+            from TT_NOITRU_BENHAN C
+            inner join TT_TIEPNHAN A on C.TIEPNHAN_ID = A.TIEPNHAN_ID
+            inner join TT_BENHNHAN B on B.BENHNHAN_ID = A.BENHNHAN_ID and B.ACTIVE = '1'
+            where
+            <isPropertyAvailable property="TIEPNHAN_ID">
+                A.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+            </isPropertyAvailable>
+            <isPropertyAvailable property="SOBENHAN">
+                C.SOBENHAN = '$SOBENHAN$'
+            </isPropertyAvailable>
+            <isPropertyAvailable property="BENHAN_ID">
+                C.BENHAN_ID = '$BENHAN_ID$'
+            </isPropertyAvailable>
+            and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+            <!--where A.BENHNHAN_ID not in (select BENHNHAN_ID from TT_NOITRU_BENHAN where (TRANGTHAI='DATHANHTOAN' OR TRANGTHAI='DANGDIEUTRI'))-->
+        </statement>
+        <!--Revision:0,e1bbe3b655102b98ae6173031df5c0a0-->
+        <statement id="DAO00019_ThongTinBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select distinct *
+            from TT_BENHNHAN
+            where
+            <isPropertyAvailable property="BENHNHAN_ID">
+                BENHNHAN_ID = '$BENHNHAN_ID$'
+            </isPropertyAvailable>
+            <isPropertyAvailable property="MAYTE">
+                MAYTE = '$MAYTE$'
+            </isPropertyAvailable>
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+            <!--where A.BENHNHAN_ID not in (select BENHNHAN_ID from TT_NOITRU_BENHAN where (TRANGTHAI='DATHANHTOAN' OR TRANGTHAI='DANGDIEUTRI'))-->
+        </statement>
+        <!--Revision:0,a5514937d3b7d4ebb45d7034107f984b-->
+        <statement id="DAO00019_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select * from(
+          select ROW_NUMBER() OVER(order by SOHANGDOI, NGAYGIOYEUCAU) as ROWNUMBER, *
+          from
+          (SELECT distinct
+          COUNT(*) OVER() as TOTALROWS,
+          N'Mã người bệnh: ' + bn.MAYTE + ' - ' + N'Tên người bệnh: ' + bn.TENBENHNHAN + ' - ' + N'Số bệnh án: ' + ISNULL(BA.SOBENHAN,'') + ' - ' + N'Sinh ngày: ' + Convert(varchar(10),bn.NGAYSINH,103) + ' - ' + N'Giới tính: ' + GD.DESCRIPTION as GROUPNAME,
+          bn.MAYTE, bn.TENBENHNHAN, bn.NAMSINH, bn.NGAYSINH as TUOI, ISNULL(CONVERT(VARCHAR(10), bn.NGAYSINH, 103),CAST(bn.NAMSINH AS varchar)) as NGAYSINH, bn.DIACHILIENLAC as DIACHI, bn.GIOITINH, GD.DESCRIPTION as TENGIOITINH,
+          tn.DOITUONG_ID, tn.THOIGIANTIEPNHAN, tn.BENHNHAN_ID, tn.TIEPNHAN_ID, tn.TRAITUYEN, tn.SOTIEPNHAN,
+          dv.DICHVU_ID, dv.NOITHUCHIEN_ID, isnull(dv.NGAYTAO, dv.NGAYCAPNHAT) as THOIGIANDKDICHVU,
+          dv.KHAN, dv.NOIYEUCAU_ID, dv.NGAYGIOYEUCAU, dv.BACSICHIDINH_ID, dv.DONVIGIOITHIEU_ID, dv.NGUOIGIOITHIEU_ID,
+          tn.NOIGIOITHIEU_ID, kbnt.HUONGGIAIQUYET_ID,
+          dv.DVYEUCAU_ID, dv.MARIS, dv.TRANGTHAI as TRANGTHAICODE, B.TENNHOMDICHVU, dv.SOPHIEUYEUCAU, dv.KHAMBENH_NGOAITRU_ID, dv.NGUOICAPNHAT_ID, dv.NGAYCAPNHAT,
+          CASE WHEN Left(B.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(B.MANHOMDICHVU,2) END AS MANHOMDICHVU, B.MANHOMDICHVU as MANHOMDICHVUCHITIET, tn.TRANGTHAI as TRANGTHAI_TIEPNHAN,
+          '$DAKHAM$' as DAKHAM, isnull($SOHANGDOI$,'999999999') as SOHANGDOI,
+          vp.DATHANHTOAN, vp.DONGIA_DOANHTHU,
+          BA.SOBENHAN, dv.CHANDOAN
+          <isNotEmpty prepend="" property="CHITIET_ORM">
+                <isEqual prepend="," property="CHITIET_ORM" compareValue="True">
+                    orm.PHAUTHUAT_ID, orm.PHAUTHUAT_VTYT_ID, orm.SOPHIEUPHAUTHUAT , orm.THOIGIANBATDAU, orm.THOIGIANKETTHUC, orm.LOAI,
+                    orm.LOAIPHAUTHUAT, orm.NGAYTHUCHIEN, orm.PHONGBANTHUCHIEN_ID, orm.NGUOITAO_ID as NGUOITHUCHIEN_ID, orm.NGUOIKHOA_ID,
+                    orm.NGUOIGHINHAN_ID, orm.THOIGIANGHINHAN, orm.NGAYKHOADULIEU
+                    
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_LIS">
+                <isEqual prepend="," property="CHITIET_LIS" compareValue="True">
+                  lisRis.CLSKETQUA_ID, lisRis.NGAYGIOTHUCHIEN , lisRis.THOIGIANKHOADULIEU, lisRis.NGUOIKHOA_ID, lisRis.VTYT, mau.SID, lisRis.GUINGOAI, lisRis.NOIGUIDEN_ID, mau.SOLUONGONGMAU, mau.THOIGIANNHANMAU
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_RIS">
+                <isEqual prepend="," property="CHITIET_RIS" compareValue="True">
+                    lisRis.CLSKETQUA_ID, lisRis.NGAYGIOTHUCHIEN , lisRis.THOIGIANKHOADULIEU, lisRis.NGUOIKHOA_ID, lisRis.VTYT, lisRis.GUINGOAI, lisRis.NOIGUIDEN_ID
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_LAYMAU">
+                <isEqual prepend="," property="CHITIET_LAYMAU" compareValue="True">
+                  mau.SID, mau.THOIGIANLAYMAU, mau.NOITHUCHIEN_ID as NOILAYMAU_ID, mau.KYTHUATVIEN_ID, mau.SOLUONGONGMAU, mau.THOIGIANNHANMAU
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_KHAMGAYME">
+                <isEqual prepend="," property="CHITIET_KHAMGAYME" compareValue="True">
+                  GM.NGAYTHUCHIEN THOIGIANKHAMGAYME, GM.NOITHUCHIEN_ID AS NOIKHAMGAYME_ID,GM.NGUOITAO_ID NGUOIKHAMGAYME_ID, null THOIGIANKHOADULIEU
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_KHAMTIENME">
+                <isEqual prepend="," property="CHITIET_KHAMTIENME" compareValue="True">
+                  TM.NGAYTHUCHIEN THOIGIANKHAMTIENME, TM.NOITHUCHIEN_ID AS NOIKHAMTIENME_ID,TM.NGUOITAO_ID NGUOIKHAMTIENME_ID, null THOIGIANKHOADULIEU
+                </isEqual>
+            </isNotEmpty>
+          FROM [TT_TIEPNHAN] tn
+          join TT_BENHNHAN bn on tn.BENHNHAN_ID = bn.BENHNHAN_ID
+          left join TT_DVYEUCAU dv on dv.TIEPNHAN_ID = tn.TIEPNHAN_ID
+          left join TM_DICHVU A on A.DICHVU_ID = dv.DICHVU_ID
+          left join TM_NHOMDICHVU B on B.NHOMDICHVU_ID = A.NHOMDICHVU_ID
+          left join TT_VIENPHI VP on VP.TIEPNHAN_ID = tn.TIEPNHAN_ID and VP.DICHVU_ID = dv.DICHVU_ID and VP.REF_ID = dv.DVYEUCAU_ID
+          left join TT_NOITRU_BENHAN BA on BA.TIEPNHAN_ID = tn.TIEPNHAN_ID AND dv.BENHAN_ID = BA.BENHAN_ID
+          left join TM_GENDER GD on GD.ID = bn.GIOITINH
+          left join TT_NGOAITRU_KHAMBENH kbnt on kbnt.KHAMBENH_ID = dv.KHAMBENH_NGOAITRU_ID
+          <!--left join TT_QUANLYBENHPHAM_CHITIET bpct on bpct.DVYEUCAU_ID = dv.DVYEUCAU_ID-->
+          <isNotEmpty prepend="" property="CHITIET_ORM">
+                <isEqual prepend="" property="CHITIET_ORM" compareValue="True">
+                    left join
+                    (select ptyc.DVYEUCAU_ID, <!--ptvtyt.PHAUTHUAT_VTYT_ID, ptvtyt.NGUOITAO_ID as NGUOIGHINHAN_ID, ptvtyt.NGAYTAO as THOIGIANGHINHAN,-->
+                    ptek.PHAUTHUAT_EKIP_ID,
+                    pt.PHAUTHUAT_ID, pt.SOPHIEUPHAUTHUAT, pt.THOIGIANBATDAU, pt.THOIGIANKETTHUC, pt.LOAI,
+                    pt.LOAIPHAUTHUAT, pt.NGAYTHUCHIEN, pt.PHONGBANTHUCHIEN_ID, pt.NGUOITAO_ID, pt.NGUOIKHOA_ID, pt.NGAYKHOADULIEU,
+                    (select top 1 PHAUTHUAT_VTYT_ID from TT_PHAUTHUAT_VTYT where PHAUTHUAT_ID = pt.PHAUTHUAT_ID) PHAUTHUAT_VTYT_ID,
+                    (select top 1 NGAYTAO from TT_PHAUTHUAT_VTYT where PHAUTHUAT_ID = pt.PHAUTHUAT_ID) THOIGIANGHINHAN,
+                    (select top 1 NGUOITAO_ID from TT_PHAUTHUAT_VTYT where PHAUTHUAT_ID = pt.PHAUTHUAT_ID) NGUOIGHINHAN_ID
+                    from TT_PHAUTHUAT pt
+                    left join TT_PHAUTHUAT_YEUCAU ptyc on pt.PHAUTHUAT_ID = ptyc.PHAUTHUAT_ID
+                    <!--left join TT_PHAUTHUAT_VTYT ptvtyt on ptvtyt.PHAUTHUAT_ID = pt.PHAUTHUAT_ID-->
+                    left join TT_PHAUTHUAT_EKIP ptek
+                    on ptek.PHAUTHUAT_ID = pt.PHAUTHUAT_ID) orm
+                    on orm.DVYEUCAU_ID = dv.DVYEUCAU_ID
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_KHAMTIENME">
+                <isEqual prepend="" property="CHITIET_KHAMTIENME" compareValue="True">
+                    LEFT JOIN ( SELECT KHAMTIENME_ID,DVYEUCAU_ID, NGAYTHUCHIEN , NOITHUCHIEN_ID,NGUOITAO_ID
+                    FROM  TT_NOITRU_KHAMTIENME M WHERE M.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    ) TM ON DV.DVYEUCAU_ID=TM.DVYEUCAU_ID
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_KHAMGAYME">
+                <isEqual prepend="" property="CHITIET_KHAMGAYME" compareValue="True">
+                    LEFT JOIN ( SELECT KHAMGAYME_ID,DVYEUCAU_ID, NGAYTHUCHIEN , NOITHUCHIEN_ID,NGUOITAO_ID
+                    FROM  TT_KHAMGAYME M WHERE M.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    ) GM ON DV.DVYEUCAU_ID=GM.DVYEUCAU_ID
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_LIS">
+                <isEqual prepend="" property="CHITIET_LIS" compareValue="True">
+                  left join(select distinct A.DVYEUCAU_ID, B.CLSKETQUA_ID, B.NGAYGIOTHUCHIEN , B.THOIGIANKHOADULIEU, B.NGUOIKHOA_ID, B.GUINGOAI, B.NOIGUIDEN_ID,
+                  C.CLSKETQUA_ID as VTYT
+                  from TT_CLSKETQUACHITIET A
+                  left join TT_CLSKETQUA B on B.CLSKETQUA_ID = A.CLSKETQUA_ID
+                  left join TT_CLSKETQUA_VTYT C on C.CLSKETQUA_ID = a.CLSKETQUA_ID
+                  where A.BENHVIEN_ID = '$BENHVIEN_ID$') lisRis on lisRis.DVYEUCAU_ID = dv.DVYEUCAU_ID
+                  left join(select distinct A.DVYEUCAU_ID, A.SID, B.THOIGIANLAYMAU, B.NOITHUCHIEN_ID, B.KYTHUATVIEN_ID, B.SOLUONGONGMAU, B.THOIGIANNHANMAU
+                  from TT_QUANLYBENHPHAM_CHITIET A
+                  left join TT_QUANLYBENHPHAM B on B.QUANLYBENHPHAM_ID = A.QUANLYBENHPHAM_ID and B.BENHVIEN_ID = '$BENHVIEN_ID$')
+                  mau on mau.DVYEUCAU_ID = dv.DVYEUCAU_ID
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_RIS">
+                <isEqual prepend="" property="CHITIET_RIS" compareValue="True">
+                    left join(select distinct B.DVYEUCAU_ID, B.CLSKETQUA_ID, B.NGAYGIOTHUCHIEN , B.THOIGIANKHOADULIEU, B.NGUOIKHOA_ID, B.GUINGOAI, B.NOIGUIDEN_ID,
+                    C.CLSKETQUA_ID as VTYT
+                    from TT_CLSKETQUA B
+                    left join TT_CLSKETQUA_VTYT C on C.CLSKETQUA_ID = b.CLSKETQUA_ID
+                    where B.BENHVIEN_ID = '$BENHVIEN_ID$') lisRis on lisRis.DVYEUCAU_ID = dv.DVYEUCAU_ID
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_LAYMAU">
+                <isEqual prepend="" property="CHITIET_LAYMAU" compareValue="True">
+                  left join(select distinct A.DVYEUCAU_ID, A.SID, B.THOIGIANLAYMAU, B.NOITHUCHIEN_ID, B.KYTHUATVIEN_ID,B.SOLUONGONGMAU, B.THOIGIANNHANMAU
+                  from TT_QUANLYBENHPHAM_CHITIET A
+                  left join TT_QUANLYBENHPHAM B on B.QUANLYBENHPHAM_ID = A.QUANLYBENHPHAM_ID and B.BENHVIEN_ID = '$BENHVIEN_ID$')
+                  mau on mau.DVYEUCAU_ID = dv.DVYEUCAU_ID
+                </isEqual>
+            </isNotEmpty>
+            where
+            dv.DICHVU_ID IS NOT NULL
+            <!--and tn.TRANGTHAI IN ('$TRANGTHAI$')-->
+            and tn.BENHVIEN_ID = '$BENHVIEN_ID$'
+            and HUYYEUCAU = 0
+            and dv.NGAYHENCLS is NULL
+            <!--<isNotEmpty prepend="and" property="TUNGAY">
+        tn.NGAYTIEPNHAN &#62;&#61; '$TUNGAY$'
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="DENNGAY">
+        tn.NGAYTIEPNHAN &#60;&#61; '$DENNGAY$'
+      </isNotEmpty>-->
+            <isNotEmpty prepend="and" property="TUNGAY">
+                cast(dv.NGAYYEUCAU as date) &gt;= cast('$TUNGAY$' as date)
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="DENNGAY">
+              cast(dv.NGAYYEUCAU as date) &lt;= cast('$DENNGAY$' as date)
+            </isNotEmpty>
+          <isNotEmpty prepend="and" property="TUNGAYTIEPNHAN">
+            cast(tn.NGAYTIEPNHAN as date) &gt;= cast('$TUNGAYTIEPNHAN$' as date)
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DENNGAYTIEPNHAN">
+            cast(tn.NGAYTIEPNHAN as date) &lt;= cast('$DENNGAYTIEPNHAN$' as date)
+          </isNotEmpty>
+            <!--and (tn.NGAYTIEPNHAN BETWEEN '$TUNGAY$' AND '$DENNGAY$')-->
+            <isNotEmpty prepend="and" property="NOITHUCHIEN_ID">
+                dv.NOITHUCHIEN_ID = '$NOITHUCHIEN_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="NOIYEUCAU_ID">
+                dv.NOIYEUCAU_ID = '$NOIYEUCAU_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MANHOMDICHVUCAPDUOI">
+                B.MANHOMDICHVU = '$MANHOMDICHVUCAPDUOI$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="GHINHANVTYT">
+                dv.GHINHANVTYT = '$GHINHANVTYT$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="BACSICHIDINH_ID">
+                ISNULL (dv.BACSICHIDINH_ID, dv.NGUOIGIOITHIEU_ID) = '$BACSICHIDINH_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="DAKHAM">
+                <isEqual prepend="AND" property="DAKHAM" compareValue="True">
+                    (dv.TRANGTHAI = 'HOANTAT' or dv.TRANGTHAI = 'DACHUYENTUYEN'  or dv.TRANGTHAI = 'CHOXACNHAN' OR dv.TRANGTHAI = 'DANGTHUCHIEN')
+                </isEqual>
+                <isEqual prepend="AND" property="DAKHAM" compareValue="False">
+                  (dv.TRANGTHAI = 'CHUAKETQUA' OR dv.TRANGTHAI = 'DALAYMAU')
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="DICHVU_DATHANHTOAN">
+                vp.DATHANHTOAN = '$DICHVU_DATHANHTOAN$'
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="DALAYMAU">
+                <isEqual prepend="AND" property="DALAYMAU" compareValue="True">
+                    dv.DALAYMAU = '1'
+                </isEqual>
+                <isEqual prepend="AND" property="DALAYMAU" compareValue="False">
+                    (dv.DALAYMAU = '0' or dv.DALAYMAU is null)
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_LIS">
+                <isEqual prepend="" property="CHITIET_LIS" compareValue="True">
+                    <isNotEmpty prepend="" property="GUINGOAI">
+                        <isEqual prepend="AND" property="GUINGOAI" compareValue="True">
+                            dv.YEUCAUBENNGOAI = '1'
+                        </isEqual>
+                        <!--<isEqual prepend="AND" property="GUINGOAI" compareValue="False">
+              (dv.YEUCAUBENNGOAI = '0' or dv.YEUCAUBENNGOAI is null)
+            </isEqual>-->
+                    </isNotEmpty>
+                  <isNotEmpty prepend="AND" property="SID">
+                    bpct.SID like '%' + #SID# + '%'
+                  </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOIGUIDEN_ID">
+                        dv.DONVIGIOITHIEU_ID = '$NOIGUIDEN_ID$'
+                    </isNotEmpty>
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_RIS">
+                <isEqual prepend="" property="CHITIET_RIS" compareValue="True">
+                    <isNotEmpty prepend="" property="GUINGOAI">
+                        <isEqual prepend="AND" property="GUINGOAI" compareValue="True">
+                            dv.YEUCAUBENNGOAI = '1'
+                        </isEqual>
+                        <!--<isEqual prepend="AND" property="GUINGOAI" compareValue="False">
+              (dv.YEUCAUBENNGOAI = '0' or dv.YEUCAUBENNGOAI is null)
+            </isEqual>-->
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOIGUIDEN_ID">
+                        dv.DONVIGIOITHIEU_ID = '$NOIGUIDEN_ID$'
+                    </isNotEmpty>
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_ORM">
+                <isEqual prepend="" property="CHITIET_ORM" compareValue="True">
+                    <isEqual prepend="AND" property="DAGHINHANVTYT_PTTT" compareValue="True">
+                      (((orm.PHAUTHUAT_VTYT_ID is not null) or (orm.PHAUTHUAT_EKIP_ID is not null))  and (orm.SOPHIEUPHAUTHUAT is not null))
+                    </isEqual>
+                    <isEqual prepend="AND" property="DAGHINHANVTYT_PTTT" compareValue="False">
+                      ((orm.PHAUTHUAT_VTYT_ID is null) and (orm.PHAUTHUAT_EKIP_ID is null) and (orm.SOPHIEUPHAUTHUAT is not null))
+                    </isEqual>
+                  <isNotEmpty prepend="and" property="SOPHIEUPHAUTHUAT">
+                    orm.SOPHIEUPHAUTHUAT like '%' + #SOPHIEU# + '%'
+                  </isNotEmpty>
+                </isEqual>
+              
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_KHAMTIENME">
+                <isEqual prepend="" property="CHITIET_KHAMTIENME" compareValue="True">
+                    <isEqual prepend="AND" property="DAKHAMTIENME" compareValue="True">
+                      (TM.KHAMTIENME_ID IS NOT NULL AND A.MADICHVU = '$MADICHVU$')
+                    </isEqual>
+                    <isEqual prepend="AND" property="DAKHAMTIENME" compareValue="False">
+                      (TM.KHAMTIENME_ID IS NULL AND A.MADICHVU = '$MADICHVU$')
+                    </isEqual>
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_KHAMGAYME">
+                <isEqual prepend="" property="CHITIET_KHAMGAYME" compareValue="True">
+                    <isEqual prepend="AND" property="DAKHAMGAYME" compareValue="True">
+                        (GM.KHAMGAYME_ID IS NOT NULL)
+                        and Left(B.MANHOMDICHVU,2) IN ('05','06')
+                    </isEqual>
+                    <isEqual prepend="AND" property="DAKHAMGAYME" compareValue="False">
+                        (GM.KHAMGAYME_ID IS NULL)
+                        and Left(B.MANHOMDICHVU,2) IN ('05','06')
+                    </isEqual>
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="EXAMDOC">
+                <isGreaterThan prepend="AND" property="EXAMDOC" compareValue="0">
+                    tn.NGUOICAPNHAT_ID = '$EXAMDOC$'
+                </isGreaterThan>
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="TENBENHNHAN">
+              (bn.TENBENHNHAN like '%' + #TENBENHNHAN# + '%' or bn.MAYTE like '%' + #TENBENHNHAN# + '%')
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MANHOMDICHVU">
+                (CASE WHEN Left(B.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(B.MANHOMDICHVU,2) END) = '$MANHOMDICHVU$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MANHOMDICHVU_EXCEPT">
+                (CASE WHEN Left(B.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(B.MANHOMDICHVU,2) END) not in ($MANHOMDICHVU_EXCEPT$)
+            </isNotEmpty>
+          <isNotEmpty prepend="and" property="NOT_MANHOMDICHVU">
+            B.MANHOMDICHVU NOT IN ($NOT_MANHOMDICHVU$)
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIAIPHAUBENH">
+            B.MANHOMDICHVU IN ($GIAIPHAUBENH$)
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="VISINH">
+            B.MANHOMDICHVU IN ($VISINH$)
+          </isNotEmpty>
+            <isNotEmpty prepend="and" property="TRANGTHAI_DONGTIEN">
+                tn.TRANGTHAI IN ('$TRANGTHAI_DONGTIEN$')
+              <!--tn.TRANGTHAI in ('HOANTHANH','DATIEPNHAN','NOITRU','CAPCUU','NGOAITRU')-->
+            </isNotEmpty>
+            <!--<isNotEmpty prepend="and" property="LST_DICHVU_ID">
+                dv.DICHVU_ID in
+                <iterate open="(" close=")" conjunction=",  " property="LST_DICHVU_ID">
+                    #LST_DICHVU_ID[]#
+                </iterate>
+            </isNotEmpty>-->
+            ) data1) lst
+            <isNotEmpty prepend="" property="FROMROW">
+                where
+                lst.ROWNUMBER between $FROMROW$ and $TOROW$
+            </isNotEmpty>
+            order by SOHANGDOI, NGAYGIOYEUCAU asc
+        </statement>
+        <!--Revision:0,7b2724aa186351e30e51f0b9c36a2b32-->
+        <statement id="DAO00019_GetListDichVuDuocDongTien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select * from
+          (
+          select COUNT(*) OVER() as TOTALROWS, ROW_NUMBER() OVER(order by tn.MAYTE, isnull($SOHANGDOI$,'999999999')) as ROWNUMBER,
+          ISNULL(A.DUOC_ID, A.DICHVU_ID) as DICHVU_ID, ISNULL(B.TENDUOCDAYDU, C.TENDICHVU) as TENDICHVU,
+          (CASE WHEN A.DUOC_ID is null THEN E.NOITHUCHIEN_ID ELSE 0 END) as NOITHUCHIEN_ID,
+          0 as NOIYEUCAU_ID, 0 as NOIGIOITHIEU_ID, 0 as BACSICHIDINH_ID, isnull(E.NGAYTAO, E.NGAYCAPNHAT) as THOIGIANDKDICHVU,
+          tn.*, isnull($SOHANGDOI$,'999999999') as SOHANGDOI, null as KHAN, '' as STATUS_CODE
+          from TT_VIENPHI A
+          left join TM_DUOC B on B.DUOC_ID = A.DUOC_ID and B.BENHVIEN_ID = '$BENHVIEN_ID$'
+          left join TM_DICHVU C on C.DICHVU_ID = A.DICHVU_ID and C.BENHVIEN_ID = '$BENHVIEN_ID$'
+          inner join
+          (
+          select A.TIEPNHAN_ID, A.SOTIEPNHAN, A.DOITUONG_ID, A.SOTHUTU, A.NGAYTIEPNHAN, B.*, C.TENDOITUONG from TT_TIEPNHAN A
+          left join TT_BENHNHAN B on A.BENHNHAN_ID = B.BENHNHAN_ID
+          left join TM_DOITUONG C on A.DOITUONG_ID = C.DOITUONG_ID
+          where A.TRANGTHAI in ('DATIEPNHAN', 'HOANTHANH') and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+          ) tn on tn.TIEPNHAN_ID = A.TIEPNHAN_ID
+          left join TT_DVYEUCAU E on E.DVYEUCAU_ID = A.REF_ID
+          where
+          A.BENHAN_ID is null and
+          ((A.REF_TABLE = 'TT_DVYEUCAU' and E.HUYYEUCAU = '0') or (A.DUOC_ID is not null and A.DATHUCHIEN = '1')) and
+          ((A.DATHANHTOAN = '0' or A.DATHANHTOAN is null) and A.KHONGTHUTIEN = '0') and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+          <isNotEmpty prepend="" property="COM_THUTIEN_0_DONG">
+            <isEqual prepend="AND" property="COM_THUTIEN_0_DONG" compareValue="0">
+              A.BENHNHAN_PHAITHANHTOAN > 0
+            </isEqual>
+          </isNotEmpty>
+
+          <isNotEmpty prepend="" property="YEUCAU">
+            <isEqual prepend="" property="YEUCAU" compareValue="1">
+              <isNotEmpty prepend="and" property="TUNGAY">
+                E.NGAYYEUCAU &gt;= '$TUNGAY$'
+              </isNotEmpty>
+              <isNotEmpty prepend="and" property="DENNGAY">
+                E.NGAYYEUCAU &lt;= '$DENNGAY$'
+              </isNotEmpty>
+            </isEqual>
+            <isEqual prepend="" property="YEUCAU" compareValue="0">
+              <isNotEmpty prepend="and" property="TUNGAY">
+                tn.NGAYTIEPNHAN &gt;= '$TUNGAY$'
+              </isNotEmpty>
+              <isNotEmpty prepend="and" property="DENNGAY">
+                tn.NGAYTIEPNHAN &lt;= '$DENNGAY$'
+              </isNotEmpty>
+            </isEqual>
+          </isNotEmpty>
+                    
+            <isNotEmpty prepend="and" property="TENBENHNHAN">
+              (tn.TENBENHNHAN like '%' + #TENBENHNHAN# + '%' or tn.MAYTE like '%' + #TENBENHNHAN# + '%')
+            </isNotEmpty>
+            <!--order by VIENPHI_ID-->
+            ) lst
+            <isNotEmpty prepend="" property="FROMROW">
+                where
+                lst.ROWNUMBER between $FROMROW$ and $TOROW$
+            </isNotEmpty>
+            order by MAYTE, SOHANGDOI asc
+        </statement>
+        <!--Revision:0,7d3c3d09c6c890cc4fc7259eee204f99-->
+        <statement id="DAO00019_GetCountList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT count(*) as TOTALROWS
+            FROM [TT_TIEPNHAN] tn
+            join TT_BENHNHAN bn on tn.BENHNHAN_ID = bn.BENHNHAN_ID
+            left join TT_DVYEUCAU dv on dv.TIEPNHAN_ID = tn.TIEPNHAN_ID
+            left join TM_DICHVU A on A.DICHVU_ID = dv.DICHVU_ID
+            left join TM_NHOMDICHVU B on B.NHOMDICHVU_ID = A.NHOMDICHVU_ID
+            left join TT_VIENPHI VP on VP.TIEPNHAN_ID = tn.TIEPNHAN_ID and VP.DICHVU_ID = dv.DICHVU_ID and VP.REF_ID = dv.DVYEUCAU_ID
+            <isNotEmpty prepend="" property="CHITIET_ORM">
+                <isEqual prepend="" property="CHITIET_ORM" compareValue="True">
+                    left join
+                    (select ptyc.DVYEUCAU_ID, ptvtyt.PHAUTHUAT_VTYT_ID,
+                    ptek.PHAUTHUAT_EKIP_ID,
+                    pt.SOPHIEUPHAUTHUAT, pt.THOIGIANBATDAU, pt.THOIGIANKETTHUC,
+                    pt.LOAIPHAUTHUAT, pt.NGAYTHUCHIEN, pt.PHONGBANTHUCHIEN_ID, pt.NGUOITAO_ID
+                    from TT_PHAUTHUAT pt
+                    left join TT_PHAUTHUAT_YEUCAU ptyc
+                    on pt.PHAUTHUAT_ID = ptyc.PHAUTHUAT_ID
+                    left join TT_PHAUTHUAT_VTYT ptvtyt
+                    on ptvtyt.PHAUTHUAT_ID = pt.PHAUTHUAT_ID
+                    left join TT_PHAUTHUAT_EKIP ptek
+                    on ptek.PHAUTHUAT_ID = pt.PHAUTHUAT_ID) orm
+                    on orm.DVYEUCAU_ID = dv.DVYEUCAU_ID
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_LIS">
+                <isEqual prepend="" property="CHITIET_LIS" compareValue="True">
+                    left join
+                    (select distinct A.DVYEUCAU_ID, B.CLSKETQUA_ID, B.NGAYGIOTHUCHIEN , B.THOIGIANKHOADULIEU, B.NGUOIKHOA_ID, B.GUINGOAI, B.NOIGUIDEN_ID,
+                    C.CLSKETQUA_ID as VTYT
+                    from TT_CLSKETQUACHITIET A
+                    left join TT_CLSKETQUA B on B.CLSKETQUA_ID = A.CLSKETQUA_ID
+                    left join TT_CLSKETQUA_VTYT C on C.CLSKETQUA_ID = a.CLSKETQUA_ID
+                    where A.BENHVIEN_ID = '$BENHVIEN_ID$')
+                    lisRis on lisRis.DVYEUCAU_ID = dv.DVYEUCAU_ID
+                    left join (select distinct A.DVYEUCAU_ID, A.SID, B.THOIGIANLAYMAU, B.NOITHUCHIEN_ID, B.KYTHUATVIEN_ID
+                    from TT_QUANLYBENHPHAM_CHITIET A
+                    left join TT_QUANLYBENHPHAM B on B.QUANLYBENHPHAM_ID = A.QUANLYBENHPHAM_ID and B.BENHVIEN_ID = '$BENHVIEN_ID$')
+                    mau on mau.DVYEUCAU_ID = dv.DVYEUCAU_ID
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_RIS">
+                <isEqual prepend="" property="CHITIET_RIS" compareValue="True">
+                    left join(select distinct B.DVYEUCAU_ID, B.CLSKETQUA_ID, B.NGAYGIOTHUCHIEN , B.THOIGIANKHOADULIEU, B.NGUOIKHOA_ID, B.GUINGOAI, B.NOIGUIDEN_ID,
+                    C.CLSKETQUA_ID as VTYT
+                    from TT_CLSKETQUA B
+                    left join TT_CLSKETQUA_VTYT C on C.CLSKETQUA_ID = b.CLSKETQUA_ID
+                    where B.BENHVIEN_ID = '$BENHVIEN_ID$') lisRis on lisRis.DVYEUCAU_ID = dv.DVYEUCAU_ID
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_KHAMGAYME">
+                <isEqual prepend="" property="CHITIET_KHAMGAYME" compareValue="True">
+                    LEFT JOIN ( SELECT KHAMGAYME_ID,DVYEUCAU_ID, NGAYTHUCHIEN , NOITHUCHIEN_ID,NGUOITAO_ID
+                    FROM  TT_KHAMGAYME M WHERE M.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    ) GM ON DV.DVYEUCAU_ID=GM.DVYEUCAU_ID
+                </isEqual>
+            </isNotEmpty>
+            where
+            dv.DICHVU_ID IS NOT NULL
+            <!--and tn.TRANGTHAI IN ('$TRANGTHAI$')-->
+            and tn.BENHVIEN_ID = '$BENHVIEN_ID$'
+            and HUYYEUCAU = 0
+            and dv.NGAYHENCLS is NULL
+            <!--<isNotEmpty prepend="and" property="DATHANHTOAN">
+        (VP.DATHANHTOAN = '$DATHANHTOAN$'
+        OR VP.KHONGTHUTIEN = '1'
+        OR VP.BENHNHAN_PHAITHANHTOAN = VP.GIATRI_BENHNHAN_DATHANHTOAN
+        OR (VP.BENHAN_ID is not null and VP.BENHAN_ID != ''))
+      </isNotEmpty>-->
+            <isNotEmpty prepend="and" property="TUNGAY">
+                tn.NGAYTIEPNHAN &gt;= '$TUNGAY$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="DENNGAY">
+                tn.NGAYTIEPNHAN &lt;= '$DENNGAY$'
+            </isNotEmpty>
+          <isNotEmpty prepend="and" property="TUNGAYTIEPNHAN">
+            tn.NGAYTIEPNHAN &gt;= '$TUNGAYTIEPNHAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DENNGAYTIEPNHAN">
+            tn.NGAYTIEPNHAN &lt;= '$DENNGAYTIEPNHAN$'
+          </isNotEmpty>
+            <!--and (tn.NGAYTIEPNHAN BETWEEN '$TUNGAY$' AND '$DENNGAY$')-->
+            <isNotEmpty prepend="and" property="NOITHUCHIEN_ID">
+                dv.NOITHUCHIEN_ID = '$NOITHUCHIEN_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="NOIYEUCAU_ID">
+                dv.NOIYEUCAU_ID = '$NOIYEUCAU_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MANHOMDICHVUCAPDUOI">
+                B.MANHOMDICHVU = '$MANHOMDICHVUCAPDUOI$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="GHINHANVTYT">
+                dv.GHINHANVTYT = '$GHINHANVTYT$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="BACSICHIDINH_ID">
+                ISNULL (dv.BACSICHIDINH_ID, dv.NGUOIGIOITHIEU_ID) = '$BACSICHIDINH_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="DAKHAM">
+                <isEqual prepend="AND" property="DAKHAM" compareValue="True">
+                    (dv.TRANGTHAI = 'HOANTAT' or dv.TRANGTHAI = 'DACHUYENTUYEN'  or dv.TRANGTHAI = 'CHOXACNHAN'  OR dv.TRANGTHAI = 'DANGTHUCHIEN')
+                </isEqual>
+                <isEqual prepend="AND" property="DAKHAM" compareValue="False">
+                    (dv.TRANGTHAI = 'CHUAKETQUA' or dv.TRANGTHAI = 'DALAYMAU' )
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="DICHVU_DATHANHTOAN">
+                vp.DATHANHTOAN = '$DICHVU_DATHANHTOAN$'
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="DALAYMAU">
+                <isEqual prepend="AND" property="DALAYMAU" compareValue="True">
+                    dv.DALAYMAU = '1'
+                </isEqual>
+                <isEqual prepend="AND" property="DALAYMAU" compareValue="False">
+                    (dv.DALAYMAU = '0' or dv.DALAYMAU is null)
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_LIS">
+                <isEqual prepend="" property="CHITIET_LIS" compareValue="True">
+                    <isNotEmpty prepend="" property="GUINGOAI">
+                        <isEqual prepend="AND" property="GUINGOAI" compareValue="True">
+                            dv.YEUCAUBENNGOAI = '1'
+                        </isEqual>
+                        <!--<isEqual prepend="AND" property="GUINGOAI" compareValue="False">
+              (dv.YEUCAUBENNGOAI = '0' or dv.YEUCAUBENNGOAI is null)
+            </isEqual>-->
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOIGUIDEN_ID">
+                        dv.DONVIGIOITHIEU_ID = '$NOIGUIDEN_ID$'
+                    </isNotEmpty>
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_RIS">
+                <isEqual prepend="" property="CHITIET_RIS" compareValue="True">
+                    <isNotEmpty prepend="" property="GUINGOAI">
+                        <isEqual prepend="AND" property="GUINGOAI" compareValue="True">
+                            dv.YEUCAUBENNGOAI = '1'
+                        </isEqual>
+                        <!--<isEqual prepend="AND" property="GUINGOAI" compareValue="False">
+              (dv.YEUCAUBENNGOAI = '0' or dv.YEUCAUBENNGOAI is null)
+            </isEqual>-->
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOIGUIDEN_ID">
+                        dv.DONVIGIOITHIEU_ID = '$NOIGUIDEN_ID$'
+                    </isNotEmpty>
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_ORM">
+                <isEqual prepend="" property="CHITIET_ORM" compareValue="True">
+                    <isEqual prepend="AND" property="DAGHINHANVTYT_PTTT" compareValue="True">
+                        ((orm.PHAUTHUAT_VTYT_ID is not null) or (orm.PHAUTHUAT_EKIP_ID is not null))
+                    </isEqual>
+                    <isEqual prepend="AND" property="DAGHINHANVTYT_PTTT" compareValue="False">
+                        ((orm.PHAUTHUAT_VTYT_ID is null) and (orm.PHAUTHUAT_EKIP_ID is null))
+                    </isEqual>
+                  and orm.SOPHIEUPHAUTHUAT like '%' + #SOPHIEU# + '%'
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="CHITIET_KHAMGAYME">
+                <isEqual prepend="" property="CHITIET_KHAMGAYME" compareValue="True">
+                    <isEqual prepend="AND" property="DAKHAMGAYME" compareValue="True">
+                        (GM.KHAMGAYME_ID IS NOT NULL)
+                        and Left(B.MANHOMDICHVU,2) IN ('05','06')
+                    </isEqual>
+                    <isEqual prepend="AND" property="DAKHAMGAYME" compareValue="False">
+                        (GM.KHAMGAYME_ID IS NULL)
+                        and Left(B.MANHOMDICHVU,2) IN ('05','06')
+                    </isEqual>
+                </isEqual>
+            </isNotEmpty>
+            <isNotEmpty prepend="" property="EXAMDOC">
+                <isGreaterThan prepend="AND" property="EXAMDOC" compareValue="0">
+                    tn.NGUOICAPNHAT_ID = '$EXAMDOC$'
+                </isGreaterThan>
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="TENBENHNHAN">
+              (bn.TENBENHNHAN like '%' + #TENBENHNHAN# + '%' or bn.MAYTE like '%' + #TENBENHNHAN# + '%')
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MANHOMDICHVU">
+                (CASE WHEN Left(B.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(B.MANHOMDICHVU,2) END) = '$MANHOMDICHVU$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MANHOMDICHVU_EXCEPT">
+                (CASE WHEN Left(B.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(B.MANHOMDICHVU,2) END) not in ($MANHOMDICHVU_EXCEPT$)
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="TRANGTHAI_DONGTIEN">
+                tn.TRANGTHAI IN ('$TRANGTHAI_DONGTIEN$')
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="LST_DICHVU_ID">
+                dv.DICHVU_ID in
+                <iterate open="(" close=")" conjunction=",  " property="LST_DICHVU_ID">
+                    #LST_DICHVU_ID[]#
+                </iterate>
+            </isNotEmpty>
+        </statement>
+        <!--Revision:0,35bdb44654e18437b89349da62fe18ac-->
+        <statement id="DAO00019_GetCountListDichVuDuocDongTien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select count(*) as TOTALROWS
+          from TT_VIENPHI A
+          left join TM_DUOC B on B.DUOC_ID = A.DUOC_ID and B.BENHVIEN_ID = '$BENHVIEN_ID$'
+          left join TM_DICHVU C on C.DICHVU_ID = A.DICHVU_ID and C.BENHVIEN_ID = '$BENHVIEN_ID$'
+          inner join
+          (
+          select A.TIEPNHAN_ID, A.SOTIEPNHAN, A.DOITUONG_ID, A.SOTHUTU, A.NGAYTIEPNHAN, B.* from TT_TIEPNHAN A
+          left join TT_BENHNHAN B on A.BENHNHAN_ID = B.BENHNHAN_ID
+          where A.TRANGTHAI = 'DATIEPNHAN' and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+          ) tn on tn.TIEPNHAN_ID = A.TIEPNHAN_ID
+          left join TT_DVYEUCAU E on E.DVYEUCAU_ID = A.REF_ID
+          where
+          A.BENHAN_ID is null and
+          ((A.REF_TABLE = 'TT_DVYEUCAU' and E.HUYYEUCAU = '0')  or (A.DUOC_ID is not null and A.DATHUCHIEN = '1')) and
+          ((A.DATHANHTOAN = '0' or A.DATHANHTOAN is null) and A.KHONGTHUTIEN = '0') and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+          <isNotEmpty prepend="" property="COM_THUTIEN_0_DONG">
+            <isEqual prepend="AND" property="COM_THUTIEN_0_DONG" compareValue="0">
+              A.BENHNHAN_PHAITHANHTOAN > 0
+            </isEqual>           
+          </isNotEmpty>
+          <isNotEmpty prepend="" property="YEUCAU">
+            <isEqual prepend="" property="YEUCAU" compareValue="1">
+              <isNotEmpty prepend="and" property="TUNGAY">
+                E.NGAYYEUCAU &gt;= '$TUNGAY$'
+              </isNotEmpty>
+              <isNotEmpty prepend="and" property="DENNGAY">
+                E.NGAYYEUCAU &lt;= '$DENNGAY$'
+              </isNotEmpty>
+            </isEqual>
+            <isEqual prepend="" property="YEUCAU" compareValue="0">
+              <isNotEmpty prepend="and" property="TUNGAY">
+                tn.NGAYTIEPNHAN &gt;= '$TUNGAY$'
+              </isNotEmpty>
+              <isNotEmpty prepend="and" property="DENNGAY">
+                tn.NGAYTIEPNHAN &lt;= '$DENNGAY$'
+              </isNotEmpty>
+            </isEqual>
+          </isNotEmpty>
+            <isNotEmpty prepend="and" property="TENBENHNHAN">
+              (tn.TENBENHNHAN like '%' + #TENBENHNHAN# + '%' or tn.MAYTE like '%' + #TENBENHNHAN# + '%')
+            </isNotEmpty>
+            
+        </statement>
+        <!--Revision:0,cab14cfbca055257c7af97f793f5f828-->
+        <statement id="DAO00019_GetTiepNhanMienGiamCLSThucHien" resultClass="DataObject">
+            select TIEPNHAN_ID from TT_MIENGIAM where TIEPNHAN_ID ='$TIEPNHAN_ID$';
+        </statement>
+        <!--Revision:0,360d8a638097cba7a2f168a85617c42a-->
+        <statement id="DAO00019_GetTiepNhanMienGiamCLSThucHien01" resultClass="DataObject">
+            select TIEPNHAN_ID from TT_DVYEUCAU where TIEPNHAN_ID ='$TIEPNHAN_ID$' and TRANGTHAI != 'CHUAKETQUA'
+        </statement>
+        <!--Revision:0,0e940939ee5132edab71f6ff4396d40e-->
+        <statement id="DAO00019_GetNhomDichVu" resultClass="DataObject">
+            select Left(B.MANHOMDICHVU,2) as MANHOMDICHVU
+            from TM_DICHVU A
+            left join TM_NHOMDICHVU B on B.NHOMDICHVU_ID = A.NHOMDICHVU_ID
+            where A.DICHVU_ID = '$DICHVU_ID$' and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by A.DICHVU_ID, A.BENHVIEN_ID
+        </statement>
+        <!--Revision:0,8fa08a9b1ffc5fdf7f2bc86b51d8c80e-->
+        <statement id="DAO00019_GetAll" resultClass="DataObject">
+            select *
+            from TT_TIEPNHAN
+            order by TIEPNHAN_ID
+        </statement>
+        <!--Revision:0,c77dc781659de37e803fcb61751a9006-->
+        <statement id="DAO00019_GetDetail" parameterClass="System.String" resultClass="DataObject">
+            select *
+            from TT_TIEPNHAN
+            where TT_TIEPNHAN.TIEPNHAN_ID  = '$value$'
+            order by TIEPNHAN_ID
+        </statement>
+        <!--Revision:0,9981c19990ed1d3040ffd4ca747c3c34-->
+        <statement id="DAO00019_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_TIEPNHAN
+            where TT_TIEPNHAN.TIEPNHAN_ID  = '$TIEPNHAN_ID$'
+            order by TIEPNHAN_ID
+        </statement>
+        <!--Revision:0,13ff071e7c38aaf0189bc053341bcd91-->
+        <statement id="DAO00019_CheckDuplicate" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            select count(TIEPNHAN_ID)
+            from TT_TIEPNHAN
+            where BENHNHAN_ID = $BENHNHAN_ID$ and convert(date, NGAYTAO) = convert(date, getdate())
+            and (SOBHYT is not null)
+        </statement>
+        <!--Revision:0,57a88069faaff14b0c733ca4075e054b-->
+        <statement id="DAO00019_CheckTiepNhanExistNextStep" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select T1.STATUS_TN
+            from
+            (
+            select top 1 'NHAPVIEN' AS STATUS_TN
+            from TT_NOITRU_NHAPVIEN
+            where (BENHVIEN_ID = '$BENHVIEN_ID$' AND TIEPNHAN_ID = '$TIEPNHAN_ID$')
+            ORDER BY NHAPVIEN_ID DESC
+            ) AS T1
+            UNION ALL
+            select T2.STATUS_TN
+            from
+            (
+            select top 1 'CDCLS' AS STATUS_TN
+            from TT_DVYEUCAU
+            where BENHVIEN_ID = '$BENHVIEN_ID$' AND TIEPNHAN_ID = '$TIEPNHAN_ID$'
+            ORDER BY DVYEUCAU_ID DESC
+            ) AS T2
+            UNION ALL
+            select T3.STATUS_TN
+            from
+            (
+            select top 1 'TTVP' AS STATUS_TN
+            from TT_VIENPHI
+            where BENHVIEN_ID = '$BENHVIEN_ID$' AND TIEPNHAN_ID = '$TIEPNHAN_ID$'
+            ORDER BY VIENPHI_ID DESC
+            ) AS T3
+        </statement>
+        <!--Revision:0,b011653e2b9046191c75c06f52966eba-->
+        <statement id="DAO00019_Add" parameterClass="DataObject" resultClass="DataObject">
+            <!--Get so tiep nhan-->
+            declare
+            @keyValue int, @BenhVienId varchar(10),
+            @yearNow int, @monthNow varchar(2), @dayNow varchar(2),
+            @Sotiepnhan varchar(20), @SoThuTu varchar(20)
+            set @keyValue = 0;
+            set @BenhVienId = '$BENHVIEN_ID$'
+            set @yearNow = YEAR(getdate())
+            set @monthNow = RIGHT('00' + convert(varchar(2), MONTH(getdate())),2)
+            set @dayNow = RIGHT('00' + convert(varchar(2), DAY(getdate())),2)
+            BEGIN TRANSACTION
+            select @keyValue = KEYVALUE from LST_KEYDATA
+            where KEYTYPE = 'SOTIEPNHAN' and KEYYEAR = @yearNow and KEYMONTH = @monthNow and KEYDAY = @dayNow
+            and BENHVIEN_ID = @BenhVienId
+            if @keyValue = 0
+            Insert into LST_KEYDATA values ('SOTIEPNHAN', @yearNow, @monthNow, @dayNow, '0', '0', '0', 0, @BenhVienId);
+            Update LST_KEYDATA set KEYVALUE = (KEYVALUE + 1), @keyValue = (KEYVALUE + 1) where KEYTYPE = 'SOTIEPNHAN' and KEYYEAR = @yearNow and KEYMONTH = @monthNow and KEYDAY = @dayNow and BENHVIEN_ID = @BenhVienId
+            set @SoThuTu = right('0000000'+convert(varchar(7), @keyValue), 7)
+            set @Sotiepnhan = 'TN' + RIGHT(@yearNow, 2) + @monthNow  + @dayNow + '.' + @SoThuTu
+            COMMIT TRANSACTION
+            <!--INSERT TT TIEP NHAN-->
+          insert into TT_TIEPNHAN (
+          SOTIEPNHAN
+          , UUTIEN
+          , BENHNHAN_ID
+          , BENHVIEN_ID
+          , TUYENKHAMBENH_ID
+          , NOITIEPNHAN_ID
+          , NGAYTIEPNHAN
+          , THOIGIANTIEPNHAN
+          , NAMTIEPNHAN
+          , THANGTIEPNHAN
+          , DOITUONG_ID
+          , LYDOTIEPNHAN_ID
+          , HINHTHUCDENKHAM_ID
+          , TINHTRANGHEN
+          , XACNHANCHIPHI_ID
+          , THUTIENTRUOC
+          , TAIKHAM
+          , SOBHYT
+          , BHYTTUNGAY
+          , BHYTDENNGAY
+          , BHYTNGAYCAP
+          , BHYTTREN3NAM
+          , BHYTTREN5NAM
+          , NGAYMIENDONGCHITRA
+          , LOAIBHYT
+          , NGAYBHYT2
+          , SOCHUYENVIEN
+          , HINHTHUCCHUYENVIEN_ID
+          , NOIGIOITHIEU_ID
+          , NGUOIGIOITHIEU_ID
+          , THOIGIANCHUYENTUYEN
+          , LYDOCHUYENVIEN_ID
+          , ICDNOIGIOITHIEU_ID
+          , CHANDOANNGT
+          , TRAITUYEN
+          , DIACHILIENHE
+          , XAPHUONG_ID
+          , QUANHUYEN_ID
+          , TINHTHANH_ID
+          , PROCESS_ID
+          , TRANGTHAI
+          , KHUVUCSONG_ID
+          , THANHVIEN_ID
+          , THE_ID
+          , LOAITHANHVIEN_ID
+          , SUDUNG_BHTN
+          , VIP
+          , GHICHU_TIEPNHAN
+          , BAOLANH_VIENPHI
+          , CONGTY_CHITRA_ID
+          , NGUON_BENHNHAN_ID
+          , LOAITIEPNHAN_ID
+          , THONGTIN_KCB_BHYT
+          , NGAYTAO
+          , NGUOITAO_ID
+          , LYDODENKHAM
+          <isPropertyAvailable prepend="," property="NGUOINUOCNGOAI">
+            NGUOINUOCNGOAI
+          </isPropertyAvailable>
+          )
+          OUTPUT INSERTED.TIEPNHAN_ID, INSERTED.SOTIEPNHAN
+          values (
+          @Sotiepnhan
+          , #UUTIEN#
+          , #BENHNHAN_ID#
+          , #BENHVIEN_ID#
+          , #TUYENKHAMBENH_ID#
+          , #NOITIEPNHAN_ID#
+          , #NGAYTIEPNHAN#
+          , #THOIGIANTIEPNHAN#
+          , #NAMTIEPNHAN#
+          , #THANGTIEPNHAN#
+          , #DOITUONG_ID#
+          , #LYDOTIEPNHAN_ID#
+          , #HINHTHUCDENKHAM_ID#
+          , #TINHTRANGHEN#
+          , #XACNHANCHIPHI_ID#
+          , #THUTIENTRUOC#
+          , #TAIKHAM#
+          , #SOBHYT#
+          , #BHYTTUNGAY#
+          , #BHYTDENNGAY#
+          , #BHYTNGAYCAP#
+          , #BHYTTREN3NAM#
+          , #BHYTTREN5NAM#
+          , #NGAYMIENDONGCHITRA#
+          , #LOAIBHYT#
+          , #NGAYBHYT2#
+          , #SOCHUYENVIEN#
+          , #HINHTHUCCHUYENVIEN_ID#
+          , #NOIGIOITHIEU_ID#
+          , #NGUOIGIOITHIEU_ID#
+          , #THOIGIANCHUYENTUYEN#
+          , #LYDOCHUYENVIEN_ID#
+          , #ICDNOIGIOITHIEU_ID#
+          , #CHANDOANNGT#
+          , #TRAITUYEN#
+          , #DIACHILIENHE#
+          , #XAPHUONG_ID#
+          , #QUANHUYEN_ID#
+          , #TINHTHANH_ID#
+          , #PROCESS_ID#
+          , #TRANGTHAI#
+          , #KHUVUCSONG_ID#
+          , #THANHVIEN_ID#
+          , #THE_ID#
+          , #LOAITHANHVIEN_ID#
+          , #SUDUNG_BHTN#
+          , #VIP#
+          , #GHICHU_TIEPNHAN#
+          , #BAOLANH_VIENPHI#
+          , #CONGTY_CHITRA_ID#
+          , #NGUON_BENHNHAN_ID#
+          , #LOAITIEPNHAN_ID#
+          , #THONGTIN_KCB_BHYT#
+          , #NGAYTAO#
+          , #NGUOITAO_ID#
+          , #LYDODENKHAM#
+          <isPropertyAvailable prepend="," property="NGUOINUOCNGOAI">
+            #NGUOINUOCNGOAI#
+          </isPropertyAvailable>
+            )
+        </statement>
+        <!--Revision:0,d5002c2019fc874e5f11f5c5e92c9768-->
+        <statement id="DAO00019_GetTTTiepNhan_byTiepNhanId" resultClass="DataObject">
+            select *
+            from TT_TIEPNHAN
+            where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+            order by TIEPNHAN_ID
+        </statement>
+        <!--Revision:0,ba274c49078de1bdcfa12443a8c26da0-->
+        <update id="DAO00019_Update" parameterClass="HashTable">
+            update TT_TIEPNHAN set
+            SOTIEPNHAN = #SOTIEPNHAN#
+            , SOTHUTU = #SOTHUTU#
+            , UUTIEN = #UUTIEN#
+            , BENHNHAN_ID = #BENHNHAN_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            , TUYENKHAMBENH_ID = #TUYENKHAMBENH_ID#
+            , NOITIEPNHAN_ID = #NOITIEPNHAN_ID#
+            , NGAYTIEPNHAN = #NGAYTIEPNHAN#
+      , THOIGIANTIEPNHAN = #THOIGIANTIEPNHAN#
+      <!--, NAMTIEPNHAN = #NAMTIEPNHAN#
+      , THANGTIEPNHAN = #THANGTIEPNHAN#-->
+          , DOITUONG_ID = #DOITUONG_ID#
+          , LYDOTIEPNHAN_ID = #LYDOTIEPNHAN_ID#
+          , HINHTHUCDENKHAM_ID = #HINHTHUCDENKHAM_ID#
+          , TINHTRANGHEN = #TINHTRANGHEN#
+          , XACNHANCHIPHI_ID = #XACNHANCHIPHI_ID#
+          , THUTIENTRUOC = #THUTIENTRUOC#
+          , TAIKHAM = #TAIKHAM#
+          , SOBHYT = #SOBHYT#
+          , BHYTTUNGAY = #BHYTTUNGAY#
+          , BHYTDENNGAY = #BHYTDENNGAY#
+          , BHYTNGAYCAP = #BHYTNGAYCAP#
+          , BHYTTREN3NAM = #BHYTTREN3NAM#
+          , BHYTTREN5NAM = #BHYTTREN5NAM#
+          , NGAYMIENDONGCHITRA = #NGAYMIENDONGCHITRA#
+          , LOAIBHYT = #LOAIBHYT#
+          , NGAYBHYT2 = #NGAYBHYT2#
+          , SOCHUYENVIEN = #SOCHUYENVIEN#
+          , HINHTHUCCHUYENVIEN_ID = #HINHTHUCCHUYENVIEN_ID#
+          , NOIGIOITHIEU_ID = #NOIGIOITHIEU_ID#
+          , NGUOIGIOITHIEU_ID = #NGUOIGIOITHIEU_ID#
+          , THOIGIANCHUYENTUYEN = #THOIGIANCHUYENTUYEN#
+          , LYDOCHUYENVIEN_ID = #LYDOCHUYENVIEN_ID#
+          , ICDNOIGIOITHIEU_ID = #ICDNOIGIOITHIEU_ID#
+          , CHANDOANNGT = #CHANDOANNGT#
+          , TRAITUYEN = #TRAITUYEN#
+          , DIACHILIENHE = #DIACHILIENHE#
+          , XAPHUONG_ID = #XAPHUONG_ID#
+          , QUANHUYEN_ID = #QUANHUYEN_ID#
+          , TINHTHANH_ID = #TINHTHANH_ID#
+          , PROCESS_ID = #PROCESS_ID#
+          , TRANGTHAI = #TRANGTHAI#
+          , NGAYCAPNHAT = #NGAYCAPNHAT#
+          , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+          , KHUVUCSONG_ID = #KHUVUCSONG_ID#
+          , THANHVIEN_ID = #THANHVIEN_ID#
+          , THE_ID = #THE_ID#
+          , LOAITHANHVIEN_ID = #LOAITHANHVIEN_ID#
+          , SUDUNG_BHTN = #SUDUNG_BHTN#
+          , BAOLANH_VIENPHI = #BAOLANH_VIENPHI#
+          , CONGTY_CHITRA_ID = #CONGTY_CHITRA_ID#
+          , VIP = #VIP#
+          , GHICHU_TIEPNHAN = #GHICHU_TIEPNHAN#
+          , NGUON_BENHNHAN_ID = #NGUON_BENHNHAN_ID#
+          , LOAITIEPNHAN_ID = #LOAITIEPNHAN_ID#
+          , THONGTIN_KCB_BHYT = #THONGTIN_KCB_BHYT#
+          , LYDODENKHAM = #LYDODENKHAM#
+          <isPropertyAvailable prepend="," property="NGUOINUOCNGOAI">
+            NGUOINUOCNGOAI = #NGUOINUOCNGOAI#
+          </isPropertyAvailable>
+            where
+            TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        </update>
+        <!--Revision:0,9a3e4d73bf6970710e533835c1f739ae-->
+        <update id="DAO00019_UpdateTrangThai" parameterClass="HashTable">
+            update TT_TIEPNHAN set
+            TRANGTHAI = #TRANGTHAI#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        </update>
+        <!--Revision:0,2bef81dedc3bc59bb3768cb6abb68245-->
+        <statement id="DAO00019_Delete" parameterClass="System.String" resultClass="System.Int32">
+            delete from TT_TIEPNHAN
+            where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        </statement>
+        <!--Revision:0,10059a8e7d1f7daf7025922bbfd374b3-->
+        <statement id="DAO00019_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_TIEPNHAN
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                        TT_TIEPNHAN.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOTIEPNHAN">
+                        TT_TIEPNHAN.SOTIEPNHAN = '$SOTIEPNHAN$'
+                    </isNotEmpty>
+                    <!--<isNotEmpty prepend="and" property="SOTHUTU">
+            TT_TIEPNHAN.SOTHUTU = '$SOTHUTU$'
+          </isNotEmpty>-->
+                    <isNotEmpty prepend="and" property="UUTIEN">
+                        TT_TIEPNHAN.UUTIEN = '$UUTIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHNHAN_ID">
+                        TT_TIEPNHAN.BENHNHAN_ID = '$BENHNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_TIEPNHAN.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TUYENKHAMBENH_ID">
+                        TT_TIEPNHAN.TUYENKHAMBENH_ID = '$TUYENKHAMBENH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOITIEPNHAN_ID">
+                        TT_TIEPNHAN.NOITIEPNHAN_ID = '$NOITIEPNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTIEPNHAN">
+                        TT_TIEPNHAN.NGAYTIEPNHAN = '$NGAYTIEPNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANTIEPNHAN">
+                        TT_TIEPNHAN.THOIGIANTIEPNHAN = '$THOIGIANTIEPNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NAMTIEPNHAN">
+                        TT_TIEPNHAN.NAMTIEPNHAN = '$NAMTIEPNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THANGTIEPNHAN">
+                        TT_TIEPNHAN.THANGTIEPNHAN = '$THANGTIEPNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DOITUONG_ID">
+                        TT_TIEPNHAN.DOITUONG_ID = '$DOITUONG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LYDOTIEPNHAN_ID">
+                        TT_TIEPNHAN.LYDOTIEPNHAN_ID = '$LYDOTIEPNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HINHTHUCDENKHAM_ID">
+                        TT_TIEPNHAN.HINHTHUCDENKHAM_ID = '$HINHTHUCDENKHAM_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="XACNHANCHIPHI_ID">
+                        TT_TIEPNHAN.XACNHANCHIPHI_ID = '$XACNHANCHIPHI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THUTIENTRUOC">
+                        TT_TIEPNHAN.THUTIENTRUOC = '$THUTIENTRUOC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAIKHAM">
+                        TT_TIEPNHAN.TAIKHAM = '$TAIKHAM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOBHYT">
+                        TT_TIEPNHAN.SOBHYT = '$SOBHYT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BHYTTUNGAY">
+                        TT_TIEPNHAN.BHYTTUNGAY = '$BHYTTUNGAY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BHYTDENNGAY">
+                        TT_TIEPNHAN.BHYTDENNGAY = '$BHYTDENNGAY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIBHYT">
+                        TT_TIEPNHAN.LOAIBHYT = '$LOAIBHYT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYBHYT2">
+                        TT_TIEPNHAN.NGAYBHYT2 = '$NGAYBHYT2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DIACHILIENHE">
+                        TT_TIEPNHAN.DIACHILIENHE = '$DIACHILIENHE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="XAPHUONG_ID">
+                        TT_TIEPNHAN.XAPHUONG_ID = '$XAPHUONG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="QUANHUYEN_ID">
+                        TT_TIEPNHAN.QUANHUYEN_ID = '$QUANHUYEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TINHTHANH_ID">
+                        TT_TIEPNHAN.TINHTHANH_ID = '$TINHTHANH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PROCESS_ID">
+                        TT_TIEPNHAN.PROCESS_ID = '$PROCESS_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRANGTHAI">
+                        TT_TIEPNHAN.TRANGTHAI = '$TRANGTHAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_TIEPNHAN.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_TIEPNHAN.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_TIEPNHAN.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_TIEPNHAN.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,6082e48aef0cddc0ffc208d9eeb43d30-->
+        <statement id="DAO00019_GetCurrentByBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select top 1 TIEPNHAN_ID, DOITUONG_ID, SOTIEPNHAN
+            from TT_TIEPNHAN
+            where [BENHNHAN_ID] = '$BENHNHAN_ID$'
+            <!--and [NGAYTIEPNHAN] = '$NGAYTIEPNHAN$'-->
+            <!--and cast([NGAYTIEPNHAN] as date) = cast('$NGAYTIEPNHAN$' as date)-->
+            and TRANGTHAI = 'DATIEPNHAN'
+            order by [NGAYTIEPNHAN] desc;
+        </statement>
+        <!--Revision:0,6a489aac2d5c0be3c13c05fa565bff17-->
+        <statement id="DAO00019_GetCurrentByBenhNhanCCNT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select top 1 TIEPNHAN_ID, DOITUONG_ID, SOTIEPNHAN
+            from TT_TIEPNHAN
+            where [BENHNHAN_ID] = '$BENHNHAN_ID$'
+            <!--and [NGAYTIEPNHAN] = '$NGAYTIEPNHAN$'-->
+            <!--and cast([NGAYTIEPNHAN] as date) = cast('$NGAYTIEPNHAN$' as date)-->
+            and (TRANGTHAI = 'CAPCUU' or TRANGTHAI = 'NOITRU')
+            order by [NGAYTIEPNHAN] desc;
+        </statement>
+        <!--Revision:0,639bc1ccc7be258a3cb863eb513b4a76-->
+        <statement id="DAO00019_GetTiepNHanTheBHYT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select top 1 *
+            from TT_TIEPNHAN
+            where
+            SOBHYT = '$SOBHYT$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by NGAYTIEPNHAN desc
+        </statement>
+        <!--Revision:0,c6edd2fea110c67dd72007cc94d5bdcc-->
+        <statement id="DAO00019_GetTiepNHanTheBHYTToaThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select B.SONGAY as NGOAITRU_SONGAY, B.NGAYCAPNHAT as NGOAITRU_CAPNHAT,
+            C.SONGAY as NOITRU_SONGAY, C.NGAYCAPNHAT as NOITRU_CAPNHAT
+            from (select A.*<!--, B.TIEPNHAN_ID-->
+            from TT_NGOAITRU_TOATHUOC A
+            inner join TT_NGOAITRU_KHAMBENH B on B.KHAMBENH_ID = a.KHAMBENH_ID
+            where B.TIEPNHAN_ID = '$TIEPNHAN_ID$') B
+            left join (select A.*
+            from TT_NOITRU_TOATHUOC A
+            where A.TIEPNHAN_ID = '$TIEPNHAN_ID$') C on C.TIEPNHAN_ID = B.TIEPNHAN_ID
+        </statement>
+        <!--Revision:0,72cdab2403a711bcb7ddbc2c2617d6e8-->
+        <statement id="DAO00019_GetTiepNhanByTiepNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select top 1 TIEPNHAN_ID, DOITUONG_ID, SOTIEPNHAN
+            from TT_TIEPNHAN
+            where [TIEPNHAN_ID] = '$TIEPNHAN_ID$'
+        </statement>
+        <!--Revision:0,b67f221c5a249fa20a500ee9f3963f70-->
+        <update id="DAO00019_Update_TiepNhan_NoiTru" parameterClass="HashTable">
+            update TT_TIEPNHAN set
+            TRANGTHAI = 'NOITRU'
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        </update>
+        <!--Revision:0,1c85b57fde024e54eaf5bc8e4bc85788-->
+        <update id="DAO00019_Update_TiepNhan_XacNhanBHYT" parameterClass="HashTable">
+          update TT_TIEPNHAN set
+          TRANGTHAI = 'HOANTHANH'
+          , KHOADULIEU = '1'
+          , NGAYKHOA = #NGAYCAPNHAT#
+          , NGAYCAPNHAT = #NGAYCAPNHAT#
+          , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+          where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        </update>
+        <!--Revision:0,de513b9305a565e53c997cbb887e2540-->
+        <statement id="DAO00019_GetDetails_TiepNhan_BHYT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_TIEPNHAN
+            where
+            BENHNHAN_ID = '$BENHNHAN_ID$' and SOBHYT is not null and SOBHYT != ''
+            and convert(date, THOIGIANTIEPNHAN) = convert(date, '$NGAYHIENTAI$')
+            and TRANGTHAI ='HOANTHANH'
+        </statement>
+        <!--Revision:0,60c0b06b8491f165a8cd37df8faefc80-->
+        <statement id="DAO00019_GetDetails_TiepNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select tn.TIEPNHAN_ID, tn.SOTIEPNHAN, tn.SOBHYT as SOTHE, tn.BHYTTUNGAY as NGAYHIEULUC,
+          tn.BHYTDENNGAY as NGAYHETHIEULUC, tn.BHYTNGAYCAP as NGAYCAP, tn.BHYTTREN3NAM as TREN3NAM, tn.KHUVUCSONG_ID,
+          tn.BHYTTREN5NAM as TREN5NAM,tn.NGAYMIENDONGCHITRA,tn.NOIGIOITHIEU_ID, tn.NGUOIGIOITHIEU_ID, tn.CHANDOANNGT,
+          tn.NOITIEPNHAN_ID, tn.DOITUONG_ID, tn.TRAITUYEN, tn.HINHTHUCDENKHAM_ID, tn.THOIGIANTIEPNHAN,
+          dv.DVYEUCAU_ID, dv.DICHVU_ID, dv.NOITHUCHIEN_ID as PHONGBAN_ID,
+          dv.NGUOITAO_ID as DV_NGUOITAO_ID, dv.NGAYTAO as DV_NGAYTAO, dv.THUTIENSAU, dv.BACSICHIDINH_ID, dv.NGUOICHIDINH_ID,
+          dv.NGUOICAPNHAT_ID as DV_NGUOICAPNHAT_ID, dv.NGAYCAPNHAT as DV_NGAYCAPNHAT,
+          vp.VIENPHI_ID, vp.KHONGTHUTIEN, vp.LOAI_CHIPHI, vp.LOAIGIA_ID as LOAIGIA,
+          vp.DATHUCHIEN, vp.DATHANHTOAN, vp.DONGIA_DOANHTHU,
+          dv.NOITHUCHIEN_ID, dv.TRANGTHAI,
+          vp.NGUOITAO_ID as VP_NGUOITAO_ID, vp.BHYT_DONGIA, vp.TYLE_VAT, vp.BANGGIA_ID, vp.GIAVON,
+          tn.NGAYTAO as TN_NGAYTAO,
+          vp.NGAYTAO as VP_NGAYTAO, vp.NGUOICAPNHAT_ID as VP_NGUOICAPNHAT_ID, vp.NGAYCAPNHAT as VP_NGAYCAPNHAT,
+          tn.SOCHUYENVIEN, tn.THOIGIANCHUYENTUYEN, tn.HINHTHUCCHUYENVIEN_ID, tn.LYDOCHUYENVIEN_ID, tn.ICDNOIGIOITHIEU_ID,
+          tn.SUDUNG_BHTN, tn.THE_ID, tn.LOAITHANHVIEN_ID, tn.THANHVIEN_ID, tn.VIP, tn.GHICHU_TIEPNHAN, tn.BAOLANH_VIENPHI
+          , tn.CONGTY_CHITRA_ID, tn.TRANGTHAI as TRANGTHAI_TIEPNHAN, tn.NGUOITAO_ID as TN_NGUOITAO_ID, tn.TINHTRANGHEN
+          , tn.NGUON_BENHNHAN_ID, tn.THONGTIN_KCB_BHYT, tn.LOAITIEPNHAN_ID, tn.LYDODENKHAM, vp.YEUCAUVP
+          from (
+          select top 1 *
+          from TT_TIEPNHAN
+          where BENHVIEN_ID = '$BENHVIEN_ID$'
+          <isNotEmpty prepend="and" property="BENHNHAN_ID">
+                BENHNHAN_ID = '$BENHNHAN_ID$' and convert(date, NGAYTAO) = convert(date, '$NGAYHIENTAI$')
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                <!--and convert(date, NGAYTAO) = convert(date, '$NGAYHIENTAI$')-->
+            </isNotEmpty>
+            order by
+            <!--NGAYTAO-->
+            SOTIEPNHAN desc
+            ) as tn
+            left join TT_DVYEUCAU dv on dv.TIEPNHAN_ID = tn.TIEPNHAN_ID and dv.HUYYEUCAU = '0'
+            left join TT_VIENPHI vp on vp.TIEPNHAN_ID = tn.TIEPNHAN_ID and vp.DICHVU_ID = dv.DICHVU_ID  and dv.DVYEUCAU_ID = vp.REF_ID
+        </statement>
+        <!--Revision:0,44029fc373f802dfc5beed52f7f45fb1-->
+        <statement id="DAO00019_GetDSTiepNhanByBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT T.*, NN.SOBENHAN AS SOBENHAN_DTNT
+            FROM TT_TIEPNHAN AS T
+            LEFT JOIN TT_NOITRU_NHAPVIEN AS NN ON NN.TIEPNHAN_ID = T.TIEPNHAN_ID AND NN.LOAIBENHAN = '2'
+            WHERE T.BENHNHAN_ID = '$BENHNHAN_ID$' AND T.BENHVIEN_ID = '$BENHVIEN_ID$' AND T.TRANGTHAI != 'HOANTHANH'
+            AND (NN.NHAPVIEN_ID IS NULL AND convert(date, T.NGAYTAO) = convert(date, '$NGAYHIENTAI$')
+            OR NN.NHAPVIEN_ID IS NOT NULL)
+            ORDER BY NN.SOBENHAN
+        </statement>
+        <!--Revision:0,6df5cce575d68bd9df7d981c0fccea33-->
+        <statement id="DAO00019_GetDSTiepNhanTrongNgay" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT T.*, NN.SOBENHAN AS SOBENHAN_DTNT
+            FROM TT_TIEPNHAN AS T
+            LEFT JOIN TT_NOITRU_NHAPVIEN AS NN ON NN.TIEPNHAN_ID = T.TIEPNHAN_ID AND NN.LOAIBENHAN = '2'
+            WHERE T.BENHNHAN_ID = '$BENHNHAN_ID$' AND T.BENHVIEN_ID = '$BENHVIEN_ID$'
+            AND (NN.NHAPVIEN_ID IS NULL AND convert(date, T.NGAYTAO) = convert(date, '$NGAYHIENTAI$')
+            OR NN.NHAPVIEN_ID IS NOT NULL)
+            ORDER BY NN.SOBENHAN
+        </statement>
+        <!--Revision:0,a3179810d5fa6a483e19927e27263384-->
+        <statement id="DAO00019_GetLichSuTiepNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select * from (
+          select ROW_NUMBER() OVER(ORDER BY tn.THOIGIANTIEPNHAN desc) AS ROWNUMBER, tn.*, bn.MAYTE,
+          bn.TENBENHNHAN, isnull(convert(varchar, NGAYSINH, 103), convert(varchar, NAMSINH)) as NGAYSINH,
+          bn.DESCRIPTION as GIOITINH, bn.DIACHILIENLAC
+          from (
+          select T.*, LOAIBENHAN = CASE ISNULL(NB.LOAIBENHAN,ISNULL(NN.LOAIBENHAN,0)) WHEN 0 THEN '' WHEN 2 THEN 'DTNT' WHEN 1 THEN 'CC' ELSE 'NT' END
+          , DT.TENDOITUONG, NV.TENNHANVIEN
+          from TT_TIEPNHAN AS T
+          left join TT_NOITRU_NHAPVIEN AS NN ON NN.TIEPNHAN_ID = T.TIEPNHAN_ID
+          left join TT_NOITRU_BENHAN AS NB ON NB.BENHAN_ID = (SELECT TOP 1 BENHAN_ID FROM TT_NOITRU_BENHAN WHERE TIEPNHAN_ID = T.TIEPNHAN_ID ORDER BY BENHAN_ID DESC)
+          left join TM_DOITUONG AS DT ON DT.DOITUONG_ID = T.DOITUONG_ID
+          left join TM_NHANVIEN AS NV ON NV.NHANVIEN_ID = T.NGUOITAO_ID
+          where
+          T.BENHVIEN_ID = '$BENHVIEN_ID$'
+          <!--<isNotEmpty prepend="and" property="TUNGAY">
+              convert(date, NGAYTAO) between convert(date, '$TUNGAY$') and convert(date, '$DENNGAY$')
+            </isNotEmpty>-->
+            <isNotEmpty prepend="and" property="TUNGAY">
+                convert(date, T.NGAYTAO) &gt;= '$TUNGAY$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="DENNGAY">
+                convert(date, T.NGAYTAO) &lt;= '$DENNGAY$'
+            </isNotEmpty>
+            ) as tn
+            inner join (select A.*, B.DESCRIPTION from TT_BENHNHAN A
+            left join TM_GENDER B on B.ID = A.GIOITINH) as bn on tn.BENHNHAN_ID = bn.BENHNHAN_ID
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="MAYTE">
+                  (bn.MAYTE like '%' + #MAYTE# + '%' or bn.TENBENHNHAN like '%' + #MAYTE# + '%')
+                </isNotEmpty>
+            </isParameterPresent>
+            ) as tn
+            where (tn.RowNumber between $FROMROW$ and $TOROW$) and tn.BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by tn.THOIGIANTIEPNHAN desc
+        </statement>
+        <!--Revision:0,d2b7eabfe619562793f9403218296d7d-->
+        <statement id="DAO00019_GetTotalLichSuTiepNhan" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            select count(*)
+            from (
+            select T.*
+            from TT_TIEPNHAN AS T
+            where
+            T.BENHVIEN_ID = '$BENHVIEN_ID$'
+            <!--<isNotEmpty prepend="and" property="TUNGAY">
+              convert(date, NGAYTAO) between convert(date, '$TUNGAY$') and convert(date, '$DENNGAY$')
+            </isNotEmpty>-->
+            <isNotEmpty prepend="and" property="TUNGAY">
+                convert(date, T.NGAYTAO) &gt;= '$TUNGAY$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="DENNGAY">
+                convert(date, T.NGAYTAO) &lt;= '$DENNGAY$'
+            </isNotEmpty>
+            ) as tn
+            inner join (select A.*, B.DESCRIPTION from TT_BENHNHAN A
+            left join TM_GENDER B on B.ID = A.GIOITINH) as bn on tn.BENHNHAN_ID = bn.BENHNHAN_ID
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="MAYTE">
+                  (bn.MAYTE like '%' + #MAYTE# + '%' or bn.TENBENHNHAN like '%' + #MAYTE# + '%')
+                </isNotEmpty>
+            </isParameterPresent>
+            where tn.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,a54cd1891b2070e1d7b308945977d877-->
+        <statement id="DAO00019_DanhSachDichVuHenCuaBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select 1 as CHON, A.BENHNHAN_ID, A.DICHVU_ID, A.NOITHUCHIEN_ID, A.NGAYTAIKHAM as NGAYHEN, A.THOIGIANTAIKHAM as THOIGIANHEN, A.NGAYTAO as NGAYTAOCUOCHEN,
+            B.TENDICHVU, C.TENPHONGBAN, B.MADICHVU, 'TT_NGOAITRU_KHAMBENH_HENTK' as REF_TABLE, 'KHAMBENH_HENTAIKHAM' as REF_COL, A.KHAMBENH_HENTAIKHAM as ID
+            from TT_NGOAITRU_KHAMBENH_HENTK A
+            left join TM_DICHVU B on A.DICHVU_ID = B.DICHVU_ID
+            left join TM_PHONGBAN C on C.PHONGBAN_ID = A.NOITHUCHIEN_ID
+            where A.BENHNHAN_ID = '$BENHNHAN_ID$' and (A.DATIEPNHAN is null or A.DATIEPNHAN = '0') and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+            union
+            select 1 as CHON, A.BENHNHAN_ID, A.DICHVU_ID, A.NOITHUCHIEN_ID, A.THOIGIANHEN_BATDAU as NGAYHEN, A.THOIGIANHEN_BATDAU as THOIGIANHEN, A.NGAYTAO AS NGAYTAOCUOCHEN,
+            B.TENDICHVU, C.TENPHONGBAN, B.MADICHVU, 'TT_LICHHEN' as REF_TABLE, 'LICHHEN_ID' as REF_COL, A.LICHHEN_ID as ID
+            from TT_LICHHEN A
+            left join TM_DICHVU B on A.DICHVU_ID = B.DICHVU_ID
+            left join TM_PHONGBAN C on C.PHONGBAN_ID = A.NOITHUCHIEN_ID
+            where A.BENHNHAN_ID = '$BENHNHAN_ID$' and (A.DATIEPNHAN is null or A.DATIEPNHAN = '0') and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,3d401ec66f5d73f15837a5e44947da7c-->
+        <update id="DAO00019_UpdateDichVuHenCuaBenhNhan" parameterClass="System.Collections.IDictionary">
+            update $REF_TABLE$ set
+            DATIEPNHAN = '1'
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            $REF_COL$ = '$ID$'
+        </update>
+        <!--Revision:0,6ef2524c29d64e81419d8d9e935b9ff7-->
+        <statement id="DAO00019_GetBenhNhanThanhVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select A.*, B.TENTHETHANHVIEN, convert(varchar, A.NGAYHIEULUC, 103) as NGAYHIEULUCTHE, B.SOTIEN
+            from TT_CSKH_THANHVIEN_CAPTHE A
+            left join TM_CSKH_THETHANHVIEN B on B.THETHANHVIEN_ID = A.THETHANHVIEN_ID
+            where   THANHVIEN_ID in (
+            select THANHVIEN_ID from TT_CSKH_THANHVIEN
+            where (BENHNHAN_ID = '$BENHNHAN_ID$' and TAMNGUNG is null or TAMNGUNG = '0')
+            and (DAXOA is null or DAXOA = '0'))
+            and A.KICHHOAT = '1' and (A.TAMNGUNG = '0' or A.TAMNGUNG is null)
+            <isNotEmpty prepend="and" property="NGAYHETHAN">
+                A.NGAYHETHAN &gt;= '$NGAYHIENTAI$'
+            </isNotEmpty>
+            and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by THE_ID desc
+        </statement>
+        <!--Revision:0,705f225684786928d3dc3d3f236c5b0c-->
+        <statement id="DAO00019_LaySoTienCongNo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select SOTIEN
+            from TT_BENHNHAN_CONGNO
+            where
+            MAYTE = '$MAYTE$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+            and ACTIVE = '1'
+        </statement>
+        <!--Revision:0,8119b3a650b42114a14b7c2e77d4437c-->
+        <statement id="DAO00019_GetCountListLichHen" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select COUNT(*) as TOTALROWS
+            from
+            (
+            select A.BENHNHAN_ID, A.DICHVU_ID, A.NOITHUCHIEN_ID, A.THOIGIANHEN_BATDAU as NGAYHEN, A.THOIGIANHEN_BATDAU as THOIGIANHEN, A.NGAYTAO AS NGAYTAOCUOCHEN,
+            'TT_LICHHEN' as REF_TABLE, 'LICHHEN_ID' as REF_COL, A.LICHHEN_ID as ID
+            from TT_LICHHEN A
+            INNER JOIN LST_DICTIONARY AS DIC ON DIC.DICTIONARY_ID = A.TRANGTHAI_ID AND DIC.DICTIONARY_TYPE_CODE = 'TrangThaiLichHen'
+            left join TT_BENHNHAN B on B.BENHNHAN_ID = A.BENHNHAN_ID
+            left join TM_DICHVU C on A.DICHVU_ID = C.DICHVU_ID and C.BENHVIEN_ID = '$BENHVIEN_ID$'
+            left join TM_PHONGBAN D on D.PHONGBAN_ID = A.NOITHUCHIEN_ID and D.BENHVIEN_ID = '$BENHVIEN_ID$'
+            where (A.DATIEPNHAN is null or A.DATIEPNHAN = '0') and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+            and (DIC.DICTIONARY_CODE = 'MOI' or (DIC.DICTIONARY_CODE = 'DOI' and A.LICHHEN_PREV IS NOT NULL))
+            <isNotEmpty prepend="and" property="TUNGAY">
+                CONVERT (DATE, A.THOIGIANHEN_BATDAU) &gt;= '$TUNGAY$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="DENNGAY">
+                CONVERT (DATE, A.THOIGIANHEN_BATDAU) &lt;= '$DENNGAY$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="TENBENHNHAN">
+              (B.TENBENHNHAN like '%' + #TENBENHNHAN# + '%' or B.MAYTE like '%' + #TENBENHNHAN# + '%')
+            </isNotEmpty>
+            ) lh
+        </statement>
+        <!--Revision:0,f12fd51c727251a482fda925c27e9d44-->
+        <statement id="DAO00019_GetListLichHen" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from
+            (SELECT ROW_NUMBER() OVER(order by lh.NGAYHEN) as ROWNUMBER, *
+            from
+            (
+            select A.BENHNHAN_ID, A.DICHVU_ID, A.NOITHUCHIEN_ID, A.THOIGIANHEN_BATDAU as NGAYHEN, A.THOIGIANHEN_BATDAU as THOIGIANHEN, A.NGAYTAO AS NGAYTAOCUOCHEN,
+            'TT_LICHHEN' as REF_TABLE, 'LICHHEN_ID' as REF_COL, A.LICHHEN_ID as LICHHEN_ID, B.TENBENHNHAN, B.MAYTE, C.TENDICHVU, D.TENPHONGBAN, C.MADICHVU, 0 as TAIKHAM
+            , (ISNULL(B.MAYTE,N'Chưa có mã') + ' - ' + ISNULL(B.TENBENHNHAN,A.TENBENHNHAN)) AS CODE_TENBENHNHAN
+            , A.TENBENHNHAN AS TENBENHNHANHEN
+            from TT_LICHHEN A
+            INNER JOIN LST_DICTIONARY AS DIC ON DIC.DICTIONARY_ID = A.TRANGTHAI_ID AND DIC.DICTIONARY_TYPE_CODE = 'TrangThaiLichHen'
+            left join TT_BENHNHAN B on B.BENHNHAN_ID = A.BENHNHAN_ID
+            left join TM_DICHVU C on A.DICHVU_ID = C.DICHVU_ID and C.BENHVIEN_ID = '$BENHVIEN_ID$'
+            left join TM_PHONGBAN D on D.PHONGBAN_ID = A.NOITHUCHIEN_ID and D.BENHVIEN_ID = '$BENHVIEN_ID$'
+            where (A.DATIEPNHAN is null or A.DATIEPNHAN = '0') and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+            and (DIC.DICTIONARY_CODE = 'MOI' or (DIC.DICTIONARY_CODE = 'DOI' and A.LICHHEN_PREV IS NULL))
+            <isNotEmpty prepend="and" property="TUNGAY">
+                CONVERT (DATE, A.THOIGIANHEN_BATDAU) &gt;= '$TUNGAY$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="DENNGAY">
+                CONVERT (DATE, A.THOIGIANHEN_BATDAU) &lt;= '$DENNGAY$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="TENBENHNHAN">
+              (B.TENBENHNHAN like '%' + #TENBENHNHAN# + '%' or B.MAYTE like '%' + #TENBENHNHAN# + '%')
+            </isNotEmpty>
+            ) lh
+            ) lst
+            <isNotEmpty prepend="" property="FROMROW">
+                where
+                lst.ROWNUMBER between $FROMROW$ and $TOROW$
+            </isNotEmpty>
+            order by lst.NGAYHEN asc
+        </statement>
+        <!--Revision:0,7e1a364f980b69dcabdb568ffd84bd5d-->
+        <statement id="DAO00019_KiemTraDummyUserTrongDB" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select ACCOUNT_NAME
+            from TM_SYS_USERS
+            where
+            ACCOUNT_NAME = '$ACCOUNT_NAME$'
+        </statement>
+        <!--Revision:0,3b14f4adc6cc490fbdbe5a6a337b5a54-->
+        <statement id="DAO00019_KiemtrabenhnhanBHYTDaHoanTat" resultClass="DataObject">
+            select A.*
+            from TT_TIEPNHAN A
+            where
+            A.BENHNHAN_ID = '$BENHNHAN_ID$'
+            and A.TRANGTHAI != 'HOANTHANH'
+            and (A.SOBHYT is not null and A.SOBHYT != '')
+            and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,c13c9a629e7c297b3471dc8cf9f144be-->
+        <statement id="DAO00019_GetListCongTyChiTra" resultClass="DataObject">
+            select *
+            from TM_CONGTYCHITRA
+            where
+            BENHVIEN_ID = '$BENHVIEN_ID$' AND TAMNGUNG = '0'
+        </statement>
+        <!--Revision:0,15f44a7fafd08d00c227535a961bc53a-->
+        <update id="DAO00019_Update_TiepNhan_NgoaiTru" parameterClass="HashTable">
+            update TT_TIEPNHAN set
+            TRANGTHAI = 'NGOAITRU'
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        </update>
+        <!--Revision:0,b984eac93b7ef65a4877e993b576ec17-->
+        <statement id="DAO00019_GetTiepNhanGanNhat" resultClass="DataObject">
+            select B.BENHNHAN_ID, isnull(convert(varchar, B.NGAYSINH, 103), convert(varchar, B.NAMSINH)) as NGAYTHANGNAMSINH
+            ,T.TIEPNHAN_ID AS TIEPNHAN_ID_L, T.SOBHYT AS SOTHE_L, T.BHYTTUNGAY AS NGAYHIEULUC_L, T.BHYTDENNGAY AS NGAYHETHIEULUC_L, T.KHUVUCSONG_ID AS KHUVUCSONG_ID_L
+            , T.NGAYMIENDONGCHITRA AS NGAYMIENDONGCHITRA_L, T.BHYTTREN5NAM AS TREN5NAM_L, T.TRAITUYEN AS TRAITUYEN_L
+            from TT_BENHNHAN  B
+            left join TT_TIEPNHAN  T ON T.TIEPNHAN_ID =
+            (SELECT TOP 1 TIEPNHAN_ID FROM TT_TIEPNHAN WHERE BENHNHAN_ID = B.BENHNHAN_ID ORDER BY THOIGIANTIEPNHAN DESC)
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="BENHNHAN_ID">
+                        B.BENHNHAN_ID = '$BENHNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAYTE">
+                        B.MAYTE = '$MAYTE$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by BENHNHAN_ID
+        </statement>
+      <update id="DAO00019_Update_TiepNhan_ThongtinChuyenVien" parameterClass="HashTable">
+        update TT_TIEPNHAN set
+        CHANDOANNGT = #CHANDOANNGT#,
+        ICDNOIGIOITHIEU_ID = #ICDNOIGIOITHIEU_ID#,
+        LYDOCHUYENVIEN_ID = #LYDOCHUYENVIEN_ID#,
+        NOIGIOITHIEU_ID = #NOIGIOITHIEU_ID#,
+        HINHTHUCCHUYENVIEN_ID = #HINHTHUCCHUYENVIEN_ID#,
+        THOIGIANCHUYENTUYEN = #THOIGIANCHUYENTUYEN#,
+        SOCHUYENVIEN = #SOCHUYENVIEN#
+        where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      </update>
+      <statement id="DAO00019_Get_TiepNhan_ThongtinChuyenVien" resultClass="DataObject">
+        select CHANDOANNGT, ICDNOIGIOITHIEU_ID, LYDOCHUYENVIEN_ID, NOIGIOITHIEU_ID, HINHTHUCCHUYENVIEN_ID, THOIGIANCHUYENTUYEN, SOCHUYENVIEN
+        from TT_TIEPNHAN
+        where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      </statement>
+      <statement id="DAO00019_Get_DVDelete_HasThanhToan" resultClass="DataObject">
+        select count(*) TOTAL
+        from TT_VIENPHI
+        where TIEPNHAN_ID = '$TIEPNHAN_ID$' and REF_ID = '$DVYEUCAU_ID$'
+        and REF_TABLE = 'TT_DVYEUCAU' and DICHVU_ID = '$DICHVU_ID$'
+        and (HOADON_ID is not null or len(HOADON_ID) > 0)
+      </statement>
+      <statement id="DAO00019_Get_DVDelete_HasThucHien" resultClass="DataObject">
+        select count(*) TOTAL
+        from TT_DVYEUCAU
+        where TIEPNHAN_ID = '$TIEPNHAN_ID$' and DVYEUCAU_ID = '$DVYEUCAU_ID$'
+        and TRANGTHAI != 'CHUAKETQUA'
+      </statement>
+      <statement id="DAO00019_GetDanhsachKhambenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from
+        (SELECT COUNT(*) OVER() as TOTALROWS, ROW_NUMBER() OVER(order by isnull($SOHANGDOI$,'999999999'), dv.NGAYGIOYEUCAU) as ROWNUMBER,
+        bn.MAYTE, bn.TENBENHNHAN, bn.NAMSINH, bn.NGAYSINH as TUOI, ISNULL(CONVERT(VARCHAR(10), bn.NGAYSINH, 103),CAST(bn.NAMSINH AS varchar)) as NGAYSINH, bn.DIACHILIENLAC as DIACHI, bn.GIOITINH, GD.DESCRIPTION as TENGIOITINH,
+        tn.DOITUONG_ID, tn.THOIGIANTIEPNHAN, tn.BENHNHAN_ID, tn.TIEPNHAN_ID, tn.TRAITUYEN, tn.SOTIEPNHAN,
+        dv.DICHVU_ID, dv.NOITHUCHIEN_ID, isnull(dv.NGAYTAO, dv.NGAYCAPNHAT) as THOIGIANDKDICHVU,
+        dv.KHAN, dv.NOIYEUCAU_ID, dv.NGAYGIOYEUCAU, dv.BACSICHIDINH_ID, dv.DONVIGIOITHIEU_ID, dv.NGUOIGIOITHIEU_ID,
+        tn.NOIGIOITHIEU_ID, kbnt.HUONGGIAIQUYET_ID,
+        dv.DVYEUCAU_ID, dv.MARIS, dv.TRANGTHAI as TRANGTHAICODE, B.TENNHOMDICHVU, dv.SOPHIEUYEUCAU, dv.KHAMBENH_NGOAITRU_ID, dv.NGUOICAPNHAT_ID, dv.NGAYCAPNHAT,
+        CASE WHEN Left(B.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(B.MANHOMDICHVU,2) END AS MANHOMDICHVU, B.MANHOMDICHVU as MANHOMDICHVUCHITIET, tn.TRANGTHAI as TRANGTHAI_TIEPNHAN,
+        '$DAKHAM$' as DAKHAM, isnull($SOHANGDOI$,'999999999') as SOHANGDOI,
+        vp.DATHANHTOAN, dv.TRANGTHAI_WFL,
+        BA.SOBENHAN, dv.CHANDOAN, dt.TENDOITUONG, isnull(kbnt.THOIGIANKHAM, dv.NGAYCAPNHAT) as THOIGIANKHAM
+        FROM [TT_TIEPNHAN] tn
+        join TT_BENHNHAN bn on tn.BENHNHAN_ID = bn.BENHNHAN_ID
+        inner join TT_DVYEUCAU dv on dv.TIEPNHAN_ID = tn.TIEPNHAN_ID
+        inner join TM_DICHVU A on A.DICHVU_ID = dv.DICHVU_ID
+        inner join TM_NHOMDICHVU B on B.NHOMDICHVU_ID = A.NHOMDICHVU_ID
+        left join TT_VIENPHI VP on VP.TIEPNHAN_ID = tn.TIEPNHAN_ID and VP.DICHVU_ID = dv.DICHVU_ID and VP.REF_ID = dv.DVYEUCAU_ID
+        left join TT_NOITRU_BENHAN BA on BA.TIEPNHAN_ID = tn.TIEPNHAN_ID AND dv.BENHAN_ID = BA.BENHAN_ID
+        inner join TM_GENDER GD on GD.ID = bn.GIOITINH
+        left join TT_NGOAITRU_KHAMBENH kbnt on kbnt.KHAMBENH_ID = dv.KHAMBENH_NGOAITRU_ID
+        left join TM_DOITUONG dt on dt.DOITUONG_ID = tn.DOITUONG_ID
+        where
+        dv.DICHVU_ID IS NOT NULL
+        and tn.BENHVIEN_ID = '$BENHVIEN_ID$'
+        and HUYYEUCAU = 0
+        and dv.NGAYHENCLS is NULL
+        <isNotEmpty prepend="and" property="TUNGAYTIEPNHAN">
+          cast(dv.NGAYYEUCAU as date) &gt;= cast('$TUNGAYTIEPNHAN$' as date)
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="DENNGAYTIEPNHAN">
+          cast(dv.NGAYYEUCAU as date) &lt;= cast('$DENNGAYTIEPNHAN$' as date)
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="NOITHUCHIEN_ID">
+          dv.NOITHUCHIEN_ID = '$NOITHUCHIEN_ID$'
+        </isNotEmpty>             
+        <isNotEmpty prepend="" property="DAKHAM">
+          <isEqual prepend="AND" property="DAKHAM" compareValue="True">
+            (dv.TRANGTHAI_WFL not in ('CHODONGTIEN', 'CHUAKETQUA') or (dv.TRANGTHAI = 'HOANTAT' or dv.TRANGTHAI = 'DACHUYENTUYEN'  or dv.TRANGTHAI = 'CHOXACNHAN' OR dv.TRANGTHAI = 'DANGTHUCHIEN'))
+            and (dv.TRANGTHAI != 'CHUAKETQUA' or dv.TRANGTHAI_WFL != 'HOANTHANH')
+          </isEqual>
+          <isEqual prepend="AND" property="DAKHAM" compareValue="False">
+            ((dv.TRANGTHAI_WFL = 'CHUAKETQUA' or (dv.TRANGTHAI = 'CHUAKETQUA' and dv.TRANGTHAI_WFL = 'HOANTHANH')) and (kbnt.HUONGGIAIQUYET_ID is null or kbnt.HUONGGIAIQUYET_ID = 0))
+            and (tn.TRANGTHAI != 'HOANTHANH')
+          </isEqual>
+        </isNotEmpty>          
+        <isNotEmpty prepend="and" property="TENBENHNHAN">
+          (bn.TENBENHNHAN like '%' + #TENBENHNHAN# + '%' or bn.MAYTE like '%' + #TENBENHNHAN# + '%')
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="MANHOMDICHVU">
+          (CASE WHEN Left(B.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(B.MANHOMDICHVU,2) END) = '$MANHOMDICHVU$'
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="MANHOMDICHVU_EXCEPT">
+          (CASE WHEN Left(B.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(B.MANHOMDICHVU,2) END) not in ($MANHOMDICHVU_EXCEPT$)
+        </isNotEmpty>       
+        ) lst
+        <isNotEmpty prepend="" property="FROMROW">
+          where
+          lst.ROWNUMBER between $FROMROW$ and $TOROW$
+        </isNotEmpty>
+        order by SOHANGDOI, NGAYGIOYEUCAU asc
+      </statement>
+      <statement id="DAO00019_GetDanhsachTrangThaiKhamBenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *            from
+        (SELECT COUNT(*) OVER() as TOTALROWS, ROW_NUMBER() <!--OVER(order by isnull(dv.SOTHUTU,'999999999'), dv.NGAYGIOYEUCAU)-->
+        OVER(order by bn.MAYTE, tn.sotiepnhan)
+        as
+        ROWNUMBER,
+        bn.MAYTE, bn.TENBENHNHAN, bn.NAMSINH, bn.NGAYSINH as TUOI, ISNULL(CONVERT(VARCHAR(10), bn.NGAYSINH, 103),CAST(bn.NAMSINH AS varchar)) as NGAYSINH, bn.DIACHILIENLAC as
+        DIACHI, bn.GIOITINH, GD.DESCRIPTION as TENGIOITINH,
+        tn.DOITUONG_ID, tn.THOIGIANTIEPNHAN, tn.BENHNHAN_ID, tn.TIEPNHAN_ID, tn.TRAITUYEN, tn.SOTIEPNHAN,
+        dv.DICHVU_ID,
+        dv.NOITHUCHIEN_ID, isnull(dv.NGAYTAO, dv.NGAYCAPNHAT) as THOIGIANDKDICHVU,
+        dv.KHAN, dv.NOIYEUCAU_ID, dv.NGAYGIOYEUCAU, dv.BACSICHIDINH_ID, dv.DONVIGIOITHIEU_ID,
+        dv.NGUOIGIOITHIEU_ID,
+        tn.NOIGIOITHIEU_ID, kbnt.HUONGGIAIQUYET_ID,
+        dv.DVYEUCAU_ID, dv.MARIS, dv.TRANGTHAI as TRANGTHAICODE, B.TENNHOMDICHVU, dv.SOPHIEUYEUCAU,
+        dv.KHAMBENH_NGOAITRU_ID, dv.NGUOICAPNHAT_ID, dv.NGAYCAPNHAT,
+        CASE WHEN Left(B.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(B.MANHOMDICHVU,2) END AS MANHOMDICHVU, B.MANHOMDICHVU as MANHOMDICHVUCHITIET, tn.TRANGTHAI as TRANGTHAI_TIEPNHAN,
+        '' as DAKHAM, isnull(dv.SOTHUTU,'999999999') as SOHANGDOI,
+        vp.DATHANHTOAN,
+        BA.SOBENHAN, dv.CHANDOAN
+        FROM [TT_TIEPNHAN] tn
+        join TT_BENHNHAN bn on tn.BENHNHAN_ID = bn.BENHNHAN_ID
+        left join TT_DVYEUCAU dv on dv.TIEPNHAN_ID = tn.TIEPNHAN_ID
+        left join TM_DICHVU A on A.DICHVU_ID = dv.DICHVU_ID
+        left join TM_NHOMDICHVU B on B.NHOMDICHVU_ID = A.NHOMDICHVU_ID
+        left join TT_VIENPHI VP on VP.TIEPNHAN_ID = tn.TIEPNHAN_ID and VP.DICHVU_ID = dv.DICHVU_ID and VP.REF_ID = dv.DVYEUCAU_ID
+        left join TT_NOITRU_BENHAN BA on BA.TIEPNHAN_ID = tn.TIEPNHAN_ID AND dv.BENHAN_ID = BA.BENHAN_ID
+        left join TM_GENDER GD on GD.ID = bn.GIOITINH
+        left join TT_NGOAITRU_KHAMBENH kbnt on kbnt.KHAMBENH_ID = dv.KHAMBENH_NGOAITRU_ID
+        where
+        dv.DICHVU_ID IS NOT NULL
+        and tn.BENHVIEN_ID = '$BENHVIEN_ID$'
+        and HUYYEUCAU = 0
+        and dv.NGAYHENCLS is NULL
+        <isNotEmpty prepend="and" property="TUNGAY">
+          tn.NGAYTIEPNHAN &gt;= '$TUNGAY$'
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="DENNGAY">
+          tn.NGAYTIEPNHAN &lt;= '$DENNGAY$'
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="NOITHUCHIEN_ID">
+            dv.NOITHUCHIEN_ID = '$NOITHUCHIEN_ID$'
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="TENBENHNHAN">
+          (bn.TENBENHNHAN like '%' + #TENBENHNHAN# + '%' or bn.MAYTE like '%' + #TENBENHNHAN# + '%')
+        </isNotEmpty>
+        ) lst
+        <isNotEmpty prepend="" property="FROMROW">
+        where
+        lst.ROWNUMBER between $FROMROW$ and $TOROW$
+        </isNotEmpty>
+        order by <!--SOHANGDOI, NGAYGIOYEUCAU-->MAYTE asc
+      </statement>
+      <statement id="DAO00019_GetBenhAnWithTiepNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select * from TT_NOITRU_BENHAN where TIEPNHAN_ID = '$TIEPNHAN_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <statement id="DAO00019_KiemtrabenhnhanNgoaitruChuaKHoabenhan" resultClass="DataObject">
+        select A.* , C.TRANGTHAI as STATUS, C.SOTIEPNHAN, C.SOBHYT, C.BHYTTUNGAY, C.BHYTDENNGAY, C.NGAYTIEPNHAN
+        from TT_BENHNHAN A
+        inner join TT_TIEPNHAN C on C.BENHNHAN_ID = A.BENHNHAN_ID
+        where (C.TRANGTHAI = 'DATIEPNHAN') and A.BENHVIEN_ID = '$BENHVIEN_ID$'  and A.ACTIVE = '1' and A.MAYTE = '$MAYTE$'
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          C.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        </isNotEmpty>
+      </statement>
+      <statement id="DAO00019_Add_TT_TIEPNHAN_SOTHEBHYT" parameterClass="DataObject" resultClass="DataObject">
+        INSERT INTO TT_TIEPNHAN_SOTHEBHYT
+        (TIEPNHAN_ID
+        ,BENHNHAN_ID
+        ,BENHAN_ID
+        ,DOITUONG_ID
+        ,SOBHYT
+        ,BHYTTUNGAY
+        ,BHYTDENNGAY
+        ,BHYTNGAYCAP
+        ,BHYTTREN3NAM
+        ,BHYTTREN5NAM
+        ,NGAYMIENDONGCHITRA
+        ,TRAITUYEN
+        ,BENHVIEN_ID
+        ,NOITAO_ID
+        ,NGAYTAO
+        ,NGUOITAO_ID
+        ,NGAYCAPNHAT
+        ,NGUOICAPNHAT_ID)
+        VALUES
+        (#TIEPNHAN_ID#
+        ,#BENHNHAN_ID#
+        ,#BENHAN_ID#
+        ,#DOITUONG_ID#
+        ,#SOBHYT#
+        ,#BHYTTUNGAY#
+        ,#BHYTDENNGAY#
+        ,#BHYTNGAYCAP#
+        ,#BHYTTREN3NAM#
+        ,#BHYTTREN5NAM#
+        ,#NGAYMIENDONGCHITRA#
+        ,#TRAITUYEN#
+        ,#BENHVIEN_ID#
+        ,#NOITAO_ID#
+        ,#NGAYTAO#
+        ,#NGUOITAO_ID#
+        ,#NGAYCAPNHAT#
+        ,#NGUOICAPNHAT_ID#)
+      </statement>
+      <statement id="DAO00019_Update_TT_TIEPNHAN_SOTHEBHYT" parameterClass="DataObject" resultClass="DataObject">
+        update TT_TIEPNHAN_SOTHEBHYT
+        set BENHAN_ID = '$BENHAN_ID$'
+        where TIEPNHAN_ID = (select top 1 TIEPNHAN_ID from TT_TIEPNHAN_SOTHEBHYT where TIEPNHAN_ID = '$TIEPNHAN_ID$' order by SOBHYT_HUONG_ID desc)
+      </statement>
+      <statement id="DAO00019_GetLoaiGiaLoaiKhachHang" resultClass="DataObject">
+        select A.*, B.DICTIONARY_CODE MAKHACHHANG, C.TENLOAIGIA
+        from TM_NGUONKHACHHANG_LOAIGIA A
+        left join LST_DICTIONARY B on A.NGUONKHACHHANG_BENHNHAN_ID = B.DICTIONARY_ID
+        inner join TM_LOAIGIA C on C.LOAIGIA_ID = A.LOAIGIA_ID and CAPTREN_ID  = (select LOAIGIA_ID from TM_LOAIGIA where MALOAIGIA = 'GiaDichVu')
+        where B.DICTIONARY_TYPE_CODE = 'NguonKhachHang'
+      </statement>
+      <statement id="DAO00019_GetLoaiGiaDuocLoaiKhachHang" resultClass="DataObject">
+        select A.LOAIGIA_ID
+        from TM_NGUONKHACHHANG_LOAIGIA A
+        left join LST_DICTIONARY B on A.NGUONKHACHHANG_BENHNHAN_ID = B.DICTIONARY_ID
+        inner join TM_LOAIGIA C on C.LOAIGIA_ID = A.LOAIGIA_ID and CAPTREN_ID  = (select LOAIGIA_ID from TM_LOAIGIA where MALOAIGIA = 'Giathuoc')
+        where B.DICTIONARY_TYPE_CODE = 'NguonKhachHang' and B.DICTIONARY_CODE = '$MAKHACHHANG$'
+      </statement>
+    </statements>
+</sqlMap>

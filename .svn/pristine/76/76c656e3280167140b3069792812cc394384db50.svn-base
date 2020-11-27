@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <setting>
+    <section id="DaoProvider" path="Services\"/>
+
+    <!--For local (direct) mode-->
+    <!--<section id="ServiceProvider" path="Services\" direct="true"/>-->
+    <section id="ServiceProvider" path="http://10.14.138.43:50000/demo1/his/api" routing="false"/>
+    <section id="ResourceFolder" path="http://10.14.138.43:50000/demo1/Resource/Data/"/>
+    <section id="ReportFolder" path="http://10.14.138.43:50000/demo1/Resource/Reports/"/>
+    <section id="UserService" uri ="http://10.14.138.43:50000/demo1/user/api" />
+
+    <!--<section id="ServiceProvider" path="http://10.86.222.72:1050/api" routing="false"/>-->
+    <!--<section id="ResourceFolder" path="http://10.86.222.72:1010/Resource/Data/"/>
+    <section id="ReportFolder" path="D:\Working\eHospital\trunk\02.eHospital\06.Reports"/>
+    <section id="UserService" uri ="http://10.86.222.72:1010/user/api" />-->
+
+    <!--<section id="ServiceProvider" path="https://10.14.138.43/pkhcm001/his/api" routing="false"/>
+    <section id="ResourceFolder" path="https://10.14.138.43/pkhcm001/Resource/Data/"/>
+    <section id="ReportFolder" path="https://10.14.138.43/pkhcm001/Resource/Reports/"/>
+    <section id="UserService" uri ="https://10.14.138.43/pkhcm001/user/api" />
+    <section id="Theme" source="https://10.14.138.43/pkhcm001/resource/theme/ThemeIntranet.xml"/>-->
+    
+    <!--<section id="ServiceProvider" path="http://10.14.142.21:6010/api" routing="false"/>
+    <section id="ResourceFolder" path="http://10.14.142.21:6010/resource/Data/"/>
+    <section id="ReportFolder" path="http://10.14.142.21:6010/resource/Reports/"/>
+    <section id="UserService" uri ="http://10.14.142.21:6010/user/api/" />-->
+        
+    <!--For local (webservice) mode-->
+    <!--<section id="ServiceProvider" path="http://10.14.141.5:7001/api/" routing="false"/>-->
+    <!--<section id="ResourceFolder" path="http://10.86.222.71:112/Data/"/>
+    <section id="ReportFolder" path="http://10.86.222.71:112/Reports/"/>
+    <section id="UserService" uri ="http://10.86.222.71:3011/api/" />-->
+    
+    <!--For Web service mode : HL-->    
+    <!--<section id="ServiceProvider" path="http://10.86.222.72:8010/api/"  routing="false"/>    
+    <section id="ResourceFolder" path="http://10.86.222.72:8015/Data/"/>
+    <section id="ReportFolder" path="http://10.86.222.72:8015/Reports/"/>
+    <section id="UserService" uri ="http://10.86.222.72:8012/api/" />-->
+
+    <!--For Web service mode : DN-DL-->
+    <!--<section id="ServiceProvider" path="http://10.86.222.71:2010/api/"/>
+    <section id="ResourceFolder" path="http://10.86.222.71:112/Data/"/>
+    <section id="ReportFolder" path="http://10.86.222.71:112/Reports/"/>
+    <section id="UserService" uri ="http://10.86.222.71:2011/api/" />-->
+
+    <!--For Web service mode : UB-->
+    <!--<section id="ServiceProvider" path="http://10.14.141.5:7001/api/" routing="false"/>    
+    <section id="ResourceFolder" path="http://10.14.142.21:112/Data/"/>
+    <section id="ReportFolder" path="http://10.14.142.21:112/Reports/"/>
+    <section id="UserService" uri ="http://10.14.141.5:7002/api/" />-->
+    
+    <!--For Web service mode : Binh Thanh-->
+    <!--<section id="UserService" uri ="http://10.86.222.71:4012/api/" />-->
+    
+    <section id="Theme" source="http://10.14.138.43:50000/demo1/resource/theme/ThemeIntranet.xml"/>
+        
+    <!--<section id="Resource" assembly="Resources.dll"/>-->       
+    <!--Local folders-->
+    <section id="TempFolder" path="d:/eHosResources/Temp"/>
+    <section id="CacheFolder" path="d:/eHosResources/Caches"/>
+    <section id="VoiceControl" enable="false"/>
+  </setting>
+
+  <!--Add the localized string files-->
+  <strings>
+    <section id="Common" source="Strings/Common.xml"/>
+    <section id="Messages" source="Strings/Messages.xml"/>
+    <section id="Fields" source="Strings/Fields.xml"/>
+    <section id="Validation" source="Strings/Validation.xml"/>
+    <section id="FormTitle" source="Strings/FormTitle.xml"/>
+    <section id="MENU" source="Strings/MENU.xml" />
+	  <section id="FormString" source="Strings/FormString.xml" />
+    <!--<section id="Common" source="http://10.86.222.72:1010/Resource/Strings/Common.xml"/>
+    <section id="Messages" source="http://10.86.222.72:1010/Resource/Strings/Messages.xml"/>
+    <section id="Fields" source="http://10.86.222.72:1010/Resource/Strings/Fields.xml"/>
+    <section id="Validation" source="http://10.86.222.72:1010/Resource/Strings/Validation.xml"/>
+    <section id="FormTitle" source="http://10.86.222.72:1010/Resource/Strings/FormTitle.xml"/>
+    <section id="MENU" source="http://10.86.222.72:1010/Resource/Strings/MENU.xml" />
+    <section id="FormString" source="http://10.86.222.72:1010/Resource/Strings/FormString.xml" />-->
+  </strings>
+
+  <Contents>
+    <section id="FRAME" class="FPT.eHospital.Forms.Base.VMFrame" assembly="Screens/ScrSYS"/>
+    <!--<section id="MAIN" class="FPT.eHospital.Forms.Base.VMHosSingleLauncher" assembly="Screens/ScrSYS"/>-->
+    <section id="MAIN" class="FPT.eHospital.Forms.Base.VMHosTabLauncher" assembly="Screens/ScrSYS"/>
+    <!--<section id="MAIN" class="FPT.eHospital.Forms.Base.VMHosMain" assembly="Screens/ScrSYS"/>-->
+    <section id="LOGIN" class="FPT.eHospital.Forms.Common.VMLogin" assembly="Screens/ScrSYS"/>
+  </Contents>  
+</configuration>

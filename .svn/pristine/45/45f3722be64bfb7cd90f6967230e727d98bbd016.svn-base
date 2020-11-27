@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,914a996ded8078c5e35653cdf13331da-->
+        <statement id="DAO00215_BANGGIA_CPH_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_BANGGIA_CPH (
+            LOAIBANGGIA
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , NGAYBANHANH
+            , NGAYHIEULUC
+            , NGAYHETHIEULUC
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGUOITAO_ID
+            , NGAYTAO
+            , NGUOICAPNHAT_ID
+            , NGAYCAPNHAT
+            , BENHVIEN_ID
+            ) values (
+            #LOAIBANGGIA#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #NGAYBANHANH#
+            , #NGAYHIEULUC#
+            , #NGAYHETHIEULUC#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGUOITAO_ID#
+            , #NGAYTAO#
+            , #NGUOICAPNHAT_ID#
+            , #NGAYCAPNHAT#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,4eaf9e8ebcbe3ec38c043de3c062f76f-->
+        <update id="DAO00215_BANGGIA_CPH_Update" parameterClass="System.Collections.IDictionary">
+            update TM_BANGGIA_CPH set
+            LOAIBANGGIA = #LOAIBANGGIA#
+            , LOAIGIA_ID = #LOAIGIA_ID#
+            , TIENTE_ID = #TIENTE_ID#
+            , NGAYBANHANH = #NGAYBANHANH#
+            , NGAYHIEULUC = #NGAYHIEULUC#
+            , NGAYHETHIEULUC = #NGAYHETHIEULUC#
+            , TRANGTHAI = #TRANGTHAI#
+            , TAMNGUNG = #TAMNGUNG#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            BANGGIA_CPH_ID = '$BANGGIA_CPH_ID$'
+        </update>
+        <!--Revision:0,3e9fcfe67d996c79e3940ce42922f13d-->
+        <statement id="DAO00215_BANGGIA_CPH_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_BANGGIA_CPH
+            where
+            BANGGIA_CPH_ID = '$BANGGIA_CPH_ID$'
+        </statement>
+        <!--Revision:1,d68fddda32a5c352ef424b52f7916d1d-->
+        <insert id="DAO00215_BANGGIA_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_BANGGIA (
+            BANGGIA_ID
+            , LOAIBANGGIA
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , NGAYBANHANH
+            , NGAYHIEULUC
+            , NGAYHETHIEULUC
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGUOITAO_ID
+            , NGAYTAO
+            , NGUOICAPNHAT_ID
+            , NGAYCAPNHAT
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_ID#
+            , #LOAIBANGGIA#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #NGAYBANHANH#
+            , #NGAYHIEULUC#
+            , #NGAYHETHIEULUC#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGUOITAO_ID#
+            , #NGAYTAO#
+            , #NGUOICAPNHAT_ID#
+            , #NGAYCAPNHAT#
+            , #BENHVIEN_ID#
+            )
+            <selectKey resultClass="System.Int64" type="post">
+                SELECT $BANGGIA_ID$ as value
+            </selectKey>
+        </insert>
+        <!--Revision:0,5eb7f524a5a6c71152895b86ea64a75e-->
+        <statement id="DAO00215_BANGGIA_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_BANGGIA
+            where
+            BANGGIA_ID = '$BANGGIA_ID$'
+        </statement>
+        <!--Revision:0,81fb4ff1f724f768a542b0488cd44df0-->
+        <statement id="DAO00215_BANGGIA_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT B.*
+            FROM TM_BANGGIA AS B
+            WHERE B.BENHVIEN_ID = '$BENHVIEN_ID$' AND B.TAMNGUNG = '0' AND B.LOAIGIA_ID = '$LOAIGIA_ID$'
+        </statement>
+        <!--Revision:0,b32149fa6954a38261dd19a360a11604-->
+        <statement id="DAO00215_BANGGIA_HIS_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT B.*
+            FROM TM_BANGGIA_HIS AS B
+            WHERE B.BENHVIEN_ID = '$BENHVIEN_ID$' AND B.TAMNGUNG = '0' AND B.BANGGIA_ID = '$BANGGIA_ID$' AND B.LOAIGIA_ID = '$LOAIGIA_ID$'
+        </statement>
+        <!--Revision:0,c8b255e587f45c4e87c9626899a977c7-->
+        <statement id="DAO00215_BANGGIA_CPH_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT B.*
+            FROM TM_BANGGIA_CPH AS B
+            WHERE B.BENHVIEN_ID = '$BENHVIEN_ID$' AND B.TAMNGUNG = '0' AND B.LOAIGIA_ID = '$LOAIGIA_ID$'
+        </statement>
+        <!--Revision:1,2b4b70fdc538eeffad2d6eae6a58aad4-->
+        <insert id="DAO00215_BANGGIA_HIS_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_BANGGIA_HIS (
+            BANGGIA_ID
+            , LOAIBANGGIA
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , NGAYBANHANH
+            , NGAYHIEULUC
+            , NGAYHETHIEULUC
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGUOITAO_ID
+            , NGAYTAO
+            , NGUOICAPNHAT_ID
+            , NGAYCAPNHAT
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_ID#
+            , #LOAIBANGGIA#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #NGAYBANHANH#
+            , #NGAYHIEULUC#
+            , #NGAYHETHIEULUC#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGUOITAO_ID#
+            , #NGAYTAO#
+            , #NGUOICAPNHAT_ID#
+            , #NGAYCAPNHAT#
+            , #BENHVIEN_ID#
+            )
+            <selectKey resultClass="System.Int64" type="post">
+                SELECT $BANGGIA_ID$ as value
+            </selectKey>
+        </insert>
+        <!--Revision:0,aa26a7126ce2438914c19deefe7aba39-->
+        <statement id="DAO00215_PHA65_BANGGIA_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT L.LOAIGIA_ID AS CATEGORY_ID, L.MALOAIGIA AS CATEGORY_CODE, L.TENLOAIGIA AS CATEGORY_NAME, 0 AS FOLDER_LEVEL, 0 AS PARENT_ID, '1' AS IS_FOLDER
+            , '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 0 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaThuoc'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$' AND L.PHAMVI = 'BV'
+            UNION ALL
+            SELECT (L.LOAIGIA_ID + $IDENTIFY$) AS CATEGORY_ID, CONVERT(VARCHAR(10),L.LOAIGIA_ID) + '_GiaHienHanh' AS CATEGORY_CODE, N'Giá hiện hành' AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER
+            , '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 1 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaThuoc'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$' AND L.PHAMVI = 'BV'
+            UNION ALL
+            SELECT (L.LOAIGIA_ID + 2*$IDENTIFY$) AS CATEGORY_ID, CONVERT(VARCHAR(10),L.LOAIGIA_ID) + '_GiaChuaPhatHanh' AS CATEGORY_CODE, N'Giá chưa phát hành' AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER
+            , '1' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 2 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaThuoc'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$' AND L.PHAMVI = 'BV'
+            UNION ALL
+            SELECT  (L.LOAIGIA_ID + B.BANGGIA_ID + 3*$IDENTIFY$) AS CATEGORY_ID, CONVERT(NVARCHAR(10),B.NGAYHETHIEULUC,103) + '_GiaCu' AS CATEGORY_CODE, N'Bảng giá cũ (' + CONVERT(VARCHAR(10),B.NGAYHETHIEULUC,103) + ')' AS CATEGORY_NAME
+            , 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER, '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 3 AS TYPE, B.BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaThuoc'
+            INNER JOIN TM_BANGGIA_HIS AS B ON B.LOAIGIA_ID = L.LOAIGIA_ID AND B.TAMNGUNG = '0' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$' AND L.PHAMVI = 'BV'
+        </statement>
+        <!--Revision:0,31e3e6918a7ab90d51f10bc03cf31b4f-->
+        <statement id="DAO00215_PHA66_BANGGIA_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT L.LOAIGIA_ID AS CATEGORY_ID, L.MALOAIGIA AS CATEGORY_CODE, L.TENLOAIGIA AS CATEGORY_NAME, 0 AS FOLDER_LEVEL, 0 AS PARENT_ID, '1' AS IS_FOLDER
+            , '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 0 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaThuoc'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$' AND L.PHAMVI = 'NT'
+            UNION ALL
+            SELECT (L.LOAIGIA_ID + $IDENTIFY$) AS CATEGORY_ID, CONVERT(VARCHAR(10),L.LOAIGIA_ID) + '_GiaHienHanh' AS CATEGORY_CODE, N'Giá hiện hành' AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER
+            , '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 1 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaThuoc'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$' AND L.PHAMVI = 'NT'
+            UNION ALL
+            SELECT (L.LOAIGIA_ID + 2*$IDENTIFY$) AS CATEGORY_ID, CONVERT(VARCHAR(10),L.LOAIGIA_ID) + '_GiaChuaPhatHanh' AS CATEGORY_CODE, N'Giá chưa phát hành' AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER
+            , '1' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 2 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaThuoc'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$' AND L.PHAMVI = 'NT'
+            UNION ALL
+            SELECT  (L.LOAIGIA_ID + B.BANGGIA_ID + 3*$IDENTIFY$) AS CATEGORY_ID, CONVERT(NVARCHAR(10),B.NGAYHETHIEULUC,103) + '_GiaCu' AS CATEGORY_CODE, N'Bảng giá cũ (' + CONVERT(VARCHAR(10),B.NGAYHETHIEULUC,103) + ')' AS CATEGORY_NAME
+            , 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER, '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 3 AS TYPE, B.BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaThuoc'
+            INNER JOIN TM_BANGGIA_HIS AS B ON B.LOAIGIA_ID = L.LOAIGIA_ID AND B.TAMNGUNG = '0' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$' AND L.PHAMVI = 'NT'
+        </statement>
+        <!--Revision:0,41f2b04d063fef8f3b0b3f595eb8f746-->
+        <statement id="DAO00215_PHA65_LOAIDUOC" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT * FROM TM_LOAIDUOC
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_LOAIDUOC.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            ORDER BY TM_LOAIDUOC.MALOAIDUOC
+        </statement>
+        <!--Revision:0,924ac2230173918b45a64fc728d64781-->
+        <statement id="DAO00215_PHA65_DONGIA_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT D.MADUOC,D.MADUOCBV, ISNULL(TD.TENDUOC, D.MADUOC) + ', ' + ISNULL(D.HAMLUONG,'') + '( ' + ISNULL(HSX.TENHANGSANXUAT,'') + ', ' + ISNULL(DIC.DICTIONARY_NAME,'') + ')' AS TENDUOC
+            , D.SO_QDTT, DVT.TENDONVITINH, LD.TENLOAIDUOC, DD.DONGIA, DD.GIAVONGANNHAT, DD.TYLEVAT, DD.GIATRIVAT, DD.NGAYCAPNHAT, DD.NGUOICAPNHAT_ID, U.TENNHANVIEN AS NGUOICAPNHAT
+            , LD.LOAIVATTU_ID, LD.LOAIDUOC_ID, D.NHOMPHATHANHGIA_ID
+            FROM TM_DUOC AS D
+            INNER JOIN TM_LOAIDUOC AS LD ON LD.LOAIDUOC_ID = D.LOAIDUOC_ID AND LD.TAMNGUNG = '0' AND LD.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN TM_TENDUOC AS TD ON TD.TENDUOC_ID = D.TENDUOC_ID AND TD.TAMNGUNG = '0' AND TD.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN TM_HANGSANXUAT AS HSX ON HSX.HANGSANXUAT_ID = D.HANGSANXUAT_ID AND HSX.TAMNGUNG = '0' AND HSX.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN LST_DICTIONARY AS DIC ON DIC.DICTIONARY_ID = D.QUOCGIA_ID AND DIC.DICTIONARY_TYPE_CODE = 'QuocGia' AND DIC.ENABLED = '1'
+            <!--AND DIC.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            LEFT JOIN TM_DONVITINH AS DVT ON DVT.DONVITINH_ID = D.DONVITINH_ID
+            LEFT JOIN TM_DUOC_DONGIA AS DD ON DD.DUOC_ID = D.DUOC_ID AND DD.LOAIGIA_ID = '$LOAIGIA_ID$'
+            LEFT JOIN TM_NHANVIEN AS U ON U.NHANVIEN_ID = DD.NGUOICAPNHAT_ID
+            INNER JOIN TM_LOAIGIA AS LG ON LG.LOAIGIA_ID = '$LOAIGIA_ID$' AND LG.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN LST_DICTIONARY AS DIC2 ON DIC2.DICTIONARY_ID = LG.NHOMGIA_ID AND DIC2.DICTIONARY_TYPE_CODE = 'NhomGia'
+            <!--AND DIC2.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            WHERE D.BENHVIEN_ID = '$BENHVIEN_ID$' AND (D.TAMNGUNG = '0' OR D.TAMNGUNG IS NULL) AND (DIC2.DICTIONARY_CODE != 'BHYT' OR (DIC2.DICTIONARY_CODE = 'BHYT' AND D.BHYT = '1'))
+            AND (('$PHAMVI$' = 'BV' AND D.BENHVIEN = '1') OR('$PHAMVI$' = 'NT' AND D.NHATHUOC = '1'))
+        </statement>
+        <!--Revision:0,f4212de68563ab979acbf7c6797eb363-->
+        <statement id="DAO00215_PHA65_DONGIA_HIS_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          SELECT D.MADUOC,D.MADUOCBV, D.TENDUOCDAYDU AS TENDUOC
+          , D.SO_QDTT, DVT.TENDONVITINH, LD.TENLOAIDUOC, DD.DONGIA, DD.GIAVONGANNHAT, DD.TYLEVAT, DD.GIATRIVAT, DD.NGAYCAPNHAT, DD.NGUOICAPNHAT_ID, U.TENNHANVIEN AS NGUOICAPNHAT
+          , LD.LOAIVATTU_ID, LD.LOAIDUOC_ID, D.NHOMPHATHANHGIA_ID
+          FROM TM_DUOC AS D
+          INNER JOIN TM_LOAIDUOC AS LD ON LD.LOAIDUOC_ID = D.LOAIDUOC_ID AND LD.TAMNGUNG = '0' AND LD.BENHVIEN_ID = '$BENHVIEN_ID$'
+          LEFT JOIN TM_TENDUOC AS TD ON TD.TENDUOC_ID = D.TENDUOC_ID AND TD.TAMNGUNG = '0' AND TD.BENHVIEN_ID = '$BENHVIEN_ID$'
+          LEFT JOIN TM_HANGSANXUAT AS HSX ON HSX.HANGSANXUAT_ID = D.HANGSANXUAT_ID AND HSX.TAMNGUNG = '0' AND HSX.BENHVIEN_ID = '$BENHVIEN_ID$'
+          LEFT JOIN LST_DICTIONARY AS DIC ON DIC.DICTIONARY_ID = D.QUOCGIA_ID AND DIC.DICTIONARY_TYPE_CODE = 'QuocGia' AND DIC.ENABLED = '1'
+          <!--AND DIC.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            LEFT JOIN TM_DONVITINH AS DVT ON DVT.DONVITINH_ID = D.DONVITINH_ID
+            LEFT JOIN TM_DUOC_DONGIA_HIS AS DD ON DD.DUOC_ID = D.DUOC_ID AND DD.LOAIGIA_ID = '$LOAIGIA_ID$' AND DD.BANGGIA_ID = '$BANGGIA_ID$'
+            LEFT JOIN TM_NHANVIEN AS U ON U.NHANVIEN_ID = DD.NGUOICAPNHAT_ID
+            INNER JOIN TM_LOAIGIA AS LG ON LG.LOAIGIA_ID = '$LOAIGIA_ID$' AND LG.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN LST_DICTIONARY AS DIC2 ON DIC2.DICTIONARY_ID = LG.NHOMGIA_ID AND DIC2.DICTIONARY_TYPE_CODE = 'NhomGia'
+            <!--AND DIC2.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            WHERE D.BENHVIEN_ID = '$BENHVIEN_ID$' AND (('$PHAMVI$' = 'BV' AND D.BENHVIEN = '1') OR('$PHAMVI$' = 'NT' AND D.NHATHUOC = '1'))
+        </statement>
+        <!--Revision:0,54ca7b95b56d23ee49a62760ff6624bb-->
+        <statement id="DAO00215_PHA65_DONGIA_CPH_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          SELECT D.MADUOC,D.MADUOCBV, D.DUOC_ID, ISNULL(TD.TENDUOC, D.MADUOC) + ', ' + ISNULL(D.HAMLUONG,'') + '( ' + ISNULL(HSX.TENHANGSANXUAT,'') + ', ' + ISNULL(DIC.DICTIONARY_NAME,'') + ')' AS TENDUOC
+          , D.SO_QDTT, DVT.TENDONVITINH, LD.TENLOAIDUOC, DD.DONGIA, DD.GIAVONGANNHAT, DD.TYLEVAT, DD.GIATRIVAT, DD.NGAYCAPNHAT, DD.NGUOICAPNHAT_ID, U.TENNHANVIEN AS NGUOICAPNHAT
+          , DD2.DONGIA AS DONGIAHIENTAI, (ISNULL(DD.DONGIA,0) - ISNULL(DD2.DONGIA,0)) AS CHENHLECH, DD.BANGGIA_CPH_ID
+          , LD.LOAIVATTU_ID, LD.LOAIDUOC_ID, D.NHOMPHATHANHGIA_ID
+          FROM TM_DUOC AS D
+          INNER JOIN TM_LOAIDUOC AS LD ON LD.LOAIDUOC_ID = D.LOAIDUOC_ID AND LD.TAMNGUNG = '0'
+          LEFT JOIN TM_TENDUOC AS TD ON TD.TENDUOC_ID = D.TENDUOC_ID
+          LEFT JOIN TM_HANGSANXUAT AS HSX ON HSX.HANGSANXUAT_ID = D.HANGSANXUAT_ID AND HSX.TAMNGUNG = '0'
+          LEFT JOIN LST_DICTIONARY AS DIC ON DIC.DICTIONARY_ID = D.QUOCGIA_ID AND DIC.DICTIONARY_TYPE_CODE = 'QuocGia' AND DIC.ENABLED = '1'
+          LEFT JOIN TM_DONVITINH AS DVT ON DVT.DONVITINH_ID = D.DONVITINH_ID
+          LEFT JOIN TM_DUOC_DONGIA_CPH AS DD ON DD.DUOC_ID = D.DUOC_ID AND DD.LOAIGIA_ID = '$LOAIGIA_ID$'
+          LEFT JOIN TM_DUOC_DONGIA AS DD2 ON DD2.DUOC_ID = D.DUOC_ID AND DD2.LOAIGIA_ID = '$LOAIGIA_ID$'
+          LEFT JOIN TM_NHANVIEN AS U ON U.NHANVIEN_ID = DD.NGUOICAPNHAT_ID
+          INNER JOIN TM_LOAIGIA AS LG ON LG.LOAIGIA_ID = '$LOAIGIA_ID$'
+          INNER JOIN LST_DICTIONARY AS DIC2 ON DIC2.DICTIONARY_ID = LG.NHOMGIA_ID AND DIC2.DICTIONARY_TYPE_CODE = 'NhomGia'
+          WHERE D.BENHVIEN_ID = '$BENHVIEN_ID$' AND (D.TAMNGUNG = '0' OR D.TAMNGUNG IS NULL) AND (DIC2.DICTIONARY_CODE != 'BHYT' OR (DIC2.DICTIONARY_CODE = 'BHYT' AND D.BHYT = '1'))
+          <!--AND (('$PHAMVI$' = 'BV' AND D.BENHVIEN = '1') OR('$PHAMVI$' = 'NT' AND D.NHATHUOC = '1')) -->
+		  <isNotEmpty prepend="" property="PHA_KHONHATHUOC_KHOBENHVIEN_DUNGCHUNG">
+			<isEqual prepend="AND" property="PHA_KHONHATHUOC_KHOBENHVIEN_DUNGCHUNG" compareValue="False">
+			  (('$PHAMVI$' = 'BV' AND D.BENHVIEN = '1') OR('$PHAMVI$' = 'NT' AND D.NHATHUOC = '1'))
+			</isEqual>
+		  </isNotEmpty>
+        </statement>
+        <!--Revision:0,226f20c4776b3ebad77d5a8e6e0f29cd-->
+        <statement id="DAO00215_PHA65_DONGIA_CPH_GetCurrentList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DD.*
+            FROM TM_DUOC_DONGIA_CPH AS DD
+            WHERE DD.BENHVIEN_ID = '$BENHVIEN_ID$' AND DD.TAMNGUNG = '0' AND DD.LOAIGIA_ID = '$LOAIGIA_ID$'
+        </statement>
+        <!--Revision:0,eaf020cd7da465af2f4e37d1b6d7aafc-->
+        <statement id="DAO00215_PHA65_DONGIA_GetCurrentList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DD.*
+            FROM TM_DUOC_DONGIA AS DD
+            WHERE DD.BENHVIEN_ID = '$BENHVIEN_ID$' AND DD.TAMNGUNG = '0' AND DD.LOAIGIA_ID = '$LOAIGIA_ID$'
+        </statement>
+        <!--Revision:0,c3bea4811eb26a66c9740ac674cbfa8b-->
+        <statement id="DAO00215_PHA65_DONGIA_CPH_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DUOC_DONGIA_CPH (
+            BANGGIA_CPH_ID
+            , DUOC_ID
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , DONGIA
+            , TYLEVAT
+            , GIATRIVAT
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , GIAVONTB
+            , TYLELAI
+            , DONGIABANGOC_SAUVAT
+            , DONGIABANGOC_TRUOCVAT
+            , GIAVONGANNHAT
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_CPH_ID#
+            , #DUOC_ID#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #GIAVONTB#
+            , #TYLELAI#
+            , #DONGIABANGOC_SAUVAT#
+            , #DONGIABANGOC_TRUOCVAT#
+            , #GIAVONGANNHAT#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,c62ae3b92893e8ecdcaf9a93f849373c-->
+        <update id="DAO00215_PHA65_DONGIA_CPH_Update" parameterClass="System.Collections.IDictionary">
+            update TM_DUOC_DONGIA_CPH set
+            BANGGIA_CPH_ID = #BANGGIA_CPH_ID#
+            , DUOC_ID = #DUOC_ID#
+            , LOAIGIA_ID = #LOAIGIA_ID#
+            , TIENTE_ID = #TIENTE_ID#
+            , DONGIA = #DONGIA#
+            , TYLEVAT = #TYLEVAT#
+            , GIATRIVAT = #GIATRIVAT#
+            , TRANGTHAI = #TRANGTHAI#
+            , TAMNGUNG = #TAMNGUNG#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , GIAVONTB = #GIAVONTB#
+            , TYLELAI = #TYLELAI#
+            , DONGIABANGOC_SAUVAT = #DONGIABANGOC_SAUVAT#
+            , DONGIABANGOC_TRUOCVAT = #DONGIABANGOC_TRUOCVAT#
+            , GIAVONGANNHAT = #GIAVONGANNHAT#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            DUOC_DONGIA_ID = '$DUOC_DONGIA_ID$'
+        </update>
+        <!--Revision:0,68d4fb7811857bf5206c26b1ae9cefbd-->
+        <statement id="DAO00215_PHA65_DONGIA_CPH_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DUOC_DONGIA_CPH
+            where
+            DUOC_DONGIA_ID = '$DUOC_DONGIA_ID$'
+        </statement>
+        <!--Revision:0,00fcf0085f952e15dcf9dad97c04f21f-->
+        <statement id="DAO00215_PHA65_DONGIA_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DUOC_DONGIA (
+            BANGGIA_ID
+            , DUOC_ID
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , DONGIA
+            , TYLEVAT
+            , GIATRIVAT
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , GIAVONTB
+            , TYLELAI
+            , DONGIABANGOC_SAUVAT
+            , DONGIABANGOC_TRUOCVAT
+            , GIAVONGANNHAT
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_ID#
+            , #DUOC_ID#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #GIAVONTB#
+            , #TYLELAI#
+            , #DONGIABANGOC_SAUVAT#
+            , #DONGIABANGOC_TRUOCVAT#
+            , #GIAVONGANNHAT#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,05ebc268a04c78e0592277fc5d517425-->
+        <statement id="DAO00215_PHA65_DONGIA_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DUOC_DONGIA
+            where
+            DUOC_DONGIA_ID = '$DUOC_DONGIA_ID$'
+        </statement>
+        <!--Revision:0,04feb550e72a1653625063948ad9889e-->
+        <statement id="DAO00215_PHA65_DONGIA_HIS_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DUOC_DONGIA_HIS (
+            BANGGIA_ID
+            , DUOC_ID
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , DONGIA
+            , TYLEVAT
+            , GIATRIVAT
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , GIAVONTB
+            , TYLELAI
+            , DONGIABANGOC_SAUVAT
+            , DONGIABANGOC_TRUOCVAT
+            , GIAVONGANNHAT
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_ID#
+            , #DUOC_ID#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #GIAVONTB#
+            , #TYLELAI#
+            , #DONGIABANGOC_SAUVAT#
+            , #DONGIABANGOC_TRUOCVAT#
+            , #GIAVONGANNHAT#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,1900c71257be93984ab7d33049d2e757-->
+        <statement id="DAO00215_PHA65_DOITUONG_GIA_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            SELECT 1 WHERE 1=1
+        </statement>
+        <!--Revision:0,24ac7191153dcf6ae1889fbd99eba7be-->
+        <statement id="DAO00215_SVC08_BANGGIA_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT L.LOAIGIA_ID AS CATEGORY_ID, L.MALOAIGIA AS CATEGORY_CODE, L.TENLOAIGIA AS CATEGORY_NAME, 0 AS FOLDER_LEVEL, 0 AS PARENT_ID, '1' AS IS_FOLDER
+            , '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 0 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaDichVu'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT (L.LOAIGIA_ID + $IDENTIFY$) AS CATEGORY_ID, CONVERT(VARCHAR(10),L.LOAIGIA_ID) + '_GiaHienHanh' AS CATEGORY_CODE, N'Giá hiện hành' AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER
+            , '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 1 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaDichVu'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT (L.LOAIGIA_ID + 2*$IDENTIFY$) AS CATEGORY_ID, CONVERT(VARCHAR(10),L.LOAIGIA_ID) + '_GiaChuaPhatHanh' AS CATEGORY_CODE, N'Giá chưa phát hành' AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER
+            , '1' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 2 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaDichVu'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT  (L.LOAIGIA_ID + B.BANGGIA_ID + 3*$IDENTIFY$) AS CATEGORY_ID, CONVERT(NVARCHAR(10),B.NGAYHETHIEULUC,103) + '_GiaCu' AS CATEGORY_CODE, N'Bảng giá cũ (' + CONVERT(VARCHAR(10),B.NGAYHETHIEULUC,103)+ ' ' + CONVERT(VARCHAR(8),B.NGAYHETHIEULUC,108) + ')' AS CATEGORY_NAME
+            , 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER, '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 3 AS TYPE, B.BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaDichVu'
+            INNER JOIN TM_BANGGIA_HIS AS B ON B.LOAIGIA_ID = L.LOAIGIA_ID AND B.TAMNGUNG = '0' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,ae8536d81cae4f21974fc6834e41425d-->
+        <statement id="DAO00215_SVC08_NHOMDICHVU" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            WITH NhomdichvuRec AS
+            (
+            SELECT ND.NHOMDICHVU_ID AS CATEGORY_ID, ND.MANHOMDICHVU AS CATEGORY_CODE, ND.TENNHOMDICHVU AS CATEGORY_NAME, ND.CAP AS FOLDER_LEVEL, ISNULL(ND.CAPTREN_ID,0) AS PARENT_ID, '0' AS IS_FOLDER
+            FROM TM_NHOMDICHVU AS ND WHERE ND.CAP = 1 AND ND.CAPTREN_ID IS NULL AND ND.BENHVIEN_ID = '$BENHVIEN_ID$' AND ND.TAMNGUNG = '0'
+            UNION ALL
+            SELECT ND.NHOMDICHVU_ID AS CATEGORY_ID, ND.MANHOMDICHVU AS CATEGORY_CODE, ND.TENNHOMDICHVU AS CATEGORY_NAME, ND.CAP AS FOLDER_LEVEL, ND.CAPTREN_ID AS PARENT_ID, '0' AS IS_FOLDER
+            FROM NhomdichvuRec AS DR
+            INNER JOIN TM_NHOMDICHVU AS ND ON ND.CAPTREN_ID = DR.CATEGORY_ID AND ND.BENHVIEN_ID = '$BENHVIEN_ID$' AND ND.TAMNGUNG = '0'
+            )
+            SELECT * FROM NhomdichvuRec
+        </statement>
+        <!--Revision:0,bb6029beee14ffc96a17eef356ced24b-->
+        <statement id="DAO00215_SVC08_DONGIA_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT D.DICHVU_ID, D.MADICHVU, D.TENDICHVU, N.NHOMDICHVU_ID, N.TENNHOMDICHVU, L.LOAIDICHVU_ID, L.TENLOAIDICHVU
+            , DD.DONGIA, DD.DONGIATHAPNHAT, DD.DONGIACAONHAT, L.MALOAIDICHVU, N.MANHOMDICHVU, D.NHOMPHATHANHGIA_ID
+            , D.INPUTCODE
+            FROM TM_DICHVU AS D
+            INNER JOIN TM_NHOMDICHVU AS N ON N.NHOMDICHVU_ID = D.NHOMDICHVU_ID AND N.TAMNGUNG = '0' AND N.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN TM_LOAIDICHVU AS L ON L.LOAIDICHVU_ID = N.LOAIDICHVU_ID AND L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN TM_DICHVU_DONGIA AS DD ON D.DICHVU_ID = DD.DICHVU_ID AND DD.LOAIGIA_ID = '$LOAIGIA_ID$'
+            INNER JOIN TM_LOAIGIA AS LG ON LG.LOAIGIA_ID = '$LOAIGIA_ID$' AND LG.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN LST_DICTIONARY AS DIC2 ON DIC2.DICTIONARY_ID = LG.NHOMGIA_ID AND DIC2.DICTIONARY_TYPE_CODE = 'NhomGia'
+            <!--AND DIC2.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            WHERE D.BENHVIEN_ID = '$BENHVIEN_ID$' AND (D.TAMNGUNG = '0' OR D.TAMNGUNG IS NULL) AND D.COGIADICHVU = '1' AND (DIC2.DICTIONARY_CODE != 'BHYT' OR (DIC2.DICTIONARY_CODE = 'BHYT' AND D.BHYT = '1'))
+        </statement>
+        <!--Revision:0,1ba7272e33ac19f6194c2cb748d888e6-->
+        <statement id="DAO00215_SVC08_DONGIA_HIS_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT D.DICHVU_ID, D.MADICHVU, D.TENDICHVU, N.NHOMDICHVU_ID, N.TENNHOMDICHVU, L.LOAIDICHVU_ID, L.TENLOAIDICHVU
+            , DD.DONGIA, DD.DONGIATHAPNHAT, DD.DONGIACAONHAT, L.MALOAIDICHVU, N.MANHOMDICHVU, D.NHOMPHATHANHGIA_ID
+            , D.INPUTCODE
+            FROM TM_DICHVU AS D
+            INNER JOIN TM_NHOMDICHVU AS N ON N.NHOMDICHVU_ID = D.NHOMDICHVU_ID AND N.TAMNGUNG = '0' AND N.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN TM_LOAIDICHVU AS L ON L.LOAIDICHVU_ID = N.LOAIDICHVU_ID AND L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN TM_DICHVU_DONGIA_HIS AS DD ON D.DICHVU_ID = DD.DICHVU_ID AND DD.LOAIGIA_ID = '$LOAIGIA_ID$' AND DD.BANGGIA_ID = '$BANGGIA_ID$'
+            INNER JOIN TM_LOAIGIA AS LG ON LG.LOAIGIA_ID = '$LOAIGIA_ID$' AND LG.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN LST_DICTIONARY AS DIC2 ON DIC2.DICTIONARY_ID = LG.NHOMGIA_ID AND DIC2.DICTIONARY_TYPE_CODE = 'NhomGia'
+            <!--AND DIC2.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            WHERE D.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,e1d74d4311b012746439a381bd187238-->
+        <statement id="DAO00215_SVC08_DONGIA_CPH_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT D.DICHVU_ID, D.MADICHVU, D.TENDICHVU, N.NHOMDICHVU_ID, N.TENNHOMDICHVU, L.LOAIDICHVU_ID, L.TENLOAIDICHVU
+            , DD.DONGIA, DD.DONGIATHAPNHAT, DD.DONGIACAONHAT, DD2.DONGIA AS DONGIAHIENTAI, L.MALOAIDICHVU, N.MANHOMDICHVU, D.NHOMPHATHANHGIA_ID
+            , D.INPUTCODE
+            FROM TM_DICHVU AS D
+            INNER JOIN TM_NHOMDICHVU AS N ON N.NHOMDICHVU_ID = D.NHOMDICHVU_ID AND N.TAMNGUNG = '0' AND N.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN TM_LOAIDICHVU AS L ON L.LOAIDICHVU_ID = N.LOAIDICHVU_ID AND L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            LEFT JOIN TM_DICHVU_DONGIA_CPH AS DD ON D.DICHVU_ID = DD.DICHVU_ID AND DD.LOAIGIA_ID = '$LOAIGIA_ID$'
+            LEFT JOIN TM_DICHVU_DONGIA AS DD2 ON D.DICHVU_ID = DD2.DICHVU_ID AND DD2.LOAIGIA_ID = '$LOAIGIA_ID$'
+            INNER JOIN TM_LOAIGIA AS LG ON LG.LOAIGIA_ID = '$LOAIGIA_ID$' AND LG.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN LST_DICTIONARY AS DIC2 ON DIC2.DICTIONARY_ID = LG.NHOMGIA_ID AND DIC2.DICTIONARY_TYPE_CODE = 'NhomGia'
+            <!--AND DIC2.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            WHERE D.BENHVIEN_ID = '$BENHVIEN_ID$' AND (D.TAMNGUNG = '0' OR D.TAMNGUNG IS NULL) AND D.COGIADICHVU = '1' AND (DIC2.DICTIONARY_CODE != 'BHYT' OR (DIC2.DICTIONARY_CODE = 'BHYT' AND D.BHYT = '1'))
+        </statement>
+        <!--Revision:0,adae54f371e2c7856a6bd835f1bf2c91-->
+        <statement id="DAO00215_SVC08_DONGIA_CPH_GetCurrentList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DD.*
+            FROM TM_DICHVU_DONGIA_CPH AS DD
+            WHERE DD.BENHVIEN_ID = '$BENHVIEN_ID$' AND DD.TAMNGUNG = '0' AND DD.LOAIGIA_ID = '$LOAIGIA_ID$'
+        </statement>
+        <!--Revision:0,6178d4f21ff00c262115fe08827cdf9b-->
+        <statement id="DAO00215_SVC08_DONGIA_GetCurrentList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DD.*
+            FROM TM_DICHVU_DONGIA AS DD
+            WHERE DD.BENHVIEN_ID = '$BENHVIEN_ID$' AND DD.TAMNGUNG = '0' AND DD.LOAIGIA_ID = '$LOAIGIA_ID$'
+        </statement>
+        <!--Revision:1,e18603e07fbacf2119c2a36721c2bca6-->
+        <statement id="DAO00215_SVC08_DONGIA_CPH_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DICHVU_DONGIA_CPH (
+            BANGGIA_CPH_ID
+            , DICHVU_ID
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , DONGIA
+            , DONGIATHAPNHAT
+            , DONGIACAONHAT
+            , TYLEVAT
+            , GIATRIVAT
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_CPH_ID#
+            , #DICHVU_ID#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #DONGIATHAPNHAT#
+            , #DONGIACAONHAT#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+      <statement id="DAO00215_SVC08_DONGIA_CPH_Add_byJson" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+
+        declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+
+        INSERT INTO TM_DICHVU_DONGIA_CPH
+        SELECT *
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (
+        BANGGIA_CPH_ID int,
+        DICHVU_ID int,
+        LOAIGIA_ID int,
+        TIENTE_ID nchar(3),
+        DONGIA numeric(25, 4),
+        DONGIATHAPNHAT numeric(25, 4),
+        DONGIACAONHAT numeric(25, 4),
+        TYLEVAT numeric(25, 4),
+        GIATRIVAT numeric(25, 4),
+        GIAVON numeric(25, 4),
+        TYLE_LOINHUAN numeric(25, 4),
+        TRANGTHAI varchar(20),
+        TAMNGUNG int,
+        NGAYTAO datetime,
+        NGUOITAO_ID int,
+        NGAYCAPNHAT datetime,
+        NGUOICAPNHAT_ID int,
+        BENHVIEN_ID nvarchar(10))        
+
+      </statement>
+      <statement id="DAO00215_PHA65_DONGIA_CPH_Add_byJson" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+
+        declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+
+        INSERT INTO TM_DUOC_DONGIA_CPH
+        SELECT *
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (
+        BANGGIA_CPH_ID int,
+        DUOC_ID int,
+        LOAIGIA_ID int,
+        TIENTE_ID nchar(3),
+        DONGIA numeric(25, 4),
+        TYLEVAT numeric(25, 4),
+        GIATRIVAT numeric(25, 4),
+        TRANGTHAI varchar(20),
+        TAMNGUNG int,
+        NGAYTAO datetime,
+        NGUOITAO_ID int,
+        NGAYCAPNHAT datetime,
+        NGUOICAPNHAT_ID int,
+        GIAVONTB numeric(25, 4),
+        TYLELAI numeric(25, 4),
+        DONGIABANGOC_SAUVAT numeric(25, 4),
+        DONGIABANGOC_TRUOCVAT numeric(25, 4),
+        GIAVONGANNHAT numeric(25, 4),
+        BENHVIEN_ID nvarchar(10))
+
+      </statement>
+        <!--Revision:0,3c3ddb301d1b903ec7d1a803cc7b8bcb-->
+        <update id="DAO00215_SVC08_DONGIA_CPH_Update" parameterClass="System.Collections.IDictionary">
+            update TM_DICHVU_DONGIA_CPH set
+            BANGGIA_CPH_ID = #BANGGIA_CPH_ID#
+            , DICHVU_ID = #DICHVU_ID#
+            , LOAIGIA_ID = #LOAIGIA_ID#
+            , TIENTE_ID = #TIENTE_ID#
+            , DONGIA = #DONGIA#
+            , DONGIATHAPNHAT = #DONGIATHAPNHAT#
+            , DONGIACAONHAT = #DONGIACAONHAT#
+            , TYLEVAT = #TYLEVAT#
+            , GIATRIVAT = #GIATRIVAT#
+            , TRANGTHAI = #TRANGTHAI#
+            , TAMNGUNG = #TAMNGUNG#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            DICHVU_DONGIA_ID = '$DICHVU_DONGIA_ID$'
+        </update>
+        <!--Revision:0,0c4c1c5edf9d8186e60bf027a83c3cb3-->
+        <statement id="DAO00215_SVC08_DONGIA_CPH_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DICHVU_DONGIA_CPH
+            where
+            DICHVU_DONGIA_ID = '$DICHVU_DONGIA_ID$'
+        </statement>
+        <!--Revision:0,b2187e6c898ba13d325d0fa61a3eb81d-->
+        <statement id="DAO00215_SVC08_DONGIA_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DICHVU_DONGIA (
+            BANGGIA_ID
+            , DICHVU_ID
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , DONGIA
+            , DONGIATHAPNHAT
+            , DONGIACAONHAT
+            , TYLEVAT
+            , GIATRIVAT
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_ID#
+            , #DICHVU_ID#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #DONGIATHAPNHAT#
+            , #DONGIACAONHAT#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+      <statement id="DAO00215_SVC08_DONGIA_Add_byJson" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+
+        INSERT INTO TM_DICHVU_DONGIA
+        SELECT *
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (
+        BANGGIA_CPH_ID int,
+        DICHVU_ID int,
+        LOAIGIA_ID int,
+        TIENTE_ID nchar(3),
+        DONGIA numeric(25, 4),
+        DONGIATHAPNHAT numeric(25, 4),
+        DONGIACAONHAT numeric(25, 4),
+        TYLEVAT numeric(25, 4),
+        GIATRIVAT numeric(25, 4),
+        GIAVON numeric(25, 4),
+        TYLE_LOINHUAN numeric(25, 4),
+        TRANGTHAI varchar(20),
+        TAMNGUNG int,
+        NGAYTAO datetime,
+        NGUOITAO_ID int,
+        NGAYCAPNHAT datetime,
+        NGUOICAPNHAT_ID int,
+        BENHVIEN_ID nvarchar(10))
+
+        DELETE FROM TM_DICHVU_DONGIA_CPH where DICHVU_DONGIA_ID IN (SELECT DICHVU_DONGIA_ID
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (DICHVU_DONGIA_ID int))        
+        
+        <!--delete bang gia chua phat hanh-->
+        delete from TM_BANGGIA_CPH where  BANGGIA_CPH_ID = '$BANGGIA_CPH_ID$'
+        
+        <!--delete dich vu khg phat hanh trong doi tuong loai gia-->
+        <!--delete from TM_DOITUONG_GIADICHVU
+        where
+        LOAIGIA_ID = '$LOAIGIA_ID$'AND DICHVU_ID NOT IN (SELECT DICHVU_ID
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (DICHVU_ID int))-->
+      </statement>
+      <statement id="DAO00215_PHA65_DONGIA_Add_byJson" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+
+        INSERT INTO TM_DUOC_DONGIA
+        SELECT *
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (
+        BANGGIA_CPH_ID int,
+        DUOC_ID int,
+        LOAIGIA_ID int,
+        TIENTE_ID nchar(3),
+        DONGIA numeric(25, 4),
+        TYLEVAT numeric(25, 4),
+        GIATRIVAT numeric(25, 4),
+        TRANGTHAI varchar(20),
+        TAMNGUNG int,
+        NGAYTAO datetime,
+        NGUOITAO_ID int,
+        NGAYCAPNHAT datetime,
+        NGUOICAPNHAT_ID int,
+        GIAVONTB numeric(25, 4),
+        TYLELAI numeric(25, 4),
+        DONGIABANGOC_SAUVAT numeric(25, 4),
+        DONGIABANGOC_TRUOCVAT numeric(25, 4),
+        GIAVONGANNHAT numeric(25, 4),
+        BENHVIEN_ID nvarchar(10))
+
+        DELETE FROM TM_DUOC_DONGIA_CPH where DUOC_DONGIA_ID IN (SELECT DUOC_DONGIA_ID
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (DUOC_DONGIA_ID int))
+
+        <!--delete bang gia chua phat hanh-->
+        delete from TM_BANGGIA_CPH where  BANGGIA_CPH_ID = '$BANGGIA_CPH_ID$'
+
+        <!--delete dich vu khg phat hanh trong doi tuong loai gia-->
+        <!--delete from TM_DOITUONG_GIADICHVU
+        where
+        LOAIGIA_ID = '$LOAIGIA_ID$'AND DICHVU_ID NOT IN (SELECT DICHVU_ID
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (DICHVU_ID int))-->
+      </statement>
+        <!--Revision:0,a240ccfa885888628627835b2f57e0e4-->
+        <statement id="DAO00215_SVC08_DONGIA_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DICHVU_DONGIA
+            where
+            DICHVU_DONGIA_ID = '$DICHVU_DONGIA_ID$'
+        </statement>
+        <!--Revision:0,12df2c5a45abf322dc7f4993cc1ea33f-->
+        <statement id="DAO00215_SVC08_DONGIA_HIS_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DICHVU_DONGIA_HIS (
+            BANGGIA_ID
+            , DICHVU_ID
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , DONGIA
+            , DONGIATHAPNHAT
+            , DONGIACAONHAT
+            , TYLEVAT
+            , GIATRIVAT
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_ID#
+            , #DICHVU_ID#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #DONGIATHAPNHAT#
+            , #DONGIACAONHAT#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+      <statement id="DAO00215_SVC08_DONGIA_HIS_Add_byJson" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+
+        INSERT INTO TM_DICHVU_DONGIA_HIS
+         SELECT * 
+         FROM OPENJSON(@jsonVienPhi)
+         WITH (
+        BANGGIA_ID int,
+        DICHVU_ID int,
+        LOAIGIA_ID int,
+        TIENTE_ID nchar(3),
+        DONGIA numeric(25, 4),
+        DONGIATHAPNHAT numeric(25, 4),
+        DONGIACAONHAT numeric(25, 4),
+        TYLEVAT numeric(25, 4),
+        GIATRIVAT numeric(25, 4),
+        GIAVON numeric(25, 4),
+        TYLE_LOINHUAN numeric(25, 4),
+        TRANGTHAI varchar(20),
+        TAMNGUNG int,
+        NGAYTAO datetime,
+        NGUOITAO_ID int,
+        NGAYCAPNHAT datetime,
+        NGUOICAPNHAT_ID int,
+        BENHVIEN_ID nvarchar(10))
+        
+        DELETE FROM TM_DICHVU_DONGIA where DICHVU_DONGIA_ID IN (SELECT DICHVU_DONGIA_ID 
+         FROM OPENJSON(@jsonVienPhi)
+         WITH (DICHVU_DONGIA_ID int))
+      </statement>
+      <statement id="DAO00215_PHA65_DONGIA_HIS_Add_byJson" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+
+        INSERT INTO TM_DUOC_DONGIA_HIS
+        SELECT *
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (
+        BANGGIA_ID int,
+        DUOC_ID int,
+        LOAIGIA_ID int,
+        TIENTE_ID nchar(3),
+        DONGIA numeric(25, 4),
+        TYLEVAT numeric(25, 4),
+        GIATRIVAT numeric(25, 4),
+        TRANGTHAI varchar(20),
+        TAMNGUNG int,
+        NGAYTAO datetime,
+        NGUOITAO_ID int,
+        NGAYCAPNHAT datetime,
+        NGUOICAPNHAT_ID int,
+        GIAVONTB numeric(25, 4),
+        TYLELAI numeric(25, 4),
+        DONGIABANGOC_SAUVAT numeric(25, 4),
+        DONGIABANGOC_TRUOCVAT numeric(25, 4),
+        GIAVONGANNHAT numeric(25, 4),
+        BENHVIEN_ID nvarchar(10))
+
+        DELETE FROM TM_DUOC_DONGIA where DUOC_DONGIA_ID IN (SELECT DUOC_DONGIA_ID
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (DUOC_DONGIA_ID int))
+      </statement>
+        <!--Revision:0,b1fb21b1bb83a17710f5ec35df2a0130-->
+        <statement id="DAO00215_SVC08_DOITUONG_GIA_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DOITUONG_GIADICHVU
+            where
+            LOAIGIA_ID = '$LOAIGIA_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            AND DICHVU_ID NOT IN (SELECT DICHVU_ID FROM TM_DICHVU_DONGIA WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND LOAIGIA_ID = '$LOAIGIA_ID$' AND DONGIA IS NOT NULL)
+        </statement>
+        <!--Revision:0,034760dda6a8c9b73ab2fe279b9396a9-->
+        <statement id="DAO00215_IPD45_BANGGIA_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT L.LOAIGIA_ID AS CATEGORY_ID, L.MALOAIGIA AS CATEGORY_CODE, L.TENLOAIGIA AS CATEGORY_NAME, 0 AS FOLDER_LEVEL, 0 AS PARENT_ID, '1' AS IS_FOLDER
+            , '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 0 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaGiuong'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT (L.LOAIGIA_ID + $IDENTIFY$) AS CATEGORY_ID, CONVERT(VARCHAR(10),L.LOAIGIA_ID) + '_GiaHienHanh' AS CATEGORY_CODE, N'Giá hiện hành' AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER
+            , '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 1 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaGiuong'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT (L.LOAIGIA_ID + 2*$IDENTIFY$) AS CATEGORY_ID, CONVERT(VARCHAR(10),L.LOAIGIA_ID) + '_GiaChuaPhatHanh' AS CATEGORY_CODE, N'Giá chưa phát hành' AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER
+            , '1' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 2 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaGiuong'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT  (L.LOAIGIA_ID + B.BANGGIA_ID + 3*$IDENTIFY$) AS CATEGORY_ID, CONVERT(NVARCHAR(10),B.NGAYHETHIEULUC,103) + '_GiaCu' AS CATEGORY_CODE, N'Bảng giá cũ (' + CONVERT(VARCHAR(10),B.NGAYHETHIEULUC,103) + ')' AS CATEGORY_NAME
+            , 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER, '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 3 AS TYPE, B.BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaGiuong'
+            INNER JOIN TM_BANGGIA_HIS AS B ON B.LOAIGIA_ID = L.LOAIGIA_ID AND B.TAMNGUNG = '0' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,c457dbe78fb038f529a2263f58f2057d-->
+        <statement id="DAO00215_IPD45_KHOADIEUTRI" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT PB.PHONGBAN_ID AS KHOADIEUTRI_ID, PB.TENPHONGBAN AS TENKHOADIEUTRI
+            FROM TM_PHONGBAN AS PB
+            INNER JOIN LST_DICTIONARY AS D ON D.DICTIONARY_ID = PB.LOAIPHONGBAN_ID AND D.DICTIONARY_CODE IN ('KhoaNoi')
+            WHERE PB.TAMNGUNG = '0' AND PB.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,7243213719bd3d887883e9fae50467da-->
+        <statement id="DAO00215_IPD45_PHONGBENH" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT PB.PHONGBAN_ID AS PHONGBENH_ID, PB.TENPHONGBAN AS TENPHONGBENH, PB.CAPTREN_ID AS KHOADIEUTRI_ID
+            FROM TM_PHONGBAN AS PB
+            INNER JOIN LST_DICTIONARY AS D ON D.DICTIONARY_ID = PB.LOAIPHONGBAN_ID AND D.DICTIONARY_CODE IN ('PhongBenh')
+            WHERE PB.TAMNGUNG = '0' AND PB.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,aedac033effe89e5e77043d4aa1e5307-->
+        <statement id="DAO00215_IPD45_DONGIA_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT G.GIUONGBENH_ID, G.MAGIUONG, G.KHOADIEUTRI_ID, G.PHONGBENH_ID, PB1.TENPHONGBAN AS TENKHOADIEUTRI, PB2.TENPHONGBAN AS TENPHONGBENH
+            , GD.DONGIA, GD.DONGIA_DB, GD.DONGIA_1, GD.DONGIA_2, GD.DONGIA_3, GD.DONGIA_FINAL, GD.TYLEVAT, GD.GIATRIVAT, GD.MOTA
+            FROM TM_GIUONGBENH AS G
+            INNER JOIN TM_PHONGBAN AS PB1 ON PB1.PHONGBAN_ID = G.KHOADIEUTRI_ID AND PB1.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB1.TAMNGUNG = '0'
+            INNER JOIN TM_PHONGBAN AS PB2 ON PB2.PHONGBAN_ID = G.PHONGBENH_ID AND PB2.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB2.TAMNGUNG = '0'
+            LEFT JOIN TM_GIUONGBENH_DONGIA AS GD ON G.GIUONGBENH_ID = GD.GIUONGBENH_ID AND GD.LOAIGIA_ID = '$LOAIGIA_ID$'
+            WHERE G.BENHVIEN_ID = '$BENHVIEN_ID$' AND G.TAMNGUNG = '0'
+        </statement>
+        <!--Revision:0,4922b1aa0313133278b7cdd7418a42db-->
+        <statement id="DAO00215_IPD45_DONGIA_HIS_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT G.GIUONGBENH_ID, G.MAGIUONG, G.KHOADIEUTRI_ID, G.PHONGBENH_ID, PB1.TENPHONGBAN AS TENKHOADIEUTRI, PB2.TENPHONGBAN AS TENPHONGBENH
+            , GD.DONGIA, GD.DONGIA_DB, GD.DONGIA_1, GD.DONGIA_2, GD.DONGIA_3, GD.DONGIA_FINAL, GD.TYLEVAT, GD.GIATRIVAT, GD.MOTA
+            FROM TM_GIUONGBENH AS G
+            INNER JOIN TM_PHONGBAN AS PB1 ON PB1.PHONGBAN_ID = G.KHOADIEUTRI_ID AND PB1.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB1.TAMNGUNG = '0'
+            INNER JOIN TM_PHONGBAN AS PB2 ON PB2.PHONGBAN_ID = G.PHONGBENH_ID AND PB2.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB2.TAMNGUNG = '0'
+            LEFT JOIN TM_GIUONGBENH_DONGIA_HIS AS GD ON G.GIUONGBENH_ID = GD.GIUONGBENH_ID AND GD.LOAIGIA_ID = '$LOAIGIA_ID$' AND GD.BANGGIA_ID = '$BANGGIA_ID$'
+            WHERE G.BENHVIEN_ID = '$BENHVIEN_ID$' AND G.TAMNGUNG = '0'
+        </statement>
+        <!--Revision:0,67cbaa8c5bf2762925ecf07e6dd05092-->
+        <statement id="DAO00215_IPD45_DONGIA_CPH_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT G.GIUONGBENH_ID, G.MAGIUONG, G.KHOADIEUTRI_ID, G.PHONGBENH_ID, PB1.TENPHONGBAN AS TENKHOADIEUTRI, PB2.TENPHONGBAN AS TENPHONGBENH
+            , GD.DONGIA, GD.DONGIA_DB, GD.DONGIA_1, GD.DONGIA_2, GD.DONGIA_3, GD.DONGIA_FINAL, GD.TYLEVAT, GD.GIATRIVAT, GD.MOTA, GD2.DONGIA AS DONGIAHIENTAI
+            FROM TM_GIUONGBENH AS G
+            INNER JOIN TM_PHONGBAN AS PB1 ON PB1.PHONGBAN_ID = G.KHOADIEUTRI_ID AND PB1.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB1.TAMNGUNG = '0'
+            INNER JOIN TM_PHONGBAN AS PB2 ON PB2.PHONGBAN_ID = G.PHONGBENH_ID AND PB2.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB2.TAMNGUNG = '0'
+            LEFT JOIN TM_GIUONGBENH_DONGIA_CPH AS GD ON G.GIUONGBENH_ID = GD.GIUONGBENH_ID AND GD.LOAIGIA_ID = '$LOAIGIA_ID$'
+            LEFT JOIN TM_GIUONGBENH_DONGIA AS GD2 ON G.GIUONGBENH_ID = GD2.GIUONGBENH_ID AND GD2.LOAIGIA_ID = '$LOAIGIA_ID$'
+            WHERE G.BENHVIEN_ID = '$BENHVIEN_ID$' AND G.TAMNGUNG = '0'
+        </statement>
+        <!--Revision:0,7ddf1bb5dddee99748c5f0116fbb89ef-->
+        <statement id="DAO00215_IPD45_DONGIA_CPH_GetCurrentList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT GD.*
+            FROM TM_GIUONGBENH_DONGIA_CPH AS GD
+            WHERE GD.BENHVIEN_ID = '$BENHVIEN_ID$' AND GD.TAMNGUNG = '0' AND GD.LOAIGIA_ID = '$LOAIGIA_ID$'
+        </statement>
+        <!--Revision:0,5fcdca04819b350364b7d96dce48354a-->
+        <statement id="DAO00215_IPD45_DONGIA_GetCurrentList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT GD.*
+            FROM TM_GIUONGBENH_DONGIA AS GD
+            WHERE GD.BENHVIEN_ID = '$BENHVIEN_ID$' AND GD.TAMNGUNG = '0' AND GD.LOAIGIA_ID = '$LOAIGIA_ID$'
+        </statement>
+        <!--Revision:0,e1ca4640918cf0f39b6096f485be3815-->
+        <statement id="DAO00215_IPD45_DONGIA_CPH_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_GIUONGBENH_DONGIA_CPH (
+            BANGGIA_CPH_ID
+            , GIUONGBENH_ID
+            , TIENTE_ID
+            , DONGIA
+            , DONGIA_DB
+            , DONGIA_1
+            , DONGIA_2
+            , DONGIA_3
+            , DONGIA_FINAL
+            , TYLEVAT
+            , GIATRIVAT
+            , LOAIGIA_ID
+            , TRANGTHAI
+            , TAMNGUNG
+            , MOTA
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_CPH_ID#
+            , #GIUONGBENH_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #DONGIA_DB#
+            , #DONGIA_1#
+            , #DONGIA_2#
+            , #DONGIA_3#
+            , #DONGIA_FINAL#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #LOAIGIA_ID#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #MOTA#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,61017af0310d10d44b109be4cb3a4492-->
+        <update id="DAO00215_IPD45_DONGIA_CPH_Update" parameterClass="System.Collections.IDictionary">
+            update TM_GIUONGBENH_DONGIA_CPH set
+            BANGGIA_CPH_ID = #BANGGIA_CPH_ID#
+            , GIUONGBENH_ID = #GIUONGBENH_ID#
+            , TIENTE_ID = #TIENTE_ID#
+            , DONGIA = #DONGIA#
+            , DONGIA_DB = #DONGIA_DB#
+            , DONGIA_1 = #DONGIA_1#
+            , DONGIA_2 = #DONGIA_2#
+            , DONGIA_3 = #DONGIA_3#
+            , DONGIA_FINAL = #DONGIA_FINAL#
+            , TYLEVAT = #TYLEVAT#
+            , GIATRIVAT = #GIATRIVAT#
+            , LOAIGIA_ID = #LOAIGIA_ID#
+            , TRANGTHAI = #TRANGTHAI#
+            , TAMNGUNG = #TAMNGUNG#
+            , MOTA = #MOTA#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            GIUONGBENH_DONGIA_ID = '$GIUONGBENH_DONGIA_ID$'
+        </update>
+        <!--Revision:0,e2e6dfd30e3532f3df693eb95a103c35-->
+        <statement id="DAO00215_IPD45_DONGIA_CPH_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_GIUONGBENH_DONGIA_CPH
+            where
+            GIUONGBENH_DONGIA_ID = '$GIUONGBENH_DONGIA_ID$'
+        </statement>
+        <!--Revision:0,6639c94c0c35e39617621ddd12f83849-->
+        <statement id="DAO00215_IPD45_DONGIA_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_GIUONGBENH_DONGIA (
+            BANGGIA_ID
+            , GIUONGBENH_ID
+            , TIENTE_ID
+            , DONGIA
+            , DONGIA_DB
+            , DONGIA_1
+            , DONGIA_2
+            , DONGIA_3
+            , DONGIA_FINAL
+            , TYLEVAT
+            , GIATRIVAT
+            , LOAIGIA_ID
+            , TRANGTHAI
+            , TAMNGUNG
+            , MOTA
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_ID#
+            , #GIUONGBENH_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #DONGIA_DB#
+            , #DONGIA_1#
+            , #DONGIA_2#
+            , #DONGIA_3#
+            , #DONGIA_FINAL#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #LOAIGIA_ID#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #MOTA#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,efe6cf8f818786ce750ba6192a6dde3e-->
+        <statement id="DAO00215_IPD45_DONGIA_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_GIUONGBENH_DONGIA
+            where
+            GIUONGBENH_DONGIA_ID = '$GIUONGBENH_DONGIA_ID$'
+        </statement>
+        <!--Revision:0,8998e22fcadc8619fb40b3209451d534-->
+        <statement id="DAO00215_IPD45_DONGIA_HIS_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_GIUONGBENH_DONGIA_HIS (
+            BANGGIA_ID
+            , GIUONGBENH_ID
+            , TIENTE_ID
+            , DONGIA
+            , DONGIA_DB
+            , DONGIA_1
+            , DONGIA_2
+            , DONGIA_3
+            , DONGIA_FINAL
+            , TYLEVAT
+            , GIATRIVAT
+            , LOAIGIA_ID
+            , TRANGTHAI
+            , TAMNGUNG
+            , MOTA
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_ID#
+            , #GIUONGBENH_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #DONGIA_DB#
+            , #DONGIA_1#
+            , #DONGIA_2#
+            , #DONGIA_3#
+            , #DONGIA_FINAL#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #LOAIGIA_ID#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #MOTA#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,330698057b3d1ef6080fed71a95e469e-->
+        <statement id="DAO00215_IPD45_DOITUONG_GIA_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DOITUONG_GIAGIUONG
+            where
+            LOAIGIA_ID = '$LOAIGIA_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            AND GIUONGBENH_ID NOT IN (SELECT GIUONGBENH_ID FROM TM_GIUONGBENH_DONGIA WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND LOAIGIA_ID = '$LOAIGIA_ID$' AND DONGIA IS NOT NULL)
+        </statement>
+        <!--Revision:0,c489bb6716596edc12d6196f2a59fc16-->
+        <statement id="DAO00215_IPD46_BANGGIA_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT L.LOAIGIA_ID AS CATEGORY_ID, L.MALOAIGIA AS CATEGORY_CODE, L.TENLOAIGIA AS CATEGORY_NAME, 0 AS FOLDER_LEVEL, 0 AS PARENT_ID, '1' AS IS_FOLDER
+            , '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 0 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaPhong'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT (L.LOAIGIA_ID + $IDENTIFY$) AS CATEGORY_ID, CONVERT(VARCHAR(10),L.LOAIGIA_ID) + '_GiaHienHanh' AS CATEGORY_CODE, N'Giá hiện hành' AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER
+            , '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 1 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaPhong'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT (L.LOAIGIA_ID + 2*$IDENTIFY$) AS CATEGORY_ID, CONVERT(VARCHAR(10),L.LOAIGIA_ID) + '_GiaChuaPhatHanh' AS CATEGORY_CODE, N'Giá chưa phát hành' AS CATEGORY_NAME, 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER
+            , '1' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 2 AS TYPE, 0 AS BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaPhong'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT  (L.LOAIGIA_ID + B.BANGGIA_ID + 3*$IDENTIFY$) AS CATEGORY_ID, CONVERT(NVARCHAR(10),B.NGAYHETHIEULUC,103) + '_GiaCu' AS CATEGORY_CODE, N'Bảng giá cũ (' + CONVERT(VARCHAR(10),B.NGAYHETHIEULUC,103) + ')' AS CATEGORY_NAME
+            , 1 AS FOLDER_LEVEL, L.LOAIGIA_ID AS PARENT_ID, '0' AS IS_FOLDER, '0' AS IS_CHUAPHATHANH, L.LOAIGIA_ID, 3 AS TYPE, B.BANGGIA_ID
+            FROM TM_LOAIGIA AS L
+            INNER JOIN TM_LOAIGIA AS L2 ON L2.LOAIGIA_ID = L.CAPTREN_ID AND L2.MALOAIGIA = 'GiaPhong'
+            INNER JOIN TM_BANGGIA_HIS AS B ON B.LOAIGIA_ID = L.LOAIGIA_ID AND B.TAMNGUNG = '0' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE L.TAMNGUNG = '0' AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,d56d112e4a8178398ef5bb1c902cb507-->
+        <statement id="DAO00215_IPD46_KHOADIEUTRI" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT PB.PHONGBAN_ID AS KHOADIEUTRI_ID, PB.TENPHONGBAN AS TENKHOADIEUTRI
+            FROM TM_PHONGBAN AS PB
+            INNER JOIN LST_DICTIONARY AS D ON D.DICTIONARY_ID = PB.LOAIPHONGBAN_ID AND D.DICTIONARY_CODE IN ('KhoaNoi')
+            WHERE PB.TAMNGUNG = '0' AND PB.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,b8418bc952f27ad55ecebbdb94320b86-->
+        <statement id="DAO00215_IPD46_DONGIA_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT PB.PHONGBAN_ID AS PHONGBENH_ID, PB.MAPHONGBAN AS MAPHONGBENH, PB.TENPHONGBAN AS TENPHONGBENH, D2.DICTIONARY_ID AS LOAIPHONGBENH_ID, D2.DICTIONARY_NAME AS TENLOAIPHONGBENH
+            , PB1.TENPHONGBAN AS TENKHOADIEUTRI, PB1.PHONGBAN_ID AS KHOADIEUTRI_ID, PD.DONGIA, PD.TYLEVAT, PD.GIATRIVAT, PD.MOTA
+            FROM TM_PHONGBAN AS PB
+            INNER JOIN LST_DICTIONARY AS D ON D.DICTIONARY_ID = PB.LOAIPHONGBAN_ID AND D.DICTIONARY_CODE IN ('PhongBenh')
+            LEFT JOIN LST_DICTIONARY AS D2 ON D2.DICTIONARY_ID = PB.LOAIPHONGBENH_ID AND D2.DICTIONARY_TYPE_CODE = 'LoaiPhongBenh'
+            INNER JOIN TM_PHONGBAN AS PB1 ON PB1.PHONGBAN_ID = PB.CAPTREN_ID AND PB1.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB1.TAMNGUNG = '0'
+            LEFT JOIN TM_PHONGBENH_DONGIA AS PD ON PB.PHONGBAN_ID = PD.PHONGBENH_ID AND PD.LOAIGIA_ID = '$LOAIGIA_ID$'
+            WHERE PB.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB.TAMNGUNG = '0'
+        </statement>
+        <!--Revision:0,a6fd7fc84cbbe1e3aaa2ac4820ef1bda-->
+        <statement id="DAO00215_IPD46_DONGIA_HIS_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT PB.PHONGBAN_ID AS PHONGBENH_ID, PB.MAPHONGBAN AS MAPHONGBENH, PB.TENPHONGBAN AS TENPHONGBENH, D2.DICTIONARY_ID AS LOAIPHONGBENH_ID, D2.DICTIONARY_NAME AS TENLOAIPHONGBENH
+            , PB1.TENPHONGBAN AS TENKHOADIEUTRI, PB1.PHONGBAN_ID AS KHOADIEUTRI_ID, PD.DONGIA, PD.TYLEVAT, PD.GIATRIVAT, PD.MOTA
+            FROM TM_PHONGBAN AS PB
+            INNER JOIN LST_DICTIONARY AS D ON D.DICTIONARY_ID = PB.LOAIPHONGBAN_ID AND D.DICTIONARY_CODE IN ('PhongBenh')
+            LEFT JOIN LST_DICTIONARY AS D2 ON D2.DICTIONARY_ID = PB.LOAIPHONGBENH_ID AND D2.DICTIONARY_TYPE_CODE = 'LoaiPhongBenh'
+            INNER JOIN TM_PHONGBAN AS PB1 ON PB1.PHONGBAN_ID = PB.CAPTREN_ID AND PB1.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB1.TAMNGUNG = '0'
+            LEFT JOIN TM_PHONGBENH_DONGIA_HIS AS PD ON PB.PHONGBAN_ID = PD.PHONGBENH_ID AND PD.LOAIGIA_ID = '$LOAIGIA_ID$' AND PD.BANGGIA_ID = '$BANGGIA_ID$'
+            WHERE PB.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB.TAMNGUNG = '0'
+        </statement>
+        <!--Revision:0,f858197b0e902c4b6c999b581fc81564-->
+        <statement id="DAO00215_IPD46_DONGIA_CPH_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT PB.PHONGBAN_ID AS PHONGBENH_ID, PB.MAPHONGBAN AS MAPHONGBENH, PB.TENPHONGBAN AS TENPHONGBENH, D2.DICTIONARY_ID AS LOAIPHONGBENH_ID, D2.DICTIONARY_NAME AS TENLOAIPHONGBENH
+            , PB1.TENPHONGBAN AS TENKHOADIEUTRI, PB1.PHONGBAN_ID AS KHOADIEUTRI_ID, PD.DONGIA, PD.TYLEVAT, PD.GIATRIVAT, PD.MOTA, PD2.DONGIA AS DONGIAHIENTAI
+            FROM TM_PHONGBAN AS PB
+            INNER JOIN LST_DICTIONARY AS D ON D.DICTIONARY_ID = PB.LOAIPHONGBAN_ID AND D.DICTIONARY_CODE IN ('PhongBenh')
+            LEFT JOIN LST_DICTIONARY AS D2 ON D2.DICTIONARY_ID = PB.LOAIPHONGBENH_ID AND D2.DICTIONARY_TYPE_CODE = 'LoaiPhongBenh'
+            INNER JOIN TM_PHONGBAN AS PB1 ON PB1.PHONGBAN_ID = PB.CAPTREN_ID AND PB1.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB1.TAMNGUNG = '0'
+            LEFT JOIN TM_PHONGBENH_DONGIA_CPH AS PD ON PB.PHONGBAN_ID = PD.PHONGBENH_ID AND PD.LOAIGIA_ID = '$LOAIGIA_ID$'
+            LEFT JOIN TM_PHONGBENH_DONGIA AS PD2 ON PB.PHONGBAN_ID = PD2.PHONGBENH_ID AND PD2.LOAIGIA_ID = '$LOAIGIA_ID$'
+            WHERE PB.BENHVIEN_ID = '$BENHVIEN_ID$' AND PB.TAMNGUNG = '0'
+        </statement>
+        <!--Revision:0,dda87082905d102efbc558d2a800ab74-->
+        <statement id="DAO00215_IPD46_DONGIA_CPH_GetCurrentList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT PD.*
+            FROM TM_PHONGBENH_DONGIA_CPH AS PD
+            WHERE PD.BENHVIEN_ID = '$BENHVIEN_ID$' AND PD.TAMNGUNG = '0' AND PD.LOAIGIA_ID = '$LOAIGIA_ID$'
+        </statement>
+        <!--Revision:0,56b063111f7f1d2f4779a7a947fb0a04-->
+        <statement id="DAO00215_IPD46_DONGIA_GetCurrentList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT PD.*
+            FROM TM_PHONGBENH_DONGIA AS PD
+            WHERE PD.BENHVIEN_ID = '$BENHVIEN_ID$' AND PD.TAMNGUNG = '0' AND PD.LOAIGIA_ID = '$LOAIGIA_ID$'
+        </statement>
+        <!--Revision:0,1d816e2773f1a4de7346db0423ee2a74-->
+        <statement id="DAO00215_IPD46_DONGIA_CPH_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_PHONGBENH_DONGIA_CPH (
+            BANGGIA_CPH_ID
+            , PHONGBENH_ID
+            , TIENTE_ID
+            , DONGIA
+            , LOAIGIA_ID
+            , TYLEVAT
+            , GIATRIVAT
+            , TRANGTHAI
+            , TAMNGUNG
+            , MOTA
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            ) values (
+            #BANGGIA_CPH_ID#
+            , #PHONGBENH_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #LOAIGIA_ID#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #MOTA#
+            , #BENHVIEN_ID#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,b0d212f1c886adab75617c5b98233626-->
+        <update id="DAO00215_IPD46_DONGIA_CPH_Update" parameterClass="System.Collections.IDictionary">
+            update TM_PHONGBENH_DONGIA_CPH set
+            BANGGIA_CPH_ID = #BANGGIA_CPH_ID#
+            , PHONGBENH_ID = #PHONGBENH_ID#
+            , TIENTE_ID = #TIENTE_ID#
+            , DONGIA = #DONGIA#
+            , LOAIGIA_ID = #LOAIGIA_ID#
+            , TYLEVAT = #TYLEVAT#
+            , GIATRIVAT = #GIATRIVAT#
+            , TRANGTHAI = #TRANGTHAI#
+            , TAMNGUNG = #TAMNGUNG#
+            , MOTA = #MOTA#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            PHONGBENH_DONGIA_ID = '$PHONGBENH_DONGIA_ID$'
+        </update>
+        <!--Revision:0,0b04145056b88a3e951c2d8faf6731a1-->
+        <statement id="DAO00215_IPD46_DONGIA_CPH_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_PHONGBENH_DONGIA_CPH
+            where
+            PHONGBENH_DONGIA_ID = '$PHONGBENH_DONGIA_ID$'
+        </statement>
+        <!--Revision:0,46b75c66fb550d7b15e0b8111eadf03b-->
+        <statement id="DAO00215_IPD46_DONGIA_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_PHONGBENH_DONGIA (
+            BANGGIA_ID
+            , PHONGBENH_ID
+            , TIENTE_ID
+            , DONGIA
+            , LOAIGIA_ID
+            , TYLEVAT
+            , GIATRIVAT
+            , TRANGTHAI
+            , TAMNGUNG
+            , MOTA
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            ) values (
+            #BANGGIA_ID#
+            , #PHONGBENH_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #LOAIGIA_ID#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #MOTA#
+            , #BENHVIEN_ID#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,0e35078010454cce0ee486c8820df91a-->
+        <statement id="DAO00215_IPD46_DONGIA_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_PHONGBENH_DONGIA
+            where
+            PHONGBENH_DONGIA_ID = '$PHONGBENH_DONGIA_ID$'
+        </statement>
+        <!--Revision:0,0a52440be8ce0f6041fb80cecbfd9c93-->
+        <statement id="DAO00215_IPD46_DONGIA_HIS_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_PHONGBENH_DONGIA_HIS (
+            BANGGIA_ID
+            , PHONGBENH_ID
+            , TIENTE_ID
+            , DONGIA
+            , LOAIGIA_ID
+            , TYLEVAT
+            , GIATRIVAT
+            , TRANGTHAI
+            , TAMNGUNG
+            , MOTA
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #BANGGIA_ID#
+            , #PHONGBENH_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #LOAIGIA_ID#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #MOTA#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,8831eeee75d03a4dfd67f5447951aa9f-->
+        <statement id="DAO00215_IPD46_DOITUONG_GIA_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DOITUONG_GIAPHONGBENH
+            where
+            LOAIGIA_ID = '$LOAIGIA_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            AND PHONGBENH_ID NOT IN (SELECT PHONGBENH_ID FROM TM_PHONGBENH_DONGIA WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND LOAIGIA_ID = '$LOAIGIA_ID$' AND DONGIA IS NOT NULL)
+        </statement>
+    </statements>
+</sqlMap>

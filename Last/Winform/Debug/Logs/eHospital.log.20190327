@@ -1,0 +1,976 @@
+﻿--------------------------------------------------------------------------------
+2019-03-27 08:47:36,723 [1] INFO  - [Application started.]
+2019-03-27 08:47:37,120 [1] ERROR - 'Messages.xml' Duplicated keys found: MHSM0062
+2019-03-27 08:47:40,191 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-03-27 08:47:40,203 [1] INFO  - LoadMasters() took 7 ms.
+2019-03-27 08:47:40,204 [1] INFO  - [_SYSTEM_] Session started.
+2019-03-27 08:47:48,366 [1] INFO  - [admin] Session is starting.
+2019-03-27 08:47:49,206 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:49,516 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:49,555 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:49,610 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:49,661 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:49,702 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:49,746 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:49,818 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:49,862 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:57,815 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:57,856 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:58,114 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:47:59,871 [6] INFO  - LoadMasters() took 11,470 ms.
+2019-03-27 08:47:59,883 [1] INFO  - [admin] Session started.
+2019-03-27 08:48:01,611 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-03-27 08:48:01,648 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-03-27 08:48:02,207 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-03-27 08:48:02,217 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-03-27 08:48:02,509 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-03-27 08:48:02,518 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-03-27 08:48:02,525 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-03-27 08:48:02,534 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-03-27 08:48:02,664 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-03-27 08:48:02,694 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-03-27 08:48:02,704 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-03-27 08:48:02,712 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-03-27 08:48:02,721 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-03-27 08:48:02,730 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-03-27 08:48:02,763 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-03-27 08:48:02,772 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-03-27 08:48:02,781 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-03-27 08:48:02,790 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-03-27 08:48:02,798 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-03-27 08:48:02,907 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-03-27 08:48:03,137 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-03-27 08:48:03,148 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-03-27 08:48:03,157 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-03-27 08:48:03,168 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-03-27 08:48:03,262 [1] WARN  - Can't get type of type 'EMR20', assembly 'Screens/ScrEMR'
+2019-03-27 08:48:03,276 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-03-27 08:48:03,757 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-03-27 08:48:03,765 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-03-27 08:48:03,774 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-03-27 08:48:03,784 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-03-27 08:48:03,794 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-03-27 08:48:03,804 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-03-27 08:48:03,912 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-03-27 08:48:04,130 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-03-27 08:48:04,141 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-03-27 08:48:04,155 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-03-27 08:48:04,278 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-03-27 08:48:04,476 [1] WARN  - Can't get type of type 'OPD06', assembly 'Screens/ScrOPD'
+2019-03-27 08:48:04,494 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-03-27 08:48:04,524 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-03-27 08:48:04,534 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-03-27 08:48:04,544 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-03-27 08:48:04,554 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-03-27 08:48:04,579 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-03-27 08:48:04,953 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-03-27 08:48:04,988 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-03-27 08:48:05,012 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-03-27 08:48:05,024 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-03-27 08:48:05,248 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-03-27 08:48:05,653 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-03-27 08:48:05,681 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-03-27 08:48:05,691 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-03-27 08:48:05,754 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-03-27 08:48:05,762 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-03-27 08:48:05,848 [1] WARN  - Can't get type of type 'SMR08', assembly 'Screens/ScrSMR'
+2019-03-27 08:48:05,860 [1] WARN  - Can't get type of type 'SMR09', assembly 'Screens/ScrSMR'
+2019-03-27 08:48:05,868 [1] WARN  - Can't get type of type 'SMR10', assembly 'Screens/ScrSMR'
+2019-03-27 08:48:05,881 [1] WARN  - Can't get type of type 'SMR11', assembly 'Screens/ScrSMR'
+2019-03-27 08:48:05,889 [1] WARN  - Can't get type of type 'SMR12', assembly 'Screens/ScrSMR'
+2019-03-27 08:48:05,899 [1] WARN  - Can't get type of type 'SMR13', assembly 'Screens/ScrSMR'
+2019-03-27 08:48:05,907 [1] WARN  - Can't get type of type 'SMR14', assembly 'Screens/ScrSMR'
+2019-03-27 08:48:05,916 [1] WARN  - Can't get type of type 'SMR15', assembly 'Screens/ScrSMR'
+2019-03-27 08:48:05,923 [1] WARN  - Can't get type of type 'SMR16', assembly 'Screens/ScrSMR'
+2019-03-27 08:48:05,932 [1] WARN  - Can't get type of type 'SMR17', assembly 'Screens/ScrSMR'
+2019-03-27 08:48:05,942 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-03-27 08:48:06,041 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-03-27 08:48:06,067 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-03-27 08:48:06,075 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-03-27 08:48:06,087 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+--------------------------------------------------------------------------------
+2019-03-27 08:50:12,950 [1] INFO  - [Application started.]
+2019-03-27 08:50:13,205 [1] ERROR - 'Messages.xml' Duplicated keys found: MHSM0062
+2019-03-27 08:50:15,150 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-03-27 08:50:15,172 [1] INFO  - LoadMasters() took 8 ms.
+2019-03-27 08:50:15,173 [1] INFO  - [_SYSTEM_] Session started.
+2019-03-27 08:50:24,830 [1] INFO  - [admin] Session is starting.
+2019-03-27 08:50:25,267 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:50:27,276 [5] DEBUG - Loading 'REFBENHNHAN_DY'...
+2019-03-27 08:50:38,114 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:50:39,393 [5] DEBUG - Loading 'REFBENHNHAN_GROUP_DICHVU'...
+2019-03-27 08:50:41,321 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:50:43,422 [5] DEBUG - Loading 'REFBENHNHAN_MN'...
+2019-03-27 08:50:43,458 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:50:45,132 [5] DEBUG - Loading 'REFBENHNHAN_NT_CC'...
+2019-03-27 08:50:45,567 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:50:47,173 [5] DEBUG - Loading 'REFBENHNHAN_NT_DY'...
+2019-03-27 08:50:47,206 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:50:48,277 [5] DEBUG - Loading 'REFBENHNHAN_TIEPNHAN'...
+2019-03-27 08:50:49,444 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:50:51,392 [5] DEBUG - Loading 'REFBENHNHAN_TIEPNHAN_ALL'...
+2019-03-27 08:50:52,918 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:50:55,293 [5] DEBUG - Loading 'REFBENHNHAN_TIEPNHAN_DV_VTYT'...
+2019-03-27 08:50:56,434 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:50:58,282 [5] DEBUG - Loading 'REFBENHNHAN_TOATHUOC'...
+2019-03-27 08:50:58,807 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:51:00,025 [5] DEBUG - Loading 'REFDUOC_KYGUI_TONKHO'...
+2019-03-27 08:51:00,092 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:51:01,310 [5] DEBUG - Loading 'REFDUOC_TONKHO'...
+2019-03-27 08:51:03,364 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 08:51:04,933 [5] DEBUG - Loading 'REFDUOC_TONKHO_BOOKING'...
+2019-03-27 08:51:08,599 [5] INFO  - LoadMasters() took 43,765 ms.
+2019-03-27 08:51:08,620 [1] INFO  - [admin] Session started.
+2019-03-27 08:51:09,258 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-03-27 08:51:09,268 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-03-27 08:51:09,421 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-03-27 08:51:09,432 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-03-27 08:51:09,492 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-03-27 08:51:09,507 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-03-27 08:51:09,519 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-03-27 08:51:09,528 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-03-27 08:51:09,563 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-03-27 08:51:09,573 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-03-27 08:51:09,586 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-03-27 08:51:09,594 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-03-27 08:51:09,605 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-03-27 08:51:09,618 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-03-27 08:51:09,651 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-03-27 08:51:09,663 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-03-27 08:51:09,674 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-03-27 08:51:09,689 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-03-27 08:51:09,699 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-03-27 08:51:09,728 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-03-27 08:51:09,828 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-03-27 08:51:09,839 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-03-27 08:51:09,851 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-03-27 08:51:09,860 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-03-27 08:51:09,883 [1] WARN  - Can't get type of type 'EMR20', assembly 'Screens/ScrEMR'
+2019-03-27 08:51:09,890 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-03-27 08:51:09,974 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-03-27 08:51:09,984 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-03-27 08:51:09,992 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-03-27 08:51:10,005 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-03-27 08:51:10,014 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-03-27 08:51:10,027 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-03-27 08:51:10,062 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-03-27 08:51:10,109 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-03-27 08:51:10,119 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-03-27 08:51:10,127 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-03-27 08:51:10,150 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-03-27 08:51:10,196 [1] WARN  - Can't get type of type 'OPD06', assembly 'Screens/ScrOPD'
+2019-03-27 08:51:10,210 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-03-27 08:51:10,221 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-03-27 08:51:10,228 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-03-27 08:51:10,238 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-03-27 08:51:10,246 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-03-27 08:51:10,256 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-03-27 08:51:10,317 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-03-27 08:51:10,336 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-03-27 08:51:10,344 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-03-27 08:51:10,356 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-03-27 08:51:10,430 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-03-27 08:51:10,501 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-03-27 08:51:10,509 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-03-27 08:51:10,517 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-03-27 08:51:10,535 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-03-27 08:51:10,543 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-03-27 08:51:10,559 [1] WARN  - Can't get type of type 'SMR08', assembly 'Screens/ScrSMR'
+2019-03-27 08:51:10,568 [1] WARN  - Can't get type of type 'SMR09', assembly 'Screens/ScrSMR'
+2019-03-27 08:51:10,576 [1] WARN  - Can't get type of type 'SMR10', assembly 'Screens/ScrSMR'
+2019-03-27 08:51:10,584 [1] WARN  - Can't get type of type 'SMR11', assembly 'Screens/ScrSMR'
+2019-03-27 08:51:10,593 [1] WARN  - Can't get type of type 'SMR12', assembly 'Screens/ScrSMR'
+2019-03-27 08:51:10,604 [1] WARN  - Can't get type of type 'SMR13', assembly 'Screens/ScrSMR'
+2019-03-27 08:51:10,613 [1] WARN  - Can't get type of type 'SMR14', assembly 'Screens/ScrSMR'
+2019-03-27 08:51:10,631 [1] WARN  - Can't get type of type 'SMR15', assembly 'Screens/ScrSMR'
+2019-03-27 08:51:10,639 [1] WARN  - Can't get type of type 'SMR16', assembly 'Screens/ScrSMR'
+2019-03-27 08:51:10,648 [1] WARN  - Can't get type of type 'SMR17', assembly 'Screens/ScrSMR'
+2019-03-27 08:51:10,659 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-03-27 08:51:10,682 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-03-27 08:51:10,691 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-03-27 08:51:10,699 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-03-27 08:51:10,708 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+2019-03-27 08:54:55,289 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2019-03-27 08:54:55,291 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2019-03-27 08:54:55,308 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://192.168.1.168:1010/api/
+2019-03-27 08:54:55,559 [1] INFO  - [admin] Session stopped.
+2019-03-27 08:54:55,579 [1] INFO  - Memory used before collection:  33,474,776
+2019-03-27 08:54:55,663 [1] INFO  - Memory used after collection:  17,620,004
+2019-03-27 08:54:55,718 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-03-27 08:54:55,720 [1] INFO  - LoadMasters() took 1 ms.
+2019-03-27 08:54:55,721 [1] INFO  - [_SYSTEM_] Session started.
+2019-03-27 08:57:43,243 [1] INFO  - [_SYSTEM_] Session stopped.
+2019-03-27 08:57:43,248 [1] INFO  - Memory used before collection:  18,396,264
+2019-03-27 08:57:43,305 [1] INFO  - Memory used after collection:  15,476,624
+2019-03-27 08:57:43,371 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2019-03-27 10:16:07,381 [1] INFO  - [Application started.]
+2019-03-27 10:16:07,666 [1] ERROR - 'Messages.xml' Duplicated keys found: MHSM0062
+2019-03-27 10:16:09,658 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-03-27 10:16:09,673 [1] INFO  - LoadMasters() took 8 ms.
+2019-03-27 10:16:09,674 [1] INFO  - [_SYSTEM_] Session started.
+2019-03-27 10:18:10,692 [1] INFO  - [admin] Session is starting.
+2019-03-27 10:18:11,140 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:11,350 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:11,405 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:11,458 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:11,624 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:11,680 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:11,770 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:11,934 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:12,084 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:18,508 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:18,556 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:18,776 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:18:20,504 [5] INFO  - LoadMasters() took 9,804 ms.
+2019-03-27 10:18:20,515 [1] INFO  - [admin] Session started.
+2019-03-27 10:18:21,101 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-03-27 10:18:21,110 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-03-27 10:18:21,214 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-03-27 10:18:21,222 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-03-27 10:18:21,266 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-03-27 10:18:21,274 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-03-27 10:18:21,283 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-03-27 10:18:21,290 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-03-27 10:18:21,314 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-03-27 10:18:21,322 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-03-27 10:18:21,331 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-03-27 10:18:21,339 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-03-27 10:18:21,349 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-03-27 10:18:21,357 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-03-27 10:18:21,371 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-03-27 10:18:21,380 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-03-27 10:18:21,387 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-03-27 10:18:21,398 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-03-27 10:18:21,409 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-03-27 10:18:21,434 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-03-27 10:18:21,494 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-03-27 10:18:21,504 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-03-27 10:18:21,511 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-03-27 10:18:21,521 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-03-27 10:18:21,544 [1] WARN  - Can't get type of type 'EMR20', assembly 'Screens/ScrEMR'
+2019-03-27 10:18:21,552 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-03-27 10:18:21,660 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-03-27 10:18:21,668 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-03-27 10:18:21,676 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-03-27 10:18:21,684 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-03-27 10:18:21,691 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-03-27 10:18:21,699 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-03-27 10:18:21,721 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-03-27 10:18:21,759 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-03-27 10:18:21,769 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-03-27 10:18:21,776 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-03-27 10:18:21,795 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-03-27 10:18:21,846 [1] WARN  - Can't get type of type 'OPD06', assembly 'Screens/ScrOPD'
+2019-03-27 10:18:21,862 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-03-27 10:18:21,871 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-03-27 10:18:21,879 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-03-27 10:18:21,887 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-03-27 10:18:21,894 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-03-27 10:18:21,902 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-03-27 10:18:21,985 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-03-27 10:18:22,007 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-03-27 10:18:22,015 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-03-27 10:18:22,025 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-03-27 10:18:22,098 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-03-27 10:18:22,159 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-03-27 10:18:22,167 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-03-27 10:18:22,175 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-03-27 10:18:22,190 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-03-27 10:18:22,197 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-03-27 10:18:22,213 [1] WARN  - Can't get type of type 'SMR08', assembly 'Screens/ScrSMR'
+2019-03-27 10:18:22,221 [1] WARN  - Can't get type of type 'SMR09', assembly 'Screens/ScrSMR'
+2019-03-27 10:18:22,228 [1] WARN  - Can't get type of type 'SMR10', assembly 'Screens/ScrSMR'
+2019-03-27 10:18:22,237 [1] WARN  - Can't get type of type 'SMR11', assembly 'Screens/ScrSMR'
+2019-03-27 10:18:22,244 [1] WARN  - Can't get type of type 'SMR12', assembly 'Screens/ScrSMR'
+2019-03-27 10:18:22,253 [1] WARN  - Can't get type of type 'SMR13', assembly 'Screens/ScrSMR'
+2019-03-27 10:18:22,260 [1] WARN  - Can't get type of type 'SMR14', assembly 'Screens/ScrSMR'
+2019-03-27 10:18:22,269 [1] WARN  - Can't get type of type 'SMR15', assembly 'Screens/ScrSMR'
+2019-03-27 10:18:22,278 [1] WARN  - Can't get type of type 'SMR16', assembly 'Screens/ScrSMR'
+2019-03-27 10:18:22,287 [1] WARN  - Can't get type of type 'SMR17', assembly 'Screens/ScrSMR'
+2019-03-27 10:18:22,295 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-03-27 10:18:22,312 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-03-27 10:18:22,320 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-03-27 10:18:22,329 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-03-27 10:18:22,337 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+--------------------------------------------------------------------------------
+2019-03-27 10:19:45,269 [1] INFO  - [Application started.]
+2019-03-27 10:19:45,441 [1] ERROR - 'Messages.xml' Duplicated keys found: MHSM0062
+2019-03-27 10:19:47,847 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-03-27 10:19:47,866 [1] INFO  - LoadMasters() took 7 ms.
+2019-03-27 10:19:47,866 [1] INFO  - [_SYSTEM_] Session started.
+2019-03-27 10:20:12,058 [1] INFO  - [admin] Session is starting.
+2019-03-27 10:20:12,590 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:12,729 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:12,783 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:12,831 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:12,877 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:12,920 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:13,003 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:13,050 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:13,102 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:20,502 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:20,566 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:21,192 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:20:23,268 [5] INFO  - LoadMasters() took 11,203 ms.
+2019-03-27 10:20:23,277 [1] INFO  - [admin] Session started.
+2019-03-27 10:20:24,231 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-03-27 10:20:24,246 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-03-27 10:20:24,393 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-03-27 10:20:24,402 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-03-27 10:20:24,466 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-03-27 10:20:24,476 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-03-27 10:20:24,492 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-03-27 10:20:24,501 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-03-27 10:20:24,527 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-03-27 10:20:24,537 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-03-27 10:20:24,547 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-03-27 10:20:24,556 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-03-27 10:20:24,566 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-03-27 10:20:24,574 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-03-27 10:20:24,591 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-03-27 10:20:24,599 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-03-27 10:20:24,609 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-03-27 10:20:24,623 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-03-27 10:20:24,634 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-03-27 10:20:24,659 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-03-27 10:20:24,753 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-03-27 10:20:24,763 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-03-27 10:20:24,773 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-03-27 10:20:24,783 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-03-27 10:20:24,810 [1] WARN  - Can't get type of type 'EMR20', assembly 'Screens/ScrEMR'
+2019-03-27 10:20:24,820 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-03-27 10:20:24,946 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-03-27 10:20:24,955 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-03-27 10:20:24,965 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-03-27 10:20:24,975 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-03-27 10:20:25,004 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-03-27 10:20:25,013 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-03-27 10:20:25,041 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-03-27 10:20:25,140 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-03-27 10:20:25,153 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-03-27 10:20:25,164 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-03-27 10:20:25,188 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-03-27 10:20:25,269 [1] WARN  - Can't get type of type 'OPD06', assembly 'Screens/ScrOPD'
+2019-03-27 10:20:25,286 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-03-27 10:20:25,295 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-03-27 10:20:25,308 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-03-27 10:20:25,340 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-03-27 10:20:25,354 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-03-27 10:20:25,386 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-03-27 10:20:25,488 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-03-27 10:20:25,543 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-03-27 10:20:25,558 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-03-27 10:20:25,585 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-03-27 10:20:25,705 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-03-27 10:20:25,801 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-03-27 10:20:25,819 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-03-27 10:20:25,834 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-03-27 10:20:25,854 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-03-27 10:20:25,862 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-03-27 10:20:25,883 [1] WARN  - Can't get type of type 'SMR08', assembly 'Screens/ScrSMR'
+2019-03-27 10:20:25,891 [1] WARN  - Can't get type of type 'SMR09', assembly 'Screens/ScrSMR'
+2019-03-27 10:20:25,901 [1] WARN  - Can't get type of type 'SMR10', assembly 'Screens/ScrSMR'
+2019-03-27 10:20:25,910 [1] WARN  - Can't get type of type 'SMR11', assembly 'Screens/ScrSMR'
+2019-03-27 10:20:25,919 [1] WARN  - Can't get type of type 'SMR12', assembly 'Screens/ScrSMR'
+2019-03-27 10:20:25,929 [1] WARN  - Can't get type of type 'SMR13', assembly 'Screens/ScrSMR'
+2019-03-27 10:20:25,938 [1] WARN  - Can't get type of type 'SMR14', assembly 'Screens/ScrSMR'
+2019-03-27 10:20:25,960 [1] WARN  - Can't get type of type 'SMR15', assembly 'Screens/ScrSMR'
+2019-03-27 10:20:25,985 [1] WARN  - Can't get type of type 'SMR16', assembly 'Screens/ScrSMR'
+2019-03-27 10:20:25,996 [1] WARN  - Can't get type of type 'SMR17', assembly 'Screens/ScrSMR'
+2019-03-27 10:20:26,007 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-03-27 10:20:26,030 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-03-27 10:20:26,049 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-03-27 10:20:26,058 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-03-27 10:20:26,067 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+--------------------------------------------------------------------------------
+2019-03-27 10:29:54,822 [1] INFO  - [Application started.]
+2019-03-27 10:29:55,390 [1] ERROR - 'Messages.xml' Duplicated keys found: MHSM0062
+2019-03-27 10:29:57,427 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-03-27 10:29:57,443 [1] INFO  - LoadMasters() took 11 ms.
+2019-03-27 10:29:57,444 [1] INFO  - [_SYSTEM_] Session started.
+2019-03-27 10:30:05,223 [1] INFO  - [admin] Session is starting.
+2019-03-27 10:30:05,644 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:05,803 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:05,852 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:05,894 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:05,932 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:05,970 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:06,013 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:06,060 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:06,110 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:13,854 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:13,900 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:14,186 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 10:30:16,003 [8] INFO  - LoadMasters() took 10,775 ms.
+2019-03-27 10:30:16,012 [1] INFO  - [admin] Session started.
+2019-03-27 10:30:16,811 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-03-27 10:30:16,821 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-03-27 10:30:16,978 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-03-27 10:30:16,987 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-03-27 10:30:17,057 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-03-27 10:30:17,067 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-03-27 10:30:17,075 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-03-27 10:30:17,090 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-03-27 10:30:17,161 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-03-27 10:30:17,170 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-03-27 10:30:17,181 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-03-27 10:30:17,191 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-03-27 10:30:17,202 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-03-27 10:30:17,215 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-03-27 10:30:17,231 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-03-27 10:30:17,240 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-03-27 10:30:17,250 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-03-27 10:30:17,260 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-03-27 10:30:17,271 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-03-27 10:30:17,296 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-03-27 10:30:17,406 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-03-27 10:30:17,418 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-03-27 10:30:17,427 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-03-27 10:30:17,436 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-03-27 10:30:17,461 [1] WARN  - Can't get type of type 'EMR20', assembly 'Screens/ScrEMR'
+2019-03-27 10:30:17,470 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-03-27 10:30:17,610 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-03-27 10:30:17,620 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-03-27 10:30:17,628 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-03-27 10:30:17,637 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-03-27 10:30:17,650 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-03-27 10:30:17,668 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-03-27 10:30:17,693 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-03-27 10:30:17,757 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-03-27 10:30:17,767 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-03-27 10:30:17,777 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-03-27 10:30:17,809 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-03-27 10:30:17,863 [1] WARN  - Can't get type of type 'OPD06', assembly 'Screens/ScrOPD'
+2019-03-27 10:30:17,884 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-03-27 10:30:17,893 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-03-27 10:30:17,919 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-03-27 10:30:17,931 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-03-27 10:30:17,941 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-03-27 10:30:17,949 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-03-27 10:30:18,046 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-03-27 10:30:18,071 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-03-27 10:30:18,088 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-03-27 10:30:18,098 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-03-27 10:30:18,171 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-03-27 10:30:18,295 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-03-27 10:30:18,304 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-03-27 10:30:18,313 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-03-27 10:30:18,332 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-03-27 10:30:18,351 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-03-27 10:30:18,369 [1] WARN  - Can't get type of type 'SMR08', assembly 'Screens/ScrSMR'
+2019-03-27 10:30:18,377 [1] WARN  - Can't get type of type 'SMR09', assembly 'Screens/ScrSMR'
+2019-03-27 10:30:18,395 [1] WARN  - Can't get type of type 'SMR10', assembly 'Screens/ScrSMR'
+2019-03-27 10:30:18,403 [1] WARN  - Can't get type of type 'SMR11', assembly 'Screens/ScrSMR'
+2019-03-27 10:30:18,413 [1] WARN  - Can't get type of type 'SMR12', assembly 'Screens/ScrSMR'
+2019-03-27 10:30:18,421 [1] WARN  - Can't get type of type 'SMR13', assembly 'Screens/ScrSMR'
+2019-03-27 10:30:18,429 [1] WARN  - Can't get type of type 'SMR14', assembly 'Screens/ScrSMR'
+2019-03-27 10:30:18,438 [1] WARN  - Can't get type of type 'SMR15', assembly 'Screens/ScrSMR'
+2019-03-27 10:30:18,447 [1] WARN  - Can't get type of type 'SMR16', assembly 'Screens/ScrSMR'
+2019-03-27 10:30:18,457 [1] WARN  - Can't get type of type 'SMR17', assembly 'Screens/ScrSMR'
+2019-03-27 10:30:18,470 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-03-27 10:30:18,490 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-03-27 10:30:18,500 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-03-27 10:30:18,520 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-03-27 10:30:18,528 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+--------------------------------------------------------------------------------
+2019-03-27 13:31:12,174 [1] INFO  - [Application started.]
+2019-03-27 13:31:12,522 [1] ERROR - 'Messages.xml' Duplicated keys found: MHSM0062
+2019-03-27 13:31:14,763 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-03-27 13:31:14,778 [1] INFO  - LoadMasters() took 6 ms.
+2019-03-27 13:31:14,780 [1] INFO  - [_SYSTEM_] Session started.
+2019-03-27 13:31:20,752 [1] INFO  - [admin] Session is starting.
+2019-03-27 13:31:23,302 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:23,460 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:23,506 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:23,565 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:23,610 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:23,651 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:23,696 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:23,735 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:23,783 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:35,166 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:35,214 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:35,494 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:31:37,323 [5] INFO  - LoadMasters() took 16,565 ms.
+2019-03-27 13:31:37,333 [1] INFO  - [admin] Session started.
+2019-03-27 13:31:38,200 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-03-27 13:31:38,209 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-03-27 13:31:38,369 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-03-27 13:31:38,382 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-03-27 13:31:38,508 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-03-27 13:31:38,535 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-03-27 13:31:38,544 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-03-27 13:31:38,606 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-03-27 13:31:38,648 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-03-27 13:31:38,658 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-03-27 13:31:38,670 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-03-27 13:31:38,680 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-03-27 13:31:38,695 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-03-27 13:31:38,727 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-03-27 13:31:38,750 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-03-27 13:31:38,763 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-03-27 13:31:38,789 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-03-27 13:31:38,801 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-03-27 13:31:38,816 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-03-27 13:31:38,849 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-03-27 13:31:38,965 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-03-27 13:31:38,976 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-03-27 13:31:38,996 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-03-27 13:31:39,022 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-03-27 13:31:39,052 [1] WARN  - Can't get type of type 'EMR20', assembly 'Screens/ScrEMR'
+2019-03-27 13:31:39,062 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-03-27 13:31:39,175 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-03-27 13:31:39,185 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-03-27 13:31:39,198 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-03-27 13:31:39,211 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-03-27 13:31:39,229 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-03-27 13:31:39,238 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-03-27 13:31:39,264 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-03-27 13:31:39,318 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-03-27 13:31:39,336 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-03-27 13:31:39,346 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-03-27 13:31:39,369 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-03-27 13:31:39,456 [1] WARN  - Can't get type of type 'OPD06', assembly 'Screens/ScrOPD'
+2019-03-27 13:31:39,470 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-03-27 13:31:39,479 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-03-27 13:31:39,487 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-03-27 13:31:39,496 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-03-27 13:31:39,511 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-03-27 13:31:39,532 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-03-27 13:31:39,610 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-03-27 13:31:39,652 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-03-27 13:31:39,668 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-03-27 13:31:39,680 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-03-27 13:31:39,771 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-03-27 13:31:39,911 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-03-27 13:31:39,920 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-03-27 13:31:39,942 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-03-27 13:31:39,959 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-03-27 13:31:39,969 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-03-27 13:31:39,987 [1] WARN  - Can't get type of type 'SMR08', assembly 'Screens/ScrSMR'
+2019-03-27 13:31:39,998 [1] WARN  - Can't get type of type 'SMR09', assembly 'Screens/ScrSMR'
+2019-03-27 13:31:40,009 [1] WARN  - Can't get type of type 'SMR10', assembly 'Screens/ScrSMR'
+2019-03-27 13:31:40,018 [1] WARN  - Can't get type of type 'SMR11', assembly 'Screens/ScrSMR'
+2019-03-27 13:31:40,027 [1] WARN  - Can't get type of type 'SMR12', assembly 'Screens/ScrSMR'
+2019-03-27 13:31:40,036 [1] WARN  - Can't get type of type 'SMR13', assembly 'Screens/ScrSMR'
+2019-03-27 13:31:40,044 [1] WARN  - Can't get type of type 'SMR14', assembly 'Screens/ScrSMR'
+2019-03-27 13:31:40,058 [1] WARN  - Can't get type of type 'SMR15', assembly 'Screens/ScrSMR'
+2019-03-27 13:31:40,066 [1] WARN  - Can't get type of type 'SMR16', assembly 'Screens/ScrSMR'
+2019-03-27 13:31:40,076 [1] WARN  - Can't get type of type 'SMR17', assembly 'Screens/ScrSMR'
+2019-03-27 13:31:40,089 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-03-27 13:31:40,124 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-03-27 13:31:40,135 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-03-27 13:31:40,145 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-03-27 13:31:40,162 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+--------------------------------------------------------------------------------
+2019-03-27 13:37:05,383 [1] INFO  - [Application started.]
+2019-03-27 13:37:05,741 [1] ERROR - 'Messages.xml' Duplicated keys found: MHSM0062
+2019-03-27 13:37:07,951 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-03-27 13:37:07,965 [1] INFO  - LoadMasters() took 7 ms.
+2019-03-27 13:37:07,966 [1] INFO  - [_SYSTEM_] Session started.
+2019-03-27 13:37:14,075 [1] INFO  - [admin] Session is starting.
+2019-03-27 13:37:14,507 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:14,657 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:14,708 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:14,752 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:14,796 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:14,838 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:14,894 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:14,945 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:14,986 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:15,437 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:15,484 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:16,088 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-03-27 13:37:17,893 [5] INFO  - LoadMasters() took 3,813 ms.
+2019-03-27 13:37:17,904 [1] INFO  - [admin] Session started.
+2019-03-27 13:37:18,594 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-03-27 13:37:18,604 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-03-27 13:37:18,799 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-03-27 13:37:18,808 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-03-27 13:37:19,013 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-03-27 13:37:19,023 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-03-27 13:37:19,034 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-03-27 13:37:19,045 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-03-27 13:37:19,074 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-03-27 13:37:19,084 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-03-27 13:37:19,098 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-03-27 13:37:19,137 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-03-27 13:37:19,148 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-03-27 13:37:19,159 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-03-27 13:37:19,179 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-03-27 13:37:19,190 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-03-27 13:37:19,199 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-03-27 13:37:19,211 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-03-27 13:37:19,222 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-03-27 13:37:19,246 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-03-27 13:37:19,356 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-03-27 13:37:19,367 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-03-27 13:37:19,376 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-03-27 13:37:19,385 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-03-27 13:37:19,412 [1] WARN  - Can't get type of type 'EMR20', assembly 'Screens/ScrEMR'
+2019-03-27 13:37:19,423 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-03-27 13:37:19,584 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-03-27 13:37:19,594 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-03-27 13:37:19,607 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-03-27 13:37:19,617 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-03-27 13:37:19,627 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-03-27 13:37:19,636 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-03-27 13:37:19,661 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-03-27 13:37:19,730 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-03-27 13:37:19,742 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-03-27 13:37:19,753 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-03-27 13:37:19,785 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-03-27 13:37:19,868 [1] WARN  - Can't get type of type 'OPD06', assembly 'Screens/ScrOPD'
+2019-03-27 13:37:19,886 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-03-27 13:37:19,896 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-03-27 13:37:19,905 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-03-27 13:37:19,914 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-03-27 13:37:19,923 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-03-27 13:37:19,931 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-03-27 13:37:20,024 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-03-27 13:37:20,060 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-03-27 13:37:20,070 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-03-27 13:37:20,082 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-03-27 13:37:20,181 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-03-27 13:37:20,291 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-03-27 13:37:20,301 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-03-27 13:37:20,313 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-03-27 13:37:20,331 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-03-27 13:37:20,340 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-03-27 13:37:20,378 [1] WARN  - Can't get type of type 'SMR08', assembly 'Screens/ScrSMR'
+2019-03-27 13:37:20,388 [1] WARN  - Can't get type of type 'SMR09', assembly 'Screens/ScrSMR'
+2019-03-27 13:37:20,396 [1] WARN  - Can't get type of type 'SMR10', assembly 'Screens/ScrSMR'
+2019-03-27 13:37:20,405 [1] WARN  - Can't get type of type 'SMR11', assembly 'Screens/ScrSMR'
+2019-03-27 13:37:20,413 [1] WARN  - Can't get type of type 'SMR12', assembly 'Screens/ScrSMR'
+2019-03-27 13:37:20,422 [1] WARN  - Can't get type of type 'SMR13', assembly 'Screens/ScrSMR'
+2019-03-27 13:37:20,432 [1] WARN  - Can't get type of type 'SMR14', assembly 'Screens/ScrSMR'
+2019-03-27 13:37:20,446 [1] WARN  - Can't get type of type 'SMR15', assembly 'Screens/ScrSMR'
+2019-03-27 13:37:20,457 [1] WARN  - Can't get type of type 'SMR16', assembly 'Screens/ScrSMR'
+2019-03-27 13:37:20,469 [1] WARN  - Can't get type of type 'SMR17', assembly 'Screens/ScrSMR'
+2019-03-27 13:37:20,480 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-03-27 13:37:20,502 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-03-27 13:37:20,511 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-03-27 13:37:20,521 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-03-27 13:37:20,529 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+2019-03-27 13:43:27,866 [1] DEBUG - User chạy: 1 Cách giải quyết:CapToa
+2019-03-27 13:43:27,897 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.OPD002 dvYeucau_Id:1051
+2019-03-27 13:43:27,924 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.OPD002 dvYeucau_Id:1051
+--------------------------------------------------------------------------------
+2019-03-27 18:12:51,539 [1] INFO  - [Application started.]
+2019-03-27 18:12:51,915 [1] ERROR - 'Messages.xml' Duplicated keys found: MHSM0062
+2019-03-27 18:12:55,947 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-03-27 18:12:56,034 [1] INFO  - LoadMasters() took 80 ms.
+2019-03-27 18:12:56,034 [1] INFO  - [_SYSTEM_] Session started.
+2019-03-27 18:13:25,986 [1] INFO  - [admin] Session is starting.
+2019-03-27 18:13:26,810 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:13:30,391 [5] DEBUG - Loading 'REFBENHNHAN_DY'...
+2019-03-27 18:13:39,602 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:13:40,750 [5] DEBUG - Loading 'REFBENHNHAN_GROUP_DICHVU'...
+2019-03-27 18:13:55,501 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:13:57,054 [5] DEBUG - Loading 'REFBENHNHAN_MN'...
+2019-03-27 18:13:58,140 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:13:59,805 [5] DEBUG - Loading 'REFBENHNHAN_NT_CC'...
+2019-03-27 18:14:02,147 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:14:04,101 [5] DEBUG - Loading 'REFBENHNHAN_NT_DY'...
+2019-03-27 18:14:04,150 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:14:05,257 [5] DEBUG - Loading 'REFBENHNHAN_TIEPNHAN'...
+2019-03-27 18:14:28,657 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:14:31,000 [5] DEBUG - Loading 'REFBENHNHAN_TIEPNHAN_ALL'...
+2019-03-27 18:14:35,537 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:14:38,569 [5] DEBUG - Loading 'REFBENHNHAN_TIEPNHAN_DV_VTYT'...
+2019-03-27 18:14:44,799 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:14:46,776 [5] DEBUG - Loading 'REFBENHNHAN_TOATHUOC'...
+2019-03-27 18:14:48,359 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:14:50,065 [5] DEBUG - Loading 'REFDUOC_KYGUI_TONKHO'...
+2019-03-27 18:14:50,160 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:14:51,496 [5] DEBUG - Loading 'REFDUOC_TONKHO'...
+2019-03-27 18:14:54,170 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:14:56,389 [5] DEBUG - Loading 'REFDUOC_TONKHO_BOOKING'...
+2019-03-27 18:15:00,492 [5] INFO  - LoadMasters() took 94,494 ms.
+2019-03-27 18:15:00,507 [1] INFO  - [admin] Session started.
+2019-03-27 18:15:01,994 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-03-27 18:15:02,005 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-03-27 18:15:02,249 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-03-27 18:15:02,259 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-03-27 18:15:02,377 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-03-27 18:15:02,388 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-03-27 18:15:02,398 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-03-27 18:15:02,407 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-03-27 18:15:02,470 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-03-27 18:15:02,478 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-03-27 18:15:02,491 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-03-27 18:15:02,502 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-03-27 18:15:02,524 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-03-27 18:15:02,536 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-03-27 18:15:02,553 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-03-27 18:15:02,564 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-03-27 18:15:02,575 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-03-27 18:15:02,590 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-03-27 18:15:02,603 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-03-27 18:15:02,656 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-03-27 18:15:02,758 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-03-27 18:15:02,769 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-03-27 18:15:02,782 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-03-27 18:15:02,797 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-03-27 18:15:02,913 [1] WARN  - Can't get type of type 'EMR20', assembly 'Screens/ScrEMR'
+2019-03-27 18:15:02,925 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-03-27 18:15:03,125 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-03-27 18:15:03,133 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-03-27 18:15:03,142 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-03-27 18:15:03,151 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-03-27 18:15:03,159 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-03-27 18:15:03,168 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-03-27 18:15:03,259 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-03-27 18:15:03,430 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-03-27 18:15:03,443 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-03-27 18:15:03,454 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-03-27 18:15:03,580 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-03-27 18:15:03,684 [1] WARN  - Can't get type of type 'OPD06', assembly 'Screens/ScrOPD'
+2019-03-27 18:15:03,705 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-03-27 18:15:03,713 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-03-27 18:15:03,723 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-03-27 18:15:03,732 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-03-27 18:15:03,745 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-03-27 18:15:03,755 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-03-27 18:15:03,911 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-03-27 18:15:03,935 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-03-27 18:15:03,946 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-03-27 18:15:04,012 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-03-27 18:15:04,168 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-03-27 18:15:04,388 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-03-27 18:15:04,398 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-03-27 18:15:04,410 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-03-27 18:15:04,458 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-03-27 18:15:04,469 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-03-27 18:15:04,514 [1] WARN  - Can't get type of type 'SMR08', assembly 'Screens/ScrSMR'
+2019-03-27 18:15:04,525 [1] WARN  - Can't get type of type 'SMR09', assembly 'Screens/ScrSMR'
+2019-03-27 18:15:04,538 [1] WARN  - Can't get type of type 'SMR10', assembly 'Screens/ScrSMR'
+2019-03-27 18:15:04,547 [1] WARN  - Can't get type of type 'SMR11', assembly 'Screens/ScrSMR'
+2019-03-27 18:15:04,558 [1] WARN  - Can't get type of type 'SMR12', assembly 'Screens/ScrSMR'
+2019-03-27 18:15:04,567 [1] WARN  - Can't get type of type 'SMR13', assembly 'Screens/ScrSMR'
+2019-03-27 18:15:04,577 [1] WARN  - Can't get type of type 'SMR14', assembly 'Screens/ScrSMR'
+2019-03-27 18:15:04,589 [1] WARN  - Can't get type of type 'SMR15', assembly 'Screens/ScrSMR'
+2019-03-27 18:15:04,598 [1] WARN  - Can't get type of type 'SMR16', assembly 'Screens/ScrSMR'
+2019-03-27 18:15:04,608 [1] WARN  - Can't get type of type 'SMR17', assembly 'Screens/ScrSMR'
+2019-03-27 18:15:04,727 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-03-27 18:15:04,823 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-03-27 18:15:04,833 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-03-27 18:15:04,842 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-03-27 18:15:04,849 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+2019-03-27 18:17:42,054 [1] DEBUG - Barcode delay=180, Ctrl=True, B=False
+2019-03-27 18:17:46,544 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.REG001 dvYeucau_Id:61649
+2019-03-27 18:17:47,972 [1] INFO  - Luu tiep nhan:  take 5911 ms.
+2019-03-27 18:18:27,916 [1] DEBUG - Barcode delay=199, Ctrl=True, B=False
+2019-03-27 18:18:30,705 [1] DEBUG - User chạy: 1 Cách giải quyết:CapToa
+2019-03-27 18:18:31,082 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.OPD002 dvYeucau_Id:61649
+2019-03-27 18:18:34,848 [1] DEBUG - Barcode delay=149, Ctrl=True, B=False
+2019-03-27 18:19:03,583 [1] DEBUG - Barcode delay=232, Ctrl=True, B=False
+2019-03-27 18:22:43,180 [1] ERROR - The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.eHospital.Services.PHA018.TransactionExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA018.cs:line 144
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3, TransactionIsolationLevel isolationLevel)
+   at FPT.eHospital.Services.PHA018.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA018.cs:line 36
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters)
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 123
+   at FPT.eHospital.Forms.Pharmacy.VMPHA18.LoadThongTinChanDoan() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA18.cs:line 115
+   at FPT.eHospital.Forms.Pharmacy.VMPHA18.MaYteChange() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA18.cs:line 95
+   at FPT.eHospital.Forms.Pharmacy.VMPHA18.txtMaYTe_Change(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA18.cs:line 30
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2019-03-27 18:24:09,242 [1] ERROR - The given key was not present in the dictionary.
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.eHospital.Services.PHA018.TransactionExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA018.cs:line 144
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3, TransactionIsolationLevel isolationLevel)
+   at FPT.eHospital.Services.PHA018.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA018.cs:line 36
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters)
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 123
+   at FPT.eHospital.Forms.Pharmacy.VMPHA18.LoadThongTinChanDoan() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA18.cs:line 115
+   at FPT.eHospital.Forms.Pharmacy.VMPHA18.MaYteChange() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA18.cs:line 95
+   at FPT.eHospital.Forms.Pharmacy.VMPHA18.txtMaYTe_Change(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA18.cs:line 30
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+--------------------------------------------------------------------------------
+2019-03-27 18:25:36,743 [1] INFO  - [Application started.]
+2019-03-27 18:25:37,188 [1] ERROR - 'Messages.xml' Duplicated keys found: MHSM0062
+2019-03-27 18:25:39,647 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-03-27 18:25:39,692 [1] INFO  - LoadMasters() took 35 ms.
+2019-03-27 18:25:39,693 [1] INFO  - [_SYSTEM_] Session started.
+2019-03-27 18:26:04,064 [1] INFO  - [admin] Session is starting.
+2019-03-27 18:26:04,884 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:05,103 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:05,192 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:05,281 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:05,360 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:05,432 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:05,502 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:05,570 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:05,647 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:06,132 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:06,392 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:07,481 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:26:09,707 [5] INFO  - LoadMasters() took 5,637 ms.
+2019-03-27 18:26:09,718 [1] INFO  - [admin] Session started.
+2019-03-27 18:26:10,786 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-03-27 18:26:10,796 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-03-27 18:26:10,947 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-03-27 18:26:10,971 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-03-27 18:26:11,029 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-03-27 18:26:11,053 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-03-27 18:26:11,063 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-03-27 18:26:11,072 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-03-27 18:26:11,110 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-03-27 18:26:11,121 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-03-27 18:26:11,136 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-03-27 18:26:11,151 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-03-27 18:26:11,164 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-03-27 18:26:11,180 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-03-27 18:26:11,215 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-03-27 18:26:11,233 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-03-27 18:26:11,243 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-03-27 18:26:11,257 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-03-27 18:26:11,293 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-03-27 18:26:11,319 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-03-27 18:26:11,446 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-03-27 18:26:11,457 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-03-27 18:26:11,467 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-03-27 18:26:11,492 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-03-27 18:26:11,515 [1] WARN  - Can't get type of type 'EMR20', assembly 'Screens/ScrEMR'
+2019-03-27 18:26:11,546 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-03-27 18:26:11,637 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-03-27 18:26:11,653 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-03-27 18:26:11,665 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-03-27 18:26:11,674 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-03-27 18:26:11,682 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-03-27 18:26:11,692 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-03-27 18:26:11,718 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-03-27 18:26:11,799 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-03-27 18:26:11,810 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-03-27 18:26:11,818 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-03-27 18:26:11,848 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-03-27 18:26:11,909 [1] WARN  - Can't get type of type 'OPD06', assembly 'Screens/ScrOPD'
+2019-03-27 18:26:11,937 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-03-27 18:26:11,947 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-03-27 18:26:11,956 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-03-27 18:26:11,966 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-03-27 18:26:11,975 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-03-27 18:26:11,987 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-03-27 18:26:12,145 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-03-27 18:26:12,175 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-03-27 18:26:12,185 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-03-27 18:26:12,195 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-03-27 18:26:12,266 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-03-27 18:26:12,367 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-03-27 18:26:12,376 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-03-27 18:26:12,385 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-03-27 18:26:12,402 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-03-27 18:26:12,411 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-03-27 18:26:12,429 [1] WARN  - Can't get type of type 'SMR08', assembly 'Screens/ScrSMR'
+2019-03-27 18:26:12,436 [1] WARN  - Can't get type of type 'SMR09', assembly 'Screens/ScrSMR'
+2019-03-27 18:26:12,484 [1] WARN  - Can't get type of type 'SMR10', assembly 'Screens/ScrSMR'
+2019-03-27 18:26:12,494 [1] WARN  - Can't get type of type 'SMR11', assembly 'Screens/ScrSMR'
+2019-03-27 18:26:12,503 [1] WARN  - Can't get type of type 'SMR12', assembly 'Screens/ScrSMR'
+2019-03-27 18:26:12,516 [1] WARN  - Can't get type of type 'SMR13', assembly 'Screens/ScrSMR'
+2019-03-27 18:26:12,526 [1] WARN  - Can't get type of type 'SMR14', assembly 'Screens/ScrSMR'
+2019-03-27 18:26:12,537 [1] WARN  - Can't get type of type 'SMR15', assembly 'Screens/ScrSMR'
+2019-03-27 18:26:12,548 [1] WARN  - Can't get type of type 'SMR16', assembly 'Screens/ScrSMR'
+2019-03-27 18:26:12,556 [1] WARN  - Can't get type of type 'SMR17', assembly 'Screens/ScrSMR'
+2019-03-27 18:26:12,581 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-03-27 18:26:12,605 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-03-27 18:26:12,619 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-03-27 18:26:12,641 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-03-27 18:26:12,655 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+2019-03-27 18:28:39,920 [1] DEBUG - Service provider's Hospital_ID = HLU02
+2019-03-27 18:34:39,742 [1] DEBUG - Barcode delay=235, Ctrl=True, B=False
+--------------------------------------------------------------------------------
+2019-03-27 18:42:40,674 [1] INFO  - [Application started.]
+2019-03-27 18:42:41,027 [1] ERROR - 'Messages.xml' Duplicated keys found: MHSM0062
+2019-03-27 18:42:43,587 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-03-27 18:42:43,629 [1] INFO  - LoadMasters() took 35 ms.
+2019-03-27 18:42:43,630 [1] INFO  - [_SYSTEM_] Session started.
+2019-03-27 18:45:12,226 [1] INFO  - [admin] Session is starting.
+2019-03-27 18:45:12,877 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:13,038 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:13,103 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:13,175 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:13,235 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:13,295 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:13,406 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:13,469 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:13,536 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:14,007 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:14,103 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:15,118 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU02
+2019-03-27 18:45:17,903 [5] INFO  - LoadMasters() took 5,672 ms.
+2019-03-27 18:45:17,923 [1] INFO  - [admin] Session started.
+2019-03-27 18:45:18,748 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-03-27 18:45:18,757 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-03-27 18:45:18,877 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-03-27 18:45:18,885 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-03-27 18:45:18,928 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-03-27 18:45:18,936 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-03-27 18:45:18,944 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-03-27 18:45:18,952 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-03-27 18:45:18,976 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-03-27 18:45:18,983 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-03-27 18:45:18,992 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-03-27 18:45:19,001 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-03-27 18:45:19,011 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-03-27 18:45:19,021 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-03-27 18:45:19,038 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-03-27 18:45:19,046 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-03-27 18:45:19,056 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-03-27 18:45:19,068 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-03-27 18:45:19,077 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-03-27 18:45:19,098 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-03-27 18:45:19,154 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-03-27 18:45:19,168 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-03-27 18:45:19,178 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-03-27 18:45:19,188 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-03-27 18:45:19,212 [1] WARN  - Can't get type of type 'EMR20', assembly 'Screens/ScrEMR'
+2019-03-27 18:45:19,220 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-03-27 18:45:19,286 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-03-27 18:45:19,294 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-03-27 18:45:19,302 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-03-27 18:45:19,310 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-03-27 18:45:19,318 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-03-27 18:45:19,325 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-03-27 18:45:19,345 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-03-27 18:45:19,405 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-03-27 18:45:19,415 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-03-27 18:45:19,423 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-03-27 18:45:19,446 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-03-27 18:45:19,487 [1] WARN  - Can't get type of type 'OPD06', assembly 'Screens/ScrOPD'
+2019-03-27 18:45:19,502 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-03-27 18:45:19,510 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-03-27 18:45:19,518 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-03-27 18:45:19,525 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-03-27 18:45:19,533 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-03-27 18:45:19,541 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-03-27 18:45:19,671 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-03-27 18:45:19,699 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-03-27 18:45:19,707 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-03-27 18:45:19,715 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-03-27 18:45:19,799 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-03-27 18:45:19,889 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-03-27 18:45:19,902 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-03-27 18:45:19,919 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-03-27 18:45:19,941 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-03-27 18:45:19,950 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-03-27 18:45:19,968 [1] WARN  - Can't get type of type 'SMR08', assembly 'Screens/ScrSMR'
+2019-03-27 18:45:19,978 [1] WARN  - Can't get type of type 'SMR09', assembly 'Screens/ScrSMR'
+2019-03-27 18:45:19,985 [1] WARN  - Can't get type of type 'SMR10', assembly 'Screens/ScrSMR'
+2019-03-27 18:45:19,993 [1] WARN  - Can't get type of type 'SMR11', assembly 'Screens/ScrSMR'
+2019-03-27 18:45:20,001 [1] WARN  - Can't get type of type 'SMR12', assembly 'Screens/ScrSMR'
+2019-03-27 18:45:20,008 [1] WARN  - Can't get type of type 'SMR13', assembly 'Screens/ScrSMR'
+2019-03-27 18:45:20,017 [1] WARN  - Can't get type of type 'SMR14', assembly 'Screens/ScrSMR'
+2019-03-27 18:45:20,026 [1] WARN  - Can't get type of type 'SMR15', assembly 'Screens/ScrSMR'
+2019-03-27 18:45:20,034 [1] WARN  - Can't get type of type 'SMR16', assembly 'Screens/ScrSMR'
+2019-03-27 18:45:20,041 [1] WARN  - Can't get type of type 'SMR17', assembly 'Screens/ScrSMR'
+2019-03-27 18:45:20,067 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-03-27 18:45:20,087 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-03-27 18:45:20,096 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-03-27 18:45:20,103 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-03-27 18:45:20,112 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+2019-03-27 18:48:14,644 [1] DEBUG - Service provider's Hospital_ID = HLU02

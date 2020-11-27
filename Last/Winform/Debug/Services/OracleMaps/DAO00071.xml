@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,513d049ff62f5c3db5a5a6947d141222-->
+        <statement id="DAO00071_GetAll" resultClass="DataObject">
+            select *
+            from TM_DICHVU_DONGIA
+            order by DICHVU_DONGIA_ID
+        </statement>
+        <!--Revision:0,854b647471452ea9641abf1f26ac82a0-->
+        <statement id="DAO00071_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_DICHVU_DONGIA
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="DICHVU_DONGIA_ID">
+                        TM_DICHVU_DONGIA.DICHVU_DONGIA_ID = '$DICHVU_DONGIA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_DICHVU_DONGIA.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BANGGIA_ID">
+                        TM_DICHVU_DONGIA.BANGGIA_ID = '$BANGGIA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHVU_ID">
+                        TM_DICHVU_DONGIA.DICHVU_ID = '$DICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIGIA_ID">
+                        TM_DICHVU_DONGIA.LOAIGIA_ID = '$LOAIGIA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIENTE_ID">
+                        TM_DICHVU_DONGIA.TIENTE_ID = '$TIENTE_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONGIA">
+                        TM_DICHVU_DONGIA.DONGIA = '$DONGIA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONGIATHAPNHAT">
+                        TM_DICHVU_DONGIA.DONGIATHAPNHAT = '$DONGIATHAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONGIACAONHAT">
+                        TM_DICHVU_DONGIA.DONGIACAONHAT = '$DONGIACAONHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TYLEVAT">
+                        TM_DICHVU_DONGIA.TYLEVAT = '$TYLEVAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIATRIVAT">
+                        TM_DICHVU_DONGIA.GIATRIVAT = '$GIATRIVAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRANGTHAI">
+                        TM_DICHVU_DONGIA.TRANGTHAI = '$TRANGTHAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAMNGUNG">
+                        TM_DICHVU_DONGIA.TAMNGUNG = '$TAMNGUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_DICHVU_DONGIA.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_DICHVU_DONGIA.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_DICHVU_DONGIA.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_DICHVU_DONGIA.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by DICHVU_DONGIA_ID
+        </statement>
+        <!--Revision:0,00b300e164301f5cc2834a70cbab5604-->
+        <statement id="DAO00071_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_DICHVU_DONGIA
+            where DICHVU_DONGIA_ID  = '$value$'
+            order by DICHVU_DONGIA_ID
+        </statement>
+        <!--Revision:0,afd6c24f0ab62e26ac11488dd0c059bf-->
+        <statement id="DAO00071_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_DICHVU_DONGIA
+            where DICHVU_DONGIA_ID  = '$DICHVU_DONGIA_ID$'
+            order by DICHVU_DONGIA_ID
+        </statement>
+        <!--Revision:0,21dd8204a778e907b404f8d40cf7bb6f-->
+        <insert id="DAO00071_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DICHVU_DONGIA (
+            DICHVU_DONGIA_ID
+            , BENHVIEN_ID
+            , BANGGIA_ID
+            , DICHVU_ID
+            , LOAIGIA_ID
+            , TIENTE_ID
+            , DONGIA
+            , DONGIATHAPNHAT
+            , DONGIACAONHAT
+            , TYLEVAT
+            , GIATRIVAT
+            , TRANGTHAI
+            , TAMNGUNG
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            ) values (
+            #DICHVU_DONGIA_ID#
+            , #BENHVIEN_ID#
+            , #BANGGIA_ID#
+            , #DICHVU_ID#
+            , #LOAIGIA_ID#
+            , #TIENTE_ID#
+            , #DONGIA#
+            , #DONGIATHAPNHAT#
+            , #DONGIACAONHAT#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #TRANGTHAI#
+            , #TAMNGUNG#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            )
+        </insert>
+        <!--Revision:0,a87e8ef0df73ea4086cb7c809fe89e9a-->
+        <update id="DAO00071_Update" parameterClass="System.Collections.IDictionary">
+            update TM_DICHVU_DONGIA set
+            BENHVIEN_ID = #BENHVIEN_ID#
+            , BANGGIA_ID = #BANGGIA_ID#
+            , DICHVU_ID = #DICHVU_ID#
+            , LOAIGIA_ID = #LOAIGIA_ID#
+            , TIENTE_ID = #TIENTE_ID#
+            , DONGIA = #DONGIA#
+            , DONGIATHAPNHAT = #DONGIATHAPNHAT#
+            , DONGIACAONHAT = #DONGIACAONHAT#
+            , TYLEVAT = #TYLEVAT#
+            , GIATRIVAT = #GIATRIVAT#
+            , TRANGTHAI = #TRANGTHAI#
+            , TAMNGUNG = #TAMNGUNG#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            DICHVU_DONGIA_ID = '$DICHVU_DONGIA_ID$'
+        </update>
+        <!--Revision:0,d57a47a2bd5e78a0bf697a6a712b4878-->
+        <statement id="DAO00071_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DICHVU_DONGIA
+            where
+            DICHVU_DONGIA_ID = '$DICHVU_DONGIA_ID$'
+        </statement>
+        <!--Revision:0,c8b8c7b47db3cf683ac1e295e6ec4dc3-->
+        <statement id="DAO00071_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DICHVU_DONGIA
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="DICHVU_DONGIA_ID">
+                        TM_DICHVU_DONGIA.DICHVU_DONGIA_ID = '$DICHVU_DONGIA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_DICHVU_DONGIA.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BANGGIA_ID">
+                        TM_DICHVU_DONGIA.BANGGIA_ID = '$BANGGIA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHVU_ID">
+                        TM_DICHVU_DONGIA.DICHVU_ID = '$DICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIGIA_ID">
+                        TM_DICHVU_DONGIA.LOAIGIA_ID = '$LOAIGIA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIENTE_ID">
+                        TM_DICHVU_DONGIA.TIENTE_ID = '$TIENTE_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONGIA">
+                        TM_DICHVU_DONGIA.DONGIA = '$DONGIA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONGIATHAPNHAT">
+                        TM_DICHVU_DONGIA.DONGIATHAPNHAT = '$DONGIATHAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONGIACAONHAT">
+                        TM_DICHVU_DONGIA.DONGIACAONHAT = '$DONGIACAONHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TYLEVAT">
+                        TM_DICHVU_DONGIA.TYLEVAT = '$TYLEVAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIATRIVAT">
+                        TM_DICHVU_DONGIA.GIATRIVAT = '$GIATRIVAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRANGTHAI">
+                        TM_DICHVU_DONGIA.TRANGTHAI = '$TRANGTHAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAMNGUNG">
+                        TM_DICHVU_DONGIA.TAMNGUNG = '$TAMNGUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_DICHVU_DONGIA.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_DICHVU_DONGIA.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_DICHVU_DONGIA.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_DICHVU_DONGIA.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

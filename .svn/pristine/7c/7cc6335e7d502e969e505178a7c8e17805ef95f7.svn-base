@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,494b069fe42cdd47efe7aaae83053ee2-->
+        <statement id="DAO00200_GetAll" resultClass="DataObject">
+            SELECT *
+            FROM TM_REPORT
+            ORDER BY REPORT_ID
+        </statement>
+        <!--Revision:0,94fc0531e289d3182f837eff5de1f475-->
+        <statement id="DAO00200_CreateProcedure" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            #PROCEDURE_CREATE_CONTENT#
+        </statement>
+        <!--Revision:1,70998bf842c942185ef57f1807312c45-->
+        <statement id="DAO00200_GetAllWithCodeAndParentID" resultClass="DataObject">
+            SELECT R.REPORT_ID AS REPORT_ID, ISNULL(RS.REPORT_ID,0) AS PARENT_ID, R.REPORT_CODE, R.REPORT_NAME, R.FOLDER_LEVEL, R.IS_FOLDER, R.FOLDER_CODE
+            FROM TM_REPORT AS R
+            LEFT JOIN TM_REPORT_SUB_DEFINITION AS RS ON R.REPORT_CODE = RS.SUB_REPORT_CODE AND RS.BENHVIEN_ID = R.BENHVIEN_ID
+            WHERE R.REPORT_ID != 0 AND R.BENHVIEN_ID = '$BENHVIEN_ID$'
+            ORDER BY R.REPORT_NAME
+        </statement>
+        <!--Revision:1,341f03af79827d34d0b9205598682777-->
+        <statement id="DAO00200_GetAllPhanQuyen" resultClass="DataObject">
+            SELECT R.REPORT_ID AS REPORT_ID, ISNULL(RS.REPORT_ID,-1) AS PARENT_ID, R.REPORT_CODE, R.REPORT_NAME, R.FOLDER_LEVEL, R.IS_FOLDER, R.FOLDER_CODE, R.DESCRIPTION
+            , R2.REPORT_CODE AS PARENT_CODE, TAMNGUNG = CASE WHEN R.ENABLED = '1' THEN '0' ELSE '1' END
+            FROM TM_REPORT AS R
+            LEFT JOIN TM_REPORT_SUB_DEFINITION AS RS ON
+            (SELECT TOP 1 REPORT_SUB_DEFINITION_ID FROM TM_REPORT_SUB_DEFINITION WHERE R.REPORT_CODE = SUB_REPORT_CODE AND BENHVIEN_ID = '$BENHVIEN_ID$') = RS.REPORT_SUB_DEFINITION_ID AND RS.BENHVIEN_ID = R.BENHVIEN_ID
+            LEFT JOIN TM_REPORT AS R2 ON R2.REPORT_CODE = RS.REPORT_CODE AND R2.BENHVIEN_ID = RS.BENHVIEN_ID
+            WHERE R.REPORT_ID != 0 AND R.ENABLED = '1' AND R.BENHVIEN_ID = '$BENHVIEN_ID$' AND R.IS_PHIEU != '1'
+            AND (RS.REPORT_ID IS NULL OR R2.IS_FOLDER = '1')
+            ORDER BY R.REPORT_NAME
+        </statement>
+        <!--Revision:0,1c825fdae67f986a15a2a571b98e5721-->
+        <statement id="DAO00200_GetListWithoutFolder" resultClass="DataObject">
+            WITH ReportRec AS
+            (
+            SELECT REPORT_CODE FROM TM_REPORT WHERE REPORT_CODE = '$REPORT_CODE$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT RS.REPORT_CODE
+            FROM ReportRec AS RR
+            INNER JOIN dbo.TM_REPORT_SUB_DEFINITION AS RS ON RS.SUB_REPORT_CODE = RR.REPORT_CODE AND RS.BENHVIEN_ID = '$BENHVIEN_ID$'
+            )
+            SELECT DISTINCT R.REPORT_ID, R.REPORT_CODE, R.REPORT_NAME, R.FOLDER_LEVEL, R.IS_FOLDER, R.FOLDER_CODE
+            FROM TM_REPORT AS R
+            LEFT JOIN TM_REPORT_SUB_DEFINITION AS RS ON R.REPORT_ID = RS.SUB_REPORT_ID AND RS.BENHVIEN_ID = '$BENHVIEN_ID$'
+            INNER JOIN TM_REPORT AS R1 ON R1.REPORT_CODE = '$REPORT_CODE$' AND R1.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE R.REPORT_ID != 0 AND ((R1.IS_FOLDER = '0' AND R.IS_FOLDER = '0') OR (R1.IS_FOLDER = '1'))
+            AND R.REPORT_CODE != '$REPORT_CODE$' AND R.BENHVIEN_ID = '$BENHVIEN_ID$' AND R.REPORT_CODE NOT IN (SELECT DISTINCT REPORT_CODE FROM ReportRec)
+            ORDER BY R.REPORT_NAME
+        </statement>
+        <!--Revision:1,c53c220883ccef473b8080480256430e-->
+        <statement id="DAO00200_GetListWithoutPhieu" resultClass="DataObject">
+            SELECT R.REPORT_ID AS REPORT_ID, ISNULL(RS.REPORT_ID,0) AS PARENT_ID, R.REPORT_CODE, R.REPORT_NAME, R.FOLDER_LEVEL, R.IS_FOLDER, R.FOLDER_CODE
+            , RS.REPORT_CODE AS PARENT_CODE
+            FROM TM_REPORT AS R
+            LEFT JOIN TM_REPORT_SUB_DEFINITION AS RS ON R.REPORT_CODE = RS.SUB_REPORT_CODE AND RS.BENHVIEN_ID = R.BENHVIEN_ID
+            LEFT JOIN TM_REPORT AS R2 ON R2.REPORT_CODE = RS.REPORT_CODE AND R2.BENHVIEN_ID = RS.BENHVIEN_ID
+            WHERE R.REPORT_ID != 0 AND R.IS_PHIEU != '1' AND R.ENABLED = '1' AND R.BENHVIEN_ID = '$BENHVIEN_ID$'
+            AND (RS.REPORT_ID IS NULL OR R2.IS_FOLDER = '1')
+            ORDER BY R.REPORT_NAME
+        </statement>
+        <!--Revision:0,85ad3e08835a684561bc3cbd8425882e-->
+        <statement id="DAO00200_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_REPORT
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="REPORT_ID">
+                        TM_REPORT.REPORT_ID = '$REPORT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_CODE">
+                        TM_REPORT.REPORT_CODE = '$REPORT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_NAME">
+                        TM_REPORT.REPORT_NAME = '$REPORT_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ENABLED">
+                        TM_REPORT.ENABLED = '$ENABLED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ISEXPORTED">
+                        TM_REPORT.ISEXPORTED = '$ISEXPORTED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_FILE">
+                        TM_REPORT.REPORT_FILE = '$REPORT_FILE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_FILE_EN">
+                        TM_REPORT.REPORT_FILE_EN = '$REPORT_FILE_EN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DATASET_LIST">
+                        TM_REPORT.DATASET_LIST = '$DATASET_LIST$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PROCEDURE_FILE">
+                        TM_REPORT.PROCEDURE_FILE = '$PROCEDURE_FILE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DESCRIPTION">
+                        TM_REPORT.DESCRIPTION = '$DESCRIPTION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LANDSCAPE_ORIENTATION">
+                        TM_REPORT.LANDSCAPE_ORIENTATION = '$LANDSCAPE_ORIENTATION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PAPERSIZE_WIDTH">
+                        TM_REPORT.PAPERSIZE_WIDTH = '$PAPERSIZE_WIDTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PAPERSIZE_HEIGHT">
+                        TM_REPORT.PAPERSIZE_HEIGHT = '$PAPERSIZE_HEIGHT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MARGIN_LEFT">
+                        TM_REPORT.MARGIN_LEFT = '$MARGIN_LEFT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MARGIN_RIGHT">
+                        TM_REPORT.MARGIN_RIGHT = '$MARGIN_RIGHT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MARGIN_TOP">
+                        TM_REPORT.MARGIN_TOP = '$MARGIN_TOP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MARGIN_BOTTOM">
+                        TM_REPORT.MARGIN_BOTTOM = '$MARGIN_BOTTOM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="UNIT_TYPE">
+                        TM_REPORT.UNIT_TYPE = '$UNIT_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DATASET_BARCODE">
+                        TM_REPORT.DATASET_BARCODE = '$DATASET_BARCODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BARCODE">
+                        TM_REPORT.BARCODE = '$BARCODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DB_TYPE">
+                        TM_REPORT.DB_TYPE = '$DB_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_1">
+                        TM_REPORT.ATTRIBUTE_1 = '$ATTRIBUTE_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_2">
+                        TM_REPORT.ATTRIBUTE_2 = '$ATTRIBUTE_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_3">
+                        TM_REPORT.ATTRIBUTE_3 = '$ATTRIBUTE_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_4">
+                        TM_REPORT.ATTRIBUTE_4 = '$ATTRIBUTE_4$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_5">
+                        TM_REPORT.ATTRIBUTE_5 = '$ATTRIBUTE_5$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_TYPE">
+                        TM_REPORT.REPORT_TYPE = '$REPORT_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_PHIEU">
+                        TM_REPORT.IS_PHIEU = '$IS_PHIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_FOLDER">
+                        TM_REPORT.IS_FOLDER = '$IS_FOLDER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FOLDER_LEVEL">
+                        TM_REPORT.FOLDER_LEVEL = '$FOLDER_LEVEL$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FOLDER_CODE">
+                        TM_REPORT.FOLDER_CODE = '$FOLDER_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRINTER_NAME">
+                        TM_REPORT.PRINTER_NAME = '$PRINTER_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_VERSION">
+                        TM_REPORT.REPORT_VERSION = '$REPORT_VERSION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_REPORT.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_REPORT.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_REPORT.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_REPORT.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_REPORT.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by REPORT_ID
+        </statement>
+        <!--Revision:0,517d7e4ed94a2324f5744eaf8fa92533-->
+        <statement id="DAO00200_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_REPORT
+            where TM_REPORT.REPORT_CODE  = '$REPORT_CODE$' AND TM_REPORT.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,4a6c3b6a09fc6a04e5014a579a2f9bfe-->
+        <statement id="DAO00200_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_REPORT
+            where TM_REPORT.REPORT_ID  = '$REPORT_ID$'
+            order by REPORT_ID
+        </statement>
+        <!--Revision:0,ae878262f2af7ffadae946bc4f742799-->
+        <statement id="DAO00200_GetDetailByCode" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select TOP 1 *
+            from TM_REPORT
+            where TM_REPORT.REPORT_CODE  = '$REPORT_CODE$' AND TM_REPORT.BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by REPORT_CODE
+        </statement>
+        <!--Revision:0,01f1805ba67067ae2ab8b2ed8c22a813-->
+        <statement id="DAO00200_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+          insert into TM_REPORT (
+          REPORT_CODE
+          , REPORT_NAME
+          , ENABLED
+          , ISEXPORTED
+          , REPORT_FILE
+          , REPORT_FILE_EN
+          , DATASET_LIST
+          , PROCEDURE_FILE
+          , DESCRIPTION
+          , LANDSCAPE_ORIENTATION
+          , PAPERSIZE_WIDTH
+          , PAPERSIZE_HEIGHT
+          , MARGIN_LEFT
+          , MARGIN_RIGHT
+          , MARGIN_TOP
+          , MARGIN_BOTTOM
+          , UNIT_TYPE
+          , DATASET_BARCODE
+          , BARCODE
+          , DB_TYPE
+          , ATTRIBUTE_1
+          , ATTRIBUTE_2
+          , ATTRIBUTE_3
+          , ATTRIBUTE_4
+          , ATTRIBUTE_5
+          , REPORT_TYPE
+          , IS_PHIEU
+          , PRINT_1SIDE
+          , IS_FOLDER
+          , FOLDER_LEVEL
+          , FOLDER_CODE
+          , PRINTER_NAME
+          , REPORT_VERSION
+          , BENHVIEN_ID
+          , NGAYTAO
+          , NGUOITAO_ID
+          , NGAYCAPNHAT
+          , NGUOICAPNHAT_ID
+          ) values (
+          #REPORT_CODE#
+          , #REPORT_NAME#
+          , #ENABLED#
+          , #ISEXPORTED#
+          , #REPORT_FILE#
+          , #REPORT_FILE_EN#
+          , #DATASET_LIST#
+          , #PROCEDURE_FILE#
+          , #DESCRIPTION#
+          , #LANDSCAPE_ORIENTATION#
+          , #PAPERSIZE_WIDTH#
+          , #PAPERSIZE_HEIGHT#
+          , #MARGIN_LEFT#
+          , #MARGIN_RIGHT#
+          , #MARGIN_TOP#
+          , #MARGIN_BOTTOM#
+          , #UNIT_TYPE#
+          , #DATASET_BARCODE#
+          , #BARCODE#
+          , #DB_TYPE#
+          , #ATTRIBUTE_1#
+          , #ATTRIBUTE_2#
+          , #ATTRIBUTE_3#
+          , #ATTRIBUTE_4#
+          , #ATTRIBUTE_5#
+          , #REPORT_TYPE#
+          , #IS_PHIEU#
+          , #PRINT_1SIDE#
+          , #IS_FOLDER#
+          , #FOLDER_LEVEL#
+          , #FOLDER_CODE#
+          , #PRINTER_NAME#
+          , #REPORT_VERSION#
+          , #BENHVIEN_ID#
+          , #NGAYTAO#
+          , #NGUOITAO_ID#
+          , #NGAYCAPNHAT#
+          , #NGUOICAPNHAT_ID#
+          )
+          SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,815144fca6cd204d167451fbd748e780-->
+        <update id="DAO00200_Update" parameterClass="System.Collections.IDictionary">
+          update TM_REPORT set
+          REPORT_CODE = #REPORT_CODE#
+          , REPORT_NAME = #REPORT_NAME#
+          , ENABLED = #ENABLED#
+          , ISEXPORTED = #ISEXPORTED#
+          , REPORT_FILE = #REPORT_FILE#
+          , REPORT_FILE_EN = #REPORT_FILE_EN#
+          , DATASET_LIST = #DATASET_LIST#
+          , PROCEDURE_FILE = #PROCEDURE_FILE#
+          , DESCRIPTION = #DESCRIPTION#
+          , LANDSCAPE_ORIENTATION = #LANDSCAPE_ORIENTATION#
+          , PAPERSIZE_WIDTH = #PAPERSIZE_WIDTH#
+          , PAPERSIZE_HEIGHT = #PAPERSIZE_HEIGHT#
+          , MARGIN_LEFT = #MARGIN_LEFT#
+          , MARGIN_RIGHT = #MARGIN_RIGHT#
+          , MARGIN_TOP = #MARGIN_TOP#
+          , MARGIN_BOTTOM = #MARGIN_BOTTOM#
+          , UNIT_TYPE = #UNIT_TYPE#
+          , DATASET_BARCODE = #DATASET_BARCODE#
+          , BARCODE = #BARCODE#
+          , DB_TYPE = #DB_TYPE#
+          , ATTRIBUTE_1 = #ATTRIBUTE_1#
+          , ATTRIBUTE_2 = #ATTRIBUTE_2#
+          , ATTRIBUTE_3 = #ATTRIBUTE_3#
+          , ATTRIBUTE_4 = #ATTRIBUTE_4#
+          , ATTRIBUTE_5 = #ATTRIBUTE_5#
+          , REPORT_TYPE = #REPORT_TYPE#
+          , IS_PHIEU = #IS_PHIEU#
+          , PRINT_1SIDE = #PRINT_1SIDE#
+          , IS_FOLDER = #IS_FOLDER#
+          , FOLDER_LEVEL = #FOLDER_LEVEL#
+          , FOLDER_CODE = #FOLDER_CODE#
+          , PRINTER_NAME = #PRINTER_NAME#
+          , REPORT_VERSION = #REPORT_VERSION#
+          , BENHVIEN_ID = #BENHVIEN_ID#
+          , NGAYCAPNHAT = #NGAYCAPNHAT#
+          , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+          where
+          REPORT_ID = '$REPORT_ID$'
+        </update>
+        <!--Revision:0,644872f5c28709e370e7b41f7108e44e-->
+        <statement id="DAO00200_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_REPORT
+            where
+            REPORT_ID = '$REPORT_ID$'
+        </statement>
+        <!--Revision:0,ed2c01d52384db88f2deed950d2d1f7b-->
+        <statement id="DAO00200_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_REPORT
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="REPORT_ID">
+                        TM_REPORT.REPORT_ID = '$REPORT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_CODE">
+                        TM_REPORT.REPORT_CODE = '$REPORT_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_NAME">
+                        TM_REPORT.REPORT_NAME = '$REPORT_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ENABLED">
+                        TM_REPORT.ENABLED = '$ENABLED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ISEXPORTED">
+                        TM_REPORT.ISEXPORTED = '$ISEXPORTED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_FILE">
+                        TM_REPORT.REPORT_FILE = '$REPORT_FILE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_FILE_EN">
+                        TM_REPORT.REPORT_FILE_EN = '$REPORT_FILE_EN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DATASET_LIST">
+                        TM_REPORT.DATASET_LIST = '$DATASET_LIST$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PROCEDURE_FILE">
+                        TM_REPORT.PROCEDURE_FILE = '$PROCEDURE_FILE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DESCRIPTION">
+                        TM_REPORT.DESCRIPTION = '$DESCRIPTION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LANDSCAPE_ORIENTATION">
+                        TM_REPORT.LANDSCAPE_ORIENTATION = '$LANDSCAPE_ORIENTATION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PAPERSIZE_WIDTH">
+                        TM_REPORT.PAPERSIZE_WIDTH = '$PAPERSIZE_WIDTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PAPERSIZE_HEIGHT">
+                        TM_REPORT.PAPERSIZE_HEIGHT = '$PAPERSIZE_HEIGHT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MARGIN_LEFT">
+                        TM_REPORT.MARGIN_LEFT = '$MARGIN_LEFT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MARGIN_RIGHT">
+                        TM_REPORT.MARGIN_RIGHT = '$MARGIN_RIGHT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MARGIN_TOP">
+                        TM_REPORT.MARGIN_TOP = '$MARGIN_TOP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MARGIN_BOTTOM">
+                        TM_REPORT.MARGIN_BOTTOM = '$MARGIN_BOTTOM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="UNIT_TYPE">
+                        TM_REPORT.UNIT_TYPE = '$UNIT_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DATASET_BARCODE">
+                        TM_REPORT.DATASET_BARCODE = '$DATASET_BARCODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BARCODE">
+                        TM_REPORT.BARCODE = '$BARCODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DB_TYPE">
+                        TM_REPORT.DB_TYPE = '$DB_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_1">
+                        TM_REPORT.ATTRIBUTE_1 = '$ATTRIBUTE_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_2">
+                        TM_REPORT.ATTRIBUTE_2 = '$ATTRIBUTE_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_3">
+                        TM_REPORT.ATTRIBUTE_3 = '$ATTRIBUTE_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_4">
+                        TM_REPORT.ATTRIBUTE_4 = '$ATTRIBUTE_4$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_5">
+                        TM_REPORT.ATTRIBUTE_5 = '$ATTRIBUTE_5$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_TYPE">
+                        TM_REPORT.REPORT_TYPE = '$REPORT_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_PHIEU">
+                        TM_REPORT.IS_PHIEU = '$IS_PHIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_FOLDER">
+                        TM_REPORT.IS_FOLDER = '$IS_FOLDER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FOLDER_LEVEL">
+                        TM_REPORT.FOLDER_LEVEL = '$FOLDER_LEVEL$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FOLDER_CODE">
+                        TM_REPORT.FOLDER_CODE = '$FOLDER_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRINTER_NAME">
+                        TM_REPORT.PRINTER_NAME = '$PRINTER_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REPORT_VERSION">
+                        TM_REPORT.REPORT_VERSION = '$REPORT_VERSION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_REPORT.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_REPORT.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_REPORT.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_REPORT.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_REPORT.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+		<statement id="DAO00200_GetSettingReportPrinting" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT DICTIONARY_CODE AS REPORT_CODE, DICTIONARY_NAME AS COMPUTER_NAME, DICTIONARY_NAME_EN AS NAME_PRINTER
+        FROM LST_DICTIONARY
+        WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND ENABLED = '1' AND DICTIONARY_TYPE_CODE = 'Report_Printer_Setting'
+        AND DICTIONARY_CODE = '$REPORT_CODE$' AND DICTIONARY_NAME = '$COMPUTER_NAME$'
+      </statement>
+    <statement id="DAO00200_GetDSKhoDuocTheoPhamVi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT *
+        FROM TM_PHAMVIDUOCPHAM
+        WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND TAMNGUNG = '0' AND MAPHAMVI = '$MAPHAMVI$'
+      </statement>
+      <statement id="DAO00200_GetPermissionCategorySystem" resultClass="DataObject">
+        SELECT DISTINCT C.CATEGORY_ID AS REPORT_ID
+        , ISNULL(C.PARENT_ID,0) AS PARENT_ID
+        , C.CATEGORY_CODE AS REPORT_CODE
+        , C.CATEGORY_NAME AS REPORT_NAME
+        , C.FOLDER_LEVEL
+        , C.IS_FOLDER
+        , C.FOLDER_CODE
+        , CASE WHEN (C.FOLDER_CODE IS NULL OR C.FOLDER_CODE = 'ROOT' OR C.FOLDER_CODE = '' )
+        THEN NULL ELSE C.FOLDER_CODE END AS PARENT_CODE
+        , C.CATEGORY_TYPE
+        , C.CATEGORY_NAME as DESCRIPTION
+        FROM TM_CATEGORY AS C
+        WHERE C.ENABLED = '1'
+        AND C.BENHVIEN_ID = '$BENHVIEN_ID$' AND C.CATEGORY_ID != 0
+        ORDER BY C.CATEGORY_ID
+      </statement>
+    </statements>
+</sqlMap>

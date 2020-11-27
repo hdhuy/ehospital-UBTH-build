@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,a9c95d26014dc4033f4109ee7e054f32-->
+        <statement id="DAO00106_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TM_ICD_CHUONG
+            where TAMNGUNG = 0
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TM_STATE>  
+  <STATE>    
+    <STATUS_CODE>CHODONGTIEN</STATUS_CODE>
+    <NAME>Chờ đóng tiền</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>CHUAKETQUA</STATUS_CODE>
+    <NAME>Chờ khám bệnh</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>CHUAKETQUA</STATUS_CODE>
+    <NAME>Chưa kết quả</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>  
+  <STATE>
+    <STATUS_CODE>HOANTAT</STATUS_CODE>
+    <NAME>Hoàn tất</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>DANGTHUCHIEN</STATUS_CODE>
+    <NAME>Thực hiện CLS</NAME>
+    <SHORT_NAME>Đang thực hiện</SHORT_NAME>
+  </STATE>
+  
+  <STATE>
+    <STATUS_CODE>DUYETTOATHUOC</STATUS_CODE>
+    <NAME>Chờ duyệt toa thuốc BHYT</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>XUATTHUOC</STATUS_CODE>
+    <NAME>Xuất thuốc BHYT</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>HOANTAT</STATUS_CODE>
+    <NAME>Xác nhận BHYT</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>HOANTHANH</STATUS_CODE>
+    <NAME>Hoàn thành tiếp nhận</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>CHODONGTIEN</STATUS_CODE>
+    <NAME>Chờ đóng tiền BHYT</NAME>
+    <SHORT_NAME>Chờ đóng tiền</SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>DANGDIEUTRI</STATUS_CODE>
+    <NAME>Tạo bệnh án thành công</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>DANGDIEUTRI</STATUS_CODE>
+    <NAME>Thu tạm ứng thành công</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>DAXUATVIEN</STATUS_CODE>
+    <NAME>Tổng kết bệnh án thành công</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>HOANTHANH</STATUS_CODE>
+    <NAME>Ra viện</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+<STATE>
+    <STATUS_CODE>CHOLAYMAU</STATUS_CODE>
+    <NAME>Chờ lấy mẫu bệnh phẩm</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+  <STATE>
+    <STATUS_CODE>CHONHANTHUOCBHYT</STATUS_CODE>
+    <NAME>Chờ nhận thuốc BHYT</NAME>
+    <SHORT_NAME></SHORT_NAME>
+  </STATE>
+</TM_STATE> 

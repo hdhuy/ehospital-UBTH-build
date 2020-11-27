@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,5b80d17ce6d7eba1aa5f40d32cf5c45f-->
+        <statement id="DAO00075_GetTTLuuTruChiTietByLuuTruID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TT_NOITRU_LUUTRUCHITIET
+            where LUUTRU_ID = '$LUUTRU_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,19c35a724c7168ccd8e1a790285a9b28-->
+        <statement id="DAO00075_GetLuuTruChiTietHienTai" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TT_NOITRU_LUUTRUCHITIET
+            where LUUTRU_ID = '$LUUTRU_ID$'
+            and LUUTRUCHITIET_CURRENT = 1
+            and ROWNUM = 1
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,b954cb6c7ed217e9ab56e2a903f14299-->
+        <statement id="DAO00075_GetTTLuuTruPhongBenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TT_NOITRU_LUUTRUCHITIET
+            where PHONGBENH_ID = '$PHONGBENH_ID$'
+            and NGAYRA IS NULL
+            and THOIGIANRA IS NULL
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,f3396845510aa805b5266f302389522a-->
+        <statement id="DAO00075_GetDSTrangThaiGiuongInPhong" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TT_NOITRU_GIUONGBENH
+            where PHONGBENH_ID = '$PHONGBENH_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,2568824cb7628943bd75c06818efb44f-->
+        <statement id="DAO00075_GetTTGiuongBenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TT_NOITRU_GIUONGBENH
+            where GIUONGBENH_ID = '$GIUONGBENH_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,d98672a72df4b253856f1ade23998abd-->
+        <statement id="DAO00075_GetDSThuocChuaXuat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select TOATHUOC_ID from TT_NOITRU_TOATHUOC
+            where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+            and CHUNGTU_ID IS NULL
+            <!--and PHIEULINH_ID IS NULL-->
+        </statement>
+        <!--Revision:0,1d88968162f2b7750e089d06fb6e44bd-->
+        <statement id="DAO00075_GetDSVTYTChuaXuat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select PHAUTHUAT_VTYT_ID from TT_PHAUTHUAT_VTYT
+            where PHAUTHUAT_ID in (select PHAUTHUAT_ID from TT_PHAUTHuAT where BENHAN_ID = '$BENHAN_ID$')
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+            and CHUNGTU_ID IS NULL
+        </statement>
+        <!--Revision:0,d8c3b5c40869d616c744ddd39cfb8b2e-->
+        <update id="DAO00075_CapNhatTTGiuongBenh" parameterClass="System.Collections.IDictionary">
+            update TT_NOITRU_GIUONGBENH
+            set GIUONGTRONG = #GIUONGTRONG#,
+            BENHAN_ID = #BENHAN_ID#
+            where GIUONGBENH_ID = '$GIUONGBENH_ID$'
+            and PHONGBENH_ID = '$PHONGBENH_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </update>
+        <!--Revision:0,e60aec5ea92133f782e9e8d8c726df7b-->
+        <statement id="DAO00075_GetDSLuuTru" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select ltct.* from TT_NOITRU_LUUTRUCHITIET ltct
+            left join TT_NOITRU_LUUTRU lt
+            on lt.LUUTRU_ID = ltct.LUUTRU_ID
+            where lt.BENHAN_ID = '$BENHAN_ID$'
+        </statement>
+        <!--Revision:0,7f39b322f587109a8154c090cb657a0b-->
+        <statement id="DAO00075_AddTTGiuongBenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            insert into TT_NOITRU_GIUONGBENH (
+            GIUONGBENH_ID,
+            PHONGBENH_ID,
+            BENHAN_ID,
+            GIUONGTRONG,
+            BENHVIEN_ID)
+            values (
+            #GIUONGBENH_ID#,
+            #PHONGBENH_ID#,
+            #BENHAN_ID#,
+            #GIUONGTRONG#,
+            #BENHVIEN_ID#)
+        </statement>
+        <!--Revision:0,709633d1720f17035cd4bddde11d4e23-->
+        <statement id="DAO00075_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_NOITRU_LUUTRUCHITIET
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="LUUTRUCHITIET_ID">
+                        LUUTRUCHITIET_ID = '$LUUTRUCHITIET_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRU_ID">
+                        LUUTRU_ID = '$LUUTRU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHONGBAN_ID">
+                        PHONGBAN_ID = '$PHONGBAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIUONGBENH_ID">
+                        GIUONGBENH_ID = '$GIUONGBENH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHONGBENH_ID">
+                        PHONGBENH_ID = '$PHONGBENH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+                        DVYEUCAU_ID = '$DVYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYVAO">
+                        NGAYVAO = '$NGAYVAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANVAO">
+                        THOIGIANVAO = '$THOIGIANVAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANTINHLUUTRU">
+                        THOIGIANTINHLUUTRU = '$THOIGIANTINHLUUTRU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LYDO_ID">
+                        LYDO_ID = '$LYDO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYRA">
+                        NGAYRA = '$NGAYRA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANRA">
+                        THOIGIANRA = '$THOIGIANRA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANDUKIENRA">
+                        THOIGIANDUKIENRA = '$THOIGIANDUKIENRA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONGIAPHAITHU">
+                        DONGIAPHAITHU = '$DONGIAPHAITHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONGIA">
+                        DONGIA = '$DONGIA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BHYT_DONGIA">
+                        BHYT_DONGIA = '$BHYT_DONGIA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TYLEVAT">
+                        TYLEVAT = '$TYLEVAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIATRIVAT">
+                        GIATRIVAT = '$GIATRIVAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIENTE_ID">
+                        TIENTE_ID = '$TIENTE_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TYGIA">
+                        TYGIA = '$TYGIA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIGIA_ID">
+                        LOAIGIA_ID = '$LOAIGIA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIUONGBENHCHUYENDEN_ID">
+                        GIUONGBENHCHUYENDEN_ID = '$GIUONGBENHCHUYENDEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BAOPHONG">
+                        BAOPHONG = '$BAOPHONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BAOGIUONG">
+                        BAOGIUONG = '$BAOGIUONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIUONGTAM">
+                        GIUONGTAM = '$GIUONGTAM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHONGTINHTIEN">
+                        KHONGTINHTIEN = '$KHONGTINHTIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRUCHITIET_PREV">
+                        LUUTRUCHITIET_PREV = '$LUUTRUCHITIET_PREV$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRUCHITIET_CURRENT">
+                        LUUTRUCHITIET_CURRENT = '$LUUTRUCHITIET_CURRENT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DOITUONG_ID">
+                        DOITUONG_ID = '$DOITUONG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRUCHITIET_ID_LAST">
+                        LUUTRUCHITIET_ID_LAST = '$LUUTRUCHITIET_ID_LAST$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by LUUTRUCHITIET_ID
+        </statement>
+        <!--Revision:0,47b093679dda8690c8e245259150735c-->
+        <insert id="DAO00075_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            <selectKey property="ID" type="pre" resultClass="System.Int64">
+                select TT_NOITRU_LUUTRUCHITIET_S.nextval as value from dual
+            </selectKey>
+            insert into TT_NOITRU_LUUTRUCHITIET (
+            LUUTRUCHITIET_ID
+            , LUUTRU_ID
+            , PHONGBAN_ID
+            , GIUONGBENH_ID
+            , PHONGBENH_ID
+            , DVYEUCAU_ID
+            , NGAYVAO
+            , THOIGIANVAO
+            , THOIGIANTINHLUUTRU
+            , LYDO_ID
+            , NGAYRA
+            , THOIGIANRA
+            , THOIGIANDUKIENRA
+            , DONGIAPHAITHU
+            , DONGIA
+            , BHYT_DONGIA
+            , TYLEVAT
+            , GIATRIVAT
+            , TIENTE_ID
+            , TYGIA
+            , LOAIGIA_ID
+            , GIUONGBENHCHUYENDEN_ID
+            , BAOPHONG
+            , BAOGIUONG
+            , GIUONGTAM
+            , KHONGTINHTIEN
+            , LUUTRUCHITIET_PREV
+            , LUUTRUCHITIET_CURRENT
+            , DOITUONG_ID
+            , LUUTRUCHITIET_ID_LAST
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            ) values (
+            #ID#
+            , #LUUTRU_ID#
+            , #PHONGBAN_ID#
+            , #GIUONGBENH_ID#
+            , #PHONGBENH_ID#
+            , #DVYEUCAU_ID#
+            , #NGAYVAO#
+            , #THOIGIANVAO#
+            , #THOIGIANTINHLUUTRU#
+            , #LYDO_ID#
+            , #NGAYRA#
+            , #THOIGIANRA#
+            , #THOIGIANDUKIENRA#
+            , #DONGIAPHAITHU#
+            , #DONGIA#
+            , #BHYT_DONGIA#
+            , #TYLEVAT#
+            , #GIATRIVAT#
+            , #TIENTE_ID#
+            , #TYGIA#
+            , #LOAIGIA_ID#
+            , #GIUONGBENHCHUYENDEN_ID#
+            , #BAOPHONG#
+            , #BAOGIUONG#
+            , #GIUONGTAM#
+            , #KHONGTINHTIEN#
+            , #LUUTRUCHITIET_PREV#
+            , #LUUTRUCHITIET_CURRENT#
+            , #DOITUONG_ID#
+            , #LUUTRUCHITIET_ID_LAST#
+            , #BENHVIEN_ID#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            )
+        </insert>
+        <!--Revision:0,89f0258b471d5d4c38650485c3a603e9-->
+        <update id="DAO00075_Update" parameterClass="System.Collections.IDictionary">
+            update TT_NOITRU_LUUTRUCHITIET set
+            LUUTRU_ID = #LUUTRU_ID#
+            , PHONGBAN_ID = #PHONGBAN_ID#
+            , GIUONGBENH_ID = #GIUONGBENH_ID#
+            , PHONGBENH_ID = #PHONGBENH_ID#
+            , DVYEUCAU_ID = #DVYEUCAU_ID#
+            , NGAYVAO = #NGAYVAO#
+            , THOIGIANVAO = #THOIGIANVAO#
+            , THOIGIANTINHLUUTRU = #THOIGIANTINHLUUTRU#
+            , LYDO_ID = #LYDO_ID#
+            , NGAYRA = #NGAYRA#
+            , THOIGIANRA = #THOIGIANRA#
+            , THOIGIANDUKIENRA = #THOIGIANDUKIENRA#
+            , DONGIAPHAITHU = #DONGIAPHAITHU#
+            , DONGIA = #DONGIA#
+            , BHYT_DONGIA = #BHYT_DONGIA#
+            , TYLEVAT = #TYLEVAT#
+            , GIATRIVAT = #GIATRIVAT#
+            , TIENTE_ID = #TIENTE_ID#
+            , TYGIA = #TYGIA#
+            , LOAIGIA_ID = #LOAIGIA_ID#
+            , GIUONGBENHCHUYENDEN_ID = #GIUONGBENHCHUYENDEN_ID#
+            , BAOPHONG = #BAOPHONG#
+            , BAOGIUONG = #BAOGIUONG#
+            , GIUONGTAM = #GIUONGTAM#
+            , KHONGTINHTIEN = #KHONGTINHTIEN#
+            , LUUTRUCHITIET_PREV = #LUUTRUCHITIET_PREV#
+            , LUUTRUCHITIET_CURRENT = #LUUTRUCHITIET_CURRENT#
+            , DOITUONG_ID = #DOITUONG_ID#
+            , LUUTRUCHITIET_ID_LAST = #LUUTRUCHITIET_ID_LAST#
+            <!--, BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#-->
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            LUUTRUCHITIET_ID = '$LUUTRUCHITIET_ID$'
+        </update>
+        <!--Revision:0,8eb5781e92c7555a22da29c3cd7da66b-->
+        <update id="DAO00075_TraGiuong" parameterClass="System.Collections.IDictionary">
+            update TT_NOITRU_LUUTRUCHITIET set
+            THOIGIANTINHLUUTRU = #THOIGIANTINHLUUTRU#
+            <isNotEmpty prepend="," property="DVYEUCAU_ID">
+                DVYEUCAU_ID = #DVYEUCAU_ID#
+            </isNotEmpty>
+            , NGAYRA = #NGAYRA#
+            , THOIGIANRA = #THOIGIANRA#
+            , LUUTRUCHITIET_CURRENT = #LUUTRUCHITIET_CURRENT#
+            , LUUTRUCHITIET_ID_LAST = #LUUTRUCHITIET_ID_LAST#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            LUUTRUCHITIET_ID = '$LUUTRUCHITIET_ID$'
+        </update>
+        <!--Revision:0,bf67a60ea39802a22d487ce5bd191134-->
+        <delete id="DAO00075_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_NOITRU_LUUTRUCHITIET
+            where
+            LUUTRUCHITIET_ID = '$LUUTRUCHITIET_ID$'
+        </delete>
+        <!--Revision:0,c97ca1a0b3b574b17553610be7f8197d-->
+        <statement id="DAO00075_UpdatePrevLuuTruChiTietInfo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            update TT_NOITRU_LUUTRUCHITIET
+            <dynamic prepend="set">
+                <isParameterPresent>
+                    <isNotEmpty prepend="," property="NGAYRA">
+                        NGAYRA = '$NGAYRA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="," property="THOIGIANRA">
+                        THOIGIANRA = '$THOIGIANRA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="," property="GIUONGBENHCHUYENDEN_ID">
+                        GIUONGBENHCHUYENDEN_ID = '$GIUONGBENHCHUYENDEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="," property="DVYEUCAU_ID">
+                        DVYEUCAU_ID = '$DVYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="," property="LUUTRUCHITIET_CURRENT">
+                        LUUTRUCHITIET_CURRENT = '$LUUTRUCHITIET_CURRENT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="," property="LUUTRUCHITIET_ID_LAST">
+                        LUUTRUCHITIET_ID_LAST = '$LUUTRUCHITIET_ID_LAST$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="," property="NGAYCAPNHAT">
+                        NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="," property="NGUOICAPNHAT_ID">
+                        NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            where LUUTRUCHITIET_ID = '$LUUTRUCHITIET_ID$'
+        </statement>
+    </statements>
+</sqlMap>

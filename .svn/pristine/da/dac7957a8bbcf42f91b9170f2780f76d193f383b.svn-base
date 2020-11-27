@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <statements>
+    <statement id="DAO09820_GetDanhSachHoSoDaXuatBHXH" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select X.ID, X.BENHVIEN_ID, X.BENHNHAN_ID, X.TIEPNHAN_ID, X.SOTHE
+      , CASE WHEN X.LOAIBANGKE = 'BangKe01' then N'Bảng kê 01'
+      WHEN X.LOAIBANGKE = 'BangKe02' then N'Bảng kê 02'
+      ELSE N'' END AS LOAIBANGKE
+      , X.THOIGIANBATDAU, X.THOIGIANKETTHUC
+      , CASE WHEN X.TRANGTHAI = 'CHOXULY' THEN N'Chờ xử lý'
+      WHEN X.TRANGTHAI = 'LOIDULIEU' THEN N'Lỗi dữ liệu'
+      WHEN X.TRANGTHAI = 'CHOUPLOAD' THEN N'Chờ upload'
+      WHEN X.TRANGTHAI = 'UPLOADTHANHCONG' THEN N'Upload thành công'
+      WHEN X.TRANGTHAI = 'UPLOADTHATBAI' THEN N'Upload thất bại'
+      WHEN X.TRANGTHAI = 'CHOXUATLAI' THEN N'Chờ xuất lại'
+      ELSE NULL END AS TRANGTHAI
+      , X.LYDO, X.SOLANRETRY, X.TENFILE, X.XUATLAI, BN.MAYTE, BA.SOBENHAN, X.XUATLAI AS XUATLAI_ORG, X.VALID_MSG
+      from TM_SYS_UPLOAD_BHYT_XML X
+      left join TT_BENHNHAN BN on BN.BENHNHAN_ID = X.BENHNHAN_ID and X.BENHVIEN_ID = BN.BENHVIEN_ID
+      left join TT_NOITRU_BENHAN BA on BA.TIEPNHAN_ID = X.TIEPNHAN_ID and BA.BENHVIEN_ID = X.BENHVIEN_ID
+
+      WHERE ((CAST(#ISNOITRU# AS BIT) = 1 AND X.LOAIBANGKE = 'BangKe02') OR CAST(#ISNGOAITRU# AS BIT) = 1 AND X.LOAIBANGKE = 'BangKe01')
+      AND X.BENHVIEN_ID = '$BENHVIEN_ID$'
+
+      <dynamic prepend="AND">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="TUNGAY">
+            CAST(X.THOIGIANBATDAU AS DATE) BETWEEN CAST('$TUNGAY$' AS DATE) AND CAST('$DENNGAY$' AS DATE)
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MAYTE">
+            BN.MAYTE like '%' + '$MAYTE$' + '%'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOBENHAN">
+            BA.SOBENHAN like '%' + '$SOBENHAN$' + '%'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+
+      ORDER BY X.THOIGIANBATDAU DESC
+    </statement>
+    <update id="DAO09820_UpdateXML_BHXH" parameterClass="System.Collections.IDictionary">
+      update TM_SYS_UPLOAD_BHYT_XML set
+      XUATLAI = #XUATLAI#,
+      TRANGTHAI = 'CHOXUATLAI'
+      where      ID = $ID$
+    </update>
+  </statements>
+</sqlMap>

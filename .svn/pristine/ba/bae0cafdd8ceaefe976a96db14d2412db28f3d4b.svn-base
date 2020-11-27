@@ -1,0 +1,1407 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <!--Revision:0,01554b13d6f584d01e586f534a5b8d61-->
+    <statement id="DAO00023_GetByTiepNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT TIEPNHAN_ID,
+      [LOAI_CHIPHI],
+      [BENHAN_ID],
+      [KHAMBENH_ID],
+      [REF_ID],
+      [REF_TABLE],
+      [DUOC_ID],
+      [BHTN_TL],
+      [BENHNHAN_PHAITHANHTOAN],
+      [BENHVIEN_ID],
+      [BHTN_THANHTIEN_CHITRA],
+      [BHYT_DONGIA],
+      [BHYT_DONGIA_CHITRA],
+      [BHYT_THANHTIEN],
+      [BHYT_THANHTIEN_CHITRA],
+      [BHYT_TL],
+      [DICHVU_ID],
+      [DONGIA_DOANHTHU],
+      [GIATRI_BENHNHAN_DATHANHTOAN],
+      [GIATRI_BIENLAI],
+      [GIATRI_BIENLAI_DATHANHTOAN],
+      [GIATRI_HOADON],
+      [GIATRI_HOADON_DATHANHTOAN],
+      [GIATRI_THATTHU],
+      [HOADON_ID],
+      [LOAIGIA_ID],
+      [MIENGIAM_GIATRI],
+      [MIENGIAM_TL],
+      [NGANSACH_GIATRI],
+      [NGANSACH_TL],
+      [NGAYCAPNHAT],
+      [NGAYTAO],
+      [NGUOICAPNHAT_ID],
+      [NGUOITAO_ID],
+      [SOLUONG],
+      [TAITRO_GIATRI],
+      [TAITRO_TL],
+      [THANHTIEN_DOANHTHU],
+      [VIENPHI_ID],
+      [TYLE_VAT],
+      [GIAVON],
+      [BANGGIA_ID]
+      FROM [TT_VIENPHI]
+      where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      and (DATHANHTOAN != 1 or DATHANHTOAN is null);
+    </statement>
+    <!--Revision:0,e11ab4cfe566390a6fb7cd303640428e-->
+    <statement id="DAO00023_GetAll" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      order by VIENPHI_ID
+    </statement>
+    <!--Revision:0,b261106e48dd54db008cbd30041d0d06-->
+    <statement id="DAO00023_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="VIENPHI_ID">
+            TT_VIENPHI.VIENPHI_ID = '$VIENPHI_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+            TT_VIENPHI.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHAN_ID">
+            TT_VIENPHI.BENHAN_ID = '$BENHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHAMBENH_ID">
+            TT_VIENPHI.KHAMBENH_ID = '$KHAMBENH_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="REF_ID">
+            TT_VIENPHI.REF_ID = '$REF_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="REF_TABLE">
+            TT_VIENPHI.REF_TABLE = '$REF_TABLE$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DICHVU_ID">
+            TT_VIENPHI.DICHVU_ID = '$DICHVU_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUOC_ID">
+            TT_VIENPHI.DUOC_ID = '$DUOC_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LOAI_CHIPHI">
+            TT_VIENPHI.LOAI_CHIPHI = '$LOAI_CHIPHI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LOAIGIA_ID">
+            TT_VIENPHI.LOAIGIA_ID = '$LOAIGIA_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOLUONG">
+            TT_VIENPHI.SOLUONG = '$SOLUONG$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DONGIA_DOANHTHU">
+            TT_VIENPHI.DONGIA_DOANHTHU = '$DONGIA_DOANHTHU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THANHTIEN_DOANHTHU">
+            TT_VIENPHI.THANHTIEN_DOANHTHU = '$THANHTIEN_DOANHTHU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHYT_TL">
+            TT_VIENPHI.BHYT_TL = '$BHYT_TL$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHYT_DONGIA">
+            TT_VIENPHI.BHYT_DONGIA = '$BHYT_DONGIA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHYT_THANHTIEN">
+            TT_VIENPHI.BHYT_THANHTIEN = '$BHYT_THANHTIEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHYT_DONGIA_CHITRA">
+            TT_VIENPHI.BHYT_DONGIA_CHITRA = '$BHYT_DONGIA_CHITRA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHYT_THANHTIEN_CHITRA">
+            TT_VIENPHI.BHYT_THANHTIEN_CHITRA = '$BHYT_THANHTIEN_CHITRA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHNHAN_PHAITHANHTOAN">
+            TT_VIENPHI.BENHNHAN_PHAITHANHTOAN = '$BENHNHAN_PHAITHANHTOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_HOADON">
+            TT_VIENPHI.GIATRI_HOADON = '$GIATRI_HOADON$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_HOADON_DATHANHTOAN">
+            TT_VIENPHI.GIATRI_HOADON_DATHANHTOAN = '$GIATRI_HOADON_DATHANHTOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_BIENLAI">
+            TT_VIENPHI.GIATRI_BIENLAI = '$GIATRI_BIENLAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_BIENLAI_DATHANHTOAN">
+            TT_VIENPHI.GIATRI_BIENLAI_DATHANHTOAN = '$GIATRI_BIENLAI_DATHANHTOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_BENHNHAN_DATHANHTOAN">
+            TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN = '$GIATRI_BENHNHAN_DATHANHTOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_THATTHU">
+            TT_VIENPHI.GIATRI_THATTHU = '$GIATRI_THATTHU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MIENGIAM_TL">
+            TT_VIENPHI.MIENGIAM_TL = '$MIENGIAM_TL$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MIENGIAM_GIATRI">
+            TT_VIENPHI.MIENGIAM_GIATRI = '$MIENGIAM_GIATRI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGANSACH_TL">
+            TT_VIENPHI.NGANSACH_TL = '$NGANSACH_TL$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGANSACH_GIATRI">
+            TT_VIENPHI.NGANSACH_GIATRI = '$NGANSACH_GIATRI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TAITRO_TL">
+            TT_VIENPHI.TAITRO_TL = '$TAITRO_TL$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TAITRO_GIATRI">
+            TT_VIENPHI.TAITRO_GIATRI = '$TAITRO_GIATRI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHTN_TL">
+            TT_VIENPHI.BHTN_TL = '$BHTN_TL$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHTN_DONGIA">
+            TT_VIENPHI.BHTN_DONGIA = '$BHTN_DONGIA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHTN_THANHTIEN">
+            TT_VIENPHI.BHTN_THANHTIEN = '$BHTN_THANHTIEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHTN_DONGIA_CHITRA">
+            TT_VIENPHI.BHTN_DONGIA_CHITRA = '$BHTN_DONGIA_CHITRA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHTN_THANHTIEN_CHITRA">
+            TT_VIENPHI.BHTN_THANHTIEN_CHITRA = '$BHTN_THANHTIEN_CHITRA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUOCPHEPTHUCHIEN">
+            TT_VIENPHI.DUOCPHEPTHUCHIEN = '$DUOCPHEPTHUCHIEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HUY">
+            TT_VIENPHI.HUY = '$HUY$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DATHANHTOAN">
+            TT_VIENPHI.DATHANHTOAN = '$DATHANHTOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HOADON_ID">
+            TT_VIENPHI.HOADON_ID = '$HOADON_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="ACTIVE">
+            TT_VIENPHI.ACTIVE = '$ACTIVE$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            TT_VIENPHI.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOITAO_ID">
+            TT_VIENPHI.NGUOITAO_ID = '$NGUOITAO_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYTAO">
+            TT_VIENPHI.NGAYTAO = '$NGAYTAO$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+            TT_VIENPHI.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+            TT_VIENPHI.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      order by VIENPHI_ID
+    </statement>
+    <!--Revision:0,0ce3b7beff75cdf86026eb21b9d10f97-->
+    <statement id="DAO00023_GetVienPhiInfo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+            TIEPNHAN_ID = '$TIEPNHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUOC_ID">
+            DUOC_ID = '$DUOC_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="REF_ID">
+            REF_ID = '$REF_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="REF_TABLE">
+            REF_TABLE = '$REF_TABLE$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      order by VIENPHI_ID
+    </statement>
+    <!--Revision:0,937ff392339a265ae84e94043c3e6ec7-->
+    <statement id="DAO00023_GetTrangThaiDV" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select vp.*,
+      <!--vp.HUY, vp.DATHANHTOAN, vp.DATHUCHIEN, vp.HOADON_ID, vp.MIENGIAM_GIATRI,-->
+      mgct.MIENGIAMCHITIET_ID
+      from TT_VIENPHI vp
+      left join (select VIENPHI_ID, MIENGIAMCHITIET_ID from TT_MIENGIAM_CHITIET where REF_TABLE = 'TT_MIENGIAM'
+      or REF_TABLE = 'TT_MIENGIAM_CONGTY'
+      or REF_TABLE = 'TT_MIENGIAM_BHTN') mgct
+      on vp.VIENPHI_ID = mgct.VIENPHI_ID
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+            vp.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUOC_ID">
+            vp.DUOC_ID = '$DUOC_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="REF_ID">
+            vp.REF_ID = '$REF_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="REF_TABLE">
+            vp.REF_TABLE = '$REF_TABLE$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DICHVU_ID">
+            vp.DICHVU_ID = '$DICHVU_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      order by vp.VIENPHI_ID
+    </statement>
+    <!--Revision:0,8fcb3fbf1cb0742957eb328301c85471-->
+    <statement id="DAO00023_GetDoiTuong_LoaiGia" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TM_DOITUONG_LOAIGIA
+    </statement>
+    <!--Revision:0,3100018bb4c4b1ce0d19cb5389d4da58-->
+    <statement id="DAO00023_GetDVYeuCauVienPhiInfo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select V.*, CASE WHEN A.VIENPHI_ID IS NULL AND B.VIENPHI_ID IS NULL THEN '0' ELSE '1' END AS EXIST_HOADON_HUY
+      from TT_VIENPHI AS V
+      left join (select DISTINCT HD.VIENPHI_ID from TT_HOADON_CHITIET_NGOAITRU AS HD 
+              inner join TT_HOADON AS H ON H.HOADON_ID = HD.HOADON_ID AND H.HUYHOADON = '1'
+              <dynamic prepend="where">
+              <isParameterPresent>
+                <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                  H.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                </isNotEmpty>
+              </isParameterPresent>
+            </dynamic>
+            ) AS A ON A.VIENPHI_ID = V.VIENPHI_ID
+      left join (select DISTINCT HD.VIENPHI_ID from TT_HOADON_CHITIET_NOITRU AS HD 
+              inner join TT_HOADON AS H ON H.HOADON_ID = HD.HOADON_ID AND H.HUYHOADON = '1'
+              <dynamic prepend="where">
+              <isParameterPresent>
+                <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                  H.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                </isNotEmpty>
+              </isParameterPresent>
+            </dynamic>
+            ) AS B ON B.VIENPHI_ID = V.VIENPHI_ID
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+            V.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUOC_ID">
+            V.DICHVU_ID = '$DICHVU_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="REF_ID">
+            V.REF_ID = '$REF_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="REF_TABLE">
+            V.REF_TABLE = '$REF_TABLE$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      order by V.VIENPHI_ID
+    </statement>
+    
+    <!--Revision:0,9284fc20f6641e855763711d8e74c45e-->
+    <statement id="DAO00023_GetDetail" parameterClass="System.String" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      where TT_VIENPHI.VIENPHI_ID  = '$value$'
+      order by VIENPHI_ID
+    </statement>
+    <!--Revision:0,eefd92a23e3976748eabe9bc63eb0472-->
+    <statement id="DAO00023_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      where TT_VIENPHI.VIENPHI_ID  = '$VIENPHI_ID$'
+      order by VIENPHI_ID
+    </statement>
+    <!--Revision:0,4c8e5043f9211c2d00897db8701f3265-->
+    <statement id="DAO00023_GetSoLuongDVDaThucHien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select top 1 VIENPHI_ID from TT_VIENPHI
+      where HOADON_ID = #HOADON_ID#
+      and DATHUCHIEN = 1;
+    </statement>
+    <!--Revision:0,70b029d6b72e2f97803a95ee2fb7e799-->
+    <statement id="DAO00023_DeleteVienPhiDifDuocID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      delete from TT_VIENPHI
+      where TIEPNHAN_ID = #TIEPNHAN_ID#
+      and DICHVU_ID = #DICHVU_ID#
+      and DUOC_ID != #DUOC_ID#
+    </statement>
+    <!--Revision:0,f68971b07a40547e5287413123196ff3-->
+    <statement id="DAO00023_DeleteAllVienPhiInfo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      delete from TT_VIENPHI
+      where TIEPNHAN_ID = #TIEPNHAN_ID#
+      and DICHVU_ID = #DICHVU_ID#
+    </statement>
+    <!--Revision:0,94521c190b0444c98ea8e9ab641005cf-->
+    <delete id="DAO00023_DeleteVienPhiInList" parameterClass="HashTable">
+      delete from TT_VIENPHI
+      where REF_ID in
+      <iterate open="(" close=")" conjunction=",  " property="LSTDELETEDDVYCID">
+        #LSTDELETEDDVYCID[]#
+      </iterate>
+      and REF_TABLE = '$REF_TABLE$'
+    </delete>
+    <!--Revision:0-->
+    <statement id="DAO00023_DeleteVienPhiNotInList" parameterClass="List" resultClass="DataObject">
+      select DUOC_ID, SOLUONG from TT_VIENPHI
+      where TIEPNHAN_ID = #TIEPNHAN_ID#
+      <dynamic prepend=" and REF_ID in ">
+        <iterate open="(" close=")" conjunction=",  " property="LSTDUOC_ID">
+          #LSTDUOC_ID[]#
+        </iterate>
+      </dynamic>
+      and REF_TABLE = '$REF_TABLE$'
+      delete from TT_VIENPHI
+      where TIEPNHAN_ID = #TIEPNHAN_ID#
+      <dynamic prepend=" and REF_ID in ">
+        <iterate open="(" close=")" conjunction=",  " property="LSTDUOC_ID">
+          #LSTDUOC_ID[]#
+        </iterate>
+      </dynamic>
+      and REF_TABLE = '$REF_TABLE$'
+    </statement>
+    <!--Revision:0,3407f872a78628dd76e0102328563f88-->
+    <statement id="DAO00023_GetVienPhiByDichVuID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      where TIEPNHAN_ID  = '$TIEPNHAN_ID$'
+      and DUOC_ID  = '$DUOC_ID$'
+      and REF_ID = '$REF_ID$'
+      and REF_TABLE = '$REF_TABLE$'
+      and DATHANHTOAN = '0'
+    </statement>
+    <!--Revision:0,36738365b257ae75898367ba9bd625a2-->
+    <statement id="DAO00023_GetDSDichVuByTiepNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select vp.DICHVU_ID, vp.THANHTIEN_DOANHTHU, dv.NOITHUCHIEN_ID, dv.DVYEUCAU_ID, dv.TRANGTHAI,
+      dv.CHANDOAN, dv.BACSICHIDINH_ID, dv.NOIYEUCAU_ID, dv.NGAYGIOYEUCAU, vp.BENHNHAN_PHAITHANHTOAN, vp.DATHANHTOAN
+      from TT_VIENPHI vp
+      left join (select * from TT_DVYEUCAU where TIEPNHAN_ID = '$TIEPNHAN_ID$') dv on vp.REF_ID = dv.DVYEUCAU_ID
+      where
+      vp.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      and vp.DICHVU_ID IS NOT NULL
+      and vp.REF_TABLE = 'TT_DVYEUCAU'
+      order by dv.DVYEUCAU_ID desc
+    </statement>
+    <!--Revision:0,c7bb93f7bd9ec1d6f60b0a38ac0bc00f-->
+    <statement id="DAO00023_GetVienPhiDichVuBSKhac" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      where
+      <isNotEmpty prepend="" property="TIEPNHAN_ID">
+        TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="BENHAN_ID">
+        BENHAN_ID = '$BENHAN_ID$'
+      </isNotEmpty>
+      and NGUOITAO_ID != '$NGUOITAO_ID$'
+      and DICHVU_ID is not null
+    </statement>
+    <!--Revision:0,8fd950e02ecc16b47c172b172b68ab90-->
+    <statement id="DAO00023_Add" parameterClass="HashTable" resultClass="System.Int64">
+      insert into TT_VIENPHI (
+      TIEPNHAN_ID
+      , BENHAN_ID
+      <isNotEmpty prepend="," property="BENHNHAN_ID">
+        BENHNHAN_ID
+      </isNotEmpty>
+      <isPropertyAvailable prepend="," property="DOTDIEUTRI_ID">
+        DOTDIEUTRI_ID
+      </isPropertyAvailable>
+      , KHAMBENH_ID
+      , REF_ID
+      , REF_TABLE
+      , DICHVU_ID
+      , DUOC_ID
+      , LOAI_CHIPHI
+      , LOAIGIA_ID
+      , SOLUONG
+      , DONGIA_DOANHTHU
+      , THANHTIEN_DOANHTHU
+      , BHYT_TL
+      , BHYT_DONGIA
+      , BHYT_THANHTIEN
+      , BHYT_DONGIA_CHITRA
+      , BHYT_THANHTIEN_CHITRA
+      , BENHNHAN_PHAITHANHTOAN
+      , GIATRI_HOADON
+      , GIATRI_HOADON_DATHANHTOAN
+      , GIATRI_BIENLAI
+      , GIATRI_BIENLAI_DATHANHTOAN
+      , GIATRI_BENHNHAN_DATHANHTOAN
+      , GIATRI_THATTHU
+      , MIENGIAM_TL
+      , MIENGIAM_GIATRI
+      , NGANSACH_TL
+      , NGANSACH_GIATRI
+      , TAITRO_TL
+      , TAITRO_GIATRI
+      , BHTN_TL
+      , BHTN_DONGIA
+      , BHTN_THANHTIEN
+      , BHTN_DONGIA_CHITRA
+      , BHTN_THANHTIEN_CHITRA
+      <isNotEmpty prepend="," property="DUOCPHEPTHUCHIEN">
+        DUOCPHEPTHUCHIEN
+      </isNotEmpty>
+      <isNotEmpty prepend="," property="HUY">
+        HUY
+      </isNotEmpty>
+      <isNotEmpty prepend="," property="DATHANHTOAN">
+        DATHANHTOAN
+      </isNotEmpty>
+      <isNotEmpty prepend="," property="DATHUCHIEN">
+        DATHUCHIEN
+      </isNotEmpty>
+      <isNotEmpty prepend="," property="KHONGTHUTIEN">
+        KHONGTHUTIEN
+      </isNotEmpty>
+      <isNotEmpty prepend="," property="BHYTDONGTIEN">
+        BHYTDONGTIEN
+      </isNotEmpty>
+      , DUYET
+      , HOADON_ID
+      <isPropertyAvailable prepend="," property="ACTIVE">
+        ACTIVE
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="TYLE_VAT">
+        TYLE_VAT
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="GIATRI_VAT">
+        GIATRI_VAT
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="GIAVON">
+        GIAVON
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="BANGGIA_ID">
+        BANGGIA_ID
+      </isPropertyAvailable>
+      , BENHVIEN_ID
+      , NGUOITAO_ID
+      , NGAYTAO
+      , NGUOICAPNHAT_ID
+      , NGAYCAPNHAT
+      , DONGIA_BHYT_BANDAU
+      , DONGIADOANHTHU_BANDAU
+      <isNotEmpty prepend="," property="YEUCAUVP">
+        YEUCAUVP
+      </isNotEmpty>
+      <isPropertyAvailable prepend="," property="DOITUONG_HUONG_ID">
+        DOITUONG_HUONG_ID
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="SOBHYT_HUONG_ID">
+        SOBHYT_HUONG_ID
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="DICHVU_TL">
+        DICHVU_TL
+      </isPropertyAvailable>
+      ) values (
+      #TIEPNHAN_ID#
+      , #BENHAN_ID#
+      <isNotEmpty prepend="," property="BENHNHAN_ID">
+        #BENHNHAN_ID#
+      </isNotEmpty>
+      <isPropertyAvailable prepend="," property="DOTDIEUTRI_ID">
+        #DOTDIEUTRI_ID#
+      </isPropertyAvailable>
+      , #KHAMBENH_ID#
+      , #REF_ID#
+      , #REF_TABLE#
+      , #DICHVU_ID#
+      , #DUOC_ID#
+      , #LOAI_CHIPHI#
+      , #LOAIGIA_ID#
+      , #SOLUONG#
+      , #DONGIA_DOANHTHU#
+      , #THANHTIEN_DOANHTHU#
+      , #BHYT_TL#
+      , #BHYT_DONGIA#
+      , #BHYT_THANHTIEN#
+      , #BHYT_DONGIA_CHITRA#
+      , #BHYT_THANHTIEN_CHITRA#
+      , #BENHNHAN_PHAITHANHTOAN#
+      , #GIATRI_HOADON#
+      , #GIATRI_HOADON_DATHANHTOAN#
+      , #GIATRI_BIENLAI#
+      , #GIATRI_BIENLAI_DATHANHTOAN#
+      , #GIATRI_BENHNHAN_DATHANHTOAN#
+      , #GIATRI_THATTHU#
+      , #MIENGIAM_TL#
+      , #MIENGIAM_GIATRI#
+      , #NGANSACH_TL#
+      , #NGANSACH_GIATRI#
+      , #TAITRO_TL#
+      , #TAITRO_GIATRI#
+      , #BHTN_TL#
+      , #BHTN_DONGIA#
+      , #BHTN_THANHTIEN#
+      , #BHTN_DONGIA_CHITRA#
+      , #BHTN_THANHTIEN_CHITRA#
+      <isNotEmpty prepend="," property="DUOCPHEPTHUCHIEN">
+        #DUOCPHEPTHUCHIEN#
+      </isNotEmpty>
+      <isNotEmpty prepend="," property="HUY">
+        #HUY#
+      </isNotEmpty>
+      <isNotEmpty prepend="," property="DATHANHTOAN">
+        #DATHANHTOAN#
+      </isNotEmpty>
+      <isNotEmpty prepend="," property="DATHUCHIEN">
+        #DATHUCHIEN#
+      </isNotEmpty>
+      <isNotEmpty prepend="," property="KHONGTHUTIEN">
+        #KHONGTHUTIEN#
+      </isNotEmpty>
+      <isNotEmpty prepend="," property="BHYTDONGTIEN">
+        #BHYTDONGTIEN#
+      </isNotEmpty>
+      , #DUYET#
+      , #HOADON_ID#
+      <isPropertyAvailable prepend="," property="ACTIVE">
+        #ACTIVE#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="TYLE_VAT">
+        #TYLE_VAT#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="GIATRI_VAT">
+        #GIATRI_VAT#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="GIAVON">
+        #GIAVON#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="BANGGIA_ID">
+        #BANGGIA_ID#
+      </isPropertyAvailable>
+      , #BENHVIEN_ID#
+      , #NGUOITAO_ID#
+      , #NGAYTAO#
+      , #NGUOICAPNHAT_ID#
+      , #NGAYCAPNHAT#
+      , #DONGIA_BHYT_BANDAU#
+      , #DONGIADOANHTHU_BANDAU#
+      <isNotEmpty prepend="," property="YEUCAUVP">
+        #YEUCAUVP#
+      </isNotEmpty>
+      <isPropertyAvailable prepend="," property="DOITUONG_HUONG_ID">
+        #DOITUONG_HUONG_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="SOBHYT_HUONG_ID">
+        #SOBHYT_HUONG_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="DICHVU_TL">
+        #DICHVU_TL#
+      </isPropertyAvailable>
+      )
+      SELECT SCOPE_IDENTITY()
+      <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+    </statement>
+    <!--Revision:0,192e996f90b50902755cf66c3d4307dd-->
+    <update id="DAO00023_Update" parameterClass="System.Collections.IDictionary">      
+      update TT_VIENPHI set
+      TIEPNHAN_ID = #TIEPNHAN_ID#
+      <isPropertyAvailable prepend="," property="BENHAN_ID">
+        BENHAN_ID = #BENHAN_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="BENHNHAN_ID">
+        BENHNHAN_ID = #BENHNHAN_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="KHAMBENH_ID">
+        KHAMBENH_ID = #KHAMBENH_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="REF_ID">
+        REF_ID = #REF_ID#
+      </isPropertyAvailable>
+      , REF_TABLE = #REF_TABLE#
+      , DICHVU_ID = #DICHVU_ID#
+      , DUOC_ID = #DUOC_ID#
+      , LOAI_CHIPHI = #LOAI_CHIPHI#
+      , LOAIGIA_ID = #LOAIGIA_ID#
+      , SOLUONG = #SOLUONG#
+      , DONGIA_DOANHTHU = #DONGIA_DOANHTHU#
+      , THANHTIEN_DOANHTHU = #THANHTIEN_DOANHTHU#
+      , BHYT_TL = #BHYT_TL#
+      , BHYT_DONGIA = #BHYT_DONGIA#
+      , BHYT_THANHTIEN = #BHYT_THANHTIEN#
+      , BHYT_DONGIA_CHITRA = #BHYT_DONGIA_CHITRA#
+      , BHYT_THANHTIEN_CHITRA = #BHYT_THANHTIEN_CHITRA#
+      , BENHNHAN_PHAITHANHTOAN = #BENHNHAN_PHAITHANHTOAN#
+      , GIATRI_HOADON = #GIATRI_HOADON#
+      , GIATRI_HOADON_DATHANHTOAN = #GIATRI_HOADON_DATHANHTOAN#
+      , GIATRI_BIENLAI = #GIATRI_BIENLAI#
+      , GIATRI_BIENLAI_DATHANHTOAN = #GIATRI_BIENLAI_DATHANHTOAN#
+      , GIATRI_BENHNHAN_DATHANHTOAN = #GIATRI_BENHNHAN_DATHANHTOAN#
+      , GIATRI_THATTHU = #GIATRI_THATTHU#
+      , MIENGIAM_TL = #MIENGIAM_TL#
+      <!--, MIENGIAM_GIATRI = #MIENGIAM_GIATRI#-->
+      , NGANSACH_TL = #NGANSACH_TL#
+      , NGANSACH_GIATRI = #NGANSACH_GIATRI#
+      , TAITRO_TL = #TAITRO_TL#
+      , TAITRO_GIATRI = #TAITRO_GIATRI#
+      , BHTN_TL = #BHTN_TL#
+      , BHTN_DONGIA = #BHTN_DONGIA#
+      , BHTN_THANHTIEN = #BHTN_THANHTIEN#
+      , BHTN_DONGIA_CHITRA = #BHTN_DONGIA_CHITRA#
+      , BHTN_THANHTIEN_CHITRA = #BHTN_THANHTIEN_CHITRA#
+      <isPropertyAvailable prepend="," property="DUOCPHEPTHUCHIEN">
+        DUOCPHEPTHUCHIEN = #DUOCPHEPTHUCHIEN#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="HUY">
+        HUY = #HUY#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="DATHANHTOAN">
+        DATHANHTOAN = #DATHANHTOAN#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="KHONGTHUTIEN">
+        KHONGTHUTIEN = #KHONGTHUTIEN#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="KHONGTHUTIEN">
+        DATHUCHIEN = #DATHUCHIEN#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="HOADON_ID">
+        HOADON_ID = #HOADON_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="ACTIVE">
+        ACTIVE = #ACTIVE#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="TYLE_VAT">
+        TYLE_VAT = #TYLE_VAT#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="GIATRI_VAT">
+        GIATRI_VAT = #GIATRI_VAT#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="GIAVON">
+        GIAVON = #GIAVON#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="BANGGIA_ID">
+        BANGGIA_ID = #BANGGIA_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="BHYTDONGTIEN">
+        BHYTDONGTIEN = #BHYTDONGTIEN#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="BHYT_DONGIA_CONGKHAM_DAU">
+        BHYT_DONGIA_CONGKHAM_DAU = #BHYT_DONGIA_CONGKHAM_DAU#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="BHYT_CONGKHAM_DAU_TYLE">
+        BHYT_CONGKHAM_DAU_TYLE = #BHYT_CONGKHAM_DAU_TYLE#
+      </isPropertyAvailable>
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      <isPropertyAvailable prepend="," property="DONGIA_BHYT_BANDAU">
+        DONGIA_BHYT_BANDAU = #DONGIA_BHYT_BANDAU#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="DONGIADOANHTHU_BANDAU">
+        DONGIADOANHTHU_BANDAU = #DONGIADOANHTHU_BANDAU#
+      </isPropertyAvailable>
+      <!--, DOTDIEUTRI_ID = #DOTDIEUTRI_ID#-->
+      <isNotEmpty prepend="," property="YEUCAUVP">
+        YEUCAUVP = #YEUCAUVP#
+      </isNotEmpty>
+      <isPropertyAvailable prepend="," property="DICHVU_TL">
+        DICHVU_TL = #DICHVU_TL#
+      </isPropertyAvailable>
+      where
+      <isPropertyAvailable prepend="" property="VIENPHI_ID">
+        VIENPHI_ID = '$VIENPHI_ID$'
+      </isPropertyAvailable>
+      <!--Dùng cho update th thanh vien the-->
+      <isPropertyAvailable prepend="" property="EXIST_VIENPHI">
+        REF_ID = #REF_ID# and REF_TABLE = 'TT_CSKH_THANHVIEN_CAPTHE'
+      </isPropertyAvailable>
+    </update>
+    <statement id="DAO00023_Update_VPTiepnhan" parameterClass="System.Collections.IDictionary">
+      update TT_VIENPHI set
+      TIEPNHAN_ID = #TIEPNHAN_ID#      
+      <isPropertyAvailable prepend="," property="BENHNHAN_ID">
+        BENHNHAN_ID = #BENHNHAN_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="KHAMBENH_ID">
+        KHAMBENH_ID = #KHAMBENH_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="REF_ID">
+        REF_ID = #REF_ID#
+      </isPropertyAvailable>
+      , REF_TABLE = #REF_TABLE#
+      , DICHVU_ID = #DICHVU_ID#
+      , DUOC_ID = #DUOC_ID#
+      , LOAI_CHIPHI = #LOAI_CHIPHI#
+      , LOAIGIA_ID = #LOAIGIA_ID#
+      , SOLUONG = #SOLUONG#
+      , DONGIA_DOANHTHU = #DONGIA_DOANHTHU#
+      , THANHTIEN_DOANHTHU = #THANHTIEN_DOANHTHU#
+      , BHYT_TL = #BHYT_TL#
+      , BHYT_DONGIA = #BHYT_DONGIA#
+      , BHYT_THANHTIEN = #BHYT_THANHTIEN#
+      , BHYT_DONGIA_CHITRA = #BHYT_DONGIA_CHITRA#
+      , BHYT_THANHTIEN_CHITRA = #BHYT_THANHTIEN_CHITRA#
+      , BENHNHAN_PHAITHANHTOAN = #BENHNHAN_PHAITHANHTOAN#
+      , GIATRI_HOADON = #GIATRI_HOADON#
+      , GIATRI_HOADON_DATHANHTOAN = #GIATRI_HOADON_DATHANHTOAN#
+      , GIATRI_BIENLAI = #GIATRI_BIENLAI#
+      , GIATRI_BIENLAI_DATHANHTOAN = #GIATRI_BIENLAI_DATHANHTOAN#
+      , GIATRI_BENHNHAN_DATHANHTOAN = #GIATRI_BENHNHAN_DATHANHTOAN#
+      , GIATRI_THATTHU = #GIATRI_THATTHU#
+      , MIENGIAM_TL = #MIENGIAM_TL#
+      , NGANSACH_TL = #NGANSACH_TL#
+      , NGANSACH_GIATRI = #NGANSACH_GIATRI#
+      , TAITRO_TL = #TAITRO_TL#
+      , TAITRO_GIATRI = #TAITRO_GIATRI#
+      , BHTN_TL = #BHTN_TL#
+      , BHTN_DONGIA = #BHTN_DONGIA#
+      , BHTN_THANHTIEN = #BHTN_THANHTIEN#
+      , BHTN_DONGIA_CHITRA = #BHTN_DONGIA_CHITRA#
+      , BHTN_THANHTIEN_CHITRA = #BHTN_THANHTIEN_CHITRA#
+      <isPropertyAvailable prepend="," property="DUOCPHEPTHUCHIEN">
+        DUOCPHEPTHUCHIEN = #DUOCPHEPTHUCHIEN#
+      </isPropertyAvailable>      
+      <isPropertyAvailable prepend="," property="ACTIVE">
+        ACTIVE = #ACTIVE#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="TYLE_VAT">
+        TYLE_VAT = #TYLE_VAT#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="GIATRI_VAT">
+        GIATRI_VAT = #GIATRI_VAT#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="GIAVON">
+        GIAVON = #GIAVON#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="BANGGIA_ID">
+        BANGGIA_ID = #BANGGIA_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="BHYTDONGTIEN">
+        BHYTDONGTIEN = #BHYTDONGTIEN#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="BHYT_DONGIA_CONGKHAM_DAU">
+        BHYT_DONGIA_CONGKHAM_DAU = #BHYT_DONGIA_CONGKHAM_DAU#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="BHYT_CONGKHAM_DAU_TYLE">
+        BHYT_CONGKHAM_DAU_TYLE = #BHYT_CONGKHAM_DAU_TYLE#
+      </isPropertyAvailable>
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      <isPropertyAvailable prepend="," property="DONGIA_BHYT_BANDAU">
+        DONGIA_BHYT_BANDAU = #DONGIA_BHYT_BANDAU#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="DONGIADOANHTHU_BANDAU">
+        DONGIADOANHTHU_BANDAU = #DONGIADOANHTHU_BANDAU#
+      </isPropertyAvailable>
+      <!--, DOTDIEUTRI_ID = #DOTDIEUTRI_ID#-->
+      <isNotEmpty prepend="," property="YEUCAUVP">
+        YEUCAUVP = #YEUCAUVP#
+      </isNotEmpty>      
+      where
+      <isPropertyAvailable prepend="" property="VIENPHI_ID">
+        VIENPHI_ID = '$VIENPHI_ID$' and DATHANHTOAN = '0'
+      </isPropertyAvailable>
+      <!--Dùng cho update th thanh vien the-->
+      <isPropertyAvailable prepend="" property="EXIST_VIENPHI">
+        REF_ID = #REF_ID# and REF_TABLE = 'TT_CSKH_THANHVIEN_CAPTHE'
+      </isPropertyAvailable>
+    </statement>
+    <!--Revision:0,2f6e63b18e700a86ec0a2048d5bea5c2-->
+    <update id="DAO00023_UpdateDuocVienPhi" parameterClass="System.Collections.IDictionary">
+      update TT_VIENPHI set
+      <!--TIEPNHAN_ID = #TIEPNHAN_ID#
+      , BENHAN_ID = #BENHAN_ID#
+      , REF_ID = #REF_ID#
+      , DICHVU_ID = #DICHVU_ID#
+      , DUOC_ID = #DUOC_ID#-->
+      KHAMBENH_ID = #KHAMBENH_ID#
+      , LOAI_CHIPHI = #LOAI_CHIPHI#
+      , LOAIGIA_ID = #LOAIGIA_ID#
+      , SOLUONG = #SOLUONG#
+      , DONGIA_DOANHTHU = #DONGIA_DOANHTHU#
+      , THANHTIEN_DOANHTHU = #THANHTIEN_DOANHTHU#
+      , BHYT_TL = #BHYT_TL#
+      , BHYT_DONGIA = #BHYT_DONGIA#
+      , BHYT_THANHTIEN = #BHYT_THANHTIEN#
+      , BHYT_DONGIA_CHITRA = #BHYT_DONGIA_CHITRA#
+      , BHYT_THANHTIEN_CHITRA = #BHYT_THANHTIEN_CHITRA#
+      , BENHNHAN_PHAITHANHTOAN = #BENHNHAN_PHAITHANHTOAN#
+      , GIATRI_HOADON = #GIATRI_HOADON#
+      , GIATRI_HOADON_DATHANHTOAN = #GIATRI_HOADON_DATHANHTOAN#
+      , GIATRI_BIENLAI = #GIATRI_BIENLAI#
+      , GIATRI_BIENLAI_DATHANHTOAN = #GIATRI_BIENLAI_DATHANHTOAN#
+      , GIATRI_BENHNHAN_DATHANHTOAN = #GIATRI_BENHNHAN_DATHANHTOAN#
+      , GIATRI_THATTHU = #GIATRI_THATTHU#
+      , MIENGIAM_TL = #MIENGIAM_TL#
+      <!--, MIENGIAM_GIATRI = #MIENGIAM_GIATRI#-->
+      , NGANSACH_TL = #NGANSACH_TL#
+      , NGANSACH_GIATRI = #NGANSACH_GIATRI#
+      , TAITRO_TL = #TAITRO_TL#
+      , TAITRO_GIATRI = #TAITRO_GIATRI#
+      , BHTN_TL = #BHTN_TL#
+      , BHTN_DONGIA = #BHTN_DONGIA#
+      , BHTN_THANHTIEN = #BHTN_THANHTIEN#
+      , BHTN_DONGIA_CHITRA = #BHTN_DONGIA_CHITRA#
+      , BHTN_THANHTIEN_CHITRA = #BHTN_THANHTIEN_CHITRA#
+      , DUOCPHEPTHUCHIEN = #DUOCPHEPTHUCHIEN#
+      , HUY = #HUY#
+      , KHONGTHUTIEN = #KHONGTHUTIEN#
+      , BHYTDONGTIEN = #BHYTDONGTIEN#
+      , DATHANHTOAN = #DATHANHTOAN#
+      , HOADON_ID = #HOADON_ID#
+      <isPropertyAvailable prepend="," property="TYLE_VAT">
+        TYLE_VAT = #TYLE_VAT#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="GIATRI_VAT">
+        GIATRI_VAT = #GIATRI_VAT#
+      </isPropertyAvailable>
+      <!--, ACTIVE = #ACTIVE#-->
+      <!--, BENHVIEN_ID = #BENHVIEN_ID#
+      , NGUOITAO = #NGUOITAO#
+      , NGAYTAO = #NGAYTAO#-->
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      where
+      VIENPHI_ID = '$VIENPHI_ID$'
+    </update>
+    <!--Revision:0,52f9caa839052fca3c35cdd204e88720-->
+    <update id="DAO00023_ThanhToanHoaDonThanhToan" parameterClass="HashTable">
+      update TT_VIENPHI
+      set DATHANHTOAN = 1,
+      [HOADON_ID] = #HOADON_ID#
+      where TIEPNHAN_ID = #TIEPNHAN_ID#
+      <dynamic prepend=" and VIENPHI_ID in ">
+        <iterate open="(" close=")" conjunction=",  " property="VIENPHIIDS">
+          #VIENPHIIDS[]#
+        </iterate>
+      </dynamic>
+    </update>
+    <!--Revision:0,91e0b1a902d89169cd2fb5205c31e2ca-->
+    <update id="DAO00023_HuyHoaDonThanhToan" parameterClass="HashTable">
+      update TT_VIENPHI
+      set DATHANHTOAN = 0, HOADON_ID = 0
+      where HOADON_ID = #HOADON_ID#
+    </update>
+    <!--Revision:0,2be5afaf8cff7fd4d2203e50283fb002-->
+    <statement id="DAO00023_Delete" parameterClass="System.String" resultClass="System.Int32">
+      delete from TT_VIENPHI
+      where
+      VIENPHI_ID = '$VIENPHI_ID$'
+    </statement>
+    <statement id="DAO00023_UpdateNhieuVP" parameterClass="System.String" resultClass="System.Int32">
+      declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+      begin
+      UPDATE TT_VIENPHI
+      SET
+      SOLUONG = json.SOLUONG,
+      DONGIA_DOANHTHU = json.DONGIA_DOANHTHU,
+      THANHTIEN_DOANHTHU = json.THANHTIEN_DOANHTHU,
+      BHYT_TL = json.BHYT_TL,
+      BHYT_DONGIA = json.BHYT_DONGIA,
+      BHYT_THANHTIEN = json.BHYT_THANHTIEN,
+      BHYT_DONGIA_CONGKHAM_DAU = json.BHYT_DONGIA_CONGKHAM_DAU,
+      BHYT_CONGKHAM_DAU_TYLE = json.BHYT_CONGKHAM_DAU_TYLE,
+      BHYT_DONGIA_CHITRA = json.BHYT_DONGIA_CHITRA,
+      BHYT_THANHTIEN_CHITRA = json.BHYT_THANHTIEN_CHITRA,
+      BENHNHAN_PHAITHANHTOAN = json.BENHNHAN_PHAITHANHTOAN,
+      GIATRI_HOADON = json.GIATRI_HOADON,
+      GIATRI_BIENLAI = json.GIATRI_BIENLAI,
+      DATHUCHIEN = json.DATHUCHIEN,
+      DICHVU_TL = json.DICHVU_TL,
+      BHYT_DONGIA_DONGCT_DAU = json.BHYT_DONGIA_DONGCT_DAU,
+      SOLONHAP_ID = json.SOLONHAP_ID,
+      DUOC_TYLE = json.DUOC_TYLE,
+      DUOC_MUCTRAN_THANHTOAN = json.DUOC_MUCTRAN_THANHTOAN,
+      NGAYCAPNHAT = GETDATE()
+      FROM OPENJSON (@jsonVienPhi)
+      WITH (
+      VIENPHI_ID int,
+      SOLUONG numeric(25, 4),
+      DONGIA_DOANHTHU numeric(25, 4),
+      THANHTIEN_DOANHTHU numeric(25, 4),
+      BHYT_TL numeric(25, 4),
+      BHYT_DONGIA numeric(25, 4),
+      BHYT_THANHTIEN numeric(25, 4),
+      BHYT_DONGIA_CONGKHAM_DAU numeric(25, 4),
+      BHYT_CONGKHAM_DAU_TYLE numeric(25, 4),
+      BHYT_DONGIA_CHITRA numeric(25, 4),
+      BHYT_THANHTIEN_CHITRA numeric(25, 4),
+      BENHNHAN_PHAITHANHTOAN numeric(25, 4),
+      GIATRI_HOADON numeric(25, 4),
+      GIATRI_BIENLAI numeric(25, 4),
+      DATHUCHIEN char(1),
+      KHONGTHUTIEN char(1),
+      BHYTDONGTIEN char(1),
+      DICHVU_TL numeric(25, 4),
+      BHYT_DONGIA_DONGCT_DAU numeric(25, 4),
+      SOLONHAP_ID int,
+      DUOC_TYLE numeric(25, 4),
+      DUOC_MUCTRAN_THANHTOAN numeric(25, 4))  json
+      WHERE TT_VIENPHI.VIENPHI_ID = json.VIENPHI_ID and json.DONGIA_DOANHTHU > 0
+
+      <!--insert log tinh vp-->
+      insert into TT_TINH_VIENPHI_LOG
+      SELECT json.VIENPHI_ID, json.TIEPNHAN_ID, json.BENHAN_ID, json.SOLUONG, json.BHYT_TL, json.DONGIA_DOANHTHU,
+      json.THANHTIEN_DOANHTHU, json.BHYT_DONGIA, json.BHYT_THANHTIEN, json.BHYT_DONGIA_CHITRA, json.BHYT_THANHTIEN_CHITRA, json.BENHNHAN_PHAITHANHTOAN,
+      json.SOBHYT_HUONG_ID, json.SOBHYT, GETDATE(), -1, '$BENHVIEN_ID$'
+      FROM OPENJSON(@jsonVienPhi)
+      WITH (
+      VIENPHI_ID int,
+      TIEPNHAN_ID int,
+      BENHAN_ID int,
+      SOLUONG numeric(25, 4),
+      DONGIA_DOANHTHU numeric(25, 4),
+      THANHTIEN_DOANHTHU numeric(25, 4),
+      BHYT_TL numeric(25, 4),
+      BHYT_DONGIA numeric(25, 4),
+      BHYT_THANHTIEN numeric(25, 4),
+      BHYT_DONGIA_CHITRA numeric(25, 4),
+      BHYT_THANHTIEN_CHITRA numeric(25, 4),
+      BENHNHAN_PHAITHANHTOAN numeric(25, 4),
+      SOBHYT_HUONG_ID int,
+      SOBHYT nvarchar(30)) json
+      end
+    </statement>
+    <statement id="DAO00023_UpdateDuocVPDathuchien" parameterClass="System.String" resultClass="System.Int32">
+
+      declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+      begin
+      UPDATE TT_VIENPHI
+      SET
+      DATHUCHIEN = '1',
+      SOLONHAP_ID = json.SOLONHAP_ID,
+      NGAYCAPNHAT = GETDATE()
+      FROM OPENJSON (@jsonVienPhi)
+      WITH
+      ( VIENPHI_ID int,
+      SOLONHAP_ID int)  json
+      WHERE TT_VIENPHI.VIENPHI_ID = json.VIENPHI_ID
+      end
+    </statement>
+    <statement id="DAO00023_DeleteNhieuVP" parameterClass="System.String" resultClass="System.Int32">
+      delete from TT_VIENPHI where VIENPHI_ID in ($LST_VIENPHI_ID$)     
+    </statement>
+    <!--Revision:0,0a342f87a6872afb3b75384fd8d528ff-->
+    <statement id="DAO00023_DeleteAll" parameterClass="System.String" resultClass="System.Int32">
+      delete from TT_VIENPHI where TIEPNHAN_ID = $TIEPNHAN_ID$
+    </statement>
+    <!--Revision:0,ed967366dff03e22835a9d4febb7309e-->
+    <statement id="DAO00023_DeleteDuocVienPhi" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_VIENPHI
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+            TT_VIENPHI.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUOC_ID">
+            TT_VIENPHI.DUOC_ID = '$DUOC_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <!--Revision:0,236fef7e82988aca035aa689e02c6d9d-->
+    <statement id="DAO00023_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_VIENPHI
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="VIENPHI_ID">
+            TT_VIENPHI.VIENPHI_ID = '$VIENPHI_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+            TT_VIENPHI.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHAN_ID">
+            TT_VIENPHI.BENHAN_ID = '$BENHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHAMBENH_ID">
+            TT_VIENPHI.KHAMBENH_ID = '$KHAMBENH_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="REF_ID">
+            TT_VIENPHI.REF_ID = '$REF_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="REF_ID">
+            TT_VIENPHI.REF_TABLE = '$REF_TABLE$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DICHVU_ID">
+            TT_VIENPHI.DICHVU_ID = '$DICHVU_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUOC_ID">
+            TT_VIENPHI.DUOC_ID = '$DUOC_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LOAI_CHIPHI">
+            TT_VIENPHI.LOAI_CHIPHI = '$LOAI_CHIPHI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LOAIGIA_ID">
+            TT_VIENPHI.LOAIGIA_ID = '$LOAIGIA_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOLUONG">
+            TT_VIENPHI.SOLUONG = '$SOLUONG$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DONGIA_DOANHTHU">
+            TT_VIENPHI.DONGIA_DOANHTHU = '$DONGIA_DOANHTHU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THANHTIEN_DOANHTHU">
+            TT_VIENPHI.THANHTIEN_DOANHTHU = '$THANHTIEN_DOANHTHU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHYT_TL">
+            TT_VIENPHI.BHYT_TL = '$BHYT_TL$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHYT_DONGIA">
+            TT_VIENPHI.BHYT_DONGIA = '$BHYT_DONGIA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHYT_THANHTIEN">
+            TT_VIENPHI.BHYT_THANHTIEN = '$BHYT_THANHTIEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHYT_DONGIA_CHITRA">
+            TT_VIENPHI.BHYT_DONGIA_CHITRA = '$BHYT_DONGIA_CHITRA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHYT_THANHTIEN_CHITRA">
+            TT_VIENPHI.BHYT_THANHTIEN_CHITRA = '$BHYT_THANHTIEN_CHITRA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHNHAN_PHAITHANHTOAN">
+            TT_VIENPHI.BENHNHAN_PHAITHANHTOAN = '$BENHNHAN_PHAITHANHTOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_HOADON">
+            TT_VIENPHI.GIATRI_HOADON = '$GIATRI_HOADON$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_HOADON_DATHANHTOAN">
+            TT_VIENPHI.GIATRI_HOADON_DATHANHTOAN = '$GIATRI_HOADON_DATHANHTOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_BIENLAI">
+            TT_VIENPHI.GIATRI_BIENLAI = '$GIATRI_BIENLAI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_BIENLAI_DATHANHTOAN">
+            TT_VIENPHI.GIATRI_BIENLAI_DATHANHTOAN = '$GIATRI_BIENLAI_DATHANHTOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_BENHNHAN_DATHANHTOAN">
+            TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN = '$GIATRI_BENHNHAN_DATHANHTOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GIATRI_THATTHU">
+            TT_VIENPHI.GIATRI_THATTHU = '$GIATRI_THATTHU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MIENGIAM_TL">
+            TT_VIENPHI.MIENGIAM_TL = '$MIENGIAM_TL$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MIENGIAM_GIATRI">
+            TT_VIENPHI.MIENGIAM_GIATRI = '$MIENGIAM_GIATRI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGANSACH_TL">
+            TT_VIENPHI.NGANSACH_TL = '$NGANSACH_TL$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGANSACH_GIATRI">
+            TT_VIENPHI.NGANSACH_GIATRI = '$NGANSACH_GIATRI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TAITRO_TL">
+            TT_VIENPHI.TAITRO_TL = '$TAITRO_TL$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TAITRO_GIATRI">
+            TT_VIENPHI.TAITRO_GIATRI = '$TAITRO_GIATRI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHTN_TL">
+            TT_VIENPHI.BHTN_TL = '$BHTN_TL$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHTN_DONGIA">
+            TT_VIENPHI.BHTN_DONGIA = '$BHTN_DONGIA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHTN_THANHTIEN">
+            TT_VIENPHI.BHTN_THANHTIEN = '$BHTN_THANHTIEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHTN_DONGIA_CHITRA">
+            TT_VIENPHI.BHTN_DONGIA_CHITRA = '$BHTN_DONGIA_CHITRA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BHTN_THANHTIEN_CHITRA">
+            TT_VIENPHI.BHTN_THANHTIEN_CHITRA = '$BHTN_THANHTIEN_CHITRA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUOCPHEPTHUCHIEN">
+            TT_VIENPHI.DUOCPHEPTHUCHIEN = '$DUOCPHEPTHUCHIEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HUY">
+            TT_VIENPHI.HUY = '$HUY$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DATHANHTOAN">
+            TT_VIENPHI.DATHANHTOAN = '$DATHANHTOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HOADON_ID">
+            TT_VIENPHI.HOADON_ID = '$HOADON_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="ACTIVE">
+            TT_VIENPHI.ACTIVE = '$ACTIVE$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            TT_VIENPHI.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOITAO_ID">
+            TT_VIENPHI.NGUOITAO_ID = '$NGUOITAO_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYTAO">
+            TT_VIENPHI.NGAYTAO = '$NGAYTAO$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+            TT_VIENPHI.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+            TT_VIENPHI.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <!--Revision:0,75c8a79ff2d30fdf7451a68ee06ed360-->
+    <statement id="DAO00023_GetTTVienPhiThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      where REF_ID = '$REF_ID$'
+      and REF_TABLE = '$REF_TABLE$'
+    </statement>
+    <!--Revision:0,c193b35d5b751a182143bf068d793240-->
+    <statement id="DAO00023_DeleteTTVienPhiKhamBenhThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      delete
+      from TT_VIENPHI
+      where
+      TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      and KHAMBENH_ID = '$KHAMBENH_ID$'
+      and DUOC_ID = '$DUOC_ID$'
+    </statement>
+    <!--Revision:0,4380c33e23358b8a7c4178325b693caa-->
+    <statement id="DAO00023_GetTTVienPhiKhamBenhThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      where
+      TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      and KHAMBENH_ID = '$KHAMBENH_ID$'
+      and DUOC_ID = '$DUOC_ID$'
+    </statement>
+    <!--Revision:0,a64dd296560ef8bb379442c860e5cb3e-->
+    <statement id="DAO00023_GetTTVienPhiKhamBenhNoiTruThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      where
+      DUOC_ID = '$DUOC_ID$'
+      and REF_TABLE = '$REF_TABLE$'
+      and REF_ID = '$REF_ID$'
+      order by VIENPHI_ID asc
+    </statement>
+    <statement id="DAO00023_GetDanhSachTTVienPhiKhamBenhNoiTruThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      where
+      DUOC_ID in ($LST_DUOC_ID$)
+      <!--and REF_TABLE in ($REF_TABLE$)-->
+      and REF_ID in ($LST_REF_ID$)
+      and REF_TABLE in
+      <iterate open="(" close=")" conjunction=",  " property="REF_TABLE">
+        #REF_TABLE[]#
+      </iterate>
+      order by VIENPHI_ID asc
+    </statement>
+    
+    <!--Revision:0,6e0de09f6aa04c97ac220ed14cf28cdc-->
+    <statement id="DAO00023_GetTTVienPhiKhamBenhNoiTruThuocSoluong" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_VIENPHI
+      where
+      DUOC_ID = '$DUOC_ID$'
+      and REF_TABLE = '$REF_TABLE$'
+      and REF_ID = '$REF_ID$'
+      and SOLUONG = '$SOLUONG$'
+    </statement>
+    <!--Revision:0,27abbf27d4ae7c017ab4659b58907fdf-->
+    <statement id="DAO00023_GetDuocKhamBenhNoiTruThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      <isNotEmpty prepend="" property="LIST_TOATHUOC_ID">
+        select distinct C.SOBHYT, A.DUOC_ID, B.DONGIABAN, B.DONGIA_BHYT, B.DONGIATHAU, B.TOATHUOCNOITRU_ID as REF_ID,
+        B.SOLUONGDAXUAT, 'TT_NOITRU_TOATHUOC' as REF_TABLE
+        from TT_NOITRU_TOATHUOC A
+        left join TT_TIEPNHAN C on C.TIEPNHAN_ID = A.TIEPNHAN_ID
+        left join (select B.DONGIABAN, B.DONGIA_BHYT, A.DUOC_ID, A.TOATHUOCNOITRU_ID, A.SOLUONGDAXUAT, A.CHUNGTU_ID, A.DONGIATHAU
+        from TT_DUOC_CHUNGTU_CHITIET A
+        left join TT_DUOC_SOLONHAP_GIABAN B on B.SOLONHAP_ID = A.SOLONHAP_ID where A.TOATHUOCNOITRU_ID in ($LIST_TOATHUOC_ID$))
+        B on B.DUOC_ID = A.DUOC_ID and B.TOATHUOCNOITRU_ID = A.TOATHUOC_ID
+        where
+        A.TOATHUOC_ID in ($LIST_TOATHUOC_ID$) and B.CHUNGTU_ID in ($LIST_CHUNGTU_ID$)
+        ORDER BY REF_TABLE, REF_ID
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="LIST_KHAMBENH_VTYT_ID">
+        select distinct E.SOBHYT, A.DUOC_ID,  B.DONGIABAN,  B.DONGIA_BHYT,A.KHAMBENH_VTYT_ID as REF_ID,
+        A.SOLUONGDAXUAT , 'TT_NGOAITRU_KHAMBENH_VTYT' as REF_TABLE
+        from TT_DUOC_CHUNGTU_CHITIET A
+        left join TT_DUOC_SOLONHAP_GIABAN B on A.SOLONHAP_ID =  B.SOLONHAP_ID
+        left join TT_NGOAITRU_KHAMBENH_VTYT C on C.KHAMBENH_VTYT_ID = A.KHAMBENH_VTYT_ID
+        left join TT_DVYEUCAU D on D.DVYEUCAU_ID = C.DVYEUCAU_ID
+        left join TT_TIEPNHAN E on E.TIEPNHAN_ID = D.TIEPNHAN_ID
+        where A.KHAMBENH_VTYT_ID in ($LIST_KHAMBENH_VTYT_ID$) and A.CHUNGTU_ID in ($LIST_CHUNGTU_ID$)
+        ORDER BY REF_TABLE, REF_ID
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="LIST_PHAUTHUAT_VTYT_ID">
+        select distinct E.SOBHYT,  A.DUOC_ID,  B.DONGIABAN, B.DONGIA_BHYT, A.PHAUTHUAT_VTYT_ID as REF_ID,
+        A.SOLUONGDAXUAT , 'TT_PHAUTHUAT_VTYT' as REF_TABLE
+        from TT_DUOC_CHUNGTU_CHITIET A
+        left join TT_DUOC_SOLONHAP_GIABAN B on A.SOLONHAP_ID =  B.SOLONHAP_ID
+        left join TT_PHAUTHUAT_VTYT C on C.PHAUTHUAT_VTYT_ID = A.PHAUTHUAT_VTYT_ID
+        left join TT_PHAUTHUAT D on D.PHAUTHUAT_ID = C.PHAUTHUAT_ID
+        left join TT_TIEPNHAN E on E.TIEPNHAN_ID = D.TIEPNHAN_ID
+        where A.PHAUTHUAT_VTYT_ID in ($LIST_PHAUTHUAT_VTYT_ID$) and A.CHUNGTU_ID in ($LIST_CHUNGTU_ID$)
+        ORDER BY REF_TABLE, REF_ID
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="LIST_CLS_VTYT_ID">
+        select distinct E.SOBHYT, A.DUOC_ID,  B.DONGIABAN, B.DONGIA_BHYT, A.CLSKETQUA_VTYT_ID as REF_ID,
+        A.SOLUONGDAXUAT , 'TT_CLSKETQUA_VTYT' as REF_TABLE
+        from TT_DUOC_CHUNGTU_CHITIET A
+        left join TT_DUOC_SOLONHAP_GIABAN B on A.SOLONHAP_ID =  B.SOLONHAP_ID
+        left join TT_CLSKETQUA_VTYT C on C.CLSKETQUA_VTYT_ID = A.CLSKETQUA_VTYT_ID
+        left join TT_DVYEUCAU D on D.DVYEUCAU_ID = C.DVYEUCAU_ID
+        left join TT_TIEPNHAN E on E.TIEPNHAN_ID = D.TIEPNHAN_ID
+        where A.CLSKETQUA_VTYT_ID in ($LIST_CLS_VTYT_ID$) and A.CHUNGTU_ID in ($LIST_CHUNGTU_ID$)
+        ORDER BY REF_TABLE, REF_ID
+      </isNotEmpty>
+    </statement>
+    <!--Revision:0,7f7c6a37c3fc31f6e47025267401c294-->
+    <statement id="DAO00023_GetThongTinThanhToan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select VIENPHI_ID
+      from TT_VIENPHI
+      where DATHANHTOAN = 1
+      <isNotEmpty prepend="and" property="BENHAN_ID">
+        BENHAN_ID = '$BENHAN_ID$'
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+        TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      </isNotEmpty>
+    </statement>
+    <!--Revision:0,ff6149df0b6fe4ce0fd5f2344c63b223-->
+    <statement id="DAO00023_GetListToaThuocKhamBenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.*, B.SOBHYT
+      from TT_VIENPHI A
+      left join (select * from TT_TIEPNHAN where TIEPNHAN_ID = '$TIEPNHAN_ID$') B on A.TIEPNHAN_ID = B.TIEPNHAN_ID
+      where
+      A.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      and A.KHAMBENH_ID in ($LIST_KHAMBENH_ID$)
+      and A.DUOC_ID is not null <!--AND DUYET = '1'-->
+      and REF_TABLE = 'TT_NGOAITRU_TOATHUOC'
+      and REF_ID in (select TOATHUOC_ID from TT_NGOAITRU_TOATHUOC where KHAMBENH_TOATHUOC_ID in ($LIST_KHAMBENH_TOATHUOC_ID$))
+      ORDER BY DUOC_ID
+    </statement>
+    <!--Revision:0,0726a42d9041ef11eb30958f28f40285-->
+    <statement id="DAO00023_DeleteListToaThuocKhamBenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      delete
+      from TT_VIENPHI
+      where
+      TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      and KHAMBENH_ID in ($LIST_KHAMBENH_ID$)
+      and DUOC_ID is not null <!--AND DUYET = '1'-->
+      and REF_TABLE = 'TT_NGOAITRU_TOATHUOC'
+      and REF_ID in (select TOATHUOC_ID from TT_NGOAITRU_TOATHUOC where KHAMBENH_TOATHUOC_ID in ($LIST_KHAMBENH_TOATHUOC_ID$))
+      and HUY = '0'
+    </statement>
+    <statement id="DAO00023_GetDotDieuTriBenhAnNoitru" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select distinct DOTDIEUTRI_ID, BENHAN_ID
+      from TT_VIENPHI
+      where
+      TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      and KHAMBENH_ID in ($LIST_KHAMBENH_ID$)
+      and DUOC_ID is not null AND DUYET = '1'
+      and HUY = '0'
+    </statement>
+    <!--Revision:0,aea037c0bb1bc032c8a9ce0d90dafc84-->
+    <statement id="DAO00023_UpdateListToaThuocKhamBenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      update TT_VIENPHI set DATHUCHIEN = '0'
+      where
+      TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      and KHAMBENH_ID in ($LIST_KHAMBENH_ID$)
+      and DUOC_ID is not null AND DUYET = '1'
+    </statement>
+    <!--Revision:0,bd5e1bc3da14bcd2694f319ea31494f7-->
+    <statement id="DAO00023_DeleteVienPhiNoiTruToaThuoc" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_VIENPHI
+      where
+      KHAMBENH_ID = '$KHAMBENH_ID$'
+      and REF_TABLE = '$REF_TABLE$'
+    </statement>
+    <!--Revision:0,e17913754cb50d8db90e480931438476-->
+    <update id="DAO00023_UpdateTTDVYeuCauVienPhi" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      update TT_VIENPHI
+      set
+      <isNotEmpty prepend="" property="KHAMBENH_ID">
+        KHAMBENH_ID = #KHAMBENH_ID#,
+      </isNotEmpty>
+      DATHUCHIEN = #DATHUCHIEN#,
+      NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$',
+      NGAYCAPNHAT = '$NGAYCAPNHAT$'
+      where REF_ID = '$REF_ID$'
+      and REF_TABLE = '$REF_TABLE$'
+      and TIEPNHAN_ID = '$TIEPNHAN_ID$'
+    </update>
+    <!--Revision:0,f692853e962bd46e656ee96a3083dd6c-->
+    <delete id="DAO00023_DeleteVienPhiGiuong" parameterClass="HashTable">
+      delete from TT_VIENPHI
+      where
+      REF_ID = #REF_ID#
+      and REF_TABLE = #REF_TABLE#
+    </delete>
+    <!--Revision:0,a3a4b136a4a05d14b7bf9a3a405a0d12-->
+    <update id="DAO00023_CapNhatSLVienPhi" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      update TT_VIENPHI
+      set SOLUONG = #SOLUONG_VIENPHI#,
+      NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#,
+      NGAYCAPNHAT = #NGAYCAPNHAT#
+      where REF_ID = '$TOATHUOC_ID$'
+      and REF_TABLE = '$REF_TABLE$'
+      and DUOC_ID = '$DUOC_ID$'
+    </update>
+    <!--Revision:0,af241d20fed71c513a63e39016cda123-->
+    <update id="DAO00023_CapNhatSLXoaTraThuocChiTiet" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      update TT_VIENPHI
+      set SOLUONG = SOLUONG + #SOLUONG#,
+      NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#,
+      NGAYCAPNHAT = #NGAYCAPNHAT#
+      where REF_ID = '$TOATHUOC_ID$'
+      and REF_TABLE = '$REF_TABLE$'
+      and DUOC_ID = '$DUOC_ID$'
+    </update>
+    <statement id="DAO00023_GetSOBHYT_HUONG_ID" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      select isnull(MAX(SOBHYT_HUONG_ID),0) SOBHYT_HUONG_ID
+      from TT_TIEPNHAN_SOTHEBHYT
+      where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      <!--<isNotEmpty prepend="and" property="BENHAN_ID">
+        BENHAN_ID = '$BENHAN_ID$'
+      </isNotEmpty>-->
+    </statement>
+    <statement id="DAO00023_GetSOBHYT_HUONG" parameterClass="System.Collections.IDictionary" resultClass="System.String">
+      select top 1 SOBHYT
+      from TT_TIEPNHAN_SOTHEBHYT
+      where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      <!--<isNotEmpty prepend="and" property="BENHAN_ID">
+        BENHAN_ID = '$BENHAN_ID$'
+      </isNotEmpty>-->
+      order by SOBHYT_HUONG_ID desc
+    </statement>
+    <statement id="DAO00023_UpdateVPToathuocNgoaitru" parameterClass="System.String" resultClass="System.Int32">
+      declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+
+      UPDATE TT_VIENPHI
+      SET
+      DONGIA_DOANHTHU = json.DONGIA_DOANHTHU,
+      BHYT_DONGIA = json.BHYT_DONGIA,
+      DATHUCHIEN = json.DATHUCHIEN,
+      DATHANHTOAN = json.DATHANHTOAN,
+      HOADON_ID = null,
+      HUY = '0',
+      SOLONHAP_ID = json.SOLONHAP_ID,
+      NGAYCAPNHAT = GETDATE()
+      FROM OPENJSON (@jsonVienPhi)
+      WITH (
+      VIENPHI_ID int,
+      DONGIA_DOANHTHU numeric(25, 4),
+      BHYT_DONGIA numeric(25, 4),
+      DATHUCHIEN char(1),
+      DATHANHTOAN char(1),
+      SOLONHAP_ID int)  json
+      WHERE TT_VIENPHI.VIENPHI_ID = json.VIENPHI_ID
+    </statement>
+    <statement id="DAO00023_GetToaThuocVienPhi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_VIENPHI where REF_ID = '$TOATHUOC_ID$' and REF_TABLE = 'TT_NOITRU_TOATHUOC'
+    </statement>
+    <statement id="DAO00023_DeleteToaThuocVienPhi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      delete TT_VIENPHI where VIENPHI_ID IN ($LISTREF$) and REF_TABLE = 'TT_NOITRU_TOATHUOC'
+    </statement>
+  </statements>
+</sqlMap>

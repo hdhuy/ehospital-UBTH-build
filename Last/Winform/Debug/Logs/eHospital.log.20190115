@@ -1,0 +1,280 @@
+﻿--------------------------------------------------------------------------------
+2019-01-15 14:11:30,816 [1] INFO  - [Application started.]
+2019-01-15 14:11:31,648 [1] WARN  - Error in reading style 'D:/FPT_IS/4.Project/25.SYT-DaNang/5.trunk/99.Build/Last/Winform/Debug/Styles/ButtonKioskFooter1'
+System.Collections.Generic.KeyNotFoundException: The given key (LITFOOTER1FG) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2019-01-15 14:11:31,677 [1] WARN  - Error in reading style 'D:/FPT_IS/4.Project/25.SYT-DaNang/5.trunk/99.Build/Last/Winform/Debug/Styles/ButtonKioskFooter2'
+System.Collections.Generic.KeyNotFoundException: The given key (LITFOOTER2FG) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2019-01-15 14:11:31,691 [1] WARN  - Error in reading style 'D:/FPT_IS/4.Project/25.SYT-DaNang/5.trunk/99.Build/Last/Winform/Debug/Styles/ButtonKioskFooter3'
+System.Collections.Generic.KeyNotFoundException: The given key (LITFOOTER2FG) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2019-01-15 14:11:31,699 [1] WARN  - Error in reading style 'D:/FPT_IS/4.Project/25.SYT-DaNang/5.trunk/99.Build/Last/Winform/Debug/Styles/ButtonKioskMenu'
+System.Collections.Generic.KeyNotFoundException: The given key (LITMENUFG) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2019-01-15 14:11:31,725 [1] WARN  - Error in reading style 'D:/FPT_IS/4.Project/25.SYT-DaNang/5.trunk/99.Build/Last/Winform/Debug/Styles/ButtonKioskMore'
+System.Collections.Generic.KeyNotFoundException: The given key (LITMENUFG) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2019-01-15 14:11:32,523 [1] WARN  - Error in reading style 'D:/FPT_IS/4.Project/25.SYT-DaNang/5.trunk/99.Build/Last/Winform/Debug/Styles/LabelKioskNote'
+System.Collections.Generic.KeyNotFoundException: The given key (LITTITLE1FG) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2019-01-15 14:11:32,530 [1] WARN  - Error in reading style 'D:/FPT_IS/4.Project/25.SYT-DaNang/5.trunk/99.Build/Last/Winform/Debug/Styles/LabelKioskPatient'
+System.Collections.Generic.KeyNotFoundException: The given key (LITPATIENTFG) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2019-01-15 14:11:32,538 [1] WARN  - Error in reading style 'D:/FPT_IS/4.Project/25.SYT-DaNang/5.trunk/99.Build/Last/Winform/Debug/Styles/LabelKioskTitle1'
+System.Collections.Generic.KeyNotFoundException: The given key (LITTITLE1FG) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2019-01-15 14:11:32,546 [1] WARN  - Error in reading style 'D:/FPT_IS/4.Project/25.SYT-DaNang/5.trunk/99.Build/Last/Winform/Debug/Styles/LabelKioskTitle2'
+System.Collections.Generic.KeyNotFoundException: The given key (LITTITLE2FG) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2019-01-15 14:11:32,633 [1] WARN  - Error in reading style 'D:/FPT_IS/4.Project/25.SYT-DaNang/5.trunk/99.Build/Last/Winform/Debug/Styles/PanelKioskFooter'
+System.Collections.Generic.KeyNotFoundException: The given key (LITFOOTERFG) was not present in the dictionary
+   at FPT.Framework.Data.ExtendedDictionary`2.get_Item(K key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2019-01-15 14:11:34,687 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-01-15 14:11:34,745 [1] INFO  - LoadMasters() took 52 ms.
+2019-01-15 14:11:34,746 [1] INFO  - [_SYSTEM_] Session started.
+2019-01-15 14:11:57,659 [1] INFO  - [admin] Session is starting.
+2019-01-15 14:11:58,586 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:11:58,909 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:11:58,989 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:11:59,071 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:11:59,270 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:11:59,348 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:11:59,444 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:11:59,522 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:11:59,599 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:12:00,092 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:12:00,221 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:12:00,625 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48128
+2019-01-15 14:12:05,002 [6] INFO  - LoadMasters() took 7,336 ms.
+2019-01-15 14:12:05,012 [1] INFO  - [admin] Session started.
+2019-01-15 14:12:06,775 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-01-15 14:12:06,787 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-01-15 14:12:07,068 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-01-15 14:12:07,076 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-01-15 14:12:07,222 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-01-15 14:12:07,231 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-01-15 14:12:07,239 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-01-15 14:12:07,247 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-01-15 14:12:07,317 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-01-15 14:12:07,325 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-01-15 14:12:07,334 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-01-15 14:12:07,342 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-01-15 14:12:07,352 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-01-15 14:12:07,380 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-01-15 14:12:07,397 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-01-15 14:12:07,406 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-01-15 14:12:07,415 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-01-15 14:12:07,426 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-01-15 14:12:07,437 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-01-15 14:12:07,551 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-01-15 14:12:07,560 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-01-15 14:12:07,568 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-01-15 14:12:07,576 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-01-15 14:12:07,601 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-01-15 14:12:07,682 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-01-15 14:12:08,116 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-01-15 14:12:08,123 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-01-15 14:12:08,132 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-01-15 14:12:08,139 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-01-15 14:12:08,147 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-01-15 14:12:08,154 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-01-15 14:12:08,240 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-01-15 14:12:08,456 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-01-15 14:12:08,467 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-01-15 14:12:08,489 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-01-15 14:12:08,592 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-01-15 14:12:08,698 [1] WARN  - Can't get type of type 'OPD06', assembly 'Screens/ScrOPD'
+2019-01-15 14:12:08,709 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-01-15 14:12:08,717 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-01-15 14:12:08,726 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-01-15 14:12:08,734 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-01-15 14:12:08,742 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-01-15 14:12:08,750 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-01-15 14:12:08,918 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-01-15 14:12:08,941 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-01-15 14:12:08,948 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-01-15 14:12:08,957 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-01-15 14:12:09,117 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-01-15 14:12:09,431 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-01-15 14:12:09,440 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-01-15 14:12:09,450 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-01-15 14:12:09,598 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-01-15 14:12:09,684 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-01-15 14:12:10,240 [1] ERROR - Can't read image file 'D:/FPT_IS/4.Project/25.SYT-DaNang/5.trunk/99.Build/Last/Winform/Debug/Images/imgMenuBg_TK.png'
+2019-01-15 14:12:10,242 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2019-01-15 14:17:10,192 [1] ERROR - Can't create control EME04052.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'ICD_VAOKHOA' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.SearchEntry2.BindData()
+   at WinformUI.Entry.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2019-01-15 14:17:10,198 [1] ERROR - Can't create control EME04053.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'CHANDOANVAOKHOA' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.Entry.SetBindData()
+   at WinformUI.Entry.BindData()
+   at WinformUI.Entry.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)

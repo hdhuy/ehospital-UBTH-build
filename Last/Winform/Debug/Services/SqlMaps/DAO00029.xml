@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,5faa1770d5ae721ab2ff11b1d3a05963-->
+        <statement id="DAO00029_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_DUOC_NGUONHANG
+            where TM_DUOC_NGUONHANG.DUOC_ID  = '$DUOC_ID$'
+            order by ID
+        </statement>
+    </statements>
+</sqlMap>

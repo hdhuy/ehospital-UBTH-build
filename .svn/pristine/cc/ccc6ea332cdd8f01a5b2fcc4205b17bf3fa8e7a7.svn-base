@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Localization>
+  <vi-vn>
+    <!-- Common use strings, started with C000-->
+    <!--DateTime format-->
+    <string id="C0000001" string="H:mm:ss"/>
+    <string id="C0000002" string="H:mm:ss     dd/MM/yyyy"/>
+    <string id="C0000003" string="dd/MM/yyyy"/>
+    <string id="C0000004" string="dd/MM/yyyy H:mm:ss"/>
+    <string id="C0000005" string="dd/MM/yyyy H:mm"/>
+    <string id="C0000006" string="dd/MM/yy H:mm"/>
+    <string id="C0000007" string="ddMMyy_HHmmss"/>
+    <string id="C0000008" string="yyyyMMddHHmmssfff"/>
+    <string id="C0000009" string="H:mm"/>
+    <string id="C0000010" string="yyyy-MM-dd"/>
+    <!--Timespan format-->
+    <string id="TS000001" string="d\.hh\:mm"/>
+    <string id="TS000002" string="hh\:mm"/>
+    <string id="TS000003" string="hh\:mm\:ss"/>
+
+    <!--No decimal digits-->
+    <string id="FNUM0000" string="N0"/>
+    <!--1 decimal digits-->
+    <string id="FNUM0001" string="N1"/>
+    <!--2 decimal digits-->
+    <string id="FNUM0002" string="N2"/>
+    <!--3 decimal digits-->
+    <string id="FNUM0003" string="N3"/>
+    <!--Maximum 1 decimal digits-->
+    <string id="FNUM0011" string="#,#0.#"/>
+    <!--Maximum 2 decimal digits-->
+    <string id="FNUM0012" string="#,#0.##"/>
+    <!--Maximum 3 decimal digits-->
+    <string id="FNUM0013" string="#,#0.###"/>
+    <!--No group separator, no decimal digit-->
+    <string id="FNUM0010" string="D"/>
+
+    <string id="FNUMQMED" string="N3"/>
+    <string id="FNUMQSVC" string="N2"/>
+    <string id="FNUMCURR" string="N0"/>
+
+    <!-- Validation string -->
+    <string id="REX00001" string="^[-+]?[0-9]*\.?[0-9]*([eE][-+]?[0-9]+)?$"/>
+    <!--<string id="REX00002" string="^[-+]?[1-9][0-9]*$"/>-->
+    <string id="REX00002" string="^[+-]?\d*\,\d+$|^[+-]?\d+(\,\d*)?$"/>
+    <string id="REX00003" string="^[-+]?[1-9][0-9]*$"/>
+    <string id="REX00004" string="^\+?\d*\,\d+$|^[+-]?\d+(\,\d*)?$"/>
+    <!--Validate ICD list-->
+    <string id="REX00005" string="^([A-Z][0-9][0-9]|[A-Z][0-9][0-9]\.[-]?[0-9][;]?)+$"/>
+    <!--Validate alphanumeric-->
+    <string id="REX00006" string="^([A-Za-z0-9])*$"/>
+
+    <!-- Minvalue use to check -->
+    <string id="MIN00001" string="1900"/>
+    <!--Dùng để kiểm tra năm thấp nhất được cho phép ở DatePicker-->
+
+    <!-- Default female and male images-->
+    <string id="IMG00001" string="imgFemale.png"/>
+    <string id="IMG00002" string="imgMale.png"/>
+    <string id="IMG00003" string="imgVIP.png"/>
+    <string id="IMG00004" string="imgBHTN.png"/>
+
+    <!-- Web format-->
+    <string id="C0000050" string="aa 9 99 ** 999 99999 99***"/>
+    <!--<string id="C0001000" string="HỆ THỐNG QUẢN LÝ BỆNH VIỆN FPT"/>-->
+    <!--<string id="C0001001" string="Đồng ý"/>-->
+    <string id="C0001002" string="Hủy"/>
+    <!--<string id="C0001003" string="Đăng ký"/>-->
+    <!--<string id="C0001004" string=""/>-->
+    <string id="C0001005" string="LỖI HỆ THỐNG"/>
+    <!--<string id="C0001007" string="Thoát"/>-->
+    <string id="C0001008" string="+"/>
+    <string id="C0001009" string="Xóa"/>
+    <string id="C0001010" string="Lưu"/>
+    <string id="C0001011" string="+"/>
+    <string id="C0001012" string="Bỏ qua"/>
+
+    <string id="C0001013" string="Cập nhật thành công"/>
+    <string id="C0001014" string="Cập nhật thất bại"/>
+    <string id="C0001017" string="Dữ liệu chưa được lưu. Bạn có muốn lưu trước khi đóng?"/>
+    <string id="C0001021" string="Xóa thành công"/>
+    <string id="C0001022" string="Xóa thất bại"/>
+    <string id="C0001023" string="Bạn chưa chọn thông tin để xóa"/>
+    <string id="C0001024" string="Hủy thành công"/>
+    <string id="C0001025" string="Hủy thất bại"/>
+    <string id="C0001026" string="Bạn có chắc chắn muốn xóa ?"/>
+    <string id="C0001027" string="Bạn có chắc chắn muốn hủy ?"/>
+    <string id="C0001031" string="Bạn chưa chọn chứng từ để xóa"/>
+    <string id="C0001034" string="Mã báo cáo đã tồn tại"/>
+    <string id="C0001035" string="XÁC NHẬN"/>
+    <string id="C0001036" string="Chạy báo cáo không thành công!"/>
+    <string id="C0001037" string="giường"/>
+    <string id="C0001038" string="Giá phòng"/>
+    <string id="C0001039" string="Giá BHYT"/>
+    <string id="C0001040" string="VND"/>
+    <string id="C0001041" string="Mã danh mục đã tồn tại"/>
+    <string id="C0001042" string="thuốc"/>
+    <string id="C0001043" string="vật tư y tế"/>
+    <string id="C0001044" string="Có"/>
+    <string id="C0001045" string="Không"/>
+    <string id="C0001046" string="Toa BHYT"/>
+    <string id="C0001047" string="Toa không BHYT "/>
+    <string id="C0001048" string="Lúc: "/>
+    <string id="C0001049" string="Người duyệt: "/>
+    <string id="C0001050" string="Toa BHYT"/>
+    <string id="C0001051" string="Toa không BHYT"/>
+    <string id="C0001052" string="Hoàn tất"/>
+    <string id="C0001053" string="Chưa kết quả"/>
+    <string id="C0001054" string="Chờ xác nhận"/>
+    <string id="C0001055" string="Đang thực hiện"/>
+    <string id="C0001056" string="Có chứa"/>
+    <string id="C0001057" string="Trong khoảng"/>
+    <string id="C0001058" string="Ngoài khoảng"/>
+    <string id="C0001059" string="Có kết quả"/>
+    <string id="C0001062" string="Đã chuyển tuyến"/>
+    <string id="C0001063" string="THÔNG BÁO"/>
+    <string id="C0001064" string="Đang sử dụng"/>
+    <string id="C0001065" string="Ngưng sử dụng"/>
+    <string id="C0001066" string="Sử dụng"/>
+    <string id="C0001067" string="Chưa sử dụng"/>
+    <string id="C0001068" string="&lt; Không có &gt;"/>
+    <string id="C0001069" string="GiaGiuong_02"/>
+    <!--Giường dịch vụ-->
+    <string id="C0001070" string="GiaGiuong_BHYT"/>
+    <!--Giường BHYT-->
+    <string id="C0001071" string="GiaThuoc_NoiVien"/>
+    <!--Thuốc nội viện-->
+    <string id="C0001072" string="GiaThuoc_BHYT"/>
+    <!--Thuốc BHYT-->
+    <string id="C0001073" string="GiaDichVu_BHYT"/>
+    <!--Dịch vụ BHYT-->
+    <string id="C0001074" string="GiaDichVu_01"/>
+    <!--Dịch vụ vien phi-->
+    <string id="C0001075" string="Bạn có chắc chắn muốn hoàn trả ?"/>
+    <string id="C0001076" string="Nếu bệnh nhân có giấy chuyển viện thì là đúng tuyến?"/>
+    <string id="C0001077" string="Phát hành đơn giá thành công"/>
+    <string id="C0001078" string="Phát hành đơn giá thất bại"/>
+    <string id="C0001079" string="Khoá tường trình"/>
+    <string id="C0001080" string="Bỏ khoá tường trình"/>
+    <string id="C0001081" string="Tất cả"/>
+    <string id="C0001082" string="Hết số"/>
+    <string id="C0001083" string="DANGDIEUTRI"/>
+    <string id="C0001084" string="ALL"/>
+    <string id="C0001085" string="001"/>
+    <!--Mã nguồn hàng [Mua]-->
+    <string id="C0001086" string="Điều kiện lọc chưa đầy đủ"/>
+    <string id="C0001087" string="Không thể xóa hoạt chất hoặc nhóm hoạt chất đã tồn tại tương tác thuốc"/>
+    <string id="C0001088" string="Bạn chưa chọn mục dữ liệu để xóa"/>
+    <string id="C0001089" string="Cấp trên không thể là hoạt chất"/>
+    <string id="C0001090" string="Không thể xóa hoạt chất hoặc nhóm hoạt chất đã tồn tại trong dược"/>
+    <string id="C0001091" string="Giá trị lọc phải là kiểu số"/>
+    <string id="C0001092" string="Giá trị đến khoảng không thể nhỏ hơn giá trị từ khoảng"/>
+    <string id="C0001093" string="Dữ liệu chưa được lưu. Bạn có muốn lưu trước khi chuyển?"/>
+    <string id="C0001094" string="Dị ứng thuốc"/>
+    <string id="C0001095" string="Liều lượng thuốc"/>
+    <string id="C0001096" string="Tương tác thuốc"/>
+    <string id="C0001097" string="Bạn chưa chọn từ điển để xóa"/>
+    <string id="C0001098" string="Dữ liệu chưa được lưu. Bạn có muốn lưu trước khi thêm mới?"/>
+    <string id="C0001099" string="Khoá"/>
+    <string id="C0001100" string="Bỏ khoá"/>
+    <string id="C0001101" string="Nhập dữ liệu thành công"/>
+    <string id="C0001102" string="Nhập dữ liệu không thành công"/>
+    <string id="C0001103" string="VP"/>
+    <!--Mã đối tượng Viện phí-->
+    <string id="C0001104" string="LOCKED"/>
+    <string id="C0001105" string="Đã khoá"/>
+    <string id="C0001106" string="NOTLOCKED"/>
+    <string id="C0001107" string="Chưa khoá"/>
+    <string id="C0001108" string="Chưa lấy mẫu"/>
+    <string id="C0001109" string="Đã lấy mẫu"/>
+    <string id="C0001110" string="0103"/>
+    <!--Mã nhóm dv xn vi sinh, kí sinh trùng-->
+    <string id="C0001111" string="CHOXACNHAN"/>
+    <!--TrangThai o table TT_CLSKETQUA-->
+
+    <string id="C0001112" string="Khác"/>
+    <string id="C0001113" string="Bằng"/>
+    <string id="C0001114" string="Nhỏ hơn bằng"/>
+    <string id="C0001115" string="Lớn hơn bằng"/>
+    <string id="C0001116" string="Nhỏ hơn"/>
+    <string id="C0001117" string="Lớn hơn"/>
+    <string id="C0001118" string="Duyệt"/>
+    <string id="C0001119" string="Bỏ duyệt"/>
+    <string id="C0001120" string="HOANTAT"/>
+    <!--TrangThai o table TT_CLSKETQUA-->
+    <string id="C0001121" string="CHUAKETQUA"/>
+    <!--TrangThai o table TT_CLSKETQUA-->
+
+    <string id="C0001122" string=" bởi "/>
+
+    <string id="C0001123" string="XR"/>
+    <!--0204-->
+    <string id="C0001124" string="ED"/>
+    <!--0207-->
+    <string id="C0001125" string="CT"/>
+    <!--0204-->
+    <string id="C0001126" string="MR"/>
+    <!--0206-->
+    <string id="C0001127" string="US"/>
+    <!--0201-->
+    <string id="C0001128" string="EC"/>
+    <!--0205-->
+
+    <string id="C0001129" string="0204"/>
+    <!--XR-->
+    <string id="C0001130" string="0207"/>
+    <!--ED-->
+    <string id="C0001131" string="0203"/>
+    <!--CT-->
+    <string id="C0001132" string="0206"/>
+    <!--MR-->
+    <string id="C0001133" string="0201"/>
+    <!--US-->
+    <string id="C0001134" string="0205"/>
+    <!--EC-->
+
+    <string id="C0001135" string="0106"/>
+    <!--Mã nhóm dv xn Giải phẫu bệnh-->
+
+    <string id="C0001136" string="Xuất dữ liệu thành công"/>
+    <string id="C0001137" string="Xuất dữ liệu không thành công"/>
+    <string id="C0001138" string="Không có dữ liệu để xuất"/>
+
+    <string id="C0001139" string="Chưa lập phiếu lĩnh"/>
+    <string id="C0001140" string="Chưa duyệt phiếu lĩnh"/>
+    <string id="C0001141" string="Đã xuất sử dụng"/>
+    <string id="C0001142" string="Chức năng chỉ cho phép chọn 1 tập tin đính kèm"/>
+
+    <string id="C0001143" string="Toa miễn phí"/>
+
+    <string id="C0001144" string="ĐÍNH KÈM TÀI LIỆU"/>
+
+    <string id="C0001145" string="Chưa duyệt"/>
+    <string id="C0001146" string="DADUYET"/>
+    <string id="C0001147" string="Dữ liệu đã được sử dụng, không thể xóa"/>
+    <string id="C0001148" string="Phiếu yêu cầu từ nhân viên"/>
+    <string id="C0001149" string="Phiếu yêu cầu mua hàng"/>
+    <string id="C0001150" string="Phiếu mua hàng"/>
+    <string id="C0001151" string="Lập phiếu"/>
+    <string id="C0001152" string="Chờ duyệt"/>
+    <string id="C0001153" string="Đã duyệt theo phòng ban"/>
+    <string id="C0001154" string="Từ chối theo phòng ban"/>
+    <string id="C0001155" string="Duyệt theo loại"/>
+    <string id="C0001156" string="Từ chối theo loại"/>
+    <string id="C0001157" string="Đã lập phiếu PR"/>
+
+    <string id="C0001158" string="Lập phiếu"/>
+    <string id="C0001159" string="Chờ duyệt"/>
+    <string id="C0001160" string="Đã duyệt"/>
+    <string id="C0001161" string="Từ chối"/>
+    <string id="C0001162" string="Đã phân công"/>
+    <string id="C0001163" string="Chấp nhận phiếu"/>
+    <string id="C0001164" string="Từ chối nhận phiếu"/>
+    <string id="C0001165" string="Đã lập phiếu PO"/>
+
+    <string id="C0001166" string="Lập phiếu"/>
+    <string id="C0001167" string="Chờ duyệt"/>
+    <string id="C0001168" string="Đã duyệt"/>
+    <string id="C0001169" string="Từ chối"/>
+    <string id="C0001170" string="Đang nhập kho"/>
+    <string id="C0001171" string="Hủy phiếu"/>
+
+    <string id="C0001172" string="0.5"/>
+    <!--TL_BHYT_DVKEMTHEO-->
+    <string id="C0001173" string="0.8"/>
+    <!--TL_BHYT_DVKEMTHEO_KHACEKIP-->
+    <string id="C0001174" string="Đã hoàn tất"/>
+
+    <string id="C0001175" string="05"/>
+    <!--Ma nhom dich vu -Phau Thuat-->
+    <string id="C0001176" string="06"/>
+    <!--Ma nhom dich vu -Thu Thuat-->
+    <string id="C0001177" string="Chờ nhập kho"/>
+
+    <string id="C0001179" string="-----"/>
+    <string id="C0001178" string="GOIDUOCPHEPBAN"/>
+    <string id="C0001180" string="CHODUYET"/>
+    <string id="C0001181" string="Đã thanh toán"/>
+    <string id="C0001182" string="Hoàn trả"/>
+    <string id="C0001183" string="Chưa thanh toán"/>
+    <string id="C0001184" string="Không có"/>
+    <string id="C0001185" string="Tiền mặt"/>
+    <string id="C0001186" string="Ghi nhận hủy"/>
+    <string id="C0001187" string="Hủy"/>
+    <string id="C0001188" string="Khóa"/>
+    <string id="C0001189" string="Bỏ khóa"/>
+    <string id="C0001190" string="Chưa thu tiền"/>
+    <string id="C0001191" string="Đã thu tiền"/>
+    <string id="C0001192" string="Đã kích hoạt"/>
+    <string id="C0001193" string="Đã khóa gói"/>
+    <string id="C0001194" string="Đang theo dõi"/>
+    <string id="C0001195" string="Closed"/>
+    <string id="C0001196" string="Kích hoạt"/>
+    <string id="C0001197" string="Bỏ kích hoạt"/>
+    <string id="C0001198" string="Gói được phép bán"/>
+    <string id="C0001199" string="Gói không được bán"/>
+    <string id="C0001200" string="NgoaiTru"/>
+    <string id="C0001201" string="NoiTru"/>
+    <string id="C0001202" string="Ngày hết hạn: "/>
+    <string id="C0001203" string="LIS_SONGAY_TRAKQ_DUKIEN"/>
+    <!--AppSetting code số ngày trả kq dự kiến -->
+    <string id="C0001204" string="0003.002"/>
+    <!-- Ma dich vu Kham tien me -->
+    <string id="C0001205" string="5679"/>
+    <!-- Mã dịch vụ Kham gây me -->
+
+    <string id="C0001206" string="Chiều cao"/>
+    <string id="C0001207" string="Cân nặng"/>
+    <string id="C0001208" string="Mạch"/>
+    <string id="C0001209" string="Nhiệt độ"/>
+    <string id="C0001210" string="Huyết áp thấp"/>
+
+    <string id="C0001211" string="Nội trú"/>
+    <string id="C0001212" string="Ra viện BHYT"/>
+    <string id="C0001213" string="Ra viện không BHYT"/>
+
+    <string id="C0001214" string="Bắt đầu phẫu thuật"/>
+    <string id="C0001215" string="kết thúc phẫu thuật"/>
+    <string id="C0001216" string="Thông tin phẫu thuật"/>
+    <string id="C0001217" string="Chẩn đoán trước phẫu thuật"/>
+    <string id="C0001218" string="Chẩn đoán sau phẫu thuật"/>
+    <string id="C0001219" string="Can thiệp phẫu thuật"/>
+    <string id="C0001220" string="Chế độ phẫu thuật"/>
+
+    <string id="C0001221" string="Bắt đầu thủ thuật"/>
+    <string id="C0001222" string="Kết thúc thủ thuật"/>
+    <string id="C0001223" string="Thông tin thủ thuật"/>
+    <string id="C0001224" string="Chẩn đoán trước thủ thuật"/>
+    <string id="C0001225" string="Chẩn đoán sau thủ thuật"/>
+    <string id="C0001226" string="Can thiệp thủ thuật"/>
+    <string id="C0001227" string="Chế độ thủ thuật"/>
+
+    <string id="C0001228" string="0103"/>
+    <!--Mã nhóm dịch vụ XN Vi Sinh-->
+    <string id="C0001229" string="0106"/>
+    <!--Mã nhóm dịch vụ XN GPB-->
+
+    <string id="C0001230" string="ED"/>
+    <string id="C0001231" string="UG"/>
+    <string id="C0001232" string="UC"/>
+    <string id="C0001233" string="EE"/>
+    <string id="C0001234" string="EM"/>
+
+    <string id="C0001235" string="2101"/>
+    <string id="C0001236" string="2102"/>
+    <string id="C0001237" string="2103"/>
+    <string id="C0001238" string="2104"/>
+    <string id="C0001239" string="0209"/>
+    <string id="C0001240" string="0306"/>
+    <string id="C0001241" string="0303"/>
+    <string id="C0001242" string="0308"/>
+    <string id="C0001243" string="Tên dịch vụ"/>
+    <string id="C0001244" string="Giới hạn"/>
+    <string id="C0001245" string="04"/>
+    <!--Mã nhóm dịch vụ Khám bệnh-->
+    <string id="C0001246" string="02"/>
+    <!--Mã nhóm dịch vụ Chẩn đoán hình ảnh-->
+    <string id="C0001247" string="03"/>
+    <!--Mã nhóm dịch vụ Thăm dò chức năng-->
+    <string id="C0001248" string="Bấm vào để thêm mới"/>
+    <string id="C0001249" string="Chưa xuất"/>
+    <string id="C0001250" string="Chưa nhập kho"/>
+    <string id="C0001251" string="Chưa xuất sử dụng"/>
+    <string id="C0001252" string="Tất cả"/>
+    <!--Tất cả khoa phòng-->
+    <string id="C0001253" string="Nam"/>
+    <string id="C0001254" string="Nu"/>
+    <string id="C0001255" string="T"/>
+    <string id="C0001256" string="G"/>
+    <string id="C0001257" string="01"/>
+    <string id="C0001258" string="LoaiPhongBenh"/>
+    <string id="C0001259" string="L05"/>
+    <string id="C0001260" string="7"/>
+    <!--Loai gia thuoc-->
+    <string id="C0001261" string="3"/>
+    <!--loai gia dich vu-->
+    <string id="C0001262" string="Không được thực hiện vì người dùng khác nhau"/>
+    <string id="C0001263" string="Chưa kích hoạt"/>
+    <string id="C0001264" string="Mã công ty"/>
+    <string id="C0001265" string="Tên công ty"/>
+
+    <string id="C0001266" string="Trùng thuốc toa ra viện"/>
+    <string id="C0001267" string="Thuốc thuộc danh mục đồng chi trả"/>
+    <string id="C0001268" string="Thuốc đắt tiền"/>
+    <string id="C0001269" string="02"/>
+    <!--Mã lý do Hội chẩn dùng thuốc-->
+
+    <string id="C0001270" string="Thông tin trên màn hình đã có thay đổi, bạn có muốn lưu hay không?"/>
+
+    <string id="C0001271" string="Sinh ngày"/>
+    <string id="C0001272" string="Địa chỉ"/>
+    <string id="C0001273" string="Số điện thoại"/>
+
+    <string id="C0001274" string="0209"/>
+    <string id="C0001275" string="UC"/>
+
+    <string id="C0001276" string="Chưa thực hiện"/>
+    <string id="C0001277" string="Đã thực hiện"/>
+    <string id="C0001278" string="CHODUYETCONGNO"/>
+    <string id="C0001279" string="DADUYETCONGNO"/>
+
+    <string id="C0001280" string="Huyết áp cao"/>
+    <string id="C0001281" string="{None}"/>
+    <string id="C0001282" string="neg, neg."/>
+    <string id="C0001283" string="Negative"/>
+    <string id="C0001284" string="norm, norm."/>
+    <string id="C0001285" string="Normal"/>
+    <string id="C0001286" string="âm tính, âm tính."/>
+    <string id="C0001287" string="Âm tính"/>
+    <string id="C0001288" string="bt, bt., bình thường"/>
+    <string id="C0001289" string="Bình thường"/>
+    <string id="C0001290" string="Hủy đăng ký"/>
+    <string id="C0001291" string="0,000"/>
+    <!--Số lượng thuốc defalut = 0 dùng cho search lucene-->
+    <string id="C0001292" string="Hủy xác nhận"/>
+    <string id="C0001293" string="Xác nhận"/>
+    <string id="C0001294" string="{0:0} phút"/>
+    <string id="C0001295" string="Toa tư vấn"/>
+
+    <string id="C0001296" string="0.3"/>
+    <!--TL_BHYT_30-->
+    <string id="C0001297" string="DV tạm ngưng"/>
+    <string id="C0001298" string="DV đang dùng"/>
+    <string id="C0001299" string="Tất cả DV"/>
+    <string id="C0001300" string="Ngưng y lệnh"/>
+
+    <string id="C0001301" string="Đã xuất kho"/>
+    <string id="C0001302" string="Dữ liệu chưa được lưu. Bạn vui lòng lưu lại. Cảm ơn!"/>
+
+
+    <!--dùng đề nghị giới tính-->
+    <string id="C0001060" string="Văn, Hữu"/>
+    <!--Nam-->
+    <string id="C0001061" string="Thị, Mẹt"/>
+    <!--Nữ-->
+
+    <!--Loại bệnh án chuyên khoa-->
+    <string id="IPDA0001" string="BA_NOIKHOA"/>
+    <string id="IPDA0002" string="BA_NHIKHOA"/>
+    <string id="IPDA0003" string="BA_TRUYENNHIEM"/>
+    <string id="IPDA0004" string="BA_PHUKHOA"/>
+    <string id="IPDA0005" string="BA_SANKHOA"/>
+    <string id="IPDA0006" string="BA_SOSINH"/>
+    <string id="IPDA0007" string="BA_TAMTHAN"/>
+    <string id="IPDA0008" string="BA_DALIEU"/>
+    <string id="IPDA0009" string="BA_DDPHCNN"/>
+    <string id="IPDA0010" string="BA_HHTM"/>
+    <string id="IPDA0011" string="BA_NGOAIKHOA"/>
+    <string id="IPDA0012" string="BA_BONG"/>
+    <string id="IPDA0013" string="BA_UNGBUOU"/>
+    <string id="IPDA0014" string="BA_RHM"/>
+    <string id="IPDA0015" string="BA_TMH"/>
+    <string id="IPDA0016" string="BA_YHCT"/>
+    <string id="IPDA0017" string="BA_MAT"/>
+    <string id="IPDA0018" string="BA_NGOAITRU_RHM"/>
+    <string id="IPDA0019" string="BA_NGOAITRU_TMH"/>
+    <string id="IPDA0020" string="BA_NGOAITRU_YHCT"/>
+
+    <!--Ref cơn đau thắt ngực-->
+    <string id="RIS0701" string="Không"/>
+    <string id="RIS0702" string="Có"/>
+    <string id="RIS0703" string="Nghi ngờ"/>
+
+    <string id="C0001303" string="Tất cả"/>
+    <string id="C0001304" string="Chưa đo"/>
+    <string id="C0001305" string="Đã đo"/>
+    <string id="C0001306" string="Chưa xuất"/>
+    <string id="C0001307" string="Đã xuất"/>
+    <string id="C0001308" string="Đang khám bệnh"/>
+    <string id="C0001309" string="Điều trị nội trú"/>
+    <string id="C0001310" string="Điều trị cấp cứu"/>
+    <string id="C0001311" string="Điều trị ngoại trú"/>
+    <string id="C0001312" string="Hoàn tất tiếp nhận"/>
+    <string id="C0001313" string="Đang điều trị"/>
+    <string id="C0001314" string="Đã ra viện"/>
+    <string id="C0001315" string="Đã thanh toán"/>
+    <string id="C0001316" string="Đã khóa bệnh án"/>
+    <!--XML-->
+    <string id="C0001317" string="Chờ xử lý"/>
+    <string id="C0001318" string="Chờ xuất lại"/>
+    <string id="C0001319" string="Đã xuất"/>
+    <string id="C0001320" string="Lỗi dữ liệu"/>
+    <string id="C0001321" string="Upload thất bại"/>
+    <string id="C0001322" string="Upload thành công"/>
+    <string id="C0001323" string="Ra viện"/>
+    <!--TonKhoRepository-->
+    <string id="C0001324" string="1000"/>
+    <string id="C0001325" string="{TENNGUONDUOC:Nguồn dược} - {MADUOC:Mã dược} - {PHAMVI:Phạm vi} - {TENDUOCDAYDU:Tên dược đầy đủ:500} - {DONVITINH:Đơn vị tính} - {TENHOATCHAT:Tên hoạt chất:300} - {HAMLUONG:Hàm lượng} - {SOLUONG:Số lượng:-1:1:N3}"/>
+    <!--Siêu âm tim-->
+    <string id="C0001326" string="Thanh mảnh"/>
+    <string id="C0001327" string="Ngược chiều"/>
+    <string id="C0001328" string="Không"/>
+    <string id="C0001329" string="Mã đã tồn tại"/>
+  </vi-vn>
+
+</Localization>

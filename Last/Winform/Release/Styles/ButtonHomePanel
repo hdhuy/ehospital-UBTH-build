@@ -1,0 +1,19 @@
+FPT.Framework.Presentation.ButtonStyle, FPT.Framework.Presentation
+{
+  "ForeColor": "@tileitemfg",
+  "BackColor": "@tileitembg",
+  "HoverForeColor": "@tileitemfg",
+  "HoverBackColor": "@tileitemhover",
+  "PressForeColor": "@tileitemfg",
+  "PressBackColor": "@tileitempress",
+  "DisableForeColor": "@buttonDisablefg",
+  "DisableBackColor": "@tileitemdisable",
+  "FocusColor": "@white",
+  "Font": "HomePanel",
+  "TextMargin": "5,5,5,7",
+  "ImageMargin": "44,30,44,10",
+  "TextAlign": "BottomCenter",
+  "ImageAlign": "TopCenter",
+  "FocusWidth": 1,
+  "WrapText": true
+}

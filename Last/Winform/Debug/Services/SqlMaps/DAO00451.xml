@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <!--NOI TRU-->
+    <statement id="DAO00451_GetPhieuPhatThuat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_PHAUTHUAT' as REF_TABLE,
+      tt.SOPHIEUPHAUTHUAT as REF_NUMBER,
+      tt.PHAUTHUAT_ID AS REF_ID,
+      N'Phiếu phẫu thuật - thủ thuật'  AS DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'ORM04P00101' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_PHAUTHUAT tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.PHAUTHUAT_ID = ED.REF_ID and ED.REF_TABLE = 'TT_PHAUTHUAT'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and tt.PHAUTHUAT_ID = $PHAUTHUAT_ID$
+    </statement>
+    <statement id="DAO00451_GetList_PhieuDieuTri" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'PHIEUDIEUTRI' as REF_TABLE,
+      CONVERT(VARCHAR(10), tt.THOIGIANKHAM, 103) + ' - ' + CONVERT(VARCHAR(5), tt.THOIGIANKHAM, 108) as REF_NUMBER,
+      tt.KHAMBENH_ID AS REF_ID,
+      N'Phiếu điều trị'  AS DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'IPD03PYHCT02' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NOITRU_KHAMBENH tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.KHAMBENH_ID = ED.REF_ID and ED.REF_TABLE = 'PHIEUDIEUTRI'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="BENHAN_ID">
+          TT.BENHAN_ID = $BENHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="KHAMBENH_ID">
+          TT.KHAMBENH_ID = $KHAMBENH_ID$
+        </isNotEmpty>
+      </isParameterPresent>
+      ORDER BY tt.THOIGIANKHAM
+    </statement>
+    <statement id="DAO00451_GetList_PhieuCongKhaiThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'PHIEUCONGKHAITHUOC' as REF_TABLE,
+      tt.THOIGIANKHAM,
+      CONVERT(VARCHAR(10), tt.THOIGIANKHAM, 103) + ' - ' + CONVERT(VARCHAR(5), tt.THOIGIANKHAM, 108) as REF_NUMBER,
+      tt.KHAMBENH_ID AS REF_ID,
+      N'Phiếu công khai thuốc'  AS DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'IPD32P02001' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NOITRU_KHAMBENH tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.KHAMBENH_ID = ED.REF_ID and ED.REF_TABLE = 'PHIEUCONGKHAITHUOC'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="BENHAN_ID">
+          TT.BENHAN_ID = $BENHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="KHAMBENH_ID">
+          TT.KHAMBENH_ID = $KHAMBENH_ID$
+        </isNotEmpty>
+      </isParameterPresent>
+      ORDER BY tt.THOIGIANKHAM
+    </statement>
+    <statement id="DAO00451_GetList_DonThuocMuaNgoai" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'DONTHUOCMUANGOAI' as REF_TABLE,
+      tt.THOIGIANKHAM,
+      CONVERT(VARCHAR(10), tt.THOIGIANKHAM, 103) + ' - ' + CONVERT(VARCHAR(5), tt.THOIGIANKHAM, 108) as REF_NUMBER,
+      tt.KHAMBENH_ID AS REF_ID,
+      N'Đơn thuốc mua ngoài'  AS DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'IPD24P01101' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NOITRU_KHAMBENH tt
+      INNER JOIN TT_NOITRU_TOATHUOC nttt on (tt.KHAMBENH_ID = nttt.KHAMBENH_ID and tt.ISTHUOCBV = '0')
+      LEFT JOIN TT_EMR_DETAIL ED on tt.KHAMBENH_ID = ED.REF_ID and ED.REF_TABLE = 'DONTHUOCMUANGOAI'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="BENHAN_ID">
+          TT.BENHAN_ID = $BENHAN_ID$
+        </isNotEmpty>
+      </isParameterPresent>
+      ORDER BY tt.THOIGIANKHAM
+    </statement>
+    <statement id="DAO00451_GetPhieuTheoDoiTruyenMau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_MAU_PHIEUTRUYENMAU' as REF_TABLE,
+      tt.MACHUNGTU AS REF_NUMBER,
+      tt.PHIEUTRUYENMAU_ID AS REF_ID,
+      N'Phiếu theo dõi truyền máu' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'BBM16P00101' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_MAU_PHIEUTRUYENMAU tt
+      LEFT JOIN TT_MAU_CHUNGTU ct on ct.CHUNGTU_ID = tt.CHUNGTUXUAT_ID
+      LEFT JOIN TT_MAU_DANGKYMAU dk on dk.DANGKYMAU_ID = ct.DANGKYMAU_ID
+      LEFT JOIN TT_EMR_DETAIL ED on tt.PHIEUTRUYENMAU_ID = ED.REF_ID and ED.REF_TABLE = 'TT_MAU_PHIEUTRUYENMAU'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          dk.TIEPNHAN_ID = $TIEPNHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="BENHAN_ID">
+          dk.BENHAN_ID = $BENHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="PHIEUTRUYENMAU_ID">
+          tt.PHIEUTRUYENMAU_ID = $PHIEUTRUYENMAU_ID$
+        </isNotEmpty>
+      </isParameterPresent>
+    </statement>
+    <statement id="DAO00451_GetGiayChuyenVienNoiTru" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_CHUYENVIEN' as REF_TABLE,
+      tt.SOPHIEU AS REF_NUMBER,
+      tt.CHUYENVIEN_ID AS REF_ID,
+      N'Giấy chuyển viện' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'IPD03P01501' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_CHUYENVIEN tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.CHUYENVIEN_ID = ED.REF_ID and ED.REF_TABLE = 'TT_CHUYENVIEN'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and tt.CHUYENVIEN_ID = $CHUYENVIEN_ID$
+    </statement>
+    <statement id="DAO00451_GetPhanUngThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_NOITRU_THUPUTCH' as REF_TABLE,
+      tt.SOPHIEU AS REF_NUMBER,
+      tt.PHANUNGTHUOCCOHAI_ID AS REF_ID,
+      N'Phản ứng thuốc' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'PHA35P02501' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NOITRU_THUPUTCH tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.PHANUNGTHUOCCOHAI_ID = ED.REF_ID and ED.REF_TABLE = 'TT_NOITRU_THUPUTCH'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and tt.PHANUNGTHUOCCOHAI_ID = $PHANUNGTHUOCCOHAI_ID$
+    </statement>
+    <statement id="DAO00451_GetGiayRaVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'GIAYRAVIEN' as REF_TABLE,
+      tt.SOBENHAN AS REF_NUMBER,
+      tt.BENHAN_ID AS REF_ID,
+      N'Giấy ra viện' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'IPD03P01601' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NOITRU_BENHAN tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.BENHAN_ID = ED.REF_ID and ED.REF_TABLE = 'GIAYRAVIEN'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and tt.BENHAN_ID = $BENHAN_ID$
+      and tt.THOIGIANRAVIEN is not null
+    </statement>
+    <statement id="DAO00451_GetGiayNhapVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_NOITRU_NHAPVIEN' as REF_TABLE,
+      tt.NHAPVIEN_ID AS REF_NUMBER,
+      tt.NHAPVIEN_ID AS REF_ID,
+      N'Giấy nhập viện' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'IPD03P00601' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NOITRU_NHAPVIEN tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.NHAPVIEN_ID = ED.REF_ID and ED.REF_TABLE = 'TT_NOITRU_NHAPVIEN'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+    </statement>
+    <statement id="DAO00451_GetPhieuChamSoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_NOITRU_CHAMSOC' as REF_TABLE,
+      CONVERT(VARCHAR(10), tt.THOIGIANTHUCHIEN, 103) + ' - ' + CONVERT(VARCHAR(5), tt.THOIGIANTHUCHIEN, 108) as REF_NUMBER,
+      tt.CHAMSOC_ID AS REF_ID,
+      N'Phiếu chăm sóc' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'IPD03P00601' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NOITRU_CHAMSOC tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.CHAMSOC_ID = ED.REF_ID and ED.REF_TABLE = 'TT_NOITRU_CHAMSOC'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and tt.BENHAN_ID = $BENHAN_ID$
+    </statement>
+    <statement id="DAO00451_GetGiayChungNhanThuongTich" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'CHUNGNHAN_THUONGTICH' as REF_TABLE,
+      TT.SOBENHAN as REF_NUMBER,
+      tt.BENHAN_ID AS REF_ID,
+      N'Giấy chứng nhận thương tích' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'IPD03P00301' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NOITRU_BENHAN tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.BENHAN_ID = ED.REF_ID and ED.REF_TABLE = 'CHUNGNHAN_THUONGTICH'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and tt.BENHAN_ID = $BENHAN_ID$
+    </statement>
+    <statement id="DAO00451_GetGiayChungNhanPhauThuat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_PHAUTHUAT' as REF_TABLE,
+      TT.SOPHIEUPHAUTHUAT as REF_NUMBER,
+      tt.PHAUTHUAT_ID AS REF_ID,
+      N'Giấy chứng nhận phẫu thuật' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'ORM04P00201' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_PHAUTHUAT tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.PHAUTHUAT_ID = ED.REF_ID and ED.REF_TABLE = 'TT_PHAUTHUAT'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+    </statement>
+    <statement id="DAO00451_GetPhieuThanhToanRaVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'THANHTOAN_RAVIEN' as REF_TABLE,
+      TT.SOBENHAN as REF_NUMBER,
+      tt.BENHAN_ID AS REF_ID,
+      N'Phiếu thanh toán ra viện' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'BIL38P00501' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NOITRU_BENHAN tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.BENHAN_ID = ED.REF_ID and ED.REF_TABLE = 'THANHTOAN_RAVIEN'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+    </statement>
+
+    <statement id="DAO00451_Get_BenhAnNoiKhoa" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'BENHAN_NOIKHOA' as REF_TABLE,
+      TT.SOBENHAN as REF_NUMBER,
+      tt.BENHAN_ID AS REF_ID,
+      N'Bệnh án nội khoa' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'IPD03P009012' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NOITRU_BENHAN tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.BENHAN_ID = ED.REF_ID and ED.REF_TABLE = 'BENHAN_NOIKHOA'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+    </statement>
+    <!--END NOI TRU-->
+    <!--NGOAI TRU-->
+    <statement id="DAO00451_GetAll_DVYeuCau_ByTiepNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT TOP 1
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_TIEPNHAN' as REF_TABLE,
+      tt.SOTIEPNHAN AS REF_NUMBER,
+      tt.TIEPNHAN_ID AS REF_ID,
+      '' AS DOCUMENT_TYPE,
+      '' AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'OPD18P00501' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_TIEPNHAN tt
+      join TT_DVYEUCAU dvyc on dvyc.TIEPNHAN_ID = tt.TIEPNHAN_ID
+      LEFT JOIN TT_EMR_DETAIL ED on tt.TIEPNHAN_ID = ED.REF_ID and ED.REF_TABLE = 'TT_TIEPNHAN'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+        </isNotEmpty>       
+      </isParameterPresent>      
+    </statement>
+    <statement id="DAO00451_GetList_DVYeuCau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_DVYEUCAU' as REF_TABLE,
+      tt.SOPHIEUYEUCAU AS REF_NUMBER,
+      tt.DVYEUCAU_ID AS REF_ID,
+      dv.TENDICHVU  AS DOCUMENT_TYPE,
+      DV.MADICHVU AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,      
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'OPD18P00501' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_DVYEUCAU tt
+      LEFT JOIN TM_DICHVU dv on dv.DICHVU_ID = tt.DICHVU_ID
+      LEFT JOIN TT_EMR_DETAIL ED on tt.DVYEUCAU_ID = ED.REF_ID and ED.REF_TABLE = 'TT_DVYEUCAU'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="BENHAN_ID">
+          TT.BENHAN_ID = $BENHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+          TT.DVYEUCAU_ID = $DVYEUCAU_ID$
+        </isNotEmpty>
+      </isParameterPresent>
+      ORDER BY dv.TENDICHVU
+    </statement>
+    <statement id="DAO00451_GetList_ToaThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_NGOAITRU_KHAMBENH_TOATHUOC' as REF_TABLE,
+      tt.SOTHUTUTOA AS REF_NUMBER,
+      tt.KHAMBENH_TOATHUOC_ID AS REF_ID,
+      CASE WHEN tt.LOAITOATHUOC = 'MN' THEN N'Toa thuốc mua ngoài' ELSE N'Toa bệnh viện' END  AS DOCUMENT_TYPE,
+      tt.LOAITOATHUOC AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'OPD02P00102' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NGOAITRU_KHAMBENH_TOATHUOC tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.KHAMBENH_TOATHUOC_ID = ED.REF_ID and ED.REF_TABLE = 'TT_NGOAITRU_KHAMBENH_TOATHUOC'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="KHAMBENH_TOATHUOC_ID">
+          tt.KHAMBENH_TOATHUOC_ID = $KHAMBENH_TOATHUOC_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+        </isNotEmpty>
+      </isParameterPresent>
+    </statement>
+    <statement id="DAO00451_GetGiayHenTaiKham" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_NGOAITRU_KHAMBENH_HENTK' as REF_TABLE,
+      tt.KHAMBENH_HENTAIKHAM AS REF_NUMBER,
+      tt.KHAMBENH_HENTAIKHAM AS REF_ID,
+      N'Giấy hẹn tài khám' AS DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'OPD02P00108' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_NGOAITRU_KHAMBENH_HENTK tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.KHAMBENH_HENTAIKHAM = ED.REF_ID and ED.REF_TABLE = 'TT_NGOAITRU_KHAMBENH_HENTK'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+      AND tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00451_GetGiayChuyenVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_CHUYENVIEN' as REF_TABLE,
+      tt.SOPHIEU AS REF_NUMBER,
+      tt.CHUYENVIEN_ID AS REF_ID,
+      N'Giấy chuyển viện' AS DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'OPD16P00301' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_CHUYENVIEN tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.CHUYENVIEN_ID = ED.REF_ID and ED.REF_TABLE = 'TT_CHUYENVIEN'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      AND (ED.IS_MANUAL IS NULL OR ED.IS_MANUAL = 1)
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+        </isNotEmpty>       
+        <isNotEmpty prepend="and" property="CHUYENVIEN_ID">
+          tt.CHUYENVIEN_ID = $CHUYENVIEN_ID$
+        </isNotEmpty>
+      </isParameterPresent>
+    </statement>
+    <statement id="DAO00451_GetGiayKhamBenhVaoVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_PHIEU_KHAMBENH_VAOVIEN' as REF_TABLE,
+      tt.PHIEU_KHAMBENH_VAOVIEN_ID AS REF_NUMBER,
+      tt.KHAMBENH_ID AS REF_ID,
+      N'Phiếu khám bệnh vào viện' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'OPD02P00401' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_PHIEU_KHAMBENH_VAOVIEN tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.KHAMBENH_ID = ED.REF_ID and ED.REF_TABLE = 'TT_PHIEU_KHAMBENH_VAOVIEN'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="PHIEU_KHAMBENH_VAOVIEN_ID">
+          tt.PHIEU_KHAMBENH_VAOVIEN_ID = $PHIEU_KHAMBENH_VAOVIEN_ID$
+        </isNotEmpty>
+      </isParameterPresent>    
+    </statement>
+    <statement id="DAO00451_GetTrichBienBanHoiChan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_BIENBANHOICHAN' as REF_TABLE,
+      tt.SOPHIEUHOICHAN AS REF_NUMBER,
+      tt.BIENBANHOICHAN_ID AS REF_ID,
+      N'Trích biên bản hội chẩn' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'IPD06P00701' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_BIENBANHOICHAN tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.BIENBANHOICHAN_ID = ED.REF_ID and ED.REF_TABLE = 'TT_BIENBANHOICHAN'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="BIENBANHOICHAN_ID">
+          tt.BIENBANHOICHAN_ID = $BIENBANHOICHAN_ID$
+        </isNotEmpty>
+      </isParameterPresent>
+    </statement>
+    <statement id="DAO00451_GetGiayChungNhanNghiViecHuongBHXH" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_GIAYCHUNGNHAN_NGHIVIEC' as REF_TABLE,
+      tt.GIAYCHUNGNHAN_ID AS REF_NUMBER,
+      tt.GIAYCHUNGNHAN_ID AS REF_ID,
+      N'Giấy chứng nhận nghỉ việc hưởng BHXH' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'OPD87P00001' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_GIAYCHUNGNHAN_NGHIVIEC tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.GIAYCHUNGNHAN_ID = ED.REF_ID and ED.REF_TABLE = 'TT_GIAYCHUNGNHAN_NGHIVIEC'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="GIAYCHUNGNHAN_ID">
+          tt.GIAYCHUNGNHAN_ID = $GIAYCHUNGNHAN_ID$
+        </isNotEmpty>
+      </isParameterPresent>
+    </statement>
+    <statement id="DAO00451_GetBV01" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'BV01' as REF_TABLE,
+      tt.SOTIEPNHAN AS REF_NUMBER,
+      tt.TIEPNHAN_ID AS REF_ID,
+      N'Bảng kê chi phí khám bệnh, chữa bệnh ngoại trú' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      'BIL09P00101' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_TIEPNHAN tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.TIEPNHAN_ID = ED.REF_ID and ED.REF_TABLE = 'BV01'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.TIEPNHAN_ID = $TIEPNHAN_ID$
+      AND tt.SOBHYT IS NOT NULL
+      AND tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <!--END NGOAI TRU-->
+
+    <!--CLS KETQUA-->
+    <statement id="DAO00451_GetCLSKetQua" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      E.ID as EMR_ID,
+      ED.DETAIL_ID,
+      'TT_CLSKETQUA' as REF_TABLE,
+      TT.SOPHIEUXETNGHIEM as REF_NUMBER,
+      tt.CLSKETQUA_ID AS REF_ID,
+      N'Phiếu trả lời CLS' as DOCUMENT_TYPE,
+      NULL AS TYPE_CODE,
+      ED.NGAYTAO as NGAYKY,
+      TT.NGAYTAO,
+      ed.NGUOITAO_ID as NGUOIKY_ID, nk.TENNHANVIEN AS NGUOIKY,
+      ED.NGAYDUYET,
+      nd.TENNHANVIEN AS NGUOIDUYET,
+      '' as REPORT_CODE,
+      ISNULL(ED.FILENAME, '') AS FILENAME,ISNULL(ED.IS_SIGN, 0) AS IS_SIGN, ISNULL(ED.IS_SEND, 0) AS IS_SEND, ISNULL(ED.IS_FINISH_SIGN,'0') AS IS_FINISH_SIGN
+      FROM TT_CLSKETQUA tt
+      LEFT JOIN TT_EMR_DETAIL ED on tt.CLSKETQUA_ID = ED.REF_ID and ED.REF_TABLE = 'TT_CLSKETQUA'
+      LEFT JOIN TT_EMR E on E.ID = ED.EMR_ID
+      LEFT JOIN TM_NHANVIEN nk on nk.NHANVIEN_ID = ED.NGUOITAO_ID
+      LEFT JOIN TM_NHANVIEN nd on nd.NHANVIEN_ID = ED.NGUOIDUYET_ID
+      WHERE
+      tt.BENHVIEN_ID = '$BENHVIEN_ID$'
+      and tt.CLSKETQUA_ID = '$CLSKETQUA_ID$'
+    </statement>
+    <!--END CLS KETQUA-->
+
+    <statement id="DAO00451_GetReportData_ToaThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT *
+      FROM TT_NGOAITRU_KHAMBENH_TOATHUOC
+      WHERE
+      KHAMBENH_TOATHUOC_ID = $KHAMBENH_TOATHUOC_ID$
+      AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00451_GetThongTinBenhAn" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      IF NOT EXISTS
+      (
+      SELECT BENHAN_ID
+      FROM TT_NOITRU_BENHAN
+      WHERE
+      BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          TIEPNHAN_ID = #TIEPNHAN_ID#
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="BENHAN_ID">
+          BENHAN_ID = #BENHAN_ID#
+        </isNotEmpty>
+      </isParameterPresent>
+      )
+
+      BEGIN
+      SELECT
+      NULL as BENHAN_ID,
+      tn.SOTIEPNHAN as SOBENHAN,
+      tn.BENHNHAN_ID,
+      tn.TIEPNHAN_ID,
+      bn.MAYTE
+      FROM
+      TT_TIEPNHAN tn
+      LEFT JOIN TT_BENHNHAN bn on tn.BENHNHAN_ID = bn.BENHNHAN_ID
+      WHERE tn.TIEPNHAN_ID = #TIEPNHAN_ID#
+      and tn.BENHVIEN_ID = '$BENHVIEN_ID$'
+      END
+
+      ELSE
+
+      BEGIN
+      SELECT
+      BENHAN_ID,
+      SOBENHAN,
+      ba.BENHNHAN_ID,
+      ba.TIEPNHAN_ID,
+      bn.MAYTE
+      FROM
+      TT_NOITRU_BENHAN ba
+      LEFT JOIN TT_BENHNHAN bn on ba.BENHNHAN_ID = bn.BENHNHAN_ID
+      WHERE (ba.BENHAN_ID = #BENHAN_ID#  OR ba.TIEPNHAN_ID = #TIEPNHAN_ID#)
+      and ba.BENHVIEN_ID = '$BENHVIEN_ID$'
+
+      END
+    </statement>
+    <statement id="DAO00451_GetReportInfo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT *
+      FROM TM_EMR_REPORTCODE
+      WHERE
+      REPORT_CODE = '$REPORT_CODE$'
+    </statement>
+    <statement id="DAO00451_AddEMR" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      IF NOT EXISTS
+      (
+      SELECT *
+      FROM TT_EMR
+      WHERE TIEPNHAN_ID = #TIEPNHAN_ID#
+      and ISNULL(BENHAN_ID,0) = ISNULL(#BENHAN_ID#,0)
+      )
+      BEGIN
+
+      insert into TT_EMR(
+      BENHAN_ID
+      ,TIEPNHAN_ID
+      ,SOBENHAN
+      ,NGAYCAPNHAT
+      ,PHIENBAN
+      ,TRANGTHAI
+      ,NGAYXUAT
+      ,NGAYKY
+      ,NGAYGUI
+      ,BENHNHAN_ID
+      ,NGAYKHOABENHAN
+      ) values (
+      #BENHAN_ID#
+      ,#TIEPNHAN_ID#
+      ,#SOBENHAN#
+      ,GETDATE()
+      ,1
+      ,#TRANGTHAI#
+      ,GETDATE()
+      ,GETDATE()
+      ,GETDATE()
+      ,#BENHNHAN_ID#
+      ,#NGAYKHOABENHAN#
+      )
+      select SCOPE_identity() as value
+      END
+      ELSE
+      BEGIN
+      SELECT ID AS EMR_ID
+      FROM TT_EMR
+      WHERE TIEPNHAN_ID = #TIEPNHAN_ID#
+      and ISNULL(BENHAN_ID,0) = ISNULL(#BENHAN_ID#,0)
+      END
+    </statement>
+    <statement id="DAO00451_AddEMR_DETAIL" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TT_EMR_DETAIL(
+      EMR_ID
+      ,VERSION
+      ,FILENAME
+      ,FILETYPE
+      ,IS_MANUAL
+      ,STATUS
+      ,IS_SIGN
+      ,IS_SEND
+      ,DATESIGN
+      ,DATESEND
+      ,FIELD
+      ,DOCUMENTCODE
+      ,CREATEDOCUMENT
+      ,REF_TABLE
+      ,REF_NUMBER
+      ,REF_ID
+      ,BENHVIEN_ID
+      ,NGAYTAO
+      ,NGUOITAO_ID
+      ,NGAYDUYET
+      ,NGUOIDUYET_ID
+      ) values (
+      #EMR_ID#
+      ,1
+      ,#FILENAME#
+      ,#FILETYPE#
+      ,1
+      ,1
+      ,1
+      ,0
+      ,GETDATE()
+      ,NULL
+      ,#FIELD#
+      ,#DOCUMENTCODE#
+      ,#CREATEDOCUMENT#
+      ,#REF_TABLE#
+      ,#REF_NUMBER#
+      ,#REF_ID#
+      ,#BENHVIEN_ID#
+      ,#NGAYTAO#
+      ,#NGUOITAO_ID#
+      ,#NGAYDUYET#
+      ,#NGUOIDUYET_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+    <update id="DAO00451_UpdEMR_DETAIL" parameterClass="System.Collections.IDictionary">
+      UPDATE
+      TT_EMR_DETAIL
+      SET
+      FILENAME = #FILENAME#
+      ,STATUS = 1
+      ,IS_SIGN = 1
+      ,IS_SEND = 0
+      ,DATESIGN = getdate()
+      ,DATESEND = null
+      ,FIELD = #FIELD#
+      ,REF_TABLE = #REF_TABLE#
+      ,REF_NUMBER = #REF_NUMBER#
+      ,REF_ID = #REF_ID#
+      ,NGAYTAO = getdate()
+      ,NGUOITAO_ID = #NGUOITAO_ID#
+      where
+      DETAIL_ID = #DETAIL_ID#
+    </update>
+     <statement id="DAO00451_GetChuKy" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+       SELECT *
+       FROM TM_NHANVIEN_HINHANH
+       WHERE
+       NHANVIEN_ID = '$NHANVIEN_ID$'
+     </statement>
+    <statement id="DAO00451_GetSignConfig" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      Select distinct  C.*
+      From TT_EMR_SIGN_CONFIG c
+      Join TT_EMR_SIGN_CONFIG_ROLE r on c.ROLE_ID = r.ROLE_ID
+      Join TT_EMR_SIGN_CONFIG_ROLE_HISROLE hr on r.ROLE_ID = hr.ROLE_ID
+      Where
+      c.REPORT_CODE = '$REPORT_CODE$'
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="ROLE_NAME">
+          hr.HIS_ROLE_NAME = N'$ROLE_NAME$'
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="ROLE_ID">
+          hr.ROLE_ID = #ROLE_ID#
+        </isNotEmpty>
+      </isParameterPresent>
+    </statement>
+    <statement id="DAO00451_AddEMR_SIGN_LOG" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      declare @NEXT_TYPE_SIGN varchar(20)
+      declare @IS_FINISH char(1) = '0'
+
+      select @NEXT_TYPE_SIGN = TYPE_SIGN from TT_EMR_SIGN_CONFIG where REPORT_CODE = '$REPORT_CODE$' and [ORDER] = #ORDER# + 1
+      IF(@NEXT_TYPE_SIGN IS NULL)
+      BEGIN
+      set @IS_FINISH = '1'
+      END
+
+      IF NOT EXISTS
+      (
+      SELECT *
+      FROM TT_EMR_SIGN_LOG
+      WHERE
+      FILENAME = '$FILENAME$'
+      and TYPE_SIGN = '$TYPE_SIGN$'
+      )
+      BEGIN
+      insert into TT_EMR_SIGN_LOG(
+      FILENAME
+      ,REPORT_CODE
+      ,TYPE_SIGN
+      ,NEXT_TYPE_SIGN
+      ,USER_ID
+      ,DATE_SIGN
+      ,IS_FINISH
+      ) values (
+      #FILENAME#
+      ,#REPORT_CODE#
+      ,#TYPE_SIGN#
+      ,@NEXT_TYPE_SIGN
+      ,#USER_ID#
+      ,GETDATE()
+      ,@IS_FINISH
+      )
+
+      update TT_EMR_DETAIL set IS_FINISH_SIGN = @IS_FINISH where FILENAME = '$FILENAME$'
+
+      select SCOPE_identity() as value
+      END
+
+      ELSE
+
+      BEGIN
+      update TT_EMR_SIGN_LOG
+      set USER_ID = #USER_ID#, DATE_SIGN = GETDATE()
+      WHERE FILENAME = '$FILENAME$' and TYPE_SIGN = '$TYPE_SIGN$'
+      
+      SELECT LOG_ID FROM TT_EMR_SIGN_LOG WHERE FILENAME = '$FILENAME$' and TYPE_SIGN = '$TYPE_SIGN$'
+      END
+    </statement>
+    <statement id="DAO00451_GetLastLogSign" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select top 1 * from TT_EMR_SIGN_LOG
+      where FILENAME = '$FILENAME$'
+      order by LOG_ID DESC     
+    </statement>
+    <statement id="DAO00451_DeleteLogSigned" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      delete TT_EMR_SIGN_LOG where FILENAME = '$FILENAME$'
+      delete TT_EMR_DETAIL where FILENAME = '$FILENAME$'
+    </statement>
+
+    <statement id="DAO00451_GetListReport" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TM_REPORT 
+      where 
+      <!--ISSIGNED = '1' and--> 
+      REPORT_FILE is not null order by REPORT_CODE, REPORT_NAME
+    </statement>
+    <statement id="DAO00451_GetListSignRole" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_EMR_SIGN_CONFIG_ROLE WHERE ACTIVE = '1' ORDER BY ROLE_NAME
+    </statement>
+    <statement id="DAO00451_GetListSignType" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      Select * from (
+      select 'create1' TYPE_SIGN, N'Người tạo Ký chữ ký 1' TYPE_SIGN_NAME, 1 as STT
+      union
+      select 'create2' TYPE_SIGN, N'Người tạo Ký chữ ký 2' TYPE_SIGN_NAME, 1 as STT
+      union
+      select 'review1' TYPE_SIGN, N'Ký review 1' TYPE_SIGN_NAME, 2 as STT
+      union
+      select 'review2' TYPE_SIGN, N'Ký review 2' TYPE_SIGN_NAME, 2 as STT
+      union
+      select 'approve1' TYPE_SIGN, N'Ký duyệt 1' TYPE_SIGN_NAME, 3 as STT
+      union
+      select 'approve2' TYPE_SIGN, N'Ký duyệt 2' TYPE_SIGN_NAME, 3 as STT
+      )a order by STT
+    </statement>
+        
+    <statement id="DAO00451_Get_SIGN_ROLE" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_EMR_SIGN_CONFIG_ROLE order by ROLE_NAME
+    </statement>
+    <statement id="DAO00451_Get_ROLE_HISROLE" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select DISTINCT * from
+      (
+      SELECT
+      0 as CHON,
+      NULL AS ROLE_ID,
+      USERROLEID AS HIS_ROLE_ID,
+      USERROLENAME AS HIS_ROLE_NAME
+      from TBL_USERROLE
+      where
+      USERROLEID not in
+      (
+      select HIS_ROLE_ID from
+      TT_EMR_SIGN_CONFIG_ROLE_HISROLE
+      WHERE ROLE_ID= '$ROLE_ID$'
+      )
+
+      UNION ALL
+
+      SELECT
+      1 as CHON, r.ROLE_ID, r.HIS_ROLE_ID, r.HIS_ROLE_NAME
+      FROM
+      TT_EMR_SIGN_CONFIG_ROLE_HISROLE r
+      join TT_EMR_SIGN_CONFIG c on r.ROLE_ID = c.ROLE_ID
+      where
+      c.ROLE_ID = '$ROLE_ID$'
+      )a
+      order by CHON DESC,HIS_ROLE_NAME ASC
+    </statement>
+    
+    <statement id="DAO00451_Role_Mapping" parameterClass="System.String" resultClass="System.Int32">     
+      delete TT_EMR_SIGN_CONFIG_ROLE_HISROLE where ROLE_ID = '$ROLE_ID$'
+
+      declare @json nvarchar(max) =  N'$JSON_DATA$';
+      INSERT INTO TT_EMR_SIGN_CONFIG_ROLE_HISROLE
+      (
+      ROLE_ID
+      , HIS_ROLE_ID
+      , HIS_ROLE_NAME
+      )
+      SELECT * FROM OPENJSON(@json)
+      WITH (
+      ROLE_ID varchar(50)
+      , HIS_ROLE_ID int
+      , HIS_ROLE_NAME nvarchar(200)
+      )            
+    </statement>
+    <statement id="DAO00451_GetListConfigReport" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT c.*, r.ROLE_NAME 
+      FROM TT_EMR_SIGN_CONFIG c      
+      JOIN TT_EMR_SIGN_CONFIG_ROLE r on c.ROLE_ID = r.ROLE_ID
+      WHERE c.REPORT_CODE = '$REPORT_CODE$' ORDER BY [ORDER]
+    </statement>
+    <statement id="DAO00451_SaveReportSignConfig" parameterClass="System.String" resultClass="System.Int32">
+      DELETE TT_EMR_SIGN_CONFIG WHERE REPORT_CODE = '$REPORT_CODE$' AND ROLE_ID = '$ROLE_ID$' AND TYPE_SIGN = '$TYPE_SIGN$'
+
+      DECLARE @REPORT_NAME nvarchar(100)
+      SELECT @REPORT_NAME = REPORT_NAME FROM TM_REPORT WHERE REPORT_CODE = '$REPORT_CODE$'
+
+      INSERT INTO TT_EMR_SIGN_CONFIG
+      (
+      REPORT_CODE
+      , REPORT_NAME
+      , ROLE_ID
+      , TYPE_SIGN
+      , [ORDER]
+      )
+      VALUES
+      (
+      #REPORT_CODE#
+      , @REPORT_NAME
+      , #ROLE_ID#
+      , #TYPE_SIGN#
+      , #ORDER#
+      )
+    </statement>
+    
+    <statement id="DAO00451_DelConfigReport" parameterClass="System.String" resultClass="System.Int32">
+      DELETE TT_EMR_SIGN_CONFIG WHERE REPORT_CODE = '$REPORT_CODE$' AND ROLE_ID = '$ROLE_ID$' AND TYPE_SIGN = '$TYPE_SIGN$'
+    </statement>
+    
+    <statement id="DAO00451_SearchReportConfig" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select distinct REPORT_CODE, REPORT_NAME from TT_EMR_SIGN_CONFIG      
+      <isParameterPresent>
+          <isNotEmpty prepend="where" property="TUKHOA">
+            REPORT_CODE like '%$TUKHOA$%' or REPORT_NAME like N'%$TUKHOA$%'
+          </isNotEmpty>       
+       </isParameterPresent>     
+      order by REPORT_CODE, REPORT_NAME
+    </statement>
+    
+  </statements>
+  
+</sqlMap>

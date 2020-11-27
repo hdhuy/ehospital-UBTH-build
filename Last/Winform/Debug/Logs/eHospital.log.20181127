@@ -1,0 +1,399 @@
+﻿--------------------------------------------------------------------------------
+2018-11-27 16:24:40,484 [1] INFO  - [Application started.]
+2018-11-27 16:24:43,306 [1] ERROR - Session initialized fail!
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.Framework.DataService.DirectServiceProvider.GetService(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectServiceProvider.cs:line 41
+   at FPT.eHospital.Application.AppService.GetControlList(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 72
+   at FPT.eHospital.Application.PageManager.LoadFromDB(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 202
+   at FPT.eHospital.Application.PageManager.GetPage(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 177
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 69
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, String strAssembly, String strClass) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 347
+   at FPT.eHospital.Forms.Base.VMFrame.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 108
+   at FPT.eHospital.Forms.Base.VMFrame.OnShow() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 71
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 175
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-27 16:24:47,169 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-27 16:25:15,310 [1] INFO  - [Application started.]
+2018-11-27 16:25:17,575 [1] ERROR - Session initialized fail!
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.Framework.DataService.DirectServiceProvider.GetService(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectServiceProvider.cs:line 41
+   at FPT.eHospital.Application.AppService.GetControlList(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 72
+   at FPT.eHospital.Application.PageManager.LoadFromDB(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 202
+   at FPT.eHospital.Application.PageManager.GetPage(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 177
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 69
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, String strAssembly, String strClass) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 347
+   at FPT.eHospital.Forms.Base.VMFrame.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 108
+   at FPT.eHospital.Forms.Base.VMFrame.OnShow() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 71
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 175
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-27 16:25:20,730 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-27 16:26:44,170 [1] INFO  - [Application started.]
+2018-11-27 16:26:46,311 [1] ERROR - Session initialized fail!
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.Framework.DataService.DirectServiceProvider.GetService(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectServiceProvider.cs:line 41
+   at FPT.eHospital.Application.AppService.GetControlList(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 72
+   at FPT.eHospital.Application.PageManager.LoadFromDB(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 202
+   at FPT.eHospital.Application.PageManager.GetPage(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 177
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 69
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, String strAssembly, String strClass) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 347
+   at FPT.eHospital.Forms.Base.VMFrame.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 108
+   at FPT.eHospital.Forms.Base.VMFrame.OnShow() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 71
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 175
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-27 16:26:49,345 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-27 16:27:29,450 [1] INFO  - [Application started.]
+2018-11-27 16:27:32,290 [1] ERROR - Session initialized fail!
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.Framework.DataService.DirectServiceProvider.GetService(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectServiceProvider.cs:line 41
+   at FPT.eHospital.Application.AppService.GetControlList(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 72
+   at FPT.eHospital.Application.PageManager.LoadFromDB(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 202
+   at FPT.eHospital.Application.PageManager.GetPage(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 177
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 69
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, String strAssembly, String strClass) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 347
+   at FPT.eHospital.Forms.Base.VMFrame.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 108
+   at FPT.eHospital.Forms.Base.VMFrame.OnShow() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 71
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 175
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-27 16:27:38,845 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-27 16:29:36,831 [1] INFO  - [Application started.]
+2018-11-27 16:29:38,941 [1] ERROR - Session initialized fail!
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.Framework.DataService.DirectServiceProvider.GetService(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectServiceProvider.cs:line 41
+   at FPT.eHospital.Application.AppService.GetControlList(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 72
+   at FPT.eHospital.Application.PageManager.LoadFromDB(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 202
+   at FPT.eHospital.Application.PageManager.GetPage(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 177
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 69
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, String strAssembly, String strClass) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 347
+   at FPT.eHospital.Forms.Base.VMFrame.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 108
+   at FPT.eHospital.Forms.Base.VMFrame.OnShow() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 71
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 175
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-27 16:29:41,659 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-27 16:32:00,351 [1] INFO  - [Application started.]
+2018-11-27 16:32:02,789 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-27 16:32:02,829 [1] INFO  - LoadMasters() took 30 ms.
+2018-11-27 16:32:02,830 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-27 16:32:07,033 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-27 16:32:11,379 [1] INFO  - [test] Session is starting.
+2018-11-27 16:32:12,121 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:12,419 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:12,481 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:12,537 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:12,595 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:12,652 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:12,719 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:12,776 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:12,853 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:19,733 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:19,840 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:20,365 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:32:26,413 [7] INFO  - LoadMasters() took 15,033 ms.
+2018-11-27 16:32:26,425 [1] INFO  - [test] Session started.
+2018-11-27 16:32:50,616 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-27 16:32:50,620 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-27 16:32:50,647 [1] INFO  - [test] Session stopped.
+2018-11-27 16:32:50,650 [1] INFO  - Memory used before collection:  66,386,856
+2018-11-27 16:32:50,710 [1] INFO  - Memory used after collection:  8,381,440
+2018-11-27 16:32:50,763 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-27 16:34:01,708 [1] INFO  - [Application started.]
+2018-11-27 16:34:04,089 [1] ERROR - Session initialized fail!
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.Framework.DataService.DirectServiceProvider.GetService(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectServiceProvider.cs:line 41
+   at FPT.eHospital.Application.AppService.GetControlList(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 72
+   at FPT.eHospital.Application.PageManager.LoadFromDB(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 202
+   at FPT.eHospital.Application.PageManager.GetPage(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 177
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 69
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, String strAssembly, String strClass) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 347
+   at FPT.eHospital.Forms.Base.VMFrame.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 108
+   at FPT.eHospital.Forms.Base.VMFrame.OnShow() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 71
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 175
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-27 16:34:05,824 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-27 16:41:46,827 [1] INFO  - [Application started.]
+2018-11-27 16:41:50,517 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-27 16:41:50,579 [1] INFO  - LoadMasters() took 50 ms.
+2018-11-27 16:41:50,580 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-27 16:41:54,523 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-27 16:41:56,014 [1] INFO  - [test] Session is starting.
+2018-11-27 16:41:56,837 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:41:57,015 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:41:57,081 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:41:57,136 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:41:57,194 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:41:57,256 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:41:57,318 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:41:57,376 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:41:57,432 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:41:57,910 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:41:58,036 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:41:58,518 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:42:01,842 [5] INFO  - LoadMasters() took 5,827 ms.
+2018-11-27 16:42:01,852 [1] INFO  - [test] Session started.
+2018-11-27 16:42:26,015 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-27 16:42:26,017 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-27 16:42:26,046 [1] INFO  - [test] Session stopped.
+2018-11-27 16:42:26,049 [1] INFO  - Memory used before collection:  35,370,428
+2018-11-27 16:42:26,084 [1] INFO  - Memory used after collection:  8,159,400
+2018-11-27 16:42:26,147 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-27 16:43:39,933 [1] INFO  - [Application started.]
+2018-11-27 16:43:42,620 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-27 16:43:42,681 [1] INFO  - LoadMasters() took 48 ms.
+2018-11-27 16:43:42,682 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-27 16:43:47,128 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-27 16:43:48,571 [1] INFO  - [test] Session is starting.
+2018-11-27 16:43:48,918 [5] ERROR - Error when executing 'DAO00003_CacheList'
+2018-11-27 16:43:48,937 [5] DEBUG - LoadMasters() error.
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Data.SqlClient.SqlException: Login failed for user 'sa'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForList[T](RequestScope request, ISqlMapSession session, Object parameterObject, IList`1 resultObject, RowDelegate`1 rowDelegate)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 184
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForList[T](String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 47
+   at FPT.Framework.DataAccess.DaoBase.QueryForList(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 202
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForList(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 123
+   at FPT.Framework.DataService.ServiceBase.GetObjectList(String targetDao, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\02.DataService\ServiceBase.cs:line 76
+   at FPT.eHospital.Services.SYS001.ExecuteForList(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\SYS001.cs:line 17
+   at FPT.Framework.DataService.DirectService.ExecuteForList(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 64
+   at FPT.eHospital.Application.AppService.GetCacheList() in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 61
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 156
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 275
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 562
+2018-11-27 16:43:48,951 [1] INFO  - [test] Session started.
+2018-11-27 16:43:48,998 [1] ERROR - Error when executing 'DAO00002_ScreenList'
+2018-11-27 16:43:49,050 [1] ERROR - IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Data.SqlClient.SqlException: Login failed for user 'sa'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForList[T](RequestScope request, ISqlMapSession session, Object parameterObject, IList`1 resultObject, RowDelegate`1 rowDelegate)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 184
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForList[T](String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 47
+   at FPT.Framework.DataAccess.DaoBase.QueryForList(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 202
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForList(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 123
+   at FPT.Framework.DataService.ServiceBase.GetObjectList(String targetDao, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\02.DataService\ServiceBase.cs:line 76
+   at FPT.eHospital.Services.SYS001.ExecuteForList(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\SYS001.cs:line 17
+   at FPT.Framework.DataService.DirectService.ExecuteForList(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 64
+   at FPT.eHospital.Application.AppService.GetControlList(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 76
+   at FPT.eHospital.Application.PageManager.LoadFromDB(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 202
+   at FPT.eHospital.Application.PageManager.GetPage(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 177
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 69
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, String strAssembly, String strClass) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 347
+   at FPT.eHospital.Forms.Base.VMFrame.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 108
+   at FPT.eHospital.Forms.Base.VMFrame.Session_ProfileChanged(Object sender, IUserProfile profile) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 59
+   at FPT.Framework.Application.ApplicationSession.ChangeUserProfile(IUserProfile newProfile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 466
+   at FPT.eHospital.Forms.Common.VMLogin.PerformLogin() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 208
+   at FPT.eHospital.Forms.Common.VMLogin.cmdLogin(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 196
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-27 16:43:55,585 [1] INFO  - [test] Session stopped.
+2018-11-27 16:43:55,587 [1] INFO  - Memory used before collection:  20,464,784
+2018-11-27 16:43:55,609 [1] INFO  - Memory used after collection:  3,085,252
+2018-11-27 16:43:55,647 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-27 16:45:24,012 [1] INFO  - [Application started.]
+2018-11-27 16:45:26,681 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-27 16:45:26,744 [1] INFO  - LoadMasters() took 48 ms.
+2018-11-27 16:45:26,745 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-27 16:45:29,695 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-27 16:45:31,100 [1] INFO  - [test] Session is starting.
+2018-11-27 16:45:32,400 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:32,594 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:32,679 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:32,754 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:32,830 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:32,923 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:33,006 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:33,081 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:33,159 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:33,649 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:33,937 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:38,838 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:45:46,730 [5] INFO  - LoadMasters() took 15,628 ms.
+2018-11-27 16:45:46,749 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-27 16:46:47,193 [1] INFO  - [Application started.]
+2018-11-27 16:46:49,491 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-27 16:46:49,555 [1] INFO  - LoadMasters() took 47 ms.
+2018-11-27 16:46:49,556 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-27 16:46:52,562 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-27 16:46:53,996 [1] INFO  - [test] Session is starting.
+2018-11-27 16:46:54,815 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:46:54,996 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:46:55,078 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:46:55,157 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:46:55,235 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:46:55,318 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:46:55,396 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:46:55,478 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:46:55,561 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:46:56,056 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:46:56,182 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:46:57,793 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:47:07,413 [5] INFO  - LoadMasters() took 13,416 ms.
+2018-11-27 16:47:07,436 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-27 16:47:49,481 [1] INFO  - [Application started.]
+2018-11-27 16:47:51,774 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-27 16:47:51,836 [1] INFO  - LoadMasters() took 48 ms.
+2018-11-27 16:47:51,837 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-27 16:47:55,407 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-27 16:47:56,902 [1] INFO  - [test] Session is starting.
+2018-11-27 16:47:57,804 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:47:57,992 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:47:58,068 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:47:58,152 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:47:58,237 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:47:58,316 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:47:58,400 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:47:58,503 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:47:58,580 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:47:59,072 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:47:59,197 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:48:00,241 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-27 16:48:06,537 [5] INFO  - LoadMasters() took 9,634 ms.
+2018-11-27 16:48:06,546 [1] INFO  - [test] Session started.
+2018-11-27 16:48:28,771 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-27 16:48:28,773 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-27 16:48:28,789 [1] INFO  - [test] Session stopped.
+2018-11-27 16:48:28,790 [1] INFO  - Memory used before collection:  36,376,924
+2018-11-27 16:48:28,839 [1] INFO  - Memory used after collection:  8,169,756
+2018-11-27 16:48:28,905 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-27 17:12:44,418 [1] INFO  - [Application started.]
+2018-11-27 17:12:46,508 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-27 17:12:46,682 [1] INFO  - LoadMasters() took 163 ms.
+2018-11-27 17:12:46,684 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-27 17:12:53,773 [1] INFO  - [test] Session is starting.
+2018-11-27 17:12:59,992 [5] INFO  - LoadMasters() took 6,209 ms.
+2018-11-27 17:13:00,002 [1] INFO  - [test] Session started.
+2018-11-27 17:13:21,148 [1] INFO  - Total upload size: 413 bytes => 20 bytes/s
+2018-11-27 17:13:21,149 [1] INFO  - Total download size: 207,460 bytes => 9,817 bytes/s
+2018-11-27 17:13:21,808 [1] INFO  - [test] Session stopped.
+2018-11-27 17:13:21,810 [1] INFO  - Memory used before collection:  8,045,260
+2018-11-27 17:13:21,842 [1] INFO  - Memory used after collection:  5,574,148
+2018-11-27 17:13:22,271 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-27 17:13:22,447 [1] INFO  - LoadMasters() took 175 ms.
+2018-11-27 17:13:22,449 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-27 17:13:36,095 [1] INFO  - [test] Session is starting.
+2018-11-27 17:13:40,970 [5] INFO  - LoadMasters() took 4,875 ms.
+2018-11-27 17:13:40,978 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-27 17:24:00,189 [1] INFO  - [Application started.]
+2018-11-27 17:24:23,020 [1] ERROR - Session initialized fail!
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 10.14.141.2:2010
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at FPT.Framework.DataService.WebAPIService.PostCommand(String cmd, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\WebAPIService.cs:line 96
+   at FPT.Framework.DataService.WebAPIService.ExecuteForList(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\WebAPIService.cs:line 60
+   at FPT.eHospital.Application.RemoteServiceRouter.LoadServiceInfo() in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\RemoteServiceRouter.cs:line 54
+   at FPT.eHospital.Application.RemoteServiceRouter.GetServiceUrl(String svcName) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\RemoteServiceRouter.cs:line 43
+   at FPT.Framework.DataService.WebServiceProvider.GetServiceInfo(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\WebServiceProvider.cs:line 67
+   at FPT.Framework.DataService.WebServiceProvider.GetService(String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\WebServiceProvider.cs:line 56
+   at FPT.eHospital.Application.AppService.GetControlList(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 72
+   at FPT.eHospital.Application.PageManager.LoadFromDB(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 202
+   at FPT.eHospital.Application.PageManager.GetPage(String pageId) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 177
+   at FPT.eHospital.Application.PageManager.GetPageDefinition(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\PageManager.cs:line 69
+   at FPT.eHospital.Application.AppService.GetPageControls(Type formType, String strPage, IUserProfile profile, ITextManager tm, HotKeyManager hm) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\AppService.cs:line 67
+   at FPT.Framework.Application.ApplicationSession.CreatePageView(IViewModel viewModel, String strViewID) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 409
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, Type vmType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 385
+   at FPT.Framework.Application.ApplicationSession.CreatePage(IPageContainer container, String pageId, String strAssembly, String strClass) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 347
+   at FPT.eHospital.Forms.Base.VMFrame.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 108
+   at FPT.eHospital.Forms.Base.VMFrame.OnShow() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMFrame.cs:line 71
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 175
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 10.14.141.2:2010
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-11-27 17:24:33,838 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------

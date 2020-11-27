@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,ab17346c24f05edf4e8d798aac2d967b-->
+        <statement id="DAO00038_GetAll" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUA_IMAGES
+            order by IMAGES_ID
+        </statement>
+        <!--Revision:0,ee9c941e61fa2c30e72662726b6d8a0f-->
+        <statement id="DAO00038_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUA_IMAGES
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="IMAGES_ID">
+                        TT_CLSKETQUA_IMAGES.IMAGES_ID = '$IMAGES_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CLSKETQUA_ID">
+                        TT_CLSKETQUA_IMAGES.CLSKETQUA_ID = '$CLSKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FILE_NAME_ORIGIN">
+                        TT_CLSKETQUA_IMAGES.FILE_NAME_ORIGIN = '$FILE_NAME_ORIGIN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FILE_NAME">
+                        TT_CLSKETQUA_IMAGES.FILE_NAME = '$FILE_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IDX">
+                        TT_CLSKETQUA_IMAGES.IDX = '$IDX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENHINH">
+                        TT_CLSKETQUA_IMAGES.TENHINH = '$TENHINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MOTAHINH">
+                        TT_CLSKETQUA_IMAGES.MOTAHINH = '$MOTAHINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAMNGUNG">
+                        TT_CLSKETQUA_IMAGES.TAMNGUNG = '$TAMNGUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHONINMACDINH">
+                        TT_CLSKETQUA_IMAGES.CHONINMACDINH = '$CHONINMACDINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_CLSKETQUA_IMAGES.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_CLSKETQUA_IMAGES.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_CLSKETQUA_IMAGES.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_CLSKETQUA_IMAGES.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_CLSKETQUA_IMAGES.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by IDX
+        </statement>
+        <!--Revision:0,283b02d7f37d139b6a42b7566149667d-->
+        <statement id="DAO00038_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUA_IMAGES
+            where TT_CLSKETQUA_IMAGES.IMAGES_ID  = '$value$'
+            order by IMAGES_ID
+        </statement>
+        <!--Revision:0,cb37f18e168ce0522e3988f5fb0b08f3-->
+        <statement id="DAO00038_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUA_IMAGES
+            where TT_CLSKETQUA_IMAGES.IMAGES_ID  = '$IMAGES_ID$'
+            order by IMAGES_ID
+        </statement>
+        <!--Revision:0,cd2e0b6c0d68996d2ef9b9f324add9b4-->
+        <statement id="DAO00038_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TT_CLSKETQUA_IMAGES (
+            CLSKETQUA_ID
+            , FILE_NAME_ORIGIN
+            , FILE_NAME
+            , IDX
+            , TENHINH
+            , MOTAHINH
+            , TAMNGUNG
+            , CHONINMACDINH
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            ) values (
+            #CLSKETQUA_ID#
+            , #FILE_NAME_ORIGIN#
+            , #FILE_NAME#
+            , #IDX#
+            , #TENHINH#
+            , #MOTAHINH#
+            , #TAMNGUNG#
+            , #CHONINMACDINH#
+            , #BENHVIEN_ID#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+            <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+        </statement>
+        <!--Revision:0,a33b356368e8b8bd69c5196ab3e3f1db-->
+        <update id="DAO00038_Update" parameterClass="System.Collections.IDictionary">
+            update TT_CLSKETQUA_IMAGES set
+            CLSKETQUA_ID = #CLSKETQUA_ID#
+            , FILE_NAME_ORIGIN = #FILE_NAME_ORIGIN#
+            , FILE_NAME = #FILE_NAME#
+            , IDX = #IDX#
+            , TENHINH = #TENHINH#
+            , MOTAHINH = #MOTAHINH#
+            , TAMNGUNG = #TAMNGUNG#
+            , CHONINMACDINH = #CHONINMACDINH#
+            <!--, BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#-->
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            IMAGES_ID = '$IMAGES_ID$'
+        </update>
+        <!--Revision:0,316431468b1484f775db147e2528af9f-->
+        <statement id="DAO00038_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUA_IMAGES
+            where
+            IMAGES_ID = '$IMAGES_ID$'
+        </statement>
+        <!--Revision:0,f0e5478eca71c48217bebf4497886b5d-->
+        <statement id="DAO00038_DeleteByListID" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUA_IMAGES
+            where
+            IMAGES_ID in
+            <iterate open="(" close=")" conjunction=",  " property="LST_DEL_IMAGE_ID">
+                #LST_DEL_IMAGE_ID[]#
+            </iterate>
+        </statement>
+        <!--Revision:0,8377b029561f71c660fa74d49a4eaf28-->
+        <statement id="DAO00038_DeleteCLSKQImageByID" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUA_IMAGES
+            where
+            IMAGES_ID = '$IMAGES_ID$'
+        </statement>
+        <!--Revision:0,4988cdb79064fbf6e51e5ef11d4fb0dd-->
+        <statement id="DAO00038_DeleteByCLSID" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUA_IMAGES
+            where
+            CLSKETQUA_ID = '$CLSKETQUA_ID$'
+        </statement>
+        <!--Revision:0,e548daa69fa960df97ac0bad2b34e200-->
+        <statement id="DAO00038_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUA_IMAGES
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="IMAGES_ID">
+                        TT_CLSKETQUA_IMAGES.IMAGES_ID = '$IMAGES_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CLSKETQUA_ID">
+                        TT_CLSKETQUA_IMAGES.CLSKETQUA_ID = '$CLSKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FILE_NAME_ORIGIN">
+                        TT_CLSKETQUA_IMAGES.FILE_NAME_ORIGIN = '$FILE_NAME_ORIGIN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FILE_NAME">
+                        TT_CLSKETQUA_IMAGES.FILE_NAME = '$FILE_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IDX">
+                        TT_CLSKETQUA_IMAGES.IDX = '$IDX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENHINH">
+                        TT_CLSKETQUA_IMAGES.TENHINH = '$TENHINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MOTAHINH">
+                        TT_CLSKETQUA_IMAGES.MOTAHINH = '$MOTAHINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAMNGUNG">
+                        TT_CLSKETQUA_IMAGES.TAMNGUNG = '$TAMNGUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHONINMACDINH">
+                        TT_CLSKETQUA_IMAGES.CHONINMACDINH = '$CHONINMACDINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_CLSKETQUA_IMAGES.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_CLSKETQUA_IMAGES.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_CLSKETQUA_IMAGES.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_CLSKETQUA_IMAGES.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_CLSKETQUA_IMAGES.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

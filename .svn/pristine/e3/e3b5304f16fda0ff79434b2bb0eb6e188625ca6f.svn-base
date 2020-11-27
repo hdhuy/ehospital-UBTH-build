@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <!--Revision:0,e7533fb133d423eeede1d60115d54485-->
+    <statement id="DAO00046_GETLISTDVYEUCAUINLISTDVID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT	dvyc.*, clskqct.CLSKETQUA_ID, clskqct.DICHVU_ID as KETQUA_DICHVU_ID,
+      clskqct.CLSKETQUACHITIET_ID, clskqct.DONVITINH, clskqct.KETQUA, clskqct.KETQUA2,
+      clskqct.MUCBINHTHUONG, clskqct.MUCBINHTHUONGMIN, clskqct.MUCBINHTHUONGMAX, clskqct.BATTHUONG
+      FROM	dbo.TT_CLSKETQUACHITIET as clskqct RIGHT OUTER JOIN
+      dbo.TT_DVYEUCAU as dvyc ON
+      <!--clskqct.BENHVIEN_ID = dvyc.BENHVIEN_ID AND-->
+      clskqct.DVYEUCAU_ID = dvyc.DVYEUCAU_ID
+      where dvyc.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <isParameterPresent>
+        <!--<isNotEmpty prepend="and" property="LISTDICHVU_ID">
+                    <iterate open=" dvyc.DICHVU_ID in (" close=")" conjunction=",  " property="LISTDICHVU_ID">
+                        #LISTDICHVU_ID[]#
+                    </iterate>
+                </isNotEmpty>-->
+        <isNotEmpty prepend="and" property="MANHOMDICHVU">
+          <!--dvyc.DICHVU_ID in (select DICHVU_ID from TM_DICHVU
+          where NHOMDICHVU_ID in (select NHOMDICHVU_ID from TM_NHOMDICHVU where left(MANHOMDICHVU,2) in ($MANHOMDICHVU$) OR MANHOMDICHVU in ($MANHOMDICHVU$) ))-->
+          exists (select DICHVU_ID from TM_DICHVU a join TM_NHOMDICHVU b on a.NHOMDICHVU_ID = b.NHOMDICHVU_ID
+          where dvyc.DICHVU_ID = DICHVU_ID and (left(MANHOMDICHVU,2) in ($MANHOMDICHVU$) OR MANHOMDICHVU in ($MANHOMDICHVU$)))
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+          dvyc.TIEPNHAN_ID = #TIEPNHAN_ID#
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="NOITHUCHIEN_ID">
+          dvyc.NOITHUCHIEN_ID = #NOITHUCHIEN_ID#
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="TRANGTHAI_HANGDOI">
+          dvyc.TRANGTHAI_HANGDOI = '$TRANGTHAI_HANGDOI$'
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="DALAYMAU">
+          dvyc.DALAYMAU = '$DALAYMAU$'
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="TRANGTHAI">
+          dvyc.TRANGTHAI = #TRANGTHAI#
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="BENHNHAN_ID">
+          dvyc.BENHNHAN_ID = #BENHNHAN_ID#
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="NGAYKHAM">
+          dvyc.NGAYYEUCAU &gt;= #NGAYKHAM#
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="DENNGAY">
+          dvyc.NGAYYEUCAU &lt;= #DENNGAY#
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="CLSKETQUA_ID">
+          clskqct.CLSKETQUA_ID = #CLSKETQUA_ID#
+        </isNotEmpty>
+      </isParameterPresent>
+      order by DVYEUCAU_ID
+    </statement>
+    <!--Revision:0,983d65118bb4db5c3ac2f3aa13410bbb-->
+    <statement id="DAO00046_GetDSKQXNByBenhNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select dvyc.DICHVU_ID as DICHVUCHINH_ID, dvyc.NOIYEUCAU_ID,dvyc.DICHVU_ID
+      ,KETQUA.[CLSKETQUA_ID]
+      ,KETQUA.[SOPHIEUXETNGHIEM]
+      ,KETQUA.[TIEPNHAN_ID]
+      ,KETQUA.[BENHAN_ID]
+      ,KETQUA.[LUUTRU_ID]
+      ,KETQUA.[LUUTRUCHITIET_ID]
+      ,KETQUA.[SOVAOVIEN]
+      ,KETQUA.[MAYTE]
+      ,KETQUA.[TENBENHNHAN]
+      ,KETQUA.[NAMSINH]
+      ,KETQUA.[GIOITINH]
+      ,KETQUA.[DIACHI]
+      ,KETQUA.[NHOMDICHVU_ID]
+      ,KETQUA.[NGAYCHIDINH]
+      ,KETQUA.[NOICHIDINH_ID]
+      ,KETQUA.[BACSICHIDINH_ID]
+      ,KETQUA.[BACSICHIDINH]
+      ,KETQUA.[NGAYTHUCHIEN]
+      ,ISNULL(KETQUA.[NGAYGIOTHUCHIEN],DVYC.THOIGIANKHOADULIEU) as THOIGIANTHUCHIEN
+      ,KETQUA.[NGAYGIOTHUCHIEN]
+      ,KETQUA.[GIOTHUCHIEN]
+      ,KETQUA.[THANGTHUCHIEN]
+      ,KETQUA.[NAMTHUCHIEN]
+      ,KETQUA.[CHUYENKHOATHUCHIEN_ID]
+      ,ISNULL(KETQUA.[NOITHUCHIEN_ID],DVYC.[NOITHUCHIEN_ID]) AS NOITHUCHIEN_ID
+      ,KETQUA.[BACSITHUCHIEN_ID]
+      ,dvyc.NGUOIKHOA_ID AS BACSIKETLUAN_ID
+      ,KETQUA.[BACSIGMHS_ID]
+      ,KETQUA.[KYTHUATVIEN01_ID]
+      ,KETQUA.[KYTHUATVIEN02_ID]
+      ,KETQUA.[DIEUDUONG_ID]
+      ,KETQUA.[CHANDOANLAMSANG]
+      ,KETQUA.[THUCHIENBENNGOAI]
+      ,KETQUA.[BENHVIENTHUCHIEN_ID]
+      ,KETQUA.[KHOABENNGOAI_ID]
+      ,KETQUA.[TENBACSIBENNGOAI]
+      ,KETQUA.[GUINGOAI]
+      ,KETQUA.[NOIGUIDEN_ID]
+      ,KETQUA.[ICD_ID1]
+      ,KETQUA.[ICD_ID2]
+      ,KETQUA.[ICD_ID3]
+      ,KETQUA.[DIUNGTHUOC]
+      ,KETQUA.[TIENME]
+      ,KETQUA.[DACBIET]
+      ,KETQUA.[KQCUOICUNG]
+      ,KETQUA.[THONGTINNHAN]
+      ,KETQUA.[KETLUANKSK]
+      ,KETQUA.[DENGHI]
+      ,KETQUA.[SINHTHIET]
+      ,KETQUA.[CLOTEST]
+      ,KETQUA.[PHOTO]
+      ,KETQUA.[VIDEO]
+      ,KETQUA.[TIEMCANQUANG]
+      ,KETQUA.[VUNGKHAOSAT]
+      ,KETQUA.[MACH]
+      ,KETQUA.[HUYETAP]
+      ,KETQUA.[NHIPTHO]
+      ,KETQUA.[NHIETDO]
+      ,KETQUA.[CHIEUCAO]
+      ,KETQUA.[CANNANG]
+      ,KETQUA.[BSA]
+      ,KETQUA.[TINHTRANGDIENNAO]
+      ,KETQUA.[GPB_AMSO]
+      ,KETQUA.[GPB_PHANLOAIKETQUA_ID]
+      ,KETQUA.[GPB_PHUONGPHAPLAYBENHPHAM_ID]
+      ,KETQUA.[GPB_SOMAU]
+      ,KETQUA.[GPB_SOLUONGMAU]
+      ,KETQUA.[GPB_TOPO_ID]
+      ,KETQUA.[GPB_TOPOREGIONS_ID]
+      ,KETQUA.[GPB_MORPHO_ID]
+      ,KETQUA.[GPB_ETIO_ID]
+      ,KETQUA.[GPB_DAITHE]
+      ,KETQUA.[GPB_VITHE]
+      ,KETQUA.[GPB_NHUOM_HE]
+      ,KETQUA.[GPB_NHUOM_PAS]
+      ,KETQUA.[GPB_NHUOM_TRI]
+      ,KETQUA.[GPB_NHUOM_AFB]
+      ,KETQUA.[GPB_NHUOM_GIEMSA]
+      ,KETQUA.[GPB_NHUOM_PAPANICOLAOU]
+      ,KETQUA.[GPB_NHUOM_RETICULINE]
+      ,KETQUA.[GPB_NHUOM_OTHER]
+      ,KETQUA.[GPB_HOAMIENDICH]
+      ,KETQUA.[GPB_HOAMIENDICHHUYNHQUANG]
+      ,KETQUA.[GPB_HOICHAN]
+      ,KETQUA.[GPB_MAUTHU]
+      ,KETQUA.[GPB_NOILAYMAUTHU]
+      ,KETQUA.[HLVIKHUAN1]
+      ,KETQUA.[HLVIKHUAN2]
+      ,KETQUA.[LOAIFILM_ID]
+      ,KETQUA.[MAPHIM]
+      ,KETQUA.[SOPHIMSUDUNG]
+      ,KETQUA.[LOAIFILM_ID2]
+      ,KETQUA.[SOPHIMSUDUNG2]
+      ,KETQUA.[LOAIFILM_ID3]
+      ,KETQUA.[SOPHIMSUDUNG3]
+      ,KETQUA.[THIETBI_ID]
+      ,KETQUA.[MAUTHU_ID]
+      ,KETQUA.[THOIGIANNHAN]
+      ,KETQUA.[MAU]
+      ,KETQUA.[LOAITHUOCCANQUANG_ID]
+      ,KETQUA.[MA]
+      ,KETQUA.[IDHINH]
+      ,KETQUA.[SOPHIMHU]
+      ,KETQUA.[LOAIPHIMHU_ID]
+      ,KETQUA.[DOSOI]
+      ,KETQUA.[DOSOI_ID]
+      ,KETQUA.[BANKINHSOI]
+      ,KETQUA.[SODT]
+      ,KETQUA.[KYTHUAT]
+      ,KETQUA.[KYTHUAT_TEXT]
+      ,KETQUA.[RESISTANCEMARKERS]
+      ,KETQUA.[SOTHUOCSUDUNG]
+      ,KETQUA.[SOLUONGONG]
+      ,KETQUA.[SOMLMAU]
+      ,KETQUA.[THOIGIANLAYMAU]
+      ,KETQUA.[THOIGIANNHANMAU]
+      ,KETQUA.[THOIGIANCDBENHPHAM]
+      ,KETQUA.[DUNGDICHCD_ID]
+      ,KETQUA.[SOONGTHUCNHAN]
+      ,KETQUA.[VITRISOI]
+      ,KETQUA.[SAMPLEID]
+      ,KETQUA.[PHANLOAIKETQUA_ID]
+      ,KETQUA.[MOTA]
+      ,KETQUA.[MOTA_TEXT]
+      ,KETQUA.[KETLUAN]
+      ,KETQUA.[GHICHU]
+      ,dvyc.[TRANGTHAI]
+      ,KETQUA.[KHOADULIEU]
+      ,KETQUA.[NGAYKHOADULIEU]
+      ,KETQUA.[THOIGIANKHOADULIEU]
+      ,KETQUA.[NGUOIKHOA_ID]
+      ,KETQUA.[MANGUOIKHOA]
+      ,KETQUA.[TENNGUOIKHOA]
+      ,KETQUA.[BENHVIEN_ID]
+      ,KETQUA.[NGAYTAO]
+      ,KETQUA.[NGUOITAO_ID]
+      ,KETQUA.[NGAYCAPNHAT]
+      ,KETQUA.[NGUOICAPNHAT_ID]
+      ,ISNULL(KETQUA.DVYEUCAU_ID, dvyc.DVYEUCAU_ID) as DVYEUCAUCHINH_ID
+      from TT_DVYEUCAU dvyc
+      inner JOIN (select distinct DVYEUCAU_ID, CLSKETQUA_ID from TT_CLSKETQUACHITIET) kq ON dvyc.DVYEUCAU_ID =kq.DVYEUCAU_ID
+      inner join TM_DICHVU dv on dvyc.DICHVU_ID = dv.DICHVU_ID
+      inner join TT_CLSKETQUA KETQUA ON KETQUA.CLSKETQUA_ID = KQ.CLSKETQUA_ID
+      inner join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = dv.NHOMDICHVU_ID
+      <!--inner join TM_DICHVU dv on dvyc.DICHVU_ID = dv.DICHVU_ID
+      left join TT_CLSKETQUA KETQUA ON KETQUA.DVYEUCAU_ID = dvyc.DVYEUCAU_ID
+      left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = dv.NHOMDICHVU_ID
+      inner JOIN TT_CLSKETQUACHITIET kq ON dvyc.DVYEUCAU_ID =kq.DVYEUCAU_ID and dvyc.DICHVU_ID = kq.DICHVU_ID-->
+      where
+      dvyc.BENHNHAN_ID = #BENHNHAN_ID# and dvyc.TRANGTHAI = 'HOANTAT'
+      and LEFT(ndv.MANHOMDICHVU, 2) = '01'
+      <!--<dynamic prepend=" and dvyc.DICHVU_ID in ">
+        <iterate open="(" close=")" conjunction=",  " property="LISTDICHVU_ID">
+          #LISTDICHVU_ID[]#
+        </iterate>
+      </dynamic>-->
+      <isNotEmpty prepend="" property="TUNGAY">
+        and dvyc.NGAYYEUCAU &gt;= '$TUNGAY$'
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="DENNGAY">
+        and dvyc.NGAYYEUCAU &lt;= '$DENNGAY$'
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="NOITHUCHIEN_ID">
+        and dvyc.NOITHUCHIEN_ID = #NOITHUCHIEN_ID#
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="BACSIKETLUAN_ID">
+        and BACSIKETLUAN_ID = #BACSIKETLUAN_ID#
+      </isNotEmpty>
+      order by dvyc.DVYEUCAU_ID DESC
+      <!--select dvyc.DICHVU_ID as DICHVUCHINH_ID, dvyc.TIEPNHAN_ID, dvyc.NOIYEUCAU_ID
+      , clskq.BACSIKETLUAN_ID, clskq.KETLUAN, clskq.GHICHU, clskq.THOIGIANTHUCHIEN, clskq.NOITHUCHIEN_ID
+      , clskqct.*
+      , ISNULL(clskqct.DVYEUCAU_ID, dvyc.DVYEUCAU_ID) as DVYEUCAUCHINH_ID
+      from TT_DVYEUCAU dvyc
+
+      left join TT_CLSKETQUA clskq
+      on dvyc.DVYEUCAU_ID = clskq.DVYEUCAU_ID
+
+      left join TT_CLSKETQUACHITIET clskqct
+      on clskq.CLSKETQUA_ID = clskqct.CLSKETQUA_ID
+      and dvyc.DICHVU_ID = clskqct.DICHVU_ID
+
+      where
+      dvyc.BENHNHAN_ID = '$BENHNHAN_ID$'
+
+      <dynamic prepend=" and dvyc.DICHVU_ID in ">
+        <iterate open="(" close=")" conjunction=",  " property="LISTDICHVU_ID">#LISTDICHVU_ID[]#</iterate>
+      </dynamic>
+      <isNotEmpty prepend="" property="TUNGAY">
+        and convert(date, dvyc.NGAYGIOYEUCAU) &#62;&#61; convert(date, '$TUNGAY$')
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="DENNGAY">
+        and convert(date, dvyc.NGAYGIOYEUCAU) &#60;&#61; convert(date, '$DENNGAY$')
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="NOITHUCHIEN_ID">
+        and NOITHUCHIEN_ID = '$NOITHUCHIEN_ID$'
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="BACSIKETLUAN_ID">
+        and BACSIKETLUAN_ID = '$BACSIKETLUAN_ID$'
+      </isNotEmpty>-->
+    </statement>
+    <!--Revision:0,82f51cd73c6bd231fed4a79d0613086d-->
+    <statement id="DAO00046_GetDSKQXNByTiepNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select dvyc.DICHVU_ID as DICHVUCHINH_ID, dvyc.TIEPNHAN_ID, dvyc.NOIYEUCAU_ID
+      , clskq.BACSIKETLUAN_ID, clskq.KETLUAN, clskq.GHICHU, clskq.THOIGIANTHUCHIEN, clskq.NOITHUCHIEN_ID
+      , clskqct.*
+      from TT_DVYEUCAU dvyc
+      left join TT_CLSKETQUA clskq on dvyc.DVYEUCAU_ID = clskq.DVYEUCAU_ID
+      left join TT_CLSKETQUACHITIET clskqct on clskq.CLSKETQUA_ID = clskqct.CLSKETQUA_ID and dvyc.DICHVU_ID = clskqct.DICHVU_ID
+      left join TM_DICHVU B on dvyc.DICHVU_ID = B.DICHVU_ID
+      left join TM_NHOMDICHVU C on C.NHOMDICHVU_ID = B.NHOMDICHVU_ID
+      where
+      dvyc.TIEPNHAN_ID = #TIEPNHAN_ID#
+      and LEFT(C.MANHOMDICHVU, 2) = '01'
+      <!--<dynamic prepend=" and clskqct.DICHVU_ID in ">
+        <iterate open="(" close=")" conjunction=",  " property="LISTDICHVU_ID">
+          #LISTDICHVU_ID[]#
+        </iterate>
+      </dynamic>-->
+    </statement>
+    <!--Revision:0,00f11a605f5e4ff92eee63be1b034de3-->
+    <statement id="DAO00046_GetDanhSachXetNghiemTheoTiepNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select distinct dvyc.DICHVU_ID ,dvyc.DICHVU_ID as DICHVUCHINH_ID, dvyc.TIEPNHAN_ID, dvyc.NOIYEUCAU_ID
+      ,dv.NHOMDICHVU_ID ,nhom .MANHOMDICHVU ,dvyc.DVYEUCAU_ID ,nhom.TENNHOMDICHVU , case when dvyc.TRANGTHAI ='HOANTAT' then 1 else 0 end DACOKETQUA
+      ,clskq.CLSKETQUA_ID
+      from TT_DVYEUCAU dvyc
+      left join
+      (
+      select isnull(clskq.CLSKETQUA_ID, ct.CLSKETQUA_ID) as CLSKETQUA_ID, isnull(clskq.DVYEUCAU_ID, ct.DVYEUCAU_ID) as DVYEUCAU_ID
+      from TT_CLSKETQUA clskq join TT_CLSKETQUACHITIET ct on clskq.CLSKETQUA_ID = ct.CLSKETQUA_ID
+      ) clskq on clskq.DVYEUCAU_ID = dvyc.DVYEUCAU_ID
+      inner join TM_DICHVU dv on dvyc.DICHVU_ID =dv.DICHVU_ID
+      inner join TM_NHOMDICHVU nhom on dv.NHOMDICHVU_ID =nhom.NHOMDICHVU_ID
+      where  dvyc.TIEPNHAN_ID = '$TIEPNHAN_ID$' and dvyc.HUYYEUCAU='0' and
+      left(nhom.MANHOMDICHVU,2) != '04'  and left(nhom.MANHOMDICHVU,2)='01'
+    </statement>
+    <!--Revision:0,de74fbd9b7e46436b267ebc1956c5ef3-->
+    <statement id="DAO00046_GetDSKQPTTTByBenhNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select ptyc.*, pt.MOTA, pt.TIEPNHAN_ID, pt.NGUOITAO_ID as BACSITHUCHIEN_ID, pt.PHONGBANTHUCHIEN_ID as NOITHUCHIEN_ID, pt.NGAYTHUCHIEN as THOIGIANTHUCHIEN, pt.LOAIPHAUTHUAT, ba.SOBENHAN
+      from TT_PHAUTHUAT_YEUCAU as ptyc
+      left join TT_PHAUTHUAT as pt on pt.PHAUTHUAT_ID = ptyc.PHAUTHUAT_ID
+      left join TT_NOITRU_BENHAN ba on pt.BENHAN_ID = ba.BENHAN_ID
+      where ptyc.DVYEUCAU_ID in
+      (select DVYEUCAU_ID from TT_DVYEUCAU where BENHNHAN_ID = '$BENHNHAN_ID$')
+      <isNotEmpty prepend="" property="TUNGAY">
+        and pt.NGAYTHUCHIEN &gt;= '$TUNGAY$'
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="DENNGAY">
+        and pt.NGAYTHUCHIEN &lt;= '$DENNGAY$'
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="NOITHUCHIEN_ID">
+        and PHONGBANTHUCHIEN_ID = #NOITHUCHIEN_ID#
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="BACSITHUCHIEN_ID">
+        and pt.NGUOITAO_ID = #BACSITHUCHIEN_ID#
+      </isNotEmpty>
+    </statement>
+    <!--Revision:0,8a6005231d0b43361d1d49519876cb2d-->
+    <statement id="DAO00046_GetDSKQPTTTByTiepNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select  case when dvyc.TRANGTHAI ='HOANTAT' then 1 else 0 end DACOKETQUA,  dvyc.BACSICHIDINH_ID, dvyc.NOIYEUCAU_ID as NOICHIDINH_ID, ptyc.*, pt.MOTA, pt.TIEPNHAN_ID, pt.PHONGBANTHUCHIEN_ID as NOITHUCHIEN_ID, pt.NGUOITAO_ID as BACSITHUCHIEN_ID
+      from TT_PHAUTHUAT_YEUCAU as ptyc
+      left join TT_PHAUTHUAT as pt on pt.PHAUTHUAT_ID = ptyc.PHAUTHUAT_ID
+      left join (select DVYEUCAU_ID,TRANGTHAI,BACSICHIDINH_ID,NOIYEUCAU_ID from TT_DVYEUCAU where TIEPNHAN_ID = #TIEPNHAN_ID# and HUYYEUCAU='0') dvyc on ptyc.DVYEUCAU_ID = dvyc.DVYEUCAU_ID
+      <!--where ptyc.DVYEUCAU_ID in (select DVYEUCAU_ID from TT_DVYEUCAU where HUYYEUCAU='0' AND TIEPNHAN_ID = #TIEPNHAN_ID#)-->
+      where dvyc.DVYEUCAU_ID is not null
+    </statement>
+    <!--Revision:0,2065996a8eaa5f37924f023d8b1082ec-->
+    <statement id="DAO00046_GetDSKQCDHAByBenhNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select a.* from TT_CLSKETQUA a
+      join TT_DVYEUCAU b on a.DVYEUCAU_ID = b.DVYEUCAU_ID
+      where b.BENHNHAN_ID = #BENHNHAN_ID# and b.TRANGTHAI = 'HOANTAT'
+      <!--where DVYEUCAU_ID in (select DVYEUCAU_ID from TT_DVYEUCAU where BENHNHAN_ID = '$BENHNHAN_ID$' and TRANGTHAI = 'HOANTAT')-->
+      <!--<dynamic prepend=" and DICHVU_ID in ">
+                <iterate open="(" close=")" conjunction=",  " property="LISTDICHVU_ID">
+                    #LISTDICHVU_ID[]#
+                </iterate>
+            </dynamic>-->
+      <isNotEmpty prepend="and" property="MANHOMDICHVU">
+        <!--DICHVU_ID in (select DICHVU_ID from TM_DICHVU
+        where NHOMDICHVU_ID in (select NHOMDICHVU_ID from TM_NHOMDICHVU where left(MANHOMDICHVU,2) in ($MANHOMDICHVU$) ))-->
+        exists (select DICHVU_ID from TM_DICHVU ab join TM_NHOMDICHVU bc on ab.NHOMDICHVU_ID = bc.NHOMDICHVU_ID
+        where b.DICHVU_ID = ab.DICHVU_ID and left(bc.MANHOMDICHVU,2) in ($MANHOMDICHVU$))
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="TUNGAY">
+        and a.NGAYTHUCHIEN &gt;= '$TUNGAY$'
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="DENNGAY">
+        and a.NGAYTHUCHIEN &lt;= '$DENNGAY$'
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="NOITHUCHIEN_ID">
+        and a.NOITHUCHIEN_ID = #NOITHUCHIEN_ID#
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="BACSIKETLUAN_ID">
+        and a.BACSIKETLUAN_ID = #BACSIKETLUAN_ID#
+      </isNotEmpty>
+    </statement>
+    <!--Revision:0,ef3329041fdcce30f0fa5c3cde89a3b2-->
+    <statement id="DAO00046_GetDSKQCDHAByTiepNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.*
+      from TT_CLSKETQUA A
+      inner join TM_DICHVU B on A.DICHVU_ID = B.DICHVU_ID
+      inner join TM_NHOMDICHVU C on C.NHOMDICHVU_ID = B.NHOMDICHVU_ID
+      where exists (select DVYEUCAU_ID from TT_DVYEUCAU where A.DVYEUCAU_ID = DVYEUCAU_ID and TIEPNHAN_ID = $TIEPNHAN_ID$)
+      and LEFT(C.MANHOMDICHVU, 2) in ('02', '03', '05', '06')
+      <!--where DVYEUCAU_ID in (select DVYEUCAU_ID from TT_DVYEUCAU where TIEPNHAN_ID = '$TIEPNHAN_ID$')
+          <dynamic prepend=" and DICHVU_ID in ">
+                <iterate open="(" close=")" conjunction=",  " property="LISTDICHVU_ID">
+                    #LISTDICHVU_ID[]#
+                </iterate>
+            </dynamic>-->
+    </statement>
+    <!--Revision:0,c12023d7e4823982d74d0d593f4d4de3-->
+    <statement id="DAO00046_GetDSKQCDHAByTiepNhanID_All" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select dvyc.DICHVU_ID ,dvyc.DICHVU_ID as DICHVUCHINH_ID, dvyc.TIEPNHAN_ID, dvyc.NOIYEUCAU_ID
+      ,dv.NHOMDICHVU_ID ,nhom .MANHOMDICHVU ,dvyc.DVYEUCAU_ID ,nhom.TENNHOMDICHVU , case when dvyc.TRANGTHAI ='HOANTAT' then 1 else 0 end DACOKETQUA
+      ,KETQUA.[CLSKETQUA_ID]
+      ,KETQUA.[NGAYTHUCHIEN]
+      ,KETQUA.[NGAYGIOTHUCHIEN] as THOIGIANTHUCHIEN
+      ,KETQUA.[NGAYGIOTHUCHIEN]
+      ,KETQUA.[GIOTHUCHIEN]
+      ,KETQUA.[THANGTHUCHIEN]
+      ,KETQUA.[NAMTHUCHIEN]
+      ,KETQUA.[CHUYENKHOATHUCHIEN_ID]
+      ,KETQUA.[BACSIGMHS_ID]
+      ,KETQUA.[KYTHUATVIEN01_ID]
+      ,KETQUA.[KYTHUATVIEN02_ID]
+      ,KETQUA.[DIEUDUONG_ID]
+      ,KETQUA.[CHANDOANLAMSANG]
+      ,KETQUA.[THUCHIENBENNGOAI]
+      ,KETQUA.[BENHVIENTHUCHIEN_ID]
+      ,KETQUA.[KHOABENNGOAI_ID]
+      ,KETQUA.[TENBACSIBENNGOAI]
+      ,KETQUA.[GUINGOAI]
+      ,KETQUA.[NOIGUIDEN_ID]
+      ,KETQUA.[ICD_ID1]
+      ,KETQUA.[ICD_ID2]
+      ,KETQUA.[ICD_ID3]
+      ,KETQUA.[DIUNGTHUOC]
+      ,KETQUA.[TIENME]
+      ,KETQUA.[DACBIET]
+      ,KETQUA.[KQCUOICUNG]
+      ,KETQUA.[THONGTINNHAN]
+      ,KETQUA.[KETLUANKSK]
+      ,KETQUA.[DENGHI]
+      ,KETQUA.[SINHTHIET]
+      ,KETQUA.[CLOTEST]
+      ,KETQUA.[PHOTO]
+      ,KETQUA.[VIDEO]
+      ,KETQUA.[TIEMCANQUANG]
+      ,KETQUA.[VUNGKHAOSAT]
+      ,KETQUA.[MACH]
+      ,KETQUA.[HUYETAP]
+      ,KETQUA.[NHIPTHO]
+      ,KETQUA.[NHIETDO]
+      ,KETQUA.[CHIEUCAO]
+      ,KETQUA.[CANNANG]
+      ,KETQUA.[BSA]
+      ,KETQUA.[TINHTRANGDIENNAO]
+      ,KETQUA.[GPB_AMSO]
+      ,KETQUA.[GPB_PHANLOAIKETQUA_ID]
+      ,KETQUA.[GPB_PHUONGPHAPLAYBENHPHAM_ID]
+      ,KETQUA.[GPB_SOMAU]
+      ,KETQUA.[GPB_SOLUONGMAU]
+      ,KETQUA.[GPB_TOPO_ID]
+      ,KETQUA.[GPB_TOPOREGIONS_ID]
+      ,KETQUA.[GPB_MORPHO_ID]
+      ,KETQUA.[GPB_ETIO_ID]
+      ,KETQUA.[GPB_DAITHE]
+      ,KETQUA.[GPB_VITHE]
+      ,KETQUA.[GPB_NHUOM_HE]
+      ,KETQUA.[GPB_NHUOM_PAS]
+      ,KETQUA.[GPB_NHUOM_TRI]
+      ,KETQUA.[GPB_NHUOM_AFB]
+      ,KETQUA.[GPB_NHUOM_GIEMSA]
+      ,KETQUA.[GPB_NHUOM_PAPANICOLAOU]
+      ,KETQUA.[GPB_NHUOM_RETICULINE]
+      ,KETQUA.[GPB_NHUOM_OTHER]
+      ,KETQUA.[GPB_HOAMIENDICH]
+      ,KETQUA.[GPB_HOAMIENDICHHUYNHQUANG]
+      ,KETQUA.[GPB_HOICHAN]
+      ,KETQUA.[GPB_MAUTHU]
+      ,KETQUA.[GPB_NOILAYMAUTHU]
+      ,KETQUA.[HLVIKHUAN1]
+      ,KETQUA.[HLVIKHUAN2]
+      ,KETQUA.[LOAIFILM_ID]
+      ,KETQUA.[MAPHIM]
+      ,KETQUA.[SOPHIMSUDUNG]
+      ,KETQUA.[LOAIFILM_ID2]
+      ,KETQUA.[SOPHIMSUDUNG2]
+      ,KETQUA.[LOAIFILM_ID3]
+      ,KETQUA.[SOPHIMSUDUNG3]
+      ,KETQUA.[THIETBI_ID]
+      ,KETQUA.[MAUTHU_ID]
+      ,KETQUA.[THOIGIANNHAN]
+      ,KETQUA.[MAU]
+      ,KETQUA.[LOAITHUOCCANQUANG_ID]
+      ,KETQUA.[MA]
+      ,KETQUA.[IDHINH]
+      ,KETQUA.[SOPHIMHU]
+      ,KETQUA.[LOAIPHIMHU_ID]
+      ,KETQUA.[DOSOI]
+      ,KETQUA.[DOSOI_ID]
+      ,KETQUA.[BANKINHSOI]
+      ,KETQUA.[SODT]
+      ,KETQUA.[KYTHUAT]
+      ,KETQUA.[KYTHUAT_TEXT]
+      ,KETQUA.[RESISTANCEMARKERS]
+      ,KETQUA.[SOTHUOCSUDUNG]
+      ,KETQUA.[SOLUONGONG]
+      ,KETQUA.[SOMLMAU]
+      ,KETQUA.[THOIGIANLAYMAU]
+      ,KETQUA.[THOIGIANNHANMAU]
+      ,KETQUA.[THOIGIANCDBENHPHAM]
+      ,KETQUA.[DUNGDICHCD_ID]
+      ,KETQUA.[SOONGTHUCNHAN]
+      ,KETQUA.[VITRISOI]
+      ,KETQUA.[SAMPLEID]
+      ,KETQUA.[PHANLOAIKETQUA_ID]
+      ,KETQUA.[MOTA]
+      ,KETQUA.[MOTA_TEXT]
+      ,KETQUA.[KETLUAN]
+      ,KETQUA.[GHICHU]
+      ,dvyc.[TRANGTHAI]
+      ,KETQUA.[KHOADULIEU]
+      ,KETQUA.[NGAYKHOADULIEU]
+      ,KETQUA.[THOIGIANKHOADULIEU]
+      from TT_DVYEUCAU dvyc
+      inner join TM_DICHVU dv on dvyc.DICHVU_ID =dv.DICHVU_ID
+      inner join TM_NHOMDICHVU nhom on dv.NHOMDICHVU_ID =nhom.NHOMDICHVU_ID
+      left join TT_CLSKETQUA ketqua on dvyc.dvyeucau_id=ketqua.dvyeucau_id
+      where  dvyc.TIEPNHAN_ID = '$TIEPNHAN_ID$' and dvyc.HUYYEUCAU='0'
+      <isNotEmpty prepend="and" property="MANHOMDICHVU">
+        <!--dvyc.DICHVU_ID in (select DICHVU_ID from TM_DICHVU
+        where NHOMDICHVU_ID in (select NHOMDICHVU_ID from TM_NHOMDICHVU where left(MANHOMDICHVU,2) in ($MANHOMDICHVU$) ))-->
+        exists (select DICHVU_ID from TM_DICHVU a join TM_NHOMDICHVU b on a.NHOMDICHVU_ID = b.NHOMDICHVU_ID
+        where dvyc.DICHVU_ID = DICHVU_ID and left(b.MANHOMDICHVU,2) in ($MANHOMDICHVU$))
+      </isNotEmpty>
+
+      <!--<dynamic prepend=" and dvyc.DICHVU_ID in ">
+                <iterate open="(" close=")" conjunction=",  " property="LISTDICHVU_ID">
+                    #LISTDICHVU_ID[]#
+                </iterate>
+            </dynamic>-->
+    </statement>
+  </statements>
+</sqlMap>

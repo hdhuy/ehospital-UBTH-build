@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,1d5425349c644caed1e80f43e9f5a8a8-->
+        <statement id="DAO00084_GetListLoaiThanhVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *, THETHANHVIEN_ID as LOAITHANHVIEN_ID, TENTHETHANHVIEN as TENLOAITHANHVIEN
+            from TM_CSKH_THETHANHVIEN
+            where BENHVIEN_ID = '$BENHVIEN_ID$' and (TAMNGUNG = '0' or TAMNGUNG is null) and convert(date, THOIGIANBANTHE) &lt;= convert(date, getdate())
+            order by THETHANHVIEN_ID
+        </statement>
+        <!--Revision:0,f536417656f9943436f1c90435758bf7-->
+        <statement id="DAO00084_GetListLoaiThanhVienDanhMuc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *, THETHANHVIEN_ID as LOAITHANHVIEN_ID, TENTHETHANHVIEN as TENLOAITHANHVIEN
+            from TM_CSKH_THETHANHVIEN
+            where BENHVIEN_ID = '$BENHVIEN_ID$' and (TAMNGUNG = '0' or TAMNGUNG is null)
+            order by THETHANHVIEN_ID
+        </statement>
+        <statement id="DAO00084_GetListDichVuKhamNgoaiTru" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select dv.*, loaiDV.MALOAIDICHVU, captren.NHOMDICHVU_ID as NHOMDICHVU_CAPTREN_ID, captren.TENNHOMDICHVU as NHOMDICHVU_CAPTREN,
+          nhom_dv.TENNHOMDICHVU as TENNHOMDICHVU, nhom_dv.MANHOMDICHVU,
+          case when dv.ATTRIBUTE5 is null then 'TT' else 'KTC' end as LOAI_CHIPHI
+          from TM_DICHVU as dv
+          left join TM_NHOMDICHVU as nhom_dv on nhom_dv.NHOMDICHVU_ID = dv.NHOMDICHVU_ID and nhom_dv.BENHVIEN_ID = '$BENHVIEN_ID$'
+          left join TM_NHOMDICHVU as captren on nhom_dv.CAPTREN_ID = captren.NHOMDICHVU_ID and captren.BENHVIEN_ID = '$BENHVIEN_ID$'
+          left join TM_LOAIDICHVU loaiDV on nhom_dv.LOAIDICHVU_ID = loaiDV.LOAIDICHVU_ID and loaiDV.BENHVIEN_ID = '$BENHVIEN_ID$'
+          where nhom_dv.TAMNGUNG = '0'
+          and dv.TAMNGUNG = '0'
+          and nhom_dv.MANHOMDICHVU = '04'
+          and dv.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+      <statement id="DAO00084_GetListPhongKhamByDichVuID" resultClass="DataObject">
+        select pb.PHONGBAN_ID, pb.TENPHONGBAN, case when dv.ATTRIBUTE5 is null then 'TT' else 'KTC' end as LOAI_CHIPHI
+        from TM_PHONGBAN_DICHVU as pb_dv
+        inner join TM_PHONGBAN as pb on pb.PHONGBAN_ID = pb_dv.PHONGBAN_ID and pb.BENHVIEN_ID = '$BENHVIEN_ID$'
+        inner join TM_DICHVU dv on dv.DICHVU_ID = pb_dv.DICHVU_ID and dv.DICHVU_ID = '$DICHVU_ID$' and dv.BENHVIEN_ID = '$BENHVIEN_ID$'
+        where pb_dv.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,83dd537c6c1d04d71e979f8585e5d429-->
+        <statement id="DAO00049_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT
+            DV.DICHVU_ID, DV.MADICHVU, DV.TENDICHVU, DV.ATTRIBUTE5 , DV.NHOMDICHVU_ID,
+            NDV.TENNHOMDICHVU,DV.CAP,
+            LDV.LOAIDICHVU_ID,LDV.MALOAIDICHVU, LDV.TENLOAIDICHVU
+            FROM
+            TM_DICHVU DV,
+            TM_NHOMDICHVU NDV,
+            TM_LOAIDICHVU LDV
+            WHERE
+            DV.NHOMDICHVU_ID = NDV.NHOMDICHVU_ID
+            AND NDV.LOAIDICHVU_ID = LDV.LOAIDICHVU_ID
+            AND DV.TAMNGUNG = 0
+            and DV.BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isNotEmpty prepend="and" property="MALOAIDICHVU">
+                MALOAIDICHVU = '$MALOAIDICHVU$'
+            </isNotEmpty>
+            ORDER BY LOAIDICHVU_ID
+        </statement>
+        <!--Revision:0,fc8769cca4720e796ab18447f73233f8-->
+        <statement id="DAO00049_KiemtraloaiDV" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          <!--select DICHVU_ID AS HA, '' AS XN, '' as TDCN, '' as TT, '' as KB from dbo.VIEW_DICHVU_NHOMDV
+          where (CAPTREN_ID in (select NHOMDICHVU_ID from TM_NHOMDICHVU where (MANHOMDICHVU = '02'))  or CAPTREN_ID is null) AND DICHVU_ID = '$DICHVU_ID$'
+          union
+          select  '' as HA, DICHVU_ID AS XN, '' as TDCN, '' as TT, '' as KB from dbo.VIEW_DICHVU_NHOMDV
+          where (CAPTREN_ID in (select NHOMDICHVU_ID from TM_NHOMDICHVU where (MANHOMDICHVU = '01'))  or CAPTREN_ID is null) AND DICHVU_ID = '$DICHVU_ID$'
+          union
+          select  '' as HA, '' AS XN, DICHVU_ID as TDCN, '' as TT, '' as KB from dbo.VIEW_DICHVU_NHOMDV
+          where (CAPTREN_ID in (select NHOMDICHVU_ID from TM_NHOMDICHVU where (MANHOMDICHVU = '03')) or CAPTREN_ID is null) AND DICHVU_ID = '$DICHVU_ID$'
+          union
+          SELECT '' as HA, '' AS XN,'' as TDCN,  DV.DICHVU_ID as TT, '' as KB
+          FROM  TM_DICHVU DV, TM_NHOMDICHVU NDV, TM_LOAIDICHVU LDV
+          WHERE DV.NHOMDICHVU_ID = NDV.NHOMDICHVU_ID
+          AND NDV.LOAIDICHVU_ID = LDV.LOAIDICHVU_ID
+          AND DV.TAMNGUNG = 0
+          AND (MALOAIDICHVU = 'PhauThuat' OR MALOAIDICHVU = 'ThuThuat')
+          AND DV.DICHVU_ID = '$DICHVU_ID$'
+          union
+          SELECT '' as HA, '' AS XN,'' as TDCN,  '' as TT, DV.DICHVU_ID as KB
+          FROM  TM_DICHVU DV, TM_NHOMDICHVU NDV, TM_LOAIDICHVU LDV
+          WHERE DV.NHOMDICHVU_ID = NDV.NHOMDICHVU_ID
+          AND NDV.LOAIDICHVU_ID = LDV.LOAIDICHVU_ID
+          AND DV.TAMNGUNG = 0
+          AND MALOAIDICHVU = 'KhamBenh'
+          AND DV.DICHVU_ID = '$DICHVU_ID$'-->
+          select DICHVU_ID AS HA, '' AS XN, '' as TDCN, '' as TT, '' as KB from TM_DICHVU
+          left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = TM_DICHVU.NHOMDICHVU_ID
+          where DICHVU_ID = '$DICHVU_ID$' and left(ndv.MANHOMDICHVU, 2) = '02'
+          union
+          select  '' as HA, DICHVU_ID AS XN, '' as TDCN, '' as TT, '' as KB from TM_DICHVU
+          left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = TM_DICHVU.NHOMDICHVU_ID
+          where DICHVU_ID = '$DICHVU_ID$' and left(ndv.MANHOMDICHVU, 2) = '01'
+          union
+          select  '' as HA, '' AS XN, DICHVU_ID as TDCN, '' as TT, '' as KB from TM_DICHVU
+          left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = TM_DICHVU.NHOMDICHVU_ID
+          where DICHVU_ID = '$DICHVU_ID$' and left(ndv.MANHOMDICHVU, 2) = '03'
+          union
+          select  '' as HA, '' AS XN, '' as TDCN, DICHVU_ID as TT, '' as KB from TM_DICHVU
+          left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = TM_DICHVU.NHOMDICHVU_ID
+          where DICHVU_ID = '$DICHVU_ID$' and left(ndv.MANHOMDICHVU, 2) = '05'
+          union
+          select  '' as HA, '' AS XN, '' as TDCN, DICHVU_ID as TT, '' as KB from TM_DICHVU
+          left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = TM_DICHVU.NHOMDICHVU_ID
+          where DICHVU_ID = '$DICHVU_ID$' and left(ndv.MANHOMDICHVU, 2) = '06'
+          union
+          select  '' as HA, '' AS XN, '' as TDCN, '' as TT, DICHVU_ID as KB from TM_DICHVU
+          left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = TM_DICHVU.NHOMDICHVU_ID
+          where DICHVU_ID = '$DICHVU_ID$' and left(ndv.MANHOMDICHVU, 2) = '04'
+        </statement>
+    </statements>
+</sqlMap>

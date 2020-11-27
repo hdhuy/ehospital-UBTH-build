@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,fd0716affb36f7e9661346ac94ee0793-->
+        <statement id="DAO00025_GetDUOC_TONKHO_BOOKING" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT 0 as NOITRUSOLUONG, 0 as NGOAITRUSOLUONG, SUM(C.SOLUONG) as SOLUONGTONKHO from TT_DUOC_TONKHO C
+            where KHODUOC_ID = '$KHODUOC_ID$' and  DUOC_ID = '$DUOC_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT 0 as NOITRUSOLUONG, SUM(A.SOLUONG) as NGOAITRUSOLUONG, 0 as SOLUONGTONKHO FROM TT_DUOC_TONKHO_BOOK_NGOAITRU A
+            where KHODUOC_ID = '$KHODUOC_ID$' and  DUOC_ID = '$DUOC_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT SUM(B.SOLUONG) as NOITRUSOLUONG, 0 as NGOAITRUSOLUONG, 0 as SOLUONGTONKHO FROM TT_DUOC_TONKHO_BOOK_NOITRU B
+            where KHODUOC_ID = '$KHODUOC_ID$' and  DUOC_ID = '$DUOC_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,2a4cb009bf7dac11e163ec3989b811dc-->
+        <statement id="DAO00025_DUOC_TONKHO_BOOKING_Clear_Getlist" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select distinct SUM(SOLUONG) as SOLUONG, PHAMVI_ID, KHODUOC_ID, DUOC_ID, NGUONHANG_ID from
+          TT_DUOC_TONKHO_BOOK_NGOAITRU
+          WHERE
+          REF_TABLE = 'TT_NGOAITRU_TOATHUOC'
+          and SOLUONG &gt; 0
+            and CONVERT(date, getdate()) &gt;  CONVERT(date, NGAYTAO)
+          group by PHAMVI_ID, KHODUOC_ID, DUOC_ID, NGUONHANG_ID
+        </statement>
+      <statement id="DAO00025_TT_TIEPNHAN_GetListUpdate" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_TIEPNHAN
+        where
+        cast(GETDATE() as date) >= cast(dateadd(day, cast((select VALUE from TM_SYS_APPSETTINGS where CODE = 'APP_DAYS_UPDATE_RECEIVE') as int),NGAYTIEPNHAN) as date)
+        and TRANGTHAI = 'DATIEPNHAN'
+        and (SOBHYT is null or len(SOBHYT) = 0)
+        and TIEPNHAN_ID not in (
+        select distinct tn.TIEPNHAN_ID from TT_TIEPNHAN tn
+        join TT_DVYEUCAU dvyc on dvyc.TIEPNHAN_ID = tn.TIEPNHAN_ID
+        join TM_DICHVU DV ON DV.DICHVU_ID = dvyc.DICHVU_ID
+        join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = dv.NHOMDICHVU_ID
+        where
+        cast(GETDATE() as date) >= cast(dateadd(day, cast((select VALUE from TM_SYS_APPSETTINGS where CODE = 'APP_DAYS_UPDATE_RECEIVE') as int), tn.NGAYTIEPNHAN) as date)
+        and tn.TRANGTHAI = 'DATIEPNHAN' and (tn.SOBHYT is null or len(tn.SOBHYT) = 0)
+        and dvyc.TRANGTHAI = 'DANGTHUCHIEN' and LEFT(ndv.MANHOMDICHVU,2) = '04')
+      </statement>
+      <statement id="DAO00025_TT_TIEPNHAN_Update" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        update TT_TIEPNHAN set TRANGTHAI = 'HOANTHANH'
+        , NGAYKHOA = getdate()
+        , KHOADULIEU = '1'
+        where
+        cast(GETDATE() as date) >= cast(dateadd(day, cast((select VALUE from TM_SYS_APPSETTINGS where CODE = 'APP_DAYS_UPDATE_RECEIVE') as int),NGAYTIEPNHAN) as date)
+        and TRANGTHAI = 'DATIEPNHAN'
+        and (SOBHYT is null or len(SOBHYT) = 0)
+        and TIEPNHAN_ID not in (
+        select distinct tn.TIEPNHAN_ID from TT_TIEPNHAN tn
+        join TT_DVYEUCAU dvyc on dvyc.TIEPNHAN_ID = tn.TIEPNHAN_ID
+        join TM_DICHVU DV ON DV.DICHVU_ID = dvyc.DICHVU_ID
+        join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = dv.NHOMDICHVU_ID
+        join TT_VIENPHI vp on vp.REF_ID = dvyc.DVYEUCAU_ID and vp.REF_TABLE = 'TT_DVYEUCAU'
+        where
+        cast(GETDATE() as date) >= cast(dateadd(day, cast((select VALUE from TM_SYS_APPSETTINGS where CODE = 'APP_DAYS_UPDATE_RECEIVE') as int), tn.NGAYTIEPNHAN) as date)
+        and tn.TRANGTHAI = 'DATIEPNHAN' and (tn.SOBHYT is null or len(tn.SOBHYT) = 0)
+        and dvyc.TRANGTHAI = 'DANGTHUCHIEN' and vp.DATHUCHIEN = '0' and LEFT(ndv.MANHOMDICHVU,2) = '04')
+      </statement>
+    </statements>
+</sqlMap>

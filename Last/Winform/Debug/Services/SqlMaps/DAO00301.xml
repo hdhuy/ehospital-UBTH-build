@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,fd1e56ca15d9ce161e398abd4ced5472-->
+        <statement id="DAO00301_GetList_NhanVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT NULL AS NHANVIEN_ID, EmpCode AS MANHANVIEN, LastName AS HO, FirstName AS TEN, CompanyCode AS BENHVIEN_ID
+            , Level2Code AS MAPHONGBAN, JobTitleCode AS MACHUCDANH, ExpertiseLevelCode AS MATRINHDOCHUYENMON
+            , Email AS EMAIL, TAMNGUNG = CASE WHEN Status = 1 THEN '0' ELSE '1' END, LastUpdated AS NGAYCAPNHAT
+            FROM HLIH_vEmpList
+            WHERE CompanyCode = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,f985630ed0f62f6b3ad9870e0e5b65ca-->
+        <statement id="DAO00301_GetList_PhongBan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT NULL AS PHONGBAN_ID, Level1Code AS MAPHONGBAN, Level1VNName AS TENPHONGBAN, Level1ENName AS TENPHONGBAN_EN, 1 AS CAP, NULL AS MAPHONGBAN_PARENT, LastUpdated AS NGAYCAPNHAT, CompanyCode AS BENHVIEN_ID
+            , TAMNGUNG = CASE WHEN Used = 1 THEN '0' ELSE '1' END
+            FROM HLIH_vLSLevel1
+            WHERE CompanyCode = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT NULL AS PHONGBAN_ID, L2.Level2Code AS MAPHONGBAN, L2.Level2VNName AS TENPHONGBAN, L2.Level2ENName AS TENPHONGBAN_EN, 2 AS CAP, L1.Level1Code AS MAPHONGBAN_PARENT, L2.LastUpdated AS NGAYCAPNHAT, L1.CompanyCode AS BENHVIEN_ID
+            , TAMNGUNG = CASE WHEN L2.Used = 1 THEN '0' ELSE '1' END
+            FROM HLIH_vLSLevel2 as L2
+            INNER JOIN HLIH_vLSLevel1 AS L1 ON L1.Level1Code = L2.Level1Code AND L2.CompanyCode = L1.CompanyCode
+            WHERE L1.CompanyCode = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,47fd9c6bdf3a94bbea41e6764facae3d-->
+        <statement id="DAO00301_GetList_DonVi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT NULL AS PHONGBAN_ID, Level1Code AS MAPHONGBAN, Level1VNName AS TENPHONGBAN, Level1ENName AS TENPHONGBAN_EN, 1 AS CAP, NULL AS MAPHONGBAN_PARENT, LastUpdated AS NGAYCAPNHAT, CompanyCode AS BENHVIEN_ID
+            , TAMNGUNG = CASE WHEN Used = 1 THEN '0' ELSE '1' END
+            FROM HLIH_vLSLevel1
+            WHERE CompanyCode = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,b456c2afc4b812bb639bf97c18f97690-->
+        <statement id="DAO00301_GetList_ChucDanh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT NULL AS DICTIONARY_ID, JobTitleCode AS DICTIONARY_CODE, JobTitleVNName AS DICTIONARY_NAME, JobTitleENName AS DICTIONARY_NAME_EN, LastUpdated AS LAST_UPDATE_DATE
+            FROM HLIH_vLSJobTitle
+        </statement>
+        <!--Revision:0,1f480c91e3cf39c1b35e2e2fcc8d310f-->
+        <statement id="DAO00301_GetList_TrinhDoChuyenMon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT NULL AS DICTIONARY_ID, ExpertiseLevelCode AS DICTIONARY_CODE, ExpertiseLevelVNName AS DICTIONARY_NAME, ExpertiseLevelENName AS DICTIONARY_NAME_EN
+            FROM HLIH_vLSExpertiseLevel
+        </statement>
+        <!--Revision:0,0c727bc4697cf8a12b0f41a22aedb162-->
+        <statement id="DAO00301_GetList_CongTy" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT CompanyCode AS MACONGTY, CompanyVNName AS TENCONGTY, CompanyENName AS TENCONGTY_EN
+            FROM HLIH_vLSCompany
+            WHERE CompanyCode = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

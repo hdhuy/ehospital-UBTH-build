@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Localization>
+  <vi-vn>
+    <!-- Require messages -->
+    <string id="V0000001" string="{0} không thể để trống."/>
+    <string id="V0000002" string="{0} phải từ {1} đến {2} ký tự."/>
+    <string id="V0000003" string="Chưa chọn {0}."/>
+    <string id="V0000004" string="{0} không hợp lệ."/>
+    <string id="V0000005" string="{0} không hợp lệ, vui lòng nhập ngày có năm lớn hơn 1900."/>
+    <string id="V0000006" string="{0} phải ít nhất {1} ký tự."/>
+    <string id="V0000007" string="{0} đã tồn tại."/>
+    <string id="V0000008" string="Hoạt chất 2 không thể trùng với hoạt chất 1"/>
+    <string id="V0000009" string="Trùng người sử dụng"/>
+    <string id="V0000010" string="Dịch vụ {0} đã được chọn trong nhóm {1}"/>
+    <string id="V0000011" string="Cấp trên không thể trùng hoặc nằm trong nhánh của dòng đã chọn"/>
+    <string id="V0000012" string="Chuỗi gõ tắt không được trùng nhau"/>
+    <string id="V0000013" string="Mật khẩu và xác nhận mật khẩu mới không trùng khớp"/>
+    <string id="V0000014" string="Độ dài mật khẩu phải ít nhất {0} ký tự và nhiều nhất {1} ký tự"/>
+    <string id="V0000015" string="Mật khẩu hiện tại không chính xác"/>
+    <string id="V0000016" string="Mật khẩu mới trùng với mật khẩu hiện tại"/>
+    <string id="V0000017" string="Từ ngày không thể lớn hơn đến ngày"/>
+    <string id="V0000018" string="Mã nhà cung cấp không thể trùng với mã đã tồn tại"/>
+    <string id="V0000019" string="Ngày cung cấp không thể nhỏ hơn ngày hợp đồng"/>
+    <string id="V0000020" string="Ngày hết hạn không thể nhỏ hơn ngày cung cấp"/>
+    <string id="V0000021" string="{0} phải là kiểu số"/>
+    <string id="V0000022" string="Số bệnh án không được để trống"/>
+    <string id="V0000023" string="Dịch vụ phẩu thuật không được để trống"/>
+    <string id="V0000024" string="Phòng mổ không được để trống"/>
+    <string id="V0000025" string="Số ngày sử dụng phải lớn hơn 0"/>
+    <string id="V0000026" string="Không tồn tại file báo cáo trong hệ thống"/>
+    <string id="V0000027" string="Đăng nhập vào phòng ban thực hiện trước khi lưu"/>
+    <string id="V0000028" string="Trùng mã buổi ăn"/>
+
+    <!-- Range messages -->
+    <string id="V0000100" string="Nhập phạm vi mã ICD không đúng"/>
+    <string id="V0000101" string="Không được nhập khác ký tự đầu tiên trong một phạm vi mã ICD"/>
+    <string id="V0000102" string="Số thứ tự mã ICD cuối cùng không thể nhỏ hơn mã ICD đầu tiên"/>
+    <string id="V0000103" string="Mã ICD {0} không tồn tại"/>
+    <string id="V0000104" string="{0} không thể nhỏ hơn {1}"/>
+    <string id="V0000105" string="{0} không thể lớn hơn {1}"/>
+
+    <!-- String length messages -->
+    
+    <!-- Email messages -->
+
+    <!-- Min length messages -->
+
+    <!-- Max length messages -->
+
+    <!-- CreditCard messages -->
+    
+  </vi-vn>
+</Localization>

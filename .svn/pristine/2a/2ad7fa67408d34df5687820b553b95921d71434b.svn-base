@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,43d15af039cd8d3fdab7ee4a8522c129-->
+        <statement id="DAO00050_GetAll" resultClass="DataObject">
+            select *
+            from LST_KEYDATA_DICHVU
+            order by KEYTYPE
+        </statement>
+        <!--Revision:0,d5a87cd4644d1cc1dc7fa153eb834251-->
+        <statement id="DAO00050_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from LST_KEYDATA_DICHVU
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="KEYTYPE">
+                    LST_KEYDATA_DICHVU.KEYTYPE = '$KEYTYPE$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYYEAR">
+                    LST_KEYDATA_DICHVU.KEYYEAR = '$KEYYEAR$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYMONTH">
+                    LST_KEYDATA_DICHVU.KEYMONTH = '$KEYMONTH$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYDAY">
+                    LST_KEYDATA_DICHVU.KEYDAY = '$KEYDAY$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="SEGMENT_1">
+                    LST_KEYDATA_DICHVU.SEGMENT_1 = '$SEGMENT_1$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="SEGMENT_2">
+                    LST_KEYDATA_DICHVU.SEGMENT_2 = '$SEGMENT_2$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="SEGMENT_3">
+                    LST_KEYDATA_DICHVU.SEGMENT_3 = '$SEGMENT_3$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYVALUE">
+                    LST_KEYDATA_DICHVU.KEYVALUE = '$KEYVALUE$'
+                </isNotEmpty>
+            </isParameterPresent>
+            order by KEYTYPE
+        </statement>
+        <!--Revision:0,4a187acca45663c4d4f87ebe28cce382-->
+        <statement id="DAO00050_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from LST_KEYDATA_DICHVU
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="KEYTYPE">
+                        LST_KEYDATA_DICHVU.KEYTYPE = '$KEYTYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYYEAR">
+                        LST_KEYDATA_DICHVU.KEYYEAR = '$KEYYEAR$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYMONTH">
+                        LST_KEYDATA_DICHVU.KEYMONTH = '$KEYMONTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYDAY">
+                        LST_KEYDATA_DICHVU.KEYDAY = '$KEYDAY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_1">
+                        LST_KEYDATA_DICHVU.SEGMENT_1 = '$SEGMENT_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_2">
+                        LST_KEYDATA_DICHVU.SEGMENT_2 = '$SEGMENT_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_3">
+                        LST_KEYDATA_DICHVU.SEGMENT_3 = '$SEGMENT_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYVALUE">
+                        LST_KEYDATA_DICHVU.KEYVALUE = '$KEYVALUE$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by KEYTYPE
+        </statement>
+        <!--Revision:0,f051200efa7c2383bfa794be11076b6a-->
+        <statement id="DAO00050_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from LST_KEYDATA_DICHVU
+            where LST_KEYDATA_DICHVU.KEYTYPE  = '$KEYTYPE$'
+            order by KEYTYPE
+        </statement>
+        <!--Revision:0,f8cc0ba61ab4af75f5c79b5a972ed1d3-->
+        <insert id="DAO00050_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into LST_KEYDATA_DICHVU (
+            KEYTYPE
+            , KEYYEAR
+            , KEYMONTH
+            , KEYDAY
+            , SEGMENT_1
+            , SEGMENT_2
+            , SEGMENT_3
+            , KEYVALUE
+            ) values (
+            #KEYTYPE#
+            , #KEYYEAR#
+            , #KEYMONTH#
+            , #KEYDAY#
+            , #SEGMENT_1#
+            , #SEGMENT_2#
+            , #SEGMENT_3#
+            , #KEYVALUE#
+            )
+        </insert>
+        <!--Revision:0,62e0e87219234e722e0455b518832e04-->
+        <update id="DAO00050_Update" parameterClass="System.Collections.IDictionary">
+            update LST_KEYDATA_DICHVU set
+            KEYVALUE = #KEYVALUE#
+            where
+            KEYTYPE = '$KEYTYPE$'
+            AND KEYYEAR = '$KEYYEAR$'
+            AND KEYMONTH = '$KEYMONTH$'
+            AND KEYDAY = '$KEYDAY$'
+            AND SEGMENT_1 = '$SEGMENT_1$'
+            AND SEGMENT_2 = '$SEGMENT_2$'
+            AND SEGMENT_3 = '$SEGMENT_3$'
+        </update>
+        <!--Revision:0,1c61e6fc8d070e82cb0ed9ce48b2e885-->
+        <statement id="DAO00050_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from LST_KEYDATA_DICHVU
+            where
+            KEYTYPE = '$KEYTYPE$'
+            AND KEYYEAR = '$KEYYEAR$'
+            AND KEYMONTH = '$KEYMONTH$'
+            AND KEYDAY = '$KEYDAY$'
+            AND SEGMENT_1 = '$SEGMENT_1$'
+            AND SEGMENT_2 = '$SEGMENT_2$'
+            AND SEGMENT_3 = '$SEGMENT_3$'
+        </statement>
+        <!--Revision:0,2f760fb91c86b9411512902e8bcbd1ac-->
+        <statement id="DAO00050_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from LST_KEYDATA_DICHVU
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="KEYTYPE">
+                        LST_KEYDATA_DICHVU.KEYTYPE = '$KEYTYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYYEAR">
+                        LST_KEYDATA_DICHVU.KEYYEAR = '$KEYYEAR$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYMONTH">
+                        LST_KEYDATA_DICHVU.KEYMONTH = '$KEYMONTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYDAY">
+                        LST_KEYDATA_DICHVU.KEYDAY = '$KEYDAY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_1">
+                        LST_KEYDATA_DICHVU.SEGMENT_1 = '$SEGMENT_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_2">
+                        LST_KEYDATA_DICHVU.SEGMENT_2 = '$SEGMENT_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_3">
+                        LST_KEYDATA_DICHVU.SEGMENT_3 = '$SEGMENT_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYVALUE">
+                        LST_KEYDATA_DICHVU.KEYVALUE = '$KEYVALUE$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,1fc3fa001cc44fc0b563d184b92eb667-->
+        <statement id="DAO00001_GetDB" parameterClass="System.String" resultClass="DataObject">
+            select *
+            from TM_SYS_SERVER
+            where HOSPITAL_ID = '$VALUE$' and TYPE = 'D'
+        </statement>
+        <!--Revision:0,d1302a95dd1943e1fd316cb0ca93ff5d-->
+        <statement id="DAO00001_GetAS" parameterClass="System.String" resultClass="DataObject">
+            select *
+            from TM_SYS_SERVER
+            where HOSPITAL_ID = '$VALUE$' and TYPE = 'S'
+        </statement>
+        <!--Revision:0,7f847ce914b834d7b6ee1785c4442318-->
+        <statement id="DAO00001_ServiceList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select
+            TM_SYS_SERVICEMAP.ID,
+            TM_SYS_SERVICEMAP.HOSPITAL_ID,
+            TM_SYS_SERVICEMAP.DB_NAME,
+            TM_SYS_SERVICEMAP.TYPE,
+            TM_SYS_SERVICEMAP.NAME,
+            TM_SYS_SERVICEMAP.CLASS,
+            (TM_SYS_DIC.VALUE || '.' || TM_SYS_SERVICEMAP.CLASS) as CLASSFULL,
+            TM_SYS_SERVICEMAP.ASSEMBLY,
+            TM_SYS_SERVER.URL
+            from TM_SYS_SERVICEMAP
+            inner join TM_SYS_DIC on TM_SYS_SERVICEMAP.NAMESPACE = TM_SYS_DIC.ID
+            inner join TM_SYS_SERVER on (TM_SYS_SERVICEMAP.DB_NAME = TM_SYS_SERVER.NAME) and (TM_SYS_SERVER.HOSPITAL_ID = '$HOSPITAL_ID$')
+            where TM_SYS_SERVICEMAP.HOSPITAL_ID = '$HOSPITAL_ID$' AND TM_SYS_SERVICEMAP.TYPE = 'S'  AND ACTIVE = '1'
+            order by URL
+        </statement>
+        <!--Revision:0,8dba8b47cb94ae05bc8997261c943643-->
+        <statement id="DAO00001_DaoList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select
+            TM_SYS_SERVICEMAP.ID,
+            TM_SYS_SERVICEMAP.HOSPITAL_ID,
+            TM_SYS_SERVICEMAP.DB_NAME,
+            TM_SYS_SERVICEMAP.TYPE,
+            TM_SYS_SERVICEMAP.NAME,
+            TM_SYS_SERVICEMAP.CLASS,
+            (TM_SYS_DIC.VALUE || '.' || TM_SYS_SERVICEMAP.CLASS) as CLASSFULL,
+            TM_SYS_SERVICEMAP.ASSEMBLY
+            from TM_SYS_SERVICEMAP
+            inner join TM_SYS_DIC
+            on TM_SYS_SERVICEMAP.NAMESPACE = TM_SYS_DIC.ID
+            where HOSPITAL_ID = '$HOSPITAL_ID$' AND TYPE = 'D' AND ACTIVE = '1'
+            order by DB_NAME
+        </statement>
+        <!--Revision:0,6900730421353c552e029442e5bfd6bf-->
+        <statement id="DAO00001_DBList" parameterClass="System.String" resultClass="DataObject">
+            select *
+            from TM_SYS_SERVER
+            where HOSPITAL_ID = '$VALUE$' and TYPE = 'D'
+        </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="iBATIS">
+      <section name="logging" type="IBatisNet.Common.Logging.ConfigurationSectionHandler, IBatisNet.Common"/>
+    </sectionGroup>
+  </configSections>
+  
+  <startup useLegacyV2RuntimeActivationPolicy="true">
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2"/>
+  </startup>
+  <appSettings>
+    <add key="AppConfigFile" value="eHospital.config"/>
+    <add key="ProgramIcon" value="iconUngdung.ico"/>
+    
+    <add key="ResourceFolder" value="d:\Dev\Resource\Data"/>
+    <add key="ReportFolder" value="d:\Working\eHospital\trunk\02.eHospital\06.Reports"/>
+    <!--<add key="TemplateDirectory" value="C:\Dev\Resource\Template\" />-->
+    <add key="DynamicDirectory" value="e:\Dev\Resource\Dynamic\"/>    
+    <add key="TempDirectory" value="E:\HOALAM\Resources\Temp\"/>
+    
+    <!--<add key="WorkFlow" value="allow" />-->
+    <!--<add key="WorkFlowApiUrl" value="http://localhost:58830//api/" />-->
+    <!--<add key="WorkFlowApiUrl" value="http://10.86.222.71:1011/api/" />-->
+    <add key="WorkFlowDirect" value="true"/>
+    <add key="WorkFlowApiUrl" value="http://10.86.222.210:82/api/"/>
+
+    <add key="ClientSettingsProvider.ServiceUri" value=""/>
+    <add key="BuildNumber" value="1"/>
+
+    <!--Url của Redis cache server-->
+    <add key="CacheUrl" value="localhost:6379"/>
+    <!--Url của ElasticSearch server-->
+    <add key="SearchUrl" value="http://10.86.224.18:9200"/>
+    <!--Sử dụng elasticsearch hay không?-->
+    <add key="ElasticSearch" value="true"/>
+    <add key="SearchIndexPrefix" value="eHos"/>
+    <!--Enable/Disable Using long queries, for default value (30ms) please set this to zero -->
+    <add key="DBCommandTimeout" value="30"/>
+    <add key="DebugHospitalID" value="FPT00001"/>
+
+    <!--Mesage queue connection information-->
+    <add key="QueueFactory" value="RabbitMQ.RabbitMQFactory"/>
+    <add key="QueueAssembly" value="FPT.Framework.MesageQueue.RabbitMQ"/>
+    <add key="QueueHost" value="10.86.222.72"/>
+    <add key="QueuePort" value="5672"/>
+    <add key="QueueUser" value="qtest"/>
+    <add key="QueuePassWord" value="qtest123"/>
+    <add key="QueueExchange" value="topic_logs"/>
+    <add key="QueueType" value="topic"/>
+    <add key="QueueDirect" value="nurse"/>
+    <add key="QueueRoutingKey" value="victim"/>
+  </appSettings>
+  <runtime>
+    <NetFx40_LegacySecurityPolicy enabled="true"/>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-12.0.0.0" newVersion="12.0.0.0"/>
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri=""/>
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400"/>
+      </providers>
+    </roleManager>
+  </system.web>
+
+  <!--For iBatis-->  
+  <iBATIS>
+    <logging>
+      <logFactoryAdapter type="FPT.Framework.DataAccess.Log4netLoggerFA, FPT.Framework.DataAccess.iBatis">
+        <arg key="configType" value="file"/>
+        <arg key="configFile" value="log4net.config"/>
+      </logFactoryAdapter>
+    </logging>
+  </iBATIS>
+
+</configuration>

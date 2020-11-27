@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <statement id="DAO00308_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select DICTIONARY_ID, DICTIONARY_CODE, DICTIONARY_NAME
+      from LST_DICTIONARY
+      where DICTIONARY_TYPE_CODE = 'PhanLoaiKSK'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00308_AddGoiDichVu" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TT_KSK_HOPDONG_GOIDICHVU (
+      HOPDONG_ID
+      , GOIDICHVU_ID
+      , BENHVIEN_ID
+      , NGAYTAO
+      , NGUOITAO_ID
+      , NGAYCAPNHAT
+      , NGUOICAPNHAT_ID
+      ) values (
+      #HOPDONG_ID#
+      , #GOIDICHVU_ID#
+      , #BENHVIEN_ID#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      , #NGAYCAPNHAT#
+      , #NGUOICAPNHAT_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+
+    <update id="DAO00308_UpdateGoiDichVu" parameterClass="System.Collections.IDictionary">
+      update TT_KSK_HOPDONG_GOIDICHVU set
+      HOPDONG_ID = #HOPDONG_ID#
+      , GOIDICHVU_ID = #GOIDICHVU_ID#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      HOPDONG_GOIDICHVU_ID = '$HOPDONG_GOIDICHVU_ID$'
+    </update>
+
+    <statement id="DAO00308_DeleteGoiDichVu" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_KSK_HOPDONG_GOIDICHVU
+      where
+      HOPDONG_GOIDICHVU_ID = '$HOPDONG_GOIDICHVU_ID$'
+    </statement>
+    <statement id="DAO00308_DeleteGoiDichVuContract" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_KSK_HOPDONG_GOIDICHVU
+      where
+      HOPDONG_ID = '$HOPDONG_ID$' and GOIDICHVU_ID IN (SELECT * FROM DBO.SPLIT('$DEL$',', '))
+    </statement>
+    <statement id="DAO00308_LockAndUnLockContract" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      UPDATE TT_KSK_HOPDONG SET
+      KHOA = #KHOA#,
+      THOIGIANKHOA = #THOIGIANKHOA#,
+      NGUOIKHOA_ID = #NGUOIKHOA_ID#
+      WHERE HOPDONG_ID = '$HOPDONG_ID$'
+    </statement>
+    <statement id="DAO00308_AddBenhNhanDichVu" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TT_KSK_HOPDONG_BENHNHAN_DICHVU (
+      HOPDONG_ID
+      , HOPDONG_BENHNHAN_ID
+      , DICHVU_ID
+      , PHONGBAN_ID
+      , TIEPNHAN_ID
+      , DVYEUCAU_ID
+      , SOPHIEUYEUCAU
+      , VIENPHI_ID
+      , DATHUTIEN
+      , DATHUCHIEN
+      , TRANGTHAI
+      , DATAOPHIEU
+      , BATTHUONG
+      , MUCBINHTHUONGMIN
+      , MUCBINHTHUONGMAX
+      , INBC
+      , N
+      , A
+      , NE
+      , KETQUA
+      , DENGHI
+      , KETLUAN
+      , BENHVIEN_ID
+      , NGAYTAO
+      , NGUOITAO_ID
+      , NGAYCAPNHAT
+      , NGUOICAPNHAT_ID
+      ) values (
+      #HOPDONG_ID#
+      , #HOPDONG_BENHNHAN_ID#
+      , #DICHVU_ID#
+      , #PHONGBAN_ID#
+      , #TIEPNHAN_ID#
+      , #DVYEUCAU_ID#
+      , #SOPHIEUYEUCAU#
+      , #VIENPHI_ID#
+      , #DATHUTIEN#
+      , #DATHUCHIEN#
+      , #TRANGTHAI#
+      , #DATAOPHIEU#
+      , #BATTHUONG#
+      , #MUCBINHTHUONGMIN#
+      , #MUCBINHTHUONGMAX#
+      , #INBC#
+      , #N#
+      , #A#
+      , #NE#
+      , #KETQUA#
+      , #DENGHI#
+      , #KETLUAN#
+      , #BENHVIEN_ID#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      , #NGAYCAPNHAT#
+      , #NGUOICAPNHAT_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+
+    <update id="DAO00308_UpdateBenhNhanDichVu" parameterClass="System.Collections.IDictionary">
+      update TT_KSK_HOPDONG_BENHNHAN_DICHVU set
+      HOPDONG_ID = #HOPDONG_ID#
+      , HOPDONG_BENHNHAN_ID = #HOPDONG_BENHNHAN_ID#
+      , DICHVU_ID = #DICHVU_ID#
+      , PHONGBAN_ID = #PHONGBAN_ID#
+      , TIEPNHAN_ID = #TIEPNHAN_ID#
+      , DVYEUCAU_ID = #DVYEUCAU_ID#
+      , SOPHIEUYEUCAU = #SOPHIEUYEUCAU#
+      , VIENPHI_ID = #VIENPHI_ID#
+      , DATHUTIEN = #DATHUTIEN#
+      , DATHUCHIEN = #DATHUCHIEN#
+      , TRANGTHAI = #TRANGTHAI#
+      , DATAOPHIEU = #DATAOPHIEU#
+      , BATTHUONG = #BATTHUONG#
+      , MUCBINHTHUONGMIN = #MUCBINHTHUONGMIN#
+      , MUCBINHTHUONGMAX = #MUCBINHTHUONGMAX#
+      , INBC = #INBC#
+      , N = #N#
+      , A = #A#
+      , NE = #NE#
+      , KETQUA = #KETQUA#
+      , DENGHI = #DENGHI#
+      , KETLUAN = #KETLUAN#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      HOPDONG_DICHVU_BENHNHAN_ID = '$HOPDONG_DICHVU_BENHNHAN_ID$'
+    </update>
+
+    <statement id="DAO00308_DeleteBenhNhanDichVu" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_KSK_HOPDONG_BENHNHAN_DICHVU
+      where
+      HOPDONG_BENHNHAN_ID = '$HOPDONG_BENHNHAN_ID$'
+    </statement>
+    <statement id="DAO00308_AddTeamKSK" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into dbo.TT_KSK_HOPDONG_TEAMKSK (
+      HOPDONG_ID
+      , NHANVIEN_ID
+      , VAITRO_ID
+      , IDX
+      , BENHVIEN_ID
+      ) values (
+      #HOPDONG_ID#
+      , #NHANVIEN_ID#
+      , #VAITRO_ID#
+      , #IDX#
+      , #BENHVIEN_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+
+    <update id="DAO00308_UpdateTeamKSK" parameterClass="System.Collections.IDictionary">
+      update TT_KSK_HOPDONG_TEAMKSK set
+      HOPDONG_ID = #HOPDONG_ID#
+      , NHANVIEN_ID = #NHANVIEN_ID#
+      , VAITRO_ID = #VAITRO_ID#
+      , IDX = #IDX#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      where
+      HOPDONG_TEAMKSK_ID = '$HOPDONG_TEAMKSK_ID$'
+    </update>
+    <statement id="DAO00308_DeleteTeamKSK" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_KSK_HOPDONG_TEAMKSK
+      where
+      HOPDONG_TEAMKSK_ID IN (SELECT * FROM DBO.SPLIT('$HOPDONG_TEAMKSK_ID$',', '))
+    </statement>
+    <statement id="DAO00308_CheckUserLockContract" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT *
+      FROM TT_KSK_HOPDONG
+      WHERE HOPDONG_ID = '$HOPDONG_ID$'
+    </statement>
+    <statement id="DAO00308_UpdateTrangThai" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      UPDATE TT_KSK_HOPDONG
+      SET TRANGTHAI = #TRANGTHAI#
+      WHERE HOPDONG_ID = '$HOPDONG_ID$'
+    </statement>
+    <statement id="DAO00308_StatusContract" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT * FROM TT_KSK_HOPDONG
+      WHERE HOPDONG_ID = '$HOPDONG_ID$'
+    </statement>
+    <statement id="DAO00308_UpdateConfirmStatus" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      update TT_KSK_HOPDONG_BENNHAN_DICHVU
+      set TRANGTHAI = #TRANGTHAI#
+      where HOPDONG_ID = '$HOPDONG_ID$' and HOPDONG_BENHNHAN_ID in (SELECT * FROM DBO.SPLIT('$HOPDONG_BENHNHAN_ID$',', '))
+    </statement>
+    <update id="DAO00308_UpdateContractPatientServices" parameterClass="System.Collections.IDictionary">
+      update TT_KSK_HOPDONG_BENHNHAN_DICHVU set
+      TIEPNHAN_ID = #TIEPNHAN_ID#
+      , DVYEUCAU_ID = #DVYEUCAU_ID#
+      , VIENPHI_ID = #VIENPHI_ID#
+      , SOPHIEUYEUCAU = #SOPHIEUYEUCAU#
+      , TRANGTHAI = #TRANGTHAI#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      HOPDONG_DICHVU_BENHNHAN_ID = '$HOPDONG_DICHVU_BENHNHAN_ID$'
+
+      update TT_KSK_HOPDONG_BENHNHAN_DICHVU set ACTIVE = #ACTIVE# where HOPDONG_BENHNHAN_ID = '$HOPDONG_BENHNHAN_ID$'
+    </update>
+    <statement id="DAO00308_SavePatientIM" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TT_KSK_HOPDONG_BENHNHAN (
+      HOPDONG_ID
+      , BENHNHAN_ID
+      , MAYTE
+      , TENBENHNHAN
+      , GIOITINH
+      , NGAYSINH
+      , NAMSINH
+      , DIACHI
+      , QUOCTICH_ID
+      , TINHTHANH_ID
+      , QUANHUYEN_ID
+      , XAPHUONG_ID
+      , DIACHITHUONGTRU
+      , XAPHUONGTT_ID
+      , DANTOC_ID
+      , LOAITHE
+      , SODIENTHOAI
+      , EMAIL
+      , NGHENGHIEP_ID
+      , TINHTRANGHONNHAN_ID
+      , DOITUONG_ID
+      , CMND
+      , NGAYCAPTHE
+      , NAMCAPTHE
+      , NOICAP_ID
+      , NHANVIEN_ID
+      , NHOMMAU_ID
+      , YEUTORH_ID
+      , NHOMBENH_ID
+      , TIENSUDIUNG
+      , TIENSUBENH
+      , GHICHU
+      , KETQUA
+      , XEPLOAI_ID
+      , BSKETLUAN_ID
+      , GOI_ID
+      , IDCHUYEN
+      , DACOPHIEUYEUCAU
+      , DACOKETQUA
+      , NGAYHEN
+      , BENHVIEN_ID
+      , NGAYTAO
+      , NGUOITAO_ID
+      , NGAYCAPNHAT
+      , NGUOICAPNHAT_ID
+      ) values (
+      #HOPDONG_ID#
+      , #BENHNHAN_ID#
+      , #MAYTE#
+      , #TENBENHNHAN#
+      , #GIOITINH#
+      , #NGAYSINH#
+      , #NAMSINH#
+      , #DIACHI#
+      , #QUOCTICH_ID#
+      , #TINHTHANH_ID#
+      , #QUANHUYEN_ID#
+      , #XAPHUONG_ID#
+      , #DIACHITHUONGTRU#
+      , #XAPHUONGTT_ID#
+      , #DANTOC_ID#
+      , #LOAITHE#
+      , #SODIENTHOAI#
+      , #EMAIL#
+      , #NGHENGHIEP_ID#
+      , #TINHTRANGHONNHAN_ID#
+      , #DOITUONG_ID#
+      , #CMND#
+      , #NGAYCAPTHE#
+      , #NAMCAPTHE#
+      , #NOICAP_ID#
+      , #NHANVIEN_ID#
+      , #NHOMMAU_ID#
+      , #YEUTORH_ID#
+      , #NHOMBENH_ID#
+      , #TIENSUDIUNG#
+      , #TIENSUBENH#
+      , #GHICHU#
+      , #KETQUA#
+      , #XEPLOAI_ID#
+      , #BSKETLUAN_ID#
+      , #GOI_ID#
+      , #IDCHUYEN#
+      , #DACOPHIEUYEUCAU#
+      , #DACOKETQUA#
+      , #NGAYHEN#
+      , #BENHVIEN_ID#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      , #NGAYCAPNHAT#
+      , #NGUOICAPNHAT_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+    <statement id="DAO00308_GetAllPatient" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_BENHNHAN
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00308_DeleteDVYeuCauAndVienPhi" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_DVYEUCAU where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      delete from TT_VIENPHI where TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      <!--delete from TT_TIEPNHAN where TIEPNHAN_ID = '$TIEPNHAN_ID$'-->
+    </statement>
+    <statement id="DAO00308_GetTiepNhanID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select top 1 TN.TIEPNHAN_ID, TN.SOTIEPNHAN
+      from TT_KSK_HOPDONG_BENHNHAN_DICHVU HD_DV
+      inner join TT_TIEPNHAN TN on TN.TIEPNHAN_ID = HD_DV.TIEPNHAN_ID
+      where HD_DV.HOPDONG_BENHNHAN_ID = '$HOPDONG_BENHNHAN_ID$' and HD_DV.HOPDONG_ID = '$HOPDONG_ID$'
+    </statement>
+    <statement id="DAO00308_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TT_KSK_CONGTY (
+      MACONGTY
+      , TENCONGTY
+      , TENCONGTY_EN
+      , XAPHUONG_ID
+      , SONHA
+      , DIENTHOAI
+      , FAX
+      , EMAIL
+      , MASOTHUE
+      , HESO
+      , GIAMDOC
+      , NGUOILIENHE
+      , DIENTHOAI_LH
+      , NGUOILIENHE2
+      , DIENTHOAI_LH2
+      , LOAICONGTY_ID
+      , TAMNGUNG
+      , GHICHU
+      , THONGTINLIENHE
+      , BENHVIEN_ID
+      , NGAYTAO
+      , NGUOITAO_ID
+      , NGAYCAPNHAT
+      , NGUOICAPNHAT_ID
+      ) values (
+      #MACONGTY#
+      , #TENCONGTY#
+      , #TENCONGTY_EN#
+      , #XAPHUONG_ID#
+      , #SONHA#
+      , #DIENTHOAI#
+      , #FAX#
+      , #EMAIL#
+      , #MASOTHUE#
+      , #HESO#
+      , #GIAMDOC#
+      , #NGUOILIENHE#
+      , #DIENTHOAI_LH#
+      , #NGUOILIENHE2#
+      , #DIENTHOAI_LH2#
+      , #LOAICONGTY_ID#
+      , #TAMNGUNG#
+      , #GHICHU#
+      , #THONGTINLIENHE#
+      , #BENHVIEN_ID#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      , #NGAYCAPNHAT#
+      , #NGUOICAPNHAT_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+
+    <update id="DAO00308_Update" parameterClass="System.Collections.IDictionary">
+      update TT_KSK_CONGTY set
+      MACONGTY = #MACONGTY#
+      , TENCONGTY = #TENCONGTY#
+      , TENCONGTY_EN = #TENCONGTY_EN#
+      , XAPHUONG_ID = #XAPHUONG_ID#
+      , SONHA = #SONHA#
+      , DIENTHOAI = #DIENTHOAI#
+      , FAX = #FAX#
+      , EMAIL = #EMAIL#
+      , MASOTHUE = #MASOTHUE#
+      , HESO = #HESO#
+      , GIAMDOC = #GIAMDOC#
+      , NGUOILIENHE = #NGUOILIENHE#
+      , DIENTHOAI_LH = #DIENTHOAI_LH#
+      , NGUOILIENHE2 = #NGUOILIENHE2#
+      , DIENTHOAI_LH2 = #DIENTHOAI_LH2#
+      , LOAICONGTY_ID = #LOAICONGTY_ID#
+      , TAMNGUNG = #TAMNGUNG#
+      , GHICHU = #GHICHU#
+      , THONGTINLIENHE = #THONGTINLIENHE#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      CONGTY_ID = '$CONGTY_ID$'
+    </update>
+
+    <statement id="DAO00308_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_KSK_CONGTY
+      where
+      CONGTY_ID = '$FCONGTY_ID$'
+    </statement>
+    <statement id="DAO00308_GetGoiExist" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_KSK_HOPDONG_GOIDICHVU where GOIDICHVU_ID = '$GOI_ID$' and HOPDONG_ID = '$HOPDONG_ID$'
+    </statement>
+  </statements>
+</sqlMap>

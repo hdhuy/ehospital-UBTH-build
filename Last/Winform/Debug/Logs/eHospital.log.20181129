@@ -1,0 +1,141 @@
+﻿--------------------------------------------------------------------------------
+2018-11-29 09:43:05,232 [1] INFO  - [Application started.]
+2018-11-29 09:43:11,779 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-29 09:43:11,848 [1] INFO  - LoadMasters() took 51 ms.
+2018-11-29 09:43:11,869 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-29 09:44:29,994 [1] INFO  - [admin] Session is starting.
+2018-11-29 09:44:31,320 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:31,639 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:31,720 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:31,799 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:31,884 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:31,975 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:32,373 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:32,477 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:32,567 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:33,150 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:33,296 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:35,043 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:44:37,446 [5] INFO  - LoadMasters() took 7,384 ms.
+2018-11-29 09:44:37,458 [1] INFO  - [admin] Session started.
+2018-11-29 09:44:45,438 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-29 09:44:45,456 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-11-29 09:48:44,221 [1] INFO  - [Application started.]
+2018-11-29 09:48:46,612 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-29 09:48:46,675 [1] INFO  - LoadMasters() took 52 ms.
+2018-11-29 09:48:46,676 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-29 09:49:51,616 [1] INFO  - [admin] Session is starting.
+2018-11-29 09:49:52,413 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:52,568 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:52,648 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:52,735 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:52,814 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:52,894 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:52,977 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:53,058 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:53,136 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:53,622 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:53,783 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:54,480 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:49:56,598 [5] INFO  - LoadMasters() took 4,972 ms.
+2018-11-29 09:49:56,610 [1] INFO  - [admin] Session started.
+2018-11-29 09:49:59,844 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-29 09:49:59,863 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-29 09:51:37,765 [1] ERROR - The page 'OPD45' is not found!
+2018-11-29 09:51:38,200 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD45.Initialize_Custom() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD45.cs:line 54
+   at FPT.eHospital.Forms.OPD.VMOPD14.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD14.cs:line 64
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 254
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-29 09:52:22,571 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD45.Initialize_Custom() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD45.cs:line 54
+   at FPT.eHospital.Forms.OPD.VMOPD14.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD14.cs:line 64
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 254
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-29 09:54:41,633 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD45.Initialize_Custom() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD45.cs:line 54
+   at FPT.eHospital.Forms.OPD.VMOPD14.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD14.cs:line 64
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 254
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-29 09:54:43,889 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-29 09:54:43,890 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-29 09:54:43,943 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+--------------------------------------------------------------------------------
+2018-11-29 09:54:55,959 [1] INFO  - [Application started.]
+2018-11-29 09:54:58,999 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-29 09:54:59,064 [1] INFO  - LoadMasters() took 52 ms.
+2018-11-29 09:54:59,065 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-29 09:55:06,749 [1] INFO  - [admin] Session is starting.
+2018-11-29 09:55:07,535 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:07,718 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:07,834 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:07,966 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:08,093 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:08,185 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:08,289 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:08,396 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:08,486 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:08,976 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:09,112 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:09,797 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 09:55:12,559 [5] INFO  - LoadMasters() took 5,800 ms.
+2018-11-29 09:55:12,565 [1] INFO  - [admin] Session started.
+2018-11-29 09:55:15,761 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-29 09:55:15,783 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-29 09:57:51,119 [1] ERROR - Can't connect to http://daotao-hssk.ytecoso.vn:8090/Services/PID/thongTinBenhNhan/
+2018-11-29 09:58:10,443 [1] ERROR - Error when executing 'DAO00013_Add_BenhNhan'
+2018-11-29 09:58:10,481 [1] INFO  - Luu tiep nhan:  take 25054 ms.
+2018-11-29 09:58:10,507 [1] ERROR - Lỗi kết nối database: A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)
+System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.) ---> System.ComponentModel.Win32Exception (0x80004005): The semaphore timeout period has expired
+   at FPT.eHospital.Forms.Registration.VMREG01.XacNhanCheckThongTuyen(Object sender, Object e) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 462
+   at FPT.eHospital.Forms.VMPopup.OnFormClosed(Object sender, EventArgs args) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 50
+   at WinformUI.WFControlController.ShowModal(IView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\WFControlController.cs:line 359
+   at FPT.Framework.Presentation.PageView.ShowModal(IPageView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\PageView.cs:line 114
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 101
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowMessageBox(MsgBoxType type, String msg, String title, VMEvent closeCallback, ViewResult defaultFocus) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 320
+   at FPT.eHospital.Forms.Registration.VMREG01.LuuTiepNhan(Object sender, Object arg) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 432
+   at FPT.eHospital.Forms.Registration.VMREG01.cmdLuuTiepNhan(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 378
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+ClientConnectionId:a628876c-5bf9-46a6-9a72-536ec1f1e9a8
+Error Number:121,State:0,Class:20
+2018-11-29 09:58:18,273 [1] ERROR - MPI001_KetNoiThongTinMaDinhDanh: Invalid Input Information
+2018-11-29 09:58:22,225 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.REG001 dvYeucau_Id:94392
+2018-11-29 09:58:24,462 [1] INFO  - Luu tiep nhan:  take 8907 ms.
+2018-11-29 09:59:04,163 [1] DEBUG - User chạy: 117 Cách giải quyết:KT
+2018-11-29 09:59:04,747 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.OPD002 dvYeucau_Id:94392
+--------------------------------------------------------------------------------
+2018-11-29 10:14:53,169 [1] INFO  - [Application started.]
+2018-11-29 10:14:55,313 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-29 10:14:55,375 [1] INFO  - LoadMasters() took 51 ms.
+2018-11-29 10:14:55,376 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-29 10:15:04,019 [1] INFO  - [admin] Session is starting.
+2018-11-29 10:15:04,795 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:04,944 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:05,025 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:05,108 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:05,186 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:05,264 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:05,344 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:05,425 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:05,506 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:05,993 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:06,131 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:06,806 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-29 10:15:09,006 [5] INFO  - LoadMasters() took 4,979 ms.
+2018-11-29 10:15:09,014 [1] INFO  - [admin] Session started.
+2018-11-29 10:15:12,356 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-29 10:15:12,375 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)

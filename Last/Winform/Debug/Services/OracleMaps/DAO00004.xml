@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,04ec9f43cf323457945070510c9c2713-->
+        <statement id="DAO00004_GetAll" resultClass="DataObject">
+            SELECT
+            TINH.TENDONVI AS TINH
+            , TINH.TENTAT AS TENTATTINH
+            , HUYEN.TENDONVI AS HUYEN
+            , HUYEN.TENTAT AS TENTATHUYEN
+            , XA.TENDONVI AS XA
+            , XA.MADONVI
+            , XA.TENTAT AS TENTATXA
+            FROM TM_DONVIHANHCHINH XA
+            JOIN TM_DONVIHANHCHINH HUYEN ON (XA.CAPTREN_ID = HUYEN.DONVIHANHCHINH_ID AND XA.CAPDONVI = 4)
+            JOIN TM_DONVIHANHCHINH TINH ON (HUYEN.CAPTREN_ID = TINH.DONVIHANHCHINH_ID AND HUYEN.CAPDONVI = 3)
+            ORDER BY TINH, HUYEN, XA
+        </statement>
+        <!--Revision:0,d50af92ff7041c6bd6edee5fca5df7ee-->
+        <statement id="DAO00004_GetList" resultClass="DataObject">
+            select
+            TINH.TENDONVI AS TINH
+            , TINH.TENTAT AS TENTATTINH
+            , HUYEN.TENDONVI AS HUYEN
+            , HUYEN.TENTAT AS TENTATHUYEN
+            , XA.TENDONVI AS XA
+            , XA.MADONVI
+            , (XA.TENDONVI || ' ' || HUYEN.TENDONVI || ' ' || TINH.TENDONVI) AS TENTIMKIEM
+            , (XA.TENDAYDU || ', ' || HUYEN.TENDAYDU || ', ' || TINH.TENDAYDU) AS TENDAYDU,
+            XA.TENTAT AS TENTATXA,
+            (CASE
+            WHEN TINH.MADONVI  in (select VALUE from TM_SYS_APPSETTINGS where CODE = 'APP_LOCATION_DVHC'  and BENHVIEN_ID = '$BENHVIEN_ID$')
+            THEN 1
+            ELSE 0
+            END) BOOST_SCORED
+            FROM TM_DONVIHANHCHINH XA
+            JOIN TM_DONVIHANHCHINH HUYEN ON (XA.CAPTREN_ID = HUYEN.DONVIHANHCHINH_ID AND XA.CAPDONVI = 4)
+            JOIN TM_DONVIHANHCHINH TINH ON (HUYEN.CAPTREN_ID = TINH.DONVIHANHCHINH_ID AND HUYEN.CAPDONVI = 3)
+            ORDER BY BOOST_SCORED desc, TINH, HUYEN, XA asc
+        </statement>
+    </statements>
+</sqlMap>

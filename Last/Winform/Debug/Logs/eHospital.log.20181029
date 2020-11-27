@@ -1,0 +1,506 @@
+﻿--------------------------------------------------------------------------------
+2018-10-29 11:20:20,722 [1] INFO  - [Application started.]
+2018-10-29 11:20:23,723 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-29 11:20:26,090 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-29 11:20:26,132 [1] INFO  - LoadMasters() took 33 ms.
+2018-10-29 11:20:26,133 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-29 11:20:46,722 [1] INFO  - [admin] Session is starting.
+2018-10-29 11:20:47,472 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:47,739 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:47,804 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:47,868 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:47,931 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:47,991 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:48,058 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:48,112 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:48,170 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:48,697 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:48,786 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:49,304 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:20:51,478 [7] INFO  - LoadMasters() took 4,732 ms.
+2018-10-29 11:20:51,486 [1] INFO  - [admin] Session started.
+2018-10-29 11:20:56,778 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-29 11:20:56,782 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-10-29 11:21:22,865 [1] INFO  - The parent value '-1' is not existed!!!
+2018-10-29 11:22:20,887 [1] INFO  - The parent value '-1' is not existed!!!
+2018-10-29 11:23:53,571 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-29 11:23:53,573 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-29 11:23:53,593 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-10-29 11:24:03,497 [1] INFO  - [admin] Session stopped.
+2018-10-29 11:24:03,501 [1] INFO  - Memory used before collection:  23,865,824
+2018-10-29 11:24:03,579 [1] INFO  - Memory used after collection:  10,434,152
+2018-10-29 11:24:03,789 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-10-29 11:28:57,621 [1] INFO  - [Application started.]
+2018-10-29 11:28:58,867 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-29 11:29:00,713 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-29 11:29:00,755 [1] INFO  - LoadMasters() took 31 ms.
+2018-10-29 11:29:00,756 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-29 11:29:35,453 [1] INFO  - [admin] Session is starting.
+2018-10-29 11:29:36,019 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:36,181 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:36,245 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:36,310 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:36,368 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:36,426 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:36,483 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:36,544 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:36,612 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:37,072 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:37,471 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:37,807 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 11:29:39,523 [5] INFO  - LoadMasters() took 4,064 ms.
+2018-10-29 11:29:39,534 [1] INFO  - [admin] Session started.
+2018-10-29 11:29:41,982 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-29 11:29:41,985 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-10-29 11:30:02,226 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-29 11:30:02,227 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-29 11:30:02,240 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-10-29 11:30:02,368 [1] INFO  - [admin] Session stopped.
+2018-10-29 11:30:02,369 [1] INFO  - Memory used before collection:  18,784,792
+2018-10-29 11:30:02,415 [1] INFO  - Memory used after collection:  6,375,120
+2018-10-29 11:30:02,469 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-10-29 11:34:00,553 [1] INFO  - [Application started.]
+2018-10-29 11:34:01,715 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-29 11:34:02,290 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-29 11:34:02,310 [1] INFO  - LoadMasters() took 12 ms.
+2018-10-29 11:34:02,310 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-29 11:34:06,185 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-29 11:34:07,806 [1] INFO  - [test] Session is starting.
+2018-10-29 11:34:08,193 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:08,355 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:08,392 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:08,428 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:08,464 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:08,499 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:08,534 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:08,571 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:08,607 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:13,817 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:13,866 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:14,080 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:34:18,463 [5] INFO  - LoadMasters() took 10,655 ms.
+2018-10-29 11:34:18,476 [1] INFO  - [test] Session started.
+2018-10-29 11:44:22,434 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-29 11:44:22,436 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-29 11:44:22,610 [1] INFO  - [test] Session stopped.
+2018-10-29 11:44:22,613 [1] INFO  - Memory used before collection:  24,722,716
+2018-10-29 11:44:22,677 [1] INFO  - Memory used after collection:  10,968,168
+2018-10-29 11:44:22,681 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-29 11:44:22,739 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-29 11:44:22,742 [1] INFO  - LoadMasters() took 2 ms.
+2018-10-29 11:44:22,743 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-29 11:44:24,517 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-29 11:44:25,492 [1] INFO  - [test] Session is starting.
+2018-10-29 11:44:25,791 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:25,840 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:25,887 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:25,932 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:25,967 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:25,998 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:26,031 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:26,069 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:26,103 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:26,527 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:26,582 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:26,745 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:44:28,953 [10] INFO  - LoadMasters() took 3,460 ms.
+2018-10-29 11:44:28,964 [1] INFO  - [test] Session started.
+2018-10-29 11:46:58,427 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-29 11:46:58,430 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-29 11:46:58,568 [1] INFO  - [test] Session stopped.
+2018-10-29 11:46:58,569 [1] INFO  - Memory used before collection:  41,856,800
+2018-10-29 11:46:58,638 [1] INFO  - Memory used after collection:  12,310,512
+2018-10-29 11:46:58,643 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-29 11:46:58,688 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-29 11:46:58,691 [1] INFO  - LoadMasters() took 2 ms.
+2018-10-29 11:46:58,692 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-29 11:47:00,370 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-29 11:47:01,477 [1] INFO  - [test] Session is starting.
+2018-10-29 11:47:01,766 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:01,827 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:01,870 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:01,909 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:01,948 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:01,988 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:02,029 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:02,065 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:02,102 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:02,519 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:02,609 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:02,833 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:47:05,554 [6] INFO  - LoadMasters() took 4,076 ms.
+2018-10-29 11:47:05,567 [1] INFO  - [test] Session started.
+2018-10-29 11:54:04,556 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-29 11:54:04,558 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-29 11:54:04,707 [1] INFO  - [test] Session stopped.
+2018-10-29 11:54:04,708 [1] INFO  - Memory used before collection:  30,399,676
+2018-10-29 11:54:04,781 [1] INFO  - Memory used after collection:  15,722,784
+2018-10-29 11:54:04,785 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-29 11:54:04,887 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-29 11:54:04,891 [1] INFO  - LoadMasters() took 2 ms.
+2018-10-29 11:54:04,892 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-29 11:54:06,512 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-29 11:54:08,609 [1] INFO  - [test] Session is starting.
+2018-10-29 11:54:08,896 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:08,943 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:08,980 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:09,026 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:09,062 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:09,097 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:09,133 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:09,170 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:09,205 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:09,622 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:09,665 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:09,940 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:54:12,461 [10] INFO  - LoadMasters() took 3,851 ms.
+2018-10-29 11:54:12,474 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-29 11:59:44,209 [1] INFO  - [Application started.]
+2018-10-29 11:59:46,130 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-29 11:59:48,276 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-29 11:59:48,294 [1] INFO  - LoadMasters() took 8 ms.
+2018-10-29 11:59:48,295 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-29 11:59:52,819 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-29 11:59:54,923 [1] INFO  - [test] Session is starting.
+2018-10-29 11:59:55,409 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:55,613 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:55,647 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:55,683 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:55,725 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:55,764 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:55,814 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:55,853 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:55,897 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:56,344 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:56,402 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:56,652 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 11:59:59,483 [5] INFO  - LoadMasters() took 4,559 ms.
+2018-10-29 11:59:59,491 [1] INFO  - [test] Session started.
+2018-10-29 12:01:36,563 [1] DEBUG - Error when browse to server '\\172.16.1.10'
+System.Printing.PrintServerException: An exception occurred while creating the PrintServer object. Win32 error: The printer name is invalid.
+
+   at System.Printing.PrintServer.Initialize(String path, String[] propertiesFilter, PrinterDefaults printerDefaults)
+   at System.Printing.PrintServer..ctor(String path)
+   at WinformUI.PrinterManager.GetPrinter(String name)
+2018-10-29 12:01:41,063 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-10-29 12:01:41,231 [1] INFO  - Print report on: Default Printer
+2018-10-29 12:01:45,905 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-10-29 12:01:46,519 [1] ERROR - Print report error!
+Microsoft.Reporting.WinForms.LocalProcessingException: An error occurred during local report processing. ---> Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: One or more parameters required to run the report have not been specified.
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.ValidateReportParameters()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReportOdpInitial.PrepareForExecution()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.Execute(IRenderingExtension newRenderer)
+   at Microsoft.ReportingServices.ReportProcessing.ReportProcessing.RenderReport(IRenderingExtension newRenderer, DateTime executionTimeStamp, ProcessingContext pc, RenderingContext rc, IChunkFactory yukonCompiledDefinition)
+   at Microsoft.Reporting.LocalService.CreateSnapshotAndRender(ReportProcessing repProc, IRenderingExtension renderer, ProcessingContext pc, RenderingContext rc, SubreportCallbackHandler subreportHandler, ParameterInfoCollection parameters, DatasourceCredentialsCollection credentials)
+   at Microsoft.Reporting.LocalService.Render(String format, String deviceInfo, String paginationMode, Boolean allowInternalRenderers, IEnumerable dataSources, CreateAndRegisterStream createStreamCallback)
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, CreateStreamCallback createStream, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, CreateStreamCallback createStream, Warning[]& warnings)
+   at WinformUI.ReportViewer.Export(LocalReport report)
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTPRINT(Boolean value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 19
+   at FPT.eHospital.Forms.Reporting.VMRPT01.Print(Boolean skipPaperCheck) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 110
+2018-10-29 12:02:10,700 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-10-29 12:02:10,712 [1] INFO  - Print report on: Default Printer
+2018-10-29 12:02:10,790 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-10-29 12:02:11,203 [1] ERROR - Print report error!
+Microsoft.Reporting.WinForms.LocalProcessingException: An error occurred during local report processing. ---> Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: One or more parameters required to run the report have not been specified.
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.ValidateReportParameters()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReportOdpInitial.PrepareForExecution()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.Execute(IRenderingExtension newRenderer)
+   at Microsoft.ReportingServices.ReportProcessing.ReportProcessing.RenderReport(IRenderingExtension newRenderer, DateTime executionTimeStamp, ProcessingContext pc, RenderingContext rc, IChunkFactory yukonCompiledDefinition)
+   at Microsoft.Reporting.LocalService.CreateSnapshotAndRender(ReportProcessing repProc, IRenderingExtension renderer, ProcessingContext pc, RenderingContext rc, SubreportCallbackHandler subreportHandler, ParameterInfoCollection parameters, DatasourceCredentialsCollection credentials)
+   at Microsoft.Reporting.LocalService.Render(String format, String deviceInfo, String paginationMode, Boolean allowInternalRenderers, IEnumerable dataSources, CreateAndRegisterStream createStreamCallback)
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, CreateStreamCallback createStream, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, CreateStreamCallback createStream, Warning[]& warnings)
+   at WinformUI.ReportViewer.Export(LocalReport report)
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTPRINT(Boolean value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 19
+   at FPT.eHospital.Forms.Reporting.VMRPT01.Print(Boolean skipPaperCheck) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 110
+2018-10-29 12:02:26,448 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-10-29 12:02:26,462 [1] INFO  - Print report on: Default Printer
+2018-10-29 12:02:26,966 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-10-29 12:02:27,432 [1] ERROR - Print report error!
+Microsoft.Reporting.WinForms.LocalProcessingException: An error occurred during local report processing. ---> Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: One or more parameters required to run the report have not been specified.
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.ValidateReportParameters()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReportOdpInitial.PrepareForExecution()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.Execute(IRenderingExtension newRenderer)
+   at Microsoft.ReportingServices.ReportProcessing.ReportProcessing.RenderReport(IRenderingExtension newRenderer, DateTime executionTimeStamp, ProcessingContext pc, RenderingContext rc, IChunkFactory yukonCompiledDefinition)
+   at Microsoft.Reporting.LocalService.CreateSnapshotAndRender(ReportProcessing repProc, IRenderingExtension renderer, ProcessingContext pc, RenderingContext rc, SubreportCallbackHandler subreportHandler, ParameterInfoCollection parameters, DatasourceCredentialsCollection credentials)
+   at Microsoft.Reporting.LocalService.Render(String format, String deviceInfo, String paginationMode, Boolean allowInternalRenderers, IEnumerable dataSources, CreateAndRegisterStream createStreamCallback)
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, CreateStreamCallback createStream, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, CreateStreamCallback createStream, Warning[]& warnings)
+   at WinformUI.ReportViewer.Export(LocalReport report)
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTPRINT(Boolean value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 19
+   at FPT.eHospital.Forms.Reporting.VMRPT01.Print(Boolean skipPaperCheck) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 110
+2018-10-29 12:02:33,222 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-10-29 12:02:33,234 [1] INFO  - Print report on: Default Printer
+2018-10-29 12:02:33,325 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-10-29 12:02:33,810 [1] ERROR - Print report error!
+Microsoft.Reporting.WinForms.LocalProcessingException: An error occurred during local report processing. ---> Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: One or more parameters required to run the report have not been specified.
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.ValidateReportParameters()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReportOdpInitial.PrepareForExecution()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.Execute(IRenderingExtension newRenderer)
+   at Microsoft.ReportingServices.ReportProcessing.ReportProcessing.RenderReport(IRenderingExtension newRenderer, DateTime executionTimeStamp, ProcessingContext pc, RenderingContext rc, IChunkFactory yukonCompiledDefinition)
+   at Microsoft.Reporting.LocalService.CreateSnapshotAndRender(ReportProcessing repProc, IRenderingExtension renderer, ProcessingContext pc, RenderingContext rc, SubreportCallbackHandler subreportHandler, ParameterInfoCollection parameters, DatasourceCredentialsCollection credentials)
+   at Microsoft.Reporting.LocalService.Render(String format, String deviceInfo, String paginationMode, Boolean allowInternalRenderers, IEnumerable dataSources, CreateAndRegisterStream createStreamCallback)
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, CreateStreamCallback createStream, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, CreateStreamCallback createStream, Warning[]& warnings)
+   at WinformUI.ReportViewer.Export(LocalReport report)
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTPRINT(Boolean value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 19
+   at FPT.eHospital.Forms.Reporting.VMRPT01.Print(Boolean skipPaperCheck) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 110
+2018-10-29 15:17:51,275 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-29 15:17:51,278 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-29 15:17:51,649 [1] INFO  - [test] Session stopped.
+2018-10-29 15:17:51,652 [1] INFO  - Memory used before collection:  23,570,720
+2018-10-29 15:17:51,754 [1] INFO  - Memory used after collection:  10,780,656
+2018-10-29 15:17:51,805 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-29 15:17:51,927 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-29 15:17:51,934 [1] INFO  - LoadMasters() took 5 ms.
+2018-10-29 15:17:51,935 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-29 15:17:53,817 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-29 15:17:55,811 [1] INFO  - [test] Session is starting.
+2018-10-29 15:17:56,124 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:56,188 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:56,226 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:56,265 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:56,304 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:56,341 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:56,376 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:56,414 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:56,453 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:56,898 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:56,989 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:57,392 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-29 15:17:59,990 [5] INFO  - LoadMasters() took 4,178 ms.
+2018-10-29 15:18:00,053 [1] INFO  - [test] Session started.
+2018-10-29 15:19:43,275 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-10-29 15:19:43,301 [1] INFO  - Print report on: Default Printer
+2018-10-29 15:19:45,486 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-10-29 15:19:45,946 [1] ERROR - Print report error!
+Microsoft.Reporting.WinForms.LocalProcessingException: An error occurred during local report processing. ---> Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: One or more parameters required to run the report have not been specified.
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.ValidateReportParameters()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReportOdpInitial.PrepareForExecution()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.Execute(IRenderingExtension newRenderer)
+   at Microsoft.ReportingServices.ReportProcessing.ReportProcessing.RenderReport(IRenderingExtension newRenderer, DateTime executionTimeStamp, ProcessingContext pc, RenderingContext rc, IChunkFactory yukonCompiledDefinition)
+   at Microsoft.Reporting.LocalService.CreateSnapshotAndRender(ReportProcessing repProc, IRenderingExtension renderer, ProcessingContext pc, RenderingContext rc, SubreportCallbackHandler subreportHandler, ParameterInfoCollection parameters, DatasourceCredentialsCollection credentials)
+   at Microsoft.Reporting.LocalService.Render(String format, String deviceInfo, String paginationMode, Boolean allowInternalRenderers, IEnumerable dataSources, CreateAndRegisterStream createStreamCallback)
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, CreateStreamCallback createStream, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, CreateStreamCallback createStream, Warning[]& warnings)
+   at WinformUI.ReportViewer.Export(LocalReport report)
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTPRINT(Boolean value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 19
+   at FPT.eHospital.Forms.Reporting.VMRPT01.Print(Boolean skipPaperCheck) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 110
+2018-10-29 15:20:30,933 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-10-29 15:20:30,953 [1] INFO  - Print report on: Default Printer
+2018-10-29 15:20:31,037 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-10-29 15:20:31,495 [1] ERROR - Print report error!
+Microsoft.Reporting.WinForms.LocalProcessingException: An error occurred during local report processing. ---> Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: One or more parameters required to run the report have not been specified.
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.ValidateReportParameters()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReportOdpInitial.PrepareForExecution()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.Execute(IRenderingExtension newRenderer)
+   at Microsoft.ReportingServices.ReportProcessing.ReportProcessing.RenderReport(IRenderingExtension newRenderer, DateTime executionTimeStamp, ProcessingContext pc, RenderingContext rc, IChunkFactory yukonCompiledDefinition)
+   at Microsoft.Reporting.LocalService.CreateSnapshotAndRender(ReportProcessing repProc, IRenderingExtension renderer, ProcessingContext pc, RenderingContext rc, SubreportCallbackHandler subreportHandler, ParameterInfoCollection parameters, DatasourceCredentialsCollection credentials)
+   at Microsoft.Reporting.LocalService.Render(String format, String deviceInfo, String paginationMode, Boolean allowInternalRenderers, IEnumerable dataSources, CreateAndRegisterStream createStreamCallback)
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, CreateStreamCallback createStream, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, CreateStreamCallback createStream, Warning[]& warnings)
+   at WinformUI.ReportViewer.Export(LocalReport report)
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTPRINT(Boolean value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 19
+   at FPT.eHospital.Forms.Reporting.VMRPT01.Print(Boolean skipPaperCheck) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 110
+2018-10-29 15:20:35,338 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-10-29 15:20:35,506 [1] INFO  - Print report on: Default Printer
+2018-10-29 15:20:35,628 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+--------------------------------------------------------------------------------
+2018-10-29 23:25:43,773 [1] INFO  - [Application started.]
+2018-10-29 23:25:44,695 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-29 23:25:45,686 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-29 23:25:45,730 [1] INFO  - LoadMasters() took 38 ms.
+2018-10-29 23:25:45,730 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-29 23:25:54,434 [1] INFO  - StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Mon, 29 Oct 2018 16:25:43 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1899
+  Content-Type: text/html; charset=utf-8
+}
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Mon, 29 Oct 2018 16:25:43 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1899
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters)
+   at FPT.Framework.Security.RESTProfileProvider.Login(String appToken, String accName, String password, String appName, String ipNumber)
+2018-10-29 23:26:01,949 [1] INFO  - StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Mon, 29 Oct 2018 16:25:51 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1899
+  Content-Type: text/html; charset=utf-8
+}
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Mon, 29 Oct 2018 16:25:51 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1899
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters)
+   at FPT.Framework.Security.RESTProfileProvider.Login(String appToken, String accName, String password, String appName, String ipNumber)
+2018-10-29 23:26:15,768 [1] INFO  - [_SYSTEM_] Session stopped.
+2018-10-29 23:26:15,801 [1] INFO  - Memory used before collection:  3,147,580
+2018-10-29 23:26:15,813 [1] INFO  - Memory used after collection:  2,910,996
+2018-10-29 23:26:15,832 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-10-29 23:27:21,589 [1] INFO  - [Application started.]
+2018-10-29 23:27:23,469 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-29 23:27:25,268 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-29 23:27:25,370 [1] INFO  - LoadMasters() took 91 ms.
+2018-10-29 23:27:25,370 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-29 23:27:39,452 [1] INFO  - [admin] Session is starting.
+2018-10-29 23:27:40,506 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:40,819 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:40,906 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:40,995 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:41,080 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:41,170 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:41,256 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:41,360 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:41,455 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:42,122 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:42,320 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:43,693 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-29 23:27:46,259 [5] INFO  - LoadMasters() took 6,780 ms.
+2018-10-29 23:27:46,265 [1] INFO  - [admin] Session started.
+2018-10-29 23:27:53,207 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-29 23:27:53,216 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-10-29 23:29:30,452 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-29 23:29:30,454 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-29 23:29:30,474 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/

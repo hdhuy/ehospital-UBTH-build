@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,57e79c7117909f16abfc8e7eb3b1a621-->
+        <statement id="DAO00067_KiemTraThongTinChuyenVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CHUYENVIEN
+            where BENHVIEN_ID = '$BENHVIEN_ID$' and TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        </statement>
+        <!--Revision:0,4a755bdc6bcab065917d1fe94c8ccd59-->
+        <statement id="DAO00067_GET_CHUYENVIENINFO_FROM_BENHNHANID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CHUYENVIEN
+            where BENHNHAN_ID  = '$BENHNHAN_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$'
+            and TIEPNHAN_ID = '$TIEPNHAN_ID$'
+            <isNotEmpty prepend="and" property="KHAMBENH_ID">
+                KHAMBENH_ID = '$KHAMBENH_ID$'
+            </isNotEmpty>
+        </statement>
+        <!--Revision:0,10b92bf10f1173fa630818f4998f9343-->
+        <statement id="DAO00067_GetAll" resultClass="DataObject">
+            select *
+            from TT_CHUYENVIEN
+            order by CHUYENVIEN_ID
+        </statement>
+        <!--Revision:0,470d55170f8fc9ad919179dea3f55f1e-->
+        <statement id="DAO00067_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select PB.*
+            from TM_PHONGBAN AS PB
+            inner join LST_DICTIONARY AS D on PB.LOAIPHONGBAN_ID = D.DICTIONARY_ID
+            and D.DICTIONARY_TYPE_CODE = 'LoaiPhongBan'
+            and D.DICTIONARY_CODE IN ('PhongBenh','KhamBenh','KhoaNoi','PhongMo','KhoaCLS')
+            where PB.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,50fd8745fa37ea6fb497d25277e26f0b-->
+        <statement id="DAO00067_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CHUYENVIEN
+            where TT_CHUYENVIEN.CHUYENVIEN_ID  = '$value$'
+            order by CHUYENVIEN_ID
+        </statement>
+        <!--Revision:0,849813d846b0b181a6cc6b916c10b69a-->
+        <statement id="DAO00067_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CHUYENVIEN
+            where TT_CHUYENVIEN.CHUYENVIEN_ID  = '$CHUYENVIEN_ID$'
+            order by CHUYENVIEN_ID
+        </statement>
+        <!--Revision:0,c1ec4edaa223296150769cc2a41caf71-->
+        <statement id="DAO00067_AddChuyenVienInfo" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TT_CHUYENVIEN (
+            SOPHIEU
+            , BENHNHAN_ID
+            , TIEPNHAN_ID
+            , KHAMBENH_ID
+            , BENHANNOITRU_ID
+            , BENHANNGOAITRU_ID
+            , BACSIYEUCAU_ID
+            , BACSITRUONGKHOA_ID
+            , BENHVIEN_CHUYENDEN_ID
+            , LYDOCHUYENVIEN_ID
+            , CHANDOANICD_ID
+            , CHANDOAN
+            , NGAYCHUYEN
+            , GHICHU
+            , DAUHIEULAMSANG
+            , TINHTRANG
+            , NGUOIDUADI
+            , PHUONGTIEN
+            , CHUYENVIENBANGGIAYKHAISINH
+            , THUOCDADUNG
+            , HINHTHUCCHUYENVIEN_ID
+            , HUONGDIEUTRI
+            , TIEPNHAN_NOIGIOITHIEU_ID
+            , TIEPNHAN_SOCHUYENTUYEN
+            , TIEPNHAN_NGAYCHUYENDEN
+            , TIEPNHAN_TUYENCHUYEN_ID
+            , TIEPNHAN_LYDOCHUYENDEN_ID
+            , TIEPNHAN_CHANDOAN_NGT
+            , PHUONGTIEN_ID
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            ) values (
+            #SOPHIEU#
+            , #BENHNHAN_ID#
+            , #TIEPNHAN_ID#
+            , #KHAMBENH_ID#
+            , #BENHANNOITRU_ID#
+            , #BENHANNGOAITRU_ID#
+            , #BACSIYEUCAU_ID#
+            , #BACSITRUONGKHOA_ID#
+            , #BENHVIEN_CHUYENDEN_ID#
+            , #LYDOCHUYENVIEN_ID#
+            , #CHANDOANICD_ID#
+            , #CHANDOAN#
+            , #NGAYCHUYEN#
+            , #GHICHU#
+            , #DAUHIEULAMSANG#
+            , #TINHTRANG#
+            , #NGUOIDUADI#
+            , #PHUONGTIEN#
+            , #CHUYENVIENBANGGIAYKHAISINH#
+            , #THUOCDADUNG#
+            , #HINHTHUCCHUYENVIEN_ID#
+            , #HUONGDIEUTRI#
+            , #TIEPNHAN_NOIGIOITHIEU_ID#
+            , #TIEPNHAN_SOCHUYENTUYEN#
+            , #TIEPNHAN_NGAYCHUYENDEN#
+            , #TIEPNHAN_TUYENCHUYEN_ID#
+            , #TIEPNHAN_LYDOCHUYENDEN_ID#
+            , #TIEPNHAN_CHANDOAN_NGT#
+            , #PHUONGTIEN_ID#
+            , #BENHVIEN_ID#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+            <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+        </statement>
+        <!--Revision:0,56b12b1f3d6cc186df44cc887594f11d-->
+        <update id="DAO00067_UpdateChuyenVienInfo" parameterClass="System.Collections.IDictionary">
+            update TT_CHUYENVIEN set
+            SOPHIEU = #SOPHIEU#
+            , BENHNHAN_ID = #BENHNHAN_ID#
+            , TIEPNHAN_ID = #TIEPNHAN_ID#
+            , KHAMBENH_ID = #KHAMBENH_ID#
+            , BENHANNOITRU_ID = #BENHANNOITRU_ID#
+            , BENHANNGOAITRU_ID = #BENHANNGOAITRU_ID#
+            , BACSIYEUCAU_ID = #BACSIYEUCAU_ID#
+            , BACSITRUONGKHOA_ID = #BACSITRUONGKHOA_ID#
+            , BENHVIEN_CHUYENDEN_ID = #BENHVIEN_CHUYENDEN_ID#
+            , LYDOCHUYENVIEN_ID = #LYDOCHUYENVIEN_ID#
+            , CHANDOANICD_ID = #CHANDOANICD_ID#
+            , CHANDOAN = #CHANDOAN#
+            , NGAYCHUYEN = #NGAYCHUYEN#
+            , GHICHU = #GHICHU#
+            , DAUHIEULAMSANG = #DAUHIEULAMSANG#
+            , TINHTRANG = #TINHTRANG#
+            , NGUOIDUADI = #NGUOIDUADI#
+            , PHUONGTIEN = #PHUONGTIEN#
+            , CHUYENVIENBANGGIAYKHAISINH = #CHUYENVIENBANGGIAYKHAISINH#
+            , THUOCDADUNG = #THUOCDADUNG#
+            , HINHTHUCCHUYENVIEN_ID = #HINHTHUCCHUYENVIEN_ID#
+            , HUONGDIEUTRI = #HUONGDIEUTRI#
+            , TIEPNHAN_NOIGIOITHIEU_ID = #TIEPNHAN_NOIGIOITHIEU_ID#
+            , TIEPNHAN_SOCHUYENTUYEN = #TIEPNHAN_SOCHUYENTUYEN#
+            , TIEPNHAN_NGAYCHUYENDEN = #TIEPNHAN_NGAYCHUYENDEN#
+            , TIEPNHAN_TUYENCHUYEN_ID = #TIEPNHAN_TUYENCHUYEN_ID#
+            , TIEPNHAN_LYDOCHUYENDEN_ID = #TIEPNHAN_LYDOCHUYENDEN_ID#
+            , TIEPNHAN_CHANDOAN_NGT = #TIEPNHAN_CHANDOAN_NGT#
+            , PHUONGTIEN_ID = #PHUONGTIEN_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            CHUYENVIEN_ID = '$CHUYENVIEN_ID$'
+        </update>
+        <!--Revision:0,7118fce4464b641442d7ef062fd3a9e7-->
+        <statement id="DAO00067_DeleteChuyenVienInfo" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CHUYENVIEN
+            where
+            CHUYENVIEN_ID = '$CHUYENVIEN_ID$'
+        </statement>
+        <!--Revision:0,d7c5613bc8243965093f8c8d88c2b3b5-->
+        <statement id="DAO00067_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CHUYENVIEN
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CHUYENVIEN_ID">
+                        TT_CHUYENVIEN.CHUYENVIEN_ID = '$CHUYENVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIEU">
+                        TT_CHUYENVIEN.SOPHIEU = '$SOPHIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHNHAN_ID">
+                        TT_CHUYENVIEN.BENHNHAN_ID = '$BENHNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                        TT_CHUYENVIEN.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHAMBENH_ID">
+                        TT_CHUYENVIEN.KHAMBENH_ID = '$KHAMBENH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHANNOITRU_ID">
+                        TT_CHUYENVIEN.BENHANNOITRU_ID = '$BENHANNOITRU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHANNGOAITRU_ID">
+                        TT_CHUYENVIEN.BENHANNGOAITRU_ID = '$BENHANNGOAITRU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSIYEUCAU_ID">
+                        TT_CHUYENVIEN.BACSIYEUCAU_ID = '$BACSIYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSITRUONGKHOA_ID">
+                        TT_CHUYENVIEN.BACSITRUONGKHOA_ID = '$BACSITRUONGKHOA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_CHUYENDEN_ID">
+                        TT_CHUYENVIEN.BENHVIEN_CHUYENDEN_ID = '$BENHVIEN_CHUYENDEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LYDOCHUYENVIEN_ID">
+                        TT_CHUYENVIEN.LYDOCHUYENVIEN_ID = '$LYDOCHUYENVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHANDOANICD_ID">
+                        TT_CHUYENVIEN.CHANDOANICD_ID = '$CHANDOANICD_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHANDOAN">
+                        TT_CHUYENVIEN.CHANDOAN = '$CHANDOAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCHUYEN">
+                        TT_CHUYENVIEN.NGAYCHUYEN = '$NGAYCHUYEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GHICHU">
+                        TT_CHUYENVIEN.GHICHU = '$GHICHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DAUHIEULAMSANG">
+                        TT_CHUYENVIEN.DAUHIEULAMSANG = '$DAUHIEULAMSANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TINHTRANG">
+                        TT_CHUYENVIEN.TINHTRANG = '$TINHTRANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOIDUADI">
+                        TT_CHUYENVIEN.NGUOIDUADI = '$NGUOIDUADI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHUONGTIEN">
+                        TT_CHUYENVIEN.PHUONGTIEN = '$PHUONGTIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHUYENVIENBANGGIAYKHAISINH">
+                        TT_CHUYENVIEN.CHUYENVIENBANGGIAYKHAISINH = '$CHUYENVIENBANGGIAYKHAISINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THUOCDADUNG">
+                        TT_CHUYENVIEN.THUOCDADUNG = '$THUOCDADUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HINHTHUCCHUYENVIEN_ID">
+                        TT_CHUYENVIEN.HINHTHUCCHUYENVIEN_ID = '$HINHTHUCCHUYENVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HUONGDIEUTRI">
+                        TT_CHUYENVIEN.HUONGDIEUTRI = '$HUONGDIEUTRI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_NOIGIOITHIEU_ID">
+                        TT_CHUYENVIEN.TIEPNHAN_NOIGIOITHIEU_ID = '$TIEPNHAN_NOIGIOITHIEU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_SOCHUYENTUYEN">
+                        TT_CHUYENVIEN.TIEPNHAN_SOCHUYENTUYEN = '$TIEPNHAN_SOCHUYENTUYEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_NGAYCHUYENDEN">
+                        TT_CHUYENVIEN.TIEPNHAN_NGAYCHUYENDEN = '$TIEPNHAN_NGAYCHUYENDEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_TUYENCHUYEN_ID">
+                        TT_CHUYENVIEN.TIEPNHAN_TUYENCHUYEN_ID = '$TIEPNHAN_TUYENCHUYEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_LYDOCHUYENDEN_ID">
+                        TT_CHUYENVIEN.TIEPNHAN_LYDOCHUYENDEN_ID = '$TIEPNHAN_LYDOCHUYENDEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_CHANDOAN_NGT">
+                        TT_CHUYENVIEN.TIEPNHAN_CHANDOAN_NGT = '$TIEPNHAN_CHANDOAN_NGT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHUONGTIEN_ID">
+                        TT_CHUYENVIEN.PHUONGTIEN_ID = '$PHUONGTIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_CHUYENVIEN.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_CHUYENVIEN.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_CHUYENVIEN.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_CHUYENVIEN.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_CHUYENVIEN.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

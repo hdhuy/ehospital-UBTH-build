@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,40f45f2e929a675fa472b8f066582cae-->
+        <statement id="DAO00206_GetAll" resultClass="DataObject">
+            select *
+            from TM_CATEGORY_DETAIL
+            order by CATEGORY_DETAIL_ID
+        </statement>
+        <!--Revision:0,ad2e16055a0bb87517ccb40cfd1fadfd-->
+        <statement id="DAO00206_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_CATEGORY_DETAIL
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CATEGORY_DETAIL_ID">
+                        TM_CATEGORY_DETAIL.CATEGORY_DETAIL_ID = '$CATEGORY_DETAIL_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_CODE">
+                        TM_CATEGORY_DETAIL.FIELD_CODE = '$FIELD_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_NAME">
+                        TM_CATEGORY_DETAIL.FIELD_NAME = '$FIELD_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_INDEX">
+                        TM_CATEGORY_DETAIL.FIELD_INDEX = '$FIELD_INDEX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REQUIRED">
+                        TM_CATEGORY_DETAIL.REQUIRED = '$REQUIRED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ORG_REQUIRED">
+                        TM_CATEGORY_DETAIL.ORG_REQUIRED = '$ORG_REQUIRED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="READ_ONLY">
+                        TM_CATEGORY_DETAIL.READ_ONLY = '$READ_ONLY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ORG_READ_ONLY">
+                        TM_CATEGORY_DETAIL.ORG_READ_ONLY = '$ORG_READ_ONLY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_PRIMARY">
+                        TM_CATEGORY_DETAIL.IS_PRIMARY = '$IS_PRIMARY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_IDENTITY">
+                        TM_CATEGORY_DETAIL.IS_IDENTITY = '$IS_IDENTITY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SHOWED">
+                        TM_CATEGORY_DETAIL.SHOWED = '$SHOWED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FILTER">
+                        TM_CATEGORY_DETAIL.FILTER = '$FILTER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FILTER_CONDITION">
+                        TM_CATEGORY_DETAIL.FILTER_CONDITION = '$FILTER_CONDITION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CONTROL_TYPE">
+                        TM_CATEGORY_DETAIL.CONTROL_TYPE = '$CONTROL_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LENGTH">
+                        TM_CATEGORY_DETAIL.LENGTH = '$LENGTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DEFAULT_VALUE">
+                        TM_CATEGORY_DETAIL.DEFAULT_VALUE = '$DEFAULT_VALUE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DEFAULT_VALUE_TYPE">
+                        TM_CATEGORY_DETAIL.DEFAULT_VALUE_TYPE = '$DEFAULT_VALUE_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHARACTER_SET_NAME">
+                        TM_CATEGORY_DETAIL.CHARACTER_SET_NAME = '$CHARACTER_SET_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DATA_GROUP">
+                        TM_CATEGORY_DETAIL.DATA_GROUP = '$DATA_GROUP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="RELATION_CODE">
+                        TM_CATEGORY_DETAIL.RELATION_CODE = '$RELATION_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="RELATION_INDEX">
+                        TM_CATEGORY_DETAIL.RELATION_INDEX = '$RELATION_INDEX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRIMARY_TABLE">
+                        TM_CATEGORY_DETAIL.PRIMARY_TABLE = '$PRIMARY_TABLE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRIMARY_COLUMN">
+                        TM_CATEGORY_DETAIL.PRIMARY_COLUMN = '$PRIMARY_COLUMN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRIMARY_COLUMN_DISPLAY">
+                        TM_CATEGORY_DETAIL.PRIMARY_COLUMN_DISPLAY = '$PRIMARY_COLUMN_DISPLAY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_1">
+                        TM_CATEGORY_DETAIL.ATTRIBUTE_1 = '$ATTRIBUTE_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_2">
+                        TM_CATEGORY_DETAIL.ATTRIBUTE_2 = '$ATTRIBUTE_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_3">
+                        TM_CATEGORY_DETAIL.ATTRIBUTE_3 = '$ATTRIBUTE_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_4">
+                        TM_CATEGORY_DETAIL.ATTRIBUTE_4 = '$ATTRIBUTE_4$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_5">
+                        TM_CATEGORY_DETAIL.ATTRIBUTE_5 = '$ATTRIBUTE_5$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_ID">
+                        TM_CATEGORY_DETAIL.CATEGORY_ID = '$CATEGORY_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_CATEGORY_DETAIL.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by FIELD_INDEX
+        </statement>
+        <!--Revision:0,acf4342ab503bab9f6d8bfbe898246ec-->
+        <statement id="DAO00206_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_CATEGORY_DETAIL
+            where TM_CATEGORY_DETAIL.CATEGORY_DETAIL_ID  = '$value$'
+            order by CATEGORY_DETAIL_ID
+        </statement>
+        <!--Revision:0,e4eccab98cc0c0dda2a032ffe411e1fc-->
+        <statement id="DAO00206_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_CATEGORY_DETAIL
+            where TM_CATEGORY_DETAIL.CATEGORY_DETAIL_ID  = '$CATEGORY_DETAIL_ID$'
+            order by CATEGORY_DETAIL_ID
+        </statement>
+        <!--Revision:0,3107a4ab2e9e3449032abec0eedc1cb5-->
+        <statement id="DAO00206_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_CATEGORY_DETAIL (
+            FIELD_CODE
+            , FIELD_NAME
+            , FIELD_INDEX
+            , REQUIRED
+            , ORG_REQUIRED
+            , READ_ONLY
+            , ORG_READ_ONLY
+            , IS_PRIMARY
+            , IS_IDENTITY
+            , IS_UNIQUE
+            , SHOWED
+            , FILTER
+            , FILTER_CONDITION
+            , CONTROL_TYPE
+            , LENGTH
+            , DEFAULT_VALUE
+            , DEFAULT_VALUE_TYPE
+            , CHARACTER_SET_NAME
+            , DATA_GROUP
+            , RELATION_CODE
+            , RELATION_INDEX
+            , PRIMARY_TABLE
+            , PRIMARY_COLUMN
+            , PRIMARY_COLUMN_DISPLAY
+            , ATTRIBUTE_1
+            , ATTRIBUTE_2
+            , ATTRIBUTE_3
+            , ATTRIBUTE_4
+            , ATTRIBUTE_5
+            , CATEGORY_ID
+            , BENHVIEN_ID
+            ) values (
+            #FIELD_CODE#
+            , #FIELD_NAME#
+            , #FIELD_INDEX#
+            , #REQUIRED#
+            , #ORG_REQUIRED#
+            , #READ_ONLY#
+            , #ORG_READ_ONLY#
+            , #IS_PRIMARY#
+            , #IS_IDENTITY#
+            , #IS_UNIQUE#
+            , #SHOWED#
+            , #FILTER#
+            , #FILTER_CONDITION#
+            , #CONTROL_TYPE#
+            , #LENGTH#
+            , #DEFAULT_VALUE#
+            , #DEFAULT_VALUE_TYPE#
+            , #CHARACTER_SET_NAME#
+            , #DATA_GROUP#
+            , #RELATION_CODE#
+            , #RELATION_INDEX#
+            , #PRIMARY_TABLE#
+            , #PRIMARY_COLUMN#
+            , #PRIMARY_COLUMN_DISPLAY#
+            , #ATTRIBUTE_1#
+            , #ATTRIBUTE_2#
+            , #ATTRIBUTE_3#
+            , #ATTRIBUTE_4#
+            , #ATTRIBUTE_5#
+            , #CATEGORY_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,cb647749b2364ae2723041a61ed8b033-->
+        <update id="DAO00206_Update" parameterClass="System.Collections.IDictionary">
+            update TM_CATEGORY_DETAIL set
+            FIELD_CODE = #FIELD_CODE#
+            , FIELD_NAME = #FIELD_NAME#
+            , FIELD_INDEX = #FIELD_INDEX#
+            , REQUIRED = #REQUIRED#
+            , ORG_REQUIRED = #ORG_REQUIRED#
+            , READ_ONLY = #READ_ONLY#
+            , ORG_READ_ONLY = #ORG_READ_ONLY#
+            , IS_PRIMARY = #IS_PRIMARY#
+            , IS_IDENTITY = #IS_IDENTITY#
+            , IS_UNIQUE = #IS_UNIQUE#
+            , SHOWED = #SHOWED#
+            , FILTER = #FILTER#
+            , FILTER_CONDITION = #FILTER_CONDITION#
+            , CONTROL_TYPE = #CONTROL_TYPE#
+            , LENGTH = #LENGTH#
+            , DEFAULT_VALUE = #DEFAULT_VALUE#
+            , DEFAULT_VALUE_TYPE = #DEFAULT_VALUE_TYPE#
+            , CHARACTER_SET_NAME = #CHARACTER_SET_NAME#
+            , DATA_GROUP = #DATA_GROUP#
+            , RELATION_CODE = #RELATION_CODE#
+            , RELATION_INDEX = #RELATION_INDEX#
+            , PRIMARY_TABLE = #PRIMARY_TABLE#
+            , PRIMARY_COLUMN = #PRIMARY_COLUMN#
+            , PRIMARY_COLUMN_DISPLAY = #PRIMARY_COLUMN_DISPLAY#
+            , ATTRIBUTE_1 = #ATTRIBUTE_1#
+            , ATTRIBUTE_2 = #ATTRIBUTE_2#
+            , ATTRIBUTE_3 = #ATTRIBUTE_3#
+            , ATTRIBUTE_4 = #ATTRIBUTE_4#
+            , ATTRIBUTE_5 = #ATTRIBUTE_5#
+            , CATEGORY_ID = #CATEGORY_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            CATEGORY_DETAIL_ID = '$CATEGORY_DETAIL_ID$'
+        </update>
+        <!--Revision:0,92b1cf05e717759d73c8f5e1545f2210-->
+        <statement id="DAO00206_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_CATEGORY_DETAIL
+            where
+            CATEGORY_DETAIL_ID = '$CATEGORY_DETAIL_ID$'
+        </statement>
+        <!--Revision:0,76a275c70c0dff6cca7f92a921a82bb0-->
+        <statement id="DAO00206_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_CATEGORY_DETAIL
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CATEGORY_DETAIL_ID">
+                        TM_CATEGORY_DETAIL.CATEGORY_DETAIL_ID = '$CATEGORY_DETAIL_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_CODE">
+                        TM_CATEGORY_DETAIL.FIELD_CODE = '$FIELD_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_NAME">
+                        TM_CATEGORY_DETAIL.FIELD_NAME = '$FIELD_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_INDEX">
+                        TM_CATEGORY_DETAIL.FIELD_INDEX = '$FIELD_INDEX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REQUIRED">
+                        TM_CATEGORY_DETAIL.REQUIRED = '$REQUIRED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ORG_REQUIRED">
+                        TM_CATEGORY_DETAIL.ORG_REQUIRED = '$ORG_REQUIRED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="READ_ONLY">
+                        TM_CATEGORY_DETAIL.READ_ONLY = '$READ_ONLY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ORG_READ_ONLY">
+                        TM_CATEGORY_DETAIL.ORG_READ_ONLY = '$ORG_READ_ONLY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_PRIMARY">
+                        TM_CATEGORY_DETAIL.IS_PRIMARY = '$IS_PRIMARY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IS_IDENTITY">
+                        TM_CATEGORY_DETAIL.IS_IDENTITY = '$IS_IDENTITY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SHOWED">
+                        TM_CATEGORY_DETAIL.SHOWED = '$SHOWED$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FILTER">
+                        TM_CATEGORY_DETAIL.FILTER = '$FILTER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FILTER_CONDITION">
+                        TM_CATEGORY_DETAIL.FILTER_CONDITION = '$FILTER_CONDITION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CONTROL_TYPE">
+                        TM_CATEGORY_DETAIL.CONTROL_TYPE = '$CONTROL_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LENGTH">
+                        TM_CATEGORY_DETAIL.LENGTH = '$LENGTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DEFAULT_VALUE">
+                        TM_CATEGORY_DETAIL.DEFAULT_VALUE = '$DEFAULT_VALUE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DEFAULT_VALUE_TYPE">
+                        TM_CATEGORY_DETAIL.DEFAULT_VALUE_TYPE = '$DEFAULT_VALUE_TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHARACTER_SET_NAME">
+                        TM_CATEGORY_DETAIL.CHARACTER_SET_NAME = '$CHARACTER_SET_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DATA_GROUP">
+                        TM_CATEGORY_DETAIL.DATA_GROUP = '$DATA_GROUP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="RELATION_CODE">
+                        TM_CATEGORY_DETAIL.RELATION_CODE = '$RELATION_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="RELATION_INDEX">
+                        TM_CATEGORY_DETAIL.RELATION_INDEX = '$RELATION_INDEX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRIMARY_TABLE">
+                        TM_CATEGORY_DETAIL.PRIMARY_TABLE = '$PRIMARY_TABLE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRIMARY_COLUMN">
+                        TM_CATEGORY_DETAIL.PRIMARY_COLUMN = '$PRIMARY_COLUMN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PRIMARY_COLUMN_DISPLAY">
+                        TM_CATEGORY_DETAIL.PRIMARY_COLUMN_DISPLAY = '$PRIMARY_COLUMN_DISPLAY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_1">
+                        TM_CATEGORY_DETAIL.ATTRIBUTE_1 = '$ATTRIBUTE_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_2">
+                        TM_CATEGORY_DETAIL.ATTRIBUTE_2 = '$ATTRIBUTE_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_3">
+                        TM_CATEGORY_DETAIL.ATTRIBUTE_3 = '$ATTRIBUTE_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_4">
+                        TM_CATEGORY_DETAIL.ATTRIBUTE_4 = '$ATTRIBUTE_4$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_5">
+                        TM_CATEGORY_DETAIL.ATTRIBUTE_5 = '$ATTRIBUTE_5$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CATEGORY_ID">
+                        TM_CATEGORY_DETAIL.CATEGORY_ID = '$CATEGORY_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_CATEGORY_DETAIL.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

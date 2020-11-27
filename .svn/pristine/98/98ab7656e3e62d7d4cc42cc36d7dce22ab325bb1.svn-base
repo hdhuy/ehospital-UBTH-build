@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+  <statements>
+    <statement id="DAO00402_QMS02" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT * from QMS_KIOSK WHERE BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS02_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      INSERT INTO QMS_KIOSK(CODE,NAME,COMPUTERNAME,IPADDRESS,REMARKS,BENHVIEN_ID,NGAYTAO,NGUOITAO_ID)
+      VALUES(#CODE#,#NAME#,#COMPUTERNAME#,#IPADDRESS#,#REMARKS#,#BENHVIEN_ID#,#NGAYTAO#,#NGUOITAO_ID#)
+      SELECT SCOPE_IDENTITY()
+    </statement>
+    <update id="DAO00402_QMS02_Update" parameterClass="System.Collections.IDictionary">
+      UPDATE QMS_KIOSK
+      SET CODE = #CODE#,NAME = #NAME#,COMPUTERNAME = #COMPUTERNAME#,IPADDRESS = #IPADDRESS#,REMARKS = #REMARKS#,BENHVIEN_ID = #BENHVIEN_ID#,NGAYCAPNHAT = #NGAYCAPNHAT#,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </update>
+    <statement id="DAO00402_QMS02_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      DELETE from QMS_KIOSK
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS01" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from QMS_SECTION WHERE BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS01_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      INSERT INTO QMS_SECTION
+      (NAME,REMARKS,BENHVIEN_ID,NGAYTAO,NGUOITAO_ID)
+      VALUES
+      (#NAME#,#REMARKS#,#BENHVIEN_ID#,#NGAYTAO#,#NGUOITAO_ID#)
+      SELECT SCOPE_IDENTITY()
+    </statement>
+    <update id="DAO00402_QMS01_Update" parameterClass="System.Collections.IDictionary">
+      UPDATE QMS_SECTION
+      SET NAME = #NAME#,REMARKS = #REMARKS#,BENHVIEN_ID = #BENHVIEN_ID#,NGAYCAPNHAT = #NGAYCAPNHAT#,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </update>
+    <statement id="DAO00402_QMS01_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      DELETE from QMS_SECTION
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS03_SECTION" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT ID AS SECTION_ID,NAME AS NAMESECTION FROM QMS_SECTION
+      WHERE BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS03" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from QMS_SCREEN WHERE BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS03_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      INSERT INTO QMS_SCREEN
+      (CODE,NAME,SECTION_ID,STATE,DISPLAYROWS,URL,REMARKS,BENHVIEN_ID,NGAYTAO,NGUOITAO_ID)
+      VALUES
+      (#CODE#,#NAME#,#SECTION_ID#,#STATE#,#DISPLAYROWS#,#URL#,#REMARKS#,#BENHVIEN_ID#,#NGAYTAO#,#NGUOITAO_ID#)
+      SELECT SCOPE_IDENTITY()
+    </statement>
+    <update id="DAO00402_QMS03_Update" parameterClass="System.Collections.IDictionary">
+      UPDATE QMS_SCREEN
+      SET CODE = #CODE#,NAME = #NAME#,SECTION_ID = #SECTION_ID#,STATE = #STATE#,DISPLAYROWS = #DISPLAYROWS#,URL = #URL#,REMARKS = #REMARKS#,BENHVIEN_ID = #BENHVIEN_ID#,NGAYCAPNHAT = #NGAYCAPNHAT#,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </update>
+    <statement id="DAO00402_QMS03_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      DELETE from QMS_SCREEN
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS04" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT * from QMS_QUEUE WHERE BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS04_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      INSERT INTO QMS_QUEUE(NAME,STATE,SCREEN_ID,DEPARTMENT_ID,MAX,QUEUETYPE_ID,SECTION_ID,REMARKS,BENHVIEN_ID,NGAYTAO,NGUOITAO_ID)
+      VALUES(#NAME#,#STATE#,#SCREEN_ID#,#DEPARTMENT_ID#,#MAX#,#QUEUETYPE_ID#,#SECTION_ID#,#REMARKS#,#BENHVIEN_ID#,#NGAYTAO#,#NGUOITAO_ID#)
+      SELECT SCOPE_IDENTITY()
+    </statement>
+    <update id="DAO00402_QMS04_Update" parameterClass="System.Collections.IDictionary">
+      UPDATE QMS_QUEUE
+      SET NAME = #NAME#,STATE = #STATE#,SCREEN_ID = #SCREEN_ID#,DEPARTMENT_ID = #DEPARTMENT_ID#,MAX = #MAX#,QUEUETYPE_ID = #QUEUETYPE_ID#,SECTION_ID = #SECTION_ID#,REMARKS = #REMARKS#,BENHVIEN_ID = #BENHVIEN_ID#,NGAYCAPNHAT = #NGAYCAPNHAT#,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </update>
+    <statement id="DAO00402_QMS04_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      DELETE from QMS_QUEUE
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS04_SCREEN" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT ID AS SCREEN_ID,NAME AS SCREEN_NAME FROM QMS_SCREEN
+      where BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS04_DEPARTMENT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT DEPARTMENT_ID,DEPT_NAME AS DEPARTMENT_NAME FROM QMS_DEPARTMENT
+      where BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS04_QUEUETYPE" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT ID AS QUEUETYPE_ID,NAME AS QUEUETYPE_NAME FROM QMS_QUEUE_TYPE
+      where BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS05" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT * from QMS_CLIENT WHERE BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS05_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      INSERT INTO QMS_CLIENT(NAME,COMPUTERNAME,IPADDRESS,STATE,PROCESSDURATION,QUEUE_ID,REMARKS,BENHVIEN_ID,NGAYTAO,NGUOITAO_ID,IPSERVER,NAMEAUDIO)
+      VALUES(#NAME#,#COMPUTERNAME#,#IPADDRESS#,#STATE#,#PROCESSDURATION#,#QUEUE_ID#,#REMARKS#,#BENHVIEN_ID#,#NGAYTAO#,#NGUOITAO_ID#,#IPSERVER#,#NAMEAUDIO#)
+      SELECT SCOPE_IDENTITY()
+    </statement>
+    <update id="DAO00402_QMS05_Update" parameterClass="System.Collections.IDictionary">
+      UPDATE QMS_CLIENT
+      SET NAME = #NAME#,COMPUTERNAME = #COMPUTERNAME#,IPADDRESS = #IPADDRESS#,STATE = #STATE#, PROCESSDURATION = #PROCESSDURATION#,QUEUE_ID = #QUEUE_ID#,REMARKS = #REMARKS#,BENHVIEN_ID = #BENHVIEN_ID#,NGAYCAPNHAT = #NGAYCAPNHAT#,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#,
+      IPSERVER=#IPSERVER#, NAMEAUDIO=#NAMEAUDIO#
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </update>
+    <statement id="DAO00402_QMS05_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      DELETE from QMS_CLIENT
+      WHERE ID = '$ID$'
+    </statement>
+    <statement id="DAO00402_QMS05_QUEUE" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT ID AS QUEUE_ID,NAME AS QUEUE_NAME FROM QMS_QUEUE
+      where BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS06" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT * from QMS_KIOSK_QUEUE
+      where BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS06_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      INSERT INTO QMS_KIOSK_QUEUE(KIOSK_ID,QUEUE_ID,DISPLAYTEXT,PRIORITY,BENHVIEN_ID,NGAYTAO,NGUOITAO_ID)
+      VALUES(#KIOSK_ID#,#QUEUE_ID#,#DISPLAYTEXT#,#PRIORITY#,#BENHVIEN_ID#,#NGAYTAO#,#NGUOITAO_ID#)
+      SELECT SCOPE_IDENTITY()
+    </statement>
+    <update id="DAO00402_QMS06_Update" parameterClass="System.Collections.IDictionary">
+      UPDATE QMS_KIOSK_QUEUE
+      SET KIOSK_ID = #KIOSK_ID#,QUEUE_ID = #QUEUE_ID#,DISPLAYTEXT = #DISPLAYTEXT#,PRIORITY = #PRIORITY#,BENHVIEN_ID = #BENHVIEN_ID#,NGAYCAPNHAT = #NGAYCAPNHAT#,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </update>
+    <statement id="DAO00402_QMS06_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      DELETE from QMS_KIOSK_QUEUE
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS06_KIOSK" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT ID AS KIOSK_ID,NAME AS KIOSK_NAME FROM QMS_KIOSK
+      where BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS07" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT * from QMS_PARAMETER WHERE BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS07_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      INSERT INTO QMS_PARAMETER(CODE,NAME,VALUE,REMARKS,BENHVIEN_ID,NGAYTAO,NGUOITAO_ID)
+      VALUES(#CODE#,#NAME#,#VALUE#,#REMARKS#,#BENHVIEN_ID#,#NGAYTAO#,#NGUOITAO_ID#)
+      SELECT 1
+    </statement>
+    <update id="DAO00402_QMS07_Update" parameterClass="System.Collections.IDictionary">
+      UPDATE QMS_PARAMETER
+      SET CODE = #CODE#,NAME = #NAME#,VALUE = #VALUE#,REMARKS = #REMARKS#,BENHVIEN_ID = #BENHVIEN_ID#,NGAYCAPNHAT = #NGAYCAPNHAT#,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </update>
+    <statement id="DAO00402_QMS07_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      DELETE from QMS_PARAMETER
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS08" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT * from QMS_KIOSK_QUEUE
+      where BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00402_QMS08_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      INSERT INTO QMS_KIOSK_QUEUE(KIOSK_ID,QUEUE_ID,BENHVIEN_ID,NGAYTAO,NGUOITAO_ID,DISPLAYTEXT,PRIORITY,REMARKS)
+      VALUES(#KIOSK_ID#,#QUEUE_ID#,#BENHVIEN_ID#,#NGAYTAO#,#NGUOITAO_ID#,#DISPLAYTEXT#,#PRIORITY#,#REMARKS#)
+      SELECT SCOPE_IDENTITY()
+    </statement>
+    <update id="DAO00402_QMS08_Update" parameterClass="System.Collections.IDictionary">
+      UPDATE QMS_KIOSK_QUEUE
+      SET KIOSK_ID = #KIOSK_ID#,QUEUE_ID = #QUEUE_ID#,BENHVIEN_ID = #BENHVIEN_ID#,NGAYCAPNHAT = #NGAYCAPNHAT#,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#,DISPLAYTEXT = #DISPLAYTEXT#,PRIORITY = #PRIORITY#,REMARKS = #REMARKS# 
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </update>
+    <statement id="DAO00402_QMS08_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      DELETE from QMS_KIOSK_QUEUE
+      WHERE ID = '$ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+  </statements>
+</sqlMap>

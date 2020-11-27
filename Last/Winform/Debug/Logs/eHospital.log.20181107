@@ -1,0 +1,689 @@
+﻿--------------------------------------------------------------------------------
+2018-11-07 11:46:52,919 [1] INFO  - [Application started.]
+2018-11-07 11:46:53,276 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 11:46:57,630 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 11:46:57,648 [1] INFO  - LoadMasters() took 9 ms.
+2018-11-07 11:46:57,649 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 11:47:07,593 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-11-07 11:47:23,366 [1] INFO  - [test] Session is starting.
+2018-11-07 11:47:24,110 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:24,777 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:24,866 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:24,900 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:24,934 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:24,978 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:25,013 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:25,050 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:25,089 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:25,657 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:25,730 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:25,936 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 11:47:28,825 [6] INFO  - LoadMasters() took 5,455 ms.
+2018-11-07 11:47:28,832 [1] INFO  - [test] Session started.
+2018-11-07 11:48:39,620 [1] ERROR - Can't create control OPD15022.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-07 12:36:44,959 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD15.GetDynamicCols() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD15.cs:line 90
+   at FPT.eHospital.Forms.OPD.VMOPD15.Initialize() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD15.cs:line 65
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 254
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+--------------------------------------------------------------------------------
+2018-11-07 15:04:34,764 [1] INFO  - [Application started.]
+2018-11-07 15:04:35,039 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 15:04:37,825 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 15:04:37,842 [1] INFO  - LoadMasters() took 9 ms.
+2018-11-07 15:04:37,843 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 15:05:59,618 [1] INFO  - [test] Session is starting.
+2018-11-07 15:06:00,055 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:00,292 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:00,335 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:00,374 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:00,418 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:00,459 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:00,512 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:00,547 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:00,631 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:01,067 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:01,127 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:01,363 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:06:03,896 [5] INFO  - LoadMasters() took 4,264 ms.
+2018-11-07 15:06:03,913 [1] INFO  - [test] Session started.
+2018-11-07 15:06:30,268 [1] ERROR - Can't create control QMS12003.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-07 15:06:52,921 [1] ERROR - Can't create control OPD15022.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-07 15:06:56,617 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD15.GetDynamicCols() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD15.cs:line 90
+   at FPT.eHospital.Forms.OPD.VMOPD15.Initialize() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD15.cs:line 65
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 254
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-07 15:07:43,450 [1] ERROR - Can't create control OPD14008.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-07 15:10:22,125 [1] ERROR - Can't create control BIL31004.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-07 15:10:58,086 [1] ERROR - Can't create control OPD22004.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-07 15:11:01,510 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD22.BTHEADER_SelChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD22.cs:line 24
+   at FPT.eHospital.Forms.Common.VMLISTCOM.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\BaseViewModels\VMLISTCOM.cs:line 73
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-07 15:11:09,402 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD22.BTHEADER_SelChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD22.cs:line 24
+   at FPT.eHospital.Forms.Common.VMLISTCOM.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\BaseViewModels\VMLISTCOM.cs:line 73
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-07 15:12:16,565 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD22.BTHEADER_SelChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD22.cs:line 24
+   at FPT.eHospital.Forms.Common.VMLISTCOM.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\BaseViewModels\VMLISTCOM.cs:line 73
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-07 15:12:40,100 [1] ERROR - Can't create control EME50002.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-07 15:12:43,305 [1] ERROR - Can't create control EME50002.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-07 15:14:53,939 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-07 15:14:54,000 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-07 15:14:54,036 [1] INFO  - [test] Session stopped.
+2018-11-07 15:14:54,040 [1] INFO  - Memory used before collection:  42,344,532
+2018-11-07 15:14:54,140 [1] INFO  - Memory used after collection:  11,420,084
+2018-11-07 15:14:54,385 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-07 15:15:26,936 [1] INFO  - [Application started.]
+2018-11-07 15:15:27,228 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 15:15:29,547 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 15:15:29,566 [1] INFO  - LoadMasters() took 8 ms.
+2018-11-07 15:15:29,567 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 15:15:33,723 [1] INFO  - [test] Session is starting.
+2018-11-07 15:15:34,131 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:34,301 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:34,347 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:34,388 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:34,429 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:34,482 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:34,523 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:34,559 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:34,595 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:35,042 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:35,086 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:35,329 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:15:38,118 [5] INFO  - LoadMasters() took 4,386 ms.
+2018-11-07 15:15:38,128 [1] INFO  - [test] Session started.
+2018-11-07 15:15:57,438 [1] ERROR - Can't create control OPD14008.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-07 15:16:31,669 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-07 15:16:31,671 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-07 15:16:31,690 [1] INFO  - [test] Session stopped.
+2018-11-07 15:16:31,695 [1] INFO  - Memory used before collection:  38,820,144
+2018-11-07 15:16:31,750 [1] INFO  - Memory used after collection:  9,703,796
+2018-11-07 15:16:31,815 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-07 15:17:33,730 [1] INFO  - [Application started.]
+2018-11-07 15:17:33,940 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 15:17:36,214 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 15:17:36,244 [1] INFO  - LoadMasters() took 15 ms.
+2018-11-07 15:17:36,247 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 15:17:40,782 [1] INFO  - [test] Session is starting.
+2018-11-07 15:17:41,216 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:41,357 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:41,394 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:41,430 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:41,467 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:41,503 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:41,541 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:41,613 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:41,662 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:42,111 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:42,154 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:42,377 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:17:45,155 [5] INFO  - LoadMasters() took 4,367 ms.
+2018-11-07 15:17:45,164 [1] INFO  - [test] Session started.
+2018-11-07 15:41:17,085 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-07 15:41:17,087 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-07 15:41:17,107 [1] INFO  - [test] Session stopped.
+2018-11-07 15:41:17,109 [1] INFO  - Memory used before collection:  42,370,340
+2018-11-07 15:41:17,176 [1] INFO  - Memory used after collection:  11,241,772
+2018-11-07 15:41:17,240 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-07 15:41:23,832 [1] INFO  - [Application started.]
+2018-11-07 15:41:24,158 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 15:41:26,200 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 15:41:26,227 [1] INFO  - LoadMasters() took 14 ms.
+2018-11-07 15:41:26,229 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 15:41:31,881 [1] INFO  - [test] Session is starting.
+2018-11-07 15:41:32,303 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:32,450 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:32,488 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:32,524 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:32,563 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:32,597 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:32,640 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:32,675 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:32,710 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:33,159 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:33,210 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:33,521 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 15:41:36,225 [5] INFO  - LoadMasters() took 4,336 ms.
+2018-11-07 15:41:36,234 [1] INFO  - [test] Session started.
+2018-11-07 16:00:03,586 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/16
+2018-11-07 16:00:03,673 [1] INFO  - Print report on: Default Printer
+2018-11-07 16:00:06,745 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-11-07 16:00:08,916 [1] DEBUG - Print to 'Microsoft Print to PDF'
+--------------------------------------------------------------------------------
+2018-11-07 16:31:18,019 [1] INFO  - [Application started.]
+2018-11-07 16:31:18,375 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 16:31:21,124 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 16:31:21,147 [1] INFO  - LoadMasters() took 8 ms.
+2018-11-07 16:31:21,148 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 16:31:26,617 [1] INFO  - [test] Session is starting.
+2018-11-07 16:31:27,061 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:27,212 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:27,249 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:27,289 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:27,325 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:27,364 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:27,402 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:27,438 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:27,484 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:27,927 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:27,978 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:28,218 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:31:30,905 [5] INFO  - LoadMasters() took 4,282 ms.
+2018-11-07 16:31:30,918 [1] INFO  - [test] Session started.
+2018-11-07 16:32:44,617 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-11-07 16:32:44,660 [1] INFO  - Print report on: Default Printer
+2018-11-07 16:32:46,897 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-11-07 16:32:47,378 [1] ERROR - Print report error!
+Microsoft.Reporting.WinForms.LocalProcessingException: An error occurred during local report processing. ---> Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: One or more parameters required to run the report have not been specified.
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.ValidateReportParameters()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReportOdpInitial.PrepareForExecution()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.Execute(IRenderingExtension newRenderer)
+   at Microsoft.ReportingServices.ReportProcessing.ReportProcessing.RenderReport(IRenderingExtension newRenderer, DateTime executionTimeStamp, ProcessingContext pc, RenderingContext rc, IChunkFactory yukonCompiledDefinition)
+   at Microsoft.Reporting.LocalService.CreateSnapshotAndRender(ReportProcessing repProc, IRenderingExtension renderer, ProcessingContext pc, RenderingContext rc, SubreportCallbackHandler subreportHandler, ParameterInfoCollection parameters, DatasourceCredentialsCollection credentials)
+   at Microsoft.Reporting.LocalService.Render(String format, String deviceInfo, String paginationMode, Boolean allowInternalRenderers, IEnumerable dataSources, CreateAndRegisterStream createStreamCallback)
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, CreateStreamCallback createStream, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, CreateStreamCallback createStream, Warning[]& warnings)
+   at WinformUI.ReportViewer.Export(LocalReport report)
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\ViewModel.cs:line 18
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTPRINT(Boolean value) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 19
+   at FPT.eHospital.Forms.Reporting.VMRPT01.Print(Boolean skipPaperCheck) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 110
+--------------------------------------------------------------------------------
+2018-11-07 16:34:02,677 [1] INFO  - [Application started.]
+2018-11-07 16:34:02,920 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 16:34:04,803 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 16:34:04,826 [1] INFO  - LoadMasters() took 9 ms.
+2018-11-07 16:34:04,827 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 16:36:08,401 [1] INFO  - [test] Session is starting.
+2018-11-07 16:36:08,805 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:08,964 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:09,023 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:09,089 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:09,125 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:09,161 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:09,196 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:09,234 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:09,268 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:09,693 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:09,735 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:09,947 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:36:12,542 [5] INFO  - LoadMasters() took 4,136 ms.
+2018-11-07 16:36:12,551 [1] INFO  - [test] Session started.
+2018-11-07 16:37:33,099 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-11-07 16:37:33,152 [1] INFO  - Print report on: Default Printer
+2018-11-07 16:37:35,813 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-11-07 16:37:36,325 [1] ERROR - Print report error!
+Microsoft.Reporting.WinForms.LocalProcessingException: An error occurred during local report processing. ---> Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: One or more parameters required to run the report have not been specified.
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.ValidateReportParameters()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReportOdpInitial.PrepareForExecution()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.Execute(IRenderingExtension newRenderer)
+   at Microsoft.ReportingServices.ReportProcessing.ReportProcessing.RenderReport(IRenderingExtension newRenderer, DateTime executionTimeStamp, ProcessingContext pc, RenderingContext rc, IChunkFactory yukonCompiledDefinition)
+   at Microsoft.Reporting.LocalService.CreateSnapshotAndRender(ReportProcessing repProc, IRenderingExtension renderer, ProcessingContext pc, RenderingContext rc, SubreportCallbackHandler subreportHandler, ParameterInfoCollection parameters, DatasourceCredentialsCollection credentials)
+   at Microsoft.Reporting.LocalService.Render(String format, String deviceInfo, String paginationMode, Boolean allowInternalRenderers, IEnumerable dataSources, CreateAndRegisterStream createStreamCallback)
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, CreateStreamCallback createStream, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, CreateStreamCallback createStream, Warning[]& warnings)
+   at WinformUI.ReportViewer.Export(LocalReport report)
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\ViewModel.cs:line 18
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTPRINT(Boolean value) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 19
+   at FPT.eHospital.Forms.Reporting.VMRPT01.Print(Boolean skipPaperCheck) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 110
+2018-11-07 16:38:16,020 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-11-07 16:38:16,289 [1] INFO  - Print report on: Default Printer
+2018-11-07 16:38:16,355 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+--------------------------------------------------------------------------------
+2018-11-07 16:40:32,923 [1] INFO  - [Application started.]
+2018-11-07 16:40:33,212 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 16:40:35,195 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 16:40:35,218 [1] INFO  - LoadMasters() took 10 ms.
+2018-11-07 16:40:35,219 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 16:46:20,105 [1] INFO  - [test] Session is starting.
+2018-11-07 16:46:20,530 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:20,667 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:20,703 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:20,739 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:20,776 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:20,809 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:20,841 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:20,876 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:20,912 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:21,342 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:21,392 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:21,640 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:46:24,476 [5] INFO  - LoadMasters() took 4,367 ms.
+2018-11-07 16:46:24,487 [1] INFO  - [test] Session started.
+2018-11-07 16:53:19,400 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-11-07 16:53:19,439 [1] INFO  - Print report on: Default Printer
+2018-11-07 16:53:21,861 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-11-07 16:53:22,360 [1] ERROR - Print report error!
+Microsoft.Reporting.WinForms.LocalProcessingException: An error occurred during local report processing. ---> Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: One or more parameters required to run the report have not been specified.
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.ValidateReportParameters()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReportOdpInitial.PrepareForExecution()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.Execute(IRenderingExtension newRenderer)
+   at Microsoft.ReportingServices.ReportProcessing.ReportProcessing.RenderReport(IRenderingExtension newRenderer, DateTime executionTimeStamp, ProcessingContext pc, RenderingContext rc, IChunkFactory yukonCompiledDefinition)
+   at Microsoft.Reporting.LocalService.CreateSnapshotAndRender(ReportProcessing repProc, IRenderingExtension renderer, ProcessingContext pc, RenderingContext rc, SubreportCallbackHandler subreportHandler, ParameterInfoCollection parameters, DatasourceCredentialsCollection credentials)
+   at Microsoft.Reporting.LocalService.Render(String format, String deviceInfo, String paginationMode, Boolean allowInternalRenderers, IEnumerable dataSources, CreateAndRegisterStream createStreamCallback)
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, CreateStreamCallback createStream, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, CreateStreamCallback createStream, Warning[]& warnings)
+   at WinformUI.ReportViewer.Export(LocalReport report)
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\ViewModel.cs:line 18
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTPRINT(Boolean value) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 19
+   at FPT.eHospital.Forms.Reporting.VMRPT01.Print(Boolean skipPaperCheck) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 110
+--------------------------------------------------------------------------------
+2018-11-07 16:54:45,734 [1] INFO  - [Application started.]
+2018-11-07 16:54:45,994 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 16:54:48,363 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 16:54:48,390 [1] INFO  - LoadMasters() took 9 ms.
+2018-11-07 16:54:48,392 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 16:54:53,062 [1] INFO  - [test] Session is starting.
+2018-11-07 16:54:53,498 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:53,651 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:53,687 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:53,723 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:53,765 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:53,961 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:54,011 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:54,059 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:54,099 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:54,551 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:54,618 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:54,831 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:54:57,819 [5] INFO  - LoadMasters() took 4,751 ms.
+2018-11-07 16:54:57,830 [1] INFO  - [test] Session started.
+2018-11-07 16:56:22,369 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-11-07 16:56:22,439 [1] INFO  - Print report on: Default Printer
+2018-11-07 16:56:25,016 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-11-07 16:56:25,550 [1] ERROR - Print report error!
+Microsoft.Reporting.WinForms.LocalProcessingException: An error occurred during local report processing. ---> Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: One or more parameters required to run the report have not been specified.
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.ValidateReportParameters()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReportOdpInitial.PrepareForExecution()
+   at Microsoft.ReportingServices.ReportProcessing.Execution.RenderReport.Execute(IRenderingExtension newRenderer)
+   at Microsoft.ReportingServices.ReportProcessing.ReportProcessing.RenderReport(IRenderingExtension newRenderer, DateTime executionTimeStamp, ProcessingContext pc, RenderingContext rc, IChunkFactory yukonCompiledDefinition)
+   at Microsoft.Reporting.LocalService.CreateSnapshotAndRender(ReportProcessing repProc, IRenderingExtension renderer, ProcessingContext pc, RenderingContext rc, SubreportCallbackHandler subreportHandler, ParameterInfoCollection parameters, DatasourceCredentialsCollection credentials)
+   at Microsoft.Reporting.LocalService.Render(String format, String deviceInfo, String paginationMode, Boolean allowInternalRenderers, IEnumerable dataSources, CreateAndRegisterStream createStreamCallback)
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.WinForms.LocalReport.InternalRender(String format, Boolean allowInternalRenderers, String deviceInfo, PageCountMode pageCountMode, CreateAndRegisterStream createStreamCallback, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, PageCountMode pageCountMode, CreateStreamCallback createStream, Warning[]& warnings)
+   at Microsoft.Reporting.WinForms.LocalReport.Render(String format, String deviceInfo, CreateStreamCallback createStream, Warning[]& warnings)
+   at WinformUI.ReportViewer.Export(LocalReport report)
+   at WinformUI.ReportViewer.report_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\ViewModel.cs:line 18
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.Reporting.VMRPT01Model.set_RPTPRINT(Boolean value) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\CommonModels\VMRPT01Model.cs:line 19
+   at FPT.eHospital.Forms.Reporting.VMRPT01.Print(Boolean skipPaperCheck) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\RPTViewModels\VMRPT01.cs:line 110
+--------------------------------------------------------------------------------
+2018-11-07 16:59:17,201 [1] INFO  - [Application started.]
+2018-11-07 16:59:17,494 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 16:59:19,571 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 16:59:19,596 [1] INFO  - LoadMasters() took 12 ms.
+2018-11-07 16:59:19,598 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 16:59:24,177 [1] INFO  - [test] Session is starting.
+2018-11-07 16:59:24,619 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:24,819 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:24,872 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:24,919 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:24,961 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:25,021 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:25,097 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:25,135 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:25,213 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:25,681 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:25,723 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:25,993 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 16:59:28,872 [5] INFO  - LoadMasters() took 4,688 ms.
+2018-11-07 16:59:28,882 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-07 17:01:30,596 [1] INFO  - [Application started.]
+2018-11-07 17:01:30,926 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 17:01:33,191 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 17:01:33,214 [1] INFO  - LoadMasters() took 11 ms.
+2018-11-07 17:01:33,215 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 17:01:37,862 [1] INFO  - [test] Session is starting.
+2018-11-07 17:01:38,301 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:38,473 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:38,508 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:38,542 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:38,579 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:38,619 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:38,658 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:38,693 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:38,729 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:39,184 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:39,227 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:39,446 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:01:42,529 [5] INFO  - LoadMasters() took 4,661 ms.
+2018-11-07 17:01:42,537 [1] INFO  - [test] Session started.
+2018-11-07 17:02:07,671 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-11-07 17:02:07,917 [1] INFO  - Print report on: Default Printer
+2018-11-07 17:02:10,289 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-11-07 17:03:06,054 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-11-07 17:03:06,108 [1] INFO  - Print report on: Default Printer
+2018-11-07 17:03:06,175 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+2018-11-07 17:03:54,168 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-11-07 17:03:54,213 [1] INFO  - Print report on: Default Printer
+2018-11-07 17:03:54,275 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+--------------------------------------------------------------------------------
+2018-11-07 17:06:32,563 [1] INFO  - [Application started.]
+2018-11-07 17:06:32,959 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 17:06:35,195 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 17:06:35,213 [1] INFO  - LoadMasters() took 8 ms.
+2018-11-07 17:06:35,214 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 17:06:42,315 [1] INFO  - [test] Session is starting.
+2018-11-07 17:06:42,868 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:43,067 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:43,107 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:43,147 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:43,192 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:43,230 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:43,265 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:43,302 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:43,342 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:43,792 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:43,844 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:44,076 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:06:46,906 [5] INFO  - LoadMasters() took 4,585 ms.
+2018-11-07 17:06:46,915 [1] INFO  - [test] Session started.
+2018-11-07 17:07:07,692 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\FPT00001\QMS20P00101_VN_CapSTTTiepNhan.rdl: exist/0
+2018-11-07 17:07:07,924 [1] INFO  - Print report on: Default Printer
+2018-11-07 17:07:10,278 [1] DEBUG - Report setting with printer: '', actual printer: 'Microsoft Print to PDF'
+--------------------------------------------------------------------------------
+2018-11-07 17:09:28,295 [1] INFO  - [Application started.]
+2018-11-07 17:09:28,717 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 17:09:31,452 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 17:09:31,474 [1] INFO  - LoadMasters() took 10 ms.
+2018-11-07 17:09:31,476 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 17:09:36,771 [1] INFO  - [test] Session is starting.
+2018-11-07 17:09:37,212 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:37,350 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:37,390 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:37,427 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:37,465 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:37,501 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:37,537 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:37,578 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:37,614 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:38,057 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:38,110 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:38,343 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:09:41,225 [5] INFO  - LoadMasters() took 4,448 ms.
+2018-11-07 17:09:41,235 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-07 17:18:04,172 [1] INFO  - [Application started.]
+2018-11-07 17:18:04,469 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 17:18:06,712 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 17:18:06,730 [1] INFO  - LoadMasters() took 9 ms.
+2018-11-07 17:18:06,732 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 17:18:11,918 [1] INFO  - [test] Session is starting.
+2018-11-07 17:18:12,359 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:12,712 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:12,753 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:12,816 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:12,895 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:12,947 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:12,996 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:13,042 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:13,105 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:13,551 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:13,703 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:13,934 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 17:18:16,782 [5] INFO  - LoadMasters() took 4,857 ms.
+2018-11-07 17:18:16,793 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-07 18:43:09,329 [1] INFO  - [Application started.]
+2018-11-07 18:43:09,586 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 18:43:11,130 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 18:43:11,153 [1] INFO  - LoadMasters() took 10 ms.
+2018-11-07 18:43:11,154 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 18:43:16,591 [1] INFO  - [test] Session is starting.
+2018-11-07 18:43:17,022 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:17,270 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:17,318 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:17,356 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:17,393 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:17,431 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:17,503 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:17,543 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:17,581 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:18,035 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:18,083 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:18,326 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:43:21,073 [5] INFO  - LoadMasters() took 4,474 ms.
+2018-11-07 18:43:21,091 [1] INFO  - [test] Session started.
+2018-11-07 18:43:45,788 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 07 Nov 2018 11:43:46 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1908
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetAllUsers() in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 759
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadUsers() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 35
+   at FPT.eHospital.Forms.Administration.VMADM09.LoadData() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM09.cs:line 81
+   at FPT.eHospital.Forms.Administration.VMADM09.Initialize() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM09.cs:line 38
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 254
+   at FPT.eHospital.Forms.Administration.VMADM02.ShowSubView(String vmName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM02.cs:line 261
+   at FPT.eHospital.Forms.Administration.VMADM02.TabSelChanged(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM02.cs:line 169
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-07 18:43:48,041 [1] ERROR - Can't connect to User system.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 07 Nov 2018 11:43:48 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1908
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetRoles() in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 241
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadRoles() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 76
+   at FPT.eHospital.Forms.Administration.VMADM02.LoadData() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM02.cs:line 243
+   at FPT.eHospital.Forms.Administration.VMADM02.Initialize() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM02.cs:line 91
+2018-11-07 18:44:02,651 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 07 Nov 2018 11:44:02 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1908
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetRoles() in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 241
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadROLES() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 94
+   at FPT.eHospital.Forms.Administration.VMADM15.LoadData(Int32 selected_Tab) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 380
+   at FPT.eHospital.Forms.Administration.VMADM15.TabSelChanged(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 182
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-07 18:44:08,007 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 07 Nov 2018 11:44:08 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1915
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetResourcesByResourceCode(String code) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 344
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadResources(String code, ResourceType rt) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 110
+   at FPT.eHospital.Forms.Administration.VMADM15.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 231
+   at FPT.eHospital.Forms.Administration.VMADM06.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06.cs:line 496
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-07 18:44:11,063 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-07 18:44:11,066 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-07 18:44:11,092 [1] INFO  - [test] Session stopped.
+2018-11-07 18:44:11,094 [1] INFO  - Memory used before collection:  37,092,532
+2018-11-07 18:44:11,166 [1] INFO  - Memory used after collection:  9,386,432
+2018-11-07 18:44:11,220 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-07 18:46:24,115 [1] INFO  - [Application started.]
+2018-11-07 18:46:24,527 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-07 18:46:26,556 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-07 18:46:26,577 [1] INFO  - LoadMasters() took 10 ms.
+2018-11-07 18:46:26,579 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-07 18:46:30,922 [1] INFO  - [test] Session is starting.
+2018-11-07 18:46:31,347 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:31,526 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:31,566 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:31,606 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:31,659 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:31,697 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:31,732 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:31,772 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:31,805 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:32,239 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:32,285 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:32,514 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-07 18:46:35,197 [5] INFO  - LoadMasters() took 4,270 ms.
+2018-11-07 18:46:35,213 [1] INFO  - [test] Session started.
+2018-11-07 18:46:46,728 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 07 Nov 2018 11:46:47 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1908
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetRoles() in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 241
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadROLES() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 94
+   at FPT.eHospital.Forms.Administration.VMADM15.LoadData(Int32 selected_Tab) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 380
+   at FPT.eHospital.Forms.Administration.VMADM15.TabSelChanged(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 182
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-07 18:46:53,006 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 07 Nov 2018 11:46:53 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1915
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetResourcesByResourceCode(String code) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 344
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadResources(String code, ResourceType rt) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 110
+   at FPT.eHospital.Forms.Administration.VMADM15.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 231
+   at FPT.eHospital.Forms.Administration.VMADM06.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06.cs:line 496
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49

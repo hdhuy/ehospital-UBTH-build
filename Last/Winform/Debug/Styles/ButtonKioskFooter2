@@ -1,0 +1,19 @@
+FPT.Framework.Presentation.ButtonStyle, FPT.Framework.Presentation
+{
+  "ForeColor": "@KioskFooter2fg",
+  "BackColor": "@KioskFooter2bg",
+  "HoverForeColor": "@KioskFooter2fg",
+  "HoverBackColor": "@KioskFooter2Hoverbg",
+  "PressForeColor": "@KioskFooter2fg",
+  "PressBackColor": "@KioskFooter2Pressbg",
+  "DisableForeColor": "@buttonDisablefg",
+  "DisableBackColor": "@buttonDisable",
+  "FocusColor": "@white",
+  "Font": "KioskFooter",
+  "TextMargin": "50,0,0,0",
+  "ImageMargin": "3,3,3,3",
+  "TextAlign": "MiddleLeft",
+  "ImageAlign": "MiddleLeft",
+  "FocusWidth": 1,
+  "WrapText": true
+}

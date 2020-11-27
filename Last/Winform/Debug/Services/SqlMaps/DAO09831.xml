@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <statements>
+    <statement id="DAO09831_CheckHoadonCochua" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_HOADONDIENTU where HOADON_ID = $HOADON_ID$
+    </statement>
+    <statement id="DAO09831_InsertHoadonDientu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      declare @jsonData nvarchar(max) = N'$JSON_DATA$';
+      insert into TT_HOADONDIENTU
+      select json.*
+      FROM OPENJSON(@jsonData)
+      WITH (
+      HOADON_ID int ,
+      LOAIHOADON varchar(20) ,
+      MAYTE varchar(30) ,
+      TENBENHNHAN nvarchar(250) ,
+      DIACHI nvarchar(2000) ,
+      SODIENTHOAI nvarchar(2000) ,
+      TENCONGTY nvarchar(2000) ,
+      MASOTHUE nvarchar(250) ,
+      HINHTHUCTHANHTOAN nvarchar(250) ,
+      SOTAIKHOAN varchar(250) ,
+      TENNGANHANG nvarchar(2000) ,
+      SOSERIEVAT varchar(50) ,
+      SOHOADONVAT varchar(50) ,
+      GIATRIHOADON numeric(18, 2) ,
+      USER_HOADON nvarchar(50) ,
+      NGAYPHATSINH datetime ,
+      NGAYTAO datetime ,
+      NGUOITAO_ID int ,
+      TRANGTHAI varchar(50) ,
+      SOBENHAN varchar(30) ,
+      SOVAOVIEN varchar(30) ,
+      LYDOTHU nvarchar(500) ,
+      TENNGUOITHUTIEN nvarchar(250) ,
+      LOAICHUNGTU varchar(10) ,
+      LENH char(1),
+      TIEPNHAN_ID int ,
+      BENHAN_ID int,
+      SOTIEPNHAN varchar(20),
+      DOITUONG varchar(10),
+      NGAY_HUY_HOAN datetime,
+      NGUOI_HUY_HOAN nvarchar(500)
+      ) json
+      where not exists (select * from TT_HOADONDIENTU where HOADON_ID = json.HOADON_ID)
+    </statement>
+    <statement id="DAO09831_UpdateHoadonDientu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      declare @jsonData nvarchar(max) = N'$JSON_DATA$';
+      update TT_HOADONDIENTU
+      set 
+      TT_HOADONDIENTU.TRANGTHAI = json.TRANGTHAI, 
+      TT_HOADONDIENTU.LENH = '1', 
+      TT_HOADONDIENTU.NGAY_HUY_HOAN = json.NGAY_HUY_HOAN, 
+      TT_HOADONDIENTU.NGUOI_HUY_HOAN = json.NGUOI_HUY_HOAN
+      FROM OPENJSON(@jsonData)
+      WITH (
+      HOADON_ID int ,
+      TRANGTHAI varchar(50)      ,
+      NGAY_HUY_HOAN datetime,
+      NGUOI_HUY_HOAN nvarchar(500)
+      ) json
+      where TT_HOADONDIENTU.HOADON_ID = json.HOADON_ID and TT_HOADONDIENTU.TRANGTHAI != json.TRANGTHAI
+    </statement>
+    <statement id="DAO09831_InsertHoadonDientuChitiet" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      declare @jsonData nvarchar(max) = N'$JSON_DATA$';
+      insert into TT_HOADONDIENTUCHITIET
+      select json.*
+      FROM OPENJSON(@jsonData)
+      WITH (
+      HOADONCHITIET_ID int,
+      VIENPHI_ID int,
+      HOADON_ID int,
+      SOTHUTU int,
+      MAHANG nvarchar(250),
+      TENHANG nvarchar(2000),
+      DONVITINH nvarchar(250),
+      DONGIA numeric(18,2),
+      SOLUONG numeric(18,2),
+      THANHTIEN numeric(18,2),
+      PHANTRAMTHUE numeric(18,2),
+      TIENTHUE numeric(18,2),
+      PHANTRAMCHIETKHAU numeric(18,2),
+      TIENCHIETKHAU numeric(18,2),
+      TONGTIEN numeric(18,2)
+      ) json
+      where not exists (select * from TT_HOADONDIENTUCHITIET where HOADON_ID = json.HOADON_ID and HOADONCHITIET_ID = json.HOADONCHITIET_ID)
+    </statement>
+    <statement id="DAO09831_InsertNoidungHoadonDientu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      declare @jsonData nvarchar(max) = N'$JSON_DATA$';
+      insert into TT_HOADONDT_NOIDUNG_CHITIET
+      select json.*
+      FROM OPENJSON(@jsonData)
+      WITH (
+      HOADON_ID int,
+      NOIDUNG nvarchar(2000),
+      THANHTIEN numeric(18,2),
+      DONGIA numeric(18,2),
+      SOLUONG numeric(18,2),
+      DVT nvarchar(100),
+      NHOM nvarchar(50)
+      ) json
+    </statement>
+  </statements>
+</sqlMap>

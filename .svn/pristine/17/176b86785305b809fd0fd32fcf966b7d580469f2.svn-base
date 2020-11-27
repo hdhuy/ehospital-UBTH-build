@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,33049830827b276e16b4d5c61025c781-->
+        <statement id="DAO00003_CacheList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_SYS_CACHE
+            where HOSPITAL_ID = '$HOSPITAL_ID$'
+            <isPropertyAvailable prepend="AND" property="ACTIVE">
+                TM_SYS_CACHE.ACTIVE = '$ACTIVE$'
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="AND" property="TYPE">
+                TM_SYS_CACHE.TYPE = '$TYPE$'
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="AND" property="DAO_ID">
+                TM_SYS_CACHE.DAO_ID = '$DAO_ID$'
+            </isPropertyAvailable>
+        </statement>
+        <!--Revision:0,7b3394539db9d7ffebbb3e4489f2df55-->
+        <statement id="DAO00003_UpdateCacheTime" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            update TM_SYS_CACHE set UPDATE_TIME = '$CURRENT_DATETIME$'
+            where HOSPITAL_ID = '$HOSPITAL_ID$' AND ID IN
+            <iterate property="PARAMETERS" open="(" close=")" conjunction=",">
+                #PARAMETERS[]#
+            </iterate>
+        </statement>
+      <statement id="DAO00003_UpdateStaticCacheTime" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        update TM_SYS_CACHE set UPDATE_TIME = GETDATE()
+        where HOSPITAL_ID = '$HOSPITAL_ID$' AND TABLE_AFFECT IN ('$TABLE_AFFECT$')
+      </statement>
+    </statements>
+</sqlMap>

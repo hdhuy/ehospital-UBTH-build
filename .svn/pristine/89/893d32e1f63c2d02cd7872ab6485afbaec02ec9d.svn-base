@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <statement id="DAO00307_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT HD.*,CT.MACONGTY, CT.TENCONGTY
+      FROM TT_KSK_HOPDONG HD
+      LEFT JOIN TT_KSK_CONGTY CT ON CT.CONGTY_ID = HD.CONGTY_ID
+      WHERE HD.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00307_GetHopDongBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT HD_BN.*, LST.DICTIONARY_NAME AS HONNHAN
+      , CASE WHEN HD_BN.GIOITINH = '1' THEN N'Nam' ELSE N'Nữ' END AS GENDER
+      , NV.TENNHANVIEN, GOI.TENGOI
+      , DT.DICTIONARY_NAME as DOITUONG
+      , HC.TENDONVI as NOICAP
+      , ISNULL(HD_BN.DIACHI,'') + ',' + ISNULL(XP.TENDONVI,'') + ',' + ISNULL(QH.TENDONVI,'') + ',' + ISNULL(TP.TENDONVI,'') as DIACHILIENLAC
+      , CASE WHEN HD_BN.NGAYSINH IS NULL THEN CAST(HD_BN.NAMSINH AS VARCHAR(4)) ELSE CONVERT(VARCHAR(10), HD_BN.NGAYSINH,103) END AS NGAYTHANGNAMSINH
+      FROM TT_KSK_HOPDONG_BENHNHAN HD_BN
+      LEFT JOIN TT_KSK_HOPDONG HD ON HD.HOPDONG_ID = HD_BN.HOPDONG_ID
+      LEFT JOIN LST_DICTIONARY LST ON LST.DICTIONARY_ID = HD_BN.TINHTRANGHONNHAN_ID AND LST.DICTIONARY_TYPE_CODE = 'TinhTrangGiaDinh'
+      LEFT JOIN TM_NHANVIEN NV ON NV.NHANVIEN_ID = HD_BN.NHANVIEN_ID
+      LEFT JOIN TM_CSKH_GOI GOI ON GOI.GOI_ID = HD_BN.GOI_ID
+      LEFT JOIN LST_DICTIONARY DT ON DT.DICTIONARY_ID = HD_BN.DOITUONG_ID AND DT.DICTIONARY_TYPE_CODE = 'DoiTuongKhamSucKhoe'
+      LEFT JOIN TM_DONVIHANHCHINH HC ON HC.DONVIHANHCHINH_ID = HD_BN.NOICAP_ID
+      LEFT JOIN TM_DONVIHANHCHINH XP on XP.MADONVI = HD_BN.XAPHUONGTT_ID
+      LEFT JOIN TM_DONVIHANHCHINH QH on QH.DONVIHANHCHINH_ID = XP.CAPTREN_ID
+      LEFT JOIN TM_DONVIHANHCHINH TP on TP.DONVIHANHCHINH_ID = QH.CAPTREN_ID
+      <!--WHERE HD_BN.HOPDONG_ID = '$HOPDONG_ID$'-->
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="HOPDONG_ID">
+            HD_BN.HOPDONG_ID = $HOPDONG_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="STATUS_CODE">
+            1 = case
+            when '$STATUS_CODE$' = 'ChuaCap' then case when HD_BN.MAYTE is null then 1 end
+            when HD_BN.MAYTE is not null then 1 end
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KEY">
+            (HD_BN.MAYTE LIKE '%' + #KEY# + '%' OR HD_BN.TENBENHNHAN LIKE N'%' + #KEY# + '%')
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="FGIOITINH">
+            HD_BN.GIOITINH = '$FGIOITINH$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            HD_BN.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+        ORDER BY HD_BN.STT
+      </dynamic>
+    </statement>
+    <statement id="DAO00307_GetHopDongBenhNhanDichVu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT distinct HD_BN.HOPDONG_ID, DV.TENDICHVU, ISNULL(NTH.TENPHONGBAN, PB.TENPHONGBAN) AS NOITHUCHIEN, NDV.TENNHOMDICHVU, ISNULL(GOI_CT.NOITHUCHIEN_ID, PB.PHONGBAN_ID) AS PHONGBAN_ID, DV.DICHVU_ID
+      , ISNULL(GOI_CT.DONGIATRONGGOI,0) AS DONGIA, ISNULL(GOI_CT.SOLAN,0) AS SOLUONG, GOI_CT.THANHTIENTRONGGOI AS THANHTIEN, BS.NHANVIEN_ID AS BACSICHIDINH_ID, BS.TENNHANVIEN AS TENBACSICHIDINH
+      , CASE WHEN DV.DICHVU_ID IN (SELECT DICHVU_ID FROM TT_KSK_HOPDONG_BENHNHAN_DICHVU WHERE HOPDONG_ID = '$HOPDONG_ID$' AND HOPDONG_BENHNHAN_ID = '$HOPDONG_BENHNHAN_ID$') THEN 1 ELSE 0 END AS DANGKY
+      FROM TT_KSK_HOPDONG HD
+      <!--inner join TT_KSK_HOPDONG_GOIDICHVU HD_DV on HD.HOPDONG_ID = HD_DV.HOPDONG_ID-->
+      inner join TT_KSK_HOPDONG_BENHNHAN HD_BN on HD_BN.HOPDONG_ID = HD.HOPDONG_ID
+      INNER JOIN TM_CSKH_GOI_CHITIET GOI_CT ON GOI_CT.GOI_ID = HD_BN.GOI_ID
+      INNER JOIN TM_DICHVU DV ON DV.DICHVU_ID = GOI_CT.DICHVU_ID
+      LEFT JOIN TM_NHOMDICHVU NDV ON NDV.NHOMDICHVU_ID = DV.NHOMDICHVU_ID
+      INNER JOIN TM_PHONGBAN_DICHVU PB_DV ON PB_DV.DICHVU_ID = DV.DICHVU_ID
+      LEFT JOIN TM_PHONGBAN PB ON PB.PHONGBAN_ID = PB_DV.PHONGBAN_ID
+      LEFT JOIN TM_PHONGBAN NTH ON NTH.PHONGBAN_ID = GOI_CT.NOITHUCHIEN_ID
+      LEFT JOIN TM_NHANVIEN BS ON BS.NHANVIEN_ID = GOI_CT.BACSICHIDINH_ID
+      WHERE GOI_CT.GOI_ID = $GOI_ID$ and HD_BN.HOPDONG_BENHNHAN_ID = $HOPDONG_BENHNHAN_ID$
+      and PB_DV.PHONGBAN_ID =(select top 1 PHONGBAN_ID from TM_PHONGBAN_DICHVU where DICHVU_ID = DV.DICHVU_ID)
+    </statement>
+    <statement id="DAO00307_GetHopDongCallBack" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT HD.*
+      FROM TT_KSK_HOPDONG HD
+      WHERE HD.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <dynamic>
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="HOPDONG_ID">
+            HD.HOPDONG_ID = $HOPDONG_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SO_HD">
+            HD.SO_HD = '$SO_HD$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHOA">
+            HD.KHOA = '$KHOA$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00307_GetGoiDichVu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT G.*, G.GOI_ID as GOIDICHVU_ID
+      , case when G.GOI_ID in (select GOIDICHVU_ID from TT_KSK_HOPDONG_GOIDICHVU where HOPDONG_ID = $HOPDONG_ID$) then 1 else 0 end as GOIEXIST
+      FROM TM_CSKH_GOI G INNER JOIN LST_DICTIONARY L ON L.DICTIONARY_ID = G.LOAIGOI_ID
+      WHERE G.BENHVIEN_ID = '$BENHVIEN_ID$' AND L.DICTIONARY_TYPE_CODE = 'LoaiGoiDV'
+      AND L.DICTIONARY_CODE = 'KhamSucKhoe' AND G.TRANGTHAI = 'GOIDUOCPHEPBAN'
+    </statement>
+    <statement id="DAO00307_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TT_KSK_HOPDONG_BENHNHAN (
+      HOPDONG_ID
+      , BENHNHAN_ID
+      , MAYTE
+      , TENBENHNHAN
+      , GIOITINH
+      , NGAYSINH
+      , NAMSINH
+      , DIACHI
+      , QUOCTICH_ID
+      , TINHTHANH_ID
+      , QUANHUYEN_ID
+      , XAPHUONG_ID
+      , DIACHITHUONGTRU
+      , XAPHUONGTT_ID
+      , DANTOC_ID
+      , LOAITHE
+      , SODIENTHOAI
+      , EMAIL
+      , NGHENGHIEP_ID
+      , TINHTRANGHONNHAN_ID
+      , DOITUONG_ID
+      , CMND
+      , NGAYCAPTHE
+      , NAMCAPTHE
+      , NOICAP_ID
+      , NHANVIEN_ID
+      , NHOMMAU_ID
+      , YEUTORH_ID
+      , NHOMBENH_ID
+      , TIENSUDIUNG
+      , TIENSUBENH
+      , GHICHU
+      , KETQUA
+      , XEPLOAI_ID
+      , BSKETLUAN_ID
+      , GOI_ID
+      , IDCHUYEN
+      , DACOPHIEUYEUCAU
+      , DACOKETQUA
+      , NGAYHEN
+      , BENHVIEN_ID
+      , NGAYTAO
+      , NGUOITAO_ID
+      , NGAYCAPNHAT
+      , NGUOICAPNHAT_ID
+      ) values (
+      #HOPDONG_ID#
+      , #BENHNHAN_ID#
+      , #MAYTE#
+      , #TENBENHNHAN#
+      , #GIOITINH#
+      , #NGAYSINH#
+      , #NAMSINH#
+      , #DIACHI#
+      , #QUOCTICH_ID#
+      , #TINHTHANH_ID#
+      , #QUANHUYEN_ID#
+      , #XAPHUONG_ID#
+      , #DIACHITHUONGTRU#
+      , #XAPHUONGTT_ID#
+      , #DANTOC_ID#
+      , #LOAITHE#
+      , #SODIENTHOAI#
+      , #EMAIL#
+      , #NGHENGHIEP_ID#
+      , #TINHTRANGHONNHAN_ID#
+      , #DOITUONG_ID#
+      , #CMND#
+      , #NGAYCAPTHE#
+      , #NAMCAPTHE#
+      , #NOICAP_ID#
+      , #NHANVIEN_ID#
+      , #NHOMMAU_ID#
+      , #YEUTORH_ID#
+      , #NHOMBENH_ID#
+      , #TIENSUDIUNG#
+      , #TIENSUBENH#
+      , #GHICHU#
+      , #KETQUA#
+      , #XEPLOAI_ID#
+      , #BSKETLUAN_ID#
+      , #GOI_ID#
+      , #IDCHUYEN#
+      , #DACOPHIEUYEUCAU#
+      , #DACOKETQUA#
+      , #NGAYHEN#
+      , #BENHVIEN_ID#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      , #NGAYCAPNHAT#
+      , #NGUOICAPNHAT_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+
+    <update id="DAO00307_Update" parameterClass="System.Collections.IDictionary">
+      update TT_KSK_HOPDONG_BENHNHAN set
+      HOPDONG_ID = #HOPDONG_ID#
+      , TENBENHNHAN = #TENBENHNHAN#
+      , GIOITINH = #GIOITINH#
+      , NGAYSINH = #NGAYSINH#
+      , NAMSINH = #NAMSINH#
+      , DIACHI = #DIACHI#
+      , QUOCTICH_ID = #QUOCTICH_ID#
+      , TINHTHANH_ID = #TINHTHANH_ID#
+      , QUANHUYEN_ID = #QUANHUYEN_ID#
+      , XAPHUONG_ID = #XAPHUONG_ID#
+      , DIACHITHUONGTRU = #DIACHITHUONGTRU#
+      , XAPHUONGTT_ID = #XAPHUONGTT_ID#
+      , DANTOC_ID = #DANTOC_ID#
+      , LOAITHE = #LOAITHE#
+      , SODIENTHOAI = #SODIENTHOAI#
+      , EMAIL = #EMAIL#
+      , NGHENGHIEP_ID = #NGHENGHIEP_ID#
+      , TINHTRANGHONNHAN_ID = #TINHTRANGHONNHAN_ID#
+      , DOITUONG_ID = #DOITUONG_ID#
+      , CMND = #CMND#
+      , NGAYCAPTHE = #NGAYCAPTHE#
+      , NAMCAPTHE = #NAMCAPTHE#
+      , NOICAP_ID = #NOICAP_ID#
+      , NHANVIEN_ID = #NHANVIEN_ID#
+      , NHOMMAU_ID = #NHOMMAU_ID#
+      , YEUTORH_ID = #YEUTORH_ID#
+      , NHOMBENH_ID = #NHOMBENH_ID#
+      , TIENSUDIUNG = #TIENSUDIUNG#
+      , TIENSUBENH = #TIENSUBENH#
+      , GHICHU = #GHICHU#
+      , KETQUA = #KETQUA#
+      , XEPLOAI_ID = #XEPLOAI_ID#
+      , BSKETLUAN_ID = #BSKETLUAN_ID#
+      , GOI_ID = #GOI_ID#
+      , IDCHUYEN = #IDCHUYEN#
+      , DACOPHIEUYEUCAU = #DACOPHIEUYEUCAU#
+      , DACOKETQUA = #DACOKETQUA#
+      , NGAYHEN = #NGAYHEN#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      HOPDONG_BENHNHAN_ID = '$HOPDONG_BENHNHAN_ID$'
+    </update>
+
+    <statement id="DAO00307_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_KSK_HOPDONG_BENHNHAN
+      where
+      HOPDONG_BENHNHAN_ID = $HOPDONG_BENHNHAN_ID$
+    </statement>
+    <statement id="DAO00307_GetContractPatientWithPatientID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT * FROM TT_KSK_HOPDONG_BENHNHAN WHERE HOPDONG_BENHNHAN_ID = $HOPDONG_BENHNHAN_ID$
+      <dynamic>
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00307_MedicalCode" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      UPDATE TT_KSK_HOPDONG_BENHNHAN SET
+      MAYTE = #MAYTE#
+      , BENHNHAN_ID = #BENHNHAN_ID#
+      , TONTAI = '0'
+      , NGAYCAPNHAT = GETDATE()
+      WHERE HOPDONG_BENHNHAN_ID = $HOPDONG_BENHNHAN_ID$
+    </statement>
+    <statement id="DAO00307_GetContractWithDate" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT HD.*, HD.SO_HD + ' - ' + CT.TENCONGTY AS HOPDONG, CT.TENCONGTY
+      FROM TT_KSK_HOPDONG HD JOIN TT_KSK_CONGTY CT ON CT.CONGTY_ID = HD.CONGTY_ID
+      <!--WHERE CONVERT(DATE, HD.NGAY_HD) BETWEEN CONVERT(DATE, '$DATEFROM$') AND CONVERT(DATE, '$DATETO$')-->
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="AND" property="BENHVIEN_ID">
+            HD.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00307_GetContractPatient" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT HD_BN.*, LST.DICTIONARY_NAME AS HONNHAN
+      , CASE WHEN HD_BN.GIOITINH = '1' THEN N'Nam' ELSE N'Nữ' END AS GENDER
+      , CASE WHEN HD_BN.HOPDONG_BENHNHAN_ID IN (SELECT HOPDONG_BENHNHAN_ID FROM TT_KSK_HOPDONG_BENHNHAN_DICHVU) THEN 1 ELSE 0 END BENHNHAN_DANGKYKSK_DICHVU
+      , GOI.TENGOI
+      FROM TT_KSK_HOPDONG_BENHNHAN HD_BN
+      INNER JOIN TT_KSK_HOPDONG HD ON HD.HOPDONG_ID = HD_BN.HOPDONG_ID
+      LEFT JOIN LST_DICTIONARY LST ON LST.DICTIONARY_ID = HD_BN.TINHTRANGHONNHAN_ID AND LST.DICTIONARY_TYPE_CODE = 'TinhTrangGiaDinh'
+      LEFT JOIN TM_CSKH_GOI GOI ON GOI.GOI_ID = HD_BN.GOI_ID
+      WHERE HD.HOPDONG_ID = $HOPDONG_ID$
+      <dynamic>
+        <isParameterPresent>
+          <isNotEmpty prepend="AND" property="BENHVIEN_ID">
+            HD_BN.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="AND" property="KEYTIMKIEM">
+            (HD_BN.MAYTE LIKE '%' + #KEYTIMKIEM# + '%' or HD_BN.TENBENHNHAN LIKE '%' + #KEYTIMKIEM# + '%')
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00307_GetGoiKhamWithContract" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT G.TENGOI, G.GOI_ID, HD_GDV.*
+      FROM TT_KSK_HOPDONG_GOIDICHVU HD_GDV JOIN TM_CSKH_GOI G ON G.GOI_ID = HD_GDV.GOIDICHVU_ID
+      WHERE HD_GDV.HOPDONG_ID = $HOPDONG_ID$
+      <dynamic>
+        <isParameterPresent>
+          <isNotEmpty prepend="AND" property="BENHVIEN_ID">
+            HD_GDV.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00307_GetHopDong" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT HD.*, CT.TENCONGTY, LHD.DICTIONARY_NAME AS LOAIHD, TT.DICTIONARY_NAME AS TRANGTHAI_HOPDONG, HTTT.DICTIONARY_NAME AS HINHTHUCPHATSINH
+      FROM TT_KSK_HOPDONG HD
+      JOIN TT_KSK_CONGTY CT ON CT.CONGTY_ID = HD.CONGTY_ID
+      LEFT JOIN LST_DICTIONARY LHD ON LHD.DICTIONARY_ID = HD.LOAI_HD
+      LEFT JOIN LST_DICTIONARY TT ON TT.DICTIONARY_ID = HD.TRANGTHAI_HD
+      LEFT JOIN LST_DICTIONARY HTTT ON HTTT.DICTIONARY_ID = HD.HINHTHUCTHANHTOAN_PHATSINH
+      WHERE HD.BENHVIEN_ID = '$BENHVIEN_ID$'
+      <!--and CONVERT(DATE,HD.NGAY_HD) BETWEEN CONVERT(DATE,'$DATEFROM$') AND CONVERT(DATE,'$DATETO$')-->
+      <dynamic>
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="DATEFROM">
+            HD.NGAY_HD &gt;= '$DATEFROM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DATETO">
+            HD.NGAY_HD &lt;= '$DATETO$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KEY">
+            (HD.SO_HD LIKE '%' + #KEY# + '%' or CT.MACONGTY LIKE '%' + #KEY# + '%' or CT.TENCONGTY LIKE '%' + #KEY# + '%')
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TRANGTHAI_HD">
+            HD.TRANGTHAI_HD = $TRANGTHAI_HD$
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      ORDER BY HD.SO_HD
+    </statement>
+    <statement id="DAO00307_GetServiceConfirms" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select G_CT.DONGIATRONGGOI as DONGIA, PB.TENPHONGBAN as NOITHUCHIEN, G_CT.THANHTIENTRONGGOI as BENHNHANTRA, DV.TENDICHVU
+      from TT_KSK_HOPDONG HD
+      inner join TT_KSK_HOPDONG_BENHNHAN_DICHVU HD_DV on HD_DV.HOPDONG_ID = HD.HOPDONG_ID
+      inner join TM_DICHVU DV on DV.DICHVU_ID = HD_DV.DICHVU_ID
+      left join TM_PHONGBAN PB on PB.PHONGBAN_ID = HD_DV.PHONGBAN_ID
+      left join TM_CSKH_GOI_CHITIET G_CT on G_CT.DICHVU_ID = dv.DICHVU_ID and HD_DV.DICHVU_ID = G_CT.DICHVU_ID
+      inner join TM_CSKH_GOI G on G.GOI_ID = G_CT.GOI_ID
+      where HD.HOPDONG_ID = $HOPDONG_ID$
+      <isNotEmpty prepend="AND" property="BENHVIEN_ID">
+        HD.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00307_GetPatientConfirms" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select distinct HD_BN.*
+      , CASE WHEN HD_BN.GIOITINH = '1' THEN N'Nam' ELSE N'Nữ' END AS GENDER
+      , CASE WHEN HD_DV.ACTIVE IS NULL THEN 0 ELSE 1 END BENHNHAN_DANGKYKSK_DICHVU
+      , case when HD_BN.GOI_ID is null then N'Hợp đồng:' + ' ' + HD.SO_HD else N'Gói khám:' + ' ' + G.TENGOI end as DOITUONG
+      , LST.DICTIONARY_NAME as HONNHAN
+      from TT_KSK_HOPDONG HD
+      inner join TT_KSK_HOPDONG_BENHNHAN HD_BN on HD_BN.HOPDONG_ID = HD.HOPDONG_ID
+      left join LST_DICTIONARY LST ON LST.DICTIONARY_ID = HD_BN.TINHTRANGHONNHAN_ID AND LST.DICTIONARY_TYPE_CODE = 'TinhTrangGiaDinh'
+      inner join TT_KSK_HOPDONG_BENHNHAN_DICHVU HD_DV on HD_DV.HOPDONG_BENHNHAN_ID = HD_BN.HOPDONG_BENHNHAN_ID
+      left join TT_TIEPNHAN TN on TN.TIEPNHAN_ID = HD_DV.TIEPNHAN_ID
+      left join TM_CSKH_GOI G ON G.GOI_ID = HD_BN.GOI_ID
+      where HD.HOPDONG_ID = '$HOPDONG_ID$'
+      <isNotEmpty prepend="AND" property="BENHVIEN_ID">
+        HD.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      <isNotEmpty prepend="AND" property="KEYTIMKIEM">
+        (HD_BN.MAYTE LIKE '%' + #KEYTIMKIEM# + '%' or HD_BN.TENBENHNHAN LIKE '%' + #KEYTIMKIEM# + '%')
+      </isNotEmpty>
+      order by HD_BN.STT
+    </statement>
+    <statement id="DAO00307_GetServicesWithContractPatientID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT ROW_NUMBER() OVER (ORDER BY DV.DICHVU_ID) AS STT
+      , HD_DV.*, DV.TENDICHVU, PB.TENPHONGBAN AS NOITHUCHIEN, NDV.TENNHOMDICHVU, PB.PHONGBAN_ID, DV.DICHVU_ID
+      , GOI_CT.DONGIATRONGGOI AS DONGIA, GOI_CT.THANHTIENTRONGGOI AS DONGIADOANHTHU
+      FROM TT_KSK_HOPDONG_GOIDICHVU HD_DV
+      INNER JOIN TM_CSKH_GOI_CHITIET GOI_CT ON GOI_CT.GOI_ID = HD_DV.GOIDICHVU_ID
+      INNER JOIN TT_KSK_HOPDONG HD ON HD.HOPDONG_ID = HD_DV.HOPDONG_ID
+      LEFT JOIN TM_DICHVU DV ON DV.DICHVU_ID = GOI_CT.DICHVU_ID
+      INNER JOIN TT_KSK_HOPDONG_BENHNHAN_DICHVU BN_DV ON BN_DV.HOPDONG_ID = HD.HOPDONG_ID AND BN_DV.DICHVU_ID = DV.DICHVU_ID
+      INNER JOIN TM_NHOMDICHVU NDV ON NDV.NHOMDICHVU_ID = DV.NHOMDICHVU_ID
+      INNER JOIN TM_PHONGBAN PB ON PB.PHONGBAN_ID = BN_DV.PHONGBAN_ID
+      WHERE BN_DV.HOPDONG_BENHNHAN_ID = $HOPDONG_BENHNHAN_ID$
+      <dynamic>
+        <isParameterPresent>
+          <isNotEmpty prepend="AND" property="BENHVIEN_ID">
+            BN_DV.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00307_GetServiceWithPatient" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select distinct HD_DV.*, DV.TENDICHVU
+      , ISNULL(G_CT.DONGIATRONGGOI,0) as DONGIA_DOANHTHU
+      , ISNULL(G_CT.THANHTIENTRONGGOI,0) as BENHNHANTRA, HD_BN.BENHNHAN_ID
+      , ISNULL(NTH.TENPHONGBAN, PB.TENPHONGBAN) as NOITHUCHIEN
+      , case when HD_DV.TRANGTHAI = 'DAXACNHAN' then 1 else 0 end as DANGKY
+      , NDV.TENNHOMDICHVU, isnull(G_CT.SOLAN,0) as SOLUONG, G_CT.LOAIGIA_ID
+      , ISNULL(NTH.PHONGBAN_ID, PB.PHONGBAN_ID) as NOITHUCHIEN_ID
+      , BS.NHANVIEN_ID AS BACSICHIDINH_ID, BS.TENNHANVIEN AS TENBACSICHIDINH
+      from TT_KSK_HOPDONG_BENHNHAN HD_BN
+      inner join TT_KSK_HOPDONG_GOIDICHVU G on G.HOPDONG_ID = HD_BN.HOPDONG_ID
+      left join TM_CSKH_GOI_CHITIET G_CT on G_CT.GOI_ID = G.GOIDICHVU_ID
+      inner join TT_KSK_HOPDONG_BENHNHAN_DICHVU HD_DV on HD_DV.HOPDONG_BENHNHAN_ID = HD_BN.HOPDONG_BENHNHAN_ID
+      inner join TM_DICHVU DV on DV.DICHVU_ID = HD_DV.DICHVU_ID and G_CT.DICHVU_ID = DV.DICHVU_ID
+      left join TM_PHONGBAN PB on PB.PHONGBAN_ID = HD_DV.PHONGBAN_ID
+      left join TM_NHOMDICHVU NDV on NDV.NHOMDICHVU_ID = DV.NHOMDICHVU_ID
+      LEFT JOIN TM_PHONGBAN NTH ON NTH.PHONGBAN_ID = G_CT.NOITHUCHIEN_ID
+      LEFT JOIN TM_NHANVIEN BS ON BS.NHANVIEN_ID = G_CT.BACSICHIDINH_ID
+      where HD_DV.HOPDONG_BENHNHAN_ID = '$HOPDONG_BENHNHAN_ID$'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        HD_BN.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00307_BenhNhanDichVu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT * FROM TT_KSK_HOPDONG_BENHNHAN_DICHVU
+      WHERE HOPDONG_BENHNHAN_ID = $HOPDONG_BENHNHAN_ID$
+    </statement>
+    <statement id="DAO00307_GetServiceWithContract" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select HD_BN.*, DV.TENDICHVU, PB.TENPHONGBAN AS NOITHUCHIEN, NDV.TENNHOMDICHVU, PB.PHONGBAN_ID, DV.DICHVU_ID
+      , ISNULL(G_CT.DONGIATRONGGOI,0) AS DONGIA, ISNULL(G_CT.SOLAN,0) AS SOLUONG, G_CT.THANHTIENTRONGGOI AS THANHTIEN
+      , CASE WHEN DV.DICHVU_ID IN (SELECT DICHVU_ID FROM TT_KSK_HOPDONG_BENHNHAN_DICHVU WHERE HOPDONG_ID = $HOPDONG_ID$ AND HOPDONG_BENHNHAN_ID = $HOPDONG_BENHNHAN_ID$) THEN 1 ELSE 0 END AS DANGKY
+      from TT_KSK_HOPDONG HD
+      inner join TT_KSK_HOPDONG_GOIDICHVU G_DV on G_DV.HOPDONG_ID = HD.HOPDONG_ID
+      inner join TT_KSK_HOPDONG_BENHNHAN HD_BN on HD_BN.HOPDONG_ID = HD.HOPDONG_ID
+      inner join TM_CSKH_GOI_CHITIET G_CT on G_DV.GOIDICHVU_ID = G_CT.GOI_ID
+      inner join TM_DICHVU DV on DV.DICHVU_ID = G_CT.DICHVU_ID
+      left join TM_NHOMDICHVU NDV on NDV.NHOMDICHVU_ID = DV.NHOMDICHVU_ID
+      inner join TM_PHONGBAN_DICHVU PB_DV ON PB_DV.DICHVU_ID = DV.DICHVU_ID
+      left join TM_PHONGBAN PB ON PB.PHONGBAN_ID = PB_DV.PHONGBAN_ID
+      where HD_BN.HOPDONG_ID = $HOPDONG_ID$ and HD_BN.HOPDONG_BENHNHAN_ID = $HOPDONG_BENHNHAN_ID$
+      and PB_DV.PHONGBAN_ID =(select top 1 PHONGBAN_ID from TM_PHONGBAN_DICHVU where DICHVU_ID = DV.DICHVU_ID)
+    </statement>
+    <statement id="DAO00307_GetCongTyHopDong" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_KSK_HOPDONG where CONGTY_ID = '$FCONGTY_ID$'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00307_GetPatientConfirm" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select top 1 *
+      from TT_KSK_HOPDONG_BENHNHAN_DICHVU
+      where TRANGTHAI = '$TRANGTHAI$' and HOPDONG_BENHNHAN_ID = '$HOPDONG_BENHNHAN_ID$'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00307_CheckGoi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_KSK_HOPDONG_GOIDICHVU
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="GOI_ID">
+            GOIDICHVU_ID = $GOI_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00307_CheckSingin" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_KSK_HOPDONG_BENHNHAN_DICHVU
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="HOPDONG_ID">
+            HOPDONG_ID = $HOPDONG_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HOPDONG_BENHNHAN_ID">
+            HOPDONG_BENHNHAN_ID = $HOPDONG_BENHNHAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00307_UpdatePatientKSK" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      update TT_KSK_HOPDONG_BENHNHAN set
+      MAYTE = #MAYTE#
+      , TENBENHNHAN = #TENBENHNHAN#
+      , GIOITINH = #GIOITINH#
+      , NGAYSINH = #NGAYSINH#
+      , NAMSINH = #NAMSINH#
+      , DIACHI = #DIACHI#
+      , QUOCTICH_ID = #QUOCTICH_ID#
+      , TINHTHANH_ID = #TINHTHANH_ID#
+      , QUANHUYEN_ID = #QUANHUYEN_ID#
+      , XAPHUONG_ID = #XAPHUONG_ID#
+      , DIACHITHUONGTRU = #DIACHITHUONGTRU#
+      , DANTOC_ID = #DANTOC_ID#
+      , SODIENTHOAI = #SODIENTHOAI#
+      , NGHENGHIEP_ID = #NGHENGHIEP_ID#
+      , CMND = #CMND#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      BENHNHAN_ID = '$BENHNHAN_ID$'
+    </statement>
+    <statement id="DAO00307_GetPatientWithKey" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_BENHNHAN
+      where TENBENHNHAN = N'$TENBENHNHAN$'
+      and GIOITINH = '$GIOITINH$'
+      and NGAYSINH = '$NGAYSINH$'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+  </statements>
+</sqlMap>
+

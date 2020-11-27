@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMapConfig xmlns="http://ibatis.apache.org/dataMapper"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <properties>
+    <!--<property resource="properties.config"/>-->
+  </properties>
+  
+  <settings>
+    <setting useStatementNamespaces="false" />
+    <setting cacheModelsEnabled="true" />
+    <setting validateSqlMap="true" />
+  </settings>
+  <database>
+    <provider name="${DB_PROVIDER}" />
+    <dataSource name="${DB_NAME}" connectionString="${CONNECTION_STRING}"/>
+  </database>
+ 
+  <alias>
+    <typeAlias alias="DataObject" type="FPT.Framework.Data.DataObject"/>
+  </alias>
+  
+  <sqlMaps>
+    
+  </sqlMaps>
+   
+</sqlMapConfig>

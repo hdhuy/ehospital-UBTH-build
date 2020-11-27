@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,fd0716affb36f7e9661346ac94ee0793-->
+        <statement id="DAO00025_GetDUOC_TONKHO_BOOKING" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT 0 as NOITRUSOLUONG, 0 as NGOAITRUSOLUONG, SUM(C.SOLUONG) as SOLUONGTONKHO from TT_DUOC_TONKHO C
+            where KHODUOC_ID = '$KHODUOC_ID$' and  DUOC_ID = '$DUOC_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT 0 as NOITRUSOLUONG, SUM(A.SOLUONG) as NGOAITRUSOLUONG, 0 as SOLUONGTONKHO FROM TT_DUOC_TONKHO_BOOK_NGOAITRU A
+            where KHODUOC_ID = '$KHODUOC_ID$' and  DUOC_ID = '$DUOC_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION ALL
+            SELECT SUM(B.SOLUONG) as NOITRUSOLUONG, 0 as NGOAITRUSOLUONG, 0 as SOLUONGTONKHO FROM TT_DUOC_TONKHO_BOOK_NOITRU B
+            where KHODUOC_ID = '$KHODUOC_ID$' and  DUOC_ID = '$DUOC_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,26dc38a5c611e6db3f1b83bc497e1d64-->
+        <statement id="DAO00025_DUOC_TONKHO_BOOKING_Clear_Getlist" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select distinct * from
+            TT_DUOC_TONKHO_BOOK_NGOAITRU
+            WHERE
+            REF_TABLE = 'TT_NGOAITRU_TOATHUOC'
+            and SOLUONG &gt; 0
+            and TO_DATE(SYSDATE, 'DD/MM/YYYY') &gt; TO_DATE(NGAYTAO, 'DD/MM/YYYY')
+        </statement>
+    </statements>
+</sqlMap>

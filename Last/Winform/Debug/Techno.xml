@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <folders>
+    <folder id="Image" path="Images"/>
+    <!--<folder id="Image" path="http://10.86.222.177:112/FPT00001/Images/"/>-->
+    <folder id="Style" path="Styles"/>
+    <folder id="UITemplate" path="Controls"/>
+  </folders>
+
+  <fonts>
+    <font id="Default" name="Segoe UI" size="9.75" style="regular" weight="500"/>
+    <font id="Watermark" name="Segoe UI" size="9.75" style="italic" weight="500"/>
+    <font id="RichDefault" name="Times New Roman" size="12" style="regular" weight="500"/>
+    <!--<font id="default" name="Open Sans" size="9.5" style="regular"/>-->
+    <font id="Tahoma" name="Tahoma" size="8" style="regular"/>
+    <font id="HomePanel" name="Segoe UI" size="11" style="Bold" weight="300"/>
+    <font id="Title" name="Segoe UI" size="20" style="Bold" weight="600"/>
+    <font id="Header" name="Segoe UI" size="15" style="Bold" weight="300"/>
+    <font id="PanelTitle" name="Segoe UI" size="12" style="Bold" weight="300"/>
+    <font id="Footer" name="Segoe UI" size="10" style="regular"/>
+    <font id="Segoe" name="Segoe UI" size="9.75" style="regular"/>
+    <font id="LoginHeader" name="Segoe UI" size="25" style="Bold" weight="600"/>
+    <font id="LoginTitle" name="Segoe UI" size="22" style="Bold" weight="600"/>
+    <font id="LoginInput" name="Segoe UI" size="13" style="regular"/>
+    <font id="LoginInput2" name="Segoe UI" size="10" style="regular"/>
+    <font id="patinfotext" name="Segoe UI" size="10" style="Bold"  weight="600"/>
+    <font id="Currency" name="Segoe UI" size="11" style="Bold" weight="600"/>
+    <font id="LogOutOnHeader" name="Segoe UI" size="10" style="UnderLine"/>
+    <font id="Bold" name="Segoe UI" size="9.75" style="Bold" weight="600"/>
+    <font id="Underline" name="Segoe UI" size="9.75" style="UnderLine"/>
+    <font id="Italic" name="Segoe UI" size="9.75" style="Italic"/>
+    <font id="GroupHeader" name="Segoe UI" size="9.75" style="Bold" weight="600"/>
+    <font id="button" name="Segoe UI" size="9.75" style="regular" weight="500"/>
+    <font id="menuitem" name="Segoe UI" size="9.75" style="regular" weight="500"/>
+    <font id="buttonToolBar" name="Segoe UI" size="9.75" style="regular" weight="500"/>
+    <font id="BoldItalic" name="Segoe UI" size="9.75" style="Italic" weight="700"/>
+    <font id="Strikeout" name="Segoe UI" size="9.75" style="Strikeout" weight="500"/>
+	  <font id="large" name="Segoe UI" size="19.00" style="regular" weight="500"/>
+    <font id="LITIPDTextLabel" name="Segoe UI" size="14.00" style="regular" weight="500"/>
+    <font id="LITIPDTextBold" name="Segoe UI" size="20.00" style="bold" weight="600"/>
+    <font id="LITIPDTextBold16" name="Segoe UI" size="16.00" style="bold" weight="600"/>
+    <font id="LITIPDTextBold18" name="Segoe UI" size="18.00" style="bold" weight="600"/>
+    <font id="LITIPDNumBold" name="Segoe UI" size="22.00" style="bold" weight="600"/>
+    <font id="button16" name="Cambria" size="16" style="bold" weight="500"/>
+  </fonts>
+
+  <colors>
+    <!-- standard colors-->
+    <color id="transparent" argb="0,255,255,255"/>
+    <color id="black" argb="0,0,0"/>
+    <color id="white" argb="255,255,255"/>
+    <color id="red" argb="255,0,0"/>
+    <color id="blue" argb="0,0,255"/>
+    <color id="green" argb="0,255,0"/>
+    <color id="darkgray" argb="128,128,128"/>
+    <color id="darkgreen" argb="0,96,0"/>
+    <color id="gray" argb="192,192,192"/>
+    <color id="lightgray" argb="212,212,212"/>
+    <color id="lightlightgray" argb="250,250,250"/>
+    <!--general application colors-->
+    <color id="selected" argb="254,245,226"/>
+    <color id="required" argb="0,70,152"/>
+    <color id="disabled" argb="66,76,88"/>
+    <color id="border" argb="76,86,98"/>
+    <color id="droppedCombo" argb="49,56,65"/>
+    <color id="focusborder" argb="192,192,192"/>
+    <color id="MessageError" argb="189,54,47"/>
+    <color id="MessageWarning" argb="248,148,6"/>
+    <color id="MessageInfo" argb="47,150,180"/>
+    <!--Form's colors-->
+    <color id="formbg" argb="49,56,65"/>
+    <color id="formfg" argb="192,192,192"/>
+    <!--TextBox's colors-->
+    <color id="textboxbg" argb="43,46,50"/>
+    <color id="textboxfg" argb="250,250,250"/>
+    <color id="textboxwatermark" argb="112,112,112"/>
+    <color id="textboxactivewatermark" argb="250,250,250"/>
+    <!--Chart's colors-->
+    <color id="chartbg" argb="49,56,65"/>
+    <color id="chartfg" argb="192,192,192"/>
+    <color id="chartArea" argb="43,46,50"/>
+    <color id="chartAsixX" argb="0,0,0"/>
+    <color id="chartAsixX2" argb="0,0,0"/>
+    <color id="chartAsixY" argb="0,0,0"/>
+    <color id="chartAsixY2" argb="0,0,0"/>
+    <!--Tab's colors-->
+    <color id="tabbg" argb="56,64,73"/>
+    <color id="tabfg" argb="192,192,192"/>
+    <color id="tabborder" argb="70,136,185"/>
+    <color id="tabpagebg" argb="56,64,73"/>
+    <color id="tabheaderbuttonhoverfg" argb="30,30,30"/>
+    <color id="tabheaderbuttonfg" argb="255,255,255"/>
+    <!--Button's colors-->
+    <color id="buttonfg" argb="192,192,192"/>
+    <color id="button" argb="81,93,102"/>
+    <color id="buttonHover" argb="90,100,112"/>
+    <color id="buttonPress" argb="70,136,185"/>
+    <color id="buttonDisable" argb="60,70,80"/>
+    <color id="buttonDisablefg" argb="128,128,128"/>
+    <color id="buttonToolbarBGHover" argb="218,228,237"/>
+    <color id="buttonY" argb="0,128,0"/>
+    <color id="buttonYHover" argb="0,148,0"/>
+    <color id="buttonYPress" argb="0,128,0"/>
+    <color id="buttonN" argb="128,0,0"/>
+    <color id="buttonNHover" argb="148,0,0"/>
+    <color id="buttonNPress" argb="128,0,0"/>
+    <!-- system's button -->
+    <color id="buttonsysbg" argb="96,125,139"/>
+    <color id="buttonsysHover" argb="39,125,184"/>
+    <color id="buttonsysPress" argb="18,158,219"/>
+    <color id="buttonsysDisable" argb="230,228,229"/>
+    <!-- toolbar's button -->
+    <color id="buttontbarbg" argb="60,70,80"/>
+    <color id="buttontbarHover" argb="70,80,90"/>
+    <color id="buttontbarPress" argb="70,80,90"/>
+    <color id="buttonbarDisablefg" argb="96,96,96"/>
+    <color id="buttontbarDisable" argb="56,64,73"/>
+    <!--<color id="buttontbarDisable" argb="66,76,88"/>-->
+    <!--tile menu item colors-->
+    <color id="tileitembg" argb="81,93,102"/>
+    <color id="tileitemfg" argb="192,192,192"/>
+    <color id="tileitemhover" argb="41,127,184"/>
+    <color id="tileitempress" argb="18,158,219"/>
+    <color id="tileitemdisable" argb="230,228,229"/>
+    <!--menu item colors-->
+    <color id="menuitembg" argb="56,64,73"/>
+    <color id="menuitemfg" argb="192,192,192"/>
+    <color id="menuitemhover" argb="18,158,219"/>
+    <color id="menuitempress" argb="18,158,219"/>
+    <!--Label's colors-->
+    <color id="labelfg" argb="192,192,192"/>
+    <color id="labelInfoFG" argb="192,192,192"/>
+    <color id="labelInfoValueFG" argb="250,250,250"/>
+    <!--Panel's colors-->
+    <color id="patinfobg" argb="56,64,73"/>
+    <color id="patinfofg" argb="192,192,192"/>
+    <color id="toolbarbg" argb="56,64,73"/>
+    <color id="toolbarfg" argb="212,212,212"/>
+    <color id="toolbarborder" argb="74,85,93"/>
+    <color id="panelheaderbg" argb="56,64,73"/>
+    <color id="panelheaderfg" argb="192,192,192"/>
+    <color id="panelfooterbg" argb="49,56,65"/>
+    <color id="panelfooterfg" argb="192,192,192"/>
+    <color id="panelgroupheaderbg" argb="81,93,102"/>
+    <!--Grid's colors-->
+    <color id="gridhdrbg" argb="49,55,63"/>
+    <color id="gridhdrfg" argb="192,192,192"/>
+    <color id="gridcellbg1" argb="49,55,63"/>
+    <color id="gridcellfg1" argb="250,250,250"/>
+    <color id="gridcellbg2" argb="49,55,63"/>
+    <color id="gridcellfg2" argb="250,250,250"/>
+    <color id="gridline" argb="56,63,73"/>
+    <color id="gridbg" argb="43,46,50"/>
+    <color id="gridselbg" argb="51,153,255"/>
+    <color id="gridselfg" argb="255,255,255"/>
+    <color id="gridhoverbg" argb="55,62,70"/>
+    <color id="gridhoverfg" argb="255,255,255"/>
+    <color id="gridgroupbg1" argb="66,76,88"/>
+    <color id="gridgroupfg1" argb="255,255,255"/>
+    <color id="gridgroupselbg1" argb="66,76,88"/>
+    <color id="gridgroupselfg1" argb="255,255,255"/>
+    <color id="gridgroupbg2" argb="55,62,70"/>
+    <color id="gridgroupfg2" argb="255,255,255"/>
+    <color id="gridgroupselbg2" argb="66,76,88"/>
+    <color id="gridgroupselfg2" argb="255,255,255"/>
+    <color id="gridgroupbg3" argb="66,76,88"/>
+    <color id="gridgroupfg3" argb="255,255,255"/>
+    <color id="gridgroupselbg3" argb="66,76,88"/>
+    <color id="gridgroupselfg3" argb="255,255,255"/>
+    <!--Scheduler's colors-->
+    <color id="DNBackColor" argb="49,56,65"/>
+    <color id="DNForeColor" argb="192,192,192"/>
+    <color id="DNHeaderForeColor" argb="192,192,192"/>
+    <color id="DNHolidayForeColor" argb="255,0,0"/>
+    <color id="DNSelectedBackColor" argb="51,153,255"/>
+    <color id="DNSelectedForeColor" argb="255,255,255"/>
+    <color id="DNTodayBackColor" argb="49,56,65"/>
+    <color id="DNTodayForeColor" argb="255,255,0"/>
+    <color id="DNHighlightBackColor" argb="222,222,222"/>
+    <color id="DNHighlightForeColor" argb="32,32,32"/>
+    <!--Nurse center's colors-->
+    <color id="LITIPDTitle1bg" argb="0,255,255,255"/>
+    <color id="LITIPDTitle1fg" argb="7,55,99"/>
+    <color id="LITPIDBackGroundbg" argb="255,255,255"/>
+    <color id="LITIPDTitle1fgRed" argb="152, 0, 0"/>
+    <color id="LITbtnMenuPressbg" argb="7,55,99"/>
+  </colors>
+  
+  <controls>
+    <control id="Button" class="WinformUI.Button" assembly="WinformUI" style="ButtonStd"/>
+    <control id="ExitButton" class="WinformUI.Button" assembly="WinformUI" style="ButtonStd"/>
+    <control id="ImageButton" class="WinformUI.Button" assembly="WinformUI" style="ButtonToolBarR"/>
+    <control id="ImageButtonR" class="WinformUI.Button" assembly="WinformUI" style="ButtonToolBarR"/>
+    <control id="ImageButtonL" class="WinformUI.Button" assembly="WinformUI" style="ButtonToolBarL"/>
+    <control id="ImageButtonT" class="WinformUI.Button" assembly="WinformUI" style="ButtonToolBarT"/>
+    <control id="ImageButtonB" class="WinformUI.Button" assembly="WinformUI" style="ButtonToolBarB"/>
+    <control id="TileButton" class="WinformUI.Button" assembly="WinformUI" style="ButtonHomePanel" />
+    <control id="Entry" class="WinformUI.Entry" assembly="WinformUI" style="EntryStd"/>
+    <control id="TextArea" class="WinformUI.TextArea" assembly="WinformUI" style="EntryStd" />
+    <control id="Label" class="WinformUI.Label" assembly="WinformUI" style="LabelStd" />
+    <control id="LinkLabel" class="WinformUI.LinkLabel" assembly="WinformUI" style="LabelStd" />
+    <control id="Status" class="WinformUI.Label" assembly="WinformUI" style="LabelFooter" />
+    <control id="Panel" class="WinformUI.Panel" assembly="WinformUI"  style="ControlTransparent"/>
+    <control id="GroupBox" class="WinformUI.GroupBox" assembly="WinformUI" style="ControlTransparent"/>
+    <control id="RadioButton" class="WinformUI.RadioButton" assembly="WinformUI" style="ControlTransparent" />
+    <control id="DatePicker" class="WinformUI.DatePicker" assembly="WinformUI"  style="EntryStd" />
+    <control id="WaterMarkTextBox" class="WinformUI.WaterMarkTextBox" assembly="WinformUI" style="EntryStd" />
+    <control id="PasswordEntry" class="WinformUI.PasswordEntry" assembly="WinformUI" style="EntryStd"/>
+    <control id="GridView" class="DevXUI.GridControl" assembly="DevXUI" style="GridStd" />
+    <control id="GroupGridView" class="DevXUI.GridControl" assembly="DevXUI" style="GroupGridStd"/>
+    <control id="TreeGridView" class="DevXUI.TreeListView" assembly="DevXUI" style="TreeGridStd"/>
+    <control id="TreeListView" class="DevXUI.TreeListView" assembly="DevXUI" style="TreeGridStd"/>
+    <control id="DigitalClock" class="WinformUI.DigitalClock" assembly="WinformUI" style="LabelFooter"/>    
+    <control id="Picture" class="WinformUI.Picture" assembly="WinformUI" style="PictureStd"/>
+    <control id="RadioList" class="WinformUI.RadioList" assembly="WinformUI" style="ControlTransparent"/>
+    <control id="Form" class="WinformUI.Form" assembly="WinformUI" style="FormStd"/>
+    <control id="PopupForm" class="WinformUI.PopupForm" assembly="WinformUI" style="PopupFormStd" />
+    <control id="SearchEntry" class="WinformUI.SearchEntry" assembly="WinformUI" style="EntryStd"/>
+    <control id="ComboBox" class="WinformUI.ComboBox" assembly="WinformUI" style="ComboBoxStd"/>
+	  <control id="ControlTypeComboBox" class="WinformUI.ControlTypeComboBox" assembly="WinformUI" style="ComboBoxStd" />
+    <control id="CheckBox" class="WinformUI.CheckBox" assembly="WinformUI" style="CheckboxStd" />
+    <control id="TabPage" class="WinformUI.TabPage" assembly="WinformUI" style="ControlStd" />
+    <control id="TabControl" class="WinformUI.TabControl" assembly="WinformUI" style="TabStd"/>
+    <control id="FlowLayoutPanel" class="WinformUI.FlowLayoutPanel" assembly="WinformUI" style="ControlTransparent"/>
+	  <control id="DynamicLayoutPanel" class="WinformUI.DynamicLayoutPanel" assembly="WinformUI" style="ControlTransparent"/>
+    <control id="Flowbuttons" class="WinformUI.FlowLayoutPanel" assembly="WinformUI" style="PanelToolBar"/>
+    <control id="NumericEntry" class="WinformUI.NumericEntry" assembly="WinformUI" style="EntryNumeric" />
+    <control id="DateEntry" class="WinformUI.DateEntry" assembly="WinformUI" style="EntryDate"/>
+    <control id="FileOpenButton" class="WinformUI.FileOpenButton" assembly="WinformUI"  style="ButtonStd"/>
+    <control id="FileSaveButton" class="WinformUI.FileSaveButton" assembly="WinformUI"  style="ButtonStd"/>
+    <control id="TilePanel" class="DevXUI.RecentMenuPanel" assembly="DevXUI" style="PanelHomeTile"/>
+    <control id="HomeMenu" class="DevXUI.Menu" assembly="DevXUI" style="PanelMenu"/>
+    <control id="HomeMenuItem" class="WinformUI.HomeMenuItem" assembly="WinformUI" style="ButtonMenuItem"/>
+    <control id="TableLayoutPanel" class="WinformUI.TableLayoutPanel" assembly="WinformUI" style="ControlTransparent"/>
+    <control id="AutoHeightLabel" class="WinformUI.AutoHeightLabel" assembly="WinformUI" style="LabelStd"/>
+    <control id="PrintButton" class="WinformUI.PrintButton" assembly="WinformUI" style="ButtonToolBarB"/>
+    <control id="MedicalClaimID" class="WinformUI.MedicalClaimID" assembly="WinformUI" style="EntryMedicalClaimID" />
+    <control id="TreeComboBox" class="WinformUI.TreeComboBox" assembly="WinformUI" style="ComboBoxStd"/>
+    <control id="ReportViewer" class="WinformUI.ReportViewer" assembly="WinformUI" style="ControlStd"/>
+    <control id="ChartViewer" class="WinformUI.ChartViewer" assembly="WinformUI" style="ChartStd"/>
+    <control id="TabButton" class="WinformUI.TabButton" assembly="WinformUI" style="ButtonTab"/>
+    <control id="CameraViewer" class="WinformUI.CameraViewer" assembly="WinformUI" style="ControlStd"/>
+    <control id="RoomList" class="WinformUI.RoomList" assembly="WinformUI" style="RoomList"/>
+    <control id="ImageViewer" class="WinformUI.ImageViewer" assembly="WinformUI" style="ControlStd" />    
+    <!--<control id="RichTextEntryControl" class="WinformUI.RichTextEntryControl" assembly="WinformUI" style="ControlTransparent"/>-->
+    <control id="RichTextEntryControl" class="DevXUI.HtmlEdit" assembly="DevXUI" style="RichTextStd"/>
+    <control id="RoomsPanel" class="WinformUI.RoomsPanel" assembly="WinformUI" style="PanelRoom"/>
+    <control id="SplitContainer" class="WinformUI.SplitContainer" assembly="WinformUI" style="ControlSplitContainer"/>
+    <control id="SplitPanel" class="WinformUI.SplitPanel" assembly="WinformUI" style="ControlTransparent"/>
+    <control id="ImageStripViewer" class="WinformUI.ImageStripViewer" assembly="WinformUI" style="ControlTransparent"/>
+    <control id="CalendarPanel" class="DevXUI.Scheduler" assembly="DevXUI" style="SchedulerStd"/>
+    <control id="MinimizeButton" class="WinformUI.MinimizeButton" assembly="WinformUI" style="ButtonSys"/>
+    <control id="MaximizeButton" class="WinformUI.MaximizeButton" assembly="WinformUI" style="ButtonSys"/>
+    <control id="SysButton" class="WinformUI.SysButton" assembly="WinformUI" style="ButtonSys"/>
+    <control id="WorkScheduler" class="DevXUI.Scheduler" assembly="DevXUI" style="SchedulerStd"/>
+    <control id="TabPane" class="DevXUI.TabPane" assembly="DevXUI" style="TabStd"/>
+    <control id="CheckComboBox" class="WinformUI.CheckComboBox" assembly="WinformUI"  style ="ComboBoxStd" />
+    <control id="DynamicButtonsPanel" class="WinformUI.DynamicButtonsPanel" assembly="WinformUI"  style ="ControlTransparent" />
+    <control id="TimeEntry" class="DevXUI.TimeEntry" assembly="DevXUI" style="EntryStd"/>
+    <control id="PictureListView" class="WinformUI.PictureListView" assembly="WinformUI"  style ="GridPictureList" />
+    <control id="ContextMenuButton" class="WinformUI.ContextMenuButton" assembly="WinformUI" style="ButtonToolBarR"/>
+    <control id="CollapsiblePanel" class="WinformUI.CollapsiblePanel" assembly="WinformUI" style="ControlTransparent"/>
+    <control id="StackLayoutPanel" class="WinformUI.StackLayoutPanel" assembly="WinformUI" style="ControlStd"/>
+    <control id="PrintersComboBox" class="WinformUI.PrintersComboBox" assembly="WinformUI" style="ComboBoxStd"/>
+    <control id="PrinterPaperSizeComboBox" class="WinformUI.PrinterPaperSizeComboBox" assembly="WinformUI" style="ComboBoxStd"/>
+    <control id="WinLabel" class="WinformUI.Label" assembly="WinformUI" style="LabelStd"/>
+    <control id="CustomControl" class="WinformUI.CustomControl" assembly="WinformUI" style="ControlStd"/>
+    <control id="DynamicPanel" class="WinformUI.DynamicPanel" assembly="WinformUI" style="ControlTransparent"/>
+    <control id="DynamicButtonsPanel2" class="WinformUI.DynamicButtonsPanel2" assembly="WinformUI"  style ="ControlTransparent" />
+  </controls>
+</configuration>

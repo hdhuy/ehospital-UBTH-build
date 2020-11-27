@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,95192c52ee2da11f0412756448d7f046-->
+        <statement id="DAO00052_GetList" resultClass="DataObject">
+            select *
+            from TM_NHOMBENH where NHOMBENH_ID in (select NHOMBENH_ID from TM_NHOMBENH_DICHVU) and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

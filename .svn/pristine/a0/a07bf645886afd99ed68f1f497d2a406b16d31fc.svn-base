@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,1d5425349c644caed1e80f43e9f5a8a8-->
+        <statement id="DAO00084_GetListLoaiThanhVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *, THETHANHVIEN_ID as LOAITHANHVIEN_ID, TENTHETHANHVIEN as TENLOAITHANHVIEN
+            from TM_CSKH_THETHANHVIEN
+            where BENHVIEN_ID = '$BENHVIEN_ID$' and (TAMNGUNG = '0' or TAMNGUNG is null) and convert(date, THOIGIANBANTHE) &lt;= convert(date, getdate())
+            order by THETHANHVIEN_ID
+        </statement>
+        <!--Revision:0,f536417656f9943436f1c90435758bf7-->
+        <statement id="DAO00084_GetListLoaiThanhVienDanhMuc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *, THETHANHVIEN_ID as LOAITHANHVIEN_ID, TENTHETHANHVIEN as TENLOAITHANHVIEN
+            from TM_CSKH_THETHANHVIEN
+            where BENHVIEN_ID = '$BENHVIEN_ID$' and (TAMNGUNG = '0' or TAMNGUNG is null)
+            order by THETHANHVIEN_ID
+        </statement>
+    </statements>
+</sqlMap>

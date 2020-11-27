@@ -1,0 +1,24 @@
+FPT.Framework.Presentation.TabStyle, FPT.Framework.Presentation
+{
+  "ForeColor": "@tabfg",
+  "BackColor": "@tabbg",
+  "BorderColor": "@tabborder",
+  "NormalForeColor": "@tabfg",
+  "NormalBackColor": "@tabbg",
+  "NormalBorderColor": "@border",
+  "ActiveForeColor": "@white",
+  "ActiveBackColor": "@buttonPress",
+  "ActiveBorderColor": "@lightlightgray",
+  "HotBackColor": "@buttonhover",
+  "HotForeColor": "@white",
+  "HotBorderColor": "@lightlightgray",
+  "DisableForeColor": "@darkgray",
+  "DisableBackColor": "@buttonDisable",
+  "DisableBorderColor": "@lightlightgray",
+  "HeaderButtonHoverBackColor": "@tabheaderbuttonhoverbg",
+  "HeaderButtonHoverForeColor": "@tabheaderbuttonhoverfg",
+  "HeaderButtonForeColor": "@tabheaderbuttonfg",
+  "PageColor": "@tabpagebg",
+  "Font": "button",
+  "HotTrack": true
+}

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <statements>
+    <statement id="DAO00403_QMS002_KiemTraLoaiHangDoi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT ty.QUEUE_TYPE_CODE RESULT
+      FROM QMS_QUEUE B
+      inner join QMS_QUEUE_TYPE ty on B.QUEUETYPE_ID=ty.ID
+      WHERE B.DEPARTMENT_ID='$DEPARTMENT_ID$' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetKioskTheoLoaiHangDoi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT A.ID,A.KIOSK_ID,A.QUEUE_ID,A.DISPLAYTEXT,B.DEPARTMENT_ID,C.DEPARTMENT_NAME,A.PRIORITY
+      FROM QMS_KIOSK_QUEUE A INNER JOIN QMS_QUEUE B ON A.QUEUE_ID=B.ID
+      LEFT JOIN QMS_DEPARTMENT C ON B.DEPARTMENT_ID=C.DEPARTMENT_ID
+      WHERE B.QUEUETYPE_ID='$QUEUETYPE_ID$' AND B.STATE = 1 AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetHangDoiTheoKhuVuc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT B.ID,B.DEPARTMENT_ID,C.DEPARTMENT_NAME, C.DEPT_CODE
+      FROM QMS_QUEUE B
+      INNER JOIN QMS_DEPARTMENT C ON B.DEPARTMENT_ID=C.DEPARTMENT_ID
+      JOIN (SELECT DISTINCT SECTION_ID FROM QMS_QUEUE WHERE DEPARTMENT_ID='$DEPARTMENT_ID$') A ON A.SECTION_ID = B.SECTION_ID
+      WHERE B.BENHVIEN_ID = '$BENHVIEN_ID$' AND B.STATE = 1
+    </statement>
+    <statement id="DAO00403_QMS002_GetQueueGroupId" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT *
+      FROM QMS_QUEUE_GROUP
+      WHERE CODE='$CODE$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetLoaiHangDoiTheoNhom" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT *
+      FROM QMS_QUEUE_TYPE
+      WHERE QUEUEGROUP_ID='$QUEUEGROUP_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetLoaiHangDoiTheoPhongBan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT B.QUEUETYPE_ID
+      FROM QMS_QUEUE B
+      WHERE B.DEPARTMENT_ID='$DEPARTMENT_ID$' AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetDSChoTheoPhongBan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT 0 CHON,A.QUEUE_ID,A.[ORDER],A.CLIENT_ID,CLIENT_NAME,A.SEQUENCE,A.DISPLAYTEXT AS STT,A.PATIENTCODE,A.PATIENTNAME,A.PATIENTYOB
+      ,(CASE WHEN A.STATE=1 THEN N'Đang chờ' ELSE (CASE WHEN A.STATE=0 THEN N'Đang thực hiện' ELSE N'Bỏ qua' END) END) AS TRANGTHAI,A.STATE, A.ISMATOATHUOC
+      FROM QMS_QUEUE_ITEM A
+      INNER JOIN QMS_QUEUE B ON A.QUEUE_ID = B.ID AND B.DEPARTMENT_ID='$DEPARTMENT_ID$'
+      INNER JOIN QMS_QUEUE_TYPE C ON B.QUEUETYPE_ID = C.ID
+      WHERE B.DEPARTMENT_ID='$DEPARTMENT_ID$' AND A.STATE IN(0,1,3) AND A.BENHVIEN_ID = '$BENHVIEN_ID$' AND C.QUEUE_TYPE_CODE='$QUEUE_TYPE_CODE$'
+      and A.CREATEDATE= CAST(GETDATE() as date)
+      ORDER BY A.[ORDER],A.[STATE]
+    </statement>
+    <statement id="DAO00403_QMS002_GetDSChoTiepNhanTheoHangDoiID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT A.SEQUENCE,A.DISPLAYTEXT AS STT,B.NAME AS CLIENT_NAME, A.[ORDER], A.[STATE], A.QUEUE_ID
+      FROM QMS_QUEUE_ITEM A INNER JOIN QMS_QUEUE C ON A.QUEUE_ID = C.ID AND A.QUEUE_ID = '$QUEUE_ID$'
+      INNER JOIN QMS_CLIENT B ON A.QUEUE_ID = B.QUEUE_ID
+      inner join QMS_QUEUE_TYPE D ON C.QUEUETYPE_ID=D.ID
+      WHERE A.QUEUE_ID = '$QUEUE_ID$' AND A.STATE = 1 AND A.BENHVIEN_ID = '$BENHVIEN_ID$' AND B.ID = '$CLIENT_ID$' AND D.QUEUE_TYPE_CODE='TN'
+      ORDER BY A.[ORDER]
+    </statement>
+    <statement id="DAO00403_QMS002_GetThongTinClient" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT B.ID as QUEUE_ID, B.NAME AS QUEUE_NAME,A.ID AS CLIENT_ID , A.NAME AS CLIENT_NAME, A.STATE,(CASE C.NAME WHEN 'UT' THEN 1 ELSE	0 END) AS QUEUETYPE
+      , B.DEPARTMENT_ID,ISNULL(B.SECTION_ID,-1) AS SECTION_ID
+      FROM QMS_CLIENT A INNER JOIN QMS_QUEUE B ON A.QUEUE_ID = B.ID
+      LEFT JOIN QMS_QUEUE_TYPE C ON B.QUEUETYPE_ID = C.ID
+      WHERE (A.COMPUTERNAME = '$COMPUTERNAME$' OR A.IPADDRESS = '$IPADDRESS$') AND A.STATE = 1 AND B.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetHangDoi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT A.ID AS QUEUE_ID, A.NAME AS QUEUE_NAME, A.QUEUETYPE_ID AS QUEUE_TYPE_ID, B.NAME AS QUEUE_TYPE_NAME
+      FROM QMS_QUEUE A JOIN QMS_QUEUE_TYPE B ON A.QUEUETYPE_ID = B.ID
+      WHERE A.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetQueueItemByQueueId" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT 0 CHON,QUEUE_ID,[ORDER],CLIENT_ID,CLIENT_NAME,[SEQUENCE],DISPLAYTEXT AS STT,PATIENTCODE,PATIENTNAME,PATIENTYOB
+      ,(CASE WHEN [STATE] = 0 THEN N'Đang thực hiện' ELSE (CASE WHEN [STATE] = 1 THEN N'Đang chờ' ELSE (CASE WHEN [STATE] = 2 THEN N'Đã thực hiện xong' ELSE (CASE WHEN [STATE] = 3 THEN N'Gọi nhỡ' ELSE N'Bỏ qua' END) END) END) END ) AS TRANGTHAI,[STATE]
+      FROM QMS_QUEUE_ITEM
+      WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND QUEUE_ID = '$QUEUE_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetDSChoTheoPhongBanVaMaBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT 0 CHON,A.QUEUE_ID,A.[ORDER],A.CLIENT_ID,CLIENT_NAME,A.SEQUENCE,A.DISPLAYTEXT AS STT,A.PATIENTCODE,A.PATIENTNAME,A.PATIENTYOB
+      ,(CASE WHEN A.STATE=1 THEN N'Đang chờ' ELSE N'Đang thực hiện' END) AS TRANGTHAI,A.STATE
+      FROM QMS_QUEUE_ITEM A INNER JOIN QMS_QUEUE B ON A.QUEUE_ID = B.ID AND B.DEPARTMENT_ID='$DEPARTMENT_ID$'
+      WHERE B.DEPARTMENT_ID='$DEPARTMENT_ID$' AND A.STATE IN(0,1) AND A.BENHVIEN_ID = '$BENHVIEN_ID$' AND PATIENTCODE = '$PATIENTCODE$'
+      ORDER BY A.[ORDER],A.[STATE]
+    </statement>
+    <statement id="DAO00403_QMS002_GetIsNext" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT VALUE
+      FROM QMS_PARAMETER
+      WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND CODE = '$CODE$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetDsPhongBan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT C.DEPARTMENT_NAME AS TENPHONGBAN, A.QUEUE_ID AS QUEUE_IDBYQUEUEITEM, A.DISPLAYTEXT
+      FROM (QMS_QUEUE_ITEM A JOIN QMS_QUEUE B ON A.QUEUE_ID = B.ID) JOIN QMS_DEPARTMENT C ON B.DEPARTMENT_ID = C.DEPARTMENT_ID
+      WHERE A.BENHVIEN_ID = '$BENHVIEN_ID$' AND A.PATIENTCODE = '$PATIENTCODE$' AND A.[STATE] = 1
+    </statement>
+    <statement id="DAO00403_QMS002_GetDeptCode" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT B.DEPT_CODE
+      FROM QMS_QUEUE A JOIN QMS_DEPARTMENT B ON A.DEPARTMENT_ID = B.DEPARTMENT_ID
+      WHERE A.BENHVIEN_ID = '$BENHVIEN_ID$' AND A.ID = '$QUEUE_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetDisplaytext" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT DISPLAYTEXT, PRIORITY, [ORDER]
+      FROM QMS_QUEUE_ITEM
+      WHERE QUEUE_ID = '$QUEUE_ID$' AND (PATIENTCODE = '$PATIENTCODE$' OR [ORDER] = '$ORDER$') AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetPatientCodeBySTT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT PATIENTCODE, [ORDER]
+      FROM QMS_QUEUE_ITEM
+      WHERE QUEUE_ID = '$QUEUE_ID$' AND (DISPLAYTEXT = '$DISPLAYTEXT$' OR PATIENTCODE = '$PATIENTCODE$' OR [ORDER] = '$ORDER$') AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_GetListMiss" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT [ORDER], PATIENTCODE
+      FROM QMS_QUEUE_ITEM
+      WHERE QUEUE_ID = '$QUEUE_ID$' AND [STATE] = 3 AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00403_QMS002_CheckMiss" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT [ORDER], PATIENTCODE
+      FROM QMS_QUEUE_ITEM
+      WHERE QUEUE_ID = '$QUEUE_ID$' AND ([ORDER] = '$ORDER$' OR PATIENTCODE = '$PATIENTCODE$') AND [STATE] = 3 AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+  </statements>
+</sqlMap>

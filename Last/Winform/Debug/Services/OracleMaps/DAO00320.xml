@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>        
+        <statement id="DAO00320_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_MAU
+            where
+            TAMNGUNG = '0'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'            
+            order by TENMAU
+        </statement>       
+    </statements>
+</sqlMap>

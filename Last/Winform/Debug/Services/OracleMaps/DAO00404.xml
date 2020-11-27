@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <statements>
+    <statement id="DAO00404_QMS003_GetThongTinBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT MAYTE AS PATIENTCODE, TENBENHNHAN AS PATIENTNAME, NAMSINH AS PATIENTYOB, (CASE WHEN GIOITINH=1 THEN 'Nam' ELSE N'Nữ' END) AS GENDER
+      FROM TT_BENHNHAN
+      WHERE MAYTE='$PATIENTCODE$' AND BENHVIEN_ID='$BENHVIEN_ID$'
+    </statement>
+   <statement id="DAO00404_QMS003_GetThongTinMaToaThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+     SELECT NGOAITRU_TOATHUOC_NGUOIMUA_ID AS PATIENTCODE, TENNGUOIMUA AS PATIENTNAME, NAMSINH AS PATIENTYOB, (CASE WHEN GIOITINH=1 THEN 'Nam' ELSE N'Nữ' END) AS GENDER
+     FROM TT_NGOAITRU_TOATHUOC_NGUOIMUA
+     WHERE NGOAITRU_TOATHUOC_NGUOIMUA_ID='$MATOATHUOC$' AND BENHVIEN_ID='$BENHVIEN_ID$'
+   </statement>
+  </statements>
+</sqlMap>

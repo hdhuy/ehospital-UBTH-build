@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,6b6ec3e980b0f0d9ac8b8c5f5a38e713-->
+        <statement id="DAO00044_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select A.*
+          from TM_PHONGBAN_DICHVU A
+          inner join TM_DICHVU B on B.DICHVU_ID = A.DICHVU_ID and (B.TAMNGUNG is null or B.TAMNGUNG = '0')
+          inner join TM_PHONGBAN C on C.PHONGBAN_ID = A.PHONGBAN_ID and (C.TAMNGUNG is null or C.TAMNGUNG = '0')
+          and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

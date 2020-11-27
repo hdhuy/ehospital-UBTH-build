@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>        
+        <statement id="DAO00324_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          SELECT *,KHO_ID KHONHAP_ID,KHO_ID AS KHOXUAT_ID,KHO_ID AS KHOMAU_ID FROM TM_KHO WHERE MODULE_ID=9071 AND TAMNGUNG = '0'
+          and BENHVIEN_ID = '$BENHVIEN_ID$'
+          order by TENKHO
+        </statement>       
+    </statements>
+</sqlMap>

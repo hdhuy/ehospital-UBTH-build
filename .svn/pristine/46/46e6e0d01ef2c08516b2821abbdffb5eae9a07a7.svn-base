@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,9028b6592300f41e2ed1510d1cf164a7-->
+        <statement id="DAO00039_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_CHUYENKHOA
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="CHUYENKHOA_ID">
+                    TM_CHUYENKHOA.CHUYENKHOA_ID = '$CHUYENKHOA_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="MACHUYENKHOA">
+                    TM_CHUYENKHOA.MACHUYENKHOA = '$MACHUYENKHOA$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENCHUYENKHOA">
+                    TM_CHUYENKHOA.TENCHUYENKHOA = '$TENCHUYENKHOA$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENKHONGDAU">
+                    TM_CHUYENKHOA.TENKHONGDAU = '$TENKHONGDAU$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENCHUYENKHOA_EN">
+                    TM_CHUYENKHOA.TENCHUYENKHOA_EN = '$TENCHUYENKHOA_EN$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENCHUYENKHOA_RU">
+                    TM_CHUYENKHOA.TENCHUYENKHOA_RU = '$TENCHUYENKHOA_RU$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="PHONGBAN_ID">
+                    TM_CHUYENKHOA.PHONGBAN_ID = '$PHONGBAN_ID$'
+                </isNotEmpty>
+            </isParameterPresent>
+        </statement>
+    </statements>
+</sqlMap>

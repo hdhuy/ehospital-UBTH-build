@@ -1,0 +1,99 @@
+FPT.Framework.Presentation.GridViewStyle, FPT.Framework.Presentation
+{
+  "RowHeaderCellStyle": {
+    "ForeColor": "@black",
+    "BackColor": "232,250,250",
+    "SelectionForeColor": "255,255,255,255",
+    "SelectionBackColor": "255,51,153,255",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": true,
+    "Padding": "0, 0, 0, 0"
+  },
+  "ColumnHeaderCellStyle": {
+    "ForeColor": "@white",
+    "BackColor": "255,0,155,159",
+    "SelectionForeColor": "@white",
+    "SelectionBackColor": "5,143,215",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": false,
+    "Padding": "0, 0, 0, 0"
+  },
+  "CellStyle": {
+    "ForeColor": "@gridcellfg1",
+    "BackColor": "@gridcellbg1",
+    "SelectionForeColor": "@gridselfg",
+    "SelectionBackColor": "@gridselbg",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": false,
+    "Padding": "0, 0, 0, 0"
+  },
+  "AlternativeCellStyle": {
+    "ForeColor": "@gridcellfg2",
+    "BackColor": "@gridcellbg2",
+    "SelectionForeColor": "@gridselfg",
+    "SelectionBackColor": "@gridselbg",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": false,
+    "Padding": "0, 0, 0, 0"
+  },
+  "GridColor": "@gridline",
+  "BackColor": "@gridbg",
+  "ForeColor": "@black",
+  "RowHeight": 24,
+  "ColumnHeadersHeight": 26,
+  "RowHeadersWidth": 25,
+  "ColumnHeadersVisible": true,
+  "RowHeadersVisible": false,
+  "Groups": 
+	[
+	  {
+		"ForeColor": "@gridgroupfg1",
+		"BackColor": "@gridgroupbg1",
+		"SelectionForeColor": "@gridgroupselfg1",
+		"SelectionBackColor": "@gridgroupselbg1",
+		"Font": {
+		  "Name": "Segoe UI",
+		  "Size": 9.75,
+		  "Style": 0,
+		  "Weight": 400
+		},
+		"WrapMode": false,
+		"Padding": "0, 0, 0, 0"
+      },
+	  {
+		"ForeColor": "@gridgroupfg2",
+		"BackColor": "@gridgroupbg2",
+		"SelectionForeColor": "@gridgroupselfg2",
+		"SelectionBackColor": "@gridgroupselbg2",
+		"Font": {
+		  "Name": "Segoe UI",
+		  "Size": 9.75,
+		  "Style": 0,
+		  "Weight": 400
+		},
+		"WrapMode": false,
+		"Padding": "0, 0, 0, 0"
+      }
+	],
+  "RowFormats": []
+}

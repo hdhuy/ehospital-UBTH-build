@@ -1,0 +1,19 @@
+FPT.Framework.Presentation.ButtonStyle, FPT.Framework.Presentation
+{
+  "ForeColor": "@menuitemfg",
+  "BackColor": "@menuitembg",
+  "HoverForeColor": "@menuitemfg",
+  "HoverBackColor": "@menuitemhover",
+  "PressForeColor": "@menuitemfg",
+  "PressBackColor": "@menuitempress",
+  "DisableForeColor": "@buttonDisablefg",
+  "DisableBackColor": "@buttonDisable",
+  "FocusColor": "@white",
+  "Font": "menuitem",
+  "TextMargin": "50,0,5,0",
+  "ImageMargin": "2,2,2,2",
+  "TextAlign": "MiddleLeft",
+  "ImageAlign": "MiddleLeft",
+  "FocusWidth":  0,
+  "WrapText": false
+}

@@ -1,0 +1,326 @@
+﻿--------------------------------------------------------------------------------
+2018-10-02 12:13:23,033 [1] INFO  - [Application started.]
+2018-10-02 12:13:24,020 [1] WARN  - Error in reading style 'Styles/ButtonStdRed'
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2018-10-02 12:13:24,585 [1] ERROR - Session initialized fail!
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'e:/eHosResources/Caches/0/'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at System.IO.Directory.CreateDirectory(String path)
+   at FPT.Framework.Platform.WinStorage.CreateFolder(String path)
+   at FPT.Framework.Application.ApplicationContext.ReadConfiguration()
+   at FPT.Framework.Application.ApplicationContext.Initialize()
+   at FPT.eHospital.Application.eHosApplication.CreateApplicationContext(String appName, IGuiProvider gui, LocalizeManager lm, IConfiguration config, IDataContainer dataContainer, IPageView mainFrame, IProfileProvider profileProvider, Type profileType, ICulture appCulture, ITheme defaultTheme, Version ver)
+   at FPT.Framework.Application.ApplicationBase.CreateApplicationContext()
+   at FPT.Application.WinApplication.CreateApplicationSession(IUserProfile profile)
+   at FPT.Application.Winform.WFApplication.CreateApplicationSession(IUserProfile profile)
+   at FPT.eHospital.Application.eHosApplication.CreateApplicationSession(IUserProfile profile)
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile)
+2018-10-02 12:14:11,648 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-10-02 14:02:46,645 [1] INFO  - [Application started.]
+2018-10-02 14:02:47,198 [1] WARN  - Error in reading style 'Styles/ButtonStdRed'
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2018-10-02 14:02:47,552 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-02 14:02:47,884 [1] ERROR - Session initialized fail!
+IBatisNet.Common.Exceptions.ConfigurationException: 
+- The error occurred while loading Providers.
+- initialize provider  
+- Check the oracle12. ---> IBatisNet.Common.Exceptions.ConfigurationException: Could not configure providers. Unable to load provider named "oracle12" not found, failed. Cause: Could not load file or assembly 'Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342' or one of its dependencies. The system cannot find the file specified. ---> System.IO.FileNotFoundException: Could not load file or assembly 'Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342' or one of its dependencies. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at IBatisNet.Common.DbProvider.Initialize()
+   --- End of inner exception stack trace ---
+   at IBatisNet.Common.DbProvider.Initialize()
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.GetProviders()
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Initialize()
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Build(XmlDocument document, DataSource dataSource, Boolean useConfigFileWatcher, Boolean isCallFromDao)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Build(XmlDocument document, DataSource dataSource, Boolean useConfigFileWatcher, Boolean isCallFromDao)
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Configure(String resource)
+   at FPT.eHospital.DataAccess.SqlMapperContainer.AddSqlMapper(String configFile, String dbname, String connectionString, String provider)
+   at FPT.eHospital.DataAccess.SqlMapperContainer.Initialize(String strSite, String sqlmapConfigRootPath)
+   at FPT.eHospital.DataAccess.DaoProvider.Initialize(String site, String assemblyFolder, String key, String mapContainerAssembly)
+   at FPT.eHospital.DataService.ServiceProvider.Initialize()
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile)
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile)
+   at FPT.Framework.Application.ApplicationSession.OpenProfile()
+   at FPT.Framework.Application.ApplicationSession.InitializeSession()
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile)
+2018-10-02 14:02:55,898 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-10-02 14:03:15,361 [1] INFO  - [Application started.]
+2018-10-02 14:03:15,837 [1] WARN  - Error in reading style 'Styles/ButtonStdRed'
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2018-10-02 14:03:16,201 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-02 14:03:16,492 [1] ERROR - Session initialized fail!
+IBatisNet.Common.Exceptions.ConfigurationException: 
+- The error occurred while loading Providers.
+- initialize provider  
+- Check the oracle12. ---> IBatisNet.Common.Exceptions.ConfigurationException: Could not configure providers. Unable to load provider named "oracle12" not found, failed. Cause: Could not load file or assembly 'Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342' or one of its dependencies. The system cannot find the file specified. ---> System.IO.FileNotFoundException: Could not load file or assembly 'Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342' or one of its dependencies. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at IBatisNet.Common.DbProvider.Initialize()
+   --- End of inner exception stack trace ---
+   at IBatisNet.Common.DbProvider.Initialize()
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.GetProviders()
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Initialize()
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Build(XmlDocument document, DataSource dataSource, Boolean useConfigFileWatcher, Boolean isCallFromDao)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Build(XmlDocument document, DataSource dataSource, Boolean useConfigFileWatcher, Boolean isCallFromDao)
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Configure(String resource)
+   at FPT.eHospital.DataAccess.SqlMapperContainer.AddSqlMapper(String configFile, String dbname, String connectionString, String provider)
+   at FPT.eHospital.DataAccess.SqlMapperContainer.Initialize(String strSite, String sqlmapConfigRootPath)
+   at FPT.eHospital.DataAccess.DaoProvider.Initialize(String site, String assemblyFolder, String key, String mapContainerAssembly)
+   at FPT.eHospital.DataService.ServiceProvider.Initialize()
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile)
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile)
+   at FPT.Framework.Application.ApplicationSession.OpenProfile()
+   at FPT.Framework.Application.ApplicationSession.InitializeSession()
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile)
+2018-10-02 14:03:27,761 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-10-02 14:04:33,629 [1] INFO  - [Application started.]
+2018-10-02 14:04:34,234 [1] WARN  - Error in reading style 'Styles/ButtonStdRed'
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Presentation.LookupTable`1.get_Item(String key)
+   at FPT.Framework.Presentation.StyleJsonReader.GetColor(String id)
+   at FPT.Framework.Presentation.RgbJsonConverter.LookupColor(JsonReader reader, String token)
+   at FPT.Framework.Presentation.RgbJsonConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at FPT.Framework.Presentation.UITheme.JsonLoadStyle(String path, JsonSerializer serializer)
+   at FPT.Framework.Presentation.UITheme.ParseStyles(Section cg)
+2018-10-02 14:04:34,635 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-02 14:04:35,258 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-02 14:04:35,274 [1] INFO  - LoadMasters() took 0 ms.
+2018-10-02 14:04:35,274 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-02 14:04:59,392 [1] INFO  - [test] Session is starting.
+2018-10-02 14:05:03,615 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:04,078 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:04,199 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:04,315 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:04,416 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:04,547 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:04,669 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:04,784 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:04,900 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:09,394 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:09,594 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:09,779 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:11,861 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:11,983 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:13,548 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:05:14,217 [5] INFO  - LoadMasters() took 14,771 ms.
+2018-10-02 14:05:14,217 [1] INFO  - [test] Session started.
+2018-10-02 14:05:53,345 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-02 14:05:53,345 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-02 14:05:53,367 [1] INFO  - [test] Session stopped.
+2018-10-02 14:05:53,367 [1] INFO  - Memory used before collection:  37,905,496
+2018-10-02 14:05:53,414 [1] INFO  - Memory used after collection:  6,160,128
+2018-10-02 14:05:53,514 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-10-02 14:06:22,498 [1] INFO  - [Application started.]
+2018-10-02 14:06:23,410 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-02 14:06:23,995 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-02 14:06:24,042 [1] INFO  - LoadMasters() took 47 ms.
+2018-10-02 14:06:24,042 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-02 14:06:32,215 [1] INFO  - [test] Session is starting.
+2018-10-02 14:06:33,234 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:33,498 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:33,629 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:33,766 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:33,898 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:34,013 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:34,124 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:34,251 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:34,367 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:35,568 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:35,731 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:35,868 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:37,771 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:37,934 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:39,580 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 14:06:40,238 [5] INFO  - LoadMasters() took 8,016 ms.
+2018-10-02 14:06:40,245 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-02 17:18:14,306 [1] INFO  - [Application started.]
+2018-10-02 17:18:15,354 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-02 17:18:16,061 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-02 17:18:16,127 [1] INFO  - LoadMasters() took 55 ms.
+2018-10-02 17:18:16,128 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-02 17:18:41,665 [1] INFO  - [test] Session is starting.
+2018-10-02 17:18:42,636 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:42,821 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:42,937 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:43,037 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:43,127 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:43,252 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:43,368 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:43,490 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:43,606 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:44,777 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:44,956 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:45,082 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:47,061 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:47,172 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:48,817 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-02 17:18:49,419 [5] INFO  - LoadMasters() took 7,754 ms.
+2018-10-02 17:18:49,434 [1] INFO  - [test] Session started.
+2018-10-02 17:26:00,219 [1] ERROR - Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FPT.Framework.Data.BindingList`1.get_Item(Int32 index)
+   at FPT.Framework.Data.BindingList`1.FPT.Framework.Data.IBindingList.get_Item(Int32 index)
+   at FPT.eHospital.Forms.CPM.VMCPM04.CmdAddThuoc(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\24.ScrCPM\VMCPM04.cs:line 171
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-10-02 17:26:15,229 [1] ERROR - Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FPT.Framework.Data.BindingList`1.get_Item(Int32 index)
+   at FPT.Framework.Data.BindingList`1.FPT.Framework.Data.IBindingList.get_Item(Int32 index)
+   at FPT.eHospital.Forms.CPM.VMCPM04.CmdAddThuoc(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\24.ScrCPM\VMCPM04.cs:line 171
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-10-02 17:26:49,502 [1] ERROR - Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FPT.Framework.Data.BindingList`1.get_Item(Int32 index)
+   at FPT.Framework.Data.BindingList`1.FPT.Framework.Data.IBindingList.get_Item(Int32 index)
+   at FPT.eHospital.Forms.CPM.VMCPM04.CmdAddThuoc(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\24.ScrCPM\VMCPM04.cs:line 171
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-10-02 17:26:59,047 [1] ERROR - Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FPT.Framework.Data.BindingList`1.get_Item(Int32 index)
+   at FPT.Framework.Data.BindingList`1.FPT.Framework.Data.IBindingList.get_Item(Int32 index)
+   at FPT.eHospital.Forms.CPM.VMCPM04.CmdAddThuoc(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\24.ScrCPM\VMCPM04.cs:line 171
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-10-02 17:27:12,959 [1] ERROR - Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FPT.Framework.Data.BindingList`1.get_Item(Int32 index)
+   at FPT.Framework.Data.BindingList`1.FPT.Framework.Data.IBindingList.get_Item(Int32 index)
+   at FPT.eHospital.Forms.CPM.VMCPM04.CmdAddThuoc(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\24.ScrCPM\VMCPM04.cs:line 171
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-10-02 19:04:10,362 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-02 19:04:10,366 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-02 19:04:10,399 [1] INFO  - [test] Session stopped.
+2018-10-02 19:04:10,399 [1] INFO  - Memory used before collection:  26,688,196
+2018-10-02 19:04:10,445 [1] INFO  - Memory used after collection:  9,459,804
+2018-10-02 19:04:10,520 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------

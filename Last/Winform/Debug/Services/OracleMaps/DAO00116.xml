@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,cd4237690abaa7329dde11d3d795e60d-->
+        <statement id="DAO00116_File_GetAll" resultClass="DataObject">
+            select *
+            from TT_FILE_DINHKEM
+            order by FILE_ID
+        </statement>
+        <!--Revision:0,4a27fd70e573aa15065a8fc3bdb4a174-->
+        <statement id="DAO00116_File_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_FILE_DINHKEM
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="LIST_FILE_ID">
+                        FILE_ID IN ($LIST_FILE_ID$)
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REF_TABLE">
+                        TT_FILE_DINHKEM.REF_TABLE = '$REF_TABLE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REF_ID">
+                        TT_FILE_DINHKEM.REF_ID = '$REF_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ORIGINAL_NAME">
+                        TT_FILE_DINHKEM.ORIGINAL_NAME = '$ORIGINAL_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="UPLOAD_NAME">
+                        TT_FILE_DINHKEM.UPLOAD_NAME = '$UPLOAD_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="UPLOAD_FOLDER">
+                        TT_FILE_DINHKEM.UPLOAD_FOLDER = '$UPLOAD_FOLDER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TYPE">
+                        TT_FILE_DINHKEM.TYPE = '$TYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SIZE">
+                        TT_FILE_DINHKEM.SIZE = '$SIZE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_FILE_DINHKEM.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_FILE_DINHKEM.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_FILE_DINHKEM.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by FILE_ID
+        </statement>
+        <!--Revision:0,d6855a6cdc93fd34e5401aa7673ab0c5-->
+        <statement id="DAO00116_File_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_FILE_DINHKEM
+            where TT_FILE_DINHKEM.FILE_ID  = '$value$'
+            order by FILE_ID
+        </statement>
+        <!--Revision:0,ebf84fdb14726c2176f0acb94281f4ca-->
+        <statement id="DAO00116_File_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_FILE_DINHKEM
+            where TT_FILE_DINHKEM.FILE_ID  = '$FILE_ID$'
+            order by FILE_ID
+        </statement>
+        <!--Revision:0,b2df1d7d36400989036af57819da14e0-->
+        <insert id="DAO00116_File_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            <selectKey property="ID" type="pre" resultClass="System.Int64">
+              select TT_FILE_DINHKEM_S.nextval as value from dual
+            </selectKey>
+            insert into TT_FILE_DINHKEM (
+            FILE_ID
+            , REF_TABLE
+            , REF_ID
+            , ORIGINAL_NAME
+            , UPLOAD_NAME
+            , UPLOAD_FOLDER
+            , TYPE
+            , SIZE
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            ) values (
+            #ID#
+            , #REF_TABLE#
+            , #REF_ID#
+            , #ORIGINAL_NAME#
+            , #UPLOAD_NAME#
+            , #UPLOAD_FOLDER#
+            , #TYPE#
+            , #SIZE#
+            , #BENHVIEN_ID#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            )
+        </insert>
+        <!--Revision:0,d2223eee45be9894e2bc3b3542dfb964-->
+        <update id="DAO00116_File_Update" parameterClass="System.Collections.IDictionary">
+            update TT_FILE_DINHKEM set
+            REF_ID = #REF_ID#
+            where
+            FILE_ID IN ($LIST_FILE_ID$)
+        </update>
+        <!--Revision:0,75c6f72feeaa4d2a425a23ab5c9f2aca-->
+        <statement id="DAO00116_File_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_FILE_DINHKEM
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="FILE_ID">
+                        FILE_ID = $FILE_ID$
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LIST_FILE_ID">
+                        FILE_ID IN ($LIST_FILE_ID$)
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REF_TABLE">
+                        REF_TABLE = '$REF_TABLE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REF_ID">
+                        REF_ID = '$REF_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,38cdfe758919b49d078c43d46c8c1f12-->
+        <statement id="DAO00116_GetTTDichVuCLS" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select clskq.CLSKETQUA_ID, NVL(clskq.BENHAN_ID, pt.BENHAN_ID) as BENHAN_ID,
+            pt.PHAUTHUAT_ID,
+            ba.SOBENHAN,
+            NVL(tn.TIEPNHAN_ID, pt.TIEPNHAN_ID) as TIEPNHAN_ID
+            from TT_CLSKETQUA clskq
+            left join TT_TIEPNHAN tn
+            on clskq.TIEPNHAN_ID = tn.TIEPNHAN_ID
+            full join TT_PHAUTHUAT pt
+            on pt.TIEPNHAN_ID = tn.TIEPNHAN_ID
+            left join TT_NOITRU_BENHAN ba
+            on (clskq.BENHAN_ID = ba.BENHAN_ID) or (pt.BENHAN_ID = ba.BENHAN_ID)
+            where tn.BENHNHAN_ID = '$BENHNHAN_ID$'
+            <isNotEmpty prepend="and" property="TUNGAY">
+                TRUNC(clskq.NGAYTAO) BETWEEN trunc(#TUNGAY#) and  trunc(#DENNGAY#)
+            </isNotEmpty>
+        </statement>
+        <!--Revision:0,0a39ad1ed6608e55c40309a570c2f1da-->
+        <statement id="DAO00116_GetDSFileDinhKem" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TT_FILE_DINHKEM
+            where
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isNotEmpty prepend="and" property="PHAUTHUAT_ID">
+                (REF_ID = '$PHAUTHUAT_ID$' and REF_TABLE = 'TT_PHAUTHUAT')
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="CLSKETQUA_ID">
+                (REF_ID = '$CLSKETQUA_ID$' and REF_TABLE = 'TT_CLSKETQUA')
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="TUNGAY">
+              TRUNC(NGAYTAO) BETWEEN trunc(#TUNGAY#) and  trunc(#DENNGAY#)
+            </isNotEmpty>
+        </statement>
+        <!--Revision:0,6179d6e9e04197ac6a1a0bcae1c5de89-->
+        <statement id="DAO00116_GetDSFileDinhKemHSBA" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select lt.LOAIHSBA_ID, ba.SOBENHAN, f.* from TT_FILE_DINHKEM f
+            left join TT_BENHAN_MUONTRA mt on f.REF_ID = mt.SOTAILIEU
+            left join TT_BENHAN_LUUTRU lt on lt.HOSO_ID = mt.HOSO_ID
+            left join TT_NOITRU_BENHAN ba on ba.BENHAN_ID = lt.BENHAN_ID
+            where f.REF_TABLE = 'TT_BENHAN_MUONTRA'
+            and f.BENHVIEN_ID = '$BENHVIEN_ID$'
+            and ba.BENHNHAN_ID = '$BENHNHAN_ID$'
+            <isNotEmpty prepend="and" property="TUNGAY">
+              TRUNC(f.NGAYTAO) BETWEEN trunc(#TUNGAY#) and  trunc(#DENNGAY#)
+            </isNotEmpty>
+        </statement>
+    </statements>
+</sqlMap>

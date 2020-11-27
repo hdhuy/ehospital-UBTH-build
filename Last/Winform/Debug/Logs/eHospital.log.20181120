@@ -1,0 +1,475 @@
+﻿--------------------------------------------------------------------------------
+2018-11-20 10:23:40,338 [1] INFO  - [Application started.]
+2018-11-20 10:23:40,766 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-20 10:23:45,212 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-20 10:23:45,313 [1] INFO  - LoadMasters() took 8 ms.
+2018-11-20 10:23:45,314 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-20 10:23:58,613 [1] INFO  - [admin] Session is starting.
+2018-11-20 10:23:59,371 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:24:05,736 [6] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:24:26,626 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:24:32,780 [6] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:24:32,917 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:24:39,069 [6] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:24:39,264 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:24:45,395 [6] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:24:45,590 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:24:51,725 [6] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:24:51,921 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:24:58,068 [6] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:24:58,262 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:25:04,405 [6] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:25:04,596 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:25:10,745 [6] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:25:10,939 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:25:17,210 [6] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:25:18,079 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:25:24,348 [6] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:25:24,600 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:25:30,742 [6] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:25:30,926 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:25:37,058 [6] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:25:38,633 [6] INFO  - LoadMasters() took 99,971 ms.
+2018-11-20 10:25:38,653 [1] INFO  - [admin] Session started.
+2018-11-20 10:25:45,781 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-20 10:25:45,827 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-20 10:28:23,310 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-11-20 10:28:29,634 [1] INFO  - Luu tiep nhan:  take 8328 ms.
+2018-11-20 10:28:29,663 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.Registration.VMREG01.XacNhanCheckThongTuyen(Object sender, Object e) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 462
+   at FPT.eHospital.Forms.VMPopup.OnFormClosed(Object sender, EventArgs args) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 50
+   at WinformUI.WFControlController.ShowModal(IView owner, EventHandler closedHandler)
+   at FPT.Framework.Presentation.PageView.ShowModal(IPageView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\PageView.cs:line 114
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 101
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowMessageBox(MsgBoxType type, String msg, String title, VMEvent closeCallback, ViewResult defaultFocus) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 320
+   at FPT.eHospital.Forms.Registration.VMREG01.LuuTiepNhan(Object sender, Object arg) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 432
+   at FPT.eHospital.Forms.Registration.VMREG01.cmdLuuTiepNhan(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 378
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-11-20 10:28:42,676 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-11-20 10:28:48,951 [1] INFO  - Luu tiep nhan:  take 8132 ms.
+2018-11-20 10:28:48,952 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.Registration.VMREG01.XacNhanCheckThongTuyen(Object sender, Object e) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 462
+   at FPT.eHospital.Forms.VMPopup.OnFormClosed(Object sender, EventArgs args) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 50
+   at WinformUI.WFControlController.ShowModal(IView owner, EventHandler closedHandler)
+   at FPT.Framework.Presentation.PageView.ShowModal(IPageView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\PageView.cs:line 114
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 101
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowMessageBox(MsgBoxType type, String msg, String title, VMEvent closeCallback, ViewResult defaultFocus) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 320
+   at FPT.eHospital.Forms.Registration.VMREG01.LuuTiepNhan(Object sender, Object arg) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 432
+   at FPT.eHospital.Forms.Registration.VMREG01.cmdLuuTiepNhan(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 378
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-11-20 10:29:30,615 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-11-20 10:29:36,828 [1] INFO  - Luu tiep nhan:  take 9876 ms.
+2018-11-20 10:29:36,829 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.Registration.VMREG01.XacNhanCheckThongTuyen(Object sender, Object e) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 462
+   at FPT.eHospital.Forms.VMPopup.OnFormClosed(Object sender, EventArgs args) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 50
+   at WinformUI.WFControlController.ShowModal(IView owner, EventHandler closedHandler)
+   at FPT.Framework.Presentation.PageView.ShowModal(IPageView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\PageView.cs:line 114
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 101
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowMessageBox(MsgBoxType type, String msg, String title, VMEvent closeCallback, ViewResult defaultFocus) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 320
+   at FPT.eHospital.Forms.Registration.VMREG01.LuuTiepNhan(Object sender, Object arg) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 432
+   at FPT.eHospital.Forms.Registration.VMREG01.cmdLuuTiepNhan(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 378
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+--------------------------------------------------------------------------------
+2018-11-20 10:48:35,255 [1] INFO  - [Application started.]
+2018-11-20 10:48:35,454 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-20 10:48:37,440 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-20 10:48:37,552 [1] INFO  - LoadMasters() took 8 ms.
+2018-11-20 10:48:37,554 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-20 10:48:46,957 [1] INFO  - [admin] Session is starting.
+2018-11-20 10:48:47,449 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:48:53,645 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:49:02,460 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:49:08,582 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:49:08,772 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:49:14,908 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:49:15,159 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:49:21,282 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:49:21,471 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:49:27,626 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:49:27,827 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:49:33,970 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:49:34,164 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:49:40,296 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:49:40,475 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:49:46,587 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:49:46,774 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:49:52,881 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:49:53,475 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:49:59,602 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:49:59,791 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:50:05,904 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:50:06,098 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:50:12,213 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:50:13,752 [5] INFO  - LoadMasters() took 86,789 ms.
+2018-11-20 10:50:13,768 [1] INFO  - [admin] Session started.
+2018-11-20 10:50:16,576 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-20 10:50:16,600 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-20 10:51:17,075 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-11-20 10:51:23,295 [1] INFO  - Luu tiep nhan:  take 6394 ms.
+2018-11-20 10:51:23,299 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.Registration.VMREG01.XacNhanCheckThongTuyen(Object sender, Object e) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 462
+   at FPT.eHospital.Forms.Registration.VMREG01.LuuTiepNhan(Object sender, Object arg) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 435
+   at FPT.eHospital.Forms.Registration.VMREG01.cmdLuuTiepNhan(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 378
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-11-20 10:53:24,101 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-11-20 10:53:30,284 [1] INFO  - Luu tiep nhan:  take 6207 ms.
+2018-11-20 10:53:30,286 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.Registration.VMREG01.XacNhanCheckThongTuyen(Object sender, Object e) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 462
+   at FPT.eHospital.Forms.Registration.VMREG01.LuuTiepNhan(Object sender, Object arg) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 435
+   at FPT.eHospital.Forms.Registration.VMREG01.cmdLuuTiepNhan(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 378
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-11-20 10:55:42,197 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-11-20 10:55:46,223 [1] ERROR - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Platform.OfflineCache.Get[T](String key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\OfflineCache.cs:line 82
+   at FPT.eHospital.Services.ParametersServiceBase.GetParameter[T](String name) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\ParametersServiceBase.cs:line 34
+   at FPT.eHospital.Services.HospitalServiceBase.AddDataLog(String dataName, ActionLog action, Int32 refId, String refNumber, Int32 modifiedUserId, DateTime mofifiedDate, IDictionary`2 details) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\HospitalServiceBase.cs:line 19
+   at FPT.eHospital.Services.MPI001.InternalExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\04.Services\04.SvcMPI\MPI001.cs:line 58
+2018-11-20 10:55:46,777 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-11-20 10:55:47,329 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:55:48,562 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:55:49,635 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.REG001 dvYeucau_Id:50011
+2018-11-20 10:55:49,669 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:55:50,786 [1] ERROR - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Platform.OfflineCache.Get[T](String key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\OfflineCache.cs:line 82
+   at FPT.eHospital.Services.ParametersServiceBase.GetParameter[T](String name) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\ParametersServiceBase.cs:line 34
+   at FPT.eHospital.Services.HospitalServiceBase.AddDataLog(String dataName, ActionLog action, Int32 refId, String refNumber, Int32 modifiedUserId, DateTime mofifiedDate, IDictionary`2 details) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\HospitalServiceBase.cs:line 19
+   at FPT.eHospital.Services.REG001.InternalExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\04.Services\02.SvcREG\REG001.cs:line 172
+2018-11-20 10:56:00,887 [1] INFO  - Luu tiep nhan:  take 18718 ms.
+2018-11-20 10:58:03,323 [1] INFO  - Total upload size: 1,752 bytes => 4 bytes/s
+2018-11-20 10:58:03,325 [1] INFO  - Total download size: 52,372 bytes => 112 bytes/s
+2018-11-20 10:58:03,371 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 10:58:03,709 [1] INFO  - [admin] Session stopped.
+2018-11-20 10:58:03,712 [1] INFO  - Memory used before collection:  24,855,636
+2018-11-20 10:58:03,787 [1] INFO  - Memory used after collection:  9,538,748
+2018-11-20 10:58:04,233 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-20 10:58:04,299 [1] INFO  - LoadMasters() took 63 ms.
+2018-11-20 10:58:04,300 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-20 10:58:10,030 [1] INFO  - [admin] Session is starting.
+2018-11-20 10:58:10,336 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:10,455 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:10,527 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:10,570 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:10,620 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:10,684 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:10,726 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:10,771 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:10,817 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:11,371 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:11,426 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:11,642 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 10:58:13,226 [5] INFO  - LoadMasters() took 3,195 ms.
+2018-11-20 10:58:13,230 [1] INFO  - [admin] Session started.
+2018-11-20 10:58:13,456 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-20 10:58:13,473 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-20 10:59:14,859 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.BIL027 dvYeucau_Id:50011
+2018-11-20 10:59:16,732 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48017\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl: not exist/0
+2018-11-20 10:59:16,743 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48017\BIL27P00302_VN_MauBienLaiThuTienNgoaiTru.rdlc: not exist/0
+2018-11-20 10:59:16,860 [1] ERROR - Report template 'BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl' not found in the server
+2018-11-20 10:59:16,861 [1] ERROR - Report template 'BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl' not found in the server
+2018-11-20 11:06:21,868 [1] ERROR - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Platform.OfflineCache.Get[T](String key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\OfflineCache.cs:line 82
+   at FPT.eHospital.Services.ParametersServiceBase.GetParameter[T](String name) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\ParametersServiceBase.cs:line 34
+   at FPT.eHospital.Services.HospitalServiceBase.AddDataLog(String dataName, ActionLog action, Int32 refId, String refNumber, Int32 modifiedUserId, DateTime mofifiedDate, IDictionary`2 details) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\HospitalServiceBase.cs:line 19
+   at FPT.eHospital.Services.PHABASE.Add_DataLog(IDictionary`2 parameters, String action) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHABase.cs:line 1056
+2018-11-20 11:07:40,782 [1] ERROR - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Platform.OfflineCache.Get[T](String key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\OfflineCache.cs:line 82
+   at FPT.eHospital.Services.ParametersServiceBase.GetParameter[T](String name) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\ParametersServiceBase.cs:line 34
+   at FPT.eHospital.Services.HospitalServiceBase.AddDataLog(String dataName, ActionLog action, Int32 refId, String refNumber, Int32 modifiedUserId, DateTime mofifiedDate, IDictionary`2 details) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\HospitalServiceBase.cs:line 19
+   at FPT.eHospital.Services.PHABASE.Add_DataLog(IDictionary`2 parameters, String action) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHABase.cs:line 1056
+--------------------------------------------------------------------------------
+2018-11-20 11:14:55,250 [1] INFO  - [Application started.]
+2018-11-20 11:14:55,711 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-20 11:14:59,006 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-20 11:14:59,229 [1] INFO  - LoadMasters() took 105 ms.
+2018-11-20 11:14:59,231 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-20 11:15:17,422 [1] INFO  - [admin] Session is starting.
+2018-11-20 11:15:19,448 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:19,707 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:19,919 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:20,136 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:20,370 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:20,592 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:20,830 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:21,020 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:21,215 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:21,796 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:22,506 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:24,289 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 11:15:27,131 [5] INFO  - LoadMasters() took 9,702 ms.
+2018-11-20 11:15:27,148 [1] INFO  - [admin] Session started.
+2018-11-20 11:15:31,099 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-20 11:15:31,122 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-11-20 13:17:25,853 [1] INFO  - [Application started.]
+2018-11-20 13:17:26,149 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-20 13:17:28,436 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-20 13:17:28,493 [1] INFO  - LoadMasters() took 50 ms.
+2018-11-20 13:17:28,495 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-20 13:17:41,369 [1] INFO  - [admin] Session is starting.
+2018-11-20 13:17:43,104 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:43,304 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:43,387 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:43,488 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:43,578 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:43,676 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:43,776 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:43,889 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:43,979 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:44,495 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:44,691 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:46,931 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:17:53,260 [7] INFO  - LoadMasters() took 11,884 ms.
+2018-11-20 13:17:53,272 [1] INFO  - [admin] Session started.
+2018-11-20 13:17:56,808 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-20 13:17:56,834 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-11-20 13:20:14,994 [1] INFO  - [Application started.]
+2018-11-20 13:20:15,421 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-20 13:20:17,819 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-20 13:20:17,895 [1] INFO  - LoadMasters() took 69 ms.
+2018-11-20 13:20:17,896 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-20 13:20:28,460 [1] INFO  - [admin] Session is starting.
+2018-11-20 13:20:29,305 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:29,463 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:29,554 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:29,639 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:29,727 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:29,813 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:29,946 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:30,060 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:30,159 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:30,649 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:30,892 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:31,716 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:20:33,761 [5] INFO  - LoadMasters() took 5,294 ms.
+2018-11-20 13:20:33,767 [1] INFO  - [admin] Session started.
+2018-11-20 13:20:37,188 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-20 13:20:37,214 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-11-20 13:23:59,097 [1] INFO  - [Application started.]
+2018-11-20 13:23:59,348 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-20 13:24:02,101 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-20 13:24:02,158 [1] INFO  - LoadMasters() took 51 ms.
+2018-11-20 13:24:02,159 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-20 13:24:17,073 [1] INFO  - [admin] Session is starting.
+2018-11-20 13:24:17,934 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:18,102 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:18,183 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:18,282 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:18,364 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:18,462 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:18,555 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:18,638 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:18,734 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:19,227 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:19,380 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:19,991 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:24:22,070 [5] INFO  - LoadMasters() took 4,992 ms.
+2018-11-20 13:24:22,077 [1] INFO  - [admin] Session started.
+2018-11-20 13:24:25,424 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-20 13:24:25,448 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-20 13:27:07,401 [1] ERROR - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Platform.OfflineCache.Get[T](String key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\OfflineCache.cs:line 82
+   at FPT.eHospital.Services.ParametersServiceBase.GetParameter[T](String name) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\ParametersServiceBase.cs:line 34
+   at FPT.eHospital.Services.HospitalServiceBase.AddDataLog(String dataName, ActionLog action, Int32 refId, String refNumber, Int32 modifiedUserId, DateTime mofifiedDate, IDictionary`2 details) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\HospitalServiceBase.cs:line 19
+   at FPT.eHospital.Services.PHABASE.Add_DataLog(IDictionary`2 parameters, String action) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHABase.cs:line 1056
+--------------------------------------------------------------------------------
+2018-11-20 13:31:31,720 [1] INFO  - [Application started.]
+2018-11-20 13:31:32,113 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-20 13:31:34,636 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-20 13:31:34,695 [1] INFO  - LoadMasters() took 53 ms.
+2018-11-20 13:31:34,697 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-20 13:31:41,908 [1] INFO  - [admin] Session is starting.
+2018-11-20 13:31:42,769 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:42,945 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:43,031 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:43,117 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:43,202 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:43,281 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:43,366 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:43,454 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:43,552 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:44,037 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:44,208 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:44,894 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:31:47,006 [7] INFO  - LoadMasters() took 5,092 ms.
+2018-11-20 13:31:47,013 [1] INFO  - [admin] Session started.
+2018-11-20 13:31:50,736 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-20 13:31:50,764 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-20 13:32:46,538 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD02.UpdateSearchConditions() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD02.cs:line 5450
+   at FPT.eHospital.Forms.OPD.VMOPD02.lstTenToaThuoc_SelectedChanged(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD02.cs:line 863
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-20 13:32:57,542 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD02.UpdateSearchConditions() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD02.cs:line 5450
+   at FPT.eHospital.Forms.OPD.VMOPD02.GetThongtinTheoDVyecauID() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD02.cs:line 189
+   at FPT.eHospital.Forms.OPD.VMOPD02.OnPatientChanged(Object sender, Object arg) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD02.cs:line 157
+   at FPT.eHospital.Forms.Common.VMPatBaseSearch.PatientChanged(IViewModel sender, VMEventArgs e) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\VMPatBaseSearch.cs:line 341
+   at FPT.eHospital.Forms.Common.VMCOMHeader.PatientCallBack() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\HeaderViewModels\VMCOMHeader.cs:line 473
+   at FPT.eHospital.Forms.Common.VMCOMHeader.SetHeaderName() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\HeaderViewModels\VMCOMHeader.cs:line 298
+   at FPT.eHospital.Forms.Common.VMCOMHeader.MAYTEChanged() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\HeaderViewModels\VMCOMHeader.cs:line 508
+   at FPT.eHospital.Forms.Common.VMCOMHeader.txtMAYTEChange(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\HeaderViewModels\VMCOMHeader.cs:line 481
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-20 13:33:52,561 [1] DEBUG - User chạy: 117 Cách giải quyết:KT
+2018-11-20 13:33:53,247 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.OPD002 dvYeucau_Id:50011
+2018-11-20 13:34:30,418 [1] DEBUG - User chạy: 117 Cách giải quyết:KT
+2018-11-20 13:34:30,772 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.OPD002 dvYeucau_Id:50011
+2018-11-20 13:34:31,278 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.OPD002 dvYeucau_Id:50011
+2018-11-20 13:37:29,841 [1] ERROR - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Platform.OfflineCache.Get[T](String key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\OfflineCache.cs:line 82
+   at FPT.eHospital.Services.ParametersServiceBase.GetParameter[T](String name) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\ParametersServiceBase.cs:line 34
+   at FPT.eHospital.Services.HospitalServiceBase.AddDataLog(String dataName, ActionLog action, Int32 refId, String refNumber, Int32 modifiedUserId, DateTime mofifiedDate, IDictionary`2 details) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\HospitalServiceBase.cs:line 19
+   at FPT.eHospital.Services.PHABASE.Add_DataLog(IDictionary`2 parameters, String action)
+2018-11-20 13:40:17,232 [1] ERROR - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Platform.OfflineCache.Get[T](String key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\OfflineCache.cs:line 82
+   at FPT.eHospital.Services.ParametersServiceBase.GetParameter[T](String name) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\ParametersServiceBase.cs:line 34
+   at FPT.eHospital.Services.HospitalServiceBase.AddDataLog(String dataName, ActionLog action, Int32 refId, String refNumber, Int32 modifiedUserId, DateTime mofifiedDate, IDictionary`2 details) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\HospitalServiceBase.cs:line 19
+   at FPT.eHospital.Services.PHA007.Add_DataLog(IDictionary`2 parameters, String action)
+2018-11-20 13:40:17,878 [1] ERROR - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Platform.OfflineCache.Get[T](String key) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\OfflineCache.cs:line 82
+   at FPT.eHospital.Services.ParametersServiceBase.GetParameter[T](String name) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\ParametersServiceBase.cs:line 34
+   at FPT.eHospital.Services.HospitalServiceBase.AddDataLog(String dataName, ActionLog action, Int32 refId, String refNumber, Int32 modifiedUserId, DateTime mofifiedDate, IDictionary`2 details) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\HospitalServiceBase.cs:line 19
+   at FPT.eHospital.Services.PHA007.Add_DataLog(IDictionary`2 parameters, String action)
+2018-11-20 13:40:26,733 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-20 13:40:26,735 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-20 13:40:26,778 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-20 13:40:32,358 [1] INFO  - [admin] Session stopped.
+2018-11-20 13:40:32,361 [1] INFO  - Memory used before collection:  27,036,620
+2018-11-20 13:40:32,439 [1] INFO  - Memory used after collection:  10,858,344
+2018-11-20 13:40:32,476 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-20 13:40:42,074 [1] INFO  - [Application started.]
+2018-11-20 13:40:42,738 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-20 13:40:44,899 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-20 13:40:44,972 [1] INFO  - LoadMasters() took 66 ms.
+2018-11-20 13:40:44,974 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-20 13:40:53,155 [1] INFO  - [admin] Session is starting.
+2018-11-20 13:40:54,300 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:40:54,512 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:40:54,632 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:40:54,772 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:40:54,872 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:40:54,970 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:40:55,092 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:40:56,132 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:40:56,272 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:40:57,382 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:40:57,672 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:40:59,612 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-20 13:41:05,872 [5] INFO  - LoadMasters() took 12,710 ms.
+2018-11-20 13:41:05,874 [1] INFO  - [admin] Session started.
+2018-11-20 13:41:09,213 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-20 13:41:09,245 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)

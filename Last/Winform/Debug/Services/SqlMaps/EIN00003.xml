@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+  <statements>
+    <statement id="EIN00003_GetListBenhnhanNoHoaDon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select bnn.*, cast(bnn.HUY as bit) TRANGTHAI_HUY,
+      bn.TENBENHNHAN, bn.MAYTE,
+      hd.SOHOADON, hd.NGAYHOADON, hd.GIATRITHUCTHU, 
+      case when bnn.BENHAN_ID is null
+      then N'Ngoại trú/ nhà thuốc' else N'Nội trú'
+      end LOAIHOADONTHU,
+      nv.TENNHANVIEN
+      from TT_BENHNHAN_NO_THANHTOAN bnn
+      inner join TT_HOADON hd on hd.HOADON_ID = bnn.HOADON_ID
+      inner join TT_BENHNHAN bn on bn.BENHNHAN_ID = bnn.BENHNHAN_ID
+      inner join TM_NHANVIEN nv on nv.NHANVIEN_ID = hd.NGUOITHUTIEN_ID
+      where
+      hd.HUYHOADON != '1' and hd.HOANTRA != '1' and hd.DATHANHTOAN = '1'
+      and bnn.HUY = '$HUY$'
+      <isNotEmpty prepend="and" property="TUNGAY">
+      convert(date, hd.NGAYHOADON) &gt;= convert(date, '$TUNGAY$')
+    </isNotEmpty>
+    <isNotEmpty prepend="and" property="DENNGAY">
+      convert(date, hd.NGAYHOADON) &lt;= convert(date, '$DENNGAY$')
+    </isNotEmpty>
+    <isNotEmpty prepend="AND" property="TENBENHNHAN">
+      (bn.TENBENHNHAN like '%' + #TENBENHNHAN# + '%' or bn.MAYTE like '%' + #TENBENHNHAN# + '%')
+    </isNotEmpty>    
+    </statement>
+    <statement id="EIN00003_UpdateBenhnhanNoHoaDon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      update TT_BENHNHAN_NO_THANHTOAN
+      set HUY = '$HUY$', NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#, NGAYCAPNHAT = Getdate()
+      where HOADON_ID in ($LST_HOADON$)
+    </statement>    
+    <statement id="EIN00003_CheckBenhnhanNoHoaDon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select bnn.*
+      from TT_BENHNHAN_NO_THANHTOAN bnn
+      inner join TT_HOADON hd on hd.HOADON_ID = bnn.HOADON_ID
+      where
+       hd.DATHANHTOAN = '1'
+      <isNotEmpty prepend="and" property="BENHNHAN_ID">
+        bnn.BENHNHAN_ID = #BENHNHAN_ID# and bnn.HUY = '0' and hd.HUYHOADON != '1' and hd.HOANTRA != '1'
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="HOADON_ID">
+        hd.HOADON_ID = #HOADON_ID#
+      </isNotEmpty>
+    </statement>
+  </statements>
+</sqlMap>

@@ -1,0 +1,329 @@
+﻿--------------------------------------------------------------------------------
+2018-11-09 09:57:29,886 [1] INFO  - [Application started.]
+2018-11-09 09:57:30,370 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 09:57:35,982 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 09:57:36,003 [1] INFO  - LoadMasters() took 11 ms.
+2018-11-09 09:57:36,005 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 09:57:39,325 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 09:57:42,878 [1] INFO  - [test] Session is starting.
+2018-11-09 09:57:43,510 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:43,976 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:44,019 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:44,058 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:44,096 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:44,135 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:44,171 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:44,206 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:44,245 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:44,823 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:44,885 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:45,120 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 09:57:47,906 [5] INFO  - LoadMasters() took 5,027 ms.
+2018-11-09 09:57:47,914 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-09 11:52:09,109 [1] INFO  - [Application started.]
+2018-11-09 11:52:09,518 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 11:52:11,496 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 11:52:11,515 [1] INFO  - LoadMasters() took 9 ms.
+2018-11-09 11:52:11,516 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 11:52:14,693 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 11:52:16,030 [1] INFO  - [test] Session is starting.
+2018-11-09 11:52:16,490 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:16,738 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:16,776 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:16,814 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:16,852 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:16,887 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:16,921 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:16,956 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:16,994 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:17,442 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:17,540 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:17,765 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:52:20,389 [5] INFO  - LoadMasters() took 4,357 ms.
+2018-11-09 11:52:20,398 [1] INFO  - [test] Session started.
+2018-11-09 11:52:32,316 [1] ERROR - Object must implement IConvertible.
+System.InvalidCastException: Object must implement IConvertible.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at FPT.Framework.Data.ObjectConverter.TryConvertTo(Object value, Type destinationType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\Converters\ObjectConverter.cs:line 76
+   at FPT.Framework.Data.ObjectConverter.TryConvertTo[T](Object value) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\Converters\ObjectConverter.cs:line 94
+   at FPT.eHospital.Forms.OPD.VMOPD45.Initialize_Custom() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD45.cs:line 41
+   at FPT.eHospital.Forms.OPD.VMOPD14.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD14.cs:line 80
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 254
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-11-09 11:54:27,258 [1] INFO  - [Application started.]
+2018-11-09 11:54:27,483 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 11:54:29,454 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 11:54:29,475 [1] INFO  - LoadMasters() took 10 ms.
+2018-11-09 11:54:29,476 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 11:55:22,700 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 11:55:23,916 [1] INFO  - [test] Session is starting.
+2018-11-09 11:55:24,319 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:24,469 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:24,506 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:24,540 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:24,580 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:24,616 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:24,655 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:24,691 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:24,732 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:25,162 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:25,205 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:25,403 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 11:55:28,141 [5] INFO  - LoadMasters() took 4,224 ms.
+2018-11-09 11:55:28,158 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-09 13:23:39,467 [1] INFO  - [Application started.]
+2018-11-09 13:23:39,853 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+--------------------------------------------------------------------------------
+2018-11-09 13:27:45,569 [1] INFO  - [Application started.]
+2018-11-09 13:27:45,936 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 13:27:47,995 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 13:27:48,014 [1] INFO  - LoadMasters() took 8 ms.
+2018-11-09 13:27:48,016 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 13:27:51,318 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 13:27:52,649 [1] INFO  - [test] Session is starting.
+2018-11-09 13:27:53,085 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:53,240 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:53,274 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:53,314 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:53,348 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:53,385 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:53,420 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:53,455 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:53,496 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:53,933 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:53,973 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:54,202 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:27:56,837 [5] INFO  - LoadMasters() took 4,187 ms.
+2018-11-09 13:27:56,855 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-09 13:51:14,691 [1] INFO  - [Application started.]
+2018-11-09 13:51:14,976 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 13:51:16,807 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 13:51:16,827 [1] INFO  - LoadMasters() took 9 ms.
+2018-11-09 13:51:16,828 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 13:51:19,545 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 13:51:21,022 [1] INFO  - [test] Session is starting.
+2018-11-09 13:51:21,456 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:21,672 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:21,718 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:21,754 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:21,795 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:21,832 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:21,882 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:21,918 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:21,954 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:22,402 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:22,444 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:22,648 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 13:51:25,299 [5] INFO  - LoadMasters() took 4,276 ms.
+2018-11-09 13:51:25,311 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-09 14:01:12,736 [1] INFO  - [Application started.]
+2018-11-09 14:01:13,152 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 14:01:15,044 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 14:01:15,062 [1] INFO  - LoadMasters() took 7 ms.
+2018-11-09 14:01:15,063 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 14:01:18,574 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 14:01:19,950 [1] INFO  - [test] Session is starting.
+2018-11-09 14:01:20,385 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:20,527 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:20,574 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:20,610 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:20,650 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:20,683 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:20,718 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:20,752 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:20,789 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:21,228 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:21,317 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:21,531 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:01:24,333 [5] INFO  - LoadMasters() took 4,382 ms.
+2018-11-09 14:01:24,345 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-09 14:41:11,246 [1] INFO  - [Application started.]
+2018-11-09 14:41:11,643 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 14:41:14,338 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 14:41:14,359 [1] INFO  - LoadMasters() took 11 ms.
+2018-11-09 14:41:14,361 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 14:41:17,915 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 14:41:20,751 [1] INFO  - [test] Session is starting.
+2018-11-09 14:41:21,269 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:21,517 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:21,552 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:21,586 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:21,626 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:21,663 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:21,748 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:21,791 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:21,847 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:22,281 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:22,324 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:22,533 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:41:25,155 [5] INFO  - LoadMasters() took 4,404 ms.
+2018-11-09 14:41:25,165 [1] INFO  - [test] Session started.
+2018-11-09 14:44:49,197 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-09 14:44:49,199 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-09 14:44:49,216 [1] INFO  - [test] Session stopped.
+2018-11-09 14:44:49,218 [1] INFO  - Memory used before collection:  40,093,352
+2018-11-09 14:44:49,283 [1] INFO  - Memory used after collection:  9,739,608
+2018-11-09 14:44:49,320 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-09 14:45:24,073 [1] INFO  - [Application started.]
+2018-11-09 14:45:24,486 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 14:45:26,623 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 14:45:26,639 [1] INFO  - LoadMasters() took 6 ms.
+2018-11-09 14:45:26,640 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 14:46:34,675 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 14:46:35,781 [1] INFO  - [test] Session is starting.
+2018-11-09 14:46:36,196 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:36,336 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:36,372 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:36,408 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:36,444 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:36,479 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:36,513 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:36,549 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:36,583 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:37,020 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:37,061 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:37,279 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:46:40,527 [5] INFO  - LoadMasters() took 4,744 ms.
+2018-11-09 14:46:40,538 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-09 14:52:30,514 [1] INFO  - [Application started.]
+2018-11-09 14:52:30,791 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 14:52:32,864 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 14:52:32,889 [1] INFO  - LoadMasters() took 12 ms.
+2018-11-09 14:52:32,891 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 14:52:35,649 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 14:52:37,001 [1] INFO  - [test] Session is starting.
+2018-11-09 14:52:37,424 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:37,565 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:37,603 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:37,644 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:37,690 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:37,730 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:37,768 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:37,832 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:37,875 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:38,338 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:38,387 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:38,643 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 14:52:41,680 [5] INFO  - LoadMasters() took 4,675 ms.
+2018-11-09 14:52:41,695 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-09 16:38:46,383 [1] INFO  - [Application started.]
+2018-11-09 16:38:46,679 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 16:38:48,617 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 16:38:48,635 [1] INFO  - LoadMasters() took 6 ms.
+2018-11-09 16:38:48,636 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 16:38:52,497 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 16:38:53,945 [1] INFO  - [test] Session is starting.
+2018-11-09 16:38:54,384 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:54,646 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:54,707 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:54,774 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:54,809 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:54,844 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:54,879 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:54,919 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:54,960 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:55,399 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:55,456 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:55,675 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 16:38:58,027 [5] INFO  - LoadMasters() took 4,082 ms.
+2018-11-09 16:38:58,044 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-09 17:04:11,951 [1] INFO  - [Application started.]
+2018-11-09 17:04:12,381 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 17:04:14,463 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 17:04:14,486 [1] INFO  - LoadMasters() took 8 ms.
+2018-11-09 17:04:14,486 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 17:04:17,532 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 17:04:18,945 [1] INFO  - [test] Session is starting.
+2018-11-09 17:04:19,435 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:19,606 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:19,641 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:19,677 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:19,717 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:19,758 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:19,796 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:19,834 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:19,911 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:20,444 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:20,495 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:20,787 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:04:23,434 [5] INFO  - LoadMasters() took 4,487 ms.
+2018-11-09 17:04:23,445 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-09 17:12:17,963 [1] INFO  - [Application started.]
+2018-11-09 17:12:18,312 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 17:12:20,307 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 17:12:20,325 [1] INFO  - LoadMasters() took 8 ms.
+2018-11-09 17:12:20,326 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 17:12:23,591 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 17:12:24,990 [1] INFO  - [test] Session is starting.
+2018-11-09 17:12:25,419 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:25,558 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:25,592 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:25,624 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:25,659 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:25,703 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:25,742 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:25,796 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:25,831 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:26,276 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:26,320 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:26,557 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:12:29,128 [5] INFO  - LoadMasters() took 4,134 ms.
+2018-11-09 17:12:29,137 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-11-09 17:14:34,391 [1] INFO  - [Application started.]
+2018-11-09 17:14:34,708 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-09 17:14:36,650 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-09 17:14:36,681 [1] INFO  - LoadMasters() took 10 ms.
+2018-11-09 17:14:36,682 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-09 17:14:53,182 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-09 17:14:54,337 [1] INFO  - [test] Session is starting.
+2018-11-09 17:14:54,740 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:54,882 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:54,945 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:55,033 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:55,068 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:55,101 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:55,136 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:55,172 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:55,207 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:55,631 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:55,674 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:55,867 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-09 17:14:58,610 [7] INFO  - LoadMasters() took 4,272 ms.
+2018-11-09 17:14:58,622 [1] INFO  - [test] Session started.
+2018-11-09 17:25:44,980 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD02.SetToaThuocStatus() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD02.cs:line 5451
+   at FPT.eHospital.Forms.OPD.VMOPD02.CapNhatControlsStatus(Boolean canXoaPhieuKham, Boolean canCapNhat) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD02.cs:line 2748
+   at FPT.eHospital.Forms.OPD.VMOPD02.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD02.cs:line 119
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.OPD.VMOPD22.StartKhamBenhForm() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD22.cs:line 102
+   at FPT.eHospital.Forms.Common.VMLISTCOM.lstWaiting_DoubleClicked(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\BaseViewModels\VMLISTCOM.cs:line 293
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-09 17:27:33,777 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.OPD.VMOPD02.SetToaThuocStatus() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD02.cs:line 5451
+   at FPT.eHospital.Forms.OPD.VMOPD02.CapNhatControlsStatus(Boolean canXoaPhieuKham, Boolean canCapNhat) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD02.cs:line 2748
+   at FPT.eHospital.Forms.OPD.VMOPD02.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD02.cs:line 119
+   at FPT.Framework.Presentation.VMBase.Show() in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 224
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.OPD.VMOPD22.StartKhamBenhForm() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\05.ScrOPD\VMOPD22.cs:line 102
+   at FPT.eHospital.Forms.Common.VMLISTCOM.lstWaiting_DoubleClicked(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\BaseViewModels\VMLISTCOM.cs:line 293
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49

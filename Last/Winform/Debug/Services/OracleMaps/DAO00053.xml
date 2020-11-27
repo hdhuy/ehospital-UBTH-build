@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,b485eaf983dc4487da88267651f9a0ba-->
+        <statement id="DAO00053_GetList" resultClass="DataObject">
+            select ND.*
+            from TM_NHOMBENH_DICHVU ND
+            inner join TM_DICHVU D ON D.DICHVU_ID = ND.DICHVU_ID
+            where ND.BENHVIEN_ID = '$BENHVIEN_ID$' AND D.CAPTREN_ID IS NULL
+        </statement>
+    </statements>
+</sqlMap>

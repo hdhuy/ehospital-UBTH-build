@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,5b0c10d8908fd95228ab5dd7185840d5-->
+        <statement id="DAO00002_ScreenList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select TM_SYS_SCREEN.*
+            <!--, TM_SYS_STRING.TEXT
+      , TM_SYS_STRING.WATERMARK
+      , TM_SYS_STRING.HELP-->
+            from TM_SYS_SCREEN
+            <!--left join TM_SYS_STRING on TM_SYS_SCREEN.ID = TM_SYS_STRING.ID and TM_SYS_SCREEN.HOSPITAL_ID  = TM_SYS_STRING.HOSPITAL_ID and TM_SYS_SCREEN.LOCALE  = TM_SYS_STRING.LOCALE-->
+            where TM_SYS_SCREEN.HOSPITAL_ID = '$HOSPITAL_ID$'
+            <isPropertyAvailable prepend="AND" property="ID">
+                TM_SYS_SCREEN.ID = '$ID$'
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="AND" property="PAGE">
+                TM_SYS_SCREEN.PAGE = '$PAGE$'
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="AND" property="LOCALE">
+                TM_SYS_SCREEN.LOCALE = '$LOCALE$'
+            </isPropertyAvailable>
+            order by TM_SYS_SCREEN.ID, TM_SYS_SCREEN.PARENTNAME, TM_SYS_SCREEN.TABINDEX
+        </statement>
+        <!--Revision:0,1cbd0ac0b2dfeef8a2713e64ed53a9d9-->
+        <statement id="DAO00002_FormList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select
+            TM_SYS_FORM.HOSPITAL_ID,
+            TM_SYS_FORM.NAME,
+            TM_SYS_FORM.CLASS,
+            TM_SYS_FORM.ASSEMBLY,
+            TM_SYS_FORM.TITLE_VI as TITLE
+            from TM_SYS_FORM
+            where HOSPITAL_ID = '$HOSPITAL_ID$'
+        </statement>
+    </statements>
+</sqlMap>

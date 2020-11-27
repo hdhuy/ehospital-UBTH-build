@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<statements>
+		<!-- BenhNhan_TheATM - BEGIN -->
+		<statement id="DAO00900_InsertUpdateBenhNhan_TheATM" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+			IF #BENHNHAN_THEATM_ID# &gt; 0
+			BEGIN
+				UPDATE TT_BENHNHAN_THEATM SET
+				MAYTE = #MAYTE#,
+				CMND = #CMND#,
+				SOTHEATM = #SOTHEATM#,
+				LOAITHE_ID = #LOAITHE_ID#,
+				TENCHUTHE = #TENCHUTHE#,
+				NGAYPHATHANHTHE = #NGAYPHATHANHTHE#,
+				ACTIVE = #ACTIVE#,
+				BENHNHAN_ID = #BENHNHAN_ID#,
+				SODIENTHOAI = #SODIENTHOAI#,
+				SOVAOVIEN = #SOVAOVIEN#,
+				NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#,
+				NGAYCAPNHAT = GETDATE()
+				WHERE BENHNHAN_THEATM_ID = #BENHNHAN_THEATM_ID#
+				SELECT BENHNHAN_THEATM_ID = #BENHNHAN_THEATM_ID#
+			END
+			ELSE
+			BEGIN
+				INSERT TT_BENHNHAN_THEATM(MAYTE, CMND, SOTHEATM, LOAITHE_ID, TENCHUTHE, NGAYPHATHANHTHE, ACTIVE, BENHNHAN_ID, SODIENTHOAI, SOVAOVIEN, NGUOITAO_ID, NGAYTAO, NGUOICAPNHAT_ID, NGAYCAPNHAT)
+				VALUES(#MAYTE#, #CMND#, #SOTHEATM#, #LOAITHE_ID#, #TENCHUTHE#, #NGAYPHATHANHTHE#, #ACTIVE#, #BENHNHAN_ID#, #SODIENTHOAI#, #SOVAOVIEN#, #NGUOITAO_ID#, GETDATE(), #NGUOICAPNHAT_ID#, GETDATE())
+				SELECT BENHNHAN_THEATM_ID = SCOPE_IDENTITY()
+			END
+		</statement>
+    <statement id="DAO00900_HoaDon_PayResult_Insert" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      INSERT
+      TT_HOADON_PAYRESULT(SOHOADON, TRANSACTION_ID, TRANS_CONFIRM, NGAYGIO_REQUEST, NGAYGIO_CONFIRM, NGAY_CONFIRM, BANK_TRX_ID,
+      TIENTE_ID, GIATRIHOADON, RESPONSECODE, MTI, REFUND_ID, SOTHE, MESSAGE, MESSAGE_RESPONSE, LAST_RESPONSECODE, PROCESSINGCODE, LOAIHOADON)
+      VALUES(#SOHOADON#, #TRANSACTION_ID#, #TRANS_CONFIRM#, #NGAYGIO_REQUEST#, #NGAYGIO_CONFIRM#, cast(#NGAYGIO_CONFIRM# as date),
+      #BANK_TRX_ID#, #TIENTE_ID#, #GIATRIHOADON#, #RESPONSECODE#, #MTI#, #REFUND_ID#, #SOTHE#, #MESSAGE#, #MESSAGE_RESPONSE#,
+      #LAST_RESPONSECODE#, #PROCESSINGCODE#, #LOAIHOADON#)
+    </statement>
+    <statement id="DAO00900_BenhNhan_TheATM_GetByBenhNhanId" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select top 1 t.*,
+      t.CMND IdentityNumber, t.SOTHEATM ATMNumber, isnull(t.TENCHUTHE, bn.TENBENHNHAN) AccountName,
+      t.NGAYPHATHANHTHE IssueDate, '' AccountNumber, t.SODIENTHOAI TelNumber, bn.SOVAOVIEN PatientId,
+      bn.TENBENHNHAN, bn.NGAYSINH, bn.NAMSINH, DIACHI = bn.DIACHILIENLAC
+      from TT_BENHNHAN_THEATM t
+      join TT_BENHNHAN bn on bn.BENHNHAN_ID = t.BENHNHAN_ID
+      where bn.BENHNHAN_ID = #BENHNHAN_ID# AND t.ACTIVE = 1
+      order by BENHNHAN_THEATM_ID desc
+    </statement>
+    <statement id="DAO00900_HoaDon_PayResult_GetBySoHoaDon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_HOADON_PAYRESULT
+      where SOHOADON = #SOHOADON#
+      <isNotEmpty prepend="and" property="LOAIHOADON">
+        LOAIHOADON = #LOAIHOADON#
+      </isNotEmpty>
+      and isnull(RESPONSECODE,'99') = '00' 
+      and MTI = '0' <!--giao dich execute-->
+      and PROCESSINGCODE != '5' <!--yeu cau nap tien-->
+    </statement>
+		<statement id="DAO00900_BenhNhan_TheATM_GetDanhSachThe" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+			select t.*, LOAITHE = lt.DICTIONARY_NAME
+			from TT_BENHNHAN_THEATM t
+			join LST_DICTIONARY lt ON lt.DICTIONARY_ID = t.LOAITHE_ID
+			where t.BENHNHAN_ID = #BENHNHAN_ID# AND t.ACTIVE = 1
+			order by BENHNHAN_THEATM_ID desc
+		</statement>
+  
+		<statement id="DAO00900_BenhNhan_TheATM_GetById" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+			select t.*, bn.TENBENHNHAN, bn.NGAYSINH, bn.NAMSINH, DIACHI = bn.DIACHILIENLAC
+			from TT_BENHNHAN_THEATM t
+			join TT_BENHNHAN bn on bn.BENHNHAN_ID = t.BENHNHAN_ID
+			where BENHNHAN_THEATM_ID = #BENHNHAN_THEATM_ID#
+		</statement>
+		<statement id="DAO00900_BenhNhan_TheATM_GetNearest" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+			select top 1 t.*, bn.TENBENHNHAN, bn.NGAYSINH, bn.NAMSINH, DIACHI = bn.DIACHILIENLAC
+			from TT_BENHNHAN_THEATM t
+			join TT_BENHNHAN bn on bn.BENHNHAN_ID = t.BENHNHAN_ID
+			where bn.MAYTE = #MAYTE# AND t.ACTIVE = 1
+			order by BENHNHAN_THEATM_ID desc
+		</statement>
+		
+		<statement id="DAO00900_BenhNhan_TheATM_GetBySoThe" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+			select *
+			from TT_BENHNHAN_THEATM t
+			where SOTHEATM = #SOTHEATM# AND ACTIVE = 1
+		</statement>
+    <statement id="DAO00900_BenhNhan_TheATM_GetByNguoiBenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_BENHNHAN_THEATM t
+      where BENHNHAN_ID = #BENHNHAN_ID#  AND ACTIVE = 1
+    </statement>
+    
+		<statement id="DAO00900_BenhNhan_TheATM_Deactivate" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+			UPDATE TT_BENHNHAN_THEATM 
+			SET ACTIVE = 0,
+				NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#,
+				NGAYCAPNHAT = GETDATE()
+			WHERE MAYTE = #MAYTE# and SOTHEATM = #SOTHEATM#
+
+			SELECT SOTHEATM = #SOTHEATM#
+		</statement>
+		<!-- BenhNhan_TheATM - END -->
+		
+		<!-- PO_NAPRUTTIEN - BEGIN -->
+		<statement id="DAO00900_PO_NapRutTien_Insert" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+			INSERT TT_PO_NAPRUTTIEN(MAGIAODICH, BENHNHAN_ID, MAYTE, CMND, SOTHEATM, NGAYPHATHANHTHE, TENCHUTHE, LOAITHE_ID, LOAIGIAODICH, SOTIEN, THOIGIANGIAODICH, TRANGTHAIGIAODICH, NGUOITAO_ID, NGAYTAO, NGUOICAPNHAT_ID, NGAYCAPNHAT)
+			VALUES(#MAGIAODICH#, #BENHNHAN_ID#, #MAYTE#, #CMND#, #SOTHEATM#, #NGAYPHATHANHTHE#, #TENCHUTHE#, #LOAITHE_ID#, #LOAIGIAODICH#, #SOTIEN#, GETDATE(), #TRANGTHAIGIAODICH#, #NGUOITAO_ID#, GETDATE(), #NGUOICAPNHAT_ID#, GETDATE())
+			SELECT NAPRUTTIEN_ID = SCOPE_IDENTITY()
+		</statement>
+		<statement id="DAO00900_PO_NapRutTien_UpdateTrangThai" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+			UPDATE TT_PO_NAPRUTTIEN
+			SET MAGIAODICH = #MAGIAODICH#
+				,TRANGTHAIGIAODICH = #TRANGTHAIGIAODICH#
+				,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+				,NGAYCAPNHAT = GETDATE()
+			WHERE NAPRUTTIEN_ID = #NAPRUTTIEN_ID#
+			SELECT NAPRUTTIEN_ID = #NAPRUTTIEN_ID#
+		</statement>	
+		<!-- PO_NAPRUTTIEN - END -->
+		
+		<!-- HoaDon_PayResult - BEGIN -->
+		<statement id="DAO00900_ThanhToanHoaDon_ChoXacNhanOnline" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+			UPDATE TT_HOADON
+			SET THANHTOAN_TIMEOUT = 1
+			WHERE HOADON_ID = #HOADON_ID#;
+			  
+			--UPDATE YC SET HoaDon_ThanhToanTimeout_Id = #HoaDon_Id#
+			--FROM HoaDon HD
+			--JOIN HoaDonChiTiet HDCT ON HD.HoaDon_Id = HDCT.HoaDon_Id
+			--JOIN CLSYeuCauChiTiet YCCT ON HDCT.YeuCauChiTiet_Id = YCCT.YeuCauChiTiet_Id 
+			--JOIN CLSYeuCau YC ON YC.CLSYeuCau_Id = YCCT.CLSYeuCau_Id
+			--WHERE HD.HoaDon_ID = #HoaDon_Id#
+
+			SELECT HOADON_ID = #HOADON_ID#;
+		</statement>
+    
+		
+    
+		
+		<statement id="DAO00900_HoaDon_PayResult_Update_RESPONSECODE" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+			UPDATE TT_HOADON_PAYRESULT 
+			SET RESPONSECODE = #RESPONSECODE#
+			WHERE HOADON_PAYRESULT_ID = #HOADON_PAYRESULT_ID#
+			SELECT HOADON_PAYRESULT_ID = #HOADON_PAYRESULT_ID#
+		</statement>
+		<!-- HoaDon_PayResult - END -->
+    
+    <statement id="DAO00900_Get_TT_TiepNhan_Log" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      Select L.*,
+      case when TN.TRAITUYEN = 0 then N'Đúng tuyến' else N'Trái tuyến' end AS TUYENKHAMBENH,
+      DT.TENDOITUONG, BV.TENBENHVIEN as NOIDANGKY,
+      TN.SOBHYT as TN_SOBHYT, TN.GHICHU_TIEPNHAN as GHICHU,
+      CONVERT(VARCHAR(10),TN.BHYTTUNGAY,103) AS TN_BHYTTUNGAY,
+      CONVERT(VARCHAR(10),TN.NGAYTIEPNHAN,103) AS TN_NGAYHUONGBH,
+      NV.TENNHANVIEN as TENNGUOICAPNHAT
+      From TT_TIEPNHAN_LOG L
+      INNER Join TT_TIEPNHAN TN ON TN.TIEPNHAN_ID = L.TIEPNHAN_ID and TN.BENHNHAN_ID = L.BENHNHAN_ID
+      LEFT Join TM_DOITUONG DT ON DT.DOITUONG_ID = TN.DOITUONG_ID
+      LEFT Join TM_BENHVIEN BV on BV.MABENHVIEN = RIGHT(TN.SOBHYT, 5)
+      LEFT Join TM_NHANVIEN NV ON NV.NHANVIEN_ID = L.NGUOITAO_ID
+      Where L.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      AND L.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+
+    <statement id="DAO00900_Search_BenhNhan_TheATM_ListDanhSachThe" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select t.*,bn.TENBENHNHAN, nguoitao.ACCOUNT_NAME, LOAITHE = lt.DICTIONARY_NAME
+      from TT_BENHNHAN_THEATM t (NOLOCK)
+      join LST_DICTIONARY lt (NOLOCK) ON lt.DICTIONARY_ID = t.LOAITHE_ID
+      JOIN dbo.TT_BENHNHAN bn (NOLOCK) ON bn.BENHNHAN_ID = t.BENHNHAN_ID
+      JOIN dbo.TM_SYS_USERS nguoitao (NOLOCK) ON t.NGUOICAPNHAT_ID = nguoitao.ACCOUNT_ID
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="SOTHEATM">
+            t.SOTHEATM = '$SOTHEATM$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHNHAN_ID">
+            t.BENHNHAN_ID = '$BENHNHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty  prepend="and" property="ACTIVE">
+            t.ACTIVE = 1
+          </isNotEmpty >
+      </isParameterPresent>
+      </dynamic>
+      order by BENHNHAN_THEATM_ID desc
+
+    </statement>
+    
+    <statement id="DAO00900_Search_BenhNhan_TheATM_ListDanhSachGiaoDich" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT bn.MAYTE ,
+      dic.DICTIONARY_NAME as LOAITHE,
+      a.SOTHE AS SOTHEATM, bnthe.NGAYPHATHANHTHE,
+      bn.CMND, bnthe.TENCHUTHE, bn.SODIENTHOAI, bn.TENBENHNHAN,  bn.DIACHI,
+      CONVERT(VARCHAR(10),bn.NGAYSINH,103)TUOI ,  a.GIATRIHOADON AS SOTIEN , a.NGAY_CONFIRM, us.ACCOUNT_NAME, a.NGAYGIO_CONFIRM
+      FROM  dbo.TT_HOADON_PAYRESULT a
+      INNER JOIN TT_BENHNHAN_THEATM bnthe (NOLOCK) ON a.SOTHE = bnthe.SOTHEATM
+      INNER JOIN dbo.LST_DICTIONARY dic (NOLOCK) ON dic.DICTIONARY_ID = bnthe.LOAITHE_ID
+      INNER JOIN dbo.TT_BENHNHAN bn (NOLOCK) ON bnthe.BENHNHAN_ID = bn.BENHNHAN_ID
+      LEFT JOIN dbo.TM_SYS_USERS us (NOLOCK) ON bnthe.NGUOICAPNHAT_ID = us.ACCOUNT_ID
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="TUNGAY">
+           CONVERT(DATE,a.NGAYGIO_CONFIRM) <![CDATA[ >= ]]> CONVERT(DATE,'$TUNGAY$')
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DENNGAY">
+            CONVERT(DATE,a.NGAYGIO_CONFIRM) <![CDATA[ <= ]]> CONVERT(DATE,'$DENNGAY$')
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MAYTE">
+            bn.MAYTE = '$MAYTE$'
+          </isNotEmpty>
+          <isNotEmpty  prepend="and" property="ACTIVE">
+            bnthe.ACTIVE = 1
+          </isNotEmpty >
+          <isNotEmpty  prepend="and" property="RESPONSECODE">
+            a.RESPONSECODE = '$RESPONSECODE$'
+          </isNotEmpty >
+          <isNotEmpty  prepend="and" property="PROCESSINGCODE">
+            a.PROCESSINGCODE = '$PROCESSINGCODE$'
+          </isNotEmpty >
+        </isParameterPresent>
+      </dynamic>
+      order by BENHNHAN_THEATM_ID desc
+    </statement>
+    
+    
+    
+    
+	</statements>
+</sqlMap>

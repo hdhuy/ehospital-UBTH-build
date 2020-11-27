@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+      <statement id="DAO00058_GetDanhsachCHungtuToathuocNgoaitruBHYT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select A.TOATHUOCNGOAITRU_ID, A.SOLUONGDAXUAT, A.DUOC_ID, A.NGUONHANG_ID NGUONDUOC_ID, B.KHOXUAT_ID, A.CHUNGTU_ID,
+        A.SOLONHAP_ID, B.TIEPNHAN_ID, A.CHUNGTUCHITIET_ID
+        from TT_DUOC_CHUNGTU_CHITIET A
+        left join TT_DUOC_CHUNGTU B on A.CHUNGTU_ID = B.CHUNGTU_ID
+        join TT_NGOAITRU_KHAMBENH_TOATHUOC tt on tt.CHUNGTUPHATTHUOC_ID = B.CHUNGTU_ID and tt.LOAITOATHUOC in ($LOAITOAXUAT$)
+        where B.TIEPNHAN_ID = #TIEPNHAN_ID#
+      </statement>
+      <statement id="DAO00058_CheckDatungXacnhanBHYT" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        select count(*)
+        from TT_XACNHAN_BHYT A       
+        where A.TIEPNHAN_ID  = #TIEPNHAN_ID# and A.BENHAN_ID is null
+      </statement>     
+      
+      <statement id="DAO00058_GetDanhsachToathuocNgoaitruBHYT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select distinct A.*, bknt.TRANGTHAI TRANGTHAI_BOOK, B.KHOXUAT_ID, B.CHUNGTUPHATTHUOC_ID, bknt.SOLUONG SOLUONG_BOOK
+        from TT_NGOAITRU_TOATHUOC A
+        left join TT_NGOAITRU_KHAMBENH_TOATHUOC B on A.KHAMBENH_TOATHUOC_ID = B.KHAMBENH_TOATHUOC_ID
+        left join TT_DUOC_TONKHO_BOOK_NGOAITRU bknt on A.TOATHUOC_ID = bknt.REF_ID and bknt.REF_TABLE = 'TT_NGOAITRU_TOATHUOC'
+        where B.TIEPNHAN_ID  = #TIEPNHAN_ID# and B.LOAITOATHUOC in ($LOAITOAXUAT$)
+        order by B.KHOXUAT_ID
+      </statement>
+      <statement id="DAO00058_GetTonkhoVaGiaTheoLoTheoKhoVaDuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select A.*, B.DONGIAVON DONGIAKHAC, B.DONGIABAN DONGIA_DOANHTHU, isnull(C.DONGIA, 0) DONGIATHAU, kd.MAKHO,
+        B.DONGIAVON, B.DONGIAVONVAT, B.DONGIABAN, CONVERT(VARCHAR(10), D.HANDUNG, 23) as HANDUNG, kd.TYLEVAT, dc.DONVITINH_ID
+        from TT_DUOC_TONKHO A
+        left join TT_DUOC_SOLONHAP_GIABAN B on A.SOLONHAP_ID = B.SOLONHAP_ID
+        left join TM_DUOC_DONGIA C on C.DUOC_ID = A.DUOC_ID
+        and LOAIGIA_ID = (select LOAIGIA_ID from TM_LOAIGIA where MALOAIGIA = 'GiaduocBHYT')
+        left join TT_DUOC_CHUNGTU_SOLONHAP D on D.SOLONHAP_ID = A.SOLONHAP_ID
+        left join TM_KHODUOC kd on kd.KHODUOC_ID = A.KHODUOC_ID
+        left join TM_DUOC dc on dc.DUOC_ID = A.DUOC_ID
+        where A.SOLUONG > 0 and A.KHODUOC_ID in ($LST_KHODUOC_ID$) and A.DUOC_ID in ($LST_DUOC_ID$)
+        order by
+        <isEqual prepend="" property="SAPXEPTHEO" compareValue="0">
+          D.NGAYNHAP asc
+        </isEqual>
+        <isEqual prepend="" property="SAPXEPTHEO" compareValue="1">
+          D.HANDUNG asc
+        </isEqual>
+      </statement>
+      <statement id="DAO00058_TOATHUOC_KiemTraToaThuocDaHuyBooking" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select distinct tt.SOTHUTUTOA
+        from
+        TT_NGOAITRU_TOATHUOC tt
+        join TT_DUOC_TONKHO_BOOK_NGOAITRU bk on bk.REF_ID = tt.TOATHUOC_ID and bk.REF_TABLE = 'TT_NGOAITRU_TOATHUOC'
+        where
+        tt.KHAMBENH_TOATHUOC_ID  IN ($LIST_KHAMBENH_TOATHUOC_ID$)
+        and (isnull(bk.TRANGTHAI,'') != 'HIEULUC' or bk.SOLUONG = 0)
+        and bk.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <statement id="DAO00058_GetTTVienphi_DuocNgoaitru" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_VIENPHI
+        where TIEPNHAN_ID  = #TIEPNHAN_ID# and REF_TABLE = 'TT_NGOAITRU_TOATHUOC'
+      </statement>      
+      <update id="DAO00058_DuyetOrHuyDuyetToathuocNgoaitruBHYT" parameterClass="System.Collections.IDictionary">
+        update TT_NGOAITRU_KHAMBENH_TOATHUOC
+        set DUYET = '$DUYET$'
+        , NGAYDUYET = #NGAYDUYET#
+        , THOIGIANDUYET = #THOIGIANDUYET#
+        , NGUOIDUYET_ID = #NGUOIDUYET_ID#
+        where TIEPNHAN_ID = '$TIEPNHAN_ID$' and LOAITOATHUOC  in ($LOAITOAXUAT$)
+
+        update TT_VIENPHI
+        set DUYET = '$DUYET$'
+        FROM
+        TT_VIENPHI VP
+        WHERE VP.TIEPNHAN_ID = '$TIEPNHAN_ID$' AND VP.REF_TABLE = 'TT_NGOAITRU_TOATHUOC'
+      </update>
+      <statement id="DAO00058_GetMaChungTuXuat" parameterClass="DataObject" resultClass="System.String">
+        declare @keyValue int, @BenhVienId varchar(10), @yearNow int, @monthNow int, @Makho varchar(10), @MaCT varchar(50), @SoCT varchar(50)
+        set @keyValue = 0;
+        set @BenhVienId = '$BENHVIEN_ID$'
+        set @Makho = '$MAKHO$'
+        set @yearNow = YEAR(getdate())
+        set @monthNow = MONTH(getdate())
+        BEGIN TRANSACTION
+
+        select @keyValue = KEYVALUE from LST_KEYDATA_DUOCPHAM
+        where KEYTYPE = 'SOCHUNGTUNHAPXUATBENNGOAI' and KEYYEAR = @yearNow and KEYMONTH =@monthNow and KEYDAY = 0 and SEGMENT_1 = @Makho and SEGMENT_2 = 'X14'
+        if @keyValue = 0
+        Insert into LST_KEYDATA_DUOCPHAM  WITH (ROWLOCK) values ('SOCHUNGTUNHAPXUATBENNGOAI', @yearNow, @monthNow, '0', @Makho, 'X14', ' ', 0, @BenhVienId);
+
+        Update LST_KEYDATA_DUOCPHAM WITH (ROWLOCK) set KEYVALUE = KEYVALUE + 1, @keyValue = (KEYVALUE + 1)
+        where KEYTYPE = 'SOCHUNGTUNHAPXUATBENNGOAI' and KEYYEAR = @yearNow and KEYMONTH =@monthNow and KEYDAY = 0 and SEGMENT_1 = @Makho and SEGMENT_2 = 'X14'
+        set @MaCT = @Makho + 'X14' + RIGHT(@yearNow, 2)+ right('00'+convert(varchar(2), @monthNow), 2) + right('000000'+convert(varchar(6), @keyValue), 6)
+        COMMIT TRANSACTION
+        select @MaCT
+      </statement>
+      <statement id="DAO00058_XuatDuocNgoaitru_ByJSon" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        declare @jsonVienPhi nvarchar(max);
+        set @jsonVienPhi = N'$JSON_DATA$';
+        
+        <!--insert TT_DUOC_CHUNGTU-->        
+        declare @chungtuID int
+        begin
+          insert into TT_DUOC_CHUNGTU
+          (MACHUNGTU, SOCHUNGTU, NGAYCHUNGTU, MUCDICHCHUNGTU_ID, MUCDICHCHUNGTU_CODE,
+          LOAICHUNGTU, NGUONDUOC_ID, KHOXUAT_ID, NGUOIGIAO_ID, PHUONGPHAPXUAT, DAXACNHAN,
+          BENHVIEN_ID, NGAYTAO, NGUOITAO_ID, NGUOICAPNHAT_ID, NGAYCAPNHAT, TIEPNHAN_ID, TRANGTHAI)
+          VALUES
+          (#MACHUNGTU#, #SOCHUNGTU#, #NGAYXACNHANBHYT#, #MUCDICHCHUNGTU_ID#, #MUCDICHCHUNGTU_CODE#,
+          'X', #NGUONDUOC_ID#, #KHOXUAT_ID#, #NGUOIGIAO_ID#, '0', '0',
+          #BENHVIEN_ID#, getdate(), #NGUOITAO_ID#, #NGUOITAO_ID#, Getdate(), #TIEPNHAN_ID#, 'DAXUAT')
+
+          <!--get chungtuid-->
+          set @chungtuID = SCOPE_IDENTITY()
+          <!--insert chung tu chi tiet-->
+          insert into TT_DUOC_CHUNGTU_CHITIET
+          (CHUNGTU_ID, NGUONHANG_ID, DUOC_ID, HANDUNG, SOLONHAP_ID, SOLUONGDAXUAT, DONVITINH_ID,
+          DONGIAMUA, TYLEVAT, DONGIAVON, DONGIAVONVAT, DONGIABAN, DONGIATHAU,
+          TOATHUOCNGOAITRU_ID, TRANGTHAI, BENHVIEN_ID, NGAYTAO, NGAYCAPNHAT, NGUOITAO_ID, NGUOICAPNHAT_ID)
+          SELECT @chungtuID, json.NGUONDUOC_ID, json.DUOC_ID, json.HANDUNG, json.SOLONHAP_ID, json.SOLUONG, json.DONVITINH_ID,
+          json.DONGIAMUA, json.TYLEVAT, json.DONGIAVON, json.DONGIAVONVAT, json.DONGIABAN, json.DONGIATHAU,
+          json.TOATHUOC_ID, 'DAXUAT', #BENHVIEN_ID#, getdate(), getdate(), #NGUOITAO_ID#, #NGUOITAO_ID#
+          FROM OPENJSON(@jsonVienPhi)
+          WITH (
+          TOATHUOC_ID int
+          , SOLUONG float
+          , NGUONDUOC_ID int
+          , DUOC_ID int
+          , SOLONHAP_ID int
+          , BENHVIEN_ID nvarchar(10)
+          , DONVITINH_ID int
+          , DONGIAMUA float
+          , TYLEVAT float
+          , DONGIAVON float
+          , DONGIAVONVAT float
+          , DONGIABAN float
+          , DONGIATHAU float
+          , HANDUNG datetime
+          ) json
+        
+          <!--update duoc ton kho booking ngoai tru-->
+        update TT_DUOC_TONKHO_BOOK_NGOAITRU
+        set TT_DUOC_TONKHO_BOOK_NGOAITRU.SOLUONG = 0 <!--TT_DUOC_TONKHO_BOOK_NGOAITRU.SOLUONG - json.SOLUONG-->
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (TOATHUOC_ID int, SOLUONG float
+        ) json where TT_DUOC_TONKHO_BOOK_NGOAITRU.REF_TABLE = 'TT_NGOAITRU_TOATHUOC' and TT_DUOC_TONKHO_BOOK_NGOAITRU.REF_ID = json.TOATHUOC_ID 
+        and TT_DUOC_TONKHO_BOOK_NGOAITRU.SOLUONG >= json.SOLUONG
+
+        <!--update duoc ton kho-->
+        update TT_DUOC_TONKHO
+        set TT_DUOC_TONKHO.SOLUONG = TT_DUOC_TONKHO.SOLUONG - json.SOLUONG
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (TOATHUOC_ID int, SOLUONG float, NGUONDUOC_ID int, SOLONHAP_ID int, DUOC_ID int, KHODUOC_ID int
+        ) json where TT_DUOC_TONKHO.KHODUOC_ID = json.KHODUOC_ID and TT_DUOC_TONKHO.SOLONHAP_ID = json.SOLONHAP_ID
+        and TT_DUOC_TONKHO.NGUONDUOC_ID = json.NGUONDUOC_ID and TT_DUOC_TONKHO.DUOC_ID = json.DUOC_ID
+
+        <!--update TT_NGOAITRU_KHAMBENH_TOATHUOC-->
+        update TT_NGOAITRU_KHAMBENH_TOATHUOC
+        set TT_NGOAITRU_KHAMBENH_TOATHUOC.CHUNGTUPHATTHUOC_ID = @chungtuID, TT_NGOAITRU_KHAMBENH_TOATHUOC.TRANGTHAI = 'DAXUAT'
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (KHAMBENH_TOATHUOC_ID int
+        ) json where TT_NGOAITRU_KHAMBENH_TOATHUOC.KHAMBENH_TOATHUOC_ID = json.KHAMBENH_TOATHUOC_ID
+
+        <!--update TT_NGOAITRU_TOATHUOC-->
+        update TT_NGOAITRU_TOATHUOC
+        set TT_NGOAITRU_TOATHUOC.TRANGTHAI = 'DAXUAT'
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (TOATHUOC_ID int
+        ) json where TT_NGOAITRU_TOATHUOC.TOATHUOC_ID = json.TOATHUOC_ID
+
+        <!--update vien phi da thuc hien-->
+        update TT_VIENPHI
+        set DATHUCHIEN = '1'
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (TOATHUOC_ID int
+        ) json where REF_TABLE = 'TT_NGOAITRU_TOATHUOC' and REF_ID = json.TOATHUOC_ID
+      
+        <!--update log-->
+        INSERT INTO TT_DUOC_TONKHO_LOG
+        (CHUNGTUCHITIET_ID , CHUNGTU_ID, MACHUNGTU, LOAICHUNGTU ,MUCDICHCHUNGTU_CODE, 
+        KHOXUAT_ID ,DUOC_ID ,SOLONHAP_ID ,NGUONDUOC_ID ,SOLUONGXUAT, [ACTION], BENHVIEN_ID, NGAYTAO, NGUOITAO_ID)
+        SELECT json.TOATHUOC_ID ,@chungtuID, #MACHUNGTU#, 'X', #MUCDICHCHUNGTU_CODE#,
+        #KHOXUAT_ID#, json.DUOC_ID, json.SOLONHAP_ID, json.NGUONDUOC_ID, json.SOLUONG, 'ADD', #BENHVIEN_ID#, getdate(), #NGUOITAO_ID#
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (
+        TOATHUOC_ID int
+        , SOLUONG float
+        , NGUONDUOC_ID int
+        , DUOC_ID int
+        , SOLONHAP_ID int
+        ) json
+
+        select @chungtuID
+        end
+      </statement>
+      <statement id="DAO00058_DeleteNhieuVP" parameterClass="System.String" resultClass="System.Int32">
+        delete from TT_VIENPHI where VIENPHI_ID in ($LST_VIENPHI_ID$)
+      </statement>
+      <statement id="DAO00058_UpdateNhieuVP_Json" parameterClass="System.String" resultClass="System.Int32">
+        declare @jsonVienPhi nvarchar(max) = N'$JSON_DATA$';
+        begin
+        UPDATE TT_VIENPHI
+        SET
+        SOLUONG = json.SOLUONG,
+        DONGIA_DOANHTHU = json.DONGIA_DOANHTHU,
+        BHYT_DONGIA = json.BHYT_DONGIA,
+        NGAYCAPNHAT = GETDATE()
+        FROM OPENJSON (@jsonVienPhi)
+        WITH (
+        VIENPHI_ID int,
+        SOLUONG numeric(25, 4),
+        DONGIA_DOANHTHU numeric(25, 4),
+        BHYT_DONGIA numeric(25, 4))  json
+        WHERE TT_VIENPHI.VIENPHI_ID = json.VIENPHI_ID
+        end
+      </statement>
+      <statement id="DAO00058_HuyXuatDuocNgoaitru_ByJSon" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        declare @jsonVienPhi nvarchar(max);
+        set @jsonVienPhi = N'$JSON_DATA$';
+        begin
+        <!--update TT_NGOAITRU_TOATHUOC-->
+        update TT_NGOAITRU_TOATHUOC
+        set TRANGTHAI = 'CHUAXUAT'
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (TOATHUOCNGOAITRU_ID int
+        ) json where TOATHUOC_ID = json.TOATHUOCNGOAITRU_ID
+        
+        <!--update TT_NGOAITRU_KHAMBENH_TOATHUOC-->
+        update TT_NGOAITRU_KHAMBENH_TOATHUOC
+        set CHUNGTUPHATTHUOC_ID = null, TRANGTHAI = 'CHUAXUAT'
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (CHUNGTU_ID int
+        ) json where CHUNGTUPHATTHUOC_ID = json.CHUNGTU_ID
+
+        <!--update duoc ton kho-->
+        update TT_DUOC_TONKHO
+        set TT_DUOC_TONKHO.SOLUONG = TT_DUOC_TONKHO.SOLUONG + json.SOLUONGDAXUAT
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (SOLUONGDAXUAT float, NGUONDUOC_ID int, SOLONHAP_ID int, DUOC_ID int, KHOXUAT_ID int
+        ) json where TT_DUOC_TONKHO.KHODUOC_ID = json.KHOXUAT_ID and TT_DUOC_TONKHO.SOLONHAP_ID = json.SOLONHAP_ID
+        and TT_DUOC_TONKHO.NGUONDUOC_ID = json.NGUONDUOC_ID and TT_DUOC_TONKHO.DUOC_ID = json.DUOC_ID
+        
+         <!--update duoc ton kho booking ngoai tru-->
+        update TT_DUOC_TONKHO_BOOK_NGOAITRU
+        set TT_DUOC_TONKHO_BOOK_NGOAITRU.SOLUONG = TT_DUOC_TONKHO_BOOK_NGOAITRU.SOLUONG + json.SOLUONGDAXUAT, 
+        TT_DUOC_TONKHO_BOOK_NGOAITRU.TRANGTHAI = 'HIEULUC', NGAYHIEULUC = Getdate()
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (TOATHUOCNGOAITRU_ID int, SOLUONGDAXUAT float
+        ) json where TT_DUOC_TONKHO_BOOK_NGOAITRU.REF_TABLE = 'TT_NGOAITRU_TOATHUOC' and TT_DUOC_TONKHO_BOOK_NGOAITRU.REF_ID = json.TOATHUOCNGOAITRU_ID
+
+        <!--delete chung tu chi tiet-->
+        delete from TT_DUOC_CHUNGTU_CHITIET where
+        CHUNGTUCHITIET_ID in ( select json.CHUNGTUCHITIET_ID
+          FROM OPENJSON(@jsonVienPhi)
+          WITH (CHUNGTUCHITIET_ID int) json
+        )
+        <!--delete chung tu-->
+        delete from TT_DUOC_CHUNGTU where
+        CHUNGTU_ID in ( select json.CHUNGTU_ID
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (CHUNGTU_ID int) json
+        )
+
+        <!--update vien phi da thuc hien-->
+        update TT_VIENPHI
+        set DATHUCHIEN = '0'
+        FROM OPENJSON(@jsonVienPhi)
+        WITH (TOATHUOCNGOAITRU_ID int
+        ) json where REF_TABLE = 'TT_NGOAITRU_TOATHUOC' and REF_ID = json.TOATHUOCNGOAITRU_ID
+
+        <!--update log-->
+        INSERT INTO TT_DUOC_TONKHO_LOG
+        (CHUNGTUCHITIET_ID , CHUNGTU_ID, MACHUNGTU, LOAICHUNGTU ,MUCDICHCHUNGTU_CODE,
+        KHOXUAT_ID ,DUOC_ID ,SOLONHAP_ID ,NGUONDUOC_ID ,SOLUONGXUAT, [ACTION], BENHVIEN_ID, NGAYTAO, NGUOITAO_ID)
+        SELECT CHUNGTUCHITIET_ID , TT_DUOC_TONKHO_LOG.CHUNGTU_ID, MACHUNGTU, LOAICHUNGTU ,MUCDICHCHUNGTU_CODE,
+        KHOXUAT_ID ,DUOC_ID ,SOLONHAP_ID ,NGUONDUOC_ID ,SOLUONGXUAT, 'DEL', BENHVIEN_ID, getdate(), #NGUOICAPNHAT_ID#
+        FROM TT_DUOC_TONKHO_LOG
+        JOIN OPENJSON(@jsonVienPhi) WITH (TOATHUOCNGOAITRU_ID int, CHUNGTU_ID int) json
+        on json.TOATHUOCNGOAITRU_ID = TT_DUOC_TONKHO_LOG.CHUNGTUCHITIET_ID and json.CHUNGTU_ID = TT_DUOC_TONKHO_LOG.CHUNGTU_ID
+        end
+      </statement>
+      <statement id="DAO00058_UpdateChungtu_Toathuocngoaitru" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        update TT_NGOAITRU_KHAMBENH_TOATHUOC
+        set TT_NGOAITRU_KHAMBENH_TOATHUOC.TRANGTHAI = 'DAXUAT', TT_NGOAITRU_KHAMBENH_TOATHUOC.CHUNGTUPHATTHUOC_ID = ct.CHUNGTU_ID
+        from
+        (select distinct ct.CHUNGTU_ID, ttnt.KHAMBENH_TOATHUOC_ID
+        from TT_DUOC_CHUNGTU ct
+        left join TT_DUOC_CHUNGTU_CHITIET ctct on ctct.CHUNGTU_ID = ct.CHUNGTU_ID
+        left join TT_NGOAITRU_TOATHUOC ttnt on ttnt.TOATHUOC_ID = ctct.TOATHUOCNGOAITRU_ID and ct.TIEPNHAN_ID = ttnt.TIEPNHAN_ID
+        where ct.TIEPNHAN_ID = #TIEPNHAN_ID# and ct.CHUNGTU_ID is not null) ct
+        where ct.KHAMBENH_TOATHUOC_ID = TT_NGOAITRU_KHAMBENH_TOATHUOC.KHAMBENH_TOATHUOC_ID
+      </statement>
+    </statements>
+</sqlMap>

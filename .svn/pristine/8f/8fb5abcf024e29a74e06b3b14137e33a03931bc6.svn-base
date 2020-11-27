@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,11f66374782a7436be8b43b947a98c56-->
+        <statement id="DAO00051_GetList" resultClass="DataObject">
+            select *
+            from TM_TEMPLATEDUOC
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="TEMPLATE">
+                    TEMPLATE = '$TEMPLATE$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="LOAITEMPLATE">
+                    LOAITEMPLATE = '$LOAITEMPLATE$'
+                </isNotEmpty>
+            </isParameterPresent>
+            ORDER BY TENTEMPLATE
+        </statement>
+        <!--Revision:0,2d85532c8717170e5245c2fb05bf5e11-->
+        <statement id="DAO00051_GetTemplateDuoc" resultClass="DataObject">
+            select *
+            from TM_TEMPLATEDUOC
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOATAO_ID">
+                        KHOATAO_ID = '$KHOATAO_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            ORDER BY TENTEMPLATE
+        </statement>
+        <!--Revision:0,40cd99e8892d733a48aadcf6b64334e2-->
+        <statement id="DAO00051_GetTemplateDuocChiTiet" resultClass="DataObject">
+            select *
+            from TM_TEMPLATEDUOC_CHITIET
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="TEMPLATE_ID">
+                        TEMPLATE_ID = '$TEMPLATE_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,3116808d6392d1b2fe2632032c9ef1d2-->
+        <statement id="DAO00051_GetMauTuongTrinh" resultClass="DataObject">
+            select *
+            from TM_TUDIENKETQUA
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                NGUOITAO_ID = '$NGUOITAO_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="SUDUNGCHUNG">
+                SUDUNGCHUNG = '$SUDUNGCHUNG$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="TAMNGUNG">
+                TAMNGUNG = 0
+            </isNotEmpty>
+            <dynamic prepend=" and DICHVU_ID in ">
+                <iterate open="(" close=")" conjunction=",  " property="LSTDICHVU_ID">
+                    #LSTDICHVU_ID[]#
+                </iterate>
+            </dynamic>
+            ORDER BY TENNOIDUNG
+        </statement>
+    </statements>
+</sqlMap>

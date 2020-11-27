@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,c9132f0357bd8f8b59edc355fec99282-->
+        <statement id="DAO00041_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            <!--select dv.*, ndv.LOAIDICHVU_ID, ndv.MANHOMDICHVU, ndv.TENNHOMDICHVU as TENNHOMDICHVU,
+      ndv.TENKHONGDAU as TENNDVKHONGDAU, ndv.TENNHOMDICHVU_EN, ndv.TENNHOMDICHVU_RU,
+      CASE WHEN Left(ndv.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(ndv.MANHOMDICHVU,2) END AS PHANLOAI_MANHOMDICHVU
+      from TM_DICHVU dv
+      left join TM_NHOMDICHVU ndv
+      on dv.NHOMDICHVU_ID = ndv.NHOMDICHVU_ID
+      where ndv.TAMNGUNG = '0'
+      and dv.TAMNGUNG = '0' and dv.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            select * from
+            (select dv.*, ndv.LOAIDICHVU_ID, ndv.MANHOMDICHVU, ndv.TENNHOMDICHVU as TENNHOMDICHVU,
+            ndv.TENKHONGDAU as TENNDVKHONGDAU, ndv.TENNHOMDICHVU_EN, ndv.TENNHOMDICHVU_RU,
+            CASE WHEN Left(ndv.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(ndv.MANHOMDICHVU,2) END AS PHANLOAI_MANHOMDICHVU
+            from TM_DICHVU dv
+            left join TM_NHOMDICHVU ndv on dv.NHOMDICHVU_ID = ndv.NHOMDICHVU_ID
+            <!--left join (select * from TM_NHOMDICHVU) n on n.MANHOMDICHVU = Left(ndv.MANHOMDICHVU,2)-->
+            where ndv.TAMNGUNG = '0' and dv.TAMNGUNG = '0' and dv.BENHVIEN_ID = '$BENHVIEN_ID$') as tbl
+            <dynamic>
+                <isParameterPresent>
+                    <isNotEmpty prepend="where" property="PHANLOAI_MANHOMDICHVU">
+                        PHANLOAI_MANHOMDICHVU in ($PHANLOAI_MANHOMDICHVU$)
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,7368db6b2cdf1172d44e89986ff86d36-->
+        <statement id="DAO00041_GetNameByID" resultClass="DataObject">
+            select TENDICHVU
+            from TM_DICHVU
+            where DICHVU_ID = '$DICHVU_ID$'
+        </statement>
+        <!--Revision:0,29396758658d268bfda158375427f8cd-->
+        <statement id="DAO00041_GetDSDichVu_GiaTriChuan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TM_DICHVU_GIATRICHUAN
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+      <statement id="DAO00041_GetList_DVAll" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select * from
+        (select dv.*, ndv.LOAIDICHVU_ID, ndv.MANHOMDICHVU, ndv.TENNHOMDICHVU as TENNHOMDICHVU,
+        ndv.TENKHONGDAU as TENNDVKHONGDAU, ndv.TENNHOMDICHVU_EN, ndv.TENNHOMDICHVU_RU,
+        CASE WHEN Left(ndv.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(ndv.MANHOMDICHVU,2) END AS PHANLOAI_MANHOMDICHVU
+        from TM_DICHVU dv
+        left join TM_NHOMDICHVU ndv on dv.NHOMDICHVU_ID = ndv.NHOMDICHVU_ID
+        <!--left join (select * from TM_NHOMDICHVU) n on n.MANHOMDICHVU = Left(ndv.MANHOMDICHVU,2)-->
+        where dv.BENHVIEN_ID = '$BENHVIEN_ID$') as tbl
+        <dynamic>
+          <isParameterPresent>
+            <isNotEmpty prepend="where" property="PHANLOAI_MANHOMDICHVU">
+              PHANLOAI_MANHOMDICHVU in ($PHANLOAI_MANHOMDICHVU$)
+            </isNotEmpty>
+          </isParameterPresent>
+        </dynamic>
+      </statement>
+    </statements>
+</sqlMap>

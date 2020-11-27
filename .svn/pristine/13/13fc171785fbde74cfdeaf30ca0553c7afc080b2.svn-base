@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,6de28000a47afe800a162373ffc4f9ce-->
+        <statement id="DAO00216_GetLoaiVatTu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT LOAIVATTU_ID AS Mã, TENLOAIVATTU AS Tên
+            FROM TM_LOAIVATTU
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND TAMNGUNG = '0'
+            ORDER BY ID
+        </statement>
+        <!--Revision:0,6ad98c0d3d0569a19d279ce6542d6ee5-->
+        <statement id="DAO00216_GetHoatChat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT MAHOATCHAT AS Mã, TENHOATCHAT AS Tên
+            FROM TM_DUOC_HOATCHAT
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND HOATCHAT = '1'
+            ORDER BY TENHOATCHAT
+        </statement>
+        <!--Revision:0,a7dcd2c7ff71473df9b678fedbd9acf1-->
+        <statement id="DAO00216_GetDonViTinh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DONVITINH_ID AS Mã, TENDONVITINH + '(' + LOAIVATTU_ID + ')' AS 'Tên'
+            FROM TM_DONVITINH
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND (TAMNGUNG = '0' OR TAMNGUNG IS NULL)
+            ORDER BY TENDONVITINH
+        </statement>
+        <!--Revision:0,f3a91613859fac60dbbb0062e6961ec3-->
+        <statement id="DAO00216_GetLoaiDuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT LOAIDUOC_ID AS Mã, TENLOAIDUOC AS Tên
+            FROM TM_LOAIDUOC
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND TAMNGUNG = '0'
+            ORDER BY TENLOAIDUOC
+        </statement>
+        <!--Revision:0,6d2a6ee78a776c20fe111897af3a5abe-->
+        <statement id="DAO00216_GetHangSanXuat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT HANGSANXUAT_ID AS Mã, TENHANGSANXUAT AS Tên
+            FROM TM_HANGSANXUAT
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND TAMNGUNG = '0'
+            ORDER BY TENHANGSANXUAT
+        </statement>
+        <!--Revision:0,b4027fa0bd2d8ddbc66a7bd00d57c01e-->
+        <statement id="DAO00216_GetQuocGia" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DICTIONARY_ID AS Mã, DICTIONARY_NAME AS Tên
+            FROM LST_DICTIONARY
+            WHERE
+            <!--BENHVIEN_ID = '$BENHVIEN_ID$' AND-->
+            DICTIONARY_TYPE_CODE = 'QuocGia' AND ENABLED = '1'
+            ORDER BY DICTIONARY_NAME
+        </statement>
+        <!--Revision:0,c8b903efe6c79a2513aeee3b53391d2e-->
+        <statement id="DAO00216_GetNhomDuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT NHOMDUOC_ID AS Mã, TENNHOMDUOC AS Tên
+            FROM TM_NHOMDUOC
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND TAMNGUNG = '0'
+            ORDER BY TENNHOMDUOC
+        </statement>
+        <!--Revision:0,3e976e3a1478b98b53e9034b1b64d6c1-->
+        <statement id="DAO00216_GetPhanNhomDuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT PHANNHOMDUOC_ID AS Mã, TENPHANNHOMDUOC AS Tên
+            FROM TM_PHANNHOMDUOC
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND TAMNGUNG = '0'
+            ORDER BY TENPHANNHOMDUOC
+        </statement>
+        <!--Revision:0,7d8ecc5815ca0f7478009d5149447644-->
+        <statement id="DAO00216_GetPhanLoaiDuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT PHANLOAIDUOC AS Mã, TENPHANLOAIDUOC AS Tên
+            FROM TM_PHANLOAIDUOC
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND TAMNGUNG = '0'
+            ORDER BY TENPHANLOAIDUOC
+        </statement>
+        <!--Revision:0,b3d60868003c4b8b9725a0f3902bca4b-->
+        <statement id="DAO00216_GetNhomPhatHanhGia" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT NHOMPHATHANHGIA_ID AS Mã, TENNHOMPHATHANHGIA AS Tên
+            FROM TM_NHOMPHATHANHGIA
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND TAMNGUNG = '0' AND LOAINHOM = 'Duoc'
+            ORDER BY TENNHOMPHATHANHGIA
+        </statement>
+        <!--Revision:0,0a37f1086e0ce5aed98b70624fed2ec6-->
+        <statement id="DAO00216_GetDuongDung" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DICTIONARY_ID AS Mã, DICTIONARY_NAME AS Tên
+            FROM LST_DICTIONARY
+            WHERE
+            <!--BENHVIEN_ID = '$BENHVIEN_ID$' AND-->
+            DICTIONARY_TYPE_CODE = 'DuongDung' AND ENABLED = '1'
+            ORDER BY DICTIONARY_NAME
+        </statement>
+        <!--Revision:0,e52b193f6130d3ac4a8d46c67ae67383-->
+        <statement id="DAO00216_GetKho" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT KHODUOC_ID AS Mã, TENKHO AS Tên
+            FROM TM_KHODUOC
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND TAMNGUNG = '0'
+            ORDER BY TENKHO
+        </statement>
+        <!--Revision:0,fad8f44f964f8ced819c54f778695b79-->
+        <statement id="DAO00216_GetHoatChatID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT HOATCHAT_ID AS Mã, TENHOATCHAT AS Tên
+            FROM TM_DUOC_HOATCHAT
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$' AND HOATCHAT = '1'
+            ORDER BY TENHOATCHAT
+        </statement>
+        <!--Revision:0,2944380768bf3d1343fcdb4f9aae1d9c-->
+        <statement id="DAO00216_GetMucDo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT LEVELSEVERITY_ID AS Mã, LEVELSEVERITY_NAME AS Tên
+            FROM TM_DUOC_LEVELSEVERITY
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$'
+            ORDER BY LEVELSEVERITY_CODE
+        </statement>
+        <!--Revision:0,6c0dc614cbf52bef7d9d7df8dcd10de9-->
+        <statement id="DAO00216_GetCapDo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT LEVELDOCUMENT_ID AS Mã, LEVELDOCUMENT_NAME AS Tên
+            FROM TM_DUOC_LEVELDOCUMENT
+            WHERE BENHVIEN_ID = '$BENHVIEN_ID$'
+            ORDER BY LEVELDOCUMENT_CODE
+        </statement>
+        <!--Revision:0,3e8d0c99d2b8b0c22b502fda6c916321-->
+        <statement id="DAO00216_GetLoaiVAT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DICTIONARY_ID AS Mã, DICTIONARY_NAME AS Tên
+            FROM LST_DICTIONARY
+            WHERE
+            <!--BENHVIEN_ID = '$BENHVIEN_ID$' AND-->
+            DICTIONARY_TYPE_CODE = 'LoaiThueVAT' AND ENABLED = '1'
+            ORDER BY DICTIONARY_ID
+        </statement>
+        <!--Revision:0,26e046b01ee31c7b11de3320b8cc167f-->
+        <statement id="DAO00216_GetGioiTinh" resultClass="DataObject">
+            select ID as Mã, DESCRIPTION as Tên
+            from TM_GENDER
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,c3e77dd8f5b5543a0ee81b62c8b106b8-->
+        <statement id="DAO00216_GetNgheNghiep" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select
+            DICTIONARY_ID as Mã,
+            DICTIONARY_NAME as Tên
+            from LST_DICTIONARY
+            where BENHVIEN_ID = '$BENHVIEN_ID$' and DICTIONARY_TYPE_CODE = 'NgheNghiep'
+        </statement>
+        <!--Revision:0,9aa58c2f732008c5da5844910480b1b9-->
+        <statement id="DAO00216_GetHopDong" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select HD.HOPDONG_ID as Mã, HD.SO_HD + ' ' + CT.TENCONGTY as Tên
+            from TT_KSK_HOPDONG HD inner join TT_KSK_CONGTY CT on CT.CONGTY_ID = HD.CONGTY_ID
+            where HD.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,07c00401de6c6a50316519733a45c013-->
+        <statement id="DAO00216_GetHonNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT
+            DICTIONARY_ID as Mã,
+            DICTIONARY_NAME as Tên
+            FROM LST_DICTIONARY
+            WHERE DICTIONARY_TYPE_CODE = 'TinhTrangGiaDinh' and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+      <statement id="DAO00216_GetGoiKSK" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT distinct GOI.GOI_ID as Mã, GOI.TENGOI as Tên, HD_G.HOPDONG_ID
+        FROM TM_CSKH_GOI GOI
+        INNER JOIN LST_DICTIONARY L ON L.DICTIONARY_ID = GOI.LOAIGOI_ID
+        INNER JOIN TT_KSK_HOPDONG_GOIDICHVU HD_G ON HD_G.GOIDICHVU_ID = GOI.GOI_ID
+        WHERE GOI.TRANGTHAI='GOIDUOCPHEPBAN' AND L.DICTIONARY_TYPE_CODE = 'LoaiGoiDV' AND L.DICTIONARY_CODE = 'KhamSucKhoe'
+        <isNotEmpty prepend="and" property="HOPDONG_ID">
+          HD_G.HOPDONG_ID = '$HOPDONG_ID$'
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="BENHVIEN_ID">
+          GOI.BENHVIEN_ID ='$BENHVIEN_ID$'
+        </isNotEmpty>
+      </statement>
+      <statement id="DAO00216_GetDoiTuongKSK" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT DICTIONARY_ID as Mã, DICTIONARY_NAME as Tên
+        FROM LST_DICTIONARY
+        WHERE BENHVIEN_ID ='$BENHVIEN_ID$' AND DICTIONARY_TYPE_CODE = 'DoiTuongKhamSucKhoe'
+      </statement>
+      <statement id="DAO00216_GetQuocTich" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT DICTIONARY_ID as Mã, DICTIONARY_NAME as Tên
+        FROM LST_DICTIONARY
+        WHERE BENHVIEN_ID ='$BENHVIEN_ID$' AND DICTIONARY_TYPE_CODE = 'QuocGia'
+      </statement>
+      <statement id="DAO00216_GetNoiCap" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT DONVIHANHCHINH_ID as Mã, TENDONVI as Tên
+        FROM TM_DONVIHANHCHINH
+        WHERE CAPDONVI = '2'
+      </statement>
+      <statement id="DAO00216_GetPhanLoaiBaoCao" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT DICTIONARY_ID as Mã, DICTIONARY_NAME as Tên
+        FROM LST_DICTIONARY
+        WHERE DICTIONARY_TYPE_CODE = 'PhanLoaiBaoCaoDuoc'
+      </statement>
+      <statement id="DAO00216_GetDonViTrungThau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT NHACUNGCAP_ID as Mã, TENNHACUNGCAP as Tên
+        FROM TM_NHACUNGCAP
+        WHERE TAMNGUNG = '0'
+      </statement>
+      <statement id="DAO00216_GetLoaiThau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT DICTIONARY_ID as Mã, DICTIONARY_NAME as Tên
+        FROM LST_DICTIONARY
+        WHERE DICTIONARY_TYPE_CODE = 'LoaiThauDuoc'
+      </statement>
+    </statements>
+</sqlMap>

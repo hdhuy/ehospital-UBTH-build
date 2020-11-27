@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,446d405e9e567d0bce62ae21003967a9-->
+        <statement id="DAO00032_GetAll" resultClass="DataObject">
+            select *
+            from TM_NHACUNGCAP
+            order by TENNHACUNGCAP
+        </statement>
+        <!--Revision:0,b72d670094317199dc6b33f0222f9dc7-->
+        <statement id="DAO00032_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_NHACUNGCAP
+            where
+            TAMNGUNG = '0'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="NHACUNGCAP_ID">
+                    TM_NHACUNGCAP.NHACUNGCAP_ID = '$NHACUNGCAP_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="MANHACUNGCAP">
+                    TM_NHACUNGCAP.MANHACUNGCAP = '$MANHACUNGCAP$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENNHACUNGCAP">
+                    TM_NHACUNGCAP.TENNHACUNGCAP = '$TENNHACUNGCAP$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENNHACUNGCAP_EN">
+                    TM_NHACUNGCAP.TENNHACUNGCAP_EN = '$TENNHACUNGCAP_EN$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENNHACUNGCAP_RU">
+                    TM_NHACUNGCAP.TENNHACUNGCAP_RU = '$TENNHACUNGCAP_RU$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="DIACHI">
+                    TM_NHACUNGCAP.DIACHI = '$DIACHI$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="DIENTHOAI">
+                    TM_NHACUNGCAP.DIENTHOAI = '$DIENTHOAI$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="FAX">
+                    TM_NHACUNGCAP.FAX = '$FAX$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="EMAIL">
+                    TM_NHACUNGCAP.EMAIL = '$EMAIL$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="MASOTHUE">
+                    TM_NHACUNGCAP.MASOTHUE = '$MASOTHUE$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="GIAMDOC">
+                    TM_NHACUNGCAP.GIAMDOC = '$GIAMDOC$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGUOILIENHE">
+                    TM_NHACUNGCAP.NGUOILIENHE = '$NGUOILIENHE$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NUOCNGOAI">
+                    TM_NHACUNGCAP.NUOCNGOAI = '$NUOCNGOAI$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NHANUOC">
+                    TM_NHACUNGCAP.NHANUOC = '$NHANUOC$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TAMNGUNG">
+                    TM_NHACUNGCAP.TAMNGUNG = '$TAMNGUNG$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENKHONGDAU">
+                    TM_NHACUNGCAP.TENKHONGDAU = '$TENKHONGDAU$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGAYTAO">
+                    TM_NHACUNGCAP.NGAYTAO = '$NGAYTAO$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                    TM_NHACUNGCAP.NGUOITAO_ID = '$NGUOITAO_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                    TM_NHACUNGCAP.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                    TM_NHACUNGCAP.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="HESO">
+                    TM_NHACUNGCAP.HESO = '$HESO$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="PH_DUOC">
+                    TM_NHACUNGCAP.PH_DUOC = '$PH_DUOC$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="PH_NHM">
+                    TM_NHACUNGCAP.PH_NHM = '$PH_NHM$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="PH_TAISAN">
+                    TM_NHACUNGCAP.PH_TAISAN = '$PH_TAISAN$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="LOAIHINHCONGTY_ID">
+                    TM_NHACUNGCAP.LOAIHINHCONGTY_ID = '$LOAIHINHCONGTY_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="PH_VPP">
+                    TM_NHACUNGCAP.PH_VPP = '$PH_VPP$'
+                </isNotEmpty>
+            </isParameterPresent>
+            order by TENNHACUNGCAP
+        </statement>
+        <!--Revision:0,7461959bad1d98fdf6715d985ad59d4e-->
+        <statement id="DAO00032_GetDetail" parameterClass="System.String" resultClass="DataObject">
+            select *
+            from TM_NHACUNGCAP
+            where TM_NHACUNGCAP.NHACUNGCAP_ID  = '$value$'
+            order by NHACUNGCAP_ID
+        </statement>
+        <!--Revision:0,bd7d17131b5a32e247af3fb39bcc59a2-->
+        <statement id="DAO00032_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_NHACUNGCAP
+            where TM_NHACUNGCAP.NHACUNGCAP_ID  = '$NHACUNGCAP_ID$'
+            order by NHACUNGCAP_ID
+        </statement>
+        <!--Revision:0,fdcf5eac64488cb04b123682a4b2f070-->
+        <insert id="DAO00032_Add" parameterClass="HashTable" resultClass="System.Int64">
+            insert into TM_NHACUNGCAP (
+            NHACUNGCAP_ID
+            , MANHACUNGCAP
+            , TENNHACUNGCAP
+            , TENNHACUNGCAP_EN
+            , TENNHACUNGCAP_RU
+            , DIACHI
+            , DIENTHOAI
+            , FAX
+            , EMAIL
+            , MASOTHUE
+            , GIAMDOC
+            , NGUOILIENHE
+            , NUOCNGOAI
+            , NHANUOC
+            , TAMNGUNG
+            , TENKHONGDAU
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , HESO
+            , PH_DUOC
+            , PH_NHM
+            , PH_TAISAN
+            , LOAIHINHCONGTY_ID
+            , PH_VPP
+            ) values (
+            #NHACUNGCAP_ID#
+            , #MANHACUNGCAP#
+            , #TENNHACUNGCAP#
+            , #TENNHACUNGCAP_EN#
+            , #TENNHACUNGCAP_RU#
+            , #DIACHI#
+            , #DIENTHOAI#
+            , #FAX#
+            , #EMAIL#
+            , #MASOTHUE#
+            , #GIAMDOC#
+            , #NGUOILIENHE#
+            , #NUOCNGOAI#
+            , #NHANUOC#
+            , #TAMNGUNG#
+            , #TENKHONGDAU#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #HESO#
+            , #PH_DUOC#
+            , #PH_NHM#
+            , #PH_TAISAN#
+            , #LOAIHINHCONGTY_ID#
+            , #PH_VPP#
+            )
+        </insert>
+        <!--Revision:0,9683858b70c96959d2b7f6f1e385e597-->
+        <update id="DAO00032_Update" parameterClass="HashTable">
+            update TM_NHACUNGCAP set
+            MANHACUNGCAP = #MANHACUNGCAP#
+            , TENNHACUNGCAP = #TENNHACUNGCAP#
+            , TENNHACUNGCAP_EN = #TENNHACUNGCAP_EN#
+            , TENNHACUNGCAP_RU = #TENNHACUNGCAP_RU#
+            , DIACHI = #DIACHI#
+            , DIENTHOAI = #DIENTHOAI#
+            , FAX = #FAX#
+            , EMAIL = #EMAIL#
+            , MASOTHUE = #MASOTHUE#
+            , GIAMDOC = #GIAMDOC#
+            , NGUOILIENHE = #NGUOILIENHE#
+            , NUOCNGOAI = #NUOCNGOAI#
+            , NHANUOC = #NHANUOC#
+            , TAMNGUNG = #TAMNGUNG#
+            , TENKHONGDAU = #TENKHONGDAU#
+            <!--, NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#-->
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , HESO = #HESO#
+            , PH_DUOC = #PH_DUOC#
+            , PH_NHM = #PH_NHM#
+            , PH_TAISAN = #PH_TAISAN#
+            , LOAIHINHCONGTY_ID = #LOAIHINHCONGTY_ID#
+            , PH_VPP = #PH_VPP#
+            where
+            NHACUNGCAP_ID = '%NHACUNGCAP_ID$'
+        </update>
+        <!--Revision:0,b160c9928f0d1a22cc613131773a33d5-->
+        <statement id="DAO00032_Delete" parameterClass="System.String" resultClass="System.Int32">
+            delete from TM_NHACUNGCAP
+            where
+            NHACUNGCAP_ID = '$NHACUNGCAP_ID$'
+        </statement>
+        <!--Revision:0,0c1f9982683473e3b7f82a34321d4579-->
+        <statement id="DAO00032_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_NHACUNGCAP
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="NHACUNGCAP_ID">
+                        TM_NHACUNGCAP.NHACUNGCAP_ID = '$NHACUNGCAP_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MANHACUNGCAP">
+                        TM_NHACUNGCAP.MANHACUNGCAP = '$MANHACUNGCAP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNHACUNGCAP">
+                        TM_NHACUNGCAP.TENNHACUNGCAP = '$TENNHACUNGCAP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNHACUNGCAP_EN">
+                        TM_NHACUNGCAP.TENNHACUNGCAP_EN = '$TENNHACUNGCAP_EN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNHACUNGCAP_RU">
+                        TM_NHACUNGCAP.TENNHACUNGCAP_RU = '$TENNHACUNGCAP_RU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DIACHI">
+                        TM_NHACUNGCAP.DIACHI = '$DIACHI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DIENTHOAI">
+                        TM_NHACUNGCAP.DIENTHOAI = '$DIENTHOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FAX">
+                        TM_NHACUNGCAP.FAX = '$FAX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="EMAIL">
+                        TM_NHACUNGCAP.EMAIL = '$EMAIL$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MASOTHUE">
+                        TM_NHACUNGCAP.MASOTHUE = '$MASOTHUE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIAMDOC">
+                        TM_NHACUNGCAP.GIAMDOC = '$GIAMDOC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOILIENHE">
+                        TM_NHACUNGCAP.NGUOILIENHE = '$NGUOILIENHE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NUOCNGOAI">
+                        TM_NHACUNGCAP.NUOCNGOAI = '$NUOCNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHANUOC">
+                        TM_NHACUNGCAP.NHANUOC = '$NHANUOC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAMNGUNG">
+                        TM_NHACUNGCAP.TAMNGUNG = '$TAMNGUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENKHONGDAU">
+                        TM_NHACUNGCAP.TENKHONGDAU = '$TENKHONGDAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_NHACUNGCAP.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_NHACUNGCAP.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_NHACUNGCAP.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_NHACUNGCAP.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HESO">
+                        TM_NHACUNGCAP.HESO = '$HESO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PH_DUOC">
+                        TM_NHACUNGCAP.PH_DUOC = '$PH_DUOC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PH_NHM">
+                        TM_NHACUNGCAP.PH_NHM = '$PH_NHM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PH_TAISAN">
+                        TM_NHACUNGCAP.PH_TAISAN = '$PH_TAISAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIHINHCONGTY_ID">
+                        TM_NHACUNGCAP.LOAIHINHCONGTY_ID = '$LOAIHINHCONGTY_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PH_VPP">
+                        TM_NHACUNGCAP.PH_VPP = '$PH_VPP$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

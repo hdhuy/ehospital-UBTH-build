@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,ddea39d43597b594c65e7c5cc003c8cd-->
+        <statement id="DAO00036_GetAll" resultClass="DataObject">
+            select *
+            from LST_KEYDATA_DUOCPHAM
+            order by KEYTYPE
+        </statement>
+        <!--Revision:0,f181ab36ab99b33d466f98bb0e91a4a1-->
+        <statement id="DAO00036_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from LST_KEYDATA_DUOCPHAM
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="KEYTYPE">
+                    LST_KEYDATA_DUOCPHAM.KEYTYPE = '$KEYTYPE$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYYEAR">
+                    LST_KEYDATA_DUOCPHAM.KEYYEAR = '$KEYYEAR$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYMONTH">
+                    LST_KEYDATA_DUOCPHAM.KEYMONTH = '$KEYMONTH$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYDAY">
+                    LST_KEYDATA_DUOCPHAM.KEYDAY = '$KEYDAY$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="SEGMENT_1">
+                    LST_KEYDATA_DUOCPHAM.SEGMENT_1 = '$SEGMENT_1$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="SEGMENT_2">
+                    LST_KEYDATA_DUOCPHAM.SEGMENT_2 = '$SEGMENT_2$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="SEGMENT_3">
+                    LST_KEYDATA_DUOCPHAM.SEGMENT_3 = '$SEGMENT_3$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYVALUE">
+                    LST_KEYDATA_DUOCPHAM.KEYVALUE = '$KEYVALUE$'
+                </isNotEmpty>
+            </isParameterPresent>
+            order by KEYTYPE
+        </statement>
+        <!--Revision:1,921a77798de2f79fdd638bb4bc206843-->
+        <statement id="DAO00036_GetDetail" resultClass="DataObject">
+            select KEYTYPE, KEYYEAR, KEYMONTH, KEYDAY, SEGMENT_1, SEGMENT_2, SEGMENT_3, KEYVALUE
+            from LST_KEYDATA_DUOCPHAM as kd
+            <dynamic prepend="WHERE">
+                <isPropertyAvailable prepend="AND" property="KEYTYPE">
+                    kd.KEYTYPE = '$KEYTYPE$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="KEYYEAR">
+                    kd.KEYYEAR = '$KEYYEAR$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="KEYMONTH">
+                    kd.KEYMONTH = '$KEYMONTH$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="KEYDAY">
+                    kd.KEYDAY = '$KEYDAY$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="SEGMENT_1">
+                    kd.SEGMENT_1 = '$SEGMENT_1$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="SEGMENT_2">
+                    kd.SEGMENT_2 = '$SEGMENT_2$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="SEGMENT_3">
+                    kd.SEGMENT_3 = '$SEGMENT_3$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="KEYVALUE">
+                    kd.KEYVALUE = '$KEYVALUE$'
+                </isPropertyAvailable>
+            </dynamic>
+        </statement>
+        <!--Revision:0,b13994abb116fee6655bbd245fa5360e-->
+        <statement id="DAO00036_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from LST_KEYDATA_DUOCPHAM
+            where LST_KEYDATA_DUOCPHAM.KEYTYPE  = '$KEYTYPE$'
+            order by KEYTYPE
+        </statement>
+        <!--Revision:0,389e3591a3caa8f4157c1f042001ba13-->
+        <insert id="DAO00036_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+          insert into LST_KEYDATA_DUOCPHAM (
+          KEYTYPE
+          , KEYYEAR
+          , KEYMONTH
+          , KEYDAY
+          , SEGMENT_1
+          , SEGMENT_2
+          , SEGMENT_3
+          , KEYVALUE
+          , BENHVIEN_ID
+          ) values (
+          #KEYTYPE#
+          , #KEYYEAR#
+          , #KEYMONTH#
+          , #KEYDAY#
+          , #SEGMENT_1#
+          , #SEGMENT_2#
+          , #SEGMENT_3#
+          , #KEYVALUE#
+          , #BENHVIEN_ID#
+          )
+        </insert>
+        <!--Revision:0,708b9aa7738e604fc73a64fba2264a19-->
+        <update id="DAO00036_Update" parameterClass="System.Collections.IDictionary">
+            update LST_KEYDATA_DUOCPHAM set
+            KEYVALUE = #KEYVALUE#
+            where
+            KEYTYPE = '$KEYTYPE$'
+            AND KEYYEAR = '$KEYYEAR$'
+            AND KEYMONTH = '$KEYMONTH$'
+            AND KEYDAY = '$KEYDAY$'
+            AND SEGMENT_1 = '$SEGMENT_1$'
+            AND SEGMENT_2 = '$SEGMENT_2$'
+            AND SEGMENT_3 = '$SEGMENT_3$'
+        </update>
+        <!--Revision:0,2fcc40d6ee1d8aa4799fbbe1f1f9a6bf-->
+        <statement id="DAO00036_Delete" parameterClass="System.String" resultClass="System.Int32">
+            delete from LST_KEYDATA_DUOCPHAM
+            where
+            KEYTYPE = '$KEYTYPE$'
+            AND KEYYEAR = '$KEYYEAR$'
+            AND KEYMONTH = '$KEYMONTH$'
+            AND KEYDAY = '$KEYDAY$'
+            AND SEGMENT_1 = '$SEGMENT_1$'
+            AND SEGMENT_2 = '$SEGMENT_2$'
+            AND SEGMENT_3 = '$SEGMENT_3$'
+        </statement>
+        <!--Revision:0,6da3c0b6deff6883d01c6ee0bf28d1e5-->
+        <statement id="DAO00036_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from LST_KEYDATA_DUOCPHAM
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="KEYTYPE">
+                        LST_KEYDATA_DUOCPHAM.KEYTYPE = '$KEYTYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYYEAR">
+                        LST_KEYDATA_DUOCPHAM.KEYYEAR = '$KEYYEAR$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYMONTH">
+                        LST_KEYDATA_DUOCPHAM.KEYMONTH = '$KEYMONTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYDAY">
+                        LST_KEYDATA_DUOCPHAM.KEYDAY = '$KEYDAY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_1">
+                        LST_KEYDATA_DUOCPHAM.SEGMENT_1 = '$SEGMENT_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_2">
+                        LST_KEYDATA_DUOCPHAM.SEGMENT_2 = '$SEGMENT_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_3">
+                        LST_KEYDATA_DUOCPHAM.SEGMENT_3 = '$SEGMENT_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYVALUE">
+                        LST_KEYDATA_DUOCPHAM.KEYVALUE = '$KEYVALUE$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,d7c11a7dcc5dda549ba79e2c69d163ca-->
+        <statement id="DAO00043_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select * from TM_NHOMDICHVU
+          where exists (select NHOMDICHVU_ID from TM_DICHVU where TM_NHOMDICHVU.NHOMDICHVU_ID = NHOMDICHVU_ID) And BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

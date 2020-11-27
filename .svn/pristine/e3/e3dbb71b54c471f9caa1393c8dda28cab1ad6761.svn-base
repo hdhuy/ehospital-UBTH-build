@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <section name="FormEditor.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+      <section name="HospitalSettings" type="FormEditor.Config.HospitalSettings, FormEditor"/>
+    </configSections>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+  <appSettings>
+  </appSettings>
+  <userSettings>
+    <FormEditor.Properties.Settings>
+      <setting name="HotKeyPath" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="ImageFolder" serializeAs="String">
+        <value>E:\Working\eHospital\3.Sourcecode\Product_Core\04.Images</value>
+      </setting>
+      <setting name="Theme" serializeAs="String">
+        <value>Metro.xml</value>
+      </setting>
+      <setting name="StyleFolder" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="SelectKey" serializeAs="String">
+        <value>FPT-Core-Dev</value>
+      </setting>
+    </FormEditor.Properties.Settings>
+  </userSettings>
+  <HospitalSettings>
+    <Hospitals>
+      <clear />
+      <add ID="FPT-Core-Dev" HospitalID="FPT00001" ConnectionString="server=10.86.222.177;database=DEV_CORE_HIS;user id=core_ehos;password=P@ssword;Connect Timeout=300;"
+        Name="FPT Core" />
+      <add ID="HL-Dev" HospitalID="HL001" ConnectionString="server=10.86.222.177;database=HOALAM.HIS;user id=sa;password=123456aA@;"
+        Name="BV Quốc tế Hoa Lâm" />
+    </Hospitals>
+  </HospitalSettings>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-10.0.0.0" newVersion="10.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="ObjectListView" publicKeyToken="b1c5bf581481bcd4" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-2.9.1.1072" newVersion="2.9.1.1072" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,c34e2ae8322fb74d234d2bb007221a66-->
+        <statement id="DAO00045_GetListDVYeuCau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from VIEW_DICHVU_NHOMDV
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="CAPTREN_ID">
+                    VIEW_DICHVU_NHOMDV.CAPTREN_ID = '$CAPTREN_ID$'
+                </isNotEmpty>
+            </isParameterPresent>
+        </statement>
+        <!--Revision:1,9b5f6e05f36f99dc74f30fda69d06bdc-->
+        <statement id="DAO00045_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          <!--select * from dbo.VIEW_DICHVU_NHOMDV
+          where NHOMDICHVU_ID in
+          (select NHOMDICHVU_ID from TM_NHOMDICHVU where MANHOMDICHVU in ($MANHOMDICHVU$))
+          and BENHVIEN_ID = '$BENHVIEN_ID$'-->
+
+          SELECT
+          TM_DICHVU.DICHVU_ID, TM_NHOMDICHVU.NHOMDICHVU_ID, TM_NHOMDICHVU.MANHOMDICHVU, TM_DICHVU.MADICHVU, TM_NHOMDICHVU.TENNHOMDICHVU,
+          TM_NHOMDICHVU.TENNHOMDICHVU_EN, TM_NHOMDICHVU.TENNHOMDICHVU_RU, TM_NHOMDICHVU.CAP, TM_NHOMDICHVU.CAPTREN_ID, TM_DICHVU.TENDICHVU,
+          TM_DICHVU.BENHVIEN_ID, TM_DICHVU.CHONHETCAPDUOI, TM_DICHVU.CAPTREN_ID AS DICHVU_CAPTREN_ID
+          FROM
+          TM_DICHVU
+          INNER JOIN
+          TM_NHOMDICHVU ON TM_DICHVU.NHOMDICHVU_ID = TM_NHOMDICHVU.NHOMDICHVU_ID AND TM_DICHVU.BENHVIEN_ID = TM_NHOMDICHVU.BENHVIEN_ID
+          where left(MANHOMDICHVU,2) in ($MANHOMDICHVU$)
+          and TM_DICHVU.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,660a81aa8229cb5f4a16e7732deec93c-->
+        <statement id="DAO00045_NHOMDVIDBYMANHOMDV" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select NHOMDICHVU_ID
+            from TM_NHOMDICHVU
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+            <dynamic>
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="MANHOMDICHVU">
+                        MANHOMDICHVU = '$MANHOMDICHVU$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

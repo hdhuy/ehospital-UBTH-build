@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,c784547d31c50a462b372f6a387896f4-->
+        <statement id="DAO00022_GetDetail" resultClass="DataObject">
+            select KEYTYPE, KEYYEAR, KEYMONTH, KEYDAY, SEGMENT_1, SEGMENT_2, SEGMENT_3, KEYVALUE
+            from [LST_KEYDATA] as kd
+            <dynamic prepend="WHERE">
+                <isPropertyAvailable prepend="AND" property="KEYTYPE">
+                    kd.KEYTYPE = '$KEYTYPE$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="KEYYEAR">
+                    kd.KEYYEAR = '$KEYYEAR$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="KEYMONTH">
+                    kd.KEYMONTH = '$KEYMONTH$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="KEYDAY">
+                    kd.KEYDAY = '$KEYDAY$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="SEGMENT_1">
+                    kd.SEGMENT_1 = '$SEGMENT_1$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="SEGMENT_2">
+                    kd.SEGMENT_2 = '$SEGMENT_2$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="SEGMENT_3">
+                    kd.SEGMENT_3 = '$SEGMENT_3$'
+                </isPropertyAvailable>
+                <isPropertyAvailable prepend="AND" property="KEYVALUE">
+                    kd.KEYVALUE = '$KEYVALUE$'
+                </isPropertyAvailable>
+            </dynamic>
+        </statement>
+        <!--Revision:0,8b020282b669358380efde2196c9a64a-->
+        <insert id="DAO00022_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into LST_KEYDATA (
+            KEYTYPE, KEYYEAR, KEYMONTH, KEYDAY, SEGMENT_1, SEGMENT_2, SEGMENT_3, KEYVALUE, BENHVIEN_ID
+            ) values (
+            #KEYTYPE#, #KEYYEAR#, #KEYMONTH#, #KEYDAY#, #SEGMENT_1#, #SEGMENT_2#, #SEGMENT_3#, #KEYVALUE#, #BENHVIEN_ID#
+            )
+        </insert>
+        <!--Revision:0,943b11c1a22edec17fa362cb693eade2-->
+        <update id="DAO00022_Update_bk" parameterClass="System.Collections.IDictionary">
+            update LST_KEYDATA set
+            KEYTYPE = #KEYTYPE#
+            , KEYYEAR = #KEYYEAR#
+            , KEYMONTH = #KEYMONTH#
+            , KEYDAY = #KEYDAY#
+            , SEGMENT_1 = #SEGMENT_1#
+            , SEGMENT_2 = #SEGMENT_2#
+            , SEGMENT_3 = #SEGMENT_3#
+            , KEYVALUE = #KEYVALUE#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            KEYTYPE = '$KEYTYPE$' AND
+            KEYYEAR = '$KEYYEAR$' AND
+            KEYMONTH = '$KEYMONTH$' AND
+            KEYDAY = '$KEYDAY$' AND
+            SEGMENT_1 = '$SEGMENT_1$' AND
+            SEGMENT_2 = '$SEGMENT_2$' AND
+            SEGMENT_3 = '$SEGMENT_3$' AND
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+        </update>
+        <!--Revision:0,66409283ee2d9ed36c3d2542d757d088-->
+        <statement id="DAO00022_Update" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            update LST_KEYDATA WITH (ROWLOCK) set
+            KEYTYPE = #KEYTYPE#
+            , KEYYEAR = #KEYYEAR#
+            , KEYMONTH = #KEYMONTH#
+            , KEYDAY = #KEYDAY#
+            , SEGMENT_1 = #SEGMENT_1#
+            , SEGMENT_2 = #SEGMENT_2#
+            , SEGMENT_3 = #SEGMENT_3#
+            , KEYVALUE = KEYVALUE + 1
+            OUTPUT INSERTED.* where
+            KEYTYPE = '$KEYTYPE$' AND
+            KEYYEAR = '$KEYYEAR$' AND
+            KEYMONTH = '$KEYMONTH$' AND
+            KEYDAY = '$KEYDAY$'
+            <isNotEmpty prepend="and" property="SEGMENT_1">
+                SEGMENT_1 = '$SEGMENT_1$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="SEGMENT_2">
+                SEGMENT_2 = '$SEGMENT_2$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="SEGMENT_3">
+                SEGMENT_3 = '$SEGMENT_3$'
+            </isNotEmpty>
+            <!--SEGMENT_1 = '$SEGMENT_1$' AND
+      SEGMENT_2 = '$SEGMENT_2$' AND
+      SEGMENT_3 = '$SEGMENT_3$'-->
+        </statement>
+        <!--Revision:0,f07a38257ef748e31daf5fce6e6cb3e0-->
+        <statement id="DAO00022_GetGoiThau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT HD.GOITHAU_ID, LST.DICTIONARY_CODE AS MAGOITHAU, LST.DICTIONARY_NAME AS TENGOITHAU, HD.NHACUNGCAP_ID, HD.PHAMVI, HDCT.*
+            FROM TM_GIAHOPDONGCHITIET HDCT
+            INNER JOIN TM_GIAHOPDONG HD ON HD.GIAHOPDONG_ID = HDCT.GIAHOPDONG_ID
+            INNER JOIN LST_DICTIONARY LST ON LST.DICTIONARY_ID = HD.GOITHAU_ID
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="GOITHAU_ID">
+                        HD.GOITHAU_ID = '$GOITHAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHACUNGCAP_ID">
+                        HD.NHACUNGCAP_ID = '$NHACUNGCAP_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DUOC_ID">
+                        HDCT.DUOC_ID = '$DUOC_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,493861dba9da4608d639a32c4e29c81e-->
+        <statement id="DAO00022_UpdateSoLuongDaNhapTrongThau" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            UPDATE TM_GIAHOPDONGCHITIET
+            SET
+            SOLUONGDANHAP = '$SOLUONGDANHAP$'
+            WHERE
+            GIAHOPDONGCHITIET_ID = '$GIAHOPDONGCHITIET_ID$'
+        </statement>
+    </statements>
+</sqlMap>

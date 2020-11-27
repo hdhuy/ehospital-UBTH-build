@@ -1,0 +1,1185 @@
+﻿--------------------------------------------------------------------------------
+2020-06-02 12:44:27,900 [1] INFO  - [Application started.]
+2020-06-02 12:44:45,452 [1] INFO  - [_SYSTEM_] Session is starting.
+2020-06-02 12:44:45,618 [1] INFO  - LoadMasters() took 79 ms.
+2020-06-02 12:44:45,618 [1] INFO  - [_SYSTEM_] Session started.
+2020-06-02 12:44:58,653 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00407.xml' not found.
+2020-06-02 12:45:24,061 [1] INFO  - [admin] Session is starting.
+2020-06-02 12:45:31,715 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:45:57,221 [9] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2020-06-02 12:45:57,227 [9] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:46:26,613 [9] ERROR - Error when loading cache 'REFBENHNHAN_DY' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:46:26 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:46:26,624 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:46:40,988 [9] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2020-06-02 12:46:40,988 [9] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:46:41,159 [9] ERROR - Error when loading cache 'REFBENHNHAN_GROUP_DICHVU' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:46:41 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:46:41,172 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:46:55,591 [9] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2020-06-02 12:46:55,592 [9] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:46:55,619 [9] ERROR - Error when loading cache 'REFBENHNHAN_MN' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:46:55 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:46:55,631 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:47:08,144 [9] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2020-06-02 12:47:08,144 [9] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:47:08,174 [9] ERROR - Error when loading cache 'REFBENHNHAN_NT_CC' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:47:08 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:47:08,185 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:47:20,570 [9] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2020-06-02 12:47:20,570 [9] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:47:20,598 [9] ERROR - Error when loading cache 'REFBENHNHAN_NT_DY' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:47:20 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:47:20,609 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:47:32,966 [9] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2020-06-02 12:47:32,966 [9] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:47:32,992 [9] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:47:32 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:47:33,004 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:47:45,572 [9] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2020-06-02 12:47:45,572 [9] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:47:45,670 [9] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_ALL' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:47:45 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:47:45,683 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:47:58,482 [9] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2020-06-02 12:47:58,482 [9] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:47:58,515 [9] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_DV_VTYT' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:47:58 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:47:58,529 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:48:10,934 [9] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2020-06-02 12:48:10,934 [9] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:48:10,961 [9] ERROR - Error when loading cache 'REFBENHNHAN_TOATHUOC' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:48:10 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:48:11,661 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:48:24,058 [9] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2020-06-02 12:48:24,058 [9] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:48:24,083 [9] ERROR - Error when loading cache 'REFDUOC_KYGUI_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:48:24 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:48:24,097 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:48:36,494 [9] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2020-06-02 12:48:36,494 [9] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:48:36,524 [9] ERROR - Error when loading cache 'REFDUOC_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:48:36 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:48:36,537 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:48:48,995 [9] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2020-06-02 12:48:48,995 [9] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:48:49,022 [9] ERROR - Error when loading cache 'REFDUOC_TONKHO_BOOKING' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:48:48 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:48:49,895 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:49:02,351 [9] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2020-06-02 12:49:02,351 [9] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:49:02,433 [9] ERROR - Error when loading cache 'REFMAU_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:49:02 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:49:02,445 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:49:14,996 [9] INFO  - Can't create direct service instance of COM073 -> One or more errors occurred.
+2020-06-02 12:49:14,996 [9] INFO  - Can't create direct service instance of COM073, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:49:15,044 [9] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:49:14 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:49:15,056 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:49:28,008 [9] INFO  - Can't create direct service instance of COM072 -> One or more errors occurred.
+2020-06-02 12:49:28,008 [9] INFO  - Can't create direct service instance of COM072, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:49:28,042 [9] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:49:28 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:49:29,340 [9] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFBENHNHAN_DY, REFBENHNHAN_GROUP_DICHVU, REFBENHNHAN_MN, REFBENHNHAN_NT_CC, REFBENHNHAN_NT_DY, REFBENHNHAN_TIEPNHAN, REFBENHNHAN_TIEPNHAN_ALL, REFBENHNHAN_TIEPNHAN_DV_VTYT, REFBENHNHAN_TOATHUOC, REFDUOC_KYGUI_TONKHO, REFDUOC_TONKHO, REFDUOC_TONKHO_BOOKING, REFMAU_TONKHO, REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 239
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2020-06-02 12:49:31,625 [1] INFO  - [admin] Session started.
+2020-06-02 12:49:51,493 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2020-06-02 12:49:51,540 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2020-06-02 12:49:52,509 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2020-06-02 12:49:52,555 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2020-06-02 12:49:53,237 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2020-06-02 12:49:53,288 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2020-06-02 12:49:53,370 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2020-06-02 12:49:53,427 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2020-06-02 12:49:53,489 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2020-06-02 12:49:53,561 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2020-06-02 12:49:53,622 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2020-06-02 12:49:53,679 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2020-06-02 12:49:53,754 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2020-06-02 12:49:53,801 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2020-06-02 12:49:53,847 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2020-06-02 12:49:53,904 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2020-06-02 12:49:53,961 [1] WARN  - Can't get type of type 'COM73', assembly 'Screens/ScrCOM'
+2020-06-02 12:49:54,014 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2020-06-02 12:49:54,221 [1] WARN  - Can't get type of type 'CPM08', assembly 'Screens/ScrCPM'
+2020-06-02 12:49:54,328 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2020-06-02 12:49:55,068 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2020-06-02 12:49:55,124 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2020-06-02 12:49:55,182 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2020-06-02 12:49:55,239 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2020-06-02 12:49:55,535 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2020-06-02 12:49:56,143 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2020-06-02 12:49:56,198 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2020-06-02 12:49:56,260 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2020-06-02 12:49:56,324 [1] WARN  - Can't get type of type 'IPD91', assembly 'Screens/ScrOPT'
+2020-06-02 12:49:56,574 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2020-06-02 12:49:57,019 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2020-06-02 12:49:57,085 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2020-06-02 12:49:57,199 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2020-06-02 12:49:57,344 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2020-06-02 12:49:57,778 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2020-06-02 12:49:57,844 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2020-06-02 12:49:57,947 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2020-06-02 12:49:58,032 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2020-06-02 12:49:58,128 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2020-06-02 12:49:58,189 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2020-06-02 12:49:59,498 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2020-06-02 12:49:59,589 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2020-06-02 12:49:59,678 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2020-06-02 12:49:59,750 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2020-06-02 12:50:00,566 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2020-06-02 12:50:01,566 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2020-06-02 12:50:01,642 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2020-06-02 12:50:01,708 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2020-06-02 12:50:02,113 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2020-06-02 12:50:02,198 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2020-06-02 12:50:02,770 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2020-06-02 12:50:06,485 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-06-02 12:56:09,821 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.IPD.VMIPD02.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD02.cs:line 97
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id, Boolean bCaching) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 267
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 145
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2020-06-02 12:56:28,244 [1] WARN  - DataRepository for 'REFBENHNHAN_NT_CC' is null.
+2020-06-02 12:56:47,389 [1] ERROR - Can't create control COM31018.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.Common.VMCOM31.get_REFBENHAN_BENHNHAN() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\HeaderViewModels\VMCOM31.cs:line 50
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 138
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 111
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 84
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 583
+   at WinformUI.SearchEntry2.BindData() in C:\Projects\Core_eHos2_debug\01.Framework\05.UI\01.Winform\SearchEntry2.cs:line 198
+   at WinformUI.Entry.set_ViewSource(IDataSource value) in C:\Projects\Core_eHos2_debug\01.Framework\05.UI\01.Winform\Entry.cs:line 26
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\GuiProvider.cs:line 137
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\GuiProvider.cs:line 55
+2020-06-02 12:56:49,719 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.Common.VMCOM31.FilterDepartment() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\HeaderViewModels\VMCOM31.cs:line 114
+   at FPT.eHospital.Forms.Common.VMCOMHeader.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\HeaderViewModels\VMCOMHeader.cs:line 185
+   at FPT.eHospital.Forms.Common.VMCOM31.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\HeaderViewModels\VMCOM31.cs:line 67
+   at FPT.eHospital.Forms.Common.VMPatBaseSearch.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\VMPatBaseSearch.cs:line 96
+   at FPT.eHospital.Forms.IPD.VMIPD03.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD03.cs:line 62
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id, Boolean bCaching) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 267
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 145
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2020-06-02 12:57:23,100 [6] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2020-06-02 12:57:23,117 [6] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:57:23,120 [6] ERROR - Error when loading cache 'REFDUOC_KYGUI_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:57:23 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:57:23,135 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:57:35,679 [6] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2020-06-02 12:57:35,679 [6] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:57:35,682 [6] ERROR - Error when loading cache 'REFDUOC_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:57:35 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:57:35,696 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:57:49,209 [6] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2020-06-02 12:57:49,209 [6] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:57:49,214 [6] ERROR - Error when loading cache 'REFDUOC_TONKHO_BOOKING' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:57:49 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:57:50,254 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:58:02,419 [6] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2020-06-02 12:58:02,419 [6] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:58:02,423 [6] ERROR - Error when loading cache 'REFMAU_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:58:02 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:58:02,435 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:58:14,510 [6] INFO  - Can't create direct service instance of COM073 -> One or more errors occurred.
+2020-06-02 12:58:14,510 [6] INFO  - Can't create direct service instance of COM073, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:58:14,513 [6] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:58:14 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:58:14,524 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 12:58:26,615 [6] INFO  - Can't create direct service instance of COM072 -> One or more errors occurred.
+2020-06-02 12:58:26,616 [6] INFO  - Can't create direct service instance of COM072, try to use WebService with url http://localhost:1010/api/
+2020-06-02 12:58:26,618 [6] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 05:58:26 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 12:58:27,459 [6] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFBENHNHAN_DY, REFBENHNHAN_GROUP_DICHVU, REFBENHNHAN_MN, REFBENHNHAN_NT_CC, REFBENHNHAN_NT_DY, REFBENHNHAN_TIEPNHAN, REFBENHNHAN_TIEPNHAN_ALL, REFBENHNHAN_TIEPNHAN_DV_VTYT, REFBENHNHAN_TOATHUOC, REFDUOC_KYGUI_TONKHO, REFDUOC_TONKHO, REFDUOC_TONKHO_BOOKING, REFMAU_TONKHO, REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 239
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2020-06-02 12:58:27,493 [1] INFO  - [admin] Session started.
+2020-06-02 12:58:28,266 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2020-06-02 12:58:28,266 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2020-06-02 12:58:28,271 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2020-06-02 12:58:28,271 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2020-06-02 12:58:28,282 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2020-06-02 12:58:28,285 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2020-06-02 12:58:28,288 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2020-06-02 12:58:28,288 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2020-06-02 12:58:28,290 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2020-06-02 12:58:28,290 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2020-06-02 12:58:28,291 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2020-06-02 12:58:28,291 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2020-06-02 12:58:28,298 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2020-06-02 12:58:28,299 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2020-06-02 12:58:28,299 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2020-06-02 12:58:28,301 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2020-06-02 12:58:28,302 [1] WARN  - Can't get type of type 'COM73', assembly 'Screens/ScrCOM'
+2020-06-02 12:58:28,303 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2020-06-02 12:58:28,305 [1] WARN  - Can't get type of type 'CPM08', assembly 'Screens/ScrCPM'
+2020-06-02 12:58:28,309 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2020-06-02 12:58:28,314 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2020-06-02 12:58:28,314 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2020-06-02 12:58:28,314 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2020-06-02 12:58:28,314 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2020-06-02 12:58:28,319 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2020-06-02 12:58:28,339 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2020-06-02 12:58:28,340 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2020-06-02 12:58:28,340 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2020-06-02 12:58:28,341 [1] WARN  - Can't get type of type 'IPD91', assembly 'Screens/ScrOPT'
+2020-06-02 12:58:28,346 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2020-06-02 12:58:28,356 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2020-06-02 12:58:28,358 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2020-06-02 12:58:28,359 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2020-06-02 12:58:28,368 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2020-06-02 12:58:28,377 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2020-06-02 12:58:28,378 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2020-06-02 12:58:28,378 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2020-06-02 12:58:28,379 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2020-06-02 12:58:28,379 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2020-06-02 12:58:28,379 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2020-06-02 12:58:28,391 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2020-06-02 12:58:28,401 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2020-06-02 12:58:28,402 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2020-06-02 12:58:28,404 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2020-06-02 12:58:28,416 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2020-06-02 12:58:28,426 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2020-06-02 12:58:28,426 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2020-06-02 12:58:28,427 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2020-06-02 12:58:28,428 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2020-06-02 12:58:28,429 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2020-06-02 12:58:28,438 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2020-06-02 12:58:28,996 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-06-02 13:00:17,950 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2020-06-02 13:00:17,950 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2020-06-02 13:00:17,960 [1] INFO  - Can't create direct service instance of LOG001 -> Unknown type of FPT.eHospital.Services.LOG001, Services\SvcCOM
+2020-06-02 13:00:17,960 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:00:17,980 [1] INFO  - [admin] Session stopped.
+2020-06-02 13:00:17,982 [1] INFO  - Memory used before collection:  116,335,336
+2020-06-02 13:00:18,079 [1] INFO  - Memory used after collection:  17,647,200
+2020-06-02 13:00:18,841 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2020-06-02 13:07:15,526 [1] INFO  - [Application started.]
+2020-06-02 13:07:23,921 [1] INFO  - [_SYSTEM_] Session is starting.
+2020-06-02 13:07:23,964 [1] INFO  - LoadMasters() took 34 ms.
+2020-06-02 13:07:23,964 [1] INFO  - [_SYSTEM_] Session started.
+2020-06-02 13:07:30,832 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00407.xml' not found.
+2020-06-02 13:07:35,152 [1] INFO  - [admin] Session is starting.
+2020-06-02 13:07:36,759 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:07:52,048 [5] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2020-06-02 13:07:52,048 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:07:52,107 [5] ERROR - Error when loading cache 'REFBENHNHAN_DY' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:07:52 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:07:52,118 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:08:07,064 [5] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2020-06-02 13:08:07,068 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:08:07,492 [5] ERROR - Error when loading cache 'REFBENHNHAN_GROUP_DICHVU' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:08:07 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:08:07,504 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:08:23,029 [5] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2020-06-02 13:08:23,029 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:08:23,170 [5] ERROR - Error when loading cache 'REFBENHNHAN_MN' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:08:23 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:08:23,182 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:08:37,888 [5] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2020-06-02 13:08:37,888 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:08:37,942 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_CC' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:08:37 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:08:37,955 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:08:52,666 [5] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2020-06-02 13:08:52,666 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:08:52,710 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_DY' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:08:52 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:08:52,724 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:09:07,194 [5] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2020-06-02 13:09:07,194 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:09:07,264 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:09:07 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:09:07,276 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:09:22,468 [5] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2020-06-02 13:09:22,468 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:09:23,088 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_ALL' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:09:21 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:09:23,099 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:09:37,778 [5] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2020-06-02 13:09:37,779 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:09:37,916 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_DV_VTYT' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:09:37 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:09:37,929 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:09:52,689 [5] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2020-06-02 13:09:52,689 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:09:52,730 [5] ERROR - Error when loading cache 'REFBENHNHAN_TOATHUOC' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:09:52 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:09:53,347 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:10:07,791 [5] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2020-06-02 13:10:07,791 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:10:07,826 [5] ERROR - Error when loading cache 'REFDUOC_KYGUI_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:10:07 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:10:07,840 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:10:21,922 [5] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2020-06-02 13:10:21,923 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:10:22,021 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:10:21 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:10:22,036 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:10:36,112 [5] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2020-06-02 13:10:36,114 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:10:36,198 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO_BOOKING' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:10:36 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:10:36,889 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:10:51,540 [5] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2020-06-02 13:10:51,540 [5] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:10:51,588 [5] ERROR - Error when loading cache 'REFMAU_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:10:51 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:10:51,601 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:11:05,647 [5] INFO  - Can't create direct service instance of COM073 -> One or more errors occurred.
+2020-06-02 13:11:05,648 [5] INFO  - Can't create direct service instance of COM073, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:11:05,705 [5] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:11:05 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:11:05,717 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:11:18,774 [5] INFO  - Can't create direct service instance of COM072 -> One or more errors occurred.
+2020-06-02 13:11:18,775 [5] INFO  - Can't create direct service instance of COM072, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:11:18,804 [5] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:11:18 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:11:19,638 [5] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFBENHNHAN_DY, REFBENHNHAN_GROUP_DICHVU, REFBENHNHAN_MN, REFBENHNHAN_NT_CC, REFBENHNHAN_NT_DY, REFBENHNHAN_TIEPNHAN, REFBENHNHAN_TIEPNHAN_ALL, REFBENHNHAN_TIEPNHAN_DV_VTYT, REFBENHNHAN_TOATHUOC, REFDUOC_KYGUI_TONKHO, REFDUOC_TONKHO, REFDUOC_TONKHO_BOOKING, REFMAU_TONKHO, REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 239
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2020-06-02 13:11:19,795 [1] INFO  - [admin] Session started.
+2020-06-02 13:11:22,043 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2020-06-02 13:11:22,099 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2020-06-02 13:11:23,212 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2020-06-02 13:11:23,397 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2020-06-02 13:11:24,397 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2020-06-02 13:11:24,529 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2020-06-02 13:11:24,647 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2020-06-02 13:11:24,722 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2020-06-02 13:11:24,787 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2020-06-02 13:11:24,868 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2020-06-02 13:11:24,993 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2020-06-02 13:11:25,301 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2020-06-02 13:11:25,404 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2020-06-02 13:11:25,511 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2020-06-02 13:11:25,590 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2020-06-02 13:11:25,664 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2020-06-02 13:11:25,727 [1] WARN  - Can't get type of type 'COM73', assembly 'Screens/ScrCOM'
+2020-06-02 13:11:25,791 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2020-06-02 13:11:25,989 [1] WARN  - Can't get type of type 'CPM08', assembly 'Screens/ScrCPM'
+2020-06-02 13:11:26,140 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2020-06-02 13:11:26,966 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2020-06-02 13:11:27,061 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2020-06-02 13:11:27,178 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2020-06-02 13:11:27,304 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2020-06-02 13:11:28,021 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2020-06-02 13:11:29,052 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2020-06-02 13:11:29,259 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2020-06-02 13:11:29,386 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2020-06-02 13:11:29,520 [1] WARN  - Can't get type of type 'IPD91', assembly 'Screens/ScrOPT'
+2020-06-02 13:11:29,861 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2020-06-02 13:11:30,248 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2020-06-02 13:11:30,321 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2020-06-02 13:11:30,401 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2020-06-02 13:11:30,622 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2020-06-02 13:11:31,181 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2020-06-02 13:11:31,273 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2020-06-02 13:11:31,493 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2020-06-02 13:11:31,560 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2020-06-02 13:11:31,637 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2020-06-02 13:11:31,724 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2020-06-02 13:11:32,745 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2020-06-02 13:11:32,851 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2020-06-02 13:11:32,934 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2020-06-02 13:11:33,050 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2020-06-02 13:11:33,810 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2020-06-02 13:11:34,323 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2020-06-02 13:11:34,396 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2020-06-02 13:11:34,483 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2020-06-02 13:11:34,606 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2020-06-02 13:11:34,695 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2020-06-02 13:11:35,311 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2020-06-02 13:11:36,638 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-06-02 13:19:09,928 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.IPD.VMIPD02.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD02.cs:line 97
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id, Boolean bCaching) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 267
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 145
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2020-06-02 13:19:38,109 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2020-06-02 13:19:38,109 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2020-06-02 13:19:38,393 [1] INFO  - Can't create direct service instance of LOG001 -> Unknown type of FPT.eHospital.Services.LOG001, Services\SvcCOM
+2020-06-02 13:19:38,393 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:19:38,986 [1] INFO  - [admin] Session stopped.
+2020-06-02 13:19:38,989 [1] INFO  - Memory used before collection:  42,266,392
+2020-06-02 13:19:39,093 [1] INFO  - Memory used after collection:  17,832,200
+2020-06-02 13:19:39,633 [1] INFO  - [_SYSTEM_] Session is starting.
+2020-06-02 13:19:39,660 [1] INFO  - LoadMasters() took 25 ms.
+2020-06-02 13:19:39,660 [1] INFO  - [_SYSTEM_] Session started.
+2020-06-02 13:20:13,144 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00407.xml' not found.
+2020-06-02 13:20:15,563 [1] INFO  - [admin] Session is starting.
+2020-06-02 13:20:19,675 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:20:32,137 [19] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2020-06-02 13:20:32,137 [19] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:20:32,192 [19] ERROR - Error when loading cache 'REFBENHNHAN_DY' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:20:32 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:20:32,208 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:20:44,782 [19] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2020-06-02 13:20:44,782 [19] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:20:44,811 [19] ERROR - Error when loading cache 'REFBENHNHAN_GROUP_DICHVU' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:20:44 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:20:44,824 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:20:57,225 [19] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2020-06-02 13:20:57,225 [19] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:20:57,253 [19] ERROR - Error when loading cache 'REFBENHNHAN_MN' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:20:57 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:20:57,266 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:21:09,702 [19] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2020-06-02 13:21:09,703 [19] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:21:09,734 [19] ERROR - Error when loading cache 'REFBENHNHAN_NT_CC' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:21:09 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:21:09,746 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:21:22,251 [19] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2020-06-02 13:21:22,251 [19] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:21:22,279 [19] ERROR - Error when loading cache 'REFBENHNHAN_NT_DY' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:21:22 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:21:22,291 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:21:34,724 [19] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2020-06-02 13:21:34,724 [19] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:21:34,757 [19] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:21:34 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:21:34,769 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:21:47,785 [19] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2020-06-02 13:21:47,785 [19] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:21:47,825 [19] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_ALL' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:21:47 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:21:47,841 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:22:00,776 [19] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2020-06-02 13:22:00,776 [19] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:22:00,816 [19] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_DV_VTYT' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:22:00 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:22:00,827 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:22:13,353 [19] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2020-06-02 13:22:13,353 [19] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:22:13,388 [19] ERROR - Error when loading cache 'REFBENHNHAN_TOATHUOC' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:22:13 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:22:26,782 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:22:39,522 [19] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2020-06-02 13:22:39,522 [19] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:22:39,600 [19] ERROR - Error when loading cache 'REFDUOC_KYGUI_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:22:39 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:22:39,629 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:22:52,329 [19] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2020-06-02 13:22:52,329 [19] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:22:52,411 [19] ERROR - Error when loading cache 'REFDUOC_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:22:52 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:22:52,428 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:23:04,892 [19] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2020-06-02 13:23:04,892 [19] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:23:04,933 [19] ERROR - Error when loading cache 'REFDUOC_TONKHO_BOOKING' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:23:04 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:23:05,873 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:23:18,331 [19] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2020-06-02 13:23:18,331 [19] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:23:18,360 [19] ERROR - Error when loading cache 'REFMAU_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:23:18 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:23:18,373 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:23:30,857 [19] INFO  - Can't create direct service instance of COM073 -> One or more errors occurred.
+2020-06-02 13:23:30,857 [19] INFO  - Can't create direct service instance of COM073, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:23:30,889 [19] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:23:30 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:23:30,901 [19] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:23:43,318 [19] INFO  - Can't create direct service instance of COM072 -> One or more errors occurred.
+2020-06-02 13:23:43,319 [19] INFO  - Can't create direct service instance of COM072, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:23:43,349 [19] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:23:43 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:23:44,208 [19] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFBENHNHAN_DY, REFBENHNHAN_GROUP_DICHVU, REFBENHNHAN_MN, REFBENHNHAN_NT_CC, REFBENHNHAN_NT_DY, REFBENHNHAN_TIEPNHAN, REFBENHNHAN_TIEPNHAN_ALL, REFBENHNHAN_TIEPNHAN_DV_VTYT, REFBENHNHAN_TOATHUOC, REFDUOC_KYGUI_TONKHO, REFDUOC_TONKHO, REFDUOC_TONKHO_BOOKING, REFMAU_TONKHO, REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 239
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2020-06-02 13:23:44,233 [1] INFO  - [admin] Session started.
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'COM73', assembly 'Screens/ScrCOM'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'CPM08', assembly 'Screens/ScrCPM'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2020-06-02 13:23:44,442 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'IPD91', assembly 'Screens/ScrOPT'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2020-06-02 13:23:44,443 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2020-06-02 13:23:44,444 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2020-06-02 13:23:44,444 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2020-06-02 13:23:44,444 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2020-06-02 13:23:44,444 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2020-06-02 13:23:44,444 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2020-06-02 13:23:44,444 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2020-06-02 13:23:44,444 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2020-06-02 13:23:44,444 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2020-06-02 13:23:44,444 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2020-06-02 13:23:44,953 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-06-02 13:42:13,117 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.eHospital.Forms.IPD.VMIPD02.Initialize() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\VMIPD02.cs:line 97
+   at FPT.eHospital.Forms.Base.VMLauncherBase.CreatePage(String id, Boolean bCaching) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 267
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 145
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2020-06-02 13:42:23,289 [1] DEBUG - Barcode delay=192, Ctrl=True, B=False
+--------------------------------------------------------------------------------
+2020-06-02 13:44:48,795 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2020-06-02 13:44:48,811 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2020-06-02 13:44:48,812 [1] INFO  - Can't create direct service instance of LOG001 -> Unknown type of FPT.eHospital.Services.LOG001, Services\SvcCOM
+2020-06-02 13:44:48,813 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:44:53,706 [1] INFO  - [admin] Session stopped.
+2020-06-02 13:44:53,710 [1] INFO  - Memory used before collection:  40,478,888
+2020-06-02 13:44:53,816 [1] INFO  - Memory used after collection:  17,703,568
+2020-06-02 13:44:55,624 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2020-06-02 13:48:35,462 [1] INFO  - [Application started.]
+2020-06-02 13:48:45,160 [1] INFO  - [_SYSTEM_] Session is starting.
+2020-06-02 13:48:45,207 [1] INFO  - LoadMasters() took 37 ms.
+2020-06-02 13:48:45,207 [1] INFO  - [_SYSTEM_] Session started.
+2020-06-02 13:48:51,474 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00407.xml' not found.
+2020-06-02 13:48:55,044 [1] INFO  - [admin] Session is starting.
+2020-06-02 13:48:56,060 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:49:09,613 [5] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2020-06-02 13:49:09,614 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:49:09,673 [5] ERROR - Error when loading cache 'REFBENHNHAN_DY' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:49:09 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:49:09,686 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:49:23,630 [5] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2020-06-02 13:49:23,631 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:49:23,672 [5] ERROR - Error when loading cache 'REFBENHNHAN_GROUP_DICHVU' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:49:23 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:49:23,684 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:49:37,602 [5] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2020-06-02 13:49:37,602 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:49:37,650 [5] ERROR - Error when loading cache 'REFBENHNHAN_MN' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:49:37 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:49:37,662 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:49:51,742 [5] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2020-06-02 13:49:51,742 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:49:51,842 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_CC' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:49:51 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:49:51,855 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:50:05,011 [5] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2020-06-02 13:50:05,011 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:50:05,042 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_DY' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:50:05 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:50:05,055 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:50:18,003 [5] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2020-06-02 13:50:18,003 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:50:18,037 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:50:18 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:50:18,049 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:50:30,607 [5] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2020-06-02 13:50:30,607 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:50:30,640 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_ALL' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:50:30 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:50:30,652 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:50:43,022 [5] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2020-06-02 13:50:43,022 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:50:43,053 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_DV_VTYT' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:50:43 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:50:43,066 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:50:55,433 [5] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2020-06-02 13:50:55,433 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:50:55,466 [5] ERROR - Error when loading cache 'REFBENHNHAN_TOATHUOC' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:50:55 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:50:56,032 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:51:08,821 [5] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2020-06-02 13:51:08,821 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:51:08,853 [5] ERROR - Error when loading cache 'REFDUOC_KYGUI_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:51:08 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:51:08,866 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:51:21,602 [5] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2020-06-02 13:51:21,602 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:51:21,698 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:51:21 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:51:21,730 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:51:34,121 [5] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2020-06-02 13:51:34,121 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:51:34,150 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO_BOOKING' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:51:34 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:51:34,817 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:51:47,291 [5] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2020-06-02 13:51:47,292 [5] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:51:47,330 [5] ERROR - Error when loading cache 'REFMAU_TONKHO' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:51:47 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:51:47,343 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:51:59,857 [5] INFO  - Can't create direct service instance of COM073 -> One or more errors occurred.
+2020-06-02 13:51:59,857 [5] INFO  - Can't create direct service instance of COM073, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:51:59,899 [5] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:51:59 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:51:59,917 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 01819
+2020-06-02 13:52:12,291 [5] INFO  - Can't create direct service instance of COM072 -> One or more errors occurred.
+2020-06-02 13:52:12,291 [5] INFO  - Can't create direct service instance of COM072, try to use WebService with url http://localhost:1010/api/
+2020-06-02 13:52:12,320 [5] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => http://localhost:1010/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Tue, 02 Jun 2020 06:52:12 GMT
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Content-Length: 4606
+  Content-Type: text/html; charset=utf-8
+}.
+2020-06-02 13:52:13,155 [5] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFBENHNHAN_DY, REFBENHNHAN_GROUP_DICHVU, REFBENHNHAN_MN, REFBENHNHAN_NT_CC, REFBENHNHAN_NT_DY, REFBENHNHAN_TIEPNHAN, REFBENHNHAN_TIEPNHAN_ALL, REFBENHNHAN_TIEPNHAN_DV_VTYT, REFBENHNHAN_TOATHUOC, REFDUOC_KYGUI_TONKHO, REFDUOC_TONKHO, REFDUOC_TONKHO_BOOKING, REFMAU_TONKHO, REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 239
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in C:\Projects\Core_eHos2_debug\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2020-06-02 13:52:13,201 [1] INFO  - [admin] Session started.
+2020-06-02 13:52:14,311 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2020-06-02 13:52:14,357 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2020-06-02 13:52:14,852 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2020-06-02 13:52:14,907 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2020-06-02 13:52:15,330 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2020-06-02 13:52:15,386 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2020-06-02 13:52:15,442 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2020-06-02 13:52:15,622 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2020-06-02 13:52:15,730 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2020-06-02 13:52:15,800 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2020-06-02 13:52:15,866 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2020-06-02 13:52:15,935 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2020-06-02 13:52:16,024 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2020-06-02 13:52:16,074 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2020-06-02 13:52:16,135 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2020-06-02 13:52:16,197 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2020-06-02 13:52:16,254 [1] WARN  - Can't get type of type 'COM73', assembly 'Screens/ScrCOM'
+2020-06-02 13:52:16,311 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2020-06-02 13:52:16,415 [1] WARN  - Can't get type of type 'CPM08', assembly 'Screens/ScrCPM'
+2020-06-02 13:52:16,510 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2020-06-02 13:52:17,134 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2020-06-02 13:52:17,200 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2020-06-02 13:52:17,274 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2020-06-02 13:52:17,326 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2020-06-02 13:52:17,444 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2020-06-02 13:52:17,815 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2020-06-02 13:52:17,872 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2020-06-02 13:52:17,950 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2020-06-02 13:52:18,012 [1] WARN  - Can't get type of type 'IPD91', assembly 'Screens/ScrOPT'
+2020-06-02 13:52:18,119 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2020-06-02 13:52:18,256 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2020-06-02 13:52:18,322 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2020-06-02 13:52:18,401 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2020-06-02 13:52:18,517 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2020-06-02 13:52:18,697 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2020-06-02 13:52:18,760 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2020-06-02 13:52:18,815 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2020-06-02 13:52:18,864 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2020-06-02 13:52:18,919 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2020-06-02 13:52:18,984 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2020-06-02 13:52:19,192 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2020-06-02 13:52:19,274 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2020-06-02 13:52:19,333 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2020-06-02 13:52:19,392 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2020-06-02 13:52:19,601 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2020-06-02 13:52:19,911 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2020-06-02 13:52:19,985 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2020-06-02 13:52:20,044 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2020-06-02 13:52:20,142 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2020-06-02 13:52:20,206 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2020-06-02 13:52:20,384 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2020-06-02 13:52:21,149 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-06-02 18:19:49,557 [1] WARN  - DataRepository for 'REFBENHNHAN_NT_CC' is null.

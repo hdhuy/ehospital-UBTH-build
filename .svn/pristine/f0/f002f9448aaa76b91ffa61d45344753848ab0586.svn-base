@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,203228845d7c696cee51403edfc4db64-->
+        <statement id="DAO00004_GetAll" resultClass="DataObject">
+            select
+            TINH.TENDONVI AS TINH
+            , TINH.TENTAT AS TENTATTINH
+            , HUYEN.TENDONVI AS HUYEN
+            , HUYEN.TENTAT AS TENTATHUYEN
+            , XA.TENDONVI AS XA
+            , XA.MADONVI,
+            XA.TENTAT AS TENTATXA
+            FROM TM_DONVIHANHCHINH XA
+            JOIN TM_DONVIHANHCHINH HUYEN ON (XA.CAPTREN_ID = HUYEN.DONVIHANHCHINH_ID AND XA.CAPDONVI = 4)
+            JOIN TM_DONVIHANHCHINH TINH ON (HUYEN.CAPTREN_ID = TINH.DONVIHANHCHINH_ID AND HUYEN.CAPDONVI = 3)
+            ORDER BY TINH, HUYEN, XA
+        </statement>
+        <!--Revision:0,d86507557c67e1b29a92a9f368b34b8e-->
+        <statement id="DAO00004_GetList" resultClass="DataObject">
+            declare @BOOTS varchar(15)
+            select @BOOTS = VALUE from TM_SYS_APPSETTINGS BOOST where CODE = 'APP_LOCATION_DVHC'  and BENHVIEN_ID = '$BENHVIEN_ID$'
+            select
+            TINH.TENDONVI AS TINH
+            , TINH.TENTAT AS TENTATTINH
+            , HUYEN.TENDONVI AS HUYEN
+            , HUYEN.TENTAT AS TENTATHUYEN
+            , XA.TENDONVI AS XA
+            , XA.MADONVI
+            , (XA.TENDONVI + ' ' + HUYEN.TENDONVI + ' ' + TINH.TENDONVI) AS TENTIMKIEM
+            , (XA.TENDAYDU + ', ' + HUYEN.TENDAYDU + ', ' + TINH.TENDAYDU) AS TENDAYDU,
+            XA.TENTAT AS TENTATXA,
+            (CASE
+            WHEN TINH.MADONVI  = @BOOTS
+            THEN 1
+            ELSE 0
+            END) as BOOST_SCORED
+            FROM TM_DONVIHANHCHINH XA
+            JOIN TM_DONVIHANHCHINH HUYEN ON (XA.CAPTREN_ID = HUYEN.DONVIHANHCHINH_ID AND XA.CAPDONVI = 4)
+            JOIN TM_DONVIHANHCHINH TINH ON (HUYEN.CAPTREN_ID = TINH.DONVIHANHCHINH_ID AND HUYEN.CAPDONVI = 3)
+            ORDER BY BOOST_SCORED desc, TINH, HUYEN, XA asc
+        </statement>
+    </statements>
+</sqlMap>

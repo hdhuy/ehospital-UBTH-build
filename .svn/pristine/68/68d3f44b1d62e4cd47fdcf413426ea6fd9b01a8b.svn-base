@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <statement id="DAO00312_GetAll" resultClass="DataObject">
+      select *
+      from TT_PHACDO_CHUKY_DUOC
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      order by CHUKY_DUOC_ID
+    </statement>
+    <statement id="DAO00312_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_PHACDO_CHUKY_DUOC
+      where TT_PHACDO_CHUKY_DUOC.CHUKY_DUOC_ID  = $CHUKY_DUOC_ID$
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      order by CHUKY_DUOC_ID
+    </statement>
+    <statement id="DAO00312_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_PHACDO_CHUKY_DUOC
+      where
+      CHUKY_DUOC_ID in (SELECT * FROM DBO.SPLIT('$CHUKY_DUOC_ID$',', '))
+    </statement>
+    <statement id="DAO00312_GetList" resultClass="DataObject">
+      select *
+      from LST_DICTIONARY
+      where DICTIONARY_TYPE_CODE = 'DanhGiaPhacDo'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00312_AddByJson" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      declare @JSONDATA nvarchar(max) = N'$JSON_ADDPHA$'
+
+      insert into TT_PHACDO_CHUKY_DUOC
+      SELECT *
+      FROM OPENJSON(@JSONDATA)
+      WITH (
+      CHUKY_ID int
+      , PHACDO_ID int
+      , PHIENBAN_ID int
+      , DUOC_ID int
+      , HOATCHAT_ID int
+      , HAMLUONG nvarchar(100)
+      , SOLUONG numeric(25,4)
+      , SONGAY int
+      , SOLANTRENNGAY int
+      , SOLUONGTRENLAN numeric(25,4)
+      , SOLUONG_BUOISANG numeric(25,4)
+      , SOLUONG_BUOITRUA numeric(25,4)
+      , SOLUONG_BUOICHIEU numeric(25,4)
+      , SOLUONG_BUOITOI numeric(25,4)
+      , DUONGDUNG_ID int
+      , GHICHU nvarchar(250)
+      , BENHVIEN_ID varchar(10)
+      , NGAYTAO datetime
+      , NGUOITAO_ID int
+      , NGAYCAPNHAT datetime
+      , NGUOICAPNHAT_ID int
+      )
+    </statement>
+    <update id="DAO00312_UpdateByJson" parameterClass="System.Collections.IDictionary">
+      declare @JSONDATA nvarchar(max) = N'$JSON_UPDATEPHA$'
+
+      update TT_PHACDO_CHUKY_DUOC set
+      CHUKY_ID = json.CHUKY_ID
+      , PHACDO_ID = json.PHACDO_ID
+      , DUOC_ID = json.DUOC_ID
+      , HOATCHAT_ID = json.HOATCHAT_ID
+      , HAMLUONG = json.HAMLUONG
+      , SOLUONG = json.SOLUONG
+      , SONGAY = json.SONGAY
+      , SOLANTRENNGAY = json.SOLANTRENNGAY
+      , SOLUONGTRENLAN = json.SOLUONGTRENLAN
+      , SOLUONG_BUOISANG = json.SOLUONG_BUOISANG
+      , SOLUONG_BUOITRUA = json.SOLUONG_BUOITRUA
+      , SOLUONG_BUOICHIEU = json.SOLUONG_BUOICHIEU
+      , SOLUONG_BUOITOI = json.SOLUONG_BUOITOI
+      , DUONGDUNG_ID = json.DUONGDUNG_ID
+      , GHICHU = json.GHICHU
+      , BENHVIEN_ID = json.BENHVIEN_ID
+      , NGAYCAPNHAT = json.NGAYCAPNHAT
+      , NGUOICAPNHAT_ID = json.NGUOICAPNHAT_ID
+      FROM OPENJSON(@JSONDATA)
+      WITH(
+      CHUKY_DUOC_ID int
+      , CHUKY_ID int
+      , PHACDO_ID int
+      , PHIENBAN_ID int
+      , DUOC_ID int
+      , HOATCHAT_ID int
+      , HAMLUONG nvarchar(100)
+      , SOLUONG numeric(25,4)
+      , SONGAY int
+      , SOLANTRENNGAY int
+      , SOLUONGTRENLAN numeric(25,4)
+      , SOLUONG_BUOISANG numeric(25,4)
+      , SOLUONG_BUOITRUA numeric(25,4)
+      , SOLUONG_BUOICHIEU numeric(25,4)
+      , SOLUONG_BUOITOI numeric(25,4)
+      , DUONGDUNG_ID int
+      , GHICHU nvarchar(250)
+      , BENHVIEN_ID varchar(10)
+      , NGAYCAPNHAT datetime
+      , NGUOICAPNHAT_ID int
+      ) json
+      WHERE TT_PHACDO_CHUKY_DUOC.CHUKY_DUOC_ID = json.CHUKY_DUOC_ID
+    </update>
+  </statements>
+</sqlMap>

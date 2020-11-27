@@ -1,0 +1,135 @@
+FPT.Framework.Presentation.GridViewStyle, FPT.Framework.Presentation
+{
+  "RowHeaderCellStyle": {
+    "ForeColor": "@gridhdrfg",
+    "BackColor": "@gridhdrbg",
+    "SelectionForeColor": "@white",
+    "SelectionBackColor": "255,51,153,255",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": true,
+    "Padding": "0, 0, 0, 0"
+  },
+  "ColumnHeaderCellStyle": {
+    "ForeColor": "@gridhdrfg",
+    "BackColor": "@gridhdrbg",
+    "SelectionForeColor": "@white",
+    "SelectionBackColor": "255,51,153,255",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": false,
+    "Padding": "0, 0, 0, 0"
+  },
+  "CellStyle": {
+    "ForeColor": "@gridcellfg1",
+    "BackColor": "@gridcellbg1",
+    "SelectionForeColor": "@gridselfg",
+    "SelectionBackColor": "@gridselbg",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": false,
+    "Padding": "0, 0, 0, 0"
+  },
+  "AlternativeCellStyle": {
+    "ForeColor": "@gridcellfg2",
+    "BackColor": "@gridcellbg2",
+    "SelectionForeColor": "@gridselfg",
+    "SelectionBackColor": "@gridselbg",
+    "Font": {
+      "Name": "Segoe UI",
+      "Size": 9.75,
+      "Style": 0,
+      "Weight": 400
+    },
+    "WrapMode": false,
+    "Padding": "0, 0, 0, 0"
+  },
+  "GridColor": "@gridline",
+  "BackColor": "@gridbg",
+  "ForeColor": "255,0,0,0",
+  "RowHeight": 24,
+  "ColumnHeadersHeight": 26,
+  "RowHeadersWidth": 25,
+  "ColumnHeadersVisible": true,
+  "RowHeadersVisible": false,
+  "Groups": 
+	[
+	  {
+		"ForeColor": "@gridgroupfg1",
+		"BackColor": "@gridgroupbg1",
+		"SelectionForeColor": "@gridgroupselfg1",
+		"SelectionBackColor": "@gridgroupselbg1",
+		"Font": {
+		  "Name": "Segoe UI",
+		  "Size": 9.75,
+		  "Style": 0,
+		  "Weight": 400
+		},
+		"WrapMode": false,
+		"Padding": "0, 0, 0, 0"
+      },
+	],
+  "RowFormats": 
+    [
+	  {
+	    "Row": {
+		  "Type": 2,
+		  "Value": 0,
+		},
+		"ReferenceCell": {
+		  "Type": 1,
+		  "Value": "IS_FOLDER",
+	    },
+		"AppliesTo": {
+		  "Type": 2,
+		  "Value": 0,
+		},
+		"Expression": {
+		  "Type": 0,
+		  "Value": {
+		    "Type": 1,
+		    "Value": 1,
+		  },
+		},
+		"Style": {	  
+		  "Font": "Bold"
+		},
+	  },
+	  {
+	    "Row": {
+		  "Type": 2,
+		  "Value": 0,
+		},
+		"ReferenceCell": {
+		  "Type": 1,
+		  "Value": "IS_SIGN",
+	    },
+		"AppliesTo": {
+		  "Type": 2,
+		  "Value": 0,
+		},
+		"Expression": {
+		  "Type": 0,
+		  "Value": {
+		    "Type": 1,
+		    "Value": 1,
+		  },
+		},
+		"Style": {	  
+		  "ForeColor": "@Blue"
+		},
+	  }
+	]
+}

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <statements>
+    <statement id="DAO09820_GetDanhSachHoSoDaXuatBHXH" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from
+      (
+      select COUNT(*) OVER() as TOTALROWS,  ROW_NUMBER() OVER(order by T.ID desc) as ROWNUMBER, * from
+      (
+      select distinct X.ID, X.BENHVIEN_ID, X.BENHNHAN_ID, X.TIEPNHAN_ID, X.SOTHE, BN.TENBENHNHAN, pb.TENPHONGBAN
+      , CASE WHEN X.LOAIBANGKE = 'BangKe01' then N'Bảng kê 01'
+      WHEN X.LOAIBANGKE = 'BangKe02' then N'Bảng kê 02'
+      ELSE N'' END AS LOAIBANGKE
+      , xn.thoigianxacnhan AS NGAYXACNHAN
+      , X.THOIGIANBATDAU, X.THOIGIANKETTHUC
+      , CASE WHEN X.TRANGTHAI = 'CHOXULY' THEN N'Chờ xử lý'
+      WHEN X.TRANGTHAI = 'LOIDULIEU' THEN N'Lỗi dữ liệu'
+      WHEN X.TRANGTHAI = 'CHOUPLOAD' THEN N'Đã xuất'
+      WHEN X.TRANGTHAI = 'UPLOADTHANHCONG' THEN N'Upload thành công'
+      WHEN X.TRANGTHAI = 'UPLOADTHATBAI' THEN N'Upload thất bại'
+      WHEN X.TRANGTHAI = 'CHOXUATLAI' THEN N'Chờ xuất lại'
+      ELSE NULL END AS TRANGTHAI
+      , X.LYDO, X.SOLANRETRY, X.TENFILE, X.XUATLAI, BN.MAYTE, BA.SOBENHAN, X.XUATLAI AS XUATLAI_ORG, X.VALID_MSG, X.LOAIBANGKE AS LOAIBANGKE_CODE, BA.BENHAN_ID
+      , TN.THOIGIANTIEPNHAN AS NGAYVAO
+      , CASE WHEN X.LOAIBANGKE = 'BangKe01' THEN XN.THOIGIANXACNHAN
+      ELSE BA.THOIGIANRAVIEN
+      END AS NGAYRA
+      from TM_SYS_UPLOAD_BHYT_XML X
+      left join TT_BENHNHAN BN on BN.BENHNHAN_ID = X.BENHNHAN_ID and X.BENHVIEN_ID = BN.BENHVIEN_ID
+      left join TT_NOITRU_BENHAN BA on BA.TIEPNHAN_ID = X.TIEPNHAN_ID and BA.BENHVIEN_ID = X.BENHVIEN_ID
+      left join TM_PHONGBAN pb on pb.PHONGBAN_ID = isnull(ba.KHOACHUYENDEN_ID, ba.KHOAVAO_ID)
+      left join tt_xacnhanchiphi xn on x.tiepnhan_id = xn.tiepnhan_id
+      left join TT_TIEPNHAN TN ON TN.TIEPNHAN_ID = X.TIEPNHAN_ID
+
+      WHERE ((CAST(#ISNOITRU# AS BIT) = 1 AND X.LOAIBANGKE = 'BangKe02') OR CAST(#ISNGOAITRU# AS BIT) = 1 AND X.LOAIBANGKE = 'BangKe01')
+      and xn.xacnhanchiphi_id is not null
+      AND X.BENHVIEN_ID = '$BENHVIEN_ID$'
+      AND XN.XACNHANCHIPHI_ID IS NOT NULL
+
+      <dynamic prepend="AND">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="TUNGAY">
+            CAST(X.THOIGIANBATDAU AS DATE) BETWEEN CAST('$TUNGAY$' AS DATE) AND CAST('$DENNGAY$' AS DATE)
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MAYTE">
+            (BN.MAYTE like '%' + #MAYTE# + '%' or BN.TENBENHNHAN like '%' + #MAYTE# + '%')
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOBENHAN">
+            BA.SOBENHAN like '%' + '$SOBENHAN$' + '%'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TENBENHNHAN">
+            BN.TENBENHNHAN like '%' + #TENBENHNHAN# + '%'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOTHE">
+            X.SOTHE like '%' + #SOTHE# + '%'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TRANGTHAI">
+            X.TRANGTHAI = '$TRANGTHAI$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      <!--ORDER BY X.THOIGIANBATDAU DESC-->
+      )T
+      )R
+      where R.ROWNUMBER between '$FROMROW$' and '$TOROW$'
+    </statement>
+    <update id="DAO09820_UpdateXML_BHXH" parameterClass="System.Collections.IDictionary">
+      update TM_SYS_UPLOAD_BHYT_XML set
+      XUATLAI = #XUATLAI#,
+      TRANGTHAI = 'CHOXUATLAI'
+      where      ID = $ID$
+    </update>
+    <statement id="DAO09820_GetListAll" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select distinct X.ID, X.BENHVIEN_ID, X.BENHNHAN_ID, X.TIEPNHAN_ID, X.SOTHE, BN.TENBENHNHAN, pb.TENPHONGBAN
+      , CASE WHEN X.LOAIBANGKE = 'BangKe01' then N'Bảng kê 01'
+      WHEN X.LOAIBANGKE = 'BangKe02' then N'Bảng kê 02'
+      ELSE N'' END AS LOAIBANGKE
+      , xn.thoigianxacnhan AS NGAYXACNHAN
+      , X.THOIGIANBATDAU, X.THOIGIANKETTHUC
+      , CASE WHEN X.TRANGTHAI = 'CHOXULY' THEN N'Chờ xử lý'
+      WHEN X.TRANGTHAI = 'LOIDULIEU' THEN N'Lỗi dữ liệu'
+      WHEN X.TRANGTHAI = 'CHOUPLOAD' THEN N'Đã xuất'
+      WHEN X.TRANGTHAI = 'UPLOADTHANHCONG' THEN N'Upload thành công'
+      WHEN X.TRANGTHAI = 'UPLOADTHATBAI' THEN N'Upload thất bại'
+      WHEN X.TRANGTHAI = 'CHOXUATLAI' THEN N'Chờ xuất lại'
+      ELSE NULL END AS TRANGTHAI
+      , X.LYDO, X.SOLANRETRY, X.TENFILE, X.XUATLAI, BN.MAYTE, BA.SOBENHAN, X.XUATLAI AS XUATLAI_ORG, X.VALID_MSG, X.LOAIBANGKE AS LOAIBANGKE_CODE, BA.BENHAN_ID
+      , TN.THOIGIANTIEPNHAN AS NGAYVAO
+      , CASE WHEN X.LOAIBANGKE = 'BangKe01' THEN XN.THOIGIANXACNHAN
+      ELSE BA.THOIGIANRAVIEN
+      END AS NGAYRA
+      from TM_SYS_UPLOAD_BHYT_XML X
+      left join TT_BENHNHAN BN on BN.BENHNHAN_ID = X.BENHNHAN_ID and X.BENHVIEN_ID = BN.BENHVIEN_ID
+      left join TT_NOITRU_BENHAN BA on BA.TIEPNHAN_ID = X.TIEPNHAN_ID and BA.BENHVIEN_ID = X.BENHVIEN_ID
+      left join TM_PHONGBAN pb on pb.PHONGBAN_ID = isnull(ba.KHOACHUYENDEN_ID, ba.KHOAVAO_ID)
+      left join tt_xacnhanchiphi xn on x.tiepnhan_id = xn.tiepnhan_id
+      left join TT_TIEPNHAN TN ON TN.TIEPNHAN_ID = X.TIEPNHAN_ID
+
+      WHERE ((CAST(#ISNOITRU# AS BIT) = 1 AND X.LOAIBANGKE = 'BangKe02') OR CAST(#ISNGOAITRU# AS BIT) = 1 AND X.LOAIBANGKE = 'BangKe01')
+      and xn.xacnhanchiphi_id is not null
+      AND X.BENHVIEN_ID = '$BENHVIEN_ID$'
+      AND XN.XACNHANCHIPHI_ID IS NOT NULL
+
+      <dynamic prepend="AND">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="TUNGAY">
+            CAST(XN.thoigianxacnhan AS DATE) BETWEEN CAST('$TUNGAY$' AS DATE) AND CAST('$DENNGAY$' AS DATE)
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MAYTE">
+              (BN.MAYTE like '%' + #MAYTE# + '%' OR BN.TENBENHNHAN LIKE '%' + #MAYTE# + '%')
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOBENHAN">
+            BA.SOBENHAN like '%' + '$SOBENHAN$' + '%'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TENBENHNHAN">
+            BN.TENBENHNHAN like '%' + #TENBENHNHAN# + '%'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOTHE">
+            X.SOTHE like '%' + #SOTHE# + '%'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TRANGTHAI">
+            X.TRANGTHAI = '$TRANGTHAI$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    ORDER BY X.THOIGIANBATDAU DESC
+    </statement>
+    <statement id="DAO09820_KiemTraBenhNhanDuocChiDinhDichVuTaiPhong" resultClass="DataObject">
+      IF EXISTS (
+      select DVYC.DVYEUCAU_ID
+      from TT_DVYEUCAU DVYC
+      WHERE DVYC.TIEPNHAN_ID='$TIEPNHAN_ID$' AND DVYC.NOITHUCHIEN_ID='$PHONGBAN_ID$' AND DVYC.HUYYEUCAU='0' AND DVYC.TRANGTHAI= 'CHUAKETQUA' AND DVYC.BENHVIEN_ID='$BENHVIEN_ID$'
+      )
+      BEGIN
+
+      IF EXISTS (
+      select VP.VIENPHI_ID
+      from TT_VIENPHI vp
+      INNER JOIN TT_DVYEUCAU YC ON VP.REF_ID=YC.DVYEUCAU_ID AND VP.REF_TABLE='TT_DVYEUCAU'
+      left join TM_DOITUONG DT on DT.DOITUONG_ID = vp.DOITUONG_HUONG_ID
+      WHERE VP.TIEPNHAN_ID='$TIEPNHAN_ID$' AND YC.NOITHUCHIEN_ID='$PHONGBAN_ID$' AND VP.DATHANHTOAN='0' AND YC.BENHVIEN_ID='$BENHVIEN_ID$' AND YC.HUYYEUCAU='0'
+      and DT.MADOITUONG = 'VP' and VP.DATHANHTOAN='0' and VP.KHONGTHUTIEN = '0' and YC.THUTIENSAU = '0'
+      )
+      BEGIN
+      SELECT -2 AS RESULT
+      END
+      ELSE
+      BEGIN
+      SELECT 1 AS RESULT
+      END
+      END
+      ELSE
+      BEGIN
+      SELECT -1 AS RESULT
+      END
+    </statement>
+  </statements>
+</sqlMap>

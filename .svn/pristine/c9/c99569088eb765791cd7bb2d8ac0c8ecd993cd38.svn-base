@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <statement id="DAO00310_GetAll" resultClass="DataObject">
+      select *
+      from TM_PHACDO
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="MAPHACDO">
+            MAPHACDO = '$MAPHACDO$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      order by PHACDO_ID
+    </statement>
+    <statement id="DAO00310_GetAllWithID" resultClass="DataObject">
+      select *
+      from TM_PHACDO
+      where PHACDO_ID = $PHACDO_ID$
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      order by PHACDO_ID
+    </statement>
+    <statement id="DAO00310_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TM_PHACDO (
+      MAPHACDO
+      , TENPHACDO
+      , ICD_ID
+      , MAICD
+      , GHICHU
+      , TAMNGUNG
+      , NGAYTAO
+      , NGUOITAO_ID
+      , BENHVIEN_ID
+      ) values (
+      #MAPHACDO#
+      , #TENPHACDO#
+      , #ICD_ID#
+      , #MAICD#
+      , #GHICHU#
+      , #TAMNGUNG#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      , #BENHVIEN_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+
+    <update id="DAO00310_Update" parameterClass="System.Collections.IDictionary">
+      update TM_PHACDO set
+      MAPHACDO = #MAPHACDO#
+      , TENPHACDO = #TENPHACDO#
+      , ICD_ID = #ICD_ID#
+      , MAICD = #MAICD#
+      , GHICHU = #GHICHU#
+      , TAMNGUNG = #TAMNGUNG#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      where
+      PHACDO_ID = $PHACDO_ID$
+    </update>
+    <statement id="DAO00310_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TM_PHACDO
+      where
+      PHACDO_ID = $PHACDO_ID$
+    </statement>
+    <statement id="DAO00310_GetAllPhacDo" resultClass="DataObject">
+      select pd.*, nv.TENNHANVIEN as NGUOITAO, nv2.TENNHANVIEN as NGUOICAPNHAT, ICD.TENICD
+      , case when pd.TAMNGUNG = '0' then N'Hiệu lực' else N'Hết hiệu lực' end TRANGTHAI
+      from TM_PHACDO pd
+      left join TM_NHANVIEN nv on nv.NHANVIEN_ID = pd.NGUOITAO_ID
+      left join TM_NHANVIEN nv2 on nv2.NHANVIEN_ID = pd.NGUOICAPNHAT_ID
+      inner join TM_ICD ICD on ICD.ICD_ID = pd.ICD_ID
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="FICD_ID">
+            pd.ICD_ID = $FICD_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="FTENPHACDO">
+            pd.TENPHACDO LIKE '%' + #FTENPHACDO# + '%'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="FNGUOITAO_ID">
+            pd.NGUOITAO_ID = $FNGUOITAO_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="FTAMNGUNG">
+            pd.TAMNGUNG = '$FTAMNGUNG$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+      order by pd.PHACDO_ID
+    </statement>
+    <statement id="DAO00310_GetListCache" resultClass="DataObject">
+      select PHACDO_ID, MAPHACDO, TENPHACDO, ICD_ID, MAICD
+      from TM_PHACDO
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00310_GetList" resultClass="DataObject">
+      select *
+      from TM_PHACDO
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00310_GetPhacDoUsing" resultClass="DataObject">
+      select top 1 pd.*
+      from TT_PHACDO_DIEUTRI pd
+      where pd.PHACDO_ID = $PHACDO_ID$
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        pd.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00310_GetAllInfoChuKy" resultClass="DataObject">
+      select A.*
+      from
+      (
+      select ck.PHACDO_ID, ck.MACHUKY, (convert(varchar(10), ck.THUTU) + '. ' + ck.MACHUKY + ' - ' + ck.TENCHUKY) as TEN, ck.TENCHUKY,ck.CHUKY_ID, ck.THUTU
+      , N'Thuốc' as DUOC, null as DICHVU
+      , (case when d.TENDUOCDAYDU is null then HC.TENHOATCHAT else d.TENDUOCDAYDU end + ' | ' + N'Sáng: ' + isnull(convert(varchar(10),cast(ck_duoc.SOLUONG_BUOISANG as float)),0) + ' | '
+      + N'Trưa: ' + isnull(convert(varchar(10),cast(ck_duoc.SOLUONG_BUOITRUA as float)),0) + ' | '
+      + N'Chiều: ' + isnull(convert(varchar(10),cast(ck_duoc.SOLUONG_BUOICHIEU as float)),0) + ' | '
+      + N'Tối: ' + isnull(convert(varchar(10),cast(ck_duoc.SOLUONG_BUOITOI as float)),0) + ' | '
+      + N'Số ngày: ' + isnull(convert(varchar(10),ck_duoc.SONGAY),0) + ' | '
+      + isnull(DuongDung.DICTIONARY_NAME,'')) as INFO
+      from TT_PHACDO_CHUKY_DUOC ck_duoc
+      left join LST_DICTIONARY DuongDung on DuongDung.DICTIONARY_ID = ck_duoc.DUONGDUNG_ID
+      left join TM_DUOC d on d.DUOC_ID = ck_duoc.DUOC_ID
+      inner join TM_PHACDO_CHUKY ck on ck.CHUKY_ID = ck_duoc.CHUKY_ID
+      left join TM_DUOC_HOATCHAT HC on HC.HOATCHAT_ID = ck_duoc.HOATCHAT_ID
+      where ck.PHACDO_ID = '$PHACDO_ID$' and ck_duoc.PHIENBAN_ID = '$PHIENBAN_ID$'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        ck_duoc.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      union all
+      select ck.PHACDO_ID, ck.MACHUKY, (convert(varchar(10), ck.THUTU) + '. ' + ck.MACHUKY + ' - ' + ck.TENCHUKY) as TEN, ck.TENCHUKY,ck.CHUKY_ID, ck.THUTU
+      ,null as DUOC, N'Dịch vụ' as DICHVU
+      ,(dv.TENDICHVU + ' | ' + N'Số lượng: ' + isnull(convert(varchar(10), cast(ck_dv.SOLUONG as float)),'')) as INFO
+      from TT_PHACDO_CHUKY_DICHVU ck_dv
+      left join TM_DICHVU dv on dv.DICHVU_ID = ck_dv.DICHVU_ID
+      inner join TM_PHACDO_CHUKY ck on ck.CHUKY_ID = ck_dv.CHUKY_ID
+      where ck.PHACDO_ID = '$PHACDO_ID$' and ck_dv.PHIENBAN_ID = '$PHIENBAN_ID$'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        ck_dv.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      <!--<dynamic prepend="where">
+      <isParameterPresent>
+        <isNotEmpty prepend="and" property="PHACDO_ID">
+          ck.PHACDO_ID = '$PHACDO_ID$'
+        </isNotEmpty>
+      </isParameterPresent>
+    </dynamic>-->
+      group by dv.TENDICHVU, ck.PHACDO_ID, ck.MACHUKY, ck.TENCHUKY, ck_dv.SOLUONG, ck.CHUKY_ID, ck.THUTU
+      )A
+      <!--order by A.THUTU-->
+    </statement>
+    <statement id="DAO00310_DeleteCK" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_PHACDO_CHUKY_DUOC where CHUKY_ID = $CHUKY_ID$ and PHIENBAN_ID = $PHIENBAN_ID$
+      delete from TT_PHACDO_CHUKY_DICHVU where CHUKY_ID = $CHUKY_ID$ and PHIENBAN_ID = $PHIENBAN_ID$
+    </statement>
+    <statement id="DAO00310_GetChuKyUsing" resultClass="DataObject">
+      SELECT *
+      FROM dbo.TT_PHACDO_DIEUTRI
+      WHERE CHUKY_ID = $CHUKY_ID$ AND PHACDO_ID = $PHACDO_ID$
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00310_GetAllVersion" resultClass="DataObject">
+      select PHIENBAN_ID, PHACDO_ID, NGAYPHATHANH, NGUOIPHATHANH
+      , case when TRANGTHAI = 'CHUAPHATHANH' THEN N'Chưa phát hành'
+            when TRANGTHAI = 'HIEULUC' then N'Hiệu lực'
+            when TRANGTHAI = 'HETHIEULUC' then N'Hết hiệu lực' end as TRANGTHAI
+      from TM_PHIENBAN_PHACDO
+      where PHACDO_ID = $PHACDO_ID$
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00310_GetAllThuoc" resultClass="DataObject">
+      SELECT cd.*, d.TENDUOCDAYDU, ld.DICTIONARY_NAME AS DUONGDUNG, hc.TENHOATCHAT
+      FROM TT_PHACDO_CHUKY_DUOC cd
+      left join TM_DUOC d ON d.DUOC_ID = cd.DUOC_ID
+      left join TM_DUOC_HOATCHAT hc ON hc.HOATCHAT_ID = cd.HOATCHAT_ID
+      LEFT JOIN dbo.LST_DICTIONARY ld ON cd.DUONGDUNG_ID = ld.DICTIONARY_ID
+      where PHACDO_ID = $PHACDO_ID$
+      <isNotEmpty prepend="and" property="CHUKY_ID">
+        CHUKY_ID = $CHUKY_ID$
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="LOAI">
+        CHUKY_ID NOT IN ('$LOAI$')
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="PHIENBAN_ID">
+        PHIENBAN_ID = $PHIENBAN_ID$
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        cd.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00310_GetAllDichVu" resultClass="DataObject">
+      SELECT cv.*,dv.TENDICHVU
+      FROM Tt_PHACDO_CHUKY_DICHVU cv
+      JOIN TM_DICHVU dv ON dv.DICHVU_ID = cv.DICHVU_ID
+      where PHACDO_ID = $PHACDO_ID$
+      <isNotEmpty prepend="and" property="CHUKY_ID">
+        CHUKY_ID = $CHUKY_ID$
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="LOAI">
+        CHUKY_ID NOT IN ('$LOAI$')
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="PHIENBAN_ID">
+        PHIENBAN_ID = $PHIENBAN_ID$
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        cv.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00310_GetPDWithVersion" resultClass="DataObject">
+      select pd.PHACDO_ID, MAPHACDO, TENPHACDO, ICD_ID, MAICD, case when PHIENBAN_ID is null then 0 else PHIENBAN_ID end as PHIENBAN_ID
+      from TM_PHACDO pd
+      left join
+      (select top 1 * from TM_PHIENBAN_PHACDO where TRANGTHAI = 'HIEULUC'
+      <isNotEmpty prepend="and" property="PHACDO_ID">
+        PHACDO_ID = $PHACDO_ID$
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      order by PHIENBAN_ID desc
+      ) pb on pb.PHACDO_ID = pd.PHACDO_ID
+    </statement>
+    <statement id="DAO00310_GetRegimen" resultClass="DataObject">
+      select PHACDO_ID, MAPHACDO, TENPHACDO, ICD_ID, MAICD
+      from TM_PHACDO
+      where TAMNGUNG = '0'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00310_UsedThuocHoatChat" resultClass="DataObject">
+      select distinct A.MAPHACDO, A.TENPHACDO, B.MACHUKY, B.TENCHUKY, C.*, E.TENDUOCDAYDU, F.TENHOATCHAT
+      from TM_PHACDO A
+      join TM_PHACDO_CHUKY B on A.PHACDO_ID = B.PHACDO_ID
+      join TT_PHACDO_CHUKY_DUOC C on C.CHUKY_ID = B.CHUKY_ID
+      join TM_PHIENBAN_PHACDO P on P.PHIENBAN_ID = C.PHIENBAN_ID
+      join TT_PHACDO_DIEUTRI D on D.CHUKY_ID = B.CHUKY_ID and D.PHACDO_ID = B.PHACDO_ID
+      left join TM_DUOC E on E.DUOC_ID = C.DUOC_ID
+      left join TM_DUOC_HOATCHAT F on F.HOATCHAT_ID = C.HOATCHAT_ID
+      where D.TRANGTHAI = 'DANGDUNG' and P.TRANGTHAI = 'HIEULUC'
+      <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+        D.TIEPNHAN_ID = $TIEPNHAN_ID$
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        A.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00310_UsedDichVu" resultClass="DataObject">
+      select distinct A.MAPHACDO, A.TENPHACDO, B.MACHUKY, B.TENCHUKY, C.*, E.TENDICHVU, E.MADICHVU
+      from TM_PHACDO A
+      join TM_PHACDO_CHUKY B on A.PHACDO_ID = B.PHACDO_ID
+      join TT_PHACDO_CHUKY_DICHVU C on C.CHUKY_ID = B.CHUKY_ID
+      join TM_PHIENBAN_PHACDO P on P.PHIENBAN_ID = C.PHIENBAN_ID
+      join TT_PHACDO_DIEUTRI D on D.CHUKY_ID = B.CHUKY_ID and D.PHACDO_ID = B.PHACDO_ID
+      inner join TM_DICHVU E on E.DICHVU_ID = C.DICHVU_ID
+      where D.TRANGTHAI = 'DANGDUNG' and P.TRANGTHAI = 'HIEULUC'
+      <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+        D.TIEPNHAN_ID = $TIEPNHAN_ID$
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        A.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      <isNotEmpty prepend="" property="SUDUNG">
+        <isEqual prepend="AND" property="SUDUNG" compareValue="True">
+          (D.PHACDO_ID = $PHACDO_ID$ and D.CHUKY_ID = $CHUKY_ID$)
+        </isEqual>
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00310_GetDuocHoatChat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select c.MADUOC, c.MADUOCBV, c.TENDUOCDAYDU, a.*
+      from TM_DUOC_HOATCHAT a
+      join TM_DUOC_THANHPHANHOATCHAT b on a.HOATCHAT_ID = b.HOATCHAT_ID
+      join TM_DUOC c on c.DUOC_ID = b.DUOC_ID
+      where a.HOATCHAT = '1' and a.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+  </statements>
+</sqlMap>

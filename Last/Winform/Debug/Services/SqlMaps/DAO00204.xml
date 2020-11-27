@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:1,d973e5ae1e65ee6043d8141650c8c296-->
+        <statement id="DAO00204_GetListProcedure" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT name AS NAME
+            FROM sys.procedures
+            ORDER BY name
+        </statement>
+        <!--Revision:0,8f2ea4b7067b672dcee8ead7fc460577-->
+        <statement id="DAO00204_GetListParameter" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT SUBSTRING(p.name, 2, LEN(p.name) - 1) AS PARAMETER, p.parameter_id AS Idx, CONVERT(varchar(1),p.is_nullable) as Allow_Null
+            FROM sys.procedures sp
+            INNER JOIN sys.parameters p ON sp.object_id = p.object_id
+            WHERE sp.name = '$value$'
+            ORDER BY p.parameter_id
+        </statement>
+        <!--Revision:2,0bf602a3b2f3ee034e694a8a2b202d68-->
+        <procedure id="DAO00204_GetReportData" parameterMap="parameters" resultClass="DataObject">
+            $PROCEDURE_NAME$
+        </procedure>
+    </statements>
+  <parameterMaps>
+    <parameterMap id="parameters" class="System.Collections.IDictionary">
+    </parameterMap>
+  </parameterMaps>
+</sqlMap>

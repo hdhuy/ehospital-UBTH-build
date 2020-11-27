@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,24cc77fb78c10f962dcbef016d8befda-->
+        <statement id="DAO00406_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          SELECT
+           KN.TENKHO AS TENKHONGUON
+          ,KD.TENKHO AS TENKHODICH
+          ,MP.KHONGUON_ID
+          ,MP.KHODICH_ID
+          ,MP.NGUONTINHTIEN
+          ,MP.NGUONMIENPHI
+          ,MP.T
+          ,MP.V
+          ,MP.H
+          ,MP.K
+          FROM TM_KHODUOC_MAPPING MP
+          inner join TM_KHODUOC KN on KN.KHODUOC_ID = MP.KHONGUON_ID
+          inner join TM_KHODUOC KD on KD.KHODUOC_ID = MP.KHODICH_ID
+          where
+          MP.TAMNGUNG = '0'
+          and MP.BENHVIEN_ID = '$BENHVIEN_ID$'
+          order by MP.KHONGUON_ID
+        </statement>
+    </statements>
+</sqlMap>

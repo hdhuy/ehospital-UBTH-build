@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,93139f3f7e49631de8600e18908dd53c-->
+        <statement id="DAO00034_GetList" resultClass="DataObject">
+          select *
+          from TM_BENHVIEN where isnull(TAMNGUNG,0) = '0'
+        </statement>
+    </statements>
+</sqlMap>

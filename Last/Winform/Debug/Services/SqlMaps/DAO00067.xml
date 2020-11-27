@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <!--Revision:0,57e79c7117909f16abfc8e7eb3b1a621-->
+    <statement id="DAO00067_KiemTraThongTinChuyenVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_CHUYENVIEN
+      where BENHVIEN_ID = '$BENHVIEN_ID$' and TIEPNHAN_ID = '$TIEPNHAN_ID$'
+    </statement>
+    <!--Revision:0,4a755bdc6bcab065917d1fe94c8ccd59-->
+    <statement id="DAO00067_GET_CHUYENVIENINFO_FROM_BENHNHANID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_CHUYENVIEN
+      where BENHNHAN_ID  = '$BENHNHAN_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$'
+      and TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      <isNotEmpty prepend="and" property="KHAMBENH_ID">
+        KHAMBENH_ID = '$KHAMBENH_ID$'
+      </isNotEmpty>
+    </statement>
+    <!--Revision:0,10b92bf10f1173fa630818f4998f9343-->
+    <statement id="DAO00067_GetAll" resultClass="DataObject">
+      select *
+      from TT_CHUYENVIEN
+      order by CHUYENVIEN_ID
+    </statement>
+    <!--Revision:0,470d55170f8fc9ad919179dea3f55f1e-->
+    <statement id="DAO00067_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select PB.*
+      from TM_PHONGBAN AS PB
+      inner join LST_DICTIONARY AS D on PB.LOAIPHONGBAN_ID = D.DICTIONARY_ID
+      and D.DICTIONARY_TYPE_CODE = 'LoaiPhongBan'
+      and D.DICTIONARY_CODE IN ('PhongBenh','KhamBenh','KhoaNoi','PhongMo','KhoaCLS')
+      where PB.BENHVIEN_ID = '$BENHVIEN_ID$' order by PB.TENPHONGBAN asc
+    </statement>
+    <!--Revision:0,50fd8745fa37ea6fb497d25277e26f0b-->
+    <statement id="DAO00067_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_CHUYENVIEN
+      where TT_CHUYENVIEN.CHUYENVIEN_ID  = '$value$'
+      order by CHUYENVIEN_ID
+    </statement>
+    <!--Revision:0,849813d846b0b181a6cc6b916c10b69a-->
+    <statement id="DAO00067_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_CHUYENVIEN
+      where TT_CHUYENVIEN.CHUYENVIEN_ID  = '$CHUYENVIEN_ID$'
+      order by CHUYENVIEN_ID
+    </statement>
+    <!--Revision:0,c1ec4edaa223296150769cc2a41caf71-->
+    <statement id="DAO00067_AddChuyenVienInfo" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TT_CHUYENVIEN (
+      SOPHIEU
+      , BENHNHAN_ID
+      , TIEPNHAN_ID
+      , KHAMBENH_ID
+      , BENHANNOITRU_ID
+      , BENHANNGOAITRU_ID
+      , BACSIYEUCAU_ID
+      , BACSITRUONGKHOA_ID
+      , BENHVIEN_CHUYENDEN_ID
+      , LYDOCHUYENVIEN_ID
+      , CHANDOANICD_ID
+      , CHANDOAN
+      , NGAYCHUYEN
+      , GHICHU
+      , DAUHIEULAMSANG
+      , TINHTRANG
+      , NGUOIDUADI
+      , PHUONGTIEN
+      , CHUYENVIENBANGGIAYKHAISINH
+      , THUOCDADUNG
+      , HINHTHUCCHUYENVIEN_ID
+      , HUONGDIEUTRI
+      , TIEPNHAN_NOIGIOITHIEU_ID
+      , TIEPNHAN_SOCHUYENTUYEN
+      , TIEPNHAN_NGAYCHUYENDEN
+      , TIEPNHAN_TUYENCHUYEN_ID
+      , TIEPNHAN_LYDOCHUYENDEN_ID
+      , TIEPNHAN_CHANDOAN_NGT
+      , PHUONGTIEN_ID
+      , BENHVIEN_ID
+      , NGAYTAO
+      , NGUOITAO_ID
+      , NGAYCAPNHAT
+      , NGUOICAPNHAT_ID
+      ) values (
+      #SOPHIEU#
+      , #BENHNHAN_ID#
+      , #TIEPNHAN_ID#
+      , #KHAMBENH_ID#
+      , #BENHANNOITRU_ID#
+      , #BENHANNGOAITRU_ID#
+      , #BACSIYEUCAU_ID#
+      , #BACSITRUONGKHOA_ID#
+      , #BENHVIEN_CHUYENDEN_ID#
+      , #LYDOCHUYENVIEN_ID#
+      , #CHANDOANICD_ID#
+      , #CHANDOAN#
+      , #NGAYCHUYEN#
+      , #GHICHU#
+      , #DAUHIEULAMSANG#
+      , #TINHTRANG#
+      , #NGUOIDUADI#
+      , #PHUONGTIEN#
+      , #CHUYENVIENBANGGIAYKHAISINH#
+      , #THUOCDADUNG#
+      , #HINHTHUCCHUYENVIEN_ID#
+      , #HUONGDIEUTRI#
+      , #TIEPNHAN_NOIGIOITHIEU_ID#
+      , #TIEPNHAN_SOCHUYENTUYEN#
+      , #TIEPNHAN_NGAYCHUYENDEN#
+      , #TIEPNHAN_TUYENCHUYEN_ID#
+      , #TIEPNHAN_LYDOCHUYENDEN_ID#
+      , #TIEPNHAN_CHANDOAN_NGT#
+      , #PHUONGTIEN_ID#
+      , #BENHVIEN_ID#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      , #NGAYCAPNHAT#
+      , #NGUOICAPNHAT_ID#
+      )
+      SELECT SCOPE_IDENTITY()
+      <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+    </statement>
+    <!--Revision:0,56b12b1f3d6cc186df44cc887594f11d-->
+    <update id="DAO00067_UpdateChuyenVienInfo" parameterClass="System.Collections.IDictionary">
+      update TT_CHUYENVIEN set
+      BENHNHAN_ID = #BENHNHAN_ID#
+      , TIEPNHAN_ID = #TIEPNHAN_ID#
+      , KHAMBENH_ID = #KHAMBENH_ID#
+      , BENHANNOITRU_ID = #BENHANNOITRU_ID#
+      , BENHANNGOAITRU_ID = #BENHANNGOAITRU_ID#
+      , BACSIYEUCAU_ID = #BACSIYEUCAU_ID#
+      , BACSITRUONGKHOA_ID = #BACSITRUONGKHOA_ID#
+      , BENHVIEN_CHUYENDEN_ID = #BENHVIEN_CHUYENDEN_ID#
+      , LYDOCHUYENVIEN_ID = #LYDOCHUYENVIEN_ID#
+      , CHANDOANICD_ID = #CHANDOANICD_ID#
+      , CHANDOAN = #CHANDOAN#
+      , NGAYCHUYEN = #NGAYCHUYEN#
+      , GHICHU = #GHICHU#
+      , DAUHIEULAMSANG = #DAUHIEULAMSANG#
+      , TINHTRANG = #TINHTRANG#
+      , NGUOIDUADI = #NGUOIDUADI#
+      , PHUONGTIEN = #PHUONGTIEN#
+      , CHUYENVIENBANGGIAYKHAISINH = #CHUYENVIENBANGGIAYKHAISINH#
+      , THUOCDADUNG = #THUOCDADUNG#
+      , HINHTHUCCHUYENVIEN_ID = #HINHTHUCCHUYENVIEN_ID#
+      , HUONGDIEUTRI = #HUONGDIEUTRI#
+      , TIEPNHAN_NOIGIOITHIEU_ID = #TIEPNHAN_NOIGIOITHIEU_ID#
+      , TIEPNHAN_SOCHUYENTUYEN = #TIEPNHAN_SOCHUYENTUYEN#
+      , TIEPNHAN_NGAYCHUYENDEN = #TIEPNHAN_NGAYCHUYENDEN#
+      , TIEPNHAN_TUYENCHUYEN_ID = #TIEPNHAN_TUYENCHUYEN_ID#
+      , TIEPNHAN_LYDOCHUYENDEN_ID = #TIEPNHAN_LYDOCHUYENDEN_ID#
+      , TIEPNHAN_CHANDOAN_NGT = #TIEPNHAN_CHANDOAN_NGT#
+      , PHUONGTIEN_ID = #PHUONGTIEN_ID#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      CHUYENVIEN_ID = '$CHUYENVIEN_ID$'
+    </update>
+    <!--Revision:0,7118fce4464b641442d7ef062fd3a9e7-->
+    <statement id="DAO00067_DeleteChuyenVienInfo" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_CHUYENVIEN
+      where
+      CHUYENVIEN_ID = '$CHUYENVIEN_ID$'
+    </statement>
+    <!--Revision:0,d7c5613bc8243965093f8c8d88c2b3b5-->
+    <statement id="DAO00067_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_CHUYENVIEN
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="CHUYENVIEN_ID">
+            TT_CHUYENVIEN.CHUYENVIEN_ID = '$CHUYENVIEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOPHIEU">
+            TT_CHUYENVIEN.SOPHIEU = '$SOPHIEU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHNHAN_ID">
+            TT_CHUYENVIEN.BENHNHAN_ID = '$BENHNHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+            TT_CHUYENVIEN.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="KHAMBENH_ID">
+            TT_CHUYENVIEN.KHAMBENH_ID = '$KHAMBENH_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHANNOITRU_ID">
+            TT_CHUYENVIEN.BENHANNOITRU_ID = '$BENHANNOITRU_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHANNGOAITRU_ID">
+            TT_CHUYENVIEN.BENHANNGOAITRU_ID = '$BENHANNGOAITRU_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BACSIYEUCAU_ID">
+            TT_CHUYENVIEN.BACSIYEUCAU_ID = '$BACSIYEUCAU_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BACSITRUONGKHOA_ID">
+            TT_CHUYENVIEN.BACSITRUONGKHOA_ID = '$BACSITRUONGKHOA_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_CHUYENDEN_ID">
+            TT_CHUYENVIEN.BENHVIEN_CHUYENDEN_ID = '$BENHVIEN_CHUYENDEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="LYDOCHUYENVIEN_ID">
+            TT_CHUYENVIEN.LYDOCHUYENVIEN_ID = '$LYDOCHUYENVIEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="CHANDOANICD_ID">
+            TT_CHUYENVIEN.CHANDOANICD_ID = '$CHANDOANICD_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="CHANDOAN">
+            TT_CHUYENVIEN.CHANDOAN = '$CHANDOAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYCHUYEN">
+            TT_CHUYENVIEN.NGAYCHUYEN = '$NGAYCHUYEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GHICHU">
+            TT_CHUYENVIEN.GHICHU = '$GHICHU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DAUHIEULAMSANG">
+            TT_CHUYENVIEN.DAUHIEULAMSANG = '$DAUHIEULAMSANG$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TINHTRANG">
+            TT_CHUYENVIEN.TINHTRANG = '$TINHTRANG$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOIDUADI">
+            TT_CHUYENVIEN.NGUOIDUADI = '$NGUOIDUADI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="PHUONGTIEN">
+            TT_CHUYENVIEN.PHUONGTIEN = '$PHUONGTIEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="CHUYENVIENBANGGIAYKHAISINH">
+            TT_CHUYENVIEN.CHUYENVIENBANGGIAYKHAISINH = '$CHUYENVIENBANGGIAYKHAISINH$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="THUOCDADUNG">
+            TT_CHUYENVIEN.THUOCDADUNG = '$THUOCDADUNG$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HINHTHUCCHUYENVIEN_ID">
+            TT_CHUYENVIEN.HINHTHUCCHUYENVIEN_ID = '$HINHTHUCCHUYENVIEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="HUONGDIEUTRI">
+            TT_CHUYENVIEN.HUONGDIEUTRI = '$HUONGDIEUTRI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_NOIGIOITHIEU_ID">
+            TT_CHUYENVIEN.TIEPNHAN_NOIGIOITHIEU_ID = '$TIEPNHAN_NOIGIOITHIEU_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_SOCHUYENTUYEN">
+            TT_CHUYENVIEN.TIEPNHAN_SOCHUYENTUYEN = '$TIEPNHAN_SOCHUYENTUYEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_NGAYCHUYENDEN">
+            TT_CHUYENVIEN.TIEPNHAN_NGAYCHUYENDEN = '$TIEPNHAN_NGAYCHUYENDEN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_TUYENCHUYEN_ID">
+            TT_CHUYENVIEN.TIEPNHAN_TUYENCHUYEN_ID = '$TIEPNHAN_TUYENCHUYEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_LYDOCHUYENDEN_ID">
+            TT_CHUYENVIEN.TIEPNHAN_LYDOCHUYENDEN_ID = '$TIEPNHAN_LYDOCHUYENDEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_CHANDOAN_NGT">
+            TT_CHUYENVIEN.TIEPNHAN_CHANDOAN_NGT = '$TIEPNHAN_CHANDOAN_NGT$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="PHUONGTIEN_ID">
+            TT_CHUYENVIEN.PHUONGTIEN_ID = '$PHUONGTIEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            TT_CHUYENVIEN.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYTAO">
+            TT_CHUYENVIEN.NGAYTAO = '$NGAYTAO$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOITAO_ID">
+            TT_CHUYENVIEN.NGUOITAO_ID = '$NGUOITAO_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+            TT_CHUYENVIEN.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+            TT_CHUYENVIEN.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00067_GetDanhsachthuocNoitru" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select  D.TENNHOMDUOC, B.TENDUOCDAYDU, SUM(A.SOLUONG) SOLUONG, C.TENDONVITINH
+      from TT_NOITRU_TOATHUOC A
+      left join TM_DUOC B on A.DUOC_ID = B.DUOC_ID
+      left join TM_DONVITINH C on C.DONVITINH_ID = B.DONVITINH_ID
+      left join TM_NHOMDUOC D on D.NHOMDUOC_ID = B.NHOMDUOC_ID
+      inner join TT_NOITRU_KHAMBENH E on E.KHAMBENH_ID = A.KHAMBENH_ID
+      where E.BENHAN_ID = '$BENHAN_ID$'
+      group by B.TENDUOCDAYDU, C.TENDONVITINH, D.TENNHOMDUOC
+      order by D.TENNHOMDUOC
+    </statement>
+    <statement id="DAO00067_GetDanhsachxetnghiemkq" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select distinct C.CLSKETQUACHITIET_ID, B.TENDICHVU, C.KETQUA, C.DICHVU_ID, A.DVYEUCAU_ID
+      from TT_DVYEUCAU A
+      inner join TT_CLSKETQUACHITIET C on C.DVYEUCAU_ID = A.DVYEUCAU_ID
+      left join TM_DICHVU B on C.DICHVU_ID = B.DICHVU_ID
+      where A.HUYYEUCAU = '0' and A.BENHAN_ID is not null
+      <!--and A.DVYEUCAU_ID in (6351, 6349, 6350)-->
+      AND (#BENHAN_ID# IS NOT NULL OR #TIEPNHAN_ID# IS NOT NULL)
+      <isNotEmpty prepend="and" property="BENHAN_ID">
+        A.BENHAN_ID = '$BENHAN_ID$'
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+        A.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      </isNotEmpty>
+      order by C.CLSKETQUACHITIET_ID
+    </statement>
+    <statement id="DAO00067_GetDanhsachsieuamkq" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select C.DVYEUCAU_ID, B.TENDICHVU,C.KETLUAN
+      from TT_DVYEUCAU A
+      inner join TT_CLSKETQUA C on C.DVYEUCAU_ID = A.DVYEUCAU_ID
+      left join TM_DICHVU B on C.DICHVU_ID = B.DICHVU_ID
+      where
+      (#BENHAN_ID# IS NOT NULL OR #TIEPNHAN_ID# IS NOT NULL) AND
+      <!--A.DVYEUCAU_ID in (151747, 151748, 151754, 151759)-->
+      A.DVYEUCAU_ID not in
+      (select DVYEUCAU_ID from TT_CLSKETQUACHITIET
+      where exists (
+      select DVYEUCAU_ID from TT_DVYEUCAU where TT_CLSKETQUACHITIET.DVYEUCAU_ID = DVYEUCAU_ID
+      <!--<isParameterPresent>
+          <isNotEmpty prepend="and" property="BENHAN_ID">
+            BENHAN_ID = $BENHAN_ID$
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+            TIEPNHAN_ID = $TIEPNHAN_ID$
+          </isNotEmpty>
+        </isParameterPresent>-->
+      ))
+      <isNotEmpty prepend="and" property="BENHAN_ID">
+        A.BENHAN_ID = $BENHAN_ID$
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+        A.TIEPNHAN_ID = $TIEPNHAN_ID$
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00067_GetDanhsachDichvuDungChoChuyentuyen" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.DICHVU_ID, B.TENDICHVU, A.DVYEUCAU_ID
+      from TT_DVYEUCAU A
+      left join TM_DICHVU B on A.DICHVU_ID = B.DICHVU_ID
+      left join TM_NHOMDICHVU C on C.NHOMDICHVU_ID = B.NHOMDICHVU_ID
+      where
+      (#BENHAN_ID# IS NOT NULL OR #TIEPNHAN_ID# IS NOT NULL) AND
+      LEFT(C.MANHOMDICHVU,2) in ('01', '02', '05', '06') and A.HUYYEUCAU = '0'
+      <!--A.DVYEUCAU_ID in (151747, 151748, 151754, 151759, 6351, 6349, 6350)-->
+      <isNotEmpty prepend="and" property="BENHAN_ID">
+        A.BENHAN_ID = '$BENHAN_ID$'
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+        A.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00067_AddNoitru_Soket" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      INSERT INTO TT_NOITRU_SOKET
+      (
+      BENHAN_ID
+      ,TIEPNHAN_ID
+      ,BENHNHAN_ID
+      ,DIENBIENLAMSANG
+      ,XETNGHIEMLAMSANG
+      ,QUATRINHDIEUTRI
+      ,DANHGIAKETQUA
+      ,HUONGDIEUTRI
+      ,BACSIDIEUTRI_ID
+      ,NGAYTAO
+      ,NGUOITAO_ID
+      ,BENHVIEN_ID
+      )
+      VALUES
+      (
+      #BENHAN_ID#
+      ,#TIEPNHAN_ID#
+      ,#BENHNHAN_ID#
+      ,#DIENBIENLAMSANG#
+      ,#XETNGHIEMLAMSANG#
+      ,#QUATRINHDIEUTRI#
+      ,#DANHGIAKETQUA#
+      ,#HUONGDIEUTRI#
+      ,#BACSIDIEUTRI_ID#
+      ,#NGAYTAO#
+      ,#NGUOITAO_ID#
+      ,#BENHVIEN_ID#
+      )
+      SELECT SCOPE_IDENTITY()
+    </statement>
+    <statement id="DAO00067_UpdateNoitru_Soket" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      update TT_NOITRU_SOKET set
+      DIENBIENLAMSANG = #DIENBIENLAMSANG#
+      ,XETNGHIEMLAMSANG = #XETNGHIEMLAMSANG#
+      ,QUATRINHDIEUTRI = #QUATRINHDIEUTRI#
+      ,DANHGIAKETQUA = #DANHGIAKETQUA#
+      ,HUONGDIEUTRI = #HUONGDIEUTRI#
+      ,BACSIDIEUTRI_ID = #BACSIDIEUTRI_ID#
+      ,NGAYTAO = #NGAYTAO#
+      ,NGAYCAPNHAT = #NGAYCAPNHAT#
+      ,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      BENHAN_SOKET_ID = '$BENHAN_SOKET_ID$'
+    </statement>
+    <statement id="DAO00067_GetDanhsachDichvuKhongKhambenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select B.TENDICHVU
+      from TT_DVYEUCAU A
+      left join TM_DICHVU B on A.DICHVU_ID = B.DICHVU_ID
+      left join TM_NHOMDICHVU C on C.NHOMDICHVU_ID = B.NHOMDICHVU_ID
+      <!--Chỉ lấy dịch vụ xét nghiệm-->
+      where SUBSTRING(C.MANHOMDICHVU, 1, 2) = ('01') and A.HUYYEUCAU = '0'
+      <isNotEmpty prepend="and" property="BENHAN_ID">
+        A.BENHAN_ID = '$BENHAN_ID$'
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+        A.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      </isNotEmpty>
+    </statement>
+
+    <statement id="DAO00067_GetDanhsachInTodieutri" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select FORMAT( NGAYTAO, 'dd/MM/yyyy HH:mm', 'en-US' )  as NGAYIN_DIEUTRI, *
+      from TT_NOITRU_SOKET
+      where
+      BENHAN_ID = '$BENHAN_ID$'
+    </statement>
+    <statement id="DAO00067_GetDataTodieutri" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select FORMAT( NGAYTAO, 'dd/MM/yyyy HH:mm', 'en-US' )  as NGAYIN_DIEUTRI, *
+      from TT_NOITRU_SOKET
+      where
+      BENHAN_ID = '$BENHAN_ID$'
+      <isNotEmpty prepend="and" property="BENHAN_SOKET_ID">
+        BENHAN_SOKET_ID = '$BENHAN_SOKET_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00067_GetLastSinhhieuNgoaiTruTiepNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select top 1 *
+      from TT_NGOAITRU_KHAMBENH_SINHHIEU
+      where
+      TIEPNHAN_ID = '$TIEPNHAN_ID$'
+      order by KHAMBENH_SINHHIEU_ID desc
+    </statement>
+    <statement id="DAO00067_DeleteVienPhi_Noref" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      <!--vien phi ref_id = 0-->
+      delete from TT_VIENPHI where TIEPNHAN_ID = $TIEPNHAN_ID$ and (REF_ID is null or REF_ID = 0)
+      <isNotEmpty prepend="and" property="BENHAN_ID">
+        BENHAN_ID = '$BENHAN_ID$'
+      </isNotEmpty>
+      <!--clear booking khg hop le-->
+      delete TT_DUOC_TONKHO_BOOK_NOITRU where REF_TABLE = 'TT_NOITRU_TOATHUOC' and (REF_ID is null or REF_ID = 0)
+      delete TT_DUOC_TONKHO_BOOK_NGOAITRU where REF_ID is null or REF_ID = 0
+    </statement>
+    <statement id="DAO00067_UpdateDVYeucauVienPhi_Noref" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      <!--delete from TT_VIENPHI-->
+      update TT_VIENPHI set SOLUONG = 0,THANHTIEN_DOANHTHU = 0, BHYT_THANHTIEN = 0, BHYT_THANHTIEN_CHITRA = 0
+      , GIATRI_BENHNHAN_DATHANHTOAN = 0, BENHNHAN_PHAITHANHTOAN = 0
+      where REF_TABLE = 'TT_DVYEUCAU' and TIEPNHAN_ID = #TIEPNHAN_ID#
+      and not exists (select DVYEUCAU_ID from TT_DVYEUCAU where TT_VIENPHI.REF_ID = DVYEUCAU_ID and TIEPNHAN_ID = #TIEPNHAN_ID#)
+    </statement>
+    <statement id="DAO00067_UpdateThuocNoiVienPhi_Noref" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      <!--tra thuoc/ thuoc noi tru-->
+      <isNotEmpty prepend="" property="BENHAN_ID">
+        <!--tra thuoc-->
+        update TT_VIENPHI
+        set SOLUONG = (TraThuoc.SOLUONG - TraThuoc.SOLUONG_NGUNG)
+        from (select distinct nttt.SOLUONG, ttct.TOATHUOC_ID, ttct.DUOC_ID , ttct.SOLUONG SOLUONG_NGUNG
+        from TT_NOITRU_TRATHUOC_CHITIET ttct
+        left join TT_NOITRU_TRATHUOC tt on tt.TRATHUOC_ID = ttct.TRATHUOC_ID
+        left join TT_NOITRU_TOATHUOC nttt on nttt.TOATHUOC_ID = ttct.TOATHUOC_ID
+        where tt.BENHAN_ID = #BENHAN_ID#) TraThuoc
+        where TT_VIENPHI.REF_ID = TraThuoc.TOATHUOC_ID and TT_VIENPHI.DUOC_ID = TraThuoc.DUOC_ID
+        and TT_VIENPHI.REF_TABLE = 'TT_NOITRU_TOATHUOC' and TT_VIENPHI.BENHAN_ID = #BENHAN_ID#
+        and TT_VIENPHI.SOLUONG > (TraThuoc.SOLUONG - TraThuoc.SOLUONG_NGUNG)
+        <!--thuoc noi tru-->
+        <!--delete from TT_VIENPHI-->
+        update TT_VIENPHI set SOLUONG = 0, THANHTIEN_DOANHTHU = 0, BHYT_THANHTIEN = 0, BHYT_THANHTIEN_CHITRA = 0
+        , GIATRI_BENHNHAN_DATHANHTOAN = 0, BENHNHAN_PHAITHANHTOAN = 0
+        where REF_TABLE = 'TT_NOITRU_TOATHUOC'
+        and TIEPNHAN_ID = #TIEPNHAN_ID#
+        and KHAMBENH_ID not in (select KHAMBENH_ID from TT_NOITRU_TOATHUOC where TIEPNHAN_ID = #TIEPNHAN_ID#)
+        and HOADON_ID is null and BENHAN_ID = #BENHAN_ID#
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00067_UpdateBenhanIdVienPhi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      <isNotEmpty prepend="" property="BENHAN_ID">
+        update TT_VIENPHI
+        set BENHAN_ID = #BENHAN_ID#
+        from (select TOATHUOC_ID from TT_NOITRU_TOATHUOC where TIEPNHAN_ID = #TIEPNHAN_ID#) nttt
+        where REF_TABLE = 'TT_NOITRU_TOATHUOC' and REF_ID = nttt.TOATHUOC_ID and isnull(BENHAN_ID, 0) = 0
+        and TIEPNHAN_ID = #TIEPNHAN_ID#
+
+        update TT_VIENPHI
+        set TT_VIENPHI.BENHAN_ID = #BENHAN_ID#
+        from (select DVYEUCAU_ID, BENHAN_ID from TT_DVYEUCAU where TIEPNHAN_ID = #TIEPNHAN_ID#) nttt
+        where TT_VIENPHI.REF_TABLE = 'TT_DVYEUCAU' and TT_VIENPHI.REF_ID = nttt.DVYEUCAU_ID
+        and isnull(TT_VIENPHI.BENHAN_ID, 0) = 0 and isnull(nttt.BENHAN_ID, 0) > 0
+        and TT_VIENPHI.TIEPNHAN_ID = #TIEPNHAN_ID#
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00067_UpdateThuocNgoaiVienPhi_Noref" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      <!--thuoc ngoai tru-->
+      <!--delete from TT_VIENPHI-->
+      update TT_VIENPHI set SOLUONG = 0, THANHTIEN_DOANHTHU = 0, BHYT_THANHTIEN = 0, BHYT_THANHTIEN_CHITRA = 0
+      , GIATRI_BENHNHAN_DATHANHTOAN = 0, BENHNHAN_PHAITHANHTOAN = 0
+      where REF_TABLE = 'TT_NGOAITRU_TOATHUOC'
+      and TIEPNHAN_ID = #TIEPNHAN_ID#
+      and HOADON_ID is null and TIEPNHAN_ID = #TIEPNHAN_ID#
+      and not exists (select TOATHUOC_ID from TT_NGOAITRU_TOATHUOC where TT_VIENPHI.REF_ID = TOATHUOC_ID and TIEPNHAN_ID = #TIEPNHAN_ID#)
+    </statement>
+    <statement id="DAO00067_ClearDataVienPhi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      <isNotEmpty prepend="" property="TIEPNHAN_ID">
+
+        <!--vien phi ref_id = 0-->
+        delete from TT_VIENPHI where TIEPNHAN_ID = $TIEPNHAN_ID$ and isnull(REF_ID,0) = 0
+        <isNotEmpty prepend="and" property="BENHAN_ID">
+          BENHAN_ID = '$BENHAN_ID$'
+        </isNotEmpty>
+        <!--clear booking khg hop le-->
+        delete TT_DUOC_TONKHO_BOOK_NOITRU where REF_TABLE = 'TT_NOITRU_TOATHUOC' and (REF_ID is null or REF_ID = 0)
+        delete TT_DUOC_TONKHO_BOOK_NGOAITRU where REF_ID is null or REF_ID = 0
+        
+        
+        <!--dich vu y/c-->
+        <!--delete from TT_VIENPHI-->
+        update TT_VIENPHI set SOLUONG = 0,THANHTIEN_DOANHTHU = 0, BHYT_THANHTIEN = 0, BHYT_THANHTIEN_CHITRA = 0
+        , GIATRI_BENHNHAN_DATHANHTOAN = 0, BENHNHAN_PHAITHANHTOAN = 0
+        where REF_TABLE = 'TT_DVYEUCAU' and TIEPNHAN_ID = #TIEPNHAN_ID#
+        and not exists (select DVYEUCAU_ID from TT_DVYEUCAU where TT_VIENPHI.REF_ID = DVYEUCAU_ID and TIEPNHAN_ID = #TIEPNHAN_ID#)
+
+        <!--thuoc ngoai tru-->
+        <!--delete from TT_VIENPHI-->
+        update TT_VIENPHI set SOLUONG = 0, THANHTIEN_DOANHTHU = 0, BHYT_THANHTIEN = 0, BHYT_THANHTIEN_CHITRA = 0
+        , GIATRI_BENHNHAN_DATHANHTOAN = 0, BENHNHAN_PHAITHANHTOAN = 0
+        where REF_TABLE = 'TT_NGOAITRU_TOATHUOC'
+        and TIEPNHAN_ID = #TIEPNHAN_ID#
+        and HOADON_ID is null and TIEPNHAN_ID = #TIEPNHAN_ID#
+        and not exists (select TOATHUOC_ID from TT_NGOAITRU_TOATHUOC where TT_VIENPHI.REF_ID = TOATHUOC_ID and TIEPNHAN_ID = #TIEPNHAN_ID#)
+
+        <!--tra thuoc/ thuoc noi tru-->
+        <isNotEmpty prepend="" property="BENHAN_ID">
+          <!--tra thuoc-->
+          update TT_VIENPHI
+          set SOLUONG = (TraThuoc.SOLUONG - TraThuoc.SOLUONG_NGUNG)
+          from (select distinct nttt.SOLUONG, ttct.TOATHUOC_ID, ttct.DUOC_ID , ttct.SOLUONG SOLUONG_NGUNG
+          from TT_NOITRU_TRATHUOC_CHITIET ttct
+          left join TT_NOITRU_TRATHUOC tt on tt.TRATHUOC_ID = ttct.TRATHUOC_ID
+          left join TT_NOITRU_TOATHUOC nttt on nttt.TOATHUOC_ID = ttct.TOATHUOC_ID
+          where tt.BENHAN_ID = #BENHAN_ID#) TraThuoc
+          where TT_VIENPHI.REF_ID = TraThuoc.TOATHUOC_ID and TT_VIENPHI.DUOC_ID = TraThuoc.DUOC_ID
+          and TT_VIENPHI.REF_TABLE = 'TT_NOITRU_TOATHUOC' and TT_VIENPHI.BENHAN_ID = #BENHAN_ID#
+          and TT_VIENPHI.SOLUONG > (TraThuoc.SOLUONG - TraThuoc.SOLUONG_NGUNG)
+          <!--thuoc noi tru-->
+          <!--delete from TT_VIENPHI-->
+          update TT_VIENPHI set SOLUONG = 0, THANHTIEN_DOANHTHU = 0, BHYT_THANHTIEN = 0, BHYT_THANHTIEN_CHITRA = 0
+          , GIATRI_BENHNHAN_DATHANHTOAN = 0, BENHNHAN_PHAITHANHTOAN = 0
+          where REF_TABLE = 'TT_NOITRU_TOATHUOC'
+          and TIEPNHAN_ID = #TIEPNHAN_ID#
+          and KHAMBENH_ID not in (select KHAMBENH_ID from TT_NOITRU_TOATHUOC where TIEPNHAN_ID = #TIEPNHAN_ID#)
+          and HOADON_ID is null and BENHAN_ID = #BENHAN_ID#
+        </isNotEmpty>
+      </isNotEmpty>      
+
+      <!--update vien phi noi tru thieu benhan id-->
+      <isNotEmpty prepend="" property="BENHAN_ID">
+        update TT_VIENPHI
+        set BENHAN_ID = #BENHAN_ID#
+        from (select TOATHUOC_ID from TT_NOITRU_TOATHUOC where TIEPNHAN_ID = #TIEPNHAN_ID#) nttt
+        where REF_TABLE = 'TT_NOITRU_TOATHUOC' and REF_ID = nttt.TOATHUOC_ID and isnull(BENHAN_ID, 0) = 0
+        and TIEPNHAN_ID = #TIEPNHAN_ID#
+
+        update TT_VIENPHI
+        set TT_VIENPHI.BENHAN_ID = #BENHAN_ID#
+        from (select DVYEUCAU_ID, BENHAN_ID from TT_DVYEUCAU where TIEPNHAN_ID = #TIEPNHAN_ID#) nttt
+        where TT_VIENPHI.REF_TABLE = 'TT_DVYEUCAU' and TT_VIENPHI.REF_ID = nttt.DVYEUCAU_ID
+        and isnull(TT_VIENPHI.BENHAN_ID, 0) = 0 and isnull(nttt.BENHAN_ID, 0) > 0
+        and TT_VIENPHI.TIEPNHAN_ID = #TIEPNHAN_ID#
+      </isNotEmpty>
+      <!--<isNotEmpty prepend="" property="TIEPNHAN_ID">
+        --><!--vien phi soluong = 0--><!--
+        update TT_VIENPHI set THANHTIEN_DOANHTHU = 0, BHYT_THANHTIEN = 0, BHYT_THANHTIEN_CHITRA = 0
+        , GIATRI_BENHNHAN_DATHANHTOAN = 0, BENHNHAN_PHAITHANHTOAN = 0
+        where TIEPNHAN_ID = $TIEPNHAN_ID$ and SOLUONG = 0
+        <isNotEmpty prepend="and" property="BENHAN_ID">
+          BENHAN_ID = $BENHAN_ID$
+        </isNotEmpty>
+      </isNotEmpty>-->
+    </statement>
+    <statement id="DAO00067_UpdateDataVienPhiDongiaBHYT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      <isNotEmpty prepend="" property="TIEPNHAN_ID">
+        update TT_VIENPHI
+        set BHYT_DONGIA_CHITRA = 0, BHYT_THANHTIEN = 0, BHYT_THANHTIEN_CHITRA = 0
+        where
+        TIEPNHAN_ID = $TIEPNHAN_ID$ and BHYT_DONGIA = 0
+        and (BHYT_DONGIA_CHITRA > 0 or BHYT_THANHTIEN > 0 or BHYT_THANHTIEN_CHITRA > 0)
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00067_CapnhatDataVienphiKhiThanhtoan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      update TT_VIENPHI
+      set TT_VIENPHI.HOADON_ID = hdct.HOADON_ID, TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN = TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN + hdct.GIATRI_BENHNHAN_DATHANHTOAN
+      from (select CT.HOADON_ID, CT.VIENPHI_ID, CT.GIATRI_BENHNHAN_DATHANHTOAN
+      from TT_HOADON_CHITIET_NGOAITRU CT
+      join TT_HOADON HD on HD.HOADON_ID = CT.HOADON_ID
+      where HD.DATHANHTOAN = 1 and HD.HUYHOADON = 0 and HD.HOANTRA = 0 and TIEPNHAN_ID = #TIEPNHAN_ID#) hdct
+      where
+      TT_VIENPHI.VIENPHI_ID = hdct.VIENPHI_ID and TT_VIENPHI.HOADON_ID is null and isnull(TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN,0) = 0
+      and TT_VIENPHI.TIEPNHAN_ID = #TIEPNHAN_ID#
+    </statement>
+    <statement id="DAO00067_CapnhatDataVienphiKhiHuyThanhtoan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      update TT_VIENPHI
+      set TT_VIENPHI.HOADON_ID = null, TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN = TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN - hdct.GIATRI_BENHNHAN_DATHANHTOAN,
+      TT_VIENPHI.DATHANHTOAN = '0'
+      from (select CT.HOADON_ID, CT.VIENPHI_ID, CT.GIATRI_BENHNHAN_DATHANHTOAN
+      from TT_HOADON_CHITIET_NGOAITRU CT
+      join TT_HOADON HD on HD.HOADON_ID = CT.HOADON_ID
+      join TT_VIENPHI vp on vp.VIENPHI_ID = ct.VIENPHI_ID and vp.HOADON_ID = ct.HOADON_ID
+      where HD.DATHANHTOAN = 0 and (HD.HUYHOADON = 1 or HD.HOANTRA = 1) and TIEPNHAN_ID = #TIEPNHAN_ID#) hdct
+      where
+      TT_VIENPHI.VIENPHI_ID = hdct.VIENPHI_ID and TT_VIENPHI.HOADON_ID = hdct.HOADON_ID
+      and TT_VIENPHI.TIEPNHAN_ID = #TIEPNHAN_ID#
+    </statement>
+    <statement id="DAO00067_CapnhatDataVienphiKhiHuyThanhtoanHoadon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      update TT_VIENPHI
+      set TT_VIENPHI.HOADON_ID = hdct.HOADON_ID, TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN = TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN + hdct.GIATRI_BENHNHAN_DATHANHTOAN
+      from (select CT.HOADON_ID, CT.VIENPHI_ID, CT.GIATRI_BENHNHAN_DATHANHTOAN
+      from TT_HOADON_CHITIET_NGOAITRU CT
+      join TT_HOADON HD on HD.HOADON_ID = CT.HOADON_ID
+      join TT_VIENPHI vp on vp.VIENPHI_ID = ct.VIENPHI_ID
+      where HD.DATHANHTOAN = 1 and HD.HUYHOADON = 0 and HD.HOANTRA = 0 and vp.TIEPNHAN_ID = #TIEPNHAN_ID#) hdct
+      where
+      TT_VIENPHI.VIENPHI_ID = hdct.VIENPHI_ID and TT_VIENPHI.HOADON_ID is null and isnull(TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN,0) = 0
+      and TT_VIENPHI.TIEPNHAN_ID = #TIEPNHAN_ID#
+
+      update TT_VIENPHI
+      set TT_VIENPHI.HOADON_ID = null, TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN = TT_VIENPHI.GIATRI_BENHNHAN_DATHANHTOAN - hdct.GIATRI_BENHNHAN_DATHANHTOAN,
+      TT_VIENPHI.DATHANHTOAN = '0'
+      from (select CT.HOADON_ID, CT.VIENPHI_ID, CT.GIATRI_BENHNHAN_DATHANHTOAN
+      from TT_HOADON_CHITIET_NGOAITRU CT
+      join TT_HOADON HD on HD.HOADON_ID = CT.HOADON_ID
+      join TT_VIENPHI vp on vp.VIENPHI_ID = ct.VIENPHI_ID and vp.HOADON_ID = ct.HOADON_ID
+      where HD.DATHANHTOAN = 0 and (HD.HUYHOADON = 1 or HD.HOANTRA = 1) and vp.TIEPNHAN_ID = #TIEPNHAN_ID#) hdct
+      where
+      TT_VIENPHI.VIENPHI_ID = hdct.VIENPHI_ID and TT_VIENPHI.HOADON_ID = hdct.HOADON_ID
+      and TT_VIENPHI.TIEPNHAN_ID = #TIEPNHAN_ID#
+    </statement>
+    <statement id="DAO00067_laytrangthaibenhannoitru" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select isnull(TRANGTHAI, '') TRANGTHAI from TT_NOITRU_BENHAN where BENHAN_ID = #BENHAN_ID#
+    </statement>
+    <statement id="DAO00067_AddKHAITHAC_TIENSUDIUNG" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      INSERT INTO TT_KHAITHAC_TIENSUDIUNG
+      (
+      SOPHIEUKHAITHAC
+      ,NGAYKHAITHAC
+      ,NGUOIKHAITHAC_ID
+      ,BENNHAN_ID
+      ,TIEPNHAN_ID
+      ,BENHAN_ID
+      ,DIUNGNGUYENNHAN
+      ,DIUNGCONTRUNG
+      ,DIUNGTHUCPHAM
+      ,DIUNGKHAC
+      ,DIUNGTIENSU
+      ,DIUNGGIADINH
+      ,NGAYTAO
+      ,NGUOITAO_ID
+      ,BENHVIEN_ID
+      )
+      VALUES
+      (
+      #SOPHIEUKHAITHAC#
+      ,#NGAYKHAITHAC#
+      ,#NGUOIKHAITHAC_ID#
+      ,#BENNHAN_ID#
+      ,#TIEPNHAN_ID#
+      ,#BENHAN_ID#
+      ,#DIUNGNGUYENNHAN#
+      ,#DIUNGCONTRUNG#
+      ,#DIUNGTHUCPHAM#
+      ,#DIUNGKHAC#
+      ,#DIUNGTIENSU#
+      ,#DIUNGGIADINH#
+      ,getdate()
+      ,#NGUOITAO_ID#
+      ,#BENHVIEN_ID#
+      )
+      SELECT SCOPE_IDENTITY()
+    </statement>
+    <statement id="DAO00067_UpdateKHAITHAC_TIENSUDIUNG" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      update TT_KHAITHAC_TIENSUDIUNG set
+      NGAYKHAITHAC = #NGAYKHAITHAC#
+      ,NGUOIKHAITHAC_ID = #NGUOIKHAITHAC_ID#
+      ,DIUNGNGUYENNHAN = #DIUNGNGUYENNHAN#
+      ,DIUNGCONTRUNG = #DIUNGCONTRUNG#
+      ,DIUNGTHUCPHAM = #DIUNGTHUCPHAM#
+      ,DIUNGKHAC = #DIUNGKHAC#
+      ,DIUNGTIENSU = #DIUNGTIENSU#
+      ,DIUNGGIADINH = #DIUNGGIADINH#
+      ,NGAYCAPNHAT = getdate()
+      ,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      KHAITHAC_TIENSUDIUNG_ID = $KHAITHAC_TIENSUDIUNG_ID$
+    </statement>
+    <statement id="DAO00067_DeleteKHAITHAC_TIENSUDIUNG" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      delete from TT_KHAITHAC_TIENSUDIUNG
+      where
+      KHAITHAC_TIENSUDIUNG_ID = $KHAITHAC_TIENSUDIUNG_ID$
+    </statement>
+    <statement id="DAO00067_GetLastKHAITHAC_TIENSUDIUNG" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select top 1 * from TT_KHAITHAC_TIENSUDIUNG
+      where TIEPNHAN_ID = $TIEPNHAN_ID$
+      <isNotEmpty prepend="and" property="BENHAN_ID">
+        isnull(BENHAN_ID,0) = $BENHAN_ID$
+      </isNotEmpty>
+      order by KHAITHAC_TIENSUDIUNG_ID desc
+    </statement>
+    <statement id="DAO00067_GetData" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select top 1 * from TT_NOITRU_SOKET
+      where BENHAN_ID = #BENHAN_ID#
+      <isNotEmpty prepend="and" property="BENHAN_SOKET_ID">
+        BENHAN_SOKET_ID = #BENHAN_SOKET_ID#
+      </isNotEmpty>
+      order by NGAYTAO desc
+    </statement>
+    <statement id="DAO00067_GetDataSoKet" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select a.*
+      , d.MAYTE + ' - ' + d.TENBENHNHAN as TENBENHNHAN
+      , b.THOIGIANVAOVIEN
+      , e.TENNHANVIEN as BACSI
+      , f.TENNHANVIEN as NGUOITAO
+      , b.SOBENHAN
+      , d.MAYTE
+      from TT_NOITRU_SOKET a
+      join TT_NOITRU_BENHAN b on a.BENHAN_ID = b.BENHAN_ID
+      join TT_TIEPNHAN c on c.TIEPNHAN_ID = b.TIEPNHAN_ID
+      join TT_BENHNHAN d on d.BENHNHAN_ID = c.BENHNHAN_ID
+      left join TM_NHANVIEN e on e.NHANVIEN_ID = a.BACSIDIEUTRI_ID
+      left join TM_NHANVIEN f on f.NHANVIEN_ID = a.NGUOITAO_ID
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="KEY">
+            (d.MAYTE like '%' + #KEY# + '%' or d.TENBENHNHAN like '%' + #KEY# + '%')
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DATEFROM">
+            convert(date,a.NGAYTAO) &gt;= convert(date,'$DATEFROM$')
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DATETO">
+            convert(date,a.NGAYTAO) &lt;= convert(date,'$DATETO$')
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00067_DeletePhieuSoKet" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      delete from TT_NOITRU_SOKET
+      where BENHAN_SOKET_ID = #BENHAN_SOKET_ID#
+    </statement>
+    <statement id="DAO00067_DeleteTienSuDiUng" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      begin
+      delete from TT_TIENSUDIUNG where TIENSUDIUNG_ID = $TIENSUDIUNG_ID$
+      SELECT @@ROWCOUNT AS ROWAFFECTED
+      end
+    </statement>
+    <update id="DAO00067_UpdateTienSuDiUng" parameterClass="System.Collections.IDictionary">
+      update TT_TIENSUDIUNG set
+      PHONGBAN_ID = #PHONGBAN_ID#
+      ,NHANVIEN_ID = #NHANVIEN_ID#
+      ,NGUOIDAIDIEN = #NGUOIDAIDIEN#
+      ,QUANHE = #QUANHE#
+      ,DIUNG_1 = #DIUNG_1#
+      ,TACNHANDU_1 = #TACNHANDU_1#
+      ,SOLAN_1 = #SOLAN_1#
+      ,BIEUHIENLS_XUTRI_1 = #BIEUHIENLS_XUTRI_1#
+      ,DIUNG_2 = #DIUNG_2#
+      ,TACNHANDU_2 = #TACNHANDU_2#
+      ,SOLAN_2 = #SOLAN_2#
+      ,BIEUHIENLS_XUTRI_2 = #BIEUHIENLS_XUTRI_2#
+      ,DIUNG_3 = #DIUNG_3#
+      ,TACNHANDU_3 = #TACNHANDU_3#
+      ,SOLAN_3 = #SOLAN_3#
+      ,BIEUHIENLS_XUTRI_3 = #BIEUHIENLS_XUTRI_3#
+      ,DIUNG_4 = #DIUNG_4#
+      ,TACNHANDU_4 = #TACNHANDU_4#
+      ,SOLAN_4 = #SOLAN_4#
+      ,BIEUHIENLS_XUTRI_4 = #BIEUHIENLS_XUTRI_4#
+      ,DIUNG_5 = #DIUNG_5#
+      ,TACNHANDU_5 = #TACNHANDU_5#
+      ,SOLAN_5 = #SOLAN_5#
+      ,BIEUHIENLS_XUTRI_5 = #BIEUHIENLS_XUTRI_5#
+      ,DIUNG_6 = #DIUNG_6#
+      ,TACNHANDU_6 = #TACNHANDU_6#
+      ,SOLAN_6 = #SOLAN_6#
+      ,BIEUHIENLS_XUTRI_6 = #BIEUHIENLS_XUTRI_6#
+      ,NGAYCAPNHAT = #NGAYCAPNHAT#
+      ,NGUOICAPNHAT = #NGUOICAPNHAT#
+      where      TIENSUDIUNG_ID = $TIENSUDIUNG_ID$
+
+      SELECT @@ROWCOUNT AS ROWAFFECTED
+    </update>
+    <statement id="DAO00067_AddTienSuDiUng" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      INSERT INTO TT_TIENSUDIUNG
+      (BENHNHAN_ID
+      ,TIEPNHAN_ID
+      ,BENHAN_ID
+      ,PHONGBAN_ID
+      ,NHANVIEN_ID
+      ,NGUOIDAIDIEN
+      ,QUANHE
+      ,DIUNG_1
+      ,TACNHANDU_1
+      ,SOLAN_1
+      ,BIEUHIENLS_XUTRI_1
+      ,DIUNG_2
+      ,TACNHANDU_2
+      ,SOLAN_2
+      ,BIEUHIENLS_XUTRI_2
+      ,DIUNG_3
+      ,TACNHANDU_3
+      ,SOLAN_3
+      ,BIEUHIENLS_XUTRI_3
+      ,DIUNG_4
+      ,TACNHANDU_4
+      ,SOLAN_4
+      ,BIEUHIENLS_XUTRI_4
+      ,DIUNG_5
+      ,TACNHANDU_5
+      ,SOLAN_5
+      ,BIEUHIENLS_XUTRI_5
+      ,DIUNG_6
+      ,TACNHANDU_6
+      ,SOLAN_6
+      ,BIEUHIENLS_XUTRI_6
+      ,BENHVIEN_ID
+      ,NGAYTAO
+      ,NGUOITAO
+      )
+      VALUES
+      (#BENHNHAN_ID#
+      ,#TIEPNHAN_ID#
+      ,#BENHAN_ID#
+      ,#PHONGBAN_ID#
+      ,#NHANVIEN_ID#
+      ,#NGUOIDAIDIEN#
+      ,#QUANHE#
+      ,#DIUNG_1#
+      ,#TACNHANDU_1#
+      ,#SOLAN_1#
+      ,#BIEUHIENLS_XUTRI_1#
+      ,#DIUNG_2#
+      ,#TACNHANDU_2#
+      ,#SOLAN_2#
+      ,#BIEUHIENLS_XUTRI_2#
+      ,#DIUNG_3#
+      ,#TACNHANDU_3#
+      ,#SOLAN_3#
+      ,#BIEUHIENLS_XUTRI_3#
+      ,#DIUNG_4#
+      ,#TACNHANDU_4#
+      ,#SOLAN_4#
+      ,#BIEUHIENLS_XUTRI_4#
+      ,#DIUNG_5#
+      ,#TACNHANDU_5#
+      ,#SOLAN_5#
+      ,#BIEUHIENLS_XUTRI_5#
+      ,#DIUNG_6#
+      ,#TACNHANDU_6#
+      ,#SOLAN_6#
+      ,#BIEUHIENLS_XUTRI_6#
+      ,#BENHVIEN_ID#
+      ,#NGAYTAO#
+      ,#NGUOITAO#
+      )
+
+      SELECT SCOPE_IDENTITY()
+    </statement>
+    <statement id="DAO00067_GetTienSuDiUngByTiepNhan_Id" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT TIENSUDIUNG_ID FROM TT_TIENSUDIUNG WHERE TIEPNHAN_ID = $TIEPNHAN_ID$ AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00067_GetThongTinTienSuDiDung" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT * FROM TT_TIENSUDIUNG WHERE TIEPNHAN_ID = $TIEPNHAN_ID$ AND BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00067_GetDataSoKetWithPatient" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_NOITRU_SOKET
+      where BENHAN_ID = #BENHAN_ID#
+      order by NGAYTAO desc
+    </statement>
+  </statements>
+</sqlMap>

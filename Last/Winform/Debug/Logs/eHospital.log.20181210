@@ -1,0 +1,1060 @@
+﻿--------------------------------------------------------------------------------
+2018-12-10 10:04:59,761 [1] INFO  - [Application started.]
+2018-12-10 10:05:00,135 [1] ERROR - 'Messages.xml' Duplicated keys found: MOPD0300,MEME0555
+2018-12-10 10:05:05,809 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-10 10:05:05,882 [1] INFO  - LoadMasters() took 66 ms.
+2018-12-10 10:05:05,884 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-10 10:05:21,193 [1] INFO  - [admin] Session is starting.
+2018-12-10 10:05:22,871 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:05:29,304 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:05:39,932 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:05:46,082 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:05:46,666 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:05:53,009 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:05:53,524 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:05:59,757 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:05:59,963 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:06:06,117 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:06:06,606 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:06:12,847 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:06:13,045 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:06:19,197 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:06:19,398 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:06:25,555 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:06:25,788 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:06:32,029 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:06:32,927 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:06:39,179 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:06:39,509 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:06:45,706 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:06:46,001 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:06:52,158 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:06:53,974 [5] INFO  - LoadMasters() took 92,691 ms.
+2018-12-10 10:06:53,986 [1] INFO  - [admin] Session started.
+2018-12-10 10:07:01,598 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-10 10:07:01,615 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-10 10:25:23,082 [1] DEBUG - PHA009 - Start - Thêm chứng từ xuất nội bộ
+2018-12-10 10:25:23,489 [1] DEBUG - PHA009 - End - Thêm chứng từ xuất nội bộ - 53753
+2018-12-10 10:25:23,930 [1] DEBUG - PHA009 - Start - Update trạng thái phiếu lĩnh - 18069
+2018-12-10 10:25:23,989 [1] DEBUG - PHA009 - End - Update trạng thái phiếu lĩnh
+2018-12-10 10:25:24,066 [1] DEBUG - PHA009 - Start - Gọi phát sinh chứng từ nhập nội bộ từ chứng từ xuất nội bộ - 53753
+2018-12-10 10:25:26,391 [1] DEBUG - PHA024 - Start - Phát sinh chứng từ nhập nội bộ
+2018-12-10 10:25:26,623 [1] DEBUG - PHA024 - End - Phát sinh chứng từ nhập nội bộ - 53754
+2018-12-10 10:25:26,967 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:25:33,348 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:25:39,696 [1] ERROR - Error when executing 'DAOLOG01_LockEnd'
+2018-12-10 10:25:39,721 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The operation is not valid for the state of the transaction.
+   at System.Transactions.TransactionState.EnlistPromotableSinglePhase(InternalTransaction tx, IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Transaction atomicTransaction, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject(RequestScope request, ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 184
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForObject(String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 57
+   at FPT.Framework.DataAccess.DaoBase.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 188
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 102
+   at FPT.eHospital.Services.DataRecordLocker.LockEnd() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 79
+   at FPT.eHospital.Services.DataRecordLocker.Dispose() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 29
+   at FPT.eHospital.Services.PHA009.TransactionExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 80
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoProvider.cs:line 149
+   at FPT.eHospital.Services.PHA009.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 26
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 87
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.Pharmacy.VMPHABase.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHABase.cs:line 151
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 369
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 361
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-10 10:35:49,067 [1] DEBUG - PHA009 - Start - Thêm chứng từ xuất nội bộ
+2018-12-10 10:35:49,301 [1] DEBUG - PHA009 - End - Thêm chứng từ xuất nội bộ - 53755
+2018-12-10 10:35:49,639 [1] DEBUG - PHA009 - Start - Update trạng thái phiếu lĩnh - 18069
+2018-12-10 10:35:49,692 [1] DEBUG - PHA009 - End - Update trạng thái phiếu lĩnh
+2018-12-10 10:35:49,739 [1] DEBUG - PHA009 - Start - Gọi phát sinh chứng từ nhập nội bộ từ chứng từ xuất nội bộ - 53755
+2018-12-10 10:35:51,918 [1] DEBUG - PHA024 - Start - Phát sinh chứng từ nhập nội bộ
+2018-12-10 10:35:52,101 [1] DEBUG - PHA024 - End - Phát sinh chứng từ nhập nội bộ - 53756
+2018-12-10 10:35:52,375 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:35:58,681 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:36:04,968 [1] ERROR - Error when executing 'DAOLOG01_LockEnd'
+2018-12-10 10:36:04,988 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The operation is not valid for the state of the transaction.
+   at System.Transactions.TransactionState.EnlistPromotableSinglePhase(InternalTransaction tx, IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Transaction atomicTransaction, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject(RequestScope request, ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 184
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForObject(String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 57
+   at FPT.Framework.DataAccess.DaoBase.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 188
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 102
+   at FPT.eHospital.Services.DataRecordLocker.LockEnd() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 79
+   at FPT.eHospital.Services.DataRecordLocker.Dispose() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 29
+   at FPT.eHospital.Services.PHA009.TransactionExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 80
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoProvider.cs:line 149
+   at FPT.eHospital.Services.PHA009.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 26
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 87
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.Pharmacy.VMPHABase.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHABase.cs:line 151
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 369
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 361
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-12-10 10:36:23,406 [1] INFO  - [Application started.]
+2018-12-10 10:36:23,650 [1] ERROR - 'Messages.xml' Duplicated keys found: MOPD0300,MEME0555
+2018-12-10 10:36:25,616 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-10 10:36:25,676 [1] INFO  - LoadMasters() took 53 ms.
+2018-12-10 10:36:25,677 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-10 10:37:15,524 [1] INFO  - [admin] Session is starting.
+2018-12-10 10:37:16,293 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:37:22,585 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:37:22,906 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:37:29,125 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:37:29,328 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:37:35,543 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:37:35,747 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:37:41,964 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:37:42,172 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:37:48,384 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:37:48,575 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:37:54,793 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:37:55,002 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:38:01,211 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:38:01,403 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:38:07,621 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:38:07,814 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:38:13,996 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:38:14,600 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:38:20,812 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:38:21,010 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:38:27,219 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:38:27,428 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:38:33,619 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:38:35,185 [5] INFO  - LoadMasters() took 79,650 ms.
+2018-12-10 10:38:35,206 [1] INFO  - [admin] Session started.
+2018-12-10 10:38:38,311 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-10 10:38:38,330 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-10 10:39:09,244 [1] DEBUG - PHA009 - Start - Thêm chứng từ xuất nội bộ
+2018-12-10 10:39:09,561 [1] DEBUG - PHA009 - End - Thêm chứng từ xuất nội bộ - 53757
+2018-12-10 10:39:10,255 [1] DEBUG - PHA009 - Start - Update trạng thái phiếu lĩnh - 18069
+2018-12-10 10:39:10,308 [1] DEBUG - PHA009 - End - Update trạng thái phiếu lĩnh
+2018-12-10 10:39:10,354 [1] DEBUG - PHA009 - Start - Gọi phát sinh chứng từ nhập nội bộ từ chứng từ xuất nội bộ - 53757
+2018-12-10 10:39:12,409 [1] DEBUG - PHA024 - Start - Phát sinh chứng từ nhập nội bộ
+2018-12-10 10:39:12,593 [1] DEBUG - PHA024 - End - Phát sinh chứng từ nhập nội bộ - 53758
+2018-12-10 10:39:12,879 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:39:19,197 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:39:25,537 [1] ERROR - Error when executing 'DAOLOG01_LockEnd'
+2018-12-10 10:39:25,563 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The operation is not valid for the state of the transaction.
+   at System.Transactions.TransactionState.EnlistPromotableSinglePhase(InternalTransaction tx, IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Transaction atomicTransaction, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject(RequestScope request, ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 184
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForObject(String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 57
+   at FPT.Framework.DataAccess.DaoBase.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 188
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 102
+   at FPT.eHospital.Services.DataRecordLocker.LockEnd() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 79
+   at FPT.eHospital.Services.DataRecordLocker.Dispose() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 29
+   at FPT.eHospital.Services.PHA009.TransactionExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 80
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoProvider.cs:line 149
+   at FPT.eHospital.Services.PHA009.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 26
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 87
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.Pharmacy.VMPHABase.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHABase.cs:line 151
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 369
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 361
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-10 10:39:57,789 [1] DEBUG - PHA009 - Start - Thêm chứng từ xuất nội bộ
+2018-12-10 10:39:58,026 [1] DEBUG - PHA009 - End - Thêm chứng từ xuất nội bộ - 53759
+2018-12-10 10:39:58,389 [1] DEBUG - PHA009 - Start - Update trạng thái phiếu lĩnh - 18069
+2018-12-10 10:39:58,450 [1] DEBUG - PHA009 - End - Update trạng thái phiếu lĩnh
+2018-12-10 10:39:58,495 [1] DEBUG - PHA009 - Start - Gọi phát sinh chứng từ nhập nội bộ từ chứng từ xuất nội bộ - 53759
+2018-12-10 10:40:00,506 [1] DEBUG - PHA024 - Start - Phát sinh chứng từ nhập nội bộ
+2018-12-10 10:40:00,693 [1] DEBUG - PHA024 - End - Phát sinh chứng từ nhập nội bộ - 53760
+2018-12-10 10:40:00,974 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:40:07,274 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:40:13,589 [1] ERROR - Error when executing 'DAOLOG01_LockEnd'
+2018-12-10 10:40:13,615 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The operation is not valid for the state of the transaction.
+   at System.Transactions.TransactionState.EnlistPromotableSinglePhase(InternalTransaction tx, IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Transaction atomicTransaction, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject(RequestScope request, ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 184
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForObject(String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 57
+   at FPT.Framework.DataAccess.DaoBase.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 188
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 102
+   at FPT.eHospital.Services.DataRecordLocker.LockEnd() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 79
+   at FPT.eHospital.Services.DataRecordLocker.Dispose() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 29
+   at FPT.eHospital.Services.PHA009.TransactionExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 80
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoProvider.cs:line 149
+   at FPT.eHospital.Services.PHA009.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 26
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 87
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.Pharmacy.VMPHABase.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHABase.cs:line 151
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 369
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 361
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-10 10:43:25,873 [1] DEBUG - PHA009 - Start - Thêm chứng từ xuất nội bộ
+2018-12-10 10:43:26,098 [1] DEBUG - PHA009 - End - Thêm chứng từ xuất nội bộ - 53761
+2018-12-10 10:43:26,440 [1] DEBUG - PHA009 - Start - Update trạng thái phiếu lĩnh - 18069
+2018-12-10 10:43:26,498 [1] DEBUG - PHA009 - End - Update trạng thái phiếu lĩnh
+2018-12-10 10:43:26,544 [1] DEBUG - PHA009 - Start - Gọi phát sinh chứng từ nhập nội bộ từ chứng từ xuất nội bộ - 53761
+2018-12-10 10:43:29,190 [1] DEBUG - PHA024 - Start - Phát sinh chứng từ nhập nội bộ
+2018-12-10 10:43:29,378 [1] DEBUG - PHA024 - End - Phát sinh chứng từ nhập nội bộ - 53762
+2018-12-10 10:43:29,636 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:43:36,034 [1] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:43:42,326 [1] ERROR - Error when executing 'DAOLOG01_LockEnd'
+2018-12-10 10:43:42,350 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The operation is not valid for the state of the transaction.
+   at System.Transactions.TransactionState.EnlistPromotableSinglePhase(InternalTransaction tx, IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Transaction atomicTransaction, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject(RequestScope request, ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 184
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForObject(String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 57
+   at FPT.Framework.DataAccess.DaoBase.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 188
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 102
+   at FPT.eHospital.Services.DataRecordLocker.LockEnd() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 79
+   at FPT.eHospital.Services.DataRecordLocker.Dispose() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 29
+   at FPT.eHospital.Services.PHA009.TransactionExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 80
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoProvider.cs:line 149
+   at FPT.eHospital.Services.PHA009.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 26
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 87
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.Pharmacy.VMPHABase.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHABase.cs:line 151
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 369
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 361
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-12-10 10:44:17,357 [1] INFO  - [Application started.]
+2018-12-10 10:44:17,545 [1] ERROR - 'Messages.xml' Duplicated keys found: MOPD0300,MEME0555
+2018-12-10 10:44:19,853 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-10 10:44:19,911 [1] INFO  - LoadMasters() took 49 ms.
+2018-12-10 10:44:19,912 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-10 10:44:28,946 [1] INFO  - [admin] Session is starting.
+2018-12-10 10:44:29,784 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:44:36,023 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:44:36,228 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:44:42,421 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:44:42,618 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:44:48,826 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:44:49,031 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:44:55,218 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:44:55,416 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:45:01,603 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:45:01,794 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:45:08,001 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:45:08,195 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:45:14,409 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:45:14,606 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:45:20,817 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:45:21,020 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:45:27,239 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:45:27,848 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:45:34,056 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:45:34,270 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:45:40,495 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:45:40,721 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 10:45:46,942 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:45:48,516 [5] INFO  - LoadMasters() took 79,562 ms.
+2018-12-10 10:45:48,526 [1] INFO  - [admin] Session started.
+2018-12-10 10:45:52,289 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-10 10:45:52,321 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-10 10:48:06,312 [1] DEBUG - PHA009 - Start - Thêm chứng từ xuất nội bộ
+2018-12-10 10:48:06,672 [1] DEBUG - PHA009 - End - Thêm chứng từ xuất nội bộ - 53763
+2018-12-10 10:48:07,368 [1] DEBUG - PHA009 - Start - Update trạng thái phiếu lĩnh - 18115
+2018-12-10 10:48:07,431 [1] DEBUG - PHA009 - End - Update trạng thái phiếu lĩnh
+2018-12-10 10:48:07,478 [1] DEBUG - PHA009 - Start - Gọi phát sinh chứng từ nhập nội bộ từ chứng từ xuất nội bộ - 53763
+2018-12-10 10:48:11,445 [1] DEBUG - PHA024 - Start - Phát sinh chứng từ nhập nội bộ
+2018-12-10 10:48:11,669 [1] DEBUG - PHA024 - End - Phát sinh chứng từ nhập nội bộ - 53764
+2018-12-10 10:48:11,897 [1] DEBUG - PHA024 - Start - Gọi phát sinh DS chứng từ Xuất sử dụng từ Chứng từ nhập - 53764
+2018-12-10 10:48:12,075 [1] ERROR - Error when executing 'DAOLOG01_LockEnd'
+2018-12-10 10:48:12,107 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The operation is not valid for the state of the transaction.
+   at System.Transactions.TransactionState.EnlistPromotableSinglePhase(InternalTransaction tx, IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Transaction atomicTransaction, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject(RequestScope request, ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 184
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForObject(String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 57
+   at FPT.Framework.DataAccess.DaoBase.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 188
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 102
+   at FPT.eHospital.Services.DataRecordLocker.LockEnd() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 79
+   at FPT.eHospital.Services.DataRecordLocker.Dispose() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 29
+   at FPT.eHospital.Services.PHA009.TransactionExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 80
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoProvider.cs:line 149
+   at FPT.eHospital.Services.PHA009.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 26
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 87
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.Pharmacy.VMPHABase.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHABase.cs:line 151
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 369
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 361
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-10 10:48:15,736 [1] INFO  - Total upload size: 916 bytes => 6 bytes/s
+2018-12-10 10:48:15,778 [1] INFO  - Total download size: 719 bytes => 5 bytes/s
+2018-12-10 10:48:15,847 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 10:48:16,132 [1] INFO  - [admin] Session stopped.
+2018-12-10 10:48:16,138 [1] INFO  - Memory used before collection:  20,099,836
+2018-12-10 10:48:16,193 [1] INFO  - Memory used after collection:  8,213,404
+2018-12-10 10:48:16,318 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-12-10 10:58:58,880 [1] INFO  - [Application started.]
+2018-12-10 10:58:59,273 [1] ERROR - 'Messages.xml' Duplicated keys found: MOPD0300,MEME0555
+2018-12-10 10:59:01,791 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-10 10:59:01,857 [1] INFO  - LoadMasters() took 57 ms.
+2018-12-10 10:59:01,858 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-10 11:01:54,452 [1] INFO  - [admin] Session is starting.
+2018-12-10 11:01:55,233 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:02:01,478 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:02:01,668 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:02:07,865 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:02:08,061 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:02:14,227 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:02:14,419 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:02:20,572 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:02:20,780 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:02:26,950 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:02:27,143 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:02:33,335 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:02:33,542 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:02:39,751 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:02:39,933 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:02:46,117 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:02:46,308 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:02:52,494 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:02:53,110 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:02:59,278 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:02:59,476 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:03:05,664 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:03:05,868 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 11:03:12,019 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 11:03:13,614 [5] INFO  - LoadMasters() took 79,150 ms.
+2018-12-10 11:03:13,629 [1] INFO  - [admin] Session started.
+2018-12-10 11:03:16,936 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-10 11:03:16,953 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-10 11:03:55,016 [1] DEBUG - PHA009 - Start - Thêm chứng từ xuất nội bộ
+2018-12-10 11:03:55,346 [1] DEBUG - PHA009 - End - Thêm chứng từ xuất nội bộ - 53765
+2018-12-10 11:03:55,730 [1] DEBUG - PHA009 - Start - Update trạng thái phiếu lĩnh - 18025
+2018-12-10 11:03:55,786 [1] DEBUG - PHA009 - End - Update trạng thái phiếu lĩnh
+2018-12-10 11:03:55,833 [1] DEBUG - PHA009 - Start - Gọi phát sinh chứng từ nhập nội bộ từ chứng từ xuất nội bộ - 53765
+2018-12-10 11:03:57,804 [1] DEBUG - PHA024 - Start - Phát sinh chứng từ nhập nội bộ
+2018-12-10 11:03:58,003 [1] DEBUG - PHA024 - End - Phát sinh chứng từ nhập nội bộ - 53766
+2018-12-10 11:03:58,231 [1] DEBUG - PHA024 - Start - Gọi phát sinh DS chứng từ Xuất sử dụng từ Chứng từ nhập - 53766
+2018-12-10 11:03:58,406 [1] ERROR - Error when executing 'DAOLOG01_LockEnd'
+2018-12-10 11:03:58,433 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The operation is not valid for the state of the transaction.
+   at System.Transactions.TransactionState.EnlistPromotableSinglePhase(InternalTransaction tx, IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Transaction atomicTransaction, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject(RequestScope request, ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 184
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForObject(String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 57
+   at FPT.Framework.DataAccess.DaoBase.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 188
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 102
+   at FPT.eHospital.Services.DataRecordLocker.LockEnd() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 79
+   at FPT.eHospital.Services.DataRecordLocker.Dispose() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 29
+   at FPT.eHospital.Services.PHA009.TransactionExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 80
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoProvider.cs:line 149
+   at FPT.eHospital.Services.PHA009.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 26
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 87
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.Pharmacy.VMPHABase.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHABase.cs:line 151
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 369
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 361
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-10 11:04:26,816 [1] DEBUG - PHA009 - Start - Thêm chứng từ xuất nội bộ
+2018-12-10 11:04:27,046 [1] DEBUG - PHA009 - End - Thêm chứng từ xuất nội bộ - 53767
+2018-12-10 11:04:27,423 [1] DEBUG - PHA009 - Start - Update trạng thái phiếu lĩnh - 18025
+2018-12-10 11:04:27,478 [1] DEBUG - PHA009 - End - Update trạng thái phiếu lĩnh
+2018-12-10 11:04:27,524 [1] DEBUG - PHA009 - Start - Gọi phát sinh chứng từ nhập nội bộ từ chứng từ xuất nội bộ - 53767
+2018-12-10 11:04:27,579 [1] DEBUG - PHA024 - Start - Phát sinh chứng từ nhập nội bộ
+2018-12-10 11:04:27,763 [1] DEBUG - PHA024 - End - Phát sinh chứng từ nhập nội bộ - 53768
+2018-12-10 11:04:27,978 [1] DEBUG - PHA024 - Start - Gọi phát sinh DS chứng từ Xuất sử dụng từ Chứng từ nhập - 53768
+2018-12-10 11:04:28,145 [1] ERROR - Error when executing 'DAOLOG01_LockEnd'
+2018-12-10 11:04:28,166 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The operation is not valid for the state of the transaction.
+   at System.Transactions.TransactionState.EnlistPromotableSinglePhase(InternalTransaction tx, IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Transaction atomicTransaction, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject(RequestScope request, ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 184
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForObject(String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 57
+   at FPT.Framework.DataAccess.DaoBase.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 188
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 102
+   at FPT.eHospital.Services.DataRecordLocker.LockEnd() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 79
+   at FPT.eHospital.Services.DataRecordLocker.Dispose() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 29
+   at FPT.eHospital.Services.PHA009.TransactionExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 80
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoProvider.cs:line 149
+   at FPT.eHospital.Services.PHA009.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 26
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 87
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.Pharmacy.VMPHABase.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHABase.cs:line 151
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 369
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 361
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-12-10 11:39:11,427 [1] INFO  - [Application started.]
+2018-12-10 11:39:11,639 [1] ERROR - 'Messages.xml' Duplicated keys found: MOPD0300,MEME0555
+2018-12-10 11:39:15,105 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-10 11:39:15,142 [1] INFO  - LoadMasters() took 31 ms.
+2018-12-10 11:39:15,143 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-10 11:39:25,976 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-12-10 11:39:28,168 [1] INFO  - [test] Session is starting.
+2018-12-10 11:39:28,833 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:39:35,112 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:39:35,492 [5] ERROR - Error when loading cache 'REFBENHNHAN_DY' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:45:05 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:39:35,506 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:39:41,664 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:39:41,739 [5] ERROR - Error when loading cache 'REFBENHNHAN_GROUP_DICHVU' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:45:11 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:39:41,754 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:39:47,954 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:39:48,020 [5] ERROR - Error when loading cache 'REFBENHNHAN_MN' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:45:18 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:39:48,033 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:39:54,210 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:39:54,273 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_CC' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:45:24 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:39:54,285 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:40:00,466 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:40:00,530 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_DY' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:45:30 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:40:00,542 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:40:06,714 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:40:06,775 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:45:37 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:40:06,787 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:40:12,944 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:40:13,019 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_ALL' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:45:43 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:40:13,032 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:40:19,197 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:40:19,262 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_DV_VTYT' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:45:49 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:40:19,275 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:40:25,459 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:40:25,526 [5] ERROR - Error when loading cache 'REFBENHNHAN_TOATHUOC' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:45:55 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:40:26,061 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:40:32,234 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:40:32,310 [5] ERROR - Error when loading cache 'REFDUOC_KYGUI_TONKHO' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:46:02 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:40:32,324 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:40:38,484 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:40:38,562 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:46:08 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:40:38,575 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:40:44,757 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:40:44,941 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO_BOOKING' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:46:15 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:40:45,666 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:40:51,844 [5] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:40:54,911 [5] ERROR - Error when loading cache 'REFMAU_TONKHO' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:46:25 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:40:54,924 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:41:01,080 [5] INFO  - Can't create direct service instance of COM072, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:41:01,145 [5] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:46:31 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:41:02,023 [5] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFBENHNHAN_DY, REFBENHNHAN_GROUP_DICHVU, REFBENHNHAN_MN, REFBENHNHAN_NT_CC, REFBENHNHAN_NT_DY, REFBENHNHAN_TIEPNHAN, REFBENHNHAN_TIEPNHAN_ALL, REFBENHNHAN_TIEPNHAN_DV_VTYT, REFBENHNHAN_TOATHUOC, REFDUOC_KYGUI_TONKHO, REFDUOC_TONKHO, REFDUOC_TONKHO_BOOKING, REFMAU_TONKHO, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 205
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 275
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 562
+2018-12-10 11:41:02,033 [1] INFO  - [test] Session started.
+2018-12-10 11:46:59,590 [1] INFO  - The parent value '0' is not existed!!!
+2018-12-10 11:48:08,313 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-12-10 11:48:08,322 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-12-10 11:48:08,579 [1] INFO  - [test] Session stopped.
+2018-12-10 11:48:08,582 [1] INFO  - Memory used before collection:  21,316,200
+2018-12-10 11:48:08,645 [1] INFO  - Memory used after collection:  6,775,272
+2018-12-10 11:48:08,958 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-10 11:48:08,985 [1] INFO  - LoadMasters() took 25 ms.
+2018-12-10 11:48:08,986 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-10 11:48:10,823 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-12-10 11:48:12,145 [1] INFO  - [test] Session is starting.
+2018-12-10 11:48:12,518 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:48:18,700 [10] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:48:18,789 [10] ERROR - Error when loading cache 'REFBENHNHAN_DY' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:53:49 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:48:18,801 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:48:24,955 [10] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:48:25,020 [10] ERROR - Error when loading cache 'REFBENHNHAN_GROUP_DICHVU' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:53:55 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:48:25,034 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:48:31,211 [10] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:48:31,276 [10] ERROR - Error when loading cache 'REFBENHNHAN_MN' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:54:01 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:48:31,288 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:48:37,449 [10] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:48:37,513 [10] ERROR - Error when loading cache 'REFBENHNHAN_NT_CC' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:54:07 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:48:37,525 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:48:43,677 [10] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:48:43,746 [10] ERROR - Error when loading cache 'REFBENHNHAN_NT_DY' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:54:13 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:48:43,759 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:48:49,929 [10] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:48:49,992 [10] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:54:20 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:48:50,004 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:48:56,167 [10] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:48:56,237 [10] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_ALL' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:54:26 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:48:56,250 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:49:02,430 [10] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:49:02,503 [10] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_DV_VTYT' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:54:32 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:49:02,516 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:49:08,687 [10] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:49:08,753 [10] ERROR - Error when loading cache 'REFBENHNHAN_TOATHUOC' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:54:38 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:49:09,179 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:49:15,569 [10] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:49:15,638 [10] ERROR - Error when loading cache 'REFDUOC_KYGUI_TONKHO' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:54:45 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:49:15,651 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:49:21,798 [10] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:49:21,858 [10] ERROR - Error when loading cache 'REFDUOC_TONKHO' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:54:52 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:49:21,871 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:49:28,020 [10] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:49:28,084 [10] ERROR - Error when loading cache 'REFDUOC_TONKHO_BOOKING' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:54:58 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:49:28,751 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:49:34,936 [10] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:49:34,998 [10] ERROR - Error when loading cache 'REFMAU_TONKHO' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:55:05 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:49:35,010 [10] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-10 11:49:41,183 [10] INFO  - Can't create direct service instance of COM072, try to use WebService with url http://10.86.222.177:205/api/
+2018-12-10 11:49:41,252 [10] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => http://10.86.222.177:205/api/: StatusCode: 500, ReasonPhrase: 'Internal Server Error', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Mon, 10 Dec 2018 04:55:11 GMT
+  Server: Microsoft-IIS/8.0
+  X-Powered-By: ASP.NET
+  Content-Length: 1208
+  Content-Type: text/html
+}.
+2018-12-10 11:49:42,078 [10] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFBENHNHAN_DY, REFBENHNHAN_GROUP_DICHVU, REFBENHNHAN_MN, REFBENHNHAN_NT_CC, REFBENHNHAN_NT_DY, REFBENHNHAN_TIEPNHAN, REFBENHNHAN_TIEPNHAN_ALL, REFBENHNHAN_TIEPNHAN_DV_VTYT, REFBENHNHAN_TOATHUOC, REFDUOC_KYGUI_TONKHO, REFDUOC_TONKHO, REFDUOC_TONKHO_BOOKING, REFMAU_TONKHO, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 205
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 275
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 562
+2018-12-10 11:49:42,087 [1] INFO  - [test] Session started.
+2018-12-10 12:54:41,162 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Mon, 10 Dec 2018 05:54:33 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1908
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetRoles() in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 241
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadROLES() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 94
+   at FPT.eHospital.Forms.Administration.VMADM15.LoadData(Int32 selected_Tab) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 380
+   at FPT.eHospital.Forms.Administration.VMADM15.TabSelChanged(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 182
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-10 12:54:43,274 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Mon, 10 Dec 2018 05:54:35 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1915
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetResourcesByResourceCode(String code) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 344
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadResources(String code, ResourceType rt) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 110
+   at FPT.eHospital.Forms.Administration.VMADM15.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 231
+   at FPT.eHospital.Forms.Administration.VMADM06.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06.cs:line 496
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-12-10 14:05:20,242 [1] INFO  - [Application started.]
+2018-12-10 14:05:20,524 [1] ERROR - 'Messages.xml' Duplicated keys found: MOPD0300,MEME0555
+2018-12-10 14:05:23,202 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-10 14:05:23,260 [1] INFO  - LoadMasters() took 49 ms.
+2018-12-10 14:05:23,261 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-10 14:05:33,017 [1] INFO  - [admin] Session is starting.
+2018-12-10 14:05:36,797 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:05:43,043 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:05:48,665 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:05:54,855 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:05:55,061 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:06:01,220 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:06:01,420 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:06:07,616 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:06:07,817 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:06:14,038 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:06:14,245 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:06:20,488 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:06:20,682 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:06:26,884 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:06:27,088 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:06:33,295 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:06:33,493 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:06:39,730 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:06:40,320 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:06:46,501 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:06:46,704 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:06:52,886 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:06:53,104 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:06:59,291 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:07:00,871 [5] INFO  - LoadMasters() took 87,843 ms.
+2018-12-10 14:07:00,882 [1] INFO  - [admin] Session started.
+2018-12-10 14:07:03,888 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-10 14:07:03,909 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-10 14:07:40,131 [1] DEBUG - PHA009 - Start - Thêm chứng từ xuất nội bộ
+2018-12-10 14:07:40,487 [1] DEBUG - PHA009 - End - Thêm chứng từ xuất nội bộ - 53769
+2018-12-10 14:07:41,223 [1] DEBUG - PHA009 - Start - Update trạng thái phiếu lĩnh - 18115
+2018-12-10 14:07:41,286 [1] DEBUG - PHA009 - End - Update trạng thái phiếu lĩnh
+2018-12-10 14:07:41,336 [1] DEBUG - PHA009 - Start - Gọi phát sinh chứng từ nhập nội bộ từ chứng từ xuất nội bộ - 53769
+2018-12-10 14:07:44,865 [1] DEBUG - PHA024 - Start - Phát sinh chứng từ nhập nội bộ
+2018-12-10 14:07:45,654 [1] DEBUG - PHA024 - End - Phát sinh chứng từ nhập nội bộ - 53770
+2018-12-10 14:07:55,902 [1] DEBUG - PHA024 - Start - Gọi phát sinh DS chứng từ Xuất sử dụng từ Chứng từ nhập - 53770
+2018-12-10 14:08:06,955 [1] ERROR - Error when executing 'DAOLOG01_LockEnd'
+2018-12-10 14:08:09,869 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The operation is not valid for the state of the transaction.
+   at System.Transactions.TransactionState.EnlistPromotableSinglePhase(InternalTransaction tx, IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Transaction atomicTransaction, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject(RequestScope request, ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 184
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForObject(String statementName, Object objParam) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 57
+   at FPT.Framework.DataAccess.DaoBase.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 188
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForObject(String strStatementId, Object parameters) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 102
+   at FPT.eHospital.Services.DataRecordLocker.LockEnd() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 79
+   at FPT.eHospital.Services.DataRecordLocker.Dispose() in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\DataRecordLocker.cs:line 29
+   at FPT.eHospital.Services.PHA009.TransactionExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 80
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3) in E:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoProvider.cs:line 149
+   at FPT.eHospital.Services.PHA009.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\08.SvcPHA\PHA009.cs:line 26
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 87
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.Pharmacy.VMPHABase.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHABase.cs:line 151
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.LuuChungTu() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 369
+   at FPT.eHospital.Forms.Pharmacy.VMPHA09.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\08.ScrPHA\VMPHA09.cs:line 361
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-12-10 14:17:40,734 [1] INFO  - [Application started.]
+2018-12-10 14:17:41,154 [1] ERROR - 'Messages.xml' Duplicated keys found: MOPD0300,MEME0555
+2018-12-10 14:17:43,620 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-10 14:17:43,677 [1] INFO  - LoadMasters() took 50 ms.
+2018-12-10 14:17:43,678 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-10 14:17:52,151 [1] INFO  - [admin] Session is starting.
+2018-12-10 14:17:52,918 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:17:59,141 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:17:59,342 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:18:05,561 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:18:05,759 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:18:11,960 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:18:12,164 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:18:18,365 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:18:18,568 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:18:24,760 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:18:24,976 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:18:31,178 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:18:31,376 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:18:37,557 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:18:37,776 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:18:43,986 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:18:44,184 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:18:50,355 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:18:50,978 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:18:57,177 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:18:57,392 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:19:03,580 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:19:03,779 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-10 14:19:09,961 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 14:19:11,516 [5] INFO  - LoadMasters() took 79,357 ms.
+2018-12-10 14:19:11,526 [1] INFO  - [admin] Session started.
+2018-12-10 14:19:14,468 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-10 14:19:14,486 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-10 14:21:58,073 [1] DEBUG - PHA009 - Start - Thêm chứng từ xuất nội bộ
+2018-12-10 14:21:58,393 [1] DEBUG - PHA009 - End - Thêm chứng từ xuất nội bộ - 53771
+2018-12-10 14:21:59,112 [1] DEBUG - PHA009 - Start - Update trạng thái phiếu lĩnh - 18056
+2018-12-10 14:21:59,171 [1] DEBUG - PHA009 - End - Update trạng thái phiếu lĩnh
+2018-12-10 14:21:59,218 [1] DEBUG - PHA009 - Start - Gọi phát sinh chứng từ nhập nội bộ từ chứng từ xuất nội bộ - 53771
+2018-12-10 14:22:04,855 [1] DEBUG - PHA024 - Start - Phát sinh chứng từ nhập nội bộ
+2018-12-10 14:22:05,049 [1] DEBUG - PHA024 - End - Phát sinh chứng từ nhập nội bộ - 53772
+2018-12-10 14:22:05,283 [1] DEBUG - PHA024 - Start - Gọi phát sinh DS chứng từ Xuất sử dụng từ Chứng từ nhập - 53772
+2018-12-10 14:22:08,918 [1] DEBUG - PHA020 - Start - Phát sinh chứng từ Xuất sử dụng từ Chứng từ nhập - KCCDSN0518000590
+2018-12-10 14:22:09,171 [1] DEBUG - PHA020 - End - Phát sinh chứng từ Xuất sử dụng - 53773
+2018-12-10 14:22:09,222 [1] DEBUG - PHA020 - Start - Cập nhật chứng từ liên quan vào y lệnh - 53773
+2018-12-10 14:22:09,274 [1] DEBUG - PHA020 - End - Cập nhật chứng từ liên quan vào y lệnh - 53773
+2018-12-10 14:22:09,519 [1] DEBUG - Start - TinhVienPhiDuocNoiTru 
+2018-12-10 14:22:09,637 [1] DEBUG - End - TinhVienPhiDuocNoiTru 
+2018-12-10 14:22:11,449 [1] DEBUG - PHA024 - End - Gọi phát sinh DS chứng từ Xuất sử dụng từ Chứng từ nhập  - 53772
+2018-12-10 14:22:11,517 [1] DEBUG - PHA009 - End - Gọi phát sinh chứng từ nhập nội bộ - 53771
+2018-12-10 17:36:21,080 [1] INFO  - Total upload size: 916 bytes => 0 bytes/s
+2018-12-10 17:36:21,082 [1] INFO  - Total download size: 719 bytes => 0 bytes/s
+2018-12-10 17:36:21,128 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-10 17:36:42,209 [1] INFO  - [admin] Session stopped.
+2018-12-10 17:36:42,214 [1] INFO  - Memory used before collection:  21,619,820
+2018-12-10 17:36:42,280 [1] INFO  - Memory used after collection:  8,107,164
+2018-12-10 17:36:42,347 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------

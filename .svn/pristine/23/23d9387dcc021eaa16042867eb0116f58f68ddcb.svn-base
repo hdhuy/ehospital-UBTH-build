@@ -1,0 +1,20 @@
+{
+    "Logging": {
+        "IncludeScopes": false,
+        "Debug": {
+            "LogLevel": {
+                "Default": "Warning"
+            }
+        },
+        "Console": {
+            "LogLevel": {
+                "Default": "Warning"
+            }
+        }
+    },
+    "AppSettings": {
+        "DbConnectionString": "mongodb://localhost:27017",
+        "DbName": "settings",
+        "Secret": "369007BB-8A35-4614-82BA-F2EA1C678100"
+    }
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,52f367098258341afddecd0435608698-->
+        <statement id="DAO00026_GEN_EXAM_KEY" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select max(KEYVALUE) KEYVALUE
+            from LST_KEYDATA_TOATHUOC
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="KEYTYPE">
+                        LST_KEYDATA_TOATHUOC.KEYTYPE = '$KEYTYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYYEAR">
+                        LST_KEYDATA_TOATHUOC.KEYYEAR = '$KEYYEAR$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYMONTH">
+                        LST_KEYDATA_TOATHUOC.KEYMONTH = '$KEYMONTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYDAY">
+                        LST_KEYDATA_TOATHUOC.KEYDAY = '$KEYDAY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_1">
+                        LST_KEYDATA_TOATHUOC.SEGMENT_1 = '$SEGMENT_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_2">
+                        LST_KEYDATA_TOATHUOC.SEGMENT_2 = '$SEGMENT_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_3">
+                        LST_KEYDATA_TOATHUOC.SEGMENT_3 = '$SEGMENT_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYVALUE">
+                        LST_KEYDATA_TOATHUOC.KEYVALUE = '$KEYVALUE$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,f07f3cf5f2898e313ef93171730a6fb6-->
+        <update id="DAO00026_Update" parameterClass="HashTable">
+            update LST_KEYDATA_TOATHUOC set
+            KEYVALUE = #KEYVALUE#
+            where
+            KEYTYPE = '$KEYTYPE$'
+            AND KEYYEAR = '$KEYYEAR$'
+            AND KEYMONTH = '$KEYMONTH$'
+            AND KEYDAY = '$KEYDAY$'
+            AND SEGMENT_1 = '$SEGMENT_1$'
+            AND SEGMENT_2 = '$SEGMENT_2$'
+            AND SEGMENT_3 = '$SEGMENT_3$'
+        </update>
+        <!--Revision:0,46e033ab08215ac3c23ee602d24b673a-->
+        <insert id="DAO00026_Add" parameterClass="HashTable" resultClass="System.Int64">
+          insert into LST_KEYDATA_TOATHUOC (
+          KEYTYPE
+          , KEYYEAR
+          , KEYMONTH
+          , KEYDAY
+          , SEGMENT_1
+          , SEGMENT_2
+          , SEGMENT_3
+          , KEYVALUE
+          , BENHVIEN_ID
+          ) values (
+          #KEYTYPE#
+          , #KEYYEAR#
+          , #KEYMONTH#
+          , #KEYDAY#
+          , #SEGMENT_1#
+          , #SEGMENT_2#
+          , #SEGMENT_3#
+          , #KEYVALUE#
+          , #BENHVIEN_ID#
+          )
+        </insert>
+        <!--Revision:0,9cbc0e07a5d990f1a9116d6c25998bbf-->
+        <statement id="DAO00026_GetListDanhSachDichVuGhiNhanVTYT_COM25" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select distinct TO_CHAR(C.NGAYYEUCAU,'DD/MM/YYYY') as NGAYYEUCAU, C.DICHVU_ID, C.DVYEUCAU_ID, D.TENDICHVU, C.NOITHUCHIEN_ID, A.SOTIEPNHAN, A.TRAITUYEN, A.NGAYMIENDONGCHITRA, A.TIEPNHAN_ID, A.DOITUONG_ID, A.TRANGTHAI,
+            A.LOAITHANHVIEN_ID, A.SUDUNG_BHTN, A.THE_ID, A.THANHVIEN_ID, A.VIP, A.NGUON_BENHNHAN_ID, A.BAOLANH_VIENPHI,
+            CASE WHEN (A.TRANGTHAI = 'NOITRU' OR A.TRANGTHAI = 'CAPCUU') THEN 'IN' ELSE 'OUT' END AS LOAIBENHAN,
+            CASE WHEN (C.TRANGTHAI = 'CHUAKETQUA') THEN 'CHUAKETQUA' ELSE 'HOANTAT' END AS TRANGTHAIDICHVU,
+            B.*,
+            CASE WHEN SUBSTR(E.MANHOMDICHVU,1,2) = '03' THEN '02' ELSE SUBSTR(E.MANHOMDICHVU,1,2) END AS MANHOMDICHVU
+            from TT_TIEPNHAN A
+            inner join TT_BENHNHAN B on B.BENHNHAN_ID = A.BENHNHAN_ID and B.ACTIVE = '1'
+            inner join TT_DVYEUCAU C on C.TIEPNHAN_ID = A.TIEPNHAN_ID
+            left join TM_DICHVU D on D.DICHVU_ID = C.DICHVU_ID
+            left join TM_NHOMDICHVU E on E.NHOMDICHVU_ID = D.NHOMDICHVU_ID
+            where
+            C.NGAYHENCLS is NULL and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+            and (A.TRANGTHAI = 'DATIEPNHAN' or A.TRANGTHAI = 'NOITRU' or A.TRANGTHAI = 'CAPCUU' or A.TRANGTHAI = 'NGOAITRU')
+            and (CASE WHEN SUBSTR(E.MANHOMDICHVU,1,2) = '03' THEN '02' ELSE SUBSTR(E.MANHOMDICHVU,1,2) END in ('02', '04'))
+        </statement>
+        <!--Revision:0,a06b68542bcd15ba4f009bb0d828a72b-->
+        <statement id="DAO00026_GetListDanhSachDichVuGhiNhanVTYT_COM25_WithTN" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select distinct TO_CHAR(C.NGAYYEUCAU,'DD/MM/YYYY') as NGAYYEUCAU, C.DICHVU_ID, C.DVYEUCAU_ID, D.TENDICHVU, C.NOITHUCHIEN_ID, A.SOTIEPNHAN, A.TRAITUYEN, A.NGAYMIENDONGCHITRA, A.TIEPNHAN_ID, A.DOITUONG_ID, A.TRANGTHAI,
+            A.LOAITHANHVIEN_ID, A.SUDUNG_BHTN, A.THE_ID, A.THANHVIEN_ID, A.VIP, A.NGUON_BENHNHAN_ID, A.BAOLANH_VIENPHI,
+            CASE WHEN (A.TRANGTHAI = 'NOITRU' OR A.TRANGTHAI = 'CAPCUU') THEN 'IN' ELSE 'OUT' END AS LOAIBENHAN,
+            CASE WHEN (C.TRANGTHAI = 'CHUAKETQUA') THEN 'CHUAKETQUA' ELSE 'HOANTAT' END AS TRANGTHAIDICHVU,
+            B.*,
+            CASE WHEN SUBSTR(E.MANHOMDICHVU,1,2) = '03' THEN '02' ELSE SUBSTR(E.MANHOMDICHVU,1,2) END AS MANHOMDICHVU
+            from TT_TIEPNHAN A
+            inner join TT_BENHNHAN B on B.BENHNHAN_ID = A.BENHNHAN_ID and B.ACTIVE = '1'
+            inner join TT_DVYEUCAU C on C.TIEPNHAN_ID = A.TIEPNHAN_ID
+            left join TM_DICHVU D on D.DICHVU_ID = C.DICHVU_ID
+            left join TM_NHOMDICHVU E on E.NHOMDICHVU_ID = D.NHOMDICHVU_ID
+            where
+            C.NGAYHENCLS is NULL and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+            and (A.TRANGTHAI = 'DATIEPNHAN' or A.TRANGTHAI = 'NOITRU' or A.TRANGTHAI = 'CAPCUU' or A.TRANGTHAI = 'NGOAITRU')
+            and (CASE WHEN SUBSTR(E.MANHOMDICHVU,1,2) = '03' THEN '02' ELSE SUBSTR(E.MANHOMDICHVU,1,2) END in ('02', '04'))
+            and A.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

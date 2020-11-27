@@ -1,0 +1,294 @@
+﻿--------------------------------------------------------------------------------
+2018-12-03 17:28:30,649 [1] INFO  - [Application started.]
+2018-12-03 17:28:36,601 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-03 17:28:36,662 [1] INFO  - LoadMasters() took 49 ms.
+2018-12-03 17:28:36,663 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-03 17:28:58,562 [1] INFO  - [admin] Session is starting.
+2018-12-03 17:28:59,689 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:29:06,213 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:29:24,855 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:29:31,018 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:29:31,219 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:29:37,433 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:29:37,620 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:29:43,780 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:29:43,983 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:29:50,152 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:29:50,476 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:29:56,648 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:29:56,861 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:30:03,029 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:30:03,230 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:30:09,410 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:30:09,611 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:30:15,804 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:30:16,534 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:30:22,729 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:30:22,949 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:30:29,102 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:30:29,308 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:30:35,503 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:30:37,104 [5] INFO  - LoadMasters() took 98,491 ms.
+2018-12-03 17:30:37,117 [1] INFO  - [admin] Session started.
+2018-12-03 17:30:45,545 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-03 17:30:45,572 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-03 17:39:54,815 [1] ERROR - Can't connect to http://daotao-hssk.ytecoso.vn:8090/Services/PID/thongTinBenhNhan/
+2018-12-03 17:39:55,096 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-12-03 17:40:01,417 [1] INFO  - Luu tiep nhan:  take 12328 ms.
+2018-12-03 17:40:01,441 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.Registration.VMREG01.XacNhanCheckThongTuyen(Object sender, Object e) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 462
+   at FPT.eHospital.Forms.VMPopup.OnFormClosed(Object sender, EventArgs args) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 50
+   at WinformUI.WFControlController.ShowModal(IView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\WFControlController.cs:line 359
+   at FPT.Framework.Presentation.PageView.ShowModal(IPageView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\PageView.cs:line 114
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 101
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowMessageBox(MsgBoxType type, String msg, String title, VMEvent closeCallback, ViewResult defaultFocus) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 320
+   at FPT.eHospital.Forms.Registration.VMREG01.LuuTiepNhan(Object sender, Object arg) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 432
+   at FPT.eHospital.Forms.Registration.VMREG01.cmdLuuTiepNhan(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 378
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-12-03 17:40:06,653 [1] ERROR - MPI001_KetNoiThongTinMaDinhDanh: Invalid Input Information: Bạn cần cung cấp thông tin tỉnh đăng ký khai sinh để tạo mã quản lý sức khỏe cá nhân
+2018-12-03 17:40:06,796 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-12-03 17:40:13,088 [1] INFO  - Luu tiep nhan:  take 7977 ms.
+2018-12-03 17:40:13,090 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.Registration.VMREG01.XacNhanCheckThongTuyen(Object sender, Object e) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 462
+   at FPT.eHospital.Forms.VMPopup.OnFormClosed(Object sender, EventArgs args) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 50
+   at WinformUI.WFControlController.ShowModal(IView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\WFControlController.cs:line 359
+   at FPT.Framework.Presentation.PageView.ShowModal(IPageView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\PageView.cs:line 114
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 101
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowMessageBox(MsgBoxType type, String msg, String title, VMEvent closeCallback, ViewResult defaultFocus) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 320
+   at FPT.eHospital.Forms.Registration.VMREG01.LuuTiepNhan(Object sender, Object arg) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 432
+   at FPT.eHospital.Forms.Registration.VMREG01.cmdLuuTiepNhan(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 378
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-12-03 17:40:23,782 [1] ERROR - MPI001_KetNoiThongTinMaDinhDanh: Invalid Input Information: Bạn cần cung cấp thông tin tỉnh đăng ký khai sinh để tạo mã quản lý sức khỏe cá nhân
+2018-12-03 17:40:23,936 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-12-03 17:40:30,218 [1] INFO  - Luu tiep nhan:  take 8719 ms.
+2018-12-03 17:40:30,219 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.Registration.VMREG01.XacNhanCheckThongTuyen(Object sender, Object e) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 462
+   at FPT.eHospital.Forms.VMPopup.OnFormClosed(Object sender, EventArgs args) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 50
+   at WinformUI.WFControlController.ShowModal(IView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\WFControlController.cs:line 359
+   at FPT.Framework.Presentation.PageView.ShowModal(IPageView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\PageView.cs:line 114
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 101
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowMessageBox(MsgBoxType type, String msg, String title, VMEvent closeCallback, ViewResult defaultFocus) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 320
+   at FPT.eHospital.Forms.Registration.VMREG01.LuuTiepNhan(Object sender, Object arg) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 432
+   at FPT.eHospital.Forms.Registration.VMREG01.cmdLuuTiepNhan(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 378
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-12-03 17:42:06,879 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-12-03 17:42:13,112 [1] INFO  - Luu tiep nhan:  take 9459 ms.
+2018-12-03 17:42:13,115 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.Registration.VMREG01.XacNhanCheckThongTuyen(Object sender, Object e) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 462
+   at FPT.eHospital.Forms.VMPopup.OnFormClosed(Object sender, EventArgs args) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 50
+   at WinformUI.WFControlController.ShowModal(IView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\WFControlController.cs:line 359
+   at FPT.Framework.Presentation.PageView.ShowModal(IPageView owner, EventHandler closedHandler) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\PageView.cs:line 114
+   at FPT.eHospital.Forms.VMPopup.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMPopup.cs:line 101
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 370
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(VMPopup popup, IViewModel vm, VMEvent closeCallback) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 260
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 346
+   at FPT.eHospital.Forms.Base.VMHosLauncher.ShowPopup(IViewModel vm, VMEvent closeCallback, Boolean allowClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosLauncher.cs:line 279
+   at FPT.eHospital.Forms.Base.VMLauncherBase.ShowMessageBox(MsgBoxType type, String msg, String title, VMEvent closeCallback, ViewResult defaultFocus) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 320
+   at FPT.eHospital.Forms.Registration.VMREG01.LuuTiepNhan(Object sender, Object arg) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 432
+   at FPT.eHospital.Forms.Registration.VMREG01.cmdLuuTiepNhan(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 378
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-12-03 17:44:46,460 [1] INFO  - Total upload size: 3,412 bytes => 4 bytes/s
+2018-12-03 17:44:46,463 [1] INFO  - Total download size: 36,608 bytes => 43 bytes/s
+2018-12-03 17:44:46,537 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:44:46,794 [1] INFO  - [admin] Session stopped.
+2018-12-03 17:44:46,796 [1] INFO  - Memory used before collection:  24,626,240
+2018-12-03 17:44:46,847 [1] INFO  - Memory used after collection:  10,563,028
+2018-12-03 17:44:47,328 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-12-03 17:45:53,822 [1] INFO  - [Application started.]
+2018-12-03 17:45:55,824 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-03 17:45:55,886 [1] INFO  - LoadMasters() took 50 ms.
+2018-12-03 17:45:55,887 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-03 17:46:02,396 [1] INFO  - [admin] Session is starting.
+2018-12-03 17:46:03,170 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:46:09,413 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:46:09,614 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:46:15,833 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:46:16,058 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:46:22,250 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:46:22,498 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:46:29,137 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:46:29,340 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:46:35,550 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:46:35,748 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:46:41,931 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:46:42,126 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:46:48,299 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:46:48,501 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:46:54,654 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:46:54,846 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:47:01,337 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:47:01,917 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:47:08,116 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:47:08,315 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:47:14,502 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:47:14,695 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:47:20,853 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.71:3010/api/
+2018-12-03 17:47:22,399 [5] INFO  - LoadMasters() took 79,995 ms.
+2018-12-03 17:47:22,407 [1] INFO  - [admin] Session started.
+2018-12-03 17:47:26,395 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-03 17:47:26,415 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-03 17:50:02,349 [1] DEBUG - Service provider's Hospital_ID = 48017
+2018-12-03 17:50:08,594 [1] INFO  - Luu tiep nhan:  take 6589 ms.
+2018-12-03 17:50:08,600 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.Registration.VMREG01.XacNhanCheckThongTuyen(Object sender, Object e) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 462
+   at FPT.eHospital.Forms.Registration.VMREG01.LuuTiepNhan(Object sender, Object arg) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 435
+   at FPT.eHospital.Forms.Registration.VMREG01.cmdLuuTiepNhan(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\02.ScrREG\VMREG01.cs:line 378
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:9200
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+--------------------------------------------------------------------------------
+2018-12-03 17:54:10,707 [1] INFO  - [Application started.]
+2018-12-03 17:54:14,128 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-03 17:54:14,191 [1] INFO  - LoadMasters() took 50 ms.
+2018-12-03 17:54:14,192 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-03 17:54:22,477 [1] INFO  - [admin] Session is starting.
+2018-12-03 17:54:23,229 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:23,876 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:24,010 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:24,213 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:24,310 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:24,405 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:24,533 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:24,637 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:24,765 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:25,266 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:25,407 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:26,079 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 17:54:28,288 [5] INFO  - LoadMasters() took 5,801 ms.
+2018-12-03 17:54:28,299 [1] INFO  - [admin] Session started.
+2018-12-03 17:54:32,510 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-03 17:54:32,531 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-03 17:55:59,277 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.REG001 dvYeucau_Id:94394
+2018-12-03 17:56:00,995 [1] INFO  - Luu tiep nhan:  take 7514 ms.
+2018-12-03 17:56:41,353 [1] DEBUG - User chạy: 117 Cách giải quyết:KT
+2018-12-03 17:56:41,889 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.OPD002 dvYeucau_Id:94394
+2018-12-03 17:58:30,262 [1] DEBUG - User chạy: 117 Cách giải quyết:KT
+2018-12-03 17:58:30,610 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.OPD002 dvYeucau_Id:94394
+2018-12-03 17:58:31,097 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.OPD002 dvYeucau_Id:94394
+--------------------------------------------------------------------------------
+2018-12-03 18:35:14,269 [1] INFO  - [Application started.]
+2018-12-03 18:35:17,175 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-03 18:35:17,239 [1] INFO  - LoadMasters() took 50 ms.
+2018-12-03 18:35:17,240 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-03 18:35:26,682 [1] INFO  - [admin] Session is starting.
+2018-12-03 18:35:27,431 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:27,612 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:27,724 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:27,814 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:27,897 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:27,981 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:28,064 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:28,147 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:28,229 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:28,715 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:28,854 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:29,547 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-12-03 18:35:31,805 [5] INFO  - LoadMasters() took 5,112 ms.
+2018-12-03 18:35:31,813 [1] INFO  - [admin] Session started.
+2018-12-03 18:35:36,299 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-12-03 18:35:36,318 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-12-03 18:40:37,135 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-12-03 18:40:37,137 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-12-03 18:40:37,182 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PROCESSCOLLECTION>
+  <TM_PROCESS>
+    <!--<PROCESS>
+      <PROCESS_CODE>MAS</PROCESS_CODE>
+      <NAME>Bộ lọc quy trình</NAME>
+      <CONDITIONS></CONDITIONS>      
+    </PROCESS>-->
+    <PROCESS>
+      <FLOWCONDITIONS>@BENHVIEN_ID == 'FPT00001'</FLOWCONDITIONS>
+      <PROCESS_CODE>P01</PROCESS_CODE>
+      <NAME>Quy trình ngoại trú trả tiền trước</NAME>
+      <CONDITIONS>(@SOTIEPNHAN != '') and (@HOSPITAL_ID != '')</CONDITIONS>
+      <RESULTS>
+        <RESULT>
+          <KEY>SOTIEPNHAN</KEY>
+          <VALUE>@SOTIEPNHAN</VALUE>
+        </RESULT>
+      </RESULTS>
+    </PROCESS>
+    <PROCESS>
+      <FLOWCONDITIONS>(@BENHVIEN_ID == 'FPT00001') and (@SUDUNG_BHTN == '1')</FLOWCONDITIONS>
+      <PROCESS_CODE>P02</PROCESS_CODE>
+      <NAME>Quy trình ngoại trú  trả tiền sau</NAME>
+      <CONDITIONS>@SOTIEPNHAN != '' and (@HOSPITAL_ID != '')</CONDITIONS>
+      <RESULTS>
+        <RESULT>
+          <KEY>SOTIEPNHAN</KEY>
+          <VALUE>@SOTIEPNHAN</VALUE>
+        </RESULT>
+      </RESULTS>
+    </PROCESS>
+    <PROCESS>
+      <FLOWCONDITIONS>@TAMUNG == '0'</FLOWCONDITIONS>
+      <PROCESS_CODE>P03</PROCESS_CODE>
+      <NAME>Quy trình nội trú</NAME>
+      <CONDITIONS>@SOBENHAN != '' and @HOSPITAL_ID != ''</CONDITIONS>
+      <RESULTS>
+        <RESULT>
+          <KEY>SOTIEPNHAN</KEY>
+          <VALUE>@SOTIEPNHAN</VALUE>
+        </RESULT>
+      </RESULTS>
+    
+  </PROCESS>
+    <PROCESS>
+      <FLOWCONDITIONS>@TAMUNG == '1'</FLOWCONDITIONS>
+      <PROCESS_CODE>P04</PROCESS_CODE>
+      <NAME>Quy trình nội trú - tạm ứng trước</NAME>
+      <CONDITIONS>@SOBENHAN != '' and @HOSPITAL_ID != ''</CONDITIONS>
+      <RESULTS>
+        <RESULT>
+          <KEY>SOTIEPNHAN</KEY>
+          <VALUE>@SOTIEPNHAN</VALUE>
+        </RESULT>
+      </RESULTS>
+    
+  </PROCESS>
+  </TM_PROCESS>
+</PROCESSCOLLECTION>

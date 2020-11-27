@@ -1,0 +1,692 @@
+﻿--------------------------------------------------------------------------------
+2018-11-01 14:59:07,673 [1] INFO  - [Application started.]
+2018-11-01 14:59:11,510 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-11-01 14:59:14,477 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-01 14:59:14,514 [1] INFO  - LoadMasters() took 28 ms.
+2018-11-01 14:59:14,515 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-01 14:59:33,131 [1] INFO  - [admin] Session is starting.
+2018-11-01 14:59:34,178 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:34,489 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:34,569 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:34,630 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:34,692 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:34,753 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:34,810 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:34,868 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:34,922 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:35,467 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:35,558 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:36,313 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 14:59:38,326 [7] INFO  - LoadMasters() took 5,144 ms.
+2018-11-01 14:59:38,335 [1] INFO  - [admin] Session started.
+2018-11-01 14:59:44,342 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-01 14:59:44,365 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-11-01 15:06:37,677 [1] INFO  - [Application started.]
+2018-11-01 15:06:40,204 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-11-01 15:06:41,021 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-01 15:06:41,060 [1] INFO  - LoadMasters() took 27 ms.
+2018-11-01 15:06:41,061 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-01 15:06:48,783 [1] INFO  - [admin] Session is starting.
+2018-11-01 15:06:49,930 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:50,104 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:50,155 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:50,214 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:50,269 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:50,320 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:50,374 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:50,430 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:50,483 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:50,958 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:51,047 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:51,373 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:06:53,460 [5] INFO  - LoadMasters() took 4,667 ms.
+2018-11-01 15:06:53,469 [1] INFO  - [admin] Session started.
+2018-11-01 15:06:55,425 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-01 15:06:55,429 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-01 15:08:42,258 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-01 15:08:42,260 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-01 15:08:42,299 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-01 15:08:47,229 [1] INFO  - [admin] Session stopped.
+2018-11-01 15:08:47,232 [1] INFO  - Memory used before collection:  19,263,096
+2018-11-01 15:08:47,287 [1] INFO  - Memory used after collection:  6,883,916
+2018-11-01 15:08:47,467 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-01 15:27:30,275 [1] INFO  - [Application started.]
+2018-11-01 15:27:31,659 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-11-01 15:27:32,640 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-01 15:27:32,676 [1] INFO  - LoadMasters() took 27 ms.
+2018-11-01 15:27:32,677 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-01 15:29:55,462 [1] INFO  - [admin] Session is starting.
+2018-11-01 15:29:55,986 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:29:56,137 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:29:56,196 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:29:56,256 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:29:56,316 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:29:56,380 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:29:56,437 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:29:56,494 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:29:56,549 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:29:57,022 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:29:57,468 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:29:58,354 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 15:30:00,183 [5] INFO  - LoadMasters() took 4,716 ms.
+2018-11-01 15:30:00,201 [1] INFO  - [admin] Session started.
+2018-11-01 15:30:02,494 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-01 15:30:02,496 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-01 15:30:24,227 [1] INFO  - The parent value '-1' is not existed!!!
+--------------------------------------------------------------------------------
+2018-11-01 16:55:46,098 [1] INFO  - [Application started.]
+2018-11-01 16:55:48,637 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-11-01 16:55:50,195 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-01 16:55:50,230 [1] INFO  - LoadMasters() took 26 ms.
+2018-11-01 16:55:50,231 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-01 16:55:59,077 [1] INFO  - [admin] Session is starting.
+2018-11-01 16:55:59,884 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:00,075 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:00,130 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:00,182 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:00,240 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:00,294 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:00,354 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:00,407 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:00,463 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:00,958 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:01,040 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:01,394 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:56:03,257 [5] INFO  - LoadMasters() took 4,172 ms.
+2018-11-01 16:56:03,269 [1] INFO  - [admin] Session started.
+2018-11-01 16:56:05,453 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-01 16:56:05,455 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-01 16:56:59,583 [1] INFO  - The parent value '-1' is not existed!!!
+2018-11-01 16:57:13,713 [1] INFO  - The parent value '-1' is not existed!!!
+2018-11-01 16:58:03,707 [1] INFO  - The parent value '-1' is not existed!!!
+2018-11-01 16:58:13,625 [1] INFO  - The parent value '-1' is not existed!!!
+2018-11-01 16:58:25,180 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-01 16:58:25,181 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-01 16:58:25,197 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-01 16:58:25,478 [1] INFO  - [admin] Session stopped.
+2018-11-01 16:58:25,481 [1] INFO  - Memory used before collection:  38,480,220
+2018-11-01 16:58:25,590 [1] INFO  - Memory used after collection:  21,759,224
+2018-11-01 16:58:25,594 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-11-01 16:58:25,747 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-01 16:58:25,768 [1] INFO  - LoadMasters() took 20 ms.
+2018-11-01 16:58:25,770 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-01 16:58:33,013 [1] INFO  - [admin] Session is starting.
+2018-11-01 16:58:33,359 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:33,422 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:33,481 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:33,546 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:33,606 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:33,664 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:33,720 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:33,773 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:33,829 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:34,266 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:34,345 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:35,095 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 16:58:37,354 [9] INFO  - LoadMasters() took 4,339 ms.
+2018-11-01 16:58:37,363 [1] INFO  - [admin] Session started.
+2018-11-01 16:58:37,743 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-01 16:58:37,746 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-01 16:58:56,238 [1] ERROR - Error when executing 'DAO00403_QMS002_GetQueueGroupId'
+2018-11-01 16:59:12,635 [1] ERROR - Lỗi kết nối database: Invalid column name 'CODE'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CODE'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForList[T](RequestScope request, ISqlMapSession session, Object parameterObject, IList`1 resultObject, RowDelegate`1 rowDelegate)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done)
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount)
+   at FPT.Framework.DataAccess.EntityMapper.QueryForList[T](String statementName, Object objParam)
+   at FPT.Framework.DataAccess.DaoBase.QueryForList(String strStatementId, Object parameters)
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForList(String strStatementId, Object parameters)
+   at FPT.eHospital.Services.QMS002.ExecuteForList(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\29.SvcQMS\QMS002.cs:line 28
+   at FPT.Framework.DataService.DirectService.ExecuteForList(String target, String action, IDictionary`2 parameters)
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForList(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 129
+   at FPT.eHospital.Forms.QMS.VMQMS20.getQueueTypeID() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS20.cs:line 86
+   at FPT.eHospital.Forms.QMS.VMQMS20.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS20.cs:line 42
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+ClientConnectionId:c0b8621e-e921-4c83-83de-5f4d4bc4858c
+Error Number:207,State:1,Class:16
+2018-11-01 16:59:45,307 [1] ERROR - Error when executing 'DAO00403_QMS002_GetQueueGroupId'
+2018-11-01 16:59:58,376 [1] ERROR - Lỗi kết nối database: Invalid column name 'CODE'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CODE'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForList[T](RequestScope request, ISqlMapSession session, Object parameterObject, IList`1 resultObject, RowDelegate`1 rowDelegate)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done)
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount)
+   at FPT.Framework.DataAccess.EntityMapper.QueryForList[T](String statementName, Object objParam)
+   at FPT.Framework.DataAccess.DaoBase.QueryForList(String strStatementId, Object parameters)
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForList(String strStatementId, Object parameters)
+   at FPT.eHospital.Services.QMS002.ExecuteForList(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\29.SvcQMS\QMS002.cs:line 28
+   at FPT.Framework.DataService.DirectService.ExecuteForList(String target, String action, IDictionary`2 parameters)
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForList(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 129
+   at FPT.eHospital.Forms.QMS.VMQMS20.getQueueTypeID() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS20.cs:line 86
+   at FPT.eHospital.Forms.QMS.VMQMS20.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS20.cs:line 42
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+ClientConnectionId:c0b8621e-e921-4c83-83de-5f4d4bc4858c
+Error Number:207,State:1,Class:16
+2018-11-01 17:00:24,129 [1] ERROR - Error when executing 'DAO00403_QMS002_GetQueueGroupId'
+2018-11-01 17:00:39,016 [1] ERROR - Lỗi kết nối database: Invalid column name 'CODE'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CODE'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForList[T](RequestScope request, ISqlMapSession session, Object parameterObject, IList`1 resultObject, RowDelegate`1 rowDelegate)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done)
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount)
+   at FPT.Framework.DataAccess.EntityMapper.QueryForList[T](String statementName, Object objParam)
+   at FPT.Framework.DataAccess.DaoBase.QueryForList(String strStatementId, Object parameters)
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForList(String strStatementId, Object parameters)
+   at FPT.eHospital.Services.QMS002.ExecuteForList(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\29.SvcQMS\QMS002.cs:line 28
+   at FPT.Framework.DataService.DirectService.ExecuteForList(String target, String action, IDictionary`2 parameters)
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForList(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 129
+   at FPT.eHospital.Forms.QMS.VMQMS20.getQueueTypeID() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS20.cs:line 86
+   at FPT.eHospital.Forms.QMS.VMQMS20.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS20.cs:line 42
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+ClientConnectionId:c0b8621e-e921-4c83-83de-5f4d4bc4858c
+Error Number:207,State:1,Class:16
+2018-11-01 17:25:54,136 [1] ERROR - Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FPT.eHospital.Forms.QMS.VMQMS20.getQueueTypeID() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS20.cs:line 87
+   at FPT.eHospital.Forms.QMS.VMQMS20.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS20.cs:line 42
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-01 17:26:12,127 [1] ERROR - Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FPT.eHospital.Forms.QMS.VMQMS20.getQueueTypeID() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS20.cs:line 87
+   at FPT.eHospital.Forms.QMS.VMQMS20.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS20.cs:line 42
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-01 17:35:29,362 [1] ERROR - Error when executing 'DAO00003_CacheList'
+2018-11-01 17:36:28,031 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)
+   at System.Transactions.Oletx.IDtcProxyShimFactory.ReceiveTransaction(UInt32 propgationTokenSize, Byte[] propgationToken, IntPtr managedIdentifier, Guid& transactionIdentifier, OletxTransactionIsolationLevel& isolationLevel, ITransactionShim& transactionShim)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   --- End of inner exception stack trace ---
+   at System.Transactions.Oletx.OletxTransactionManager.ProxyException(COMException comException)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   at System.Transactions.TransactionStatePSPEOperation.PSPEPromote(InternalTransaction tx)
+   at System.Transactions.TransactionStateDelegatedBase.EnterState(InternalTransaction tx)
+   at System.Transactions.EnlistableStates.Promote(InternalTransaction tx)
+   at System.Transactions.Transaction.Promote()
+   at System.Transactions.TransactionInterop.ConvertToOletxTransaction(Transaction transaction)
+   at System.Transactions.TransactionInterop.GetExportCookie(Transaction transaction, Byte[] whereabouts)
+   at System.Data.SqlClient.SqlInternalConnection.GetTransactionCookie(Transaction transaction, Byte[] whereAbouts)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 322
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 623
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-01 17:36:55,420 [1] ERROR - Error when executing 'DAO00003_CacheList'
+2018-11-01 17:37:05,494 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)
+   at System.Transactions.Oletx.IDtcProxyShimFactory.ReceiveTransaction(UInt32 propgationTokenSize, Byte[] propgationToken, IntPtr managedIdentifier, Guid& transactionIdentifier, OletxTransactionIsolationLevel& isolationLevel, ITransactionShim& transactionShim)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   --- End of inner exception stack trace ---
+   at System.Transactions.Oletx.OletxTransactionManager.ProxyException(COMException comException)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   at System.Transactions.TransactionStatePSPEOperation.PSPEPromote(InternalTransaction tx)
+   at System.Transactions.TransactionStateDelegatedBase.EnterState(InternalTransaction tx)
+   at System.Transactions.EnlistableStates.Promote(InternalTransaction tx)
+   at System.Transactions.Transaction.Promote()
+   at System.Transactions.TransactionInterop.ConvertToOletxTransaction(Transaction transaction)
+   at System.Transactions.TransactionInterop.GetExportCookie(Transaction transaction, Byte[] whereabouts)
+   at System.Data.SqlClient.SqlInternalConnection.GetTransactionCookie(Transaction transaction, Byte[] whereAbouts)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 322
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 623
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-01 17:39:12,069 [1] ERROR - Error when executing 'DAO00003_CacheList'
+2018-11-01 17:39:28,929 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)
+   at System.Transactions.Oletx.IDtcProxyShimFactory.ReceiveTransaction(UInt32 propgationTokenSize, Byte[] propgationToken, IntPtr managedIdentifier, Guid& transactionIdentifier, OletxTransactionIsolationLevel& isolationLevel, ITransactionShim& transactionShim)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   --- End of inner exception stack trace ---
+   at System.Transactions.Oletx.OletxTransactionManager.ProxyException(COMException comException)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   at System.Transactions.TransactionStatePSPEOperation.PSPEPromote(InternalTransaction tx)
+   at System.Transactions.TransactionStateDelegatedBase.EnterState(InternalTransaction tx)
+   at System.Transactions.EnlistableStates.Promote(InternalTransaction tx)
+   at System.Transactions.Transaction.Promote()
+   at System.Transactions.TransactionInterop.ConvertToOletxTransaction(Transaction transaction)
+   at System.Transactions.TransactionInterop.GetExportCookie(Transaction transaction, Byte[] whereabouts)
+   at System.Data.SqlClient.SqlInternalConnection.GetTransactionCookie(Transaction transaction, Byte[] whereAbouts)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 322
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 623
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-01 17:41:49,571 [1] ERROR - Error when executing 'DAO00003_CacheList'
+2018-11-01 17:41:57,184 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)
+   at System.Transactions.Oletx.IDtcProxyShimFactory.ReceiveTransaction(UInt32 propgationTokenSize, Byte[] propgationToken, IntPtr managedIdentifier, Guid& transactionIdentifier, OletxTransactionIsolationLevel& isolationLevel, ITransactionShim& transactionShim)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   --- End of inner exception stack trace ---
+   at System.Transactions.Oletx.OletxTransactionManager.ProxyException(COMException comException)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   at System.Transactions.TransactionStatePSPEOperation.PSPEPromote(InternalTransaction tx)
+   at System.Transactions.TransactionStateDelegatedBase.EnterState(InternalTransaction tx)
+   at System.Transactions.EnlistableStates.Promote(InternalTransaction tx)
+   at System.Transactions.Transaction.Promote()
+   at System.Transactions.TransactionInterop.ConvertToOletxTransaction(Transaction transaction)
+   at System.Transactions.TransactionInterop.GetExportCookie(Transaction transaction, Byte[] whereabouts)
+   at System.Data.SqlClient.SqlInternalConnection.GetTransactionCookie(Transaction transaction, Byte[] whereAbouts)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 322
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 623
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-01 17:42:48,121 [1] ERROR - Error when executing 'DAO00003_CacheList'
+2018-11-01 17:42:51,784 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)
+   at System.Transactions.Oletx.IDtcProxyShimFactory.ReceiveTransaction(UInt32 propgationTokenSize, Byte[] propgationToken, IntPtr managedIdentifier, Guid& transactionIdentifier, OletxTransactionIsolationLevel& isolationLevel, ITransactionShim& transactionShim)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   --- End of inner exception stack trace ---
+   at System.Transactions.Oletx.OletxTransactionManager.ProxyException(COMException comException)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   at System.Transactions.TransactionStatePSPEOperation.PSPEPromote(InternalTransaction tx)
+   at System.Transactions.TransactionStateDelegatedBase.EnterState(InternalTransaction tx)
+   at System.Transactions.EnlistableStates.Promote(InternalTransaction tx)
+   at System.Transactions.Transaction.Promote()
+   at System.Transactions.TransactionInterop.ConvertToOletxTransaction(Transaction transaction)
+   at System.Transactions.TransactionInterop.GetExportCookie(Transaction transaction, Byte[] whereabouts)
+   at System.Data.SqlClient.SqlInternalConnection.GetTransactionCookie(Transaction transaction, Byte[] whereAbouts)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 322
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 623
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-01 17:49:49,416 [1] ERROR - Error when executing 'DAO00003_CacheList'
+2018-11-01 17:49:53,508 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)
+   at System.Transactions.Oletx.IDtcProxyShimFactory.ReceiveTransaction(UInt32 propgationTokenSize, Byte[] propgationToken, IntPtr managedIdentifier, Guid& transactionIdentifier, OletxTransactionIsolationLevel& isolationLevel, ITransactionShim& transactionShim)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   --- End of inner exception stack trace ---
+   at System.Transactions.Oletx.OletxTransactionManager.ProxyException(COMException comException)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   at System.Transactions.TransactionStatePSPEOperation.PSPEPromote(InternalTransaction tx)
+   at System.Transactions.TransactionStateDelegatedBase.EnterState(InternalTransaction tx)
+   at System.Transactions.EnlistableStates.Promote(InternalTransaction tx)
+   at System.Transactions.Transaction.Promote()
+   at System.Transactions.TransactionInterop.ConvertToOletxTransaction(Transaction transaction)
+   at System.Transactions.TransactionInterop.GetExportCookie(Transaction transaction, Byte[] whereabouts)
+   at System.Data.SqlClient.SqlInternalConnection.GetTransactionCookie(Transaction transaction, Byte[] whereAbouts)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 322
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 623
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-01 17:54:23,187 [1] ERROR - Error when executing 'DAO00003_CacheList'
+2018-11-01 17:54:24,800 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The partner transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D025) ---> System.Runtime.InteropServices.COMException: The partner transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D025)
+   at System.Transactions.Oletx.IDtcProxyShimFactory.ReceiveTransaction(UInt32 propgationTokenSize, Byte[] propgationToken, IntPtr managedIdentifier, Guid& transactionIdentifier, OletxTransactionIsolationLevel& isolationLevel, ITransactionShim& transactionShim)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   --- End of inner exception stack trace ---
+   at System.Transactions.Oletx.OletxTransactionManager.ProxyException(COMException comException)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   at System.Transactions.TransactionStatePSPEOperation.PSPEPromote(InternalTransaction tx)
+   at System.Transactions.TransactionStateDelegatedBase.EnterState(InternalTransaction tx)
+   at System.Transactions.EnlistableStates.Promote(InternalTransaction tx)
+   at System.Transactions.Transaction.Promote()
+   at System.Transactions.TransactionInterop.ConvertToOletxTransaction(Transaction transaction)
+   at System.Transactions.TransactionInterop.GetExportCookie(Transaction transaction, Byte[] whereabouts)
+   at System.Data.SqlClient.SqlInternalConnection.GetTransactionCookie(Transaction transaction, Byte[] whereAbouts)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 322
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 623
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-01 17:59:44,770 [1] ERROR - Error when executing 'DAO00003_CacheList'
+2018-11-01 17:59:49,160 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The partner transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D025) ---> System.Runtime.InteropServices.COMException: The partner transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D025)
+   at System.Transactions.Oletx.IDtcProxyShimFactory.ReceiveTransaction(UInt32 propgationTokenSize, Byte[] propgationToken, IntPtr managedIdentifier, Guid& transactionIdentifier, OletxTransactionIsolationLevel& isolationLevel, ITransactionShim& transactionShim)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   --- End of inner exception stack trace ---
+   at System.Transactions.Oletx.OletxTransactionManager.ProxyException(COMException comException)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   at System.Transactions.TransactionStatePSPEOperation.PSPEPromote(InternalTransaction tx)
+   at System.Transactions.TransactionStateDelegatedBase.EnterState(InternalTransaction tx)
+   at System.Transactions.EnlistableStates.Promote(InternalTransaction tx)
+   at System.Transactions.Transaction.Promote()
+   at System.Transactions.TransactionInterop.ConvertToOletxTransaction(Transaction transaction)
+   at System.Transactions.TransactionInterop.GetExportCookie(Transaction transaction, Byte[] whereabouts)
+   at System.Data.SqlClient.SqlInternalConnection.GetTransactionCookie(Transaction transaction, Byte[] whereAbouts)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 322
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 623
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-01 18:01:24,064 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-01 18:01:24,066 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-01 18:01:24,067 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-01 18:01:29,449 [1] INFO  - [admin] Session stopped.
+2018-11-01 18:01:29,450 [1] INFO  - Memory used before collection:  38,663,492
+2018-11-01 18:01:29,631 [1] INFO  - Memory used after collection:  19,987,656
+2018-11-01 18:01:29,844 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-01 18:13:10,579 [1] INFO  - [Application started.]
+2018-11-01 18:13:13,759 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-11-01 18:13:15,229 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-01 18:13:15,267 [1] INFO  - LoadMasters() took 31 ms.
+2018-11-01 18:13:15,268 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-01 18:13:31,152 [1] INFO  - [admin] Session is starting.
+2018-11-01 18:13:32,434 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:13:46,173 [7] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-01 18:13:46,387 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+--------------------------------------------------------------------------------
+2018-11-01 18:14:47,552 [1] INFO  - [Application started.]
+2018-11-01 18:14:49,117 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-11-01 18:14:50,081 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-01 18:14:50,117 [1] INFO  - LoadMasters() took 27 ms.
+2018-11-01 18:14:50,118 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-01 18:14:58,542 [1] INFO  - [admin] Session is starting.
+2018-11-01 18:14:59,076 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:01,251 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:01,355 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:01,439 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:01,501 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:01,586 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:01,647 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:01,706 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:01,774 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:02,671 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:02,754 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:03,228 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:15:05,665 [5] INFO  - LoadMasters() took 7,117 ms.
+2018-11-01 18:15:05,672 [1] INFO  - [admin] Session started.
+2018-11-01 18:15:30,767 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-01 18:15:30,804 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-01 18:17:35,553 [1] ERROR - Error when executing 'DAO00003_CacheList'
+2018-11-01 18:17:39,188 [1] ERROR - Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Transactions.TransactionException: The partner transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D025) ---> System.Runtime.InteropServices.COMException: The partner transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D025)
+   at System.Transactions.Oletx.IDtcProxyShimFactory.ReceiveTransaction(UInt32 propgationTokenSize, Byte[] propgationToken, IntPtr managedIdentifier, Guid& transactionIdentifier, OletxTransactionIsolationLevel& isolationLevel, ITransactionShim& transactionShim)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   --- End of inner exception stack trace ---
+   at System.Transactions.Oletx.OletxTransactionManager.ProxyException(COMException comException)
+   at System.Transactions.TransactionInterop.GetOletxTransactionFromTransmitterPropigationToken(Byte[] propagationToken)
+   at System.Transactions.TransactionStatePSPEOperation.PSPEPromote(InternalTransaction tx)
+   at System.Transactions.TransactionStateDelegatedBase.EnterState(InternalTransaction tx)
+   at System.Transactions.EnlistableStates.Promote(InternalTransaction tx)
+   at System.Transactions.Transaction.Promote()
+   at System.Transactions.TransactionInterop.ConvertToOletxTransaction(Transaction transaction)
+   at System.Transactions.TransactionInterop.GetExportCookie(Transaction transaction, Byte[] whereabouts)
+   at System.Data.SqlClient.SqlInternalConnection.GetTransactionCookie(Transaction transaction, Byte[] whereAbouts)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 322
+   at FPT.eHospital.Forms.QMS.VMQMS01BASE.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS01BASE.cs:line 623
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+--------------------------------------------------------------------------------
+2018-11-01 18:18:49,512 [1] INFO  - [Application started.]
+2018-11-01 18:18:50,550 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-11-01 18:18:51,321 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-01 18:18:51,360 [1] INFO  - LoadMasters() took 29 ms.
+2018-11-01 18:18:51,362 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-01 18:19:00,348 [1] INFO  - [admin] Session is starting.
+2018-11-01 18:19:00,864 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:01,012 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:01,075 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:01,129 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:01,186 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:01,243 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:01,305 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:01,362 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:01,419 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:01,874 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:01,956 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:02,408 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-01 18:19:04,195 [5] INFO  - LoadMasters() took 3,841 ms.
+2018-11-01 18:19:04,202 [1] INFO  - [admin] Session started.
+2018-11-01 18:19:05,999 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-01 18:19:06,003 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-01 18:19:29,725 [1] ERROR - Error when executing 'DAO00003_CacheList'

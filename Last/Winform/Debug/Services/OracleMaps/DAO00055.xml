@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,339d58d63009a90451f99e16effd8372-->
+        <statement id="DAO00055_GetAll" resultClass="DataObject">
+            select *
+            from LST_KEYDATA_VIENPHI
+            order by KEYTYPE
+        </statement>
+        <!--Revision:0,495ec1a4ffaf14a159e6e4185001218f-->
+        <statement id="DAO00055_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from LST_KEYDATA_VIENPHI
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="KEYTYPE">
+                    LST_KEYDATA_VIENPHI.KEYTYPE = '$KEYTYPE$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYYEAR">
+                    LST_KEYDATA_VIENPHI.KEYYEAR = '$KEYYEAR$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYMONTH">
+                    LST_KEYDATA_VIENPHI.KEYMONTH = '$KEYMONTH$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYDAY">
+                    LST_KEYDATA_VIENPHI.KEYDAY = '$KEYDAY$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="SEGMENT_1">
+                    LST_KEYDATA_VIENPHI.SEGMENT_1 = '$SEGMENT_1$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="SEGMENT_2">
+                    LST_KEYDATA_VIENPHI.SEGMENT_2 = '$SEGMENT_2$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="SEGMENT_3">
+                    LST_KEYDATA_VIENPHI.SEGMENT_3 = '$SEGMENT_3$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KEYVALUE">
+                    LST_KEYDATA_VIENPHI.KEYVALUE = '$KEYVALUE$'
+                </isNotEmpty>
+            </isParameterPresent>
+            order by KEYTYPE
+        </statement>
+        <!--Revision:0,dcc0fcdc24c691e22634989aeaa9d01f-->
+        <statement id="DAO00055_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from LST_KEYDATA_VIENPHI
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="KEYTYPE">
+                        LST_KEYDATA_VIENPHI.KEYTYPE = '$KEYTYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYYEAR">
+                        LST_KEYDATA_VIENPHI.KEYYEAR = '$KEYYEAR$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYMONTH">
+                        LST_KEYDATA_VIENPHI.KEYMONTH = '$KEYMONTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYDAY">
+                        LST_KEYDATA_VIENPHI.KEYDAY = '$KEYDAY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_1">
+                        LST_KEYDATA_VIENPHI.SEGMENT_1 = '$SEGMENT_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_2">
+                        LST_KEYDATA_VIENPHI.SEGMENT_2 = '$SEGMENT_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_3">
+                        LST_KEYDATA_VIENPHI.SEGMENT_3 = '$SEGMENT_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYVALUE">
+                        LST_KEYDATA_VIENPHI.KEYVALUE = '$KEYVALUE$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by KEYTYPE
+        </statement>
+        <!--Revision:0,275eb51a5bdea48ab122ff367cc20888-->
+        <statement id="DAO00055_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from LST_KEYDATA_VIENPHI
+            where LST_KEYDATA_VIENPHI.KEYTYPE  = '$KEYTYPE$'
+            order by KEYTYPE
+        </statement>
+        <!--Revision:0,be1219a1487f987ee0576848e400137c-->
+        <insert id="DAO00055_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+          insert into LST_KEYDATA_VIENPHI (
+          KEYTYPE
+          , KEYYEAR
+          , KEYMONTH
+          , KEYDAY
+          , SEGMENT_1
+          , SEGMENT_2
+          , SEGMENT_3
+          , KEYVALUE
+          , BENHVIEN_ID
+          ) values (
+          #KEYTYPE#
+          , #KEYYEAR#
+          , #KEYMONTH#
+          , #KEYDAY#
+          , #SEGMENT_1#
+          , #SEGMENT_2#
+          , #SEGMENT_3#
+          , #KEYVALUE#
+          , #BENHVIEN_ID#
+          )
+        </insert>
+        <!--Revision:0,8b8d996c692189b6b68e3e07582b0907-->
+        <update id="DAO00055_Update" parameterClass="System.Collections.IDictionary">
+            update LST_KEYDATA_VIENPHI set
+            KEYVALUE = #KEYVALUE#
+            where
+            KEYTYPE = '$KEYTYPE$'
+            AND KEYYEAR = '$KEYYEAR$'
+            AND KEYMONTH = '$KEYMONTH$'
+            AND KEYDAY = '$KEYDAY$'
+            AND SEGMENT_1 = '$SEGMENT_1$'
+            AND SEGMENT_2 = '$SEGMENT_2$'
+            AND SEGMENT_3 = '$SEGMENT_3$'
+        </update>
+        <!--Revision:0,e00478246c6d60667d8dd73041d67195-->
+        <statement id="DAO00055_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from LST_KEYDATA_VIENPHI
+            where
+            KEYTYPE = '$KEYTYPE$'
+            AND KEYYEAR = '$KEYYEAR$'
+            AND KEYMONTH = '$KEYMONTH$'
+            AND KEYDAY = '$KEYDAY$'
+            AND SEGMENT_1 = '$SEGMENT_1$'
+            AND SEGMENT_2 = '$SEGMENT_2$'
+            AND SEGMENT_3 = '$SEGMENT_3$'
+        </statement>
+        <!--Revision:0,c235ba7b1a07a727305340aa2055f470-->
+        <statement id="DAO00055_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from LST_KEYDATA_VIENPHI
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="KEYTYPE">
+                        LST_KEYDATA_VIENPHI.KEYTYPE = '$KEYTYPE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYYEAR">
+                        LST_KEYDATA_VIENPHI.KEYYEAR = '$KEYYEAR$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYMONTH">
+                        LST_KEYDATA_VIENPHI.KEYMONTH = '$KEYMONTH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYDAY">
+                        LST_KEYDATA_VIENPHI.KEYDAY = '$KEYDAY$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_1">
+                        LST_KEYDATA_VIENPHI.SEGMENT_1 = '$SEGMENT_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_2">
+                        LST_KEYDATA_VIENPHI.SEGMENT_2 = '$SEGMENT_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SEGMENT_3">
+                        LST_KEYDATA_VIENPHI.SEGMENT_3 = '$SEGMENT_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KEYVALUE">
+                        LST_KEYDATA_VIENPHI.KEYVALUE = '$KEYVALUE$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

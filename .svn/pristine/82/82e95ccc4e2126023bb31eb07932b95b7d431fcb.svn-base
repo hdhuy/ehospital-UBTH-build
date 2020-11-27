@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="FlowEditor.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+  </startup>
+  <appSettings>
+    <add key="Theme" value="Metro.xml" />
+    <add key="HospitalID" value="FPT00001" />
+    <add key="ConnectionString" value="Data Source=localhost\sqlexpress;Initial Catalog=eHosDB;Integrated Security=true" />
+    <add key="StringFolder" value="" />
+    <add key="ImageFolder" value="E:\Working\eHospital\3.Sourcecode\Product_Core\04.Images" />
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+  </appSettings>
+  <userSettings>
+    <FlowEditor.Properties.Settings>
+      <setting name="ConnectionString" serializeAs="String">
+        <value>Data Source=localhost\sqlexpress;Initial Catalog=eHosDB;Integrated Security=true</value>
+      </setting>
+      <setting name="HotKeyPath" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="ImageFolder" serializeAs="String">
+        <value>E:\Working\eHospital\3.Sourcecode\Product_Core\04.Images</value>
+      </setting>
+      <setting name="HospitalID" serializeAs="String">
+        <value>FPT00001</value>
+      </setting>
+      <setting name="Theme" serializeAs="String">
+        <value>Metro.xml</value>
+      </setting>
+      <setting name="RecentStrings" serializeAs="Xml">
+        <value>
+          <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <string>server=10.86.222.177;database=DEV.EHOS;user id=sa;password=123456aA@;</string>
+            <string>server=10.86.222.177;database=DEV.EHOS.SYS;user id=sa;password=123456aA@;</string>
+            <string>Data Source=localhost\sqlexpress;Initial Catalog=eHosDB;Integrated Security=true</string>
+            <string>Data Source=localhost\sqlexpress;Initial Catalog=eHosSysDB;Integrated Security=true</string>
+          </ArrayOfString>
+        </value>
+      </setting>
+    </FlowEditor.Properties.Settings>
+  </userSettings>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" />
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

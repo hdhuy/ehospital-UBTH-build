@@ -1,0 +1,12 @@
+FPT.Framework.Presentation.MenuStyle, FPT.Framework.Presentation
+{
+  "ForeColor": "@menuitemfg",
+  "BackColor": "@menuitembg",
+  "Font": "default",
+  "TextAlign": "MiddleLeft",
+  "ItemTemplate": "HomeMenuItem",
+  "ItemHeight": 30,
+  "ItemSelectedColor" : "@menuitemhover",
+  "ItemPressedColor" : "@menuitempress",
+  "ItemForeColor" : "@menuitemfg",
+}

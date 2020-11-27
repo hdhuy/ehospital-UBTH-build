@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,ec47a65b43c358887c735b3b35f5ef7a-->
+        <statement id="DAO00057_GetAll" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUACHITIET
+            order by CLSKETQUACHITIET_ID
+        </statement>
+        <!--Revision:0,9cdf995dd3940411898117489f01d529-->
+        <statement id="DAO00057_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUACHITIET
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CLSKETQUACHITIET_ID">
+                        TT_CLSKETQUACHITIET.CLSKETQUACHITIET_ID = '$CLSKETQUACHITIET_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CLSKETQUA_ID">
+                        TT_CLSKETQUACHITIET.CLSKETQUA_ID = '$CLSKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHVU_ID">
+                        TT_CLSKETQUACHITIET.DICHVU_ID = '$DICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+                        TT_CLSKETQUACHITIET.DVYEUCAU_ID = '$DVYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHOMDICHVU_ID">
+                        TT_CLSKETQUACHITIET.NHOMDICHVU_ID = '$NHOMDICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONVITINH">
+                        TT_CLSKETQUACHITIET.DONVITINH = '$DONVITINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETQUA">
+                        TT_CLSKETQUACHITIET.KETQUA = '$KETQUA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETQUA2">
+                        TT_CLSKETQUACHITIET.KETQUA2 = '$KETQUA2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MUCBINHTHUONG">
+                        TT_CLSKETQUACHITIET.MUCBINHTHUONG = '$MUCBINHTHUONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MUCBINHTHUONGMIN">
+                        TT_CLSKETQUACHITIET.MUCBINHTHUONGMIN = '$MUCBINHTHUONGMIN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MUCBINHTHUONGMAX">
+                        TT_CLSKETQUACHITIET.MUCBINHTHUONGMAX = '$MUCBINHTHUONGMAX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BATTHUONG">
+                        TT_CLSKETQUACHITIET.BATTHUONG = '$BATTHUONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THUCHIENBENNGOAI">
+                        TT_CLSKETQUACHITIET.THUCHIENBENNGOAI = '$THUCHIENBENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_CLSKETQUACHITIET.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by CLSKETQUACHITIET_ID
+        </statement>
+        <!--Revision:0,3ab4bdeb8ea650d34e3572190a7429d2-->
+        <statement id="DAO00057_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUACHITIET
+            where TT_CLSKETQUACHITIET.CLSKETQUACHITIET_ID  = '$value$'
+            order by CLSKETQUACHITIET_ID
+        </statement>
+        <!--Revision:0,a22cb78f2eb08aa0f9cfae6fb0c2bfec-->
+        <statement id="DAO00057_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUACHITIET
+            where TT_CLSKETQUACHITIET.CLSKETQUACHITIET_ID  = '$CLSKETQUACHITIET_ID$'
+            order by CLSKETQUACHITIET_ID
+        </statement>
+        <!--Revision:0,9d7e64ea5a7588299123d5d606a577eb-->
+        <statement id="DAO00057_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TT_CLSKETQUACHITIET (
+            CLSKETQUA_ID
+            , DICHVU_ID
+            , DVYEUCAU_ID
+            , NHOMDICHVU_ID
+            , DONVITINH
+            , KETQUA
+            , KETQUA2
+            , MUCBINHTHUONG
+            , MUCBINHTHUONGMIN
+            , MUCBINHTHUONGMAX
+            , BATTHUONG
+            , THUCHIENBENNGOAI
+            , BENHVIEN_ID
+            ) values (
+            #CLSKETQUA_ID#
+            , #DICHVU_ID#
+            , #DVYEUCAU_ID#
+            , #NHOMDICHVU_ID#
+            , #DONVITINH#
+            , #KETQUA#
+            , #KETQUA2#
+            , #MUCBINHTHUONG#
+            , #MUCBINHTHUONGMIN#
+            , #MUCBINHTHUONGMAX#
+            , #BATTHUONG#
+            , #THUCHIENBENNGOAI#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+            <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+        </statement>
+        <!--Revision:0,e75c635c06564de82601cc0669e0a9b0-->
+        <update id="DAO00057_Update" parameterClass="System.Collections.IDictionary">
+            update TT_CLSKETQUACHITIET set
+            CLSKETQUA_ID = #CLSKETQUA_ID#
+            , DICHVU_ID = #DICHVU_ID#
+            , DVYEUCAU_ID = #DVYEUCAU_ID#
+            , NHOMDICHVU_ID = #NHOMDICHVU_ID#
+            , DONVITINH = #DONVITINH#
+            , KETQUA = #KETQUA#
+            , KETQUA2 = #KETQUA2#
+            , MUCBINHTHUONG = #MUCBINHTHUONG#
+            , MUCBINHTHUONGMIN = #MUCBINHTHUONGMIN#
+            , MUCBINHTHUONGMAX = #MUCBINHTHUONGMAX#
+            , BATTHUONG = #BATTHUONG#
+            , THUCHIENBENNGOAI = #THUCHIENBENNGOAI#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            CLSKETQUACHITIET_ID = '$CLSKETQUACHITIET_ID$'
+        </update>
+        <!--Revision:0,86b6053b1b1600ca8339e756a3dcbc2f-->
+        <statement id="DAO00057_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUACHITIET
+            where
+            CLSKETQUACHITIET_ID = '$CLSKETQUACHITIET_ID$'
+        </statement>
+        <!--Revision:1,8ae9d08d90d1c8f2229f2cfd0a267aef-->
+        <statement id="DAO00057_DeleteByListID" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUACHITIET
+            where
+            CLSKETQUACHITIET_ID in
+            <iterate open="(" close=")" conjunction=",  " property="LST_DEL_CLSKETQUACHITIET_ID">
+                #LST_DEL_CLSKETQUACHITIET_ID[]#
+            </iterate>
+            update TT_DVYEUCAU
+            set TRANGTHAI = 'CHUAKETQUA',
+            NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$',
+            NGAYCAPNHAT = '$NGAYCAPNHAT$'
+            where DVYEUCAU_ID in
+            <iterate open="(" close=")" conjunction=",  " property="LST_UPD_DVYEUCAU_ID">
+                #LST_UPD_DVYEUCAU_ID[]#
+            </iterate>
+        </statement>
+        <!--Revision:0,a6b7d564eb3b0b260b4bded77c269058-->
+        <statement id="DAO00057_DeleteByMasterID" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUACHITIET
+            where
+            CLSKETQUA_ID = '$CLSKETQUA_ID$'
+        </statement>
+        <!--Revision:0,a1443a498309cf577620507d6f799956-->
+        <statement id="DAO00057_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUACHITIET
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CLSKETQUACHITIET_ID">
+                        TT_CLSKETQUACHITIET.CLSKETQUACHITIET_ID = '$CLSKETQUACHITIET_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CLSKETQUA_ID">
+                        TT_CLSKETQUACHITIET.CLSKETQUA_ID = '$CLSKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHVU_ID">
+                        TT_CLSKETQUACHITIET.DICHVU_ID = '$DICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+                        TT_CLSKETQUACHITIET.DVYEUCAU_ID = '$DVYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHOMDICHVU_ID">
+                        TT_CLSKETQUACHITIET.NHOMDICHVU_ID = '$NHOMDICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONVITINH">
+                        TT_CLSKETQUACHITIET.DONVITINH = '$DONVITINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETQUA">
+                        TT_CLSKETQUACHITIET.KETQUA = '$KETQUA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETQUA2">
+                        TT_CLSKETQUACHITIET.KETQUA2 = '$KETQUA2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MUCBINHTHUONG">
+                        TT_CLSKETQUACHITIET.MUCBINHTHUONG = '$MUCBINHTHUONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MUCBINHTHUONGMIN">
+                        TT_CLSKETQUACHITIET.MUCBINHTHUONGMIN = '$MUCBINHTHUONGMIN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MUCBINHTHUONGMAX">
+                        TT_CLSKETQUACHITIET.MUCBINHTHUONGMAX = '$MUCBINHTHUONGMAX$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BATTHUONG">
+                        TT_CLSKETQUACHITIET.BATTHUONG = '$BATTHUONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THUCHIENBENNGOAI">
+                        TT_CLSKETQUACHITIET.THUCHIENBENNGOAI = '$THUCHIENBENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_CLSKETQUACHITIET.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,b181d00cc0b3587b9af9490c708fa5e4-->
+        <statement id="DAO00057_GetDSCLSKetQuaChiTiet" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select c.CLSKETQUACHITIET_ID, c.CLSKETQUA_ID, c.KETQUA, c.DONVITINH, c.BATTHUONG, c.MUCBINHTHUONGMIN, c.MUCBINHTHUONGMAX, c.DICHVU_ID as KQDICHVU_ID,
+          d.*, cls.KETLUAN
+          from TT_CLSKETQUACHITIET c
+          inner join TT_CLSKETQUA cls on cls.CLSKETQUA_ID = c.CLSKETQUA_ID
+          left join TT_DVYEUCAU d on d.DVYEUCAU_ID = c.DVYEUCAU_ID
+          <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CLSKETQUACHITIET_ID">
+                        c.CLSKETQUACHITIET_ID = '$CLSKETQUACHITIET_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CLSKETQUA_ID">
+                        c.CLSKETQUA_ID = '$CLSKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHVU_ID">
+                        c.DICHVU_ID = '$DICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+                        c.DVYEUCAU_ID = '$DVYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        c.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by CLSKETQUACHITIET_ID
+        </statement>
+      <statement id="DAO00057_GetAllDSCLSKetQuaChiTiet" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select dv.TENDICHVU, c.CLSKETQUACHITIET_ID, c.CLSKETQUA_ID, c.KETQUA, c.DONVITINH, c.BATTHUONG, c.MUCBINHTHUONGMIN, c.MUCBINHTHUONGMAX, c.DICHVU_ID as KQDICHVU_ID,
+        d.*, cls.KETLUAN
+        from TT_CLSKETQUACHITIET c
+        inner join TT_CLSKETQUA cls on cls.CLSKETQUA_ID = c.CLSKETQUA_ID
+        left join TT_DVYEUCAU d on d.DVYEUCAU_ID = c.DVYEUCAU_ID
+        left join TM_DICHVU dv on dv.DICHVU_ID = c.DICHVU_ID
+        left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = dv.NHOMDICHVU_ID
+        where left(ndv.MANHOMDICHVU, 2) = '01' and
+        d.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        <isNotEmpty prepend="and" property="TUNGAY">
+          d.NGAYYEUCAU &gt;= #TUNGAY#
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="DENNGAY">
+          d.NGAYYEUCAU &lt;= #DENNGAY#
+        </isNotEmpty>
+        order by CLSKETQUACHITIET_ID
+      </statement>
+      <statement id="DAO00057_GetAllDSCLSChidinh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select dv.TENDICHVU TENDICHVU_VIEW, d.*, pb.TENPHONGBAN, nv.TENNHANVIEN,
+        (dv.TENDICHVU + case when isnull(d.GHICHU, '') != '' then '(' + d.GHICHU + ')' else '' end) TENDICHVU
+        from TT_DVYEUCAU d
+        left join TM_DICHVU dv on dv.DICHVU_ID = d.DICHVU_ID
+        left join TM_NHOMDICHVU ndv on ndv.NHOMDICHVU_ID = dv.NHOMDICHVU_ID
+        left join TM_PHONGBAN pb on pb.PHONGBAN_ID = d.NOIYEUCAU_ID
+        left join TM_NHANVIEN nv on nv.NHANVIEN_ID = d.NGUOICHIDINH_ID
+        where left(ndv.MANHOMDICHVU, 2) != '08' and
+        d.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+        <isNotEmpty prepend="and" property="TUNGAY">
+          d.NGAYYEUCAU &gt;= #TUNGAY#
+        </isNotEmpty>
+        <isNotEmpty prepend="and" property="DENNGAY">
+          d.NGAYYEUCAU &lt;= #DENNGAY#
+        </isNotEmpty>
+      </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,b919332d638e4e037d4c6ecc0701912c-->
+        <statement id="DAO00211_CLS01_GetNhomTuDien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT * FROM TM_TUDIENKETQUA_NHOM WHERE TAMNGUNG = '0' AND BENHVIEN_ID ='$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,b131504b5d6b7d3f1a4ae74823495ce6-->
+        <statement id="DAO00211_CLS01_GetTuDienByDichVu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT * FROM TM_TUDIENKETQUA WHERE TAMNGUNG = '0' AND BENHVIEN_ID ='$BENHVIEN_ID$' AND DICHVU_ID = '$DICHVU_ID$'
+        </statement>
+        <!--Revision:0,15dd0a5710479db253c65becea4b965a-->
+        <statement id="DAO00211_CLS01_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_TUDIENKETQUA (
+            MASO
+            , NHOMTUDIEN_ID
+            , DICHVU_ID
+            , TENNOIDUNG
+            , KYTHUAT
+            , KETQUA
+            , KETQUA_TEXT
+            , KETLUAN
+            , USER_NAME
+            , USER_FULLNAME
+            , LANGUAGE_ID
+            , SUDUNGCHUNG
+            , TAMNGUNG
+            , ATTRIBUTE1
+            , ATTRIBUTE2
+            , ATTRIBUTE3
+            , ATTRIBUTE4
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , NHOMDICHVU_ID
+            , BENHVIEN_ID
+            ) values (
+            #MASO#
+            , #NHOMTUDIEN_ID#
+            , #DICHVU_ID#
+            , #TENNOIDUNG#
+            , #KYTHUAT#
+            , #KETQUA#
+            , #KETQUA_TEXT#
+            , #KETLUAN#
+            , #USER_NAME#
+            , #USER_FULLNAME#
+            , #LANGUAGE_ID#
+            , #SUDUNGCHUNG#
+            , #TAMNGUNG#
+            , #ATTRIBUTE1#
+            , #ATTRIBUTE2#
+            , #ATTRIBUTE3#
+            , #ATTRIBUTE4#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #NHOMDICHVU_ID#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+        </statement>
+        <!--Revision:0,ca47f96da5da036178399a7fdd877cc8-->
+        <update id="DAO00211_CLS01_Update" parameterClass="System.Collections.IDictionary">
+            update TM_TUDIENKETQUA set
+            MASO = #MASO#
+            , NHOMTUDIEN_ID = #NHOMTUDIEN_ID#
+            , DICHVU_ID = #DICHVU_ID#
+            , TENNOIDUNG = #TENNOIDUNG#
+            , KYTHUAT = #KYTHUAT#
+            , KETQUA = #KETQUA#
+            , KETQUA_TEXT = #KETQUA_TEXT#
+            , KETLUAN = #KETLUAN#
+            , USER_NAME = #USER_NAME#
+            , USER_FULLNAME = #USER_FULLNAME#
+            , LANGUAGE_ID = #LANGUAGE_ID#
+            , SUDUNGCHUNG = #SUDUNGCHUNG#
+            , TAMNGUNG = #TAMNGUNG#
+            , ATTRIBUTE1 = #ATTRIBUTE1#
+            , ATTRIBUTE2 = #ATTRIBUTE2#
+            , ATTRIBUTE3 = #ATTRIBUTE3#
+            , ATTRIBUTE4 = #ATTRIBUTE4#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , NHOMDICHVU_ID = #NHOMDICHVU_ID#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            TUDIENKETQUA_ID = '$TUDIENKETQUA_ID$'
+        </update>
+        <!--Revision:0,f855c5cda9e111f71e86ca4695ef2d33-->
+        <statement id="DAO00211_CLS01_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_TUDIENKETQUA
+            where
+            TUDIENKETQUA_ID = '$TUDIENKETQUA_ID$'
+        </statement>
+    </statements>
+</sqlMap>

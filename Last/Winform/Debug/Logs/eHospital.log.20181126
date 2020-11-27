@@ -1,0 +1,428 @@
+﻿--------------------------------------------------------------------------------
+2018-11-26 09:37:16,314 [1] INFO  - [Application started.]
+2018-11-26 09:37:16,806 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-26 09:37:22,155 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-26 09:37:22,245 [1] INFO  - LoadMasters() took 52 ms.
+2018-11-26 09:37:22,247 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-26 09:44:41,529 [1] INFO  - [admin] Session is starting.
+2018-11-26 09:44:42,632 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:43,096 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:43,188 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:43,294 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:43,388 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:43,501 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:43,597 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:43,704 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:43,820 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:44,503 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:44,639 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:45,362 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-26 09:44:47,500 [7] INFO  - LoadMasters() took 5,908 ms.
+2018-11-26 09:44:47,510 [1] INFO  - [admin] Session started.
+2018-11-26 09:44:55,291 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-26 09:44:55,310 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-11-26 16:14:06,068 [1] INFO  - [Application started.]
+2018-11-26 16:14:06,463 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-26 16:14:09,657 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-26 16:14:09,718 [1] INFO  - LoadMasters() took 53 ms.
+2018-11-26 16:14:09,719 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-26 16:14:44,981 [1] ERROR - System.Exception: Dao 'DAO00001' is not found!
+   at FPT.Framework.Utility.DebuggerUtility.DebugException(String message, Exception e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DebuggerUtility.cs:line 17
+   at FPT.eHospital.DataAccess.DaoProvider.GetDao(String name) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoProvider.cs:line 115
+   at FPT.eHospital.DataService.ServiceProvider.Initialize() in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\ServiceProvider.cs:line 107
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\eHosDataContainer.cs:line 96
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataContainer.cs:line 35
+   at FPT.Framework.Application.ApplicationSession.OpenProfile() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 188
+   at FPT.Framework.Application.ApplicationSession.ChangeUserProfile(IUserProfile newProfile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 457
+   at FPT.eHospital.Forms.Common.VMLogin.PerformLogin() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 208
+   at FPT.eHospital.Forms.Common.VMLogin.cmdLogin(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 196
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-11-26 16:16:12,083 [1] INFO  - [Application started.]
+2018-11-26 16:16:12,494 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-26 16:16:14,931 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-26 16:16:14,992 [1] INFO  - LoadMasters() took 54 ms.
+2018-11-26 16:16:14,994 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-26 16:16:17,714 [1] ERROR - System.Exception: Dao 'DAO00001' is not found!
+   at FPT.Framework.Utility.DebuggerUtility.DebugException(String message, Exception e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DebuggerUtility.cs:line 17
+   at FPT.eHospital.DataAccess.DaoProvider.GetDao(String name) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoProvider.cs:line 115
+   at FPT.eHospital.DataService.ServiceProvider.Initialize() in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\ServiceProvider.cs:line 107
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\eHosDataContainer.cs:line 96
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataContainer.cs:line 35
+   at FPT.Framework.Application.ApplicationSession.OpenProfile() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 188
+   at FPT.Framework.Application.ApplicationSession.ChangeUserProfile(IUserProfile newProfile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 457
+   at FPT.eHospital.Forms.Common.VMLogin.PerformLogin() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 208
+   at FPT.eHospital.Forms.Common.VMLogin.cmdLogin(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 196
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-26 16:16:20,330 [1] INFO  - [test] Session stopped.
+2018-11-26 16:16:20,333 [1] INFO  - Memory used before collection:  6,530,640
+2018-11-26 16:16:20,350 [1] INFO  - Memory used after collection:  3,090,108
+2018-11-26 16:16:20,407 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-26 16:18:00,188 [1] INFO  - [Application started.]
+2018-11-26 16:18:00,744 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-26 16:18:03,302 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-26 16:18:03,369 [1] INFO  - LoadMasters() took 55 ms.
+2018-11-26 16:18:03,370 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-26 16:18:06,212 [1] ERROR - System.Exception: Dao 'DAO00001' is not found!
+   at FPT.Framework.Utility.DebuggerUtility.DebugException(String message, Exception e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DebuggerUtility.cs:line 17
+   at FPT.eHospital.DataAccess.DaoProvider.GetDao(String name) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoProvider.cs:line 115
+   at FPT.eHospital.DataService.ServiceProvider.Initialize() in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\ServiceProvider.cs:line 107
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\eHosDataContainer.cs:line 96
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataContainer.cs:line 35
+   at FPT.Framework.Application.ApplicationSession.OpenProfile() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 188
+   at FPT.Framework.Application.ApplicationSession.ChangeUserProfile(IUserProfile newProfile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 457
+   at FPT.eHospital.Forms.Common.VMLogin.PerformLogin() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 208
+   at FPT.eHospital.Forms.Common.VMLogin.cmdLogin(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 196
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-26 16:18:09,610 [1] INFO  - [test] Session stopped.
+2018-11-26 16:18:09,613 [1] INFO  - Memory used before collection:  6,539,940
+2018-11-26 16:18:09,631 [1] INFO  - Memory used after collection:  3,099,192
+2018-11-26 16:18:09,698 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-26 16:19:43,126 [1] INFO  - [Application started.]
+2018-11-26 16:19:43,842 [1] ERROR - 'Messages.xml' Duplicated keys found: MPH45001,MEME0555
+2018-11-26 16:19:45,547 [1] ERROR - Session initialized fail!
+IBatisNet.Common.Exceptions.ConfigurationException: 
+- The error occurred while loading Providers. ---> IBatisNet.Common.Exceptions.ConfigurationException: Unable to load config file "providers.config". Cause : An XML comment cannot contain '--', and '-' cannot be the last character. Line 47, position 5. ---> System.Xml.XmlException: An XML comment cannot contain '--', and '-' cannot be the last character. Line 47, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseCDataOrComment(XmlNodeType type, Int32& outStartPos, Int32& outEndPos)
+   at System.Xml.XmlTextReaderImpl.ParseCDataOrComment(XmlNodeType type)
+   at System.Xml.XmlTextReaderImpl.ParseComment()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at IBatisNet.Common.Utilities.Resources.GetConfigAsXmlDocument(String resourcePath)
+   --- End of inner exception stack trace ---
+   at IBatisNet.Common.Utilities.Resources.GetConfigAsXmlDocument(String resourcePath)
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.GetProviders()
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Initialize()
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Build(XmlDocument document, DataSource dataSource, Boolean useConfigFileWatcher, Boolean isCallFromDao)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Build(XmlDocument document, DataSource dataSource, Boolean useConfigFileWatcher, Boolean isCallFromDao)
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Configure(String resource)
+   at FPT.eHospital.DataAccess.SqlMapperContainer.AddSqlMapper(String configFile, String dbname, String connectionString, String provider) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\SqlMapperContainer.cs:line 131
+   at FPT.eHospital.DataAccess.SqlMapperContainer.Initialize(String strSite, String sqlmapConfigRootPath) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\SqlMapperContainer.cs:line 61
+   at FPT.eHospital.DataAccess.DaoProvider.Initialize(String site, String assemblyFolder, String key, String mapContainerAssembly) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoProvider.cs:line 46
+   at FPT.eHospital.DataService.ServiceProvider.Initialize() in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\ServiceProvider.cs:line 105
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\eHosDataContainer.cs:line 96
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataContainer.cs:line 35
+   at FPT.Framework.Application.ApplicationSession.OpenProfile() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 188
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 167
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-26 16:19:47,232 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-26 16:21:40,911 [1] INFO  - [Application started.]
+2018-11-26 16:21:42,972 [1] ERROR - Session initialized fail!
+IBatisNet.Common.Exceptions.ConfigurationException: 
+- The error occurred while loading Providers. ---> IBatisNet.Common.Exceptions.ConfigurationException: Unable to load config file "providers.config". Cause : An XML comment cannot contain '--', and '-' cannot be the last character. Line 47, position 5. ---> System.Xml.XmlException: An XML comment cannot contain '--', and '-' cannot be the last character. Line 47, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseCDataOrComment(XmlNodeType type, Int32& outStartPos, Int32& outEndPos)
+   at System.Xml.XmlTextReaderImpl.ParseCDataOrComment(XmlNodeType type)
+   at System.Xml.XmlTextReaderImpl.ParseComment()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at IBatisNet.Common.Utilities.Resources.GetConfigAsXmlDocument(String resourcePath)
+   --- End of inner exception stack trace ---
+   at IBatisNet.Common.Utilities.Resources.GetConfigAsXmlDocument(String resourcePath)
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.GetProviders()
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Initialize()
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Build(XmlDocument document, DataSource dataSource, Boolean useConfigFileWatcher, Boolean isCallFromDao)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Build(XmlDocument document, DataSource dataSource, Boolean useConfigFileWatcher, Boolean isCallFromDao)
+   at IBatisNet.DataMapper.Configuration.DomSqlMapBuilder.Configure(String resource)
+   at FPT.eHospital.DataAccess.SqlMapperContainer.AddSqlMapper(String configFile, String dbname, String connectionString, String provider) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\SqlMapperContainer.cs:line 131
+   at FPT.eHospital.DataAccess.SqlMapperContainer.Initialize(String strSite, String sqlmapConfigRootPath) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\SqlMapperContainer.cs:line 61
+   at FPT.eHospital.DataAccess.DaoProvider.Initialize(String site, String assemblyFolder, String key, String mapContainerAssembly) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoProvider.cs:line 46
+   at FPT.eHospital.DataService.ServiceProvider.Initialize() in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\ServiceProvider.cs:line 105
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\eHosDataContainer.cs:line 96
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataContainer.cs:line 35
+   at FPT.Framework.Application.ApplicationSession.OpenProfile() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 188
+   at FPT.Framework.Application.ApplicationSession.InitializeSession() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 167
+   at FPT.Framework.Application.ApplicationBase.StartSession(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationBase.cs:line 137
+2018-11-26 16:21:44,350 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-26 16:22:46,213 [1] INFO  - [Application started.]
+2018-11-26 16:22:48,860 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-26 16:22:48,929 [1] INFO  - LoadMasters() took 53 ms.
+2018-11-26 16:22:48,931 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-26 16:22:51,886 [1] ERROR - System.Exception: Dao 'DAO00001' is not found!
+   at FPT.Framework.Utility.DebuggerUtility.DebugException(String message, Exception e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DebuggerUtility.cs:line 17
+   at FPT.eHospital.DataAccess.DaoProvider.GetDao(String name) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoProvider.cs:line 115
+   at FPT.eHospital.DataService.ServiceProvider.Initialize() in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\ServiceProvider.cs:line 107
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile) in E:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\eHosDataContainer.cs:line 96
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataContainer.cs:line 35
+   at FPT.Framework.Application.ApplicationSession.OpenProfile() in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 188
+   at FPT.Framework.Application.ApplicationSession.ChangeUserProfile(IUserProfile newProfile) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 457
+   at FPT.eHospital.Forms.Common.VMLogin.PerformLogin() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 208
+   at FPT.eHospital.Forms.Common.VMLogin.cmdLogin(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 196
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-26 16:23:45,977 [1] INFO  - [test] Session stopped.
+2018-11-26 16:23:45,980 [1] INFO  - Memory used before collection:  4,567,084
+2018-11-26 16:23:45,995 [1] INFO  - Memory used after collection:  3,136,180
+2018-11-26 16:23:46,033 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-26 16:25:02,500 [1] INFO  - [Application started.]
+2018-11-26 16:25:05,483 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-26 16:25:05,532 [1] INFO  - LoadMasters() took 33 ms.
+2018-11-26 16:25:05,534 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-26 16:25:08,981 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-26 16:25:11,229 [1] INFO  - [test] Session is starting.
+2018-11-26 16:25:11,896 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:12,138 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:12,201 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:12,320 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:12,413 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:12,477 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:12,552 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:12,617 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:12,687 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:13,192 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:13,287 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:13,684 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 16:25:18,324 [5] INFO  - LoadMasters() took 7,094 ms.
+2018-11-26 16:25:18,338 [1] INFO  - [test] Session started.
+2018-11-26 16:25:56,351 [1] ERROR - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'BTNHUYGHINHAN' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 153
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 165
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 111
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 84
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 582
+   at WinformUI.Button.binding_Format(Object sender, ConvertEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\Button.cs:line 134
+   at System.Windows.Forms.Binding.OnFormat(ConvertEventArgs cevent)
+   at System.Windows.Forms.Binding.FormatObject(Object value)
+   at System.Windows.Forms.Binding.PushData(Boolean force)
+   at System.Windows.Forms.Binding.UpdateIsBinding()
+   at System.Windows.Forms.Binding.CheckBinding()
+   at System.Windows.Forms.Binding.SetListManager(BindingManagerBase bindingManagerBase)
+   at System.Windows.Forms.ListManagerBindingsCollection.AddCore(Binding dataBinding)
+   at System.Windows.Forms.BindingsCollection.Add(Binding binding)
+   at System.Windows.Forms.BindingContext.UpdateBinding(BindingContext newBindingContext, Binding binding)
+   at System.Windows.Forms.Control.UpdateBindings()
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at DevExpress.XtraTab.XtraTabPage.set_Visible(Boolean value)
+   at DevExpress.XtraTab.XtraTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevXUI.BaseControls.DXTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\BaseControls\DXTabControl.cs:line 103
+   at DevXUI.TabPane.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\TabPane.cs:line 340
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.OnSelectedPageChanged(IXtraTabPage prevPage)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPage(IXtraTabPage value)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPageIndex(Int32 value)
+   at DevExpress.XtraTab.XtraTabControl.set_SelectedTabPageIndex(Int32 value)
+   at DevXUI.TabPane.SetBindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\TabPane.cs:line 312
+   at DevXUI.TabPane.select_ValueChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\TabPane.cs:line 301
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\ViewModel.cs:line 18
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\ModelBaseImpl.cs:line 220
+   at FPT.eHospital.Forms.HosTabLauncherModel.set_SelPageIndex(Int32 value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\HosTabLauncherModel.cs:line 20
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-11-26 17:17:38,752 [1] INFO  - [Application started.]
+2018-11-26 17:17:41,730 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-26 17:17:41,773 [1] INFO  - LoadMasters() took 31 ms.
+2018-11-26 17:17:41,774 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-26 17:17:50,982 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-26 17:17:52,690 [1] INFO  - [test] Session is starting.
+2018-11-26 17:17:53,396 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:17:54,045 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:17:54,181 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:17:54,313 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:17:54,409 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:17:54,507 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:17:54,572 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:17:54,671 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:17:54,823 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:17:55,369 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:17:55,475 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:17:56,134 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:18:01,745 [5] INFO  - LoadMasters() took 9,053 ms.
+2018-11-26 17:18:01,755 [1] INFO  - [test] Session started.
+2018-11-26 17:19:23,076 [1] ERROR - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'BTNHUYGHINHAN' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 153
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 165
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 111
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 84
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 582
+   at WinformUI.Button.binding_Format(Object sender, ConvertEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\Button.cs:line 134
+   at System.Windows.Forms.Binding.OnFormat(ConvertEventArgs cevent)
+   at System.Windows.Forms.Binding.FormatObject(Object value)
+   at System.Windows.Forms.Binding.PushData(Boolean force)
+   at System.Windows.Forms.Binding.UpdateIsBinding()
+   at System.Windows.Forms.Binding.CheckBinding()
+   at System.Windows.Forms.Binding.SetListManager(BindingManagerBase bindingManagerBase)
+   at System.Windows.Forms.ListManagerBindingsCollection.AddCore(Binding dataBinding)
+   at System.Windows.Forms.BindingsCollection.Add(Binding binding)
+   at System.Windows.Forms.BindingContext.UpdateBinding(BindingContext newBindingContext, Binding binding)
+   at System.Windows.Forms.Control.UpdateBindings()
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at DevExpress.XtraTab.XtraTabPage.set_Visible(Boolean value)
+   at DevExpress.XtraTab.XtraTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevXUI.BaseControls.DXTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\BaseControls\DXTabControl.cs:line 103
+   at DevXUI.TabPane.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\TabPane.cs:line 340
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.OnSelectedPageChanged(IXtraTabPage prevPage)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPage(IXtraTabPage value)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPageIndex(Int32 value)
+   at DevExpress.XtraTab.XtraTabControl.set_SelectedTabPageIndex(Int32 value)
+   at DevXUI.TabPane.SetBindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\TabPane.cs:line 312
+   at DevXUI.TabPane.select_ValueChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\TabPane.cs:line 301
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\ViewModel.cs:line 18
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\ModelBaseImpl.cs:line 220
+   at FPT.eHospital.Forms.HosTabLauncherModel.set_SelPageIndex(Int32 value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\HosTabLauncherModel.cs:line 20
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-11-26 17:21:29,555 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-26 17:21:29,557 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-26 17:21:29,578 [1] INFO  - [test] Session stopped.
+2018-11-26 17:21:29,580 [1] INFO  - Memory used before collection:  26,229,760
+2018-11-26 17:21:29,651 [1] INFO  - Memory used after collection:  10,813,808
+2018-11-26 17:21:30,540 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-26 17:26:03,195 [1] INFO  - [Application started.]
+2018-11-26 17:26:06,652 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-26 17:26:06,698 [1] INFO  - LoadMasters() took 33 ms.
+2018-11-26 17:26:06,700 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-26 17:27:26,798 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-26 17:27:28,132 [1] INFO  - [test] Session is starting.
+2018-11-26 17:27:28,770 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:28,960 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:29,019 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:29,100 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:29,163 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:29,220 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:29,279 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:29,341 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:29,399 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:29,874 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:30,012 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:31,258 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:27:36,920 [5] INFO  - LoadMasters() took 8,786 ms.
+2018-11-26 17:27:36,930 [1] INFO  - [test] Session started.
+2018-11-26 17:28:25,401 [1] ERROR - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'BTNHUYGHINHAN' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 153
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 165
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 111
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DataAccessor.cs:line 84
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\VMBase.cs:line 582
+   at WinformUI.Button.binding_Format(Object sender, ConvertEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\Button.cs:line 134
+   at System.Windows.Forms.Binding.OnFormat(ConvertEventArgs cevent)
+   at System.Windows.Forms.Binding.FormatObject(Object value)
+   at System.Windows.Forms.Binding.PushData(Boolean force)
+   at System.Windows.Forms.Binding.UpdateIsBinding()
+   at System.Windows.Forms.Binding.CheckBinding()
+   at System.Windows.Forms.Binding.SetListManager(BindingManagerBase bindingManagerBase)
+   at System.Windows.Forms.ListManagerBindingsCollection.AddCore(Binding dataBinding)
+   at System.Windows.Forms.BindingsCollection.Add(Binding binding)
+   at System.Windows.Forms.BindingContext.UpdateBinding(BindingContext newBindingContext, Binding binding)
+   at System.Windows.Forms.Control.UpdateBindings()
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at DevExpress.XtraTab.XtraTabPage.set_Visible(Boolean value)
+   at DevExpress.XtraTab.XtraTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevXUI.BaseControls.DXTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\BaseControls\DXTabControl.cs:line 103
+   at DevXUI.TabPane.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\TabPane.cs:line 340
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.OnSelectedPageChanged(IXtraTabPage prevPage)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPage(IXtraTabPage value)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPageIndex(Int32 value)
+   at DevExpress.XtraTab.XtraTabControl.set_SelectedTabPageIndex(Int32 value)
+   at DevXUI.TabPane.SetBindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\TabPane.cs:line 312
+   at DevXUI.TabPane.select_ValueChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\05.UI\05.DevXUI\TabPane.cs:line 301
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e) in E:\Working\eHospital\trunk\01.Framework\01.Framework\05.Presentation\ViewModel.cs:line 18
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName) in E:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\ModelBaseImpl.cs:line 220
+   at FPT.eHospital.Forms.HosTabLauncherModel.set_SelPageIndex(Int32 value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\HosTabLauncherModel.cs:line 20
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-11-26 17:31:33,247 [1] INFO  - [Application started.]
+2018-11-26 17:31:36,513 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-26 17:31:36,574 [1] INFO  - LoadMasters() took 43 ms.
+2018-11-26 17:31:36,575 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-26 17:32:06,966 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-11-26 17:32:08,378 [1] INFO  - [test] Session is starting.
+2018-11-26 17:32:09,027 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:09,184 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:09,247 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:09,305 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:09,364 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:09,435 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:09,501 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:09,558 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:09,622 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:10,097 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:10,188 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:10,507 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-26 17:32:13,877 [5] INFO  - LoadMasters() took 5,497 ms.
+2018-11-26 17:32:13,888 [1] INFO  - [test] Session started.

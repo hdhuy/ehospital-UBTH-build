@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+  </startup>
+  <appSettings>
+    <add key="AppConfigFile" value="eHospital.config" />
+    <add key="ProgramIcon" value="Images\icoUngdung.ico" />
+    
+    <add key="ResourceFolder" value="e:\Dev\Resource\Data" />
+    <add key="ReportFolder" value="e:\Dev\Resource\Report" />
+    <!--<add key="TemplateDirectory" value="C:\Dev\Resource\Template\" />-->
+    <add key="DynamicDirectory" value="e:\Dev\Resource\Dynamic\" />    
+    <add key="TempDirectory" value="E:\HOALAM\Resources\Temp\" />
+    
+    <!--<add key="WorkFlow" value="allow" />-->
+    <!--<add key="WorkFlowApiUrl" value="http://localhost:58830//api/" />-->
+    <!--<add key="WorkFlowApiUrl" value="http://10.86.222.71:1011/api/" />-->
+    <add key="WorkFlowDirect" value="false" />
+    <add key="WorkFlowApiUrl" value="http://10.86.222.210:82/api/"/>
+
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+  </appSettings>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" />
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

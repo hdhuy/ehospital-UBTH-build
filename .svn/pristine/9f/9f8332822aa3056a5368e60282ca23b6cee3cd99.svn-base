@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,8cd23ffc3b617934a36e84007822d2a5-->
+        <statement id="DAO00011_GetList" resultClass="DataObject">
+            select
+            TM_SYS_MENU.ID,
+            TM_SYS_MENU.PARENTID,
+            TM_SYS_MENU.SCREEN,
+            TM_SYS_MENU.SMALLIMAGE,
+            TM_SYS_MENU.LARGEIMAGE,
+            TM_SYS_MENU.DESCRIPTION,
+            TM_SYS_MENU.TYPE,
+            TM_SYS_MENU.TITLE_VI as TITLE
+            from TM_SYS_MENU
+            where TM_SYS_MENU.HOSPITAL_ID = '$HOSPITAL_ID$' and TM_SYS_MENU.ACTIVE = '1'
+            <isPropertyAvailable prepend="AND" property="PLATFORM">
+                (TM_SYS_MENU.TYPE &amp; '$PLATFORM$' = '$PLATFORM$')
+            </isPropertyAvailable>
+            order by TM_SYS_MENU.ORDERNUM
+        </statement>
+        <!--Revision:0,35ab6a9d652eb3851a53994530e7c80e-->
+        <statement id="DAO00011_usermenu_list" resultClass="DataObject">
+            select
+            TM_SYS_HOMEMENU.MENUID as ID,
+            TM_SYS_MENU.TITLE_VI as TITLE,
+            TM_SYS_MENU.SCREEN,
+            TM_SYS_MENU.SMALLIMAGE,
+            TM_SYS_MENU.LARGEIMAGE,
+            TM_SYS_MENU.TYPE
+            from TM_SYS_HOMEMENU
+            left join TM_SYS_MENU on TM_SYS_MENU.ID = TM_SYS_HOMEMENU.MENUID and TM_SYS_MENU.HOSPITAL_ID = TM_SYS_HOMEMENU.HOSPITAL_ID
+            where TM_SYS_HOMEMENU.HOSPITAL_ID = '$HOSPITAL_ID$' and TM_SYS_HOMEMENU.USERID = '$USERID$' and TM_SYS_MENU.ACTIVE = '1'
+            <isPropertyAvailable prepend="AND" property="PLATFORM">
+                (TM_SYS_MENU.TYPE &amp; '$PLATFORM$' = '$PLATFORM$')
+            </isPropertyAvailable>
+            ORDER BY TM_SYS_HOMEMENU.ORDERNUM
+        </statement>
+        <!--Revision:0,c1ebef5d8ddfdf781cd61734f7d0b890-->
+        <statement id="DAO00011_usermenu_insert" resultClass="DataObject">
+            insert into TM_SYS_HOMEMENU
+            (
+            HOSPITAL_ID,
+            USERID,
+            MENUID,
+            ORDERNUM
+            )
+            values
+            (
+            '$HOSPITAL_ID$',
+            '$USERID$',
+            '$MENUID$',
+            '$ORDERNUM$'
+            )
+        </statement>
+        <!--Revision:0,494f27380a09d79bf9361f19423d37fe-->
+        <statement id="DAO00011_usermenu_delete" resultClass="DataObject">
+            delete TM_SYS_HOMEMENU
+            where TM_SYS_HOMEMENU.HOSPITAL_ID = '$HOSPITAL_ID$' and TM_SYS_HOMEMENU.USERID = '$USERID$'
+        </statement>
+    </statements>
+</sqlMap>

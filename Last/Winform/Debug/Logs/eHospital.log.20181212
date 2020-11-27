@@ -1,0 +1,197 @@
+﻿--------------------------------------------------------------------------------
+2018-12-12 11:34:48,223 [1] INFO  - [Application started.]
+2018-12-12 11:35:16,149 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-12 11:35:16,201 [1] INFO  - LoadMasters() took 41 ms.
+2018-12-12 11:35:16,203 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-12 11:35:28,816 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-12-12 11:35:36,010 [1] INFO  - [test] Session is starting.
+2018-12-12 11:35:36,945 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:37,504 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:37,587 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:37,716 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:37,785 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:37,847 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:37,909 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:37,972 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:38,033 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:38,727 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:38,856 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:39,230 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:41,371 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:41,455 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:35:42,394 [5] INFO  - LoadMasters() took 6,383 ms.
+2018-12-12 11:35:42,402 [1] INFO  - [test] Session started.
+2018-12-12 11:36:42,146 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 12 Dec 2018 04:36:43 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1908
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetRoles() in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 241
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadROLES() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 94
+   at FPT.eHospital.Forms.Administration.VMADM15.LoadData(Int32 selected_Tab) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 380
+   at FPT.eHospital.Forms.Administration.VMADM15.TabSelChanged(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 182
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-12 11:36:44,168 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 12 Dec 2018 04:36:45 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1915
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetResourcesByResourceCode(String code) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 344
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadResources(String code, ResourceType rt) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 110
+   at FPT.eHospital.Forms.Administration.VMADM15.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 231
+   at FPT.eHospital.Forms.Administration.VMADM06.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06.cs:line 496
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-12 11:37:13,707 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-12-12 11:37:13,708 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-12-12 11:37:14,028 [1] INFO  - [test] Session stopped.
+2018-12-12 11:37:14,030 [1] INFO  - Memory used before collection:  38,494,896
+2018-12-12 11:37:14,108 [1] INFO  - Memory used after collection:  9,172,388
+2018-12-12 11:37:14,314 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-12 11:37:14,359 [1] INFO  - LoadMasters() took 44 ms.
+2018-12-12 11:37:14,360 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-12 11:37:16,399 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-12-12 11:37:17,618 [1] INFO  - [test] Session is starting.
+2018-12-12 11:37:17,969 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:18,035 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:18,096 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:18,162 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:18,227 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:18,287 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:18,349 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:18,408 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:18,473 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:18,939 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:19,027 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:19,417 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:22,078 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:22,139 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:37:23,048 [5] INFO  - LoadMasters() took 5,429 ms.
+2018-12-12 11:37:23,055 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-12-12 11:38:01,898 [1] INFO  - [Application started.]
+2018-12-12 11:38:04,611 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-12 11:38:04,657 [1] INFO  - LoadMasters() took 34 ms.
+2018-12-12 11:38:04,658 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-12 11:38:08,341 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-12-12 11:38:09,936 [1] INFO  - [test] Session is starting.
+2018-12-12 11:38:10,608 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:10,777 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:10,845 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:10,918 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:10,984 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:11,044 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:11,117 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:11,182 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:11,251 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:11,728 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:11,821 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:12,163 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:16,060 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:16,122 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:17,017 [5] INFO  - LoadMasters() took 7,079 ms.
+2018-12-12 11:38:17,026 [1] INFO  - [test] Session started.
+2018-12-12 11:38:28,127 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 12 Dec 2018 04:38:29 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1908
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetRoles() in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 241
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadROLES() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 94
+   at FPT.eHospital.Forms.Administration.VMADM15.LoadData(Int32 selected_Tab) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 380
+   at FPT.eHospital.Forms.Administration.VMADM15.TabSelChanged(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 182
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-12 11:38:29,980 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 12 Dec 2018 04:38:31 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1915
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetResourcesByResourceCode(String code) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 344
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadResources(String code, ResourceType rt) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 110
+   at FPT.eHospital.Forms.Administration.VMADM15.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 231
+   at FPT.eHospital.Forms.Administration.VMADM06.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06.cs:line 496
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2018-12-12 11:38:49,461 [1] INFO  - [Application started.]
+2018-12-12 11:38:51,974 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-12-12 11:38:52,014 [1] INFO  - LoadMasters() took 30 ms.
+2018-12-12 11:38:52,016 [1] INFO  - [_SYSTEM_] Session started.
+2018-12-12 11:38:55,465 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00329.xml' not found.
+2018-12-12 11:38:56,905 [1] INFO  - [test] Session is starting.
+2018-12-12 11:38:57,543 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:57,716 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:57,779 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:57,840 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:57,921 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:57,986 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:58,045 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:58,112 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:58,197 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:58,675 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:58,791 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:38:59,318 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:39:02,445 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:39:02,506 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-12-12 11:39:03,414 [5] INFO  - LoadMasters() took 6,507 ms.
+2018-12-12 11:39:03,424 [1] INFO  - [test] Session started.
+2018-12-12 11:39:15,335 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 12 Dec 2018 04:39:16 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1908
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetRoles() in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 241
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadROLES() in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 94
+   at FPT.eHospital.Forms.Administration.VMADM15.LoadData(Int32 selected_Tab) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 380
+   at FPT.eHospital.Forms.Administration.VMADM15.TabSelChanged(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 182
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2018-12-12 11:39:17,982 [1] ERROR - Không kết nối được với server. Xin vui lòng thử lại hoặc liên hệ với bộ phận IT để được trợ giúp.
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Cache-Control: private
+  Date: Wed, 12 Dec 2018 04:39:19 GMT
+  Server: Microsoft-IIS/8.5
+  X-AspNet-Version: 4.0.30319
+  X-Powered-By: ASP.NET
+  Content-Length: 1915
+  Content-Type: text/html; charset=utf-8
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTAdminProvider.GetResourcesByResourceCode(String code) in E:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTAdminProvider.cs:line 344
+   at FPT.eHospital.Forms.Administration.VMADM06Page.LoadResources(String code, ResourceType rt) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06Page.cs:line 110
+   at FPT.eHospital.Forms.Administration.VMADM15.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM15.cs:line 231
+   at FPT.eHospital.Forms.Administration.VMADM06.cboResourceTypeChange(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\03.ScrADM\VMADM06.cs:line 496
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in E:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49

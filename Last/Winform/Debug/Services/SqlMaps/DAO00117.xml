@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0-->
+        <statement id="DAO00117_GetList" resultClass="DataObject">
+            select A.*
+            from TT_NGOAITRU_TOATHUOC_NGUOIMUA A
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00117_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            DELETE FROM TT_NGOAITRU_TOATHUOC_NGUOIMUA
+            WHERE NGOAITRU_TOATHUOC_NGUOIMUA_ID ='$NGOAITRU_TOATHUOC_NGUOIMUA_ID$'
+        </statement>
+        <!--Revision:0-->
+        <update id="DAO00117_Update_TrangThaiTiepNhan_SauKhiNhanThuoc" parameterClass="System.Collections.IDictionary">
+            UPDATE TT_TIEPNHAN
+            SET TRANGTHAI='$TRANGTHAI$',
+            KHOADULIEU = '$KHOADULIEU$'
+            WHERE TIEPNHAN_ID='$TIEPNHAN_ID$'
+        </update>
+        <!--Revision:0-->
+        <statement id="DAO00117_GetDanhSachDichVuChuaThanhToan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select    KBTT.CHUNGTUPHATTHUOC_ID
+            FROM TT_NGOAITRU_KHAMBENH_TOATHUOC KBTT
+            inner join TT_NGOAITRU_TOATHUOC TT on  TT.KHAMBENH_TOATHUOC_ID = KBTT.KHAMBENH_TOATHUOC_ID
+            inner join TT_VIENPHI VP on (TT.TOATHUOC_ID = VP.REF_ID AND VP.REF_TABLE = 'TT_NGOAITRU_TOATHUOC')
+            where
+            KBTT.CHUNGTUPHATTHUOC_ID = '$CHUNGTU_ID$'
+            and KBTT.BENHVIEN_ID = '$BENHVIEN_ID$'
+            AND (vp.DATHANHTOAN = '0'
+            or ( vp.DATHANHTOAN = '1' and vp.HUY = '1')
+            )
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00117_KiemTraTrangThaiTruocKhiXacNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT CHUNGTU_ID
+            FROM TT_DUOC_CHUNGTU WHERE CHUNGTU_ID='$CHUNGTU_ID$' AND isnull(DAXACNHAN, 0) = '$DAXACNHAN$'
+        </statement>
+
+      <statement id="DAO00117_AlterTableAddColumn" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        ALTER TABLE TT_DUOC_CHUNGTU_CHITIET ADD THANHTIENMUABANDAU NUMERIC(25,4);
+        ALTER TABLE TT_DUOC_CHUNGTU_CHITIET ADD SOLUONGQUIDOI NUMERIC(25,4);
+      </statement>
+      <statement id="DAO00117_KiemTraToathuocNgoaitruDaXacNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT distinct CT.*
+        FROM TT_DUOC_CHUNGTU CT
+        INNER JOIN TT_NGOAITRU_KHAMBENH_TOATHUOC KBTT ON CT.CHUNGTU_ID =KBTT.CHUNGTUPHATTHUOC_ID
+        where KBTT.TIEPNHAN_ID = $TIEPNHAN_ID$ and isnull(CT.DAXACNHAN, '0') = '0'
+      </statement>
+    </statements>
+</sqlMap>

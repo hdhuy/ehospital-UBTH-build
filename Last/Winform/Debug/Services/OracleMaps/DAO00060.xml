@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,5ae291c2162f03263955a1b5d74b8b6e-->
+        <statement id="DAO00060_KiemtrabenhnhanCapcuuNoitru" resultClass="DataObject">
+            select A.* , C.TRANGTHAI as STATUS, C.SOTIEPNHAN, A.ICD_BENHCHINH as ICD_NHAPVIEN, C.SOBHYT, C.BHYTTUNGAY, C.BHYTDENNGAY
+            from TT_NOITRU_BENHAN A
+            inner join TT_TIEPNHAN C on C.TIEPNHAN_ID = A.TIEPNHAN_ID
+            inner join TT_BENHNHAN B on A.BENHNHAN_ID = B.BENHNHAN_ID and B.ACTIVE = '1' and B.MAYTE = '$MAYTE$'
+            where (A.TRANGTHAI = 'DANGDIEUTRI' OR A.TRANGTHAI = 'DAXUATVIEN' OR A.TRANGTHAI = 'DATHANHTOAN') and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                A.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+            </isNotEmpty>
+        </statement>
+        <!--Revision:0,a8d2e0ee2878ada43b3540fdde725907-->
+        <statement id="DAO00060_KiemtrabenhnhanCapcuuNoitruDaKhoaBenhAn" resultClass="DataObject">
+            select A.* , C.TRANGTHAI as STATUS, C.SOTIEPNHAN, A.ICD_BENHCHINH as ICD_NHAPVIEN
+            from TT_NOITRU_BENHAN A
+            inner join TT_TIEPNHAN C on C.TIEPNHAN_ID = A.TIEPNHAN_ID and TRUNC(SYSDATE) =  TRUNC(c.NGAYTAO)
+            inner join TT_BENHNHAN B on A.BENHNHAN_ID = B.BENHNHAN_ID and B.ACTIVE = '1' and B.MAYTE = '$MAYTE$'
+            where A.TRANGTHAI = 'DAKHOA' and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,0ab1836254933cd8e986cfc8ea04c5da-->
+        <statement id="DAO00060_GetAll" resultClass="DataObject">
+            select *
+            from TT_TIEPNHAN_THONGTINCAPCUU
+            order by THONGTINCAPCUU_ID
+        </statement>
+        <!--Revision:0,b384d47371f9cc25637c5c303142ca72-->
+        <statement id="DAO00060_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select TT_TIEPNHAN_THONGTINCAPCUU.*, tn.SOTIEPNHAN
+            from TT_TIEPNHAN_THONGTINCAPCUU
+            left join TT_TIEPNHAN tn on tn.TIEPNHAN_ID = TT_TIEPNHAN_THONGTINCAPCUU.TIEPNHAN_ID
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="THONGTINCAPCUU_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.THONGTINCAPCUU_ID = '$THONGTINCAPCUU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOCAPCUU">
+                        TT_TIEPNHAN_THONGTINCAPCUU.SOCAPCUU = '$SOCAPCUU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHAN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.BENHAN_ID = '$BENHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRU_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.LUUTRU_ID = '$LUUTRU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHNHAN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.BENHNHAN_ID = '$BENHNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPCUU">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGAYCAPCUU = '$NGAYCAPCUU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANCAPCUU">
+                        TT_TIEPNHAN_THONGTINCAPCUU.THOIGIANCAPCUU = '$THOIGIANCAPCUU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOICAPCUU_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NOICAPCUU_ID = '$NOICAPCUU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOINHAPVIEN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NOINHAPVIEN_ID = '$NOINHAPVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSICAPCUU_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.BACSICAPCUU_ID = '$BACSICAPCUU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHANDOANNGT">
+                        TT_TIEPNHAN_THONGTINCAPCUU.CHANDOANNGT = '$CHANDOANNGT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETQUACAPCUU_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.KETQUACAPCUU_ID = '$KETQUACAPCUU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GHICHU">
+                        TT_TIEPNHAN_THONGTINCAPCUU.GHICHU = '$GHICHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOANHAPVIEN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.KHOANHAPVIEN_ID = '$KHOANHAPVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYNHAPVIEN">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGAYNHAPVIEN = '$NGAYNHAPVIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANNHAPVIEN">
+                        TT_TIEPNHAN_THONGTINCAPCUU.THOIGIANNHAPVIEN = '$THOIGIANNHAPVIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ICD_NHAPVIEN_CODE">
+                        TT_TIEPNHAN_THONGTINCAPCUU.ICD_NHAPVIEN_CODE = '$ICD_NHAPVIEN_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ICD_NHAPVIEN_MOTA">
+                        TT_TIEPNHAN_THONGTINCAPCUU.ICD_NHAPVIEN_MOTA = '$ICD_NHAPVIEN_MOTA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ICD_RAVIEN_CODE">
+                        TT_TIEPNHAN_THONGTINCAPCUU.ICD_RAVIEN_CODE = '$ICD_RAVIEN_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ICD_RAVIEN_MOTA">
+                        TT_TIEPNHAN_THONGTINCAPCUU.ICD_RAVIEN_MOTA = '$ICD_RAVIEN_MOTA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHUYENVIEN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.CHUYENVIEN_ID = '$CHUYENVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYRAVIEN">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGAYRAVIEN = '$NGAYRAVIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANRAVIEN">
+                        TT_TIEPNHAN_THONGTINCAPCUU.THOIGIANRAVIEN = '$THOIGIANRAVIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by THONGTINCAPCUU_ID
+        </statement>
+        <!--Revision:0,b3bc502d52d4e65fd0fe5e6e3aec9e26-->
+        <statement id="DAO00060_GetDetailBySoCapCuu" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_TIEPNHAN_THONGTINCAPCUU
+            where
+            TT_TIEPNHAN_THONGTINCAPCUU.SOCAPCUU  = '$SOCAPCUU$'
+            AND TT_TIEPNHAN_THONGTINCAPCUU.BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by THONGTINCAPCUU_ID
+        </statement>
+        <!--Revision:0,4cd8bb7966c1e39c6da45871d19a19e3-->
+        <statement id="DAO00060_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_TIEPNHAN_THONGTINCAPCUU
+            where TT_TIEPNHAN_THONGTINCAPCUU.THONGTINCAPCUU_ID  = '$value$'
+            order by THONGTINCAPCUU_ID
+        </statement>
+        <!--Revision:0,656a10fdbe5c579dcba3cacecb95af7f-->
+        <statement id="DAO00060_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_TIEPNHAN_THONGTINCAPCUU
+            where TT_TIEPNHAN_THONGTINCAPCUU.THONGTINCAPCUU_ID  = '$THONGTINCAPCUU_ID$'
+            order by THONGTINCAPCUU_ID
+        </statement>
+        <!--Revision:0,c578a19c8435b83238476ddb72c06523-->
+        <insert id="DAO00060_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            <selectKey property="THONGTINCAPCUU_ID" type="pre" resultClass="System.Int64">
+              select TT_TIEPNHAN_THONGTINCAPCUU_S.nextval as value from dual
+            </selectKey>
+            insert into TT_TIEPNHAN_THONGTINCAPCUU (
+            THONGTINCAPCUU_ID
+            , SOCAPCUU
+            , TIEPNHAN_ID
+            , BENHAN_ID
+            , LUUTRU_ID
+            , BENHNHAN_ID
+            , NGAYCAPCUU
+            , THOIGIANCAPCUU
+            , NOICAPCUU_ID
+            , NOINHAPVIEN_ID
+            , BACSICAPCUU_ID
+            , CHANDOANNGT
+            , KETQUACAPCUU_ID
+            , GHICHU
+            , KHOANHAPVIEN_ID
+            , NGAYNHAPVIEN
+            , THOIGIANNHAPVIEN
+            , ICD_NHAPVIEN_CODE
+            , ICD_NHAPVIEN_MOTA
+            , ICD_RAVIEN_CODE
+            , ICD_RAVIEN_MOTA
+            , CHUYENVIEN_ID
+            , NGAYRAVIEN
+            , THOIGIANRAVIEN
+            , BENHVIEN_ID
+            , NGUOITAO_ID
+            , NGAYTAO
+            , NGUOICAPNHAT_ID
+            , NGAYCAPNHAT
+            ) values (
+            #THONGTINCAPCUU_ID#
+            , #SOCAPCUU#
+            , #TIEPNHAN_ID#
+            , #BENHAN_ID#
+            , #LUUTRU_ID#
+            , #BENHNHAN_ID#
+            , #NGAYCAPCUU#
+            , #THOIGIANCAPCUU#
+            , #NOICAPCUU_ID#
+            , #NOINHAPVIEN_ID#
+            , #BACSICAPCUU_ID#
+            , #CHANDOANNGT#
+            , #KETQUACAPCUU_ID#
+            , #GHICHU#
+            , #KHOANHAPVIEN_ID#
+            , #NGAYNHAPVIEN#
+            , #THOIGIANNHAPVIEN#
+            , #ICD_NHAPVIEN_CODE#
+            , #ICD_NHAPVIEN_MOTA#
+            , #ICD_RAVIEN_CODE#
+            , #ICD_RAVIEN_MOTA#
+            , #CHUYENVIEN_ID#
+            , #NGAYRAVIEN#
+            , #THOIGIANRAVIEN#
+            , #BENHVIEN_ID#
+            , #NGUOITAO_ID#
+            , #NGAYTAO#
+            , #NGUOICAPNHAT_ID#
+            , #NGAYCAPNHAT#
+            )
+        </insert>
+        <!--Revision:0,970eebea319d8206d3f535f30f34d70f-->
+        <update id="DAO00060_Update" parameterClass="System.Collections.IDictionary">
+            update TT_TIEPNHAN_THONGTINCAPCUU set
+            SOCAPCUU = #SOCAPCUU#
+            , TIEPNHAN_ID = #TIEPNHAN_ID#
+            , BENHAN_ID = #BENHAN_ID#
+            , LUUTRU_ID = #LUUTRU_ID#
+            , BENHNHAN_ID = #BENHNHAN_ID#
+            , NGAYCAPCUU = #NGAYCAPCUU#
+            , THOIGIANCAPCUU = #THOIGIANCAPCUU#
+            , NOICAPCUU_ID = #NOICAPCUU_ID#
+            , NOINHAPVIEN_ID = #NOINHAPVIEN_ID#
+            , BACSICAPCUU_ID = #BACSICAPCUU_ID#
+            , CHANDOANNGT = #CHANDOANNGT#
+            , KETQUACAPCUU_ID = #KETQUACAPCUU_ID#
+            , GHICHU = #GHICHU#
+            , KHOANHAPVIEN_ID = #KHOANHAPVIEN_ID#
+            , NGAYNHAPVIEN = #NGAYNHAPVIEN#
+            , THOIGIANNHAPVIEN = #THOIGIANNHAPVIEN#
+            , ICD_NHAPVIEN_CODE = #ICD_NHAPVIEN_CODE#
+            , ICD_NHAPVIEN_MOTA = #ICD_NHAPVIEN_MOTA#
+            , ICD_RAVIEN_CODE = #ICD_RAVIEN_CODE#
+            , ICD_RAVIEN_MOTA = #ICD_RAVIEN_MOTA#
+            , CHUYENVIEN_ID = #CHUYENVIEN_ID#
+            , NGAYRAVIEN = #NGAYRAVIEN#
+            , THOIGIANRAVIEN = #THOIGIANRAVIEN#
+            <!--, BENHVIEN_ID = #BENHVIEN_ID#
+      , NGUOITAO_ID = #NGUOITAO_ID#
+      , NGAYTAO = #NGAYTAO#-->
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            where
+            THONGTINCAPCUU_ID = '$THONGTINCAPCUU_ID$'
+        </update>
+        <!--Revision:0,c03ce1608ba0efcd96e2059aef64d899-->
+        <update id="DAO00060_Update_TTCAPCUU" parameterClass="System.Collections.IDictionary">
+            update TT_TIEPNHAN_THONGTINCAPCUU set
+            SOCAPCUU = #SOCAPCUU#
+            <isPropertyAvailable prepend="," property="TIEPNHAN_ID">
+                TIEPNHAN_ID = #TIEPNHAN_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="LUUTRU_ID">
+                LUUTRU_ID = #LUUTRU_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="BENHNHAN_ID">
+                BENHNHAN_ID = #BENHNHAN_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGAYCAPCUU">
+                NGAYCAPCUU = #NGAYCAPCUU#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="THOIGIANCAPCUU">
+                THOIGIANCAPCUU = #THOIGIANCAPCUU#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NOICAPCUU_ID">
+                NOICAPCUU_ID = #NOICAPCUU_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NOINHAPVIEN_ID">
+                NOINHAPVIEN_ID = #NOINHAPVIEN_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="BACSICAPCUU_ID">
+                BACSICAPCUU_ID = #BACSICAPCUU_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="CHANDOANNGT">
+                CHANDOANNGT = #CHANDOANNGT#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="KETQUACAPCUU_ID">
+                KETQUACAPCUU_ID = #KETQUACAPCUU_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="GHICHU">
+                GHICHU = #GHICHU#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="KHOANHAPVIEN_ID">
+                KHOANHAPVIEN_ID = #KHOANHAPVIEN_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGAYNHAPVIEN">
+                NGAYNHAPVIEN = #NGAYNHAPVIEN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="THOIGIANNHAPVIEN">
+                THOIGIANNHAPVIEN = #THOIGIANNHAPVIEN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="ICD_NHAPVIEN_CODE">
+                ICD_NHAPVIEN_CODE = #ICD_NHAPVIEN_CODE#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="ICD_NHAPVIEN_MOTA">
+                ICD_NHAPVIEN_MOTA = #ICD_NHAPVIEN_MOTA#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="ICD_RAVIEN_CODE">
+                ICD_RAVIEN_CODE = #ICD_RAVIEN_CODE#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="ICD_RAVIEN_MOTA">
+                ICD_RAVIEN_MOTA = #ICD_RAVIEN_MOTA#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="CHUYENVIEN_ID">
+                CHUYENVIEN_ID = #CHUYENVIEN_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGAYRAVIEN">
+                NGAYRAVIEN = #NGAYRAVIEN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="THOIGIANRAVIEN">
+                THOIGIANRAVIEN = #THOIGIANRAVIEN#
+            </isPropertyAvailable>
+            <!--<isPropertyAvailable prepend="," property="BENHVIEN_ID">
+        BENHVIEN_ID = #BENHVIEN_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="NGUOITAO_ID">
+        NGUOITAO_ID = #NGUOITAO_ID#
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="," property="NGAYTAO">
+        NGAYTAO = #NGAYTAO#
+      </isPropertyAvailable>-->
+            <isPropertyAvailable prepend="," property="NGUOICAPNHAT_ID">
+                NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NGAYCAPNHAT">
+                NGAYCAPNHAT = #NGAYCAPNHAT#
+            </isPropertyAvailable>
+            where
+            BENHAN_ID = '$BENHAN_ID$'
+        </update>
+        <!--Revision:0,6cde0dd464be4ba87500bc11079f534f-->
+        <statement id="DAO00060_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_TIEPNHAN_THONGTINCAPCUU
+            where
+            THONGTINCAPCUU_ID = '$THONGTINCAPCUU_ID$'
+        </statement>
+        <!--Revision:0,58da1ca8cf027c92f29a3eb9a253877e-->
+        <statement id="DAO00060_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_TIEPNHAN_THONGTINCAPCUU
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="THONGTINCAPCUU_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.THONGTINCAPCUU_ID = '$THONGTINCAPCUU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOCAPCUU">
+                        TT_TIEPNHAN_THONGTINCAPCUU.SOCAPCUU = '$SOCAPCUU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHAN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.BENHAN_ID = '$BENHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRU_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.LUUTRU_ID = '$LUUTRU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHNHAN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.BENHNHAN_ID = '$BENHNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPCUU">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGAYCAPCUU = '$NGAYCAPCUU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANCAPCUU">
+                        TT_TIEPNHAN_THONGTINCAPCUU.THOIGIANCAPCUU = '$THOIGIANCAPCUU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOICAPCUU_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NOICAPCUU_ID = '$NOICAPCUU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOINHAPVIEN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NOINHAPVIEN_ID = '$NOINHAPVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSICAPCUU_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.BACSICAPCUU_ID = '$BACSICAPCUU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHANDOANNGT">
+                        TT_TIEPNHAN_THONGTINCAPCUU.CHANDOANNGT = '$CHANDOANNGT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETQUACAPCUU_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.KETQUACAPCUU_ID = '$KETQUACAPCUU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GHICHU">
+                        TT_TIEPNHAN_THONGTINCAPCUU.GHICHU = '$GHICHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOANHAPVIEN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.KHOANHAPVIEN_ID = '$KHOANHAPVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYNHAPVIEN">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGAYNHAPVIEN = '$NGAYNHAPVIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANNHAPVIEN">
+                        TT_TIEPNHAN_THONGTINCAPCUU.THOIGIANNHAPVIEN = '$THOIGIANNHAPVIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ICD_NHAPVIEN_CODE">
+                        TT_TIEPNHAN_THONGTINCAPCUU.ICD_NHAPVIEN_CODE = '$ICD_NHAPVIEN_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ICD_NHAPVIEN_MOTA">
+                        TT_TIEPNHAN_THONGTINCAPCUU.ICD_NHAPVIEN_MOTA = '$ICD_NHAPVIEN_MOTA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ICD_RAVIEN_CODE">
+                        TT_TIEPNHAN_THONGTINCAPCUU.ICD_RAVIEN_CODE = '$ICD_RAVIEN_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ICD_RAVIEN_MOTA">
+                        TT_TIEPNHAN_THONGTINCAPCUU.ICD_RAVIEN_MOTA = '$ICD_RAVIEN_MOTA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHUYENVIEN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.CHUYENVIEN_ID = '$CHUYENVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYRAVIEN">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGAYRAVIEN = '$NGAYRAVIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANRAVIEN">
+                        TT_TIEPNHAN_THONGTINCAPCUU.THOIGIANRAVIEN = '$THOIGIANRAVIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_TIEPNHAN_THONGTINCAPCUU.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

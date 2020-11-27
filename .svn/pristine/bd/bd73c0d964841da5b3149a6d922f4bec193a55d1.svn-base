@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <statements>
+    <statement id="DAO00404_QMS003_GetThongTinBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT MAYTE AS PATIENTCODE, TENBENHNHAN AS PATIENTNAME, NAMSINH AS PATIENTYOB, (CASE WHEN GIOITINH=1 THEN 'Nam' ELSE N'Nữ' END) AS GENDER, BENHNHAN_ID AS PATIENTID
+      FROM TT_BENHNHAN
+      WHERE MAYTE='$PATIENTCODE$' AND BENHVIEN_ID='$BENHVIEN_ID$'
+    </statement>
+   <statement id="DAO00404_QMS003_GetThongTinMaToaThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+     SELECT NGOAITRU_TOATHUOC_NGUOIMUA_ID AS PATIENTCODE, TENNGUOIMUA AS PATIENTNAME, NAMSINH AS PATIENTYOB, (CASE WHEN GIOITINH=1 THEN 'Nam' ELSE N'Nữ' END) AS GENDER
+     FROM TT_NGOAITRU_TOATHUOC_NGUOIMUA
+     WHERE NGOAITRU_TOATHUOC_NGUOIMUA_ID='$MATOATHUOC$' AND BENHVIEN_ID='$BENHVIEN_ID$'
+   </statement>
+    <statement id="DAO00404_QMS003_GetListNoiThucHienByBenhNhan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select DISTINCT NOITHUCHIEN_ID
+      from TT_DVYEUCAU YC
+      inner join TT_VIENPHI VP on VP.REF_ID = YC.DVYEUCAU_ID and VP.REF_TABLE = 'TT_DVYEUCAU'
+      inner join TT_BENHNHAN BN on BN.BENHNHAN_ID = YC.BENHNHAN_ID
+      where BN.MAYTE = '$PATIENTCODE$'
+      and YC.NGAYYEUCAU = cast(getdate() as date)
+      and YC.HUYYEUCAU = '0'
+      and VP.DATHUCHIEN = '0'
+      and YC.TRANGTHAI != 'DALAYMAU'
+      and YC.BENHVIEN_ID = '$BENHVIEN_ID$'
+    </statement>
+    <statement id="DAO00404_UpdDVYeuCauSTT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      UPDATE TT_DVYEUCAU SET SOTHUTU='$SOTHUTU$' WHERE
+      EXISTS(
+      SELECT YC.DVYEUCAU_ID FROM TT_DVYEUCAU YC JOIN TT_BENHNHAN BN ON YC.BENHNHAN_ID=BN.BENHNHAN_ID AND YC.SOTHUTU IS NULL
+      AND YC.TRANGTHAI_WFL IN('CHOLAYMAU','CHUAKETQUA') AND yc.NOITHUCHIEN_ID=$NOITHUCHIEN_ID$ AND BN.MAYTE='$MAYTE$'
+      WHERE TT_DVYEUCAU.DVYEUCAU_ID=YC.DVYEUCAU_ID
+      )
+    </statement>
+  </statements>
+</sqlMap>

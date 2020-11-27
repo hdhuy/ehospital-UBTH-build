@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+  <statements>
+    <statement id="EIN00001_GetListHoaDonBenhVien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from
+
+      (select distinct hd.HOADON_ID, hd.SOHOADON, hd.NGAYHOADON, httt.GIATRITHUCTHU, bn.TENBENHNHAN, bn.MAYTE, bn.DIACHILIENLAC DIACHI,
+      case when hdngt.HOADON_ID is not null then N'Ngoại trú/ nhà thuốc' else N'Nội trú' end LOAIHOADONTHU,
+      case when hdngt.HOADON_ID is not null then N'TT_HOADON_CHITIET_NGOAITRU' else N'TT_HOADON_CHITIET_NOITRU' end REF_TABLE,
+      nv.TENNHANVIEN, httt.TENHINHTHUCTHANHTOAN, 'BENHVIEN' THANHTOANTAI
+      from TT_HOADON hd
+      left join TT_HOADON_HINHTHUCTHANHTOAN httt on httt.HOADON_ID = hd.HOADON_ID
+      left join TT_BENHNHAN bn on bn.BENHNHAN_ID = hd.BENHNHAN_ID
+      left join TT_HOADON_CHITIET_NGOAITRU hdngt on hdngt.HOADON_ID = hd.HOADON_ID
+      left join TT_HOADON_CHITIET_NOITRU hdnt on hdnt.HOADON_ID = hd.HOADON_ID
+      left join TM_NHANVIEN nv on nv.NHANVIEN_ID = hd.NGUOITAO_ID
+      left join TT_VNPT_INVOICE_HOADON vnpt on vnpt.HOADON_ID = hd.HOADON_ID
+      left join TT_VNPT_INVOICE main on main.VNPT_INVOICE_ID = vnpt.VNPT_INVOICE_ID
+      where
+      (hd.TIEPNHAN_ID is not null or hd.BENHNHAN_ID is not null ) and hd.LOAIHOADON = 'BL'
+      and (vnpt.HOADON_ID is null)
+      and hd.DATHANHTOAN = '1' and hd.HUYHOADON = '0' and hd.HOANTRA = '0'
+      <isNotEmpty prepend="and" property="TUNGAY">
+        convert(date, hd.NGAYHOADON) &gt;= convert(date, '$TUNGAY$')
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="DENNGAY">
+        convert(date, hd.NGAYHOADON) &lt;= convert(date, '$DENNGAY$')
+      </isNotEmpty>
+      <isNotEmpty prepend="AND" property="TENBENHNHAN">
+        (bn.TENBENHNHAN like '%' + #TENBENHNHAN# + '%' or bn.MAYTE like '%' + #TENBENHNHAN# + '%')
+      </isNotEmpty>
+      union all
+      select distinct hd.HOADON_ID, hd.SOHOADON, hd.NGAYHOADON, httt.GIATRITHUCTHU, NM.TENNGUOIMUA TENBENHNHAN, ('VANGLAI' + cast(NM.NGOAITRU_TOATHUOC_NGUOIMUA_ID as varchar(10))) MAYTE, NM.DIACHI,
+      N'Vãng lai nhà thuốc' LOAIHOADONTHU,
+      N'TT_HOADON_CHITIET_NGOAITRU' REF_TABLE,
+      nv.TENNHANVIEN, httt.TENHINHTHUCTHANHTOAN, 'VANGLAI' THANHTOANTAI
+      from TT_HOADON hd
+      left join TT_HOADON_HINHTHUCTHANHTOAN httt on httt.HOADON_ID = hd.HOADON_ID
+      left join TT_HOADON_CHITIET_NGOAITRU hdngt on hdngt.HOADON_ID = hd.HOADON_ID
+      left join TT_DUOC_CHUNGTU_CHITIET ctct on ctct.CHUNGTUCHITIET_ID= hdngt.REF_ID
+      left join TT_DUOC_CHUNGTU ct on ct.CHUNGTU_ID = ctct.CHUNGTU_ID
+      left join TT_NGOAITRU_TOATHUOC_NGUOIMUA NM on NM.NGOAITRU_TOATHUOC_NGUOIMUA_ID = CT.NGOAITRU_TOATHUOC_NGUOIMUA_ID
+      left join TM_NHANVIEN nv on nv.NHANVIEN_ID = hd.NGUOITAO_ID
+      left join TT_VNPT_INVOICE_HOADON vnpt on vnpt.HOADON_ID = hd.HOADON_ID
+      left join TT_VNPT_INVOICE main on main.VNPT_INVOICE_ID = vnpt.VNPT_INVOICE_ID
+      where
+      hd.TIEPNHAN_ID is null and hd.BENHNHAN_ID is null  and hd.LOAIHOADON = 'BL'
+      and (vnpt.HOADON_ID is null)
+      and hd.DATHANHTOAN = '1' and hd.HUYHOADON = '0' and hd.HOANTRA = '0'
+      <isNotEmpty prepend="and" property="TUNGAY">
+        convert(date, hd.NGAYHOADON) &gt;= convert(date, '$TUNGAY$')
+      </isNotEmpty>
+      <isNotEmpty prepend="and" property="DENNGAY">
+        convert(date, hd.NGAYHOADON) &lt;= convert(date, '$DENNGAY$')
+      </isNotEmpty>
+      <isNotEmpty prepend="AND" property="TENBENHNHAN">
+        (NM.TENNGUOIMUA like '%' + #TENBENHNHAN# + '%')
+      </isNotEmpty>
+      ) ds
+      order by ds.TENBENHNHAN
+    </statement>
+    <statement id="EIN00001_GetHoaDonDaXuatLenCong" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select * from TT_VNPT_INVOICE hd
+      where 
+      HUY = '0'
+      <isNotEmpty prepend="and" property="TUNGAY">
+        convert(date, hd.NGAYPHATSINH) &gt;= convert(date, '$TUNGAY$')
+    </isNotEmpty>
+    <isNotEmpty prepend="and" property="DENNGAY">
+      convert(date, hd.NGAYPHATSINH) &lt;= convert(date, '$DENNGAY$')
+    </isNotEmpty>
+    <isNotEmpty prepend="AND" property="TENBENHNHAN">
+      (hd.BUYER like '%' + #TENBENHNHAN# + '%' or hd.CUSCODE like '%' + #TENBENHNHAN# + '%')
+    </isNotEmpty>
+    </statement>
+    <statement id="EIN00001_GetChiTietHoaDon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select distinct hdct.*, hdct.GIATRI_BENHNHAN_DATHANHTOAN AMOUNT, hdct.SOLUONG PRODQUANTITY,
+      isnull(dv.TENDICHVU, dc.TENDUOCDAYDU) PRODNAME
+      from $REF_TABLE$ hdct
+      left join TM_DICHVU dv on dv.DICHVU_ID = hdct.DICHVU_ID and hdct.DUOC_ID is null
+      left join TM_DUOC dc on dc.DUOC_ID = hdct.DUOC_ID and hdct.DICHVU_ID is null
+      where HOADON_ID = $HOADON_ID$
+    </statement>
+    <statement id="EIN00001_CheckHoadondaxuat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select B.*
+      from TT_VNPT_INVOICE A
+      left join TT_VNPT_INVOICE_HOADON B on A.VNPT_INVOICE_ID = B.VNPT_INVOICE_ID
+      where B.HOADON_ID = $HOADON_ID$ and A.HUY = '0'
+    </statement>
+    <statement id="EIN00001_CheckHoadondahuy" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.*
+      from TT_VNPT_INVOICE A
+      where A.KEYINVOICE = '$KEYINVOICE$' and A.HUY = '0'
+    </statement>
+    <statement id="EIN00001_CheckNhieuHoadondaxuat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select B.*
+      from TT_VNPT_INVOICE A
+      left join TT_VNPT_INVOICE_HOADON B on A.VNPT_INVOICE_ID = B.VNPT_INVOICE_ID
+      where B.HOADON_ID in ($KHG_LST_HOADON_ID$) and A.HUY = '0'
+    </statement>
+    <statement id="EIN00001_GetDanhsachChiTietHoaDon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select distinct hdct.HOADON_ID,hdct.GIATRI_BENHNHAN_DATHANHTOAN AMOUNT, hdct.SOLUONG PRODQUANTITY,
+      isnull(dv.TENDICHVU, dc.TENDUOCDAYDU) PRODNAME
+      from TT_HOADON hd
+      inner join TT_HOADON_CHITIET_NGOAITRU hdct on hdct.HOADON_ID = hd.HOADON_ID
+      left join TM_DICHVU dv on dv.DICHVU_ID = hdct.DICHVU_ID and hdct.DUOC_ID is null
+      left join TM_DUOC dc on dc.DUOC_ID = hdct.DUOC_ID and hdct.DICHVU_ID is null
+      where hd.HOADON_ID in ($KHG_LST_HOADON_ID$) and hd.DATHANHTOAN = '1' and hd.HUYHOADON = '0' and hd.HOANTRA = '0'
+      union all
+      select distinct hdct.HOADON_ID,hdct.GIATRI_BENHNHAN_DATHANHTOAN AMOUNT, hdct.SOLUONG PRODQUANTITY,
+      isnull(dv.TENDICHVU, dc.TENDUOCDAYDU) PRODNAME
+      from TT_HOADON hd
+      inner join TT_HOADON_CHITIET_NOITRU hdct on hdct.HOADON_ID = hd.HOADON_ID
+      left join TM_DICHVU dv on dv.DICHVU_ID = hdct.DICHVU_ID and hdct.DUOC_ID is null
+      left join TM_DUOC dc on dc.DUOC_ID = hdct.DUOC_ID and hdct.DICHVU_ID is null
+      where hd.HOADON_ID in ($KHG_LST_HOADON_ID$) and hd.DATHANHTOAN = '1' and hd.HUYHOADON = '0' and hd.HOANTRA = '0'
+    </statement>
+    <statement id="EIN00001_VNPT_INVOICE_Json" parameterClass="System.Collections.IDictionary" resultClass="int">
+      declare @jsonVNPT nvarchar(max);
+      declare @jsonHODON_IDVNPT nvarchar(max);
+      set @jsonVNPT = N'$JSON_DATA$';
+      set @jsonHODON_IDVNPT = N'$JSON_DATA_HOADON$';
+
+      declare @VNPT_INVOICE_ID int;
+      INSERT INTO TT_VNPT_INVOICE
+      (KEYINVOICE ,BUYER, [ADDRESS], CUSCODE ,CUSNAME ,PAYMENTMETHOD ,NGAYPHATSINH ,SOHOADON ,GIATRITHUCTHU ,SOTIENBANGCHU
+      , HUY, NGUOITAO_ID, NGAYTAO, BENHVIEN_ID)
+      VALUES
+      (#KEYINVOICE#, #BUYER#, #ADDRESS#, #CUSCODE#, #CUSNAME#, #PAYMENTMETHOD#, #NGAYPHATSINH#, #SOHOADON#, #GIATRITHUCTHU#, #SOTIENBANGCHU#
+      ,'0', '$USER_HOADON$', Getdate(), '$BENHVIEN_ID$')
+      set @VNPT_INVOICE_ID = SCOPE_IDENTITY()
+
+      insert into TT_VNPT_INVOICE_HOADON
+      SELECT @VNPT_INVOICE_ID, jsonHD.HOADON_ID, '$BENHVIEN_ID$'
+      FROM OPENJSON(@jsonHODON_IDVNPT)
+      WITH ( HOADON_ID int) jsonHD
+
+      insert into TT_VNPT_INVOICE_DETAIL
+      SELECT @VNPT_INVOICE_ID, json.HOADON_ID, json.PRODNAME, json.PRODQUANTITY, json.PRODUNIT, json.AMOUNT, '$USER_HOADON$', getdate() , '$BENHVIEN_ID$'
+      FROM OPENJSON(@jsonVNPT)
+      WITH ( HOADON_ID int, PRODNAME nvarchar(300), PRODQUANTITY float, PRODUNIT nvarchar(100), AMOUNT float) json
+    </statement>
+    <statement id="EIN00001_UpdateHuyHoadon" parameterClass="System.Collections.IDictionary" resultClass="int">
+      insert into TT_VNPT_INVOICE_HUY
+      select * from TT_VNPT_INVOICE where KEYINVOICE = '$KEYINVOICE$'
+
+      update TT_VNPT_INVOICE_HUY set HUY = '1', NGAYHUY = getdate(), NGUOIHUY_ID = '$USER_HOADON$'
+      where KEYINVOICE = '$KEYINVOICE$'
+
+      delete from TT_VNPT_INVOICE where KEYINVOICE = '$KEYINVOICE$'
+    </statement>
+  </statements>
+</sqlMap>

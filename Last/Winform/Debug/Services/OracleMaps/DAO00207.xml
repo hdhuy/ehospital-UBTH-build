@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,0aee3be6034aa4eb6281ff69396b553d-->
+        <statement id="DAO00207_GetAll" resultClass="DataObject">
+            select *
+            from TM_CATEGORY_FIELDDESCRIPTION
+            order by FIELD_DESCRIPTION_ID
+        </statement>
+        <!--Revision:0,3166747e3cb7031d2c466822b22a4251-->
+        <statement id="DAO00207_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_CATEGORY_FIELDDESCRIPTION
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="FIELD_DESCRIPTION_ID">
+                        TM_CATEGORY_FIELDDESCRIPTION.FIELD_DESCRIPTION_ID = '$FIELD_DESCRIPTION_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TABLE_NAME">
+                        TM_CATEGORY_FIELDDESCRIPTION.TABLE_NAME = '$TABLE_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_CODE">
+                        TM_CATEGORY_FIELDDESCRIPTION.FIELD_CODE = '$FIELD_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_VALUE">
+                        TM_CATEGORY_FIELDDESCRIPTION.FIELD_VALUE = '$FIELD_VALUE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DESCRIPTION">
+                        TM_CATEGORY_FIELDDESCRIPTION.DESCRIPTION = '$DESCRIPTION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_1">
+                        TM_CATEGORY_FIELDDESCRIPTION.ATTRIBUTE_1 = '$ATTRIBUTE_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_2">
+                        TM_CATEGORY_FIELDDESCRIPTION.ATTRIBUTE_2 = '$ATTRIBUTE_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_3">
+                        TM_CATEGORY_FIELDDESCRIPTION.ATTRIBUTE_3 = '$ATTRIBUTE_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_4">
+                        TM_CATEGORY_FIELDDESCRIPTION.ATTRIBUTE_4 = '$ATTRIBUTE_4$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_5">
+                        TM_CATEGORY_FIELDDESCRIPTION.ATTRIBUTE_5 = '$ATTRIBUTE_5$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by FIELD_DESCRIPTION_ID
+        </statement>
+        <!--Revision:0,958fcdde00dc144f9df332b4cdb70734-->
+        <statement id="DAO00207_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_CATEGORY_FIELDDESCRIPTION
+            where TM_CATEGORY_FIELDDESCRIPTION.FIELD_DESCRIPTION_ID  = '$value$'
+            order by FIELD_DESCRIPTION_ID
+        </statement>
+        <!--Revision:0,41d19319947d466a6a3ae9064fd55d88-->
+        <statement id="DAO00207_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_CATEGORY_FIELDDESCRIPTION
+            where TM_CATEGORY_FIELDDESCRIPTION.FIELD_DESCRIPTION_ID  = '$FIELD_DESCRIPTION_ID$'
+            order by FIELD_DESCRIPTION_ID
+        </statement>
+        <!--Revision:0,7b31e3bcfdaae835d3e497a0a95c913a-->
+        <insert id="DAO00207_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            <selectKey property="ID" type="pre" resultClass="System.Int64">
+                select TM_CATEGORY_FIELDDESC_S.nextval as value from dual
+            </selectKey>
+            insert into TM_CATEGORY_FIELDDESCRIPTION (
+            FIELD_DESCRIPTION_ID
+            , TABLE_NAME
+            , FIELD_CODE
+            , FIELD_VALUE
+            , DESCRIPTION
+            , ATTRIBUTE_1
+            , ATTRIBUTE_2
+            , ATTRIBUTE_3
+            , ATTRIBUTE_4
+            , ATTRIBUTE_5
+            ) values (
+            #ID#
+            , #TABLE_NAME#
+            , #FIELD_CODE#
+            , #FIELD_VALUE#
+            , #DESCRIPTION#
+            , #ATTRIBUTE_1#
+            , #ATTRIBUTE_2#
+            , #ATTRIBUTE_3#
+            , #ATTRIBUTE_4#
+            , #ATTRIBUTE_5#
+            )
+        </insert>
+        <!--Revision:0,eb663371efca09bef206f2c73d1397e2-->
+        <update id="DAO00207_Update" parameterClass="System.Collections.IDictionary">
+            update TM_CATEGORY_FIELDDESCRIPTION set
+            TABLE_NAME = #TABLE_NAME#
+            , FIELD_CODE = #FIELD_CODE#
+            , FIELD_VALUE = #FIELD_VALUE#
+            , DESCRIPTION = #DESCRIPTION#
+            where
+            FIELD_DESCRIPTION_ID = '$FIELD_DESCRIPTION_ID$'
+        </update>
+        <!--Revision:0,019e591ce7518681364d4bd5f4d0646a-->
+        <statement id="DAO00207_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_CATEGORY_FIELDDESCRIPTION
+            where
+            FIELD_DESCRIPTION_ID = '$FIELD_DESCRIPTION_ID$'
+        </statement>
+        <!--Revision:0,9c42f645256b71b6a6172f6a250d887e-->
+        <statement id="DAO00207_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_CATEGORY_FIELDDESCRIPTION
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="FIELD_DESCRIPTION_ID">
+                        TM_CATEGORY_FIELDDESCRIPTION.FIELD_DESCRIPTION_ID = '$FIELD_DESCRIPTION_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TABLE_NAME">
+                        TM_CATEGORY_FIELDDESCRIPTION.TABLE_NAME = '$TABLE_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_CODE">
+                        TM_CATEGORY_FIELDDESCRIPTION.FIELD_CODE = '$FIELD_CODE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="FIELD_VALUE">
+                        TM_CATEGORY_FIELDDESCRIPTION.FIELD_VALUE = '$FIELD_VALUE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DESCRIPTION">
+                        TM_CATEGORY_FIELDDESCRIPTION.DESCRIPTION = '$DESCRIPTION$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_1">
+                        TM_CATEGORY_FIELDDESCRIPTION.ATTRIBUTE_1 = '$ATTRIBUTE_1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_2">
+                        TM_CATEGORY_FIELDDESCRIPTION.ATTRIBUTE_2 = '$ATTRIBUTE_2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_3">
+                        TM_CATEGORY_FIELDDESCRIPTION.ATTRIBUTE_3 = '$ATTRIBUTE_3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_4">
+                        TM_CATEGORY_FIELDDESCRIPTION.ATTRIBUTE_4 = '$ATTRIBUTE_4$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE_5">
+                        TM_CATEGORY_FIELDDESCRIPTION.ATTRIBUTE_5 = '$ATTRIBUTE_5$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

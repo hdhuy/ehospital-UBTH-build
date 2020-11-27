@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,6b6ec3e980b0f0d9ac8b8c5f5a38e713-->
+        <statement id="DAO00044_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TM_PHONGBAN_DICHVU
+            where DICHVU_ID not in (select DICHVU_ID from TM_DICHVU where TAMNGUNG = '1')
+            and PHONGBAN_ID not in (select PHONGBAN_ID from TM_PHONGBAN where TAMNGUNG = '1')
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <!--Revision:0,d0c02d55591882830b2173548e8d6dc2-->
+    <statement id="DAO00012_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select
+      DICTIONARY_ID,
+      DICTIONARY_CODE,
+      DICTIONARY_NAME,
+      ATTRIBUTE1,
+      ATTRIBUTE2,
+      DICTIONARY_NAME_EN
+      from LST_DICTIONARY
+      where LST_DICTIONARY.Enabled = '1'
+      <!--<dynamic prepend="where">
+                <isParameterPresent>-->
+      <!--where BENHVIEN_ID = '$BENHVIEN_ID$'-->
+      <isPropertyAvailable prepend="AND" property="DICTIONARY_TYPE_CODE">
+        LST_DICTIONARY.DICTIONARY_TYPE_CODE = '$DICTIONARY_TYPE_CODE$'
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="AND" property="DICTIONARY_TYPE_ID">
+        LST_DICTIONARY.DICTIONARY_TYPE_ID = '$DICTIONARY_TYPE_ID$'
+      </isPropertyAvailable>
+      <isPropertyAvailable prepend="AND" property="Attribute1">
+        LST_DICTIONARY.Attribute1 = '$Attribute1$'
+      </isPropertyAvailable>
+      <!--<isPropertyAvailable prepend="AND" property="Enabled">
+        LST_DICTIONARY.Enabled = '$Enabled$'
+      </isPropertyAvailable>-->
+      <!--</isParameterPresent>
+            </dynamic>-->
+      order by LST_DICTIONARY.IDX
+    </statement>
+    <!--Revision:0,e992bd61da83c3d75485a42461ecaab2-->
+    <statement id="DAO00012_GetPhongBenhDicID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select DICTIONARY_ID
+      from LST_DICTIONARY
+      where
+      DICTIONARY_CODE = '$DICTIONARY_CODE$'
+    </statement>
+  </statements>
+</sqlMap>

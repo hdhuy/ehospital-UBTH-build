@@ -1,0 +1,40 @@
+FPT.Framework.Presentation.RoomPanelStyle, FPT.Framework.Presentation
+{
+  "ForeColor": "@white",
+  "BackColor": "@transparent",
+  "Font": "default",
+  "TextAlign": "MiddleLeft",  
+  "ItemWidth": 30,
+  "ItemHeight": 30,
+  "CategoryName" : "LoaiPhongID",
+  "CategoryTextName" : "DictionaryName",      
+  "HeaderFont": "default",
+  "NumberFont": "default",
+  "PriceFont": "default",
+  "PriceTileFont": "default",    
+  "LegendForeColor": "@white",
+  "LegendFont" : "default",
+  "LegendSize": 20,
+  "RoomStyles" : 
+  [
+  {
+    "PatternID" : 0,
+    "BackColor" : "@white",
+    "Color" : "32,178,170",
+    "HeaderForeColor" : "@red",
+    "NumberForeColor" : "@red",
+    "PriceForeColor" : "@red",
+    "PriceTitleForeColor" : "@red",
+  },
+  {
+    "PatternID" : 1,
+    "BackColor" : "@white",
+    "Color" : "32,178,170",
+    "HeaderForeColor" : "@red",
+    "NumberForeColor" : "@red",
+    "PriceForeColor" : "@red",
+    "PriceTitleForeColor" : "@red",
+  }
+  ] 
+  
+}

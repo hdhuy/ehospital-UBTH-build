@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>        
+        <statement id="DAO00320_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select M.*
+          from TM_MAU M
+          LEFT JOIN TM_MAU_DONVITINH DVT on M.DONVITINH_ID=DVT.DONVITINH_ID
+          where
+          M.TAMNGUNG = '0'
+          and M.BENHVIEN_ID = '$BENHVIEN_ID$'
+          order by M.TENMAU
+        </statement>
+
+      <statement id="DAO00320_BBM01" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT M.MAU_ID,M.MAMAU,M.TENMAU,M.TAMNGUNG,ABO.NHOM_ABO,RH.NHOM_RH,LM.LOAIMAU_ID,LM.TENLOAIMAU,NM.NHOMMAU_ID,
+          NM.TENNHOMMAU,DVT.DONVITINH_ID,DVT.TENDONVITINH
+        FROM TM_MAU M
+        LEFT JOIN TM_NHOM_ABO ABO ON M.NHOM_ABO=ABO.NHOM_ABO
+        LEFT JOIN TM_NHOM_RH RH ON M.NHOM_RH=RH.NHOM_RH
+        LEFT JOIN TM_MAU_DONVITINH DVT ON M.DONVITINH_ID=DVT.DONVITINH_ID
+        LEFT JOIN TM_MAU_LOAIMAU LM ON M.LOAIMAU_ID=LM.LOAIMAU_ID
+        LEFT JOIN TM_MAU_NHOMMAU NM ON LM.NHOMMAU_ID=NM.NHOMMAU_ID
+        WHERE M.BENHVIEN_ID = '$BENHVIEN_ID$'
+        <isParameterPresent>
+          <isNotEmpty prepend="AND" property="ACTIVE">
+            M.TAMNGUNG = '$ACTIVE$'
+          </isNotEmpty>
+        </isParameterPresent>
+        ORDER BY M.TENMAU
+      </statement>
+      <statement id="DAO00320_BBM01_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        INSERT INTO TM_MAU
+        (MAMAU
+        ,TENMAU
+        ,THANHPHAN
+        ,DONVITINH_ID
+        ,NHOM_ABO
+        ,NHOM_RH
+        ,LOAIMAU_ID
+        ,SOMI
+        ,CONGDUNG
+        ,PHAMVI
+        ,TAMNGUNG
+        ,BENHVIEN_ID
+        ,NGAYTAO
+        ,NGUOITAO_ID
+        ,NGAYCAPNHAT
+        ,NGUOICAPNHAT_ID)
+        VALUES
+        (#MAMAU#
+        ,#TENMAU#
+        ,#THANHPHAN#
+        ,#DONVITINH_ID#
+        ,#NHOM_ABO#
+        ,#NHOM_RH#
+        ,#LOAIMAU_ID#
+        ,#SOMI#
+        ,#CONGDUNG#
+        ,#PHAMVI#
+        ,#TAMNGUNG#
+        ,#BENHVIEN_ID#
+        ,#NGAYTAO#
+        ,#NGUOITAO_ID#
+        ,#NGAYCAPNHAT#
+        ,#NGUOICAPNHAT_ID#
+        )
+        SELECT SCOPE_IDENTITY()
+      </statement>
+      <update id="DAO00320_BBM01_Update" parameterClass="System.Collections.IDictionary">
+        UPDATE TM_MAU
+        SET MAMAU = #MAMAU#
+        ,TENMAU = #TENMAU#
+        ,THANHPHAN = #THANHPHAN#
+        ,DONVITINH_ID = #DONVITINH_ID#
+        ,NHOM_ABO = #NHOM_ABO#
+        ,NHOM_RH = #NHOM_RH#
+        ,LOAIMAU_ID = #LOAIMAU_ID#
+        ,SOMI = #SOMI#
+        ,CONGDUNG = #CONGDUNG#
+        ,PHAMVI = #PHAMVI#
+        ,TAMNGUNG = #TAMNGUNG#
+        ,BENHVIEN_ID = #BENHVIEN_ID#
+        ,NGAYTAO = #NGAYTAO#
+        ,NGUOITAO_ID = #NGUOITAO_ID#
+        ,NGAYCAPNHAT = #NGAYCAPNHAT#
+        ,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+        where
+        MAU_ID = '$MAU_ID$'
+      </update>
+      <statement id="DAO00320_BBM01_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        delete from TM_MAU
+        where
+        MAU_ID = '$MAU_ID$'
+      </statement>
+    </statements>
+</sqlMap>

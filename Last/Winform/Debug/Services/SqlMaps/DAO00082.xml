@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,7f6924d302f08f39c8c4fb1f54fa14e1-->
+        <statement id="DAO00082_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select distinct A.DICHVU_ID, A.NHOMDICHVU_ID, A.MADICHVU, A.TENDICHVU, B.LOAIDICHVU_ID, C.MALOAIDICHVU,
+            CASE WHEN Left(B.MANHOMDICHVU,2) = '03' THEN '02' ELSE Left(B.MANHOMDICHVU,2) END AS MANHOMDICHVU
+            from TM_DICHVU A
+            left join TM_NHOMDICHVU B on B.NHOMDICHVU_ID = A.NHOMDICHVU_ID
+            left join TM_LOAIDICHVU C on B.LOAIDICHVU_ID = C.LOAIDICHVU_ID
+            where A.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,243 @@
+﻿--------------------------------------------------------------------------------
+2018-10-12 16:00:59,532 [1] INFO  - [Application started.]
+2018-10-12 16:01:02,044 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:01:03,056 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:01:03,072 [1] INFO  - LoadMasters() took 9 ms.
+2018-10-12 16:01:03,073 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:01:13,923 [1] INFO  - [test] Session is starting.
+2018-10-12 16:01:14,466 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+--------------------------------------------------------------------------------
+2018-10-12 16:01:42,328 [1] INFO  - [Application started.]
+2018-10-12 16:01:43,666 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:01:44,382 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:01:44,400 [1] INFO  - LoadMasters() took 8 ms.
+2018-10-12 16:01:44,401 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:02:21,126 [1] INFO  - [test] Session is starting.
+2018-10-12 16:02:21,531 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+--------------------------------------------------------------------------------
+2018-10-12 16:07:24,796 [1] INFO  - [Application started.]
+2018-10-12 16:07:26,091 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:07:26,841 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:07:26,855 [1] INFO  - LoadMasters() took 8 ms.
+2018-10-12 16:07:26,856 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:07:38,295 [1] INFO  - [test] Session is starting.
+2018-10-12 16:07:38,727 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+--------------------------------------------------------------------------------
+2018-10-12 16:36:08,199 [1] INFO  - [Application started.]
+2018-10-12 16:36:09,084 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:36:09,599 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:36:09,613 [1] INFO  - LoadMasters() took 8 ms.
+2018-10-12 16:36:09,613 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:36:17,541 [1] INFO  - [test] Session is starting.
+2018-10-12 16:36:17,964 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+--------------------------------------------------------------------------------
+2018-10-12 16:36:41,333 [1] INFO  - [Application started.]
+2018-10-12 16:36:42,594 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:36:43,223 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:36:43,268 [1] INFO  - LoadMasters() took 37 ms.
+2018-10-12 16:36:43,269 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:36:49,162 [1] INFO  - [test] Session is starting.
+2018-10-12 16:36:49,579 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+--------------------------------------------------------------------------------
+2018-10-12 16:37:55,157 [1] INFO  - [Application started.]
+2018-10-12 16:37:56,265 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:37:57,004 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:37:57,038 [1] INFO  - LoadMasters() took 23 ms.
+2018-10-12 16:37:57,038 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:38:01,624 [1] INFO  - [test] Session is starting.
+2018-10-12 16:38:02,045 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+--------------------------------------------------------------------------------
+2018-10-12 16:40:01,348 [1] INFO  - [Application started.]
+2018-10-12 16:40:02,383 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:40:02,984 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:40:03,005 [1] INFO  - LoadMasters() took 11 ms.
+2018-10-12 16:40:03,005 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:40:07,591 [1] INFO  - [test] Session is starting.
+2018-10-12 16:40:08,044 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+--------------------------------------------------------------------------------
+2018-10-12 16:41:56,819 [1] INFO  - [Application started.]
+2018-10-12 16:41:57,812 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:41:58,429 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:41:58,448 [1] INFO  - LoadMasters() took 12 ms.
+2018-10-12 16:41:58,449 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:42:03,102 [1] INFO  - [test] Session is starting.
+2018-10-12 16:42:03,545 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+--------------------------------------------------------------------------------
+2018-10-12 16:44:23,956 [1] INFO  - [Application started.]
+2018-10-12 16:44:25,179 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:44:25,873 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:44:25,891 [1] INFO  - LoadMasters() took 10 ms.
+2018-10-12 16:44:25,892 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:44:30,995 [1] INFO  - [test] Session is starting.
+2018-10-12 16:44:31,452 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+--------------------------------------------------------------------------------
+2018-10-12 16:49:07,495 [1] INFO  - [Application started.]
+2018-10-12 16:49:08,688 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:49:09,410 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:49:09,431 [1] INFO  - LoadMasters() took 14 ms.
+2018-10-12 16:49:09,433 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:49:13,887 [1] INFO  - [test] Session is starting.
+2018-10-12 16:49:14,297 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:19,711 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:19,798 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:19,857 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:19,912 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:19,958 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:20,034 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:20,081 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:20,124 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:20,712 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:20,772 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:21,027 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:49:23,625 [5] INFO  - LoadMasters() took 9,734 ms.
+2018-10-12 16:49:23,644 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-12 16:52:28,923 [1] INFO  - [Application started.]
+2018-10-12 16:52:30,141 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:52:30,955 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:52:30,976 [1] INFO  - LoadMasters() took 13 ms.
+2018-10-12 16:52:30,977 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:52:36,579 [1] INFO  - [test] Session is starting.
+2018-10-12 16:52:36,997 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:37,169 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:37,222 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:37,264 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:37,303 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:37,345 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:37,390 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:37,431 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:37,471 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:37,928 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:37,990 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:38,232 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:52:40,792 [5] INFO  - LoadMasters() took 4,209 ms.
+2018-10-12 16:52:40,806 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-12 16:53:42,520 [1] INFO  - [Application started.]
+2018-10-12 16:53:43,644 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-12 16:53:44,273 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-12 16:53:44,289 [1] INFO  - LoadMasters() took 10 ms.
+2018-10-12 16:53:44,290 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-12 16:53:49,479 [1] INFO  - [test] Session is starting.
+2018-10-12 16:53:49,913 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:50,048 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:50,090 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:50,132 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:50,173 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:50,210 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:50,251 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:50,291 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:50,330 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:50,781 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:50,835 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:51,087 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-12 16:53:53,619 [5] INFO  - LoadMasters() took 4,136 ms.
+2018-10-12 16:53:53,629 [1] INFO  - [test] Session started.
+2018-10-12 16:55:07,727 [1] ERROR - Can't create control CPM08009.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'REFPHACDO' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.SearchEntry2.BindData()
+   at WinformUI.Entry.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-10-12 16:55:07,762 [1] ERROR - Can't create control CPM08011.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at WinformUI.TabControl.SetBindData()
+   at WinformUI.TabControl.BindData()
+   at WinformUI.TabControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)

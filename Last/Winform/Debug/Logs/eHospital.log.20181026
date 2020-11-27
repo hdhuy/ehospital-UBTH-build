@@ -1,0 +1,325 @@
+﻿--------------------------------------------------------------------------------
+2018-10-26 14:04:54,209 [1] INFO  - [Application started.]
+2018-10-26 14:04:56,358 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-26 14:04:57,638 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-26 14:04:57,672 [1] INFO  - LoadMasters() took 26 ms.
+2018-10-26 14:04:57,673 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-26 14:05:13,905 [1] INFO  - [admin] Session is starting.
+2018-10-26 14:05:14,672 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:14,906 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:14,959 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:15,019 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:15,072 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:15,127 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:15,180 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:15,240 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:15,292 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:15,747 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:15,827 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:16,274 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:05:18,192 [5] INFO  - LoadMasters() took 4,282 ms.
+2018-10-26 14:05:18,199 [1] INFO  - [admin] Session started.
+2018-10-26 14:05:22,859 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-26 14:05:22,886 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-10-26 14:12:43,373 [1] INFO  - [Application started.]
+2018-10-26 14:12:44,587 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-26 14:12:45,359 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-26 14:12:45,395 [1] INFO  - LoadMasters() took 28 ms.
+2018-10-26 14:12:45,396 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-26 14:12:54,080 [1] INFO  - [admin] Session is starting.
+2018-10-26 14:12:54,618 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:54,755 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:54,808 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:54,861 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:54,927 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:54,991 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:55,045 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:55,110 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:55,185 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:55,638 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:55,717 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:56,022 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:12:57,706 [7] INFO  - LoadMasters() took 3,619 ms.
+2018-10-26 14:12:57,713 [1] INFO  - [admin] Session started.
+2018-10-26 14:12:59,504 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-26 14:12:59,508 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-10-26 14:18:08,734 [1] INFO  - [Application started.]
+2018-10-26 14:18:10,233 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-26 14:18:11,172 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-26 14:18:11,204 [1] INFO  - LoadMasters() took 25 ms.
+2018-10-26 14:18:11,205 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-26 14:18:19,150 [1] INFO  - [admin] Session is starting.
+2018-10-26 14:18:19,688 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:19,818 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:19,875 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:19,927 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:19,983 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:20,039 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:20,093 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:20,159 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:20,226 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:20,698 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:20,782 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:21,099 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:18:22,796 [7] INFO  - LoadMasters() took 3,638 ms.
+2018-10-26 14:18:22,807 [1] INFO  - [admin] Session started.
+2018-10-26 14:18:24,622 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-26 14:18:24,625 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-10-26 14:19:02,994 [1] ERROR - Error when executing 'DAO09820_GetList'
+--------------------------------------------------------------------------------
+2018-10-26 14:19:32,197 [1] INFO  - [Application started.]
+2018-10-26 14:19:33,250 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-26 14:19:33,997 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-26 14:19:34,033 [1] INFO  - LoadMasters() took 25 ms.
+2018-10-26 14:19:34,034 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-26 14:19:46,711 [1] INFO  - [admin] Session is starting.
+2018-10-26 14:19:47,263 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:47,402 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:47,455 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:47,509 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:47,579 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:47,645 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:47,717 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:47,800 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:47,856 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:48,316 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:48,413 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:48,713 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:19:50,395 [5] INFO  - LoadMasters() took 3,679 ms.
+2018-10-26 14:19:50,402 [1] INFO  - [admin] Session started.
+2018-10-26 14:19:52,163 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-26 14:19:52,167 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-10-26 14:21:02,519 [1] ERROR - Error when executing 'DAO09820_UpdateXML_BHXH'
+2018-10-26 14:21:11,361 [1] ERROR - This SQL map does not contain a MappedStatement named DAO09820_UpdateXML_BHXH
+IBatisNet.DataMapper.Exceptions.DataMapperException: This SQL map does not contain a MappedStatement named DAO09820_UpdateXML_BHXH
+   at IBatisNet.DataMapper.SqlMapper.GetMappedStatement(String id)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done)
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount)
+   at FPT.Framework.DataAccess.EntityMapper.Update(String statementName, Object objParam)
+   at FPT.Framework.DataAccess.DaoBase.Update(String strStatementId, Object parameters)
+   at FPT.eHospital.DataAccess.DaoWrapper.Update(String strStatementId, Object parameters)
+   at FPT.eHospital.Services.HIX020.UpdateXML_BHXH(IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\98.SvcHIX\HIX020.cs:line 48
+   at FPT.eHospital.Services.HIX020.InternalExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\98.SvcHIX\HIX020.cs:line 32
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3)
+   at FPT.eHospital.Services.HIX020.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\98.SvcHIX\HIX020.cs:line 22
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters)
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.HIX.VMHIX20.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\98.ScrHIX\VMHIX20.cs:line 125
+   at FPT.eHospital.Forms.HIX.VMHIX20.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\98.ScrHIX\VMHIX20.cs:line 53
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-10-26 14:21:16,152 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-26 14:21:16,154 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-26 14:21:16,230 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-10-26 14:21:32,725 [1] INFO  - [admin] Session stopped.
+2018-10-26 14:21:32,727 [1] INFO  - Memory used before collection:  18,473,024
+2018-10-26 14:21:32,769 [1] INFO  - Memory used after collection:  7,355,188
+2018-10-26 14:21:32,802 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-10-26 14:23:43,430 [1] INFO  - [Application started.]
+2018-10-26 14:23:44,682 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-26 14:23:45,461 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-26 14:23:45,500 [1] INFO  - LoadMasters() took 30 ms.
+2018-10-26 14:23:45,501 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-26 14:23:53,433 [1] INFO  - [admin] Session is starting.
+2018-10-26 14:23:53,949 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:54,085 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:54,145 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:54,205 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:54,257 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:54,309 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:54,362 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:54,416 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:54,470 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:54,939 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:55,035 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:55,361 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:23:57,083 [7] INFO  - LoadMasters() took 3,646 ms.
+2018-10-26 14:23:57,100 [1] INFO  - [admin] Session started.
+2018-10-26 14:23:58,957 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-26 14:23:58,962 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-10-26 14:24:23,964 [1] ERROR - Error when executing 'DAO09820_UpdateXML_BHXH'
+--------------------------------------------------------------------------------
+2018-10-26 14:26:00,070 [1] INFO  - [Application started.]
+2018-10-26 14:26:01,134 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-26 14:26:01,894 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-26 14:26:01,931 [1] INFO  - LoadMasters() took 26 ms.
+2018-10-26 14:26:01,932 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-26 14:26:08,908 [1] INFO  - Unable to read data from the transport connection: An established connection was aborted by the software in your host machine.
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: Error while copying content to a stream. ---> System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.ConnectStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.WebExceptionWrapperStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Http.StreamToStreamCopy.BufferReadCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters)
+   at FPT.Framework.Security.RESTProfileProvider.Login(String appToken, String accName, String password, String appName, String ipNumber)
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: Error while copying content to a stream. ---> System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.ConnectStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.WebExceptionWrapperStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Http.StreamToStreamCopy.BufferReadCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-10-26 14:26:15,727 [1] INFO  - [admin] Session is starting.
+2018-10-26 14:26:16,259 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:16,649 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:16,703 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:16,755 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:16,816 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:16,871 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:16,926 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:16,979 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:17,033 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:17,483 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:17,565 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:17,858 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:26:19,596 [5] INFO  - LoadMasters() took 3,867 ms.
+2018-10-26 14:26:19,603 [1] INFO  - [admin] Session started.
+2018-10-26 14:26:21,356 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-26 14:26:21,359 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-10-26 14:28:52,146 [1] INFO  - [Application started.]
+2018-10-26 14:28:53,255 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-26 14:28:54,120 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-26 14:28:54,168 [1] INFO  - LoadMasters() took 40 ms.
+2018-10-26 14:28:54,173 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-26 14:29:05,888 [1] INFO  - [admin] Session is starting.
+2018-10-26 14:29:06,420 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:06,569 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:06,621 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:06,674 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:06,729 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:06,781 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:06,833 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:06,883 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:06,939 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:07,381 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:07,467 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:07,767 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-26 14:29:09,435 [5] INFO  - LoadMasters() took 3,540 ms.
+2018-10-26 14:29:09,452 [1] INFO  - [admin] Session started.
+2018-10-26 14:29:11,224 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-26 14:29:11,228 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-10-26 14:30:56,265 [1] ERROR - Lỗi kết nối database: The transaction is in doubt.
+System.Transactions.TransactionInDoubtException: The transaction is in doubt. ---> System.Data.SqlClient.SqlException: A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) ---> System.ComponentModel.Win32Exception: An existing connection was forcibly closed by the remote host
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.SNIWritePacket(SNIHandle handle, SNIPacket packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock)
+   at System.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at System.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlDelegatedTransaction.SinglePhaseCommit(SinglePhaseEnlistment enlistment)
+   --- End of inner exception stack trace ---
+   at System.Transactions.TransactionStateInDoubt.EndCommit(InternalTransaction tx)
+   at System.Transactions.CommittableTransaction.Commit()
+   at System.Transactions.TransactionScope.InternalDispose()
+   at System.Transactions.TransactionScope.Dispose()
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3)
+   at FPT.eHospital.Services.HIX020.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\98.SvcHIX\HIX020.cs:line 22
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters)
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.HIX.VMHIX20.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\98.ScrHIX\VMHIX20.cs:line 125
+   at FPT.eHospital.Forms.HIX.VMHIX20.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\98.ScrHIX\VMHIX20.cs:line 53
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-10-26 14:31:02,666 [1] ERROR - Error when executing 'DAO09820_GetDanhSachHoSoDaXuatBHXH'
+2018-10-26 14:31:04,949 [1] ERROR - Lỗi kết nối database: A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.)
+System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.) ---> System.ComponentModel.Win32Exception (0x80004005): The network connection was aborted by the local system
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForList[T](RequestScope request, ISqlMapSession session, Object parameterObject, IList`1 resultObject, RowDelegate`1 rowDelegate)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForList[T](ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForList[T](String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done)
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount)
+   at FPT.Framework.DataAccess.EntityMapper.QueryForList[T](String statementName, Object objParam)
+   at FPT.Framework.DataAccess.DaoBase.QueryForList(String strStatementId, Object parameters)
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForList(String strStatementId, Object parameters)
+   at FPT.eHospital.Services.HIX020.ExecuteForList(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\98.SvcHIX\HIX020.cs:line 18
+   at FPT.Framework.DataService.DirectService.ExecuteForList(String target, String action, IDictionary`2 parameters)
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForList(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 129
+   at FPT.eHospital.Forms.HIX.VMHIX20.LoadData() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\98.ScrHIX\VMHIX20.cs:line 134
+   at FPT.eHospital.Forms.HIX.VMHIX20.btnLoc_Click(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\98.ScrHIX\VMHIX20.cs:line 84
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+ClientConnectionId:be1270e4-6b9f-4196-8db9-80a606d4a6a7
+Error Number:1236,State:0,Class:20

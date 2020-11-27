@@ -1,0 +1,146 @@
+﻿--------------------------------------------------------------------------------
+2018-10-31 10:34:35,602 [1] INFO  - [Application started.]
+2018-10-31 10:34:37,876 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-31 10:34:39,213 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-31 10:34:39,250 [1] INFO  - LoadMasters() took 29 ms.
+2018-10-31 10:34:39,251 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-31 10:35:05,976 [1] INFO  - [admin] Session is starting.
+2018-10-31 10:35:06,686 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:06,929 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:07,006 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:07,061 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:07,116 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:07,171 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:07,225 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:07,280 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:07,334 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:07,949 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:08,030 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:08,544 [8] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 10:35:10,786 [8] INFO  - LoadMasters() took 4,805 ms.
+2018-10-31 10:35:10,792 [1] INFO  - [admin] Session started.
+2018-10-31 10:35:15,322 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-31 10:35:15,324 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-10-31 16:10:38,244 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-31 16:10:38,247 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-31 16:10:38,285 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-10-31 16:10:44,357 [1] INFO  - [admin] Session stopped.
+2018-10-31 16:10:44,359 [1] INFO  - Memory used before collection:  19,478,692
+2018-10-31 16:10:44,421 [1] INFO  - Memory used after collection:  7,568,496
+2018-10-31 16:10:44,452 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-10-31 17:19:39,443 [1] INFO  - [Application started.]
+2018-10-31 17:19:42,048 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-31 17:19:43,455 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-31 17:19:43,494 [1] INFO  - LoadMasters() took 30 ms.
+2018-10-31 17:19:43,495 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-31 17:19:56,351 [1] INFO  - [admin] Session is starting.
+2018-10-31 17:19:57,044 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:19:57,330 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:19:57,397 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:19:57,459 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:19:57,542 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:19:57,600 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:19:57,655 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:19:57,714 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:19:57,788 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:19:58,289 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:19:58,389 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:19:58,769 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:20:00,594 [5] INFO  - LoadMasters() took 4,237 ms.
+2018-10-31 17:20:00,601 [1] INFO  - [admin] Session started.
+2018-10-31 17:20:05,286 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-31 17:20:05,290 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-10-31 17:24:06,854 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-10-31 17:24:06,855 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-10-31 17:24:06,869 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-10-31 17:24:08,855 [1] INFO  - [admin] Session stopped.
+2018-10-31 17:24:08,858 [1] INFO  - Memory used before collection:  18,282,432
+2018-10-31 17:24:08,913 [1] INFO  - Memory used after collection:  6,188,352
+2018-10-31 17:24:08,918 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-31 17:24:09,078 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-31 17:24:09,103 [1] INFO  - LoadMasters() took 23 ms.
+2018-10-31 17:24:09,105 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-31 17:24:15,687 [1] INFO  - [admin] Session is starting.
+2018-10-31 17:24:16,010 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:16,078 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:16,149 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:16,209 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:16,264 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:16,323 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:16,389 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:16,449 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:16,504 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:16,957 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:17,046 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:17,559 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:24:19,382 [5] INFO  - LoadMasters() took 3,695 ms.
+2018-10-31 17:24:19,389 [1] INFO  - [admin] Session started.
+2018-10-31 17:24:19,786 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-31 17:24:19,787 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-10-31 17:29:52,532 [1] ERROR - Error when executing 'DAO00003_CacheList'
+--------------------------------------------------------------------------------
+2018-10-31 17:50:27,174 [1] INFO  - [Application started.]
+2018-10-31 17:50:28,913 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-31 17:50:30,216 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-31 17:50:30,257 [1] INFO  - LoadMasters() took 30 ms.
+2018-10-31 17:50:30,258 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-31 17:50:52,718 [1] INFO  - [admin] Session is starting.
+2018-10-31 17:50:53,262 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:53,416 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:53,474 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:53,540 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:53,628 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:53,684 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:53,743 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:53,821 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:53,884 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:54,350 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:54,440 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:54,890 [7] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-10-31 17:50:56,900 [7] INFO  - LoadMasters() took 4,177 ms.
+2018-10-31 17:50:56,908 [1] INFO  - [admin] Session started.
+2018-10-31 17:50:59,220 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-10-31 17:50:59,223 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-10-31 17:51:50,647 [1] ERROR - Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FPT.eHospital.Forms.QMS.VMQMS09TN.OnShow() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\29.ScrQMS\VMQMS09TN.cs:line 50
+   at FPT.Framework.Presentation.VMBase.Show()
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)

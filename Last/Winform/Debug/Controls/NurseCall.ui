@@ -1,0 +1,77 @@
+﻿{
+	"Type": "System.Windows.Forms.Panel",
+	"BackColor" : "@RoomColor",
+	"Size" : "930, 100",
+    "Controls": [
+    {
+      "Type": "System.Windows.Forms.Panel",
+      "BackColor": "255,255,255",
+      "Bounds": "16,2,140,96",
+      "Controls": [
+        {
+          "Type": "WinformUI.PictureControl, WinformUI",
+          "ImageUrl": "@RoomImage",
+          "Bounds": "40,10,56,40"
+        },
+        {
+          "Type": "System.Windows.Forms.Label",
+          "ForeColor": "@RoomColor",
+          "TextAlign": "MiddleCenter",
+          "Text": "@RoomName",
+          "Font": "VNI-Auchon, 26pt, style=Bold",
+          "Bounds": "0,50,140,46"
+        }
+      ]
+    },
+    {
+      "Type": "System.Windows.Forms.Panel",
+      "BackColor": "255,255,255",
+      "Bounds": "172,2,756,96",
+      "Controls": [
+        {
+          "Type": "WinformUI.PictureControl, WinformUI",
+          "ImageUrl": "@PatientImage",
+          "Bounds": "2,3,70,94",
+          "SizeMode": 1
+        },
+        {
+          "Type": "System.Windows.Forms.Label",
+          "Name": "fullName",
+          "ForeColor": "7,55,99",
+          "TextAlign": "MiddleLeft",
+          "Text": "@PatientInfo",
+          "Font": "Segoe UI, 16pt, style=Bold",
+          "Bounds": "85,3,382,30"
+        },
+        {
+          "Type": "System.Windows.Forms.Label",
+          "Name": "fullIDName",
+          "ForeColor": "7,55,99",
+          "TextAlign": "MiddleLeft",
+          "Text": "@PatientId",
+          "Font": "Segoe UI, 14pt, style=Bold",
+          "Bounds": "85,33,382,30"
+        },
+        {
+          "Type": "System.Windows.Forms.Label",
+          "Name": "callTime",
+          "ForeColor": "156,29,29",
+          "TextAlign": "MiddleLeft",
+          "Text": "@CallTime",
+          "Font": "Segoe UI, 14pt, style=Bold",
+          "Bounds": "85,63,382,30"
+        },
+        {
+          "Type": "WinformUI.PushButton, WinformUI",
+          "Name": "Accept",
+          "StyleUrl": "ButtonStdRed",
+          "Text": "@AcceptButtonText",
+          "Bounds": "590,27,160,42",
+          "Visible": "@AcceptButtonVisible",
+          "Events": "Click",
+		  "Enabled": "@AcceptButtonStatus"
+        }
+      ]
+    }
+  ]
+}

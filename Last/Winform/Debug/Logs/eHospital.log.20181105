@@ -1,0 +1,666 @@
+﻿--------------------------------------------------------------------------------
+2018-11-05 09:27:05,314 [1] INFO  - [Application started.]
+2018-11-05 09:27:07,601 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-11-05 09:27:08,980 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-05 09:27:09,015 [1] INFO  - LoadMasters() took 27 ms.
+2018-11-05 09:27:09,016 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-05 09:27:26,355 [1] INFO  - [admin] Session is starting.
+2018-11-05 09:27:27,039 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:27,211 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:27,288 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:27,343 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:27,407 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:27,466 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:27,520 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:27,584 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:27,639 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:28,185 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:28,273 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:28,828 [6] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:27:31,166 [6] INFO  - LoadMasters() took 4,803 ms.
+2018-11-05 09:27:31,172 [1] INFO  - [admin] Session started.
+2018-11-05 09:27:35,341 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-05 09:27:35,348 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-05 09:31:21,853 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48017\QMS20P00101_VN_CapSTTTiepNhan.rdl: not exist/0
+2018-11-05 09:31:22,047 [1] ERROR - Report template 'QMS20P00101_VN_CapSTTTiepNhan.rdl' not found in the server
+2018-11-05 09:31:24,166 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48017\QMS20P00101_VN_CapSTTTiepNhan.rdl: not exist/0
+2018-11-05 09:31:24,266 [1] ERROR - Report template 'QMS20P00101_VN_CapSTTTiepNhan.rdl' not found in the server
+2018-11-05 09:31:26,071 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48017\QMS20P00101_VN_CapSTTTiepNhan.rdl: not exist/0
+2018-11-05 09:31:26,173 [1] ERROR - Report template 'QMS20P00101_VN_CapSTTTiepNhan.rdl' not found in the server
+2018-11-05 09:31:28,048 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48017\QMS20P00101_VN_CapSTTTiepNhan.rdl: not exist/0
+2018-11-05 09:31:28,150 [1] ERROR - Report template 'QMS20P00101_VN_CapSTTTiepNhan.rdl' not found in the server
+2018-11-05 09:31:31,298 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48017\QMS20P00101_VN_CapSTTTiepNhan.rdl: not exist/0
+2018-11-05 09:31:31,402 [1] ERROR - Report template 'QMS20P00101_VN_CapSTTTiepNhan.rdl' not found in the server
+2018-11-05 09:31:32,628 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48017\QMS20P00101_VN_CapSTTTiepNhan.rdl: not exist/0
+2018-11-05 09:31:32,731 [1] ERROR - Report template 'QMS20P00101_VN_CapSTTTiepNhan.rdl' not found in the server
+2018-11-05 09:50:11,232 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-05 09:50:11,233 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-05 09:50:11,246 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+2018-11-05 09:50:34,209 [1] INFO  - [admin] Session stopped.
+2018-11-05 09:50:34,215 [1] INFO  - Memory used before collection:  23,857,376
+2018-11-05 09:50:34,345 [1] INFO  - Memory used after collection:  10,257,180
+2018-11-05 09:50:34,371 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-11-05 09:50:34,620 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-05 09:50:34,642 [1] INFO  - LoadMasters() took 20 ms.
+2018-11-05 09:50:34,643 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-05 09:50:42,485 [1] INFO  - [admin] Session is starting.
+2018-11-05 09:50:42,832 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:42,898 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:43,096 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:43,162 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:43,222 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:43,282 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:43,348 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:43,409 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:43,470 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:43,926 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:44,007 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:44,588 [9] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 09:50:47,093 [9] INFO  - LoadMasters() took 4,607 ms.
+2018-11-05 09:50:47,102 [1] INFO  - [admin] Session started.
+2018-11-05 09:50:47,475 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-05 09:50:47,477 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+--------------------------------------------------------------------------------
+2018-11-05 10:28:06,398 [1] INFO  - [Application started.]
+2018-11-05 10:28:07,672 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-11-05 10:28:08,606 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-05 10:28:08,651 [1] INFO  - LoadMasters() took 31 ms.
+2018-11-05 10:28:08,652 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-05 10:28:54,258 [1] INFO  - [admin] Session is starting.
+2018-11-05 10:28:54,786 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:54,918 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:54,972 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:55,040 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:55,098 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:55,157 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:55,213 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:55,277 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:55,344 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:55,820 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:55,976 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:56,277 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:28:58,041 [5] INFO  - LoadMasters() took 3,779 ms.
+2018-11-05 10:28:58,050 [1] INFO  - [admin] Session started.
+2018-11-05 10:29:00,504 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-05 10:29:00,506 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-05 10:35:37,989 [1] ERROR - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'YEUCAUVP' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.CheckBox.binding_Format(Object sender, ConvertEventArgs e)
+   at System.Windows.Forms.Binding.OnFormat(ConvertEventArgs cevent)
+   at System.Windows.Forms.Binding.FormatObject(Object value)
+   at System.Windows.Forms.Binding.PushData(Boolean force)
+   at System.Windows.Forms.Binding.UpdateIsBinding()
+   at System.Windows.Forms.Binding.CheckBinding()
+   at System.Windows.Forms.Binding.SetListManager(BindingManagerBase bindingManagerBase)
+   at System.Windows.Forms.ListManagerBindingsCollection.AddCore(Binding dataBinding)
+   at System.Windows.Forms.BindingsCollection.Add(Binding binding)
+   at System.Windows.Forms.BindingContext.UpdateBinding(BindingContext newBindingContext, Binding binding)
+   at System.Windows.Forms.Control.UpdateBindings()
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at DevExpress.XtraTab.XtraTabPage.set_Visible(Boolean value)
+   at DevExpress.XtraTab.XtraTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevXUI.BaseControls.DXTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevXUI.TabPane.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.OnSelectedPageChanged(IXtraTabPage prevPage)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPage(IXtraTabPage value)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPageIndex(Int32 value)
+   at DevExpress.XtraTab.XtraTabControl.set_SelectedTabPageIndex(Int32 value)
+   at DevXUI.TabPane.SetBindData()
+   at DevXUI.TabPane.select_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.HosTabLauncherModel.set_SelPageIndex(Int32 value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\HosTabLauncherModel.cs:line 20
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-05 10:36:02,409 [1] ERROR - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'YEUCAUVP' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.CheckBox.binding_Format(Object sender, ConvertEventArgs e)
+   at System.Windows.Forms.Binding.OnFormat(ConvertEventArgs cevent)
+   at System.Windows.Forms.Binding.FormatObject(Object value)
+   at System.Windows.Forms.Binding.PushData(Boolean force)
+   at System.Windows.Forms.Binding.UpdateIsBinding()
+   at System.Windows.Forms.Binding.CheckBinding()
+   at System.Windows.Forms.Binding.SetListManager(BindingManagerBase bindingManagerBase)
+   at System.Windows.Forms.ListManagerBindingsCollection.AddCore(Binding dataBinding)
+   at System.Windows.Forms.BindingsCollection.Add(Binding binding)
+   at System.Windows.Forms.BindingContext.UpdateBinding(BindingContext newBindingContext, Binding binding)
+   at System.Windows.Forms.Control.UpdateBindings()
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at DevExpress.XtraTab.XtraTabPage.set_Visible(Boolean value)
+   at DevExpress.XtraTab.XtraTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevXUI.BaseControls.DXTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevXUI.TabPane.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.OnSelectedPageChanged(IXtraTabPage prevPage)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPage(IXtraTabPage value)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPageIndex(Int32 value)
+   at DevExpress.XtraTab.XtraTabControl.set_SelectedTabPageIndex(Int32 value)
+   at DevXUI.TabPane.SetBindData()
+   at DevXUI.TabPane.select_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.HosTabLauncherModel.set_SelPageIndex(Int32 value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\HosTabLauncherModel.cs:line 20
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-05 10:36:24,994 [1] ERROR - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'YEUCAUVP' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.CheckBox.binding_Format(Object sender, ConvertEventArgs e)
+   at System.Windows.Forms.Binding.OnFormat(ConvertEventArgs cevent)
+   at System.Windows.Forms.Binding.FormatObject(Object value)
+   at System.Windows.Forms.Binding.PushData(Boolean force)
+   at System.Windows.Forms.Binding.UpdateIsBinding()
+   at System.Windows.Forms.Binding.CheckBinding()
+   at System.Windows.Forms.Binding.SetListManager(BindingManagerBase bindingManagerBase)
+   at System.Windows.Forms.ListManagerBindingsCollection.AddCore(Binding dataBinding)
+   at System.Windows.Forms.BindingsCollection.Add(Binding binding)
+   at System.Windows.Forms.BindingContext.UpdateBinding(BindingContext newBindingContext, Binding binding)
+   at System.Windows.Forms.Control.UpdateBindings()
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at DevExpress.XtraTab.XtraTabPage.set_Visible(Boolean value)
+   at DevExpress.XtraTab.XtraTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevXUI.BaseControls.DXTabControl.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevXUI.TabPane.OnSelectedPageChanged(Object sender, ViewInfoTabPageChangedEventArgs e)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.OnSelectedPageChanged(IXtraTabPage prevPage)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPage(IXtraTabPage value)
+   at DevExpress.XtraTab.ViewInfo.BaseTabControlViewInfo.set_SelectedTabPageIndex(Int32 value)
+   at DevExpress.XtraTab.XtraTabControl.set_SelectedTabPageIndex(Int32 value)
+   at DevXUI.TabPane.SetBindData()
+   at DevXUI.TabPane.select_ValueChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Presentation.ViewModel.Model_PropertyChanged(Object sender, PropertyChangedEventArgs e)
+   at System.ComponentModel.PropertyChangedEventHandler.Invoke(Object sender, PropertyChangedEventArgs e)
+   at FPT.Framework.Data.ModelBaseImpl.OnPropertyChanged(String propertyName)
+   at FPT.eHospital.Forms.HosTabLauncherModel.set_SelPageIndex(Int32 value) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\HosTabLauncherModel.cs:line 20
+   at FPT.eHospital.Forms.Base.VMHosTabLauncher.ShowPage(IViewModel vm, Boolean canClose) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosTabLauncher.cs:line 73
+   at FPT.eHospital.Forms.Base.VMLauncherBase.Show(IViewModel vm) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMLauncherBase.cs:line 277
+   at FPT.eHospital.Forms.Common.VMMenu.ShowPage(String strVMName) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 121
+   at FPT.eHospital.Forms.Common.VMMenu.cmdMenu(ICmdParameter p) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMMenu.cs:line 135
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+2018-11-05 10:36:50,546 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-05 10:36:50,547 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-05 10:36:50,558 [1] INFO  - Can't create direct service instance of LOG001, try to use WebService with url http://10.86.222.71:3010/api/
+--------------------------------------------------------------------------------
+2018-11-05 10:48:37,966 [1] INFO  - [Application started.]
+2018-11-05 10:48:38,140 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-05 10:48:40,488 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-05 10:48:40,527 [1] INFO  - LoadMasters() took 28 ms.
+2018-11-05 10:48:40,528 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-05 10:49:01,186 [1] INFO  - [admin] Session is starting.
+2018-11-05 10:49:01,759 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:01,908 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:01,975 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:02,029 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:02,087 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:02,146 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:02,211 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:02,384 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:02,438 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:02,900 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:02,993 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:03,309 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 10:49:05,061 [5] INFO  - LoadMasters() took 3,848 ms.
+2018-11-05 10:49:05,071 [1] INFO  - [admin] Session started.
+2018-11-05 10:49:07,534 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-05 10:49:18,762 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-05 10:49:42,713 [1] ERROR - Can't create control REG01022.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 10:51:33,424 [1] ERROR - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Platform.OfflineCache.Get[T](String key)
+   at FPT.eHospital.Services.ParametersServiceBase.GetParameter[T](String name) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\ParametersServiceBase.cs:line 34
+   at FPT.eHospital.Services.HospitalServiceBase.AddDataLog(String dataName, ActionLog action, Int32 refId, String refNumber, Int32 modifiedUserId, DateTime mofifiedDate, IDictionary`2 details) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\HospitalServiceBase.cs:line 19
+   at FPT.eHospital.Services.MPI001.InternalExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\04.Services\04.SvcMPI\MPI001.cs:line 58
+2018-11-05 10:51:34,387 [1] ERROR - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at FPT.Framework.Platform.OfflineCache.Get[T](String key)
+   at FPT.eHospital.Services.ParametersServiceBase.GetParameter[T](String name) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\ParametersServiceBase.cs:line 34
+   at FPT.eHospital.Services.HospitalServiceBase.AddDataLog(String dataName, ActionLog action, Int32 refId, String refNumber, Int32 modifiedUserId, DateTime mofifiedDate, IDictionary`2 details) in E:\Working\eHospital\trunk\02.eHospital\04.Services\00.SvcBAS\HospitalServiceBase.cs:line 19
+   at FPT.eHospital.Services.REG001.InternalExecuteForObject(String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\04.Services\02.SvcREG\REG001.cs:line 172
+2018-11-05 10:51:34,633 [1] INFO  - Luu tiep nhan:  take 6076 ms.
+2018-11-05 10:51:38,447 [1] ERROR - Can't create control COM10021.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 10:52:36,816 [1] DEBUG - Run workFLow from: FPT.eHospital.Services.COM010 dvYeucau_Id:50010
+2018-11-05 11:00:46,951 [1] ERROR - Can't create control BIL31004.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:01:09,146 [1] ERROR - Can't create control BIL27015.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:01:09,328 [1] ERROR - Can't create control BIL27060.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:01:22,731 [1] ERROR - Can't create control BIL02003.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:01:22,953 [1] ERROR - Can't create control BIL02038.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:02:43,777 [1] ERROR - Can't create control RPT02006.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.TreeListView.BindData()
+   at DevXUI.TreeListView.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:02:44,676 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48017\BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl: not exist/0
+2018-11-05 11:02:44,683 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48017\BIL27P00302_VN_MauBienLaiThuTienNgoaiTru.rdlc: not exist/0
+2018-11-05 11:02:44,996 [1] ERROR - Report template 'BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl' not found in the server
+2018-11-05 11:02:44,997 [1] ERROR - Report template 'BIL27P00301_VN_MauBienLaiThuTienNgoaiTru.rdl' not found in the server
+2018-11-05 11:08:17,529 [1] INFO  - D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\06.Reports\48017\QMS21P00201_VN_CapSTTKhamBenh.rdl: not exist/0
+2018-11-05 11:08:17,670 [1] ERROR - Report template 'QMS21P00201_VN_CapSTTKhamBenh.rdl' not found in the server
+2018-11-05 11:08:45,045 [1] ERROR - Can't create control QMS12003.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:08:51,150 [1] ERROR - Can't create control QMS12009.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'REFQUEUE' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.ComboBox.InitBindingData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 112
+   at WinformUI.BindableComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 104
+   at WinformUI.ComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 104
+   at WinformUI.BindableComboBox.set_ViewSource(IDataSource value) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 22
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:08:55,315 [1] ERROR - Can't create control QMS12010.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'REFQUEUE' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.ComboBox.InitBindingData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 112
+   at WinformUI.BindableComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 104
+   at WinformUI.ComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 104
+   at WinformUI.BindableComboBox.set_ViewSource(IDataSource value) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 22
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:08:56,358 [1] ERROR - Can't create control QMS12011.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'REFQUEUE' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.ComboBox.InitBindingData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 112
+   at WinformUI.BindableComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 104
+   at WinformUI.ComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 104
+   at WinformUI.BindableComboBox.set_ViewSource(IDataSource value) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 22
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:08:57,219 [1] ERROR - Can't create control QMS12012.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'REFQUEUE' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.ComboBox.InitBindingData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 112
+   at WinformUI.BindableComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 104
+   at WinformUI.ComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 104
+   at WinformUI.BindableComboBox.set_ViewSource(IDataSource value) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 22
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+--------------------------------------------------------------------------------
+2018-11-05 11:09:30,630 [1] INFO  - [Application started.]
+2018-11-05 11:09:31,078 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-05 11:09:34,481 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-05 11:09:34,520 [1] INFO  - LoadMasters() took 29 ms.
+2018-11-05 11:09:34,521 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-05 11:09:47,089 [1] INFO  - [admin] Session is starting.
+2018-11-05 11:09:47,617 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:47,753 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:47,812 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:47,872 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:47,934 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:47,996 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:48,074 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:48,134 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:48,206 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:48,678 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:48,762 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:49,225 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:09:51,053 [5] INFO  - LoadMasters() took 3,956 ms.
+2018-11-05 11:09:51,062 [1] INFO  - [admin] Session started.
+2018-11-05 11:09:53,445 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-05 11:10:09,650 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-05 11:10:44,938 [1] ERROR - Can't create control QMS12003.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:10:57,295 [1] ERROR - Can't create control QMS12009.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'REFQUEUE' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.ComboBox.InitBindingData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 112
+   at WinformUI.BindableComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 104
+   at WinformUI.ComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 104
+   at WinformUI.BindableComboBox.set_ViewSource(IDataSource value) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 22
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:10:58,020 [1] ERROR - Can't create control QMS12010.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'REFQUEUE' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.ComboBox.InitBindingData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 112
+   at WinformUI.BindableComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 104
+   at WinformUI.ComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 104
+   at WinformUI.BindableComboBox.set_ViewSource(IDataSource value) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 22
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:10:59,094 [1] ERROR - Can't create control QMS12011.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'REFQUEUE' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.ComboBox.InitBindingData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 112
+   at WinformUI.BindableComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 104
+   at WinformUI.ComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 104
+   at WinformUI.BindableComboBox.set_ViewSource(IDataSource value) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 22
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:10:59,771 [1] ERROR - Can't create control QMS12012.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.MissingMemberException: Property 'REFQUEUE' not found!
+   at FPT.Framework.Presentation.VMBase.get_Item(String itemName)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at FPT.Framework.Data.DataAccessor.UnknownTypeGetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name, Type& dataType)
+   at FPT.Framework.Data.DataAccessor.GetDataValue(Object target, String name)
+   at FPT.Framework.Presentation.VMBase.GetValue(String itemName)
+   at WinformUI.ComboBox.InitBindingData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 112
+   at WinformUI.BindableComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 104
+   at WinformUI.ComboBox.BindData() in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\ComboBox.cs:line 104
+   at WinformUI.BindableComboBox.set_ViewSource(IDataSource value) in E:\Working\eHospital\trunk\01.Framework\05.UI\01.Winform\BindableComboBox.cs:line 22
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+--------------------------------------------------------------------------------
+2018-11-05 11:49:25,460 [1] INFO  - [Application started.]
+2018-11-05 11:49:25,912 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-05 11:49:28,581 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-05 11:49:28,617 [1] INFO  - LoadMasters() took 27 ms.
+2018-11-05 11:49:28,618 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-05 11:49:50,029 [1] INFO  - [admin] Session is starting.
+2018-11-05 11:49:50,622 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:50,778 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:50,839 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:50,899 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:50,957 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:51,016 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:51,079 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:51,149 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:51,207 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:51,688 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:51,784 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:52,157 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 11:49:53,968 [5] INFO  - LoadMasters() took 3,927 ms.
+2018-11-05 11:49:53,977 [1] INFO  - [admin] Session started.
+2018-11-05 11:49:56,182 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-05 11:50:24,618 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-05 11:50:33,862 [1] ERROR - Can't create control QMS12003.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 11:51:22,948 [1] ERROR - Can't create control QMS12003.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+--------------------------------------------------------------------------------
+2018-11-05 11:59:53,607 [1] INFO  - [Application started.]
+2018-11-05 11:59:53,839 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-05 11:59:55,794 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-05 11:59:55,812 [1] INFO  - LoadMasters() took 9 ms.
+2018-11-05 11:59:55,813 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-05 12:00:01,062 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-11-05 12:00:02,560 [1] INFO  - [test] Session is starting.
+2018-11-05 12:00:03,054 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:03,227 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:03,268 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:03,312 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:03,355 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:03,402 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:03,447 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:03,493 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:03,540 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:04,102 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:04,149 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:04,365 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-11-05 12:00:07,235 [5] INFO  - LoadMasters() took 4,674 ms.
+2018-11-05 12:00:07,246 [1] INFO  - [test] Session started.
+2018-11-05 12:00:21,222 [1] ERROR - Can't create control QMS12003.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+2018-11-05 12:01:10,864 [1] INFO  - Total upload size: 0 bytes => 0 bytes/s
+2018-11-05 12:01:10,867 [1] INFO  - Total download size: 0 bytes => 0 bytes/s
+2018-11-05 12:01:10,913 [1] INFO  - [test] Session stopped.
+2018-11-05 12:01:10,917 [1] INFO  - Memory used before collection:  35,785,060
+2018-11-05 12:01:10,975 [1] INFO  - Memory used after collection:  8,558,248
+2018-11-05 12:01:11,030 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2018-11-05 12:01:30,589 [1] INFO  - [Application started.]
+2018-11-05 12:01:30,764 [1] ERROR - 'Messages.xml' Duplicated keys found: MEME0555
+2018-11-05 12:01:33,233 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-11-05 12:01:33,270 [1] INFO  - LoadMasters() took 28 ms.
+2018-11-05 12:01:33,272 [1] INFO  - [_SYSTEM_] Session started.
+2018-11-05 12:01:41,900 [1] INFO  - [admin] Session is starting.
+2018-11-05 12:01:42,464 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:42,598 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:42,650 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:42,712 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:42,771 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:42,830 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:42,886 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:42,977 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:43,036 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:43,500 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:43,606 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:43,980 [5] DEBUG - Hospital_ID = BENHVIEN_ID = 48017
+2018-11-05 12:01:45,713 [5] INFO  - LoadMasters() took 3,802 ms.
+2018-11-05 12:01:45,721 [1] INFO  - [admin] Session started.
+2018-11-05 12:01:47,706 [1] ERROR - Can't read image file 'Images/imgMenuBg_TK.png'
+2018-11-05 12:01:50,350 [1] ERROR - Control 'MENU1002' has error when creating (Parameter is not valid.)
+2018-11-05 12:02:01,684 [1] ERROR - Can't create control QMS12003.
+System.TypeLoadException: Method 'get_SummaryType' in type 'WinformUI.ListViewHeader' from assembly 'WinformUI, Version=1.0.6859.25130, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at WinformUI.GridViewHeaderImpl.FromString(String s)
+   at DevXUI.GridControl.BindData()
+   at DevXUI.GridControl.set_ViewSource(IDataSource value)
+   at FPT.Framework.Application.GuiProvider.InitializeControl(IView view, IViewModel viewModel, IViewInfo item, ITheme theme)
+   at FPT.Framework.Application.GuiProvider.HierachyCreate(IViewModel viewModel, IList`1 items, ITheme theme, Int32& index)
+--------------------------------------------------------------------------------

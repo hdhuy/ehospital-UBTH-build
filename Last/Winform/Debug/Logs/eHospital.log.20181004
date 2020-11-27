@@ -1,0 +1,28 @@
+﻿--------------------------------------------------------------------------------
+2018-10-04 10:46:26,839 [1] INFO  - [Application started.]
+2018-10-04 10:46:28,120 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-04 10:46:29,557 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-04 10:46:29,574 [1] INFO  - LoadMasters() took 11 ms.
+2018-10-04 10:46:29,575 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-04 10:46:38,055 [1] INFO  - [test] Session is starting.
+2018-10-04 10:46:38,879 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:39,145 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:39,188 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:39,232 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:39,274 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:39,337 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:39,392 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:39,433 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:39,476 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:39,915 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:39,990 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:40,811 [8] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-04 10:46:45,879 [8] INFO  - LoadMasters() took 7,820 ms.
+2018-10-04 10:46:45,887 [1] INFO  - [test] Session started.

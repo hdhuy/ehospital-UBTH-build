@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Localization>
+  <vi-vn>
+    <!--SYS-->
+    <string id="VMFTR01" string=""/>
+    <string id="VMHDR01" string=""/>
+    <string id="VMMAIN" string=""/>
+    <string id="VMMENU" string="HỆ THỐNG QUẢN LÝ BỆNH VIỆN"/>
+    <string id="VMMSG01" string="XÁC NHẬN"/>
+    <string id="VMMSG02" string="LƯU Ý"/>
+    <string id="VMMTR01" string=""/>
+    <string id="VMDLG01" string="XÁC NHẬN"/>
+    <string id="VMDLG02" string="XÁC NHẬN"/>
+    <!--ADM-->
+    <string id="VMADM01" string="THIẾT LẬP BÁO CÁO"/>
+    <string id="VMADM02" string="QUẢN LÝ NGƯỜI DÙNG"/>
+    <string id="VMADM04" string="THIẾT LẬP DANH MỤC"/>
+    <string id="VMADM05" string="HỆ THỐNG DANH MỤC"/>
+    <string id="VMADM06" string="PHÂN QUYỀN CHỨC NĂNG"/>
+    <string id="VMADM11" string="THÔNG TIN NHÓM"/>
+    <string id="VMADM12" string="THÔNG TIN NGƯỜI DÙNG"/>
+    <string id="VMADM13" string="TÌNH TRẠNG LOGOUT/LOGIN NGƯỜI DÙNG"/>
+    <string id="VMADM15" string="PHÂN QUYỀN PHÒNG BAN/KHO DƯỢC"/>
+    <string id="VMADM16" string="CÀI ĐẶT CHÍNH SÁCH MẬT KHẨU"/>
+    <string id="VMIDATA" string="NHẬP LIỆU"/>
+    <string id="VMEDATA" string="XUẤT LIỆU"/>
+    <string id="VMADM17" string="CẤU HÌNH HỆ THỐNG"/>
+    <string id="VMADM18" string="DANH SÁCH PHÂN QUYỀN"/>
+    <string id="VMADM19" string="DANH SÁCH"/>
+    <!--ADM - DEP-->
+    <string id="VMDEP01" string="DANH MỤC PHÒNG BAN"/>
+    <string id="VMDEP02" string="DANH MỤC PHÒNG BAN - DỊCH VỤ"/>
+    <string id="VMDEP03" string="DANH MỤC PHÒNG KHÁM - BÁC SĨ"/>
+    <string id="VMDEP04" string="DANH MỤC PHÒNG BAN - KHO DƯỢC"/>
+    <string id="VMDEP05" string="DANH MỤC PHÒNG BAN - GIƯỜNG BỆNH"/>
+    <!--ADM - EMP-->
+    <string id="VMEMP01" string="DANH MỤC NHÂN VIÊN"/>
+    <string id="VMEMP02" string="DANH MỤC NHÂN VIÊN - NGƯỜI SỬ DỤNG"/>
+    <string id="VMEMP03" string="DANH MỤC BÁC SỸ BÊN NGOÀI"/>
+    <string id="VMEMP04" string="DANH MỤC THẺ NHÂN VIÊN"/>
+    <!--ADM - ETT-->
+    <string id="VMETT01" string="DANH MỤC ĐỐI TƯỢNG - NGUỒN HÀNG"/>
+    <string id="VMETT02" string="DANH MỤC ĐỐI TƯỢNG - LOẠI GIÁ"/>
+    <string id="VMETT03" string="DANH MỤC ĐỐI TƯỢNG - KHO DƯỢC"/>
+    <string id="VMETT04" string="DANH MỤC ĐỐI TƯỢNG - DỊCH VỤ"/>
+    <string id="VMETT05" string="DANH MỤC ĐỐI TƯỢNG - PHÒNG BỆNH"/>
+    <string id="VMETT06" string="DANH MỤC ĐỐI TƯỢNG - GIƯỜNG BỆNH"/>
+    <string id="VMETT07" string="DANH MỤC NGUỒN NGƯỜI BỆNH - LOẠI GIÁ"/>
+
+    <!--ADM - SVC-->
+    <string id="VMSVC01" string="DANH MỤC DỊCH VỤ"/>
+    <string id="VMSVC02" string="DANH MỤC DỊCH VỤ - GIÁ TRỊ CHUẨN"/>
+    <string id="VMSVC03" string="DANH MỤC DỊCH VỤ - KỸ THUẬT CAO"/>
+    <string id="VMSVC04" string="DANH MỤC PHÂN LOẠI PHẪU THUẬT"/>
+    <string id="VMSVC05" string="DANH MỤC NỘI DUNG NHÓM BỆNH"/>
+    <string id="VMSVC06" string="DANH MỤC CÔNG TY BHTN DỊCH VỤ"/>
+    <string id="VMSVC07" string="DANH MỤC DỊCH VỤ - VẬT TƯ"/>
+    <string id="VMSVC08" string="DANH MỤC GIÁ DỊCH VỤ"/>
+
+    <!--ADM - CLS-->
+    <string id="VMCLS01" string="TỪ ĐIỂN KẾT LUẬN"/>
+    <string id="VMCLS02" string="DANH MỤC KHÁNG SINH ĐỒ - NHÓM"/>
+    <string id="VMCLS03" string="NHẬP KẾT LUẬN"/>
+
+    <!--BIL-->
+    <string id="VMBIL02" string="TẠO QUYỂN BIÊN LAI/HOÁ ĐƠN"/>
+    <string id="VMBIL03" string="DUYỆT HỦY BIÊN LAI NỘI TRÚ"/>
+    <string id="VMBIL04" string="DUYỆT GHI NHẬN BHTN NGOẠI TRÚ"/>
+    <string id="VMBIL05" string="DUYỆT HỦY BIÊN LAI NGOAI TRÚ"/>
+    <string id="VMBIL06" string="GHI NHẬN HỖ TRỢ MIỄN GIẢM NGOẠI TRÚ"/>
+    <string id="VMBIL07" string="DUYỆT GHI NHẬN HỖ TRỢ MIỄN GIẢM NGOẠI TRÚ"/>
+    <string id="VMBIL08" string="DUYỆT GHI NHẬN BHTN NỘI TRÚ"/>
+    <string id="VMBIL09" string="XÁC NHẬN BHYT NGOẠI TRÚ"/>
+    <string id="VMBIL10" string="KHÓA ĐỢT ĐIỀU TRỊ NGOẠI TRÚ"/>
+    <string id="VMBIL11" string="CẬP NHẬT ĐỐI TƯỢNG/GIÁ NỘI TRÚ"/>
+    <string id="VMBIL12" string="THU TIỀN THUỐC MUA NGOÀI"/>
+    <string id="VMBIL15" string="DUYỆT HỦY THUỐC MUA NGOÀI"/>
+    <string id="VMBIL16" string="XÁC NHẬN BHYT NỘI TRÚ"/>
+    <string id="VMBIL17" string="XÁC NHẬN BHYT CẤP CỨU"/>
+    <string id="VMBIL18" string="THU TIỀN VIỆN PHÍ NỘI TRÚ"/>
+    <string id="VMBIL19" string="KHÓA BỆNH ÁN"/>
+    <string id="VMBIL20" string="THU TIỀN THÀNH VIÊN/ GÓI"/>
+    <string id="VMBIL26" string="CÔNG NỢ NỘI TRÚ"/>
+    <string id="VMBIL27" string="THU TIỀN VIỆN PHÍ NGOẠI TRÚ"/>
+    <string id="VMBIL28" string="DUYỆT GHI NHẬN HỖ TRỢ MIỄN GIẢM NỘI TRÚ"/>
+    <string id="VMBIL29" string="GHI NHẬN HỖ TRỢ MIỄN GIẢM NỘI TRÚ"/>
+    <string id="VMBIL30" string="CẬP NHẬT ĐỐI TƯỢNG/GIÁ NGOẠI TRÚ"/>
+    <string id="VMBIL31" string="DANH SÁCH NGƯỜI BỆNH CHƯA THU VIỆN PHÍ NGOẠI TRÚ"/>
+    <string id="VMBIL32" string="CHUYỂN CHI PHÍ NGOẠI TRÚ"/>
+    <string id="VMBIL33" string="CHUYỂN CHI PHÍ NGOẠI TRÚ"/>
+    <string id="VMBIL34" string="GHI NHẬN BHTN NGOẠI TRÚ"/>
+    <string id="VMBIL35" string="GHI NHẬN BHTN NỘI TRÚ"/>
+    <string id="VMBIL36" string="TẠO HÓA ĐƠN"/>
+    <string id="VMBIL38" string="CHI TIẾT CÔNG NỢ NỘI TRÚ"/>
+    <string id="VMBIL39" string="IN HÓA ĐƠN"/>
+    <string id="VMBIL40" string="GHI NHẬN CÔNG TY CHI TRẢ NGOẠI TRÚ"/>
+    <string id="VMBIL44" string="GHI NHẬN CÔNG TY CHI TRẢ NỘI TRÚ"/>
+    <string id="VMBIL45" string="GHI NHẬN DUYỆT HỦY BHYT"/>
+    <string id="VMBIL50" string="TÌM KIẾM GHI NHẬN MIỄN GIẢM"/>
+    <string id="VMBIL54" string="DANH SÁC PHIẾU GHI NHẬN"/>
+    
+    <!--COM-->
+    <string id="VMCOM16" string="THÔNG TIN CHUYỂN TUYẾN"/>
+    <string id="VMCOM29" string=""/>
+    <string id="VMCOM30" string=""/>
+    <string id="VMCOM31" string=""/>
+    <string id="VMCOM32" string=""/>
+    <string id="VMCOM33" string=""/>
+    <string id="VMCOM51" string=""/>
+    <string id="VMCOM52" string="TOA THUỐC MẪU"/>
+    <string id="VMCOM53" string="DỊ ỨNG THUỐC"/>
+    <string id="VMCOM54" string="CẢNH BÁO THUỐC"/>
+    <string id="VMCOM55" string="CẢNH BÁO THUỐC"/>
+    <!--<string id="VMCOM53" string=""/>-->
+    <string id="VMCOM56" string="TÌM KIẾM BIÊN LAI"/>
+    <string id="VMCOM57" string=""/>
+    <string id="VMCOM58" string="TRA CỨU ICD"/>
+    <string id="VMCOM60" string=""/>
+    <string id="VMCOM61" string="ĐÍNH KÈM FILE"/>
+    <string id="VMCOM64" string=""/>
+    <string id="VMCOM98" string="THAY ĐỔI KHO DƯỢC/ PHÒNG BAN"/>
+    <!--EME-->
+    <string id="VMEME01" string="TIẾP NHẬN CẤP CỨU"/>
+    <string id="VMEME02" string="DANH SÁCH NGƯỜI BỆNH CẤP CỨU"/>
+    <string id="VMEME04" string="HỒ SƠ BỆNH ÁN CẤP CỨU"/>
+    <string id="VMEME07" string="CHỈ ĐỊNH DỊCH VỤ CẤP CỨU"/>
+    <string id="VMEME40" string=""/>
+    <string id="VMEME41" string=""/>
+    <string id="VMEME42" string=""/>
+    <string id="VMEME50" string=""/>
+    <string id="VMEME51" string=""/>
+    <!--EMR-->
+    <string id="VMEMR01" string="HỒ SƠ BỆNH ÁN ĐIỆN TỬ"/>
+    <string id="VMEMR02" string="CHI TIẾT KHÁM BỆNH"/>
+    <string id="VMEMR11" string="TIỀN SỬ - BỆNH MÃN TÍNH"/>
+    <string id="VMEMR50" string="BÁO CÁO BỆNH SỬ"/>
+    <!--IPD-->
+    <string id="VMIPD01" string="TIẾP NHẬN NỘI TRÚ"/>
+    <string id="VMIPD02" string="DANH SÁCH NGƯỜI BỆNH NỘI TRÚ"/>
+    <string id="VMIPD03" string="HỒ SƠ BỆNH ÁN NỘI TRÚ"/>
+    <string id="VMIPD05" string="ĐÍNH KÈM FILE"/>
+    <string id="VMIPD06" string="BIÊN BẢN HỘI CHẨN"/>
+    <string id="VMIPD11" string="CẤP HỒ SƠ BỆNH ÁN"/>
+    <string id="VMIPD12" string="CẤP HỒ SƠ BỆNH ÁN"/>
+    <string id="VMIPD14" string="LỊCH SỬ HỘI CHẨN"/>
+    <string id="VMIPD15" string="CHUYỂN KHOA"/>
+    <string id="VMIPD16" string="NGƯNG Y LỆNH"/>
+    <string id="VMIPD17" string="THỰC HIỆN DỊCH VỤ"/>
+    <string id="VMIPD18" string="CHỈ ĐỊNH DỊCH VỤ NỘI TRÚ"/>
+    <string id="VMIPD19" string="QUẢN LÝ GIƯỜNG BỆNH"/>
+    <string id="VMIPD20" string="PHẪU THUẬT"/>
+    <string id="VMIPD21" string="THEO DÕI ĐƯỜNG HUYẾT"/>
+    <string id="VMIPD22" string="QUẢN LÝ GIƯỜNG BỆNH"/>
+    <string id="VMIPD23" string="CHĂM SÓC NGƯỜI BỆNH"/>
+    <string id="VMIPD24" string="CHO Y LỆNH THUỐC"/>
+    <string id="VMIPD25" string="CHO Y LỆNH VẬT TƯ Y TẾ"/>
+    <string id="VMIPD26" string="DANH SÁCH NGƯỜI BỆNH PHẪU THUẬT"/>
+    <string id="VMIPD27" string="TÌM KIẾM PHIẾU NGƯNG Y LỆNH"/>
+    <string id="VMIPD28" string="BỆNH ÁN NỘI KHOA"/>
+    <string id="VMIPD29" string="BỆNH ÁN NGOẠI KHOA"/>
+    <string id="VMIPD30" string=""/>
+    <string id="VMIPD31" string=""/>
+    <string id="VMIPD32" string=""/>
+    <string id="VMIPD33" string=""/>
+    <string id="VMIPD34" string=""/>
+    <string id="VMIPD40" string=""/>
+    <string id="VMIPD41" string=""/>
+    <string id="VMIPD42" string=""/>
+    <string id="VMIPD43" string=""/>
+    <string id="VMIPD44" string="DANH MỤC GIƯỜNG BỆNH"/>
+    <string id="VMIPD45" string="DANH MỤC GIÁ GIƯỜNG BỆNH"/>
+    <string id="VMIPD46" string="DANH MỤC GIÁ PHÒNG BỆNH"/>
+    <!--LIS-->
+    <string id="VMLIS01" string="XÉT NGHIỆM"/>
+    <string id="VMLIS02" string="DANH SÁCH XÉT NGHIỆM"/>
+    <string id="VMLIS03" string="DANH SÁCH NGƯỜI BỆNH XÉT NGHIỆM"/>
+    <string id="VMLIS04" string="LẤY MẪU BỆNH PHẨM"/>
+    <string id="VMLIS05" string="DANH SÁCH LẤY MẪU BỆNH PHẨM"/>
+    <string id="VMLIS06" string="XÉT NGHIỆM VI SINH"/>
+    <string id="VMLIS07" string="XÉT NGHIỆM GIẢI PHẪU BỆNH"/>
+    <string id="VMLIS08" string="DANH SÁCH XÉT NGHIỆM VI SINH"/>
+    <string id="VMLIS09" string="DANH SÁCH XÉT NGHIỆM GIẢI PHẪU BỆNH"/>
+    <string id="VMLIS10" string="XÉT NGHIỆM"/>
+    <!--MPI-->
+    <string id="VMMPI01" string="THÔNG TIN NGƯỜI BỆNH"/>
+    <string id="VMMPI03" string="TÌM KIẾM THÔNG TIN NGƯỜI BỆNH"/>
+    <string id="VMMPI04" string="DANH SÁCH NGƯỜI BỆNH"/>
+    <string id="VMMPI05" string="ĐÍNH KÈM FILE"/>
+    <string id="VMMPI06" string="GỘP MÃ NGƯỜI BỆNH"/>
+    <!--MRK-->
+    <string id="VMMKT01" string="ĐĂNG KÝ THÀNH VIÊN"/>
+    <string id="VMMKT02" string="DANH SÁCH THÀNH VIÊN"/>
+    <string id="VMMKT03" string="TẠO GÓI DỊCH VỤ"/>
+    <string id="VMMKT04" string="kHÓA / MỞ KHÓA GÓI DỊCH VỤ"/>
+    <string id="VMMKT05" string="ĐĂNG KÝ GÓI DỊCH VỤ"/>
+    <string id="VMMKT07" string="THẺ THÀNH VIÊN"/>
+    <string id="VMMKT08" string="TÌM KIẾM GÓI DỊCH VỤ"/>
+    <string id="VMMKT09" string="LOẠI ĐẶC TÍNH CỦA THÀNH VIÊN"/>
+    <string id="VMMKT10" string="QUY ĐỊNH THÀNH VIÊN - ĐẶC TÍNH"/>
+    <string id="VMMKT11" string="TÌM KIẾM GÓI DỊCH VỤ CỦA NGƯỜI BỆNH"/>
+    <string id="VMMKT12" string="DANH MỤC THÀNH VIÊN - GIẢM GIÁ DỊCH VỤ"/>
+    <string id="VMMKT13" string="TƯ VẤN GÓI - DỊCH VỤ"/>
+    <string id="VMMKT14" string="TÌM KIẾM TƯ VẤN GÓI - DỊCH VỤ"/>
+    <string id="VMMKT15" string="DANH MỤC GÓI DỊCH VỤ"/>
+    <string id="VMMKT16" string="THÔNG TIN KÍCH HOẠT GÓI"/>
+    <string id="VMMKT17" string="QUẢN LÝ THÔNG TIN SỬ DỤNG GÓI DỊCH VỤ"/>
+    <string id="VMMKT18" string="THEO DÕI GÓI DỊCH VỤ"/>
+    <string id="VMMKT19" string="THÔNG TIN THEO DÕI GÓI DỊCH VỤ"/>
+    <string id="VMMKT20" string="KÍCH HOẠT THẺ THÀNH VIÊN"/>
+    <string id="VMMKT21" string="QUẢN LÝ THÔNG TIN SỬ DỤNG THẺ THÀNH VIÊN"/>
+
+    <!--OPD-->
+    <string id="VMOPD02" string="KHÁM BỆNH NGOẠI TRÚ"/>
+    <string id="VMOPD03" string="LỊCH SỬ DÙNG THUỐC"/>
+    <string id="VMOPD04" string="HỒ SƠ BỆNH ÁN NGOẠI TRÚ"/>
+    <string id="VMOPD05" string="XEM KẾT QUẢ CẬN LÂM SÀNG"/>
+    <string id="VMOPD07" string="QUẢN LÝ LỊCH HẸN"/>
+    <string id="VMOPD08" string="HỒ SƠ NGOẠI TRÚ KHÁM BỆNH"/>
+    <string id="VMOPD13" string="ĐIỀU PHỐI PHÒNG KHÁM"/>
+    <string id="VMOPD14" string="GHI NHẬN VẬT TƯ Y TẾ KHÁM BỆNH"/>
+    <string id="VMOPD15" string="DANH SÁCH GHI NHẬN VTYT KHÁM BỆNH"/>
+    <string id="VMOPD16" string="GHI NHẬN VẬT TƯ Y TẾ CẬN LÂM SÀNG"/>
+    <string id="VMOPD17" string="THỰC HIỆN DỊCH VỤ"/>
+    <string id="VMOPD18" string="CHỈ ĐỊNH DỊCH VỤ"/>
+    <string id="VMOPD19" string="ĐO SINH HIỆU"/>
+    <string id="VMOPD20" string="THỦ THUẬT"/>
+    <string id="VMOPD21" string="TRẠNG THÁI ĐIỀU TRỊ"/>
+    <string id="VMOPD22" string="DANH SÁCH KHÁM BỆNH"/>
+    <string id="VMOPD23" string="DANH SÁCH NGƯỜI BỆNH THỦ THUẬT"/>
+    <string id="VMOPD24" string="CHỈ ĐỊNH DỊCH VỤ"/>
+    <string id="VMOPD25" string="ĐO SINH HIỆU"/>
+    <string id="VMOPD26" string="GHI NHẬN VẬT TƯ Y TẾ"/>
+    <string id="VMOPD27" string="DANH SÁCH GHI NHẬN VTYT CẬN LÂM SÀNG"/>
+    <string id="VMOPD40" string=""/>
+    <string id="VMOPD41" string=""/>
+    <string id="VMOPD42" string=""/>
+    <string id="VMOPD43" string="CHUYỂN PHÒNG KHÁM"/>
+    <!--PHA-->
+    <string id="VMPHA01" string="NHẬP DỰ TRÙ"/>
+    <string id="VMPHA02" string="DUYỆT DỰ TRÙ"/>
+    <string id="VMPHA05" string="NHẬP DƯỢC TỪ NHÀ CUNG CẤP"/>
+    <string id="VMPHA06" string="TRẢ DƯỢC NHÀ CUNG CẤP"/>
+    <string id="VMPHA07" string="LẬP PHIẾU LĨNH DƯỢC"/>
+    <string id="VMPHA08" string="DUYỆT PHIẾU LĨNH DƯỢC"/>
+    <string id="VMPHA09" string="XUẤT DƯỢC NỘI BỘ"/>
+    <string id="VMPHA10" string="NHẬP DƯỢC NỘI BỘ"/>
+    <string id="VMPHA11" string="HOÀN TRẢ NỘI BỘ"/>
+    <string id="VMPHA12" string="NHẬN HOÀN TRẢ NỘI BỘ"/>
+    <string id="VMPHA13" string="DANH SÁCH DUYỆT TOA THUỐC BHYT"/>
+    <string id="VMPHA14" string="XUẤT THUỐC BHYT NGOẠI TRÚ"/>
+    <string id="VMPHA15" string="XUẤT THUỐC BHYT NỘI TRÚ"/>
+    <string id="VMPHA17" string="DANH SÁCH DUYỆT TOA THUỐC TẠI QUẦY"/>
+    <string id="VMPHA18" string="BÁN THUỐC THEO TOA TẠI QUẦY"/>
+    <string id="VMPHA19" string="TRẢ THUỐC TẠI QUẦY"/>
+    <string id="VMPHA22" string="XUẤT SỬ DỤNG THUỐC/VTYT"/>
+    <string id="VMPHA23" string="THANH LÝ DƯỢC"/>
+    <string id="VMPHA24" string="NHẬP SỐ DƯ ĐẦU KỲ"/>
+    <string id="VMPHA25" string="PHIẾU ĐIỀU CHỈNH TĂNG"/>
+    <string id="VMPHA26" string="PHIẾU ĐIỀU CHỈNH GIẢM"/>
+    <string id="VMPHA27" string="KHÓA/MỞ SỔ CHỨNG TỪ"/>
+    <string id="VMPHA28" string="TÍNH SỐ DƯ ĐẦU KỲ"/>
+    <string id="VMPHA29" string="KIỂM KÊ DƯỢC"/>
+
+    <string id="VMPHA30" string="NHẬP DƯỢC KÝ GỬI TỪ NHÀ CUNG CẤP"/>
+    <string id="VMPHA31" string="TRẢ DƯỢC KÝ GỬI TỪ NHÀ CUNG CẤP"/>
+    <string id="VMPHA32" string="XUẤT DƯỢC KÝ GỬI"/>
+    <string id="VMPHA33" string="QUẢN LÝ BOOKING DƯỢC NGOẠI TRÚ VÀ NỘI TRÚ"/>
+
+    <string id="VMPHA51" string="TỔNG HỢP PHIẾU LĨNH TỪ Y LỆNH"/>
+    <string id="VMPHA52" string="DUYỆT PHIẾU LĨNH"/>
+    <string id="VMPHA53" string="TRA CỨU Y LỆNH TẠM NGƯNG SỬ DỤNG"/>
+    <string id="VMPHA54" string="DANH MỤC DƯỢC"/>
+    <string id="VMPHA55" string=""/>
+    <string id="VMPHA56" string="DANH MỤC HOẠT CHẤT"/>
+    <string id="VMPHA57" string="DANH MỤC TƯƠNG TÁC THUỐC"/>
+    <string id="VMPHA58" string="DANH MỤC NHÀ CUNG CẤP"/>
+    <string id="VMPHA59" string="DANH MỤC DƯỢC THEO NGUỒN HÀNG"/>
+    <string id="VMPHA60" string="DANH MỤC DƯỢC THEO PHẠM VI"/>
+    <string id="VMPHA61" string="DANH MỤC DƯỢC - NƠI PHÁT HÀNH GIÁ"/>
+    <string id="VMPHA62" string="DANH MỤC KHO DƯỢC BOOKING THEO PHẠM VI"/>
+    <string id="VMPHA63" string="DANH MỤC DƯỢC ĐỒNG CHI TRẢ"/>
+    <string id="VMPHA64" string="DANH MỤC GIÁ HỢP ĐỒNG BỆNH VIỆN"/>
+    <string id="VMPHA65" string="DANH MỤC GIÁ BÁN DƯỢC - BỆNH VIỆN"/>
+    <string id="VMPHA66" string="DANH MỤC GIÁ BÁN DƯỢC - NHÀ THUỐC"/>
+    <string id="VMPHASR" string=""/>
+    <string id="VMPHATT" string="DANH SÁCH DUYỆT TOA THUỐC BHYT"/>
+    <string id="VMPOP01" string="THÊM MỚI"/>
+    <string id="VMPHA80" string="DANH SÁCH XUẤT THUỐC BHYT NGOẠI TRÚ"/>
+    <string id="VMPHA81" string="DANH SÁCH DỰ TRÙ"/>
+    <string id="VMPHA84" string="TỔNG HỢP DỰ TRÙ"/>
+    <!--REG-->
+    <string id="VMREG01" string="TIẾP NHẬN NGƯỜI BỆNH"/>
+    <string id="VMREG02" string="THÔNG TIN CHUYỂN TUYẾN"/>
+    <string id="VMREG03" string="THÔNG TIN TRÙNG NGƯỜI BỆNH"/>
+    <string id="VMREG04" string="THÔNG TIN NGƯỜI GIỚI THIỆU"/>
+    <string id="VMREG05" string="TÌM KIẾM NGƯỜI BỆNH"/>
+    <string id="VMREG06" string="THÔNG TIN NGƯỜI LIÊN HỆ"/>
+    <string id="VMREG07" string="CHỤP HÌNH"/>
+    <string id="VMREG08" string="LỊCH HẸN"/>
+    <string id="VMREG09" string="DANH SÁCH LỊCH HẸN/ TÁI KHÁM"/>
+    <string id="VMREG11" string="TIẾP NHẬN NGƯỜI BỆNH HL"/>
+    <string id="VMREG12" string="TIẾP NHẬN NGƯỜI BỆNH HN"/>
+    <!--RIS-->
+    <string id="VMRIS01" string="CHẨN ĐOÁN HÌNH ẢNH"/>
+    <string id="VMRIS02" string="HÌNH ẢNH"/>
+    <string id="VMRIS03" string="DANH SÁCH NGƯỜI BỆNH CHẨN ĐOÁN HÌNH ẢNH"/>
+    <string id="VMRIS04" string="CHẨN ĐOÁN HÌNH ẢNH (KTV)"/>
+    <!--ROS-->
+    <string id="VMROS01" string="LỊCH LÀM VIỆC"/>
+    <string id="VMROS02" string="LỊCH LÀM VIỆC"/>
+    <!--APT-->
+    <string id="VMAPT01" string="LỊCH HẸN NGƯỜI BỆNH"/>
+    <string id="VMAPT02" string="TÌM KIẾM LỊCH HẸN"/>
+    <string id="VMAPT05" string="TẠO LỊCH HẸN"/>
+    <!--RPT-->
+    <string id="VMRPT01" string="PREVIEW BÁO CÁO"/>
+    <string id="VMRPT02" string="THỰC THI BÁO CÁO"/>
+    <string id="VMRPT03" string="THIẾT LẬP BÁO CÁO THEO DỊCH VỤ"/>
+    <string id="VMRPT04" string="THIẾT LẬP BÁO CÁO THEO ICD"/>
+    <string id="VMRPT12" string="BÁO CÁO OLAP"/>
+    <!--MRA-->
+    <string id="VMMRA01" string="NHẬN HỒ SƠ BỆNH ÁN"/>
+    <string id="VMMRA02" string="MƯỢN/TRẢ HỒ SƠ BỆNH ÁN"/>
+    <string id="VMMRA05" string="THÔNG TIN MƯỢN HỒ SƠ BỆNH ÁN"/>
+    <string id="VMMRA07" string="THÔNG TIN TRẢ HỒ SƠ BỆNH ÁN"/>
+    <string id="VMMRA14" string="TRA CỨU THÔNG TIN HỒ SƠ BỆNH ÁN"/>
+    <string id="VMMRA60" string="MƯỢN HỒ SƠ BỆNH ÁN"/>
+    <string id="VMMRA61" string="TRẢ HỒ SƠ BỆNH ÁN"/>
+    <string id="VMMRA63" string="THANH LÝ HỒ SƠ BỆNH ÁN"/>
+    <string id="VMMRA13" string="THÔNG TIN THANH LÝ HỒ SƠ BỆNH ÁN"/>
+    <string id="VMMRA64" string="CHI TIẾT THÔNG TIN HỒ SƠ BỆNH ÁN"/>
+    <string id="VMMRA08" string="THÔNG TIN HỒ SƠ BỆNH ÁN"/>
+    <string id="VMMRA17" string="DANH SÁCH HỒ SƠ ĐÃ THANH LÝ"/>
+    <!--UTL-->
+    <string id="VMUTL01" string="ĐỊNH NGHĨA GÕ TẮT"/>
+    <string id="VMUTL02" string="THAY ĐỔI MẬT KHẨU"/>
+    <!--PHA-->
+    <!--NUT-->
+    <string id="VMNUT03" string="CHỈ ĐỊNH KHẨU PHẦN ĂN"/>
+    <string id="VMNUT04" string="TỔNG HỢP KHẨU PHẦN ĂN"/>
+    <string id="VMNUT05" string="XÁC NHẬN KHẨU PHẦN ĂN"/>
+    <string id="VMNUT02" string="XUẤT LIỆU"/>
+    <string id="VMNUT31" string="TRA CỨU PHIẾU CHỈ ĐỊNH"/>
+    <string id="VMNUT41" string="TRA CỨU PHIẾU TỔNG HỢP"/>
+    <string id="VMNUT51" string="LÝ DO HỦY"/>
+    <string id="VMNUT10" string="DANH MỤC GIÁ BÁN KHẨU PHẦN ĂN"/>
+    <string id="VMNUT01" string="DANH MỤC SẢN PHẨM"/>
+    <string id="VMNUT06" string="DANH MỤC BUỔI ĂN"/>
+    <!--PUR-->
+    <string id="VMPUR01" string="DANH MỤC QUY TRÌNH"/>
+    <string id="VMPUR02" string="DANH MỤC TRẠNG THÁI"/>
+    <string id="VMPUR03" string="DANH MỤC TRẠNG THÁI HÀNH ĐỘNG"/>
+    <string id="VMPUR04" string="DANH MỤC LỰA CHỌN GIÁ"/>
+    <string id="VMPUR05" string="DANH MỤC LOẠI HÀNG HÓA"/>
+    <string id="VMPUR09" string="DANH MỤC NHÓM HÀNG HÓA"/>
+    <string id="VMPUR06" string="PHÒNG BAN - NGƯỜI DUYỆT"/>
+    <string id="VMPUR07" string="CẤU HÌNH NHÂN VIÊN DUYỆT PHIẾU YÊU CẦU"/>
+    <string id="VMPUR08" string="CẤU HÌNH NHÂN VIÊN DUYỆT MUA HÀNG"/>
+    <string id="VMPUR10" string="DANH MỤC HÀNG HÓA"/>
+    <string id="VMPUR11" string="LẬP PHIẾU YÊU CẦU ĐẶT HÀNG"/>
+    <string id="VMPUR12" string="DANH SÁCH PHIẾU YÊU CẦU"/>
+    <string id="VMPUR13" string="DUYỆT THEO NHÓM HÀNG"/>
+    <string id="VMPUR14" string="LẬP PHIẾU PR"/>
+    <string id="VMPUR15" string="CẤU HÌNH GỬI E-MAIL"/>
+    <string id="VMPUR16" string="DUYỆT PHIẾU PR"/>
+    <string id="VMPUR17" string="PHÂN CÔNG PR"/>
+    <string id="VMPUR18" string="TIẾP NHẬN PR"/>
+    <string id="VMPUR19" string="LẬP PHIẾU PO"/>
+    <string id="VMPUR20" string="DUYỆT PHIẾU PO"/>
+    <string id="VMPUR21" string="CẬP NHẬT TRẠNG THÁI PHIẾU PO"/>
+    <string id="VMPUR25" string="DANH MỤC GIÁ HỢP ĐỒNG"/>
+    <!--INV-->
+    <string id="VMINV01" string="NHẬP KHO"/>
+    <string id="VMINV04" string="PHIẾU YÊU CẦU"/>
+    <string id="VMINV06" string="PHIẾU XUẤT KHO"/>
+    <string id="VMINV08" string="TÍNH SỐ DƯ ĐẦU KỲ"/>
+    <string id="VMINV09" string="PHIẾU ĐIỀU CHỈNH TĂNG"/>
+    <string id="VMINV11" string="PHIẾU ĐIỀU CHỈNH GIẢM"/>
+    <string id="VMINV12" string="KHÓA SỔ CHỨNG TỪ"/>
+    <string id="VMINV13" string="KIỂM KÊ"/>
+
+    <string id="VMEME06" string="PHÂN LOẠI CẤP CỨU"/>
+    <string id="VMORM01" string="KHÁM TIỀN MÊ"/>
+    <string id="VMIPD07" string="THỬ PHẢN ỨNG CÓ HẠI CỦA THUỐC ADR"/>
+    <string id="VMORM09" string="GHI NHẬN PHIẾU GÂY MÊ"/>
+
+    <string id="VMORM13" string="DANH SÁCH GHI NHẬN PHIẾU GÂY MÊ"/>
+    <string id="VMORM16" string="XEM LỊCH PHÒNG MỔ"/>
+    <string id="VMORM17" string="THÊM THÔNG TIN LỊCH PHÒNG MỔ"/>
+
+    <string id="VMORM23" string="DANH SÁCH GHI NHẬN THUỐC/VTYT PTTT"/>
+    <string id="VMORM10" string="DANH SÁCH KHÁM TIỀN MÊ"/>
+
+    <string id="VMEMR19" string="LỊCH SỬ KẾT QUẢ XÉT NGHIỆM"/>
+
+    <!--HSM-->
+    <string id="VMHSM01" string="DANH MỤC CÔNG TY KSK"/>
+    <string id="VMHSM02" string ="DANH MỤC HỢP ĐỒNG"/>
+    <string id="VMHSM03" string ="THÔNG TIN HỢP ĐỒNG"/>
+    <string id="VMHSM04" string ="NHÂN VIÊN ĐĂNG KÝ KSK"/>
+    <string id="VMHSM05" string ="ĐĂNG KÝ DỊCH VỤ KSK"/>
+    <string id="VMHSM06" string ="HỢP ĐỒNG KHÁM SỨC KHỎE"/>
+    <string id="VMHSM07" string ="THÔNG TIN BỆNH NHÂN"/>
+    <string id="VMHSM08" string ="XÁC NHẬN ĐẾN KHÁM SỨC KHỎE"/>
+    <string id="VMHSM09" string ="KẾT QUẢ KHÁM SỨC KHỎE"/>
+    <string id="VMHSM10" string ="THÔNG TIN SINH HIỆU"/>
+    <string id="VMHSM11" string ="THÔNG TIN KHÁM NỘI"/>
+    <string id="VMHSM12" string ="THÔNG TIN NGOẠI KHOA"/>
+    <string id="VMHSM13" string ="THÔNG TIN SẢN PHỤ KHOA"/>
+    <string id="VMHSM14" string ="THÔNG TIN MẮT"/>
+    <string id="VMHSM15" string ="THÔNG TIN TAI - MŨI - HỌNG"/>
+    <string id="VMHSM16" string ="THÔNG TIN RĂNG HÀM MẶT"/>
+    <string id="VMHSM17" string ="THÔNG TIN DA LIỄU"/>
+    <string id="VMHSM18" string ="THÔNG TIN BỆNH NHÂN SAI DỮ LIỆU"/>
+    <string id="VMHSM19" string ="DANH SÁCH BỆNH NHÂN ĐÃ TỒN TẠI"/>
+    <string id="VMHSM21" string ="KẾT LUẬN"/>
+    <string id="VMHSM22" string ="CHẨN ĐOÁN"/>
+    <string id="VMBIL41" string="IN HÓA ĐƠN"/>
+    <!--OPT-->
+    <!--<string id="VMOPT01" string="ĐỢT ĐIỀU TRỊ"/>
+    <string id="VMOPT02" string="DANH SÁCH ĐỢT ĐIỀU TRỊ THEO BỆNH ÁN"/>-->
+    <string id="VMOPT03" string="TIẾP NHẬN ĐIỀU TRỊ NGOẠI TRÚ"/>
+    <string id="VMOPT76" string="ĐỢT ĐIỀU TRỊ"/>
+    <string id="VMOPT77" string="DANH SÁCH ĐỢT ĐIỀU TRỊ THEO BỆNH ÁN"/>
+
+    <string id="VMCPM01" string="DANH MỤC PHÁC ĐỒ"/>
+    <string id="VMCPM02" string="CẬP NHẬT PHÁC ĐỒ"/>
+    <string id="VMCPM03" string="PHÁC ĐỒ CHU KỲ"/>
+    <string id="VMCPM04" string="CẬP NHẬT THÔNG TIN PHÁC ĐỒ CHU KỲ"/>
+    <string id="VMCPM05" string="CHỈ ĐỊNH PHÁC ĐỒ"/>
+    <string id="VMCPM06" string="THÔNG TIN SỬ DỤNG PHÁC ĐỒ"/>
+    <string id="VMCPM07" string="CHỌN PHÁC ĐỒ ĐIỀU TRỊ"/>
+
+    <string id="VMBBM06" string="ĐĂNG KÝ MÁU"/>
+    <string id="VMBBM07" string="THÔNG TIN TÌM KIẾM MÁU"/>
+    <string id="VMBBM08" string="XUẤT MÁU CHO BỆNH NHÂN"/>
+    <string id="VMBBM09" string="THÔNG TIN PHIẾU XUẤT MÁU"/>
+    <string id="VMBBM10" string="NHẬN TRẢ MÁU TỪ BỆNH NHÂN"/>
+
+  </vi-vn>
+</Localization>

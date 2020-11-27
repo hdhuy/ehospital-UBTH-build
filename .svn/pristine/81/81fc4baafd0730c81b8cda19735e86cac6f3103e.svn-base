@@ -1,0 +1,1473 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetListOrderByTime" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select DISTINCT cast(0 as bit) as TESTAGAIN, A.BENHNHAN_ID, D.TENBENHNHAN, A.NGAYYEUCAU,D.NAMSINH,
+            D.MAYTE, A.SOPHIEUYEUCAU SOPHIEU ,A.DVYEUCAU_ID, A.NGAYTAO,D.GIOITINH,D.NGAYSINH,D.DIACHI,NV.MANHANVIEN MABACSICHIDINH, NV.TENNHANVIEN BACSICHIDINH
+            ,DT.TENDOITUONG,DT.MADOITUONG
+            from TT_DVYEUCAU A
+            inner join TM_DICHVU B on A.DICHVU_ID = B.DICHVU_ID
+            inner join TM_NHOMDICHVU C on C.NHOMDICHVU_ID = B.NHOMDICHVU_ID
+            inner join TT_BENHNHAN D on D.BENHNHAN_ID = A.BENHNHAN_ID
+            LEFT JOIN TT_LAB_SIDSTATUS (NoLock) E ON E.CLSYEUCAU_ID = A.DVYEUCAU_ID
+            LEFT JOIN TM_NHANVIEN NV ON A.BACSICHIDINH_ID=NV.NHANVIEN_ID
+            left join TM_DOITUONG dt on A.DOITUONG_ID=dt.DOITUONG_ID
+            where
+            A.TRANGTHAI = 'CHUAKETQUA'
+            <!--and A.DUOCPHEPTHUCHIEN = '1'-->
+            and (A.NGAYYEUCAU BETWEEN '$TUNGAY$' and '$DENNGAY$')
+            and c.MANHOMDICHVU IN ('0101','0105','0109','0110')
+            and E.CLSYEUCAU_ID is null
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetOrder" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            DECLARE
+            @TUOI INT = NULL,
+            @SOPHIEUYEUCAU VARCHAR(15) = '$SOPHIEUYEUCAU$'
+            SELECT @TUOI = YEAR(GETDATE()) - ISNULL(A.NAMSINH, YEAR(A.NGAYSINH))
+            FROM TT_BENHNHAN A
+            JOIN TT_DVYEUCAU B (NOLOCK) ON A.BENHNHAN_ID = B.BENHNHAN_ID
+            WHERE B.SOPHIEUYEUCAU = @SOPHIEUYEUCAU
+            GROUP BY A.GIOITINH, A.NAMSINH, A.NGAYSINH
+            select A.DVYEUCAU_ID, A.SOPHIEUYEUCAU, A.NGAYYEUCAU, A.CHANDOAN,
+            B.BENHNHAN_ID, B.TENBENHNHAN as HOTEN, B.NGAYSINH, B.NAMSINH, B.MAYTE, B.NGAYTAO,
+            case when B.GIOITINH = '1' then 'M' else 'F' end GIOITINH, B.DIACHILIENLAC AS DIACHI,
+            C.TENDICHVU, C.MADICHVU AS MADV, C.DICHVU_ID,
+            D.TENPHONGBAN, D.PHONGBAN_ID,
+            DT.TENDOITUONG, DT.MADOITUONG ,
+            DV.TENDICHVU AS TENDICHVUCON, DV.MADICHVU AS MADVCON,
+            ISNULL(DV.DICHVU_ID,C.DICHVU_ID) AS IDDICHVUCON,
+            ISNULL(DV.CAPTREN_ID,C.DICHVU_ID) AS CAPTREN_ID,
+            '' AS MUCNGUYHIEMMIN, '' AS MUCNGUYHIEMMAX,
+            NV.MANHANVIEN, NV.TENNHANVIEN, NV.NHANVIEN_ID,
+            N.TENNHOMDICHVU, N.MANHOMDICHVU,
+            CASE WHEN  LEFT(E.SOBENHAN,2) = 'CC' THEN 1 ELSE 0 END CAPCUU,
+            @TUOI AS SOTUOI
+            from TT_DVYEUCAU A
+            INNER JOIN TT_BENHNHAN B on A.BENHNHAN_ID = B.BENHNHAN_ID
+            INNER JOIN TM_DICHVU C ON C.DICHVU_ID = A.DICHVU_ID
+            INNER JOIN TM_PHONGBAN D ON D.PHONGBAN_ID = A.NOIYEUCAU_ID
+            LEFT JOIN TT_NOITRU_BENHAN E ON E.BENHAN_ID = A.BENHAN_ID
+            LEFT JOIN TT_TIEPNHAN TN  ON ISNULL(A.TIEPNHAN_ID, E.TIEPNHAN_ID) = TN.TIEPNHAN_ID
+            INNER JOIN TM_DOITUONG DT ON DT.DOITUONG_ID = TN.DOITUONG_ID
+            LEFT JOIN TM_DICHVU_GIATRICHUAN GTC ON GTC.DICHVU_ID = C.DICHVU_ID
+            LEFT JOIN TM_DICHVU DV ON DV.CAPTREN_ID = C.DICHVU_ID
+            LEFT JOIN TM_DICHVU_GIATRICHUAN GTCCON ON GTCCON.DICHVU_ID = DV.DICHVU_ID
+            LEFT JOIN TM_NHANVIEN NV ON NV.NHANVIEN_ID = A.BACSICHIDINH_ID
+            JOIN TM_NHOMDICHVU N ON N.NHOMDICHVU_ID = C.NHOMDICHVU_ID
+            WHERE
+            A.SOPHIEUYEUCAU  = @SOPHIEUYEUCAU
+            AND A.TRANGTHAI = 'CHUAKETQUA'
+            <!--AND N.MANHOMDICHVU IN ('0101','0105','0109','0110')-->
+            <!--N.MANHOMDICHVU IN ('0101','0102','0103','0105','0107','0109','0110','0111','0112','0113','0114')	BỎ NHÓM GIẢI PHẪU BỆNH
+       A.DUOCPHEPTHUCHIEN = 0 AND-->
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetExaminationOrder" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            DECLARE
+            @TUOI INT = NULL,
+            @MAYTE VARCHAR(15) = '$MAYTE$',
+            @NGAYYEUCAU DATETIME = '$NGAYYEUCAU$'
+            SELECT @TUOI = YEAR(GETDATE()) - ISNULL(A.NAMSINH, YEAR(A.NGAYSINH))
+            FROM TT_BENHNHAN A
+            WHERE A.MAYTE = @MAYTE
+            GROUP BY A.GIOITINH, A.NAMSINH, A.NGAYSINH
+            select A.DVYEUCAU_ID, A.SOPHIEUYEUCAU, A.NGAYYEUCAU, A.CHANDOAN,
+            B.BENHNHAN_ID, B.TENBENHNHAN as HOTEN, B.NGAYSINH, B.NAMSINH, B.MAYTE, B.NGAYTAO,
+            case when B.GIOITINH = '1' then 'M' else 'F' end GIOITINH, B.DIACHILIENLAC AS DIACHI,
+            C.TENDICHVU, C.MADICHVU AS MADV, C.DICHVU_ID,
+            D.TENPHONGBAN, D.PHONGBAN_ID,
+            DT.TENDOITUONG, DT.MADOITUONG ,
+            DV.TENDICHVU AS TENDICHVUCON, DV.MADICHVU AS MADVCON,
+            ISNULL(DV.DICHVU_ID,C.DICHVU_ID) AS IDDICHVUCON,
+            ISNULL(DV.CAPTREN_ID,C.DICHVU_ID) AS CAPTREN_ID,
+            '' AS MUCNGUYHIEMMIN, '' AS MUCNGUYHIEMMAX,
+            NV.MANHANVIEN, NV.TENNHANVIEN, NV.NHANVIEN_ID,
+            N.TENNHOMDICHVU, N.MANHOMDICHVU,
+            CASE WHEN  LEFT(E.SOBENHAN,2) = 'CC' THEN 1 ELSE 0 END CAPCUU,
+            @TUOI AS SOTUOI
+            from TT_DVYEUCAU A
+            INNER JOIN TT_BENHNHAN B on A.BENHNHAN_ID = B.BENHNHAN_ID
+            INNER JOIN TM_DICHVU C ON C.DICHVU_ID = A.DICHVU_ID
+            INNER JOIN TM_PHONGBAN D ON D.PHONGBAN_ID = A.NOIYEUCAU_ID
+            LEFT JOIN TT_NOITRU_BENHAN E ON E.BENHAN_ID = A.BENHAN_ID
+            LEFT JOIN TT_TIEPNHAN TN  ON ISNULL(A.TIEPNHAN_ID, E.TIEPNHAN_ID) = TN.TIEPNHAN_ID
+            INNER JOIN TM_DOITUONG DT ON DT.DOITUONG_ID = TN.DOITUONG_ID
+            LEFT JOIN TM_DICHVU_GIATRICHUAN GTC ON GTC.DICHVU_ID = C.DICHVU_ID
+            LEFT JOIN TM_DICHVU DV ON DV.CAPTREN_ID = C.DICHVU_ID
+            LEFT JOIN TM_DICHVU_GIATRICHUAN GTCCON ON GTCCON.DICHVU_ID = DV.DICHVU_ID
+            LEFT JOIN TM_NHANVIEN NV ON NV.NHANVIEN_ID = A.BACSICHIDINH_ID
+            JOIN TM_NHOMDICHVU N ON N.NHOMDICHVU_ID = C.NHOMDICHVU_ID
+            WHERE
+            B.MAYTE  = @MAYTE AND A.NGAYYEUCAU = @NGAYYEUCAU
+            AND A.TRANGTHAI = 'CHUAKETQUA'
+            <!--AND N.MANHOMDICHVU IN ('0101','0105','0109','0110')-->
+            <!--N.MANHOMDICHVU IN ('0101','0102','0103','0105','0107','0109','0110','0111','0112','0113','0114')	BỎ NHÓM GIẢI PHẪU BỆNH
+       A.DUOCPHEPTHUCHIEN = 0 AND-->
+            ORDER BY A.SOPHIEUYEUCAU, DV.CAPTREN_ID
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetCLSKETQUA_ID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select CLSKETQUA_ID from TT_CLSKETQUA
+            where
+            DVYEUCAU_ID = '$DVYEUCAU_ID$'
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetCLSKETQUACHITIET_ID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select CLSKETQUACHITIET_ID from TT_CLSKETQUACHITIET
+            where
+            CLSKETQUA_ID = '$CLSKETQUA_ID$' and DICHVU_ID = '$DICHVU_ID$'
+        </statement>
+        <!--Revision:0-->
+        <update id="DAO00081_UpdateTRANGTHAI_TT_DVYEUCAU" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            update TT_DVYEUCAU set TRANGTHAI = '$TRANGTHAI$'
+            where
+            DVYEUCAU_ID = '$DVYEUCAU_ID$'
+        </update>
+        <!--Revision:0-->
+        <insert id="DAO00081_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TT_CLSKETQUA (
+            SOPHIEUXETNGHIEM
+            , TIEPNHAN_ID
+            , BENHAN_ID
+            , LUUTRU_ID
+            , DVYEUCAU_ID
+            , DICHVU_ID
+            , NHOMDICHVU_ID
+            , NGAYTHUCHIEN
+            , THOIGIANTHUCHIEN
+            , NGAYGIOTHUCHIEN
+            , GIOTHUCHIEN
+            , NAMTHUCHIEN
+            , THANGTHUCHIEN
+            , NOITHUCHIEN_ID
+            , BACSICHIDINH_ID
+            , BACSICHIDINH
+            , NGAYCHIDINH
+            , BACSITHUCHIEN_ID
+            , BACSIKETLUAN_ID
+            , KYTHUATVIEN01_ID
+            , KYTHUATVIEN02_ID
+            , CHANDOANLAMSANG
+            , DENGHI
+            , SINHTHIET
+            , CLOTEST
+            , PHOTO
+            , VIDEO
+            , TIEMCANQUANG
+            , PHANLOAIKETQUA_ID
+            , THUCHIENBENNGOAI
+            , BENHVIENTHUCHIEN_ID
+            , TENBACSIBENNGOAI
+            , KHOABENNGOAI_ID
+            , VUNGKHAOSAT
+            , MOTA
+            , MOTA_TEXT
+            , KETLUAN
+            , GHICHU
+            , MAPHIM
+            , GPB_AMSO
+            , GPB_PHANLOAIKETQUA_ID
+            , GPB_PHUONGPHAPLAYBENHPHAM_ID
+            , GPB_SOMAU
+            , GPB_SOLUONGMAU
+            , GPB_TOPO_ID
+            , GPB_TOPOREGIONS_ID
+            , GPB_MORPHO_ID
+            , GPB_ETIO_ID
+            , GPB_DAITHE
+            , GPB_VITHE
+            , GPB_NHUOM_HE
+            , GPB_NHUOM_PAS
+            , GPB_NHUOM_TRI
+            , GPB_NHUOM_AFB
+            , GPB_NHUOM_GIEMSA
+            , GPB_NHUOM_OTHER
+            , GPB_HOAMIENDICH
+            , GPB_HOAMIENDICHHUYNHQUANG
+            , GPB_HOICHAN
+            , LOAIFILM_ID
+            , SOPHIMSUDUNG
+            , THIETBI_ID
+            , SOTHUOCSUDUNG
+            , KHOADULIEU
+            , NGAYKHOADULIEU
+            , THOIGIANKHOADULIEU
+            , NGUOIKHOA_ID
+            , MANGUOIKHOA
+            , TENNGUOIKHOA
+            , TRANGTHAI
+            , MACH
+            , HUYETAP
+            , NHIPTHO
+            , NHIETDO
+            , CHIEUCAO
+            , CANNANG
+            , BSA
+            , TINHTRANGDIENNAO
+            , SOVAOVIEN
+            , MAYTE
+            , TENBENHNHAN
+            , NAMSINH
+            , GIOITINH
+            , DIACHI
+            , NOICHIDINH_ID
+            , MAUTHU_ID
+            , THOIGIANNHAN
+            , MAU
+            , LOAITHUOCCANQUANG_ID
+            , MA
+            , IDHINH
+            , SOPHIMHU
+            , LOAIPHIMHU_ID
+            , DOSOI
+            , DOSOI_ID
+            , BANKINHSOI
+            , SODT
+            , KYTHUAT
+            , KYTHUAT_TEXT
+            , SOPHIMSUDUNG2
+            , LOAIFILM_ID2
+            , SOPHIMSUDUNG3
+            , LOAIFILM_ID3
+            , RESISTANCEMARKERS
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , SOLUONGONG
+            , SOMLMAU
+            , THOIGIANLAYMAU
+            , THOIGIANNHANMAU
+            , SOONGTHUCNHAN
+            , VITRISOI
+            , SAMPLEID
+            ) values (
+            #SOPHIEUXETNGHIEM#
+            , #TIEPNHAN_ID#
+            , #BENHAN_ID#
+            , #LUUTRU_ID#
+            , #DVYEUCAU_ID#
+            , #DICHVU_ID#
+            , #NHOMDICHVU_ID#
+            , #NGAYTHUCHIEN#
+            , #THOIGIANTHUCHIEN#
+            , #NGAYGIOTHUCHIEN#
+            , #GIOTHUCHIEN#
+            , #NAMTHUCHIEN#
+            , #THANGTHUCHIEN#
+            , #NOITHUCHIEN_ID#
+            , #BACSICHIDINH_ID#
+            , #BACSICHIDINH#
+            , #NGAYCHIDINH#
+            , #BACSITHUCHIEN_ID#
+            , #BACSIKETLUAN_ID#
+            , #KYTHUATVIEN01_ID#
+            , #KYTHUATVIEN02_ID#
+            , #CHANDOANLAMSANG#
+            , #DENGHI#
+            , #SINHTHIET#
+            , #CLOTEST#
+            , #PHOTO#
+            , #VIDEO#
+            , #TIEMCANQUANG#
+            , #PHANLOAIKETQUA_ID#
+            , #THUCHIENBENNGOAI#
+            , #BENHVIENTHUCHIEN_ID#
+            , #TENBACSIBENNGOAI#
+            , #KHOABENNGOAI_ID#
+            , #VUNGKHAOSAT#
+            , #MOTA#
+            , #MOTA_TEXT#
+            , #KETLUAN#
+            , #GHICHU#
+            , #MAPHIM#
+            , #GPB_AMSO#
+            , #GPB_PHANLOAIKETQUA_ID#
+            , #GPB_PHUONGPHAPLAYBENHPHAM_ID#
+            , #GPB_SOMAU#
+            , #GPB_SOLUONGMAU#
+            , #GPB_TOPO_ID#
+            , #GPB_TOPOREGIONS_ID#
+            , #GPB_MORPHO_ID#
+            , #GPB_ETIO_ID#
+            , #GPB_DAITHE#
+            , #GPB_VITHE#
+            , #GPB_NHUOM_HE#
+            , #GPB_NHUOM_PAS#
+            , #GPB_NHUOM_TRI#
+            , #GPB_NHUOM_AFB#
+            , #GPB_NHUOM_GIEMSA#
+            , #GPB_NHUOM_OTHER#
+            , #GPB_HOAMIENDICH#
+            , #GPB_HOAMIENDICHHUYNHQUANG#
+            , #GPB_HOICHAN#
+            , #LOAIFILM_ID#
+            , #SOPHIMSUDUNG#
+            , #THIETBI_ID#
+            , #SOTHUOCSUDUNG#
+            , #KHOADULIEU#
+            , #NGAYKHOADULIEU#
+            , #THOIGIANKHOADULIEU#
+            , #NGUOIKHOA_ID#
+            , #MANGUOIKHOA#
+            , #TENNGUOIKHOA#
+            , #TRANGTHAI#
+            , #MACH#
+            , #HUYETAP#
+            , #NHIPTHO#
+            , #NHIETDO#
+            , #CHIEUCAO#
+            , #CANNANG#
+            , #BSA#
+            , #TINHTRANGDIENNAO#
+            , #SOVAOVIEN#
+            , #MAYTE#
+            , #TENBENHNHAN#
+            , #NAMSINH#
+            , #GIOITINH#
+            , #DIACHI#
+            , #NOICHIDINH_ID#
+            , #MAUTHU_ID#
+            , #THOIGIANNHAN#
+            , #MAU#
+            , #LOAITHUOCCANQUANG_ID#
+            , #MA#
+            , #IDHINH#
+            , #SOPHIMHU#
+            , #LOAIPHIMHU_ID#
+            , #DOSOI#
+            , #DOSOI_ID#
+            , #BANKINHSOI#
+            , #SODT#
+            , #KYTHUAT#
+            , #KYTHUAT_TEXT#
+            , #SOPHIMSUDUNG2#
+            , #LOAIFILM_ID2#
+            , #SOPHIMSUDUNG3#
+            , #LOAIFILM_ID3#
+            , #RESISTANCEMARKERS#
+            , #BENHVIEN_ID#
+            , GETDATE()
+            , #NGUOITAO_ID#
+            , GETDATE()
+            , #NGUOICAPNHAT_ID#
+            , #SOLUONGONG#
+            , #SOMLMAU#
+            , #THOIGIANLAYMAU#
+            , #THOIGIANNHANMAU#
+            , #SOONGTHUCNHAN#
+            , #VITRISOI#
+            , #SAMPLEID#
+            )
+            <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+        </insert>
+        <!--Revision:0-->
+        <insert id="DAO00081_Add_CLSKETQUACHITIET" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TT_CLSKETQUACHITIET (
+            CLSKETQUA_ID
+            , DICHVU_ID
+            , DVYEUCAU_ID
+            , NHOMDICHVU_ID
+            , DONVITINH
+            , KETQUA
+            , KETQUA2
+            , MUCBINHTHUONG
+            , MUCBINHTHUONGMIN
+            , MUCBINHTHUONGMAX
+            , BATTHUONG
+            , THUCHIENBENNGOAI
+            , BENHVIEN_ID
+            ) values (
+            #CLSKETQUA_ID#
+            , #DICHVU_ID#
+            , #DVYEUCAU_ID#
+            , #NHOMDICHVU_ID#
+            , #DONVITINH#
+            , #KETQUA#
+            , #KETQUA2#
+            , #MUCBINHTHUONG#
+            , #MUCBINHTHUONGMIN#
+            , #MUCBINHTHUONGMAX#
+            , #BATTHUONG#
+            , #THUCHIENBENNGOAI#
+            , #BENHVIEN_ID#
+            )
+            <selectKey resultClass="System.Int64" type="post">
+                SELECT @@IDENTITY as value
+            </selectKey>
+        </insert>
+        <!--Revision:0-->
+        <update id="DAO00081_Update" parameterClass="System.Collections.IDictionary">
+            update TT_CLSKETQUACHITIET set
+            CLSKETQUA_ID = #CLSKETQUA_ID#
+            <isPropertyAvailable prepend="," property="DICHVU_ID">
+                DICHVU_ID = #DICHVU_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="DVYEUCAU_ID">
+                DVYEUCAU_ID = #DVYEUCAU_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="NHOMDICHVU_ID">
+                NHOMDICHVU_ID = #NHOMDICHVU_ID#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="DONVITINH">
+                DONVITINH = #DONVITINH#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="KETQUA">
+                KETQUA = #KETQUA#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="KETQUA2">
+                KETQUA2 = #KETQUA2#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="MUCBINHTHUONG">
+                MUCBINHTHUONG = #MUCBINHTHUONG#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="MUCBINHTHUONGMIN">
+                MUCBINHTHUONGMIN = #MUCBINHTHUONGMIN#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="MUCBINHTHUONGMAX">
+                MUCBINHTHUONGMAX = #MUCBINHTHUONGMAX#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="BATTHUONG">
+                BATTHUONG = #BATTHUONG#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="THUCHIENBENNGOAI">
+                THUCHIENBENNGOAI = #THUCHIENBENNGOAI#
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="," property="BENHVIEN_ID">
+                BENHVIEN_ID = #BENHVIEN_ID#
+            </isPropertyAvailable>
+            where
+            CLSKETQUACHITIET_ID = '$CLSKETQUACHITIET_ID$'
+        </update>
+        <!--Revision:0-->
+        <statement id="DAO00081_YeuCauXetNghiemStoreExcute" parameterType="System.Collections.IDictionary" resultClass="DataObject">
+            exec $NAME_PROC$
+            <iterate property="Parameters" open="" close="" conjunction=",">
+                #Parameters[]#
+            </iterate>
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetAllDichVuFromHIS" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT
+            a.Dichvu_ID as IDX, a.MADICHVU MA, a.TENDICHVU TEN, a.TenDichVu_En as ServiceNameEN, a.TenDichVu_Ru as ServiceNameRU,
+            a.CAP, CASE WHEN isnull(a.CAPTREN_ID, 0) = 0 THEN 0 ELSE a.CAPTREN_ID END AS CAPTREN_ID, MADICHVU_SEG01, MADICHVU_SEG02,
+            MADICHVU_SEG03, MADICHVU_SEG04, MAQUIDINH, INPUTCODE, SHORTNAME, DONVITINH, IDX STT, a.TEST, a.TAMNGUNG, CHONHETCAPDUOI,
+            ApplyFor, THUCHIENBENNGOAI, COGIATRICHUAN, COGIADICHVU, GIACODINH, NORESULT, PrintWhenNull as PrintWhenIsNull, 0 TraLoiKetQuaRieng,
+            0 LoaiDichVu_Id, a.NHOMDICHVU_ID AS NHOMDICHVU_IDX, CASE WHEN isnull(a.CAPTREN_ID, 0) = 0 THEN a.NHOMDICHVU_ID + 100000 ELSE a.CAPTREN_ID END AS  PARENTIDX,
+            'D' AS KIND, b.Nam_Min AS NAM_MIN, b.Nam_Max AS NAM_MAX, b.Nu_Min AS NU_MIN, b.Nu_Max AS NU_MAX, b.TreEm_Min AS TREEM_MIN,
+            b.TreEm_Max AS TREEM_MAX, b.KieuDuLieu AS KIEUDULIEU
+            FROM TM_DICHVU a
+            JOIN dbo.TM_NHOMDICHVU n ON a.NhomDichVu_Id = n.NhomDichVu_Id
+            LEFT join TM_DICHVU_GIATRICHUAN b on a.DichVu_Id = b.DichVu_Id
+            WHERE n.MaNhomDichVu IN (SELECT s FROM SplitString('$LoadDichVuCode$', ','))
+            AND a.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION
+            SELECT
+            a.NHOMDICHVU_ID + 100000 AS IDX, MANHOMDICHVU MA, TENNHOMDICHVU TEN, '' as ServiceNameEN, '' as ServiceNameRU, CAP, CAPTREN_ID ,
+            '' MADICHVU_SEG01, '' MADICHVU_SEG02, '' MADICHVU_SEG03, '' MADICHVU_SEG04, '' MAQUYDINH, '' INPUTCODE, '' SHORTNAME, '' DONVITINH,
+            '' STT, 0 TEST, 0 TAMNGUNG, 0 AS CHONHETCAPDUOI, 0 AS ApplyFor, 0 AS THUCHIENBENNGOAI, 0 AS COGIATRICHUAN, 0 AS COGIADICHVU,
+            0 AS GIACODINH, 0 AS NORESULT, 0 as PrintWhenIsNull, a.TraLoiKetQuaRieng, a.LoaiDichVu_Id, a.NHOMDICHVU_ID AS NHOMDICHVU_IDX  ,
+            a.LOAIDICHVU_ID + 200000 AS  PARENTIDX, 'N' AS KIND, '' as NAM_MIN, '' as NAM_MAX, '' as NU_MIN, '' as NU_MAX, '' as TREEM_MIN,
+            '' as TREEM_MAX, 'S' as  KIEUDULIEU
+            FROM TM_NHOMDICHVU a
+            where a.MaNhomDichVu IN (SELECT s FROM SplitString('$LoadDichVuCode$', ','))
+            AND a.BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION
+            SELECT
+            a.LOAIDICHVU_ID + 200000 AS IDX, MALOAIDICHVU MA, TENLOAIDICHVU TEN, '' as ServiceNameEN, '' as ServiceNameRU, 0 AS CAP, 0 AS CAPTREN_ID ,
+            '' MADICHVU_SEG01, '' MADICHVU_SEG02, '' MADICHVU_SEG03, '' MADICHVU_SEG04, '' MAQUIDINH, '' INPUTCODE, '' SHORTNAME, '' DONVITINH,
+            '' STT, 0 TEST, 0 TAMNGUNG, 0 AS CHONHETCAPDUOI, 0 AS ApplyFor, 0 AS THUCHIENBENNGOAI, 0 AS COGIATRICHUAN, 0 AS COGIADICHVU, 0 AS GIACODINH,
+            0 AS NORESULT, 0 as PrintWhenIsNull, 0 as TraLoiKetQuaRieng, a.LoaiDichVu_Id, 0 AS NHOMDICHVU_IDX, 0 AS PARENTIDX, 'L' as KIND,
+            '' as NAM_MIN, '' as NAM_MAX, '' as NU_MIN, '' as NU_MAX, '' as TREEM_MIN, '' as TREEM_MAX, 'S' as KIEUDULIEU
+            FROM TM_LOAIDICHVU a
+            where a.MaLoaiDichVu = 'CanLamSang' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetAllDepartmentFromHIS" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT
+            a.phongban_ID as IDX, a.MaPhongBan as MA, a.TenPhongBan as TEN, a.CAP,
+            CASE WHEN isnull(a.CAPTREN_ID,0)=0 THEN 0 ELSE a.CAPTREN_ID END AS CAPTREN_ID,
+            COTHUCHIENDICHVU, a.LoaiPhongBan_Id as NHOMPHONGBAN_IDX, TAMNGUNG,
+            CASE WHEN isnull(a.CAPTREN_ID,0)=0 THEN a.LoaiPhongBan_Id + 1000000 ELSE a.CAPTREN_ID END AS  PARENTIDX,
+            'D' AS KIND, '' LocationName, '' LocationName2, '' LocationName3
+            FROM TM_PHONGBAN a
+            where a.TamNgung = 0 AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION
+            SELECT
+            a.dictionary_id + 1000000 AS IDX, a.dictionary_code MA, a.dictionary_name TEN, 0 AS CAP, 0 AS CAPTREN_ID ,
+            0 COTHUCHIENDICHVU, a.dictionary_id AS NHOMPHONGBAN_IDX, 0 TAMNGUNG, a.dictionary_id + 2000000 AS  PARENTIDX,
+            'L' AS KIND, '' LocationName, '' LocationName2, '' LocationName3
+            FROM  LST_DICTIONARY a
+            WHERE a.DICTIONARY_TYPE_CODE = 'LoaiPhongBan' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetAllEmployeeFromHIS" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT a.NHANVIEN_ID,b.PHONGBAN_ID,b.TENPHONGBAN , a.MANHANVIEN , a.TENNHANVIEN
+            ,Convert(varchar,a.NGAYSINH,103) As NGAYSINH , a.DIACHI , g.DESCRIPTION GIOITINH
+            ,e.dictionary_name as QUOCTICH , d.dictionary_name as CHUCVU , c.dictionary_name as CHUCDANH
+            ,f.tendonvicongtac as DONVICONGTAC, a.TAMNGUNG
+            FROM TM_NHANVIEN a
+            join TM_PHONGBAN b on b.PhongBan_Id = a.PhongBan_Id
+            left join LST_DICTIONARY c on c.Dictionary_id = a.ChucDanh_id
+            left join LST_DICTIONARY d on d.Dictionary_id = a.ChucVu_Id
+            left join LST_DICTIONARY e on e.Dictionary_id = a.QuocTich_Id
+            left join TM_DONVICONGTAC f on f.donvicongtac_id = a.DonViCongtac_Id
+            left join TM_GENDER g ON a.GioiTinh = g.ID
+            where a.tamNgung = 0 AND a.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetAllPatientTypeFromHIS" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT a.DOiTUONG_ID AS IDX, MADOITUONG AS MA, TENDOITUONG TEN, ACTIVE TAMNGUNG, a.NHOMDICHVU AS  NHOMDICHVU_IDX,
+            a.NHOMDICHVU + 1000000 AS  PARENTIDX, 'D' AS KIND
+            FROM TM_DOITUONG a
+            WHERE a.ACTIVE = 1 AND BENHVIEN_ID = '$BENHVIEN_ID$'
+            UNION
+            SELECT a.DICTIONARY_ID + 1000000 AS IDX, DICTIONARY_CODE MA, DICTIONARY_NAME TEN, 0 TAMNGUNG, a.DICTIONARY_ID AS NHOMDICHVU_IDX  ,
+            a.DICTIONARY_ID + 2000000 AS  PARENTIDX, 'L' AS KIND
+            FROM LST_DICTIONARY a
+            WHERE a.dictionary_type_code = 'NhomDoiTuong' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetAllPatientChuaCapSIDByBN" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          SELECT DISTINCT cast(0 as bit) as TESTAGAIN, b.BENHNHAN_ID, UPPER(b.TENBENHNHAN) TENBENHNHAN
+          , NGAYCHIDINH = CONVERT(date, a.NgayGioYeuCau, 103), b.MAYTE MAYTE, SoPhieu = null, DVYeuCau_Id = -1, a.Khan, GETDATE() NgayTao
+          FROM TT_DVYEUCAU (NoLock) a
+          JOIN TT_TiepNhan tn ON a.TiepNhan_ID = tn.TiepNhan_ID
+          JOIN TM_DICHVU (NoLock) c ON a.DichVu_Id = c.DichVu_Id
+          JOIN TM_NHOMDICHVU e ON c.NhomDichVu_Id = e.NhomDichVu_Id
+          JOIN TT_BENHNHAN (NoLock) b ON a.BenhNhan_Id = b.BenhNhan_ID
+          LEFT JOIN TT_LAB_SIDSTATUS (NoLock) d ON a.DVYEUCAU_ID = d.CLSYeuCau_Id
+          left join TT_VIENPHI VP on VP.TIEPNHAN_ID = tn.TIEPNHAN_ID and VP.DICHVU_ID = a.DICHVU_ID and VP.REF_ID = a.DVYEUCAU_ID
+		  LEFT JOIN TT_NOITRU_BENHAN ba ON ba.TIEPNHAN_ID = tn.TIEPNHAN_ID
+          WHERE a.NgayYeuCau  BETWEEN '$TuNgay$'  AND '$DenNgay$'
+          AND a.HUYYEUCAU = 0 AND a.NGAYHENCLS is NULL
+          AND e.MaNhomDichVu IN (SELECT s FROM SplitString('$LoadDichVuCode$', ','))
+          AND ((a.TrangThai = 'ChuaKetQua' AND vp.DaThanhToan = '1') OR tn.TrangThai = 'CAPCUU' OR tn.TrangThai = 'NOITRU' or tn.SUDUNG_BHTN='1' or tn.BAOLANH_VIENPHI='1' or vp.DUOCPHEPTHUCHIEN = '1' OR ba.BenhAn_Id IS NOT NULL)
+          <!-- DucNT24   and (a.DuocPhepThucHien = 1 or a.LoaiGia_Id=6) -->
+            AND ISNULL(d.STATUS, 4) = 4
+            and d.CLSYeuCau_Id is null
+            group by b.MAYTE, b.BenhNhan_Id, b.TenBenhNhan, CONVERT(date, a.NgayGioYeuCau, 103), a.NgayTao, a.Khan
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetPatientInfo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select top 1 cls.SoPhieuYeuCau, p.BenhNhan_Id, P.BenhVien_ID AS HospitalCode, MAYTE PatientCode, TenBenhNhan PatientName,
+          CASE WHEN g.Description = N'NAM' THEN 'T' ELSE 'G' END Sex,
+          NamSinh YOB, p.NgaySinh DOB, p.DIACHILIENLAC Address, null Address2, D.NhanVien_Id, D.TenNhanVien, P.SoDienThoai Tel,
+          Dep.TenPhongBan, cls.NoiThucHien_Id, cls.NoiYeuCau_Id, cls.BarCodeId, tn.DoiTuong_Id PatientTypeID, cls.ChanDoan,
+          ba.SoBenhAn, p.NgayTao as IssueDate_His, p.QuocTich_Id as NationalityID, p.TinhThanh_Id as ProvinceID,
+          p.QuanHuyen_Id as DistrictID, (case when p.XaPhuong_Id like N'%kxd%' then NULL else p.XaPhuong_Id end)  as WardID, p.NgheNghiep_Id as OccupationID,
+          p.CMND as IDNumber, p.NgayTao as IDIssueDate, (case when p.XaPhuong_Id like N'%kxd%' then NULL else p.XaPhuong_Id end)  as IDIssuePlace, cls.Khan, tn.UuTien
+          from TT_BENHNHAN (NoLock) P
+          JOIN TT_DVYEUCAU (NoLock) cls ON cls.BenhNhan_Id = P.BenhNhan_Id
+          JOIN TM_DichVu dv ON cls.DichVu_Id = dv.DichVu_id
+          JOIN TM_NhomDichVu ndv ON dv.NhomDichVu_Id = ndv.NhomDichVu_Id
+          JOIN TM_GENDER g ON p.GioiTinh = g.ID
+          left join TT_TIEPNHAN (NoLock) tn on tn.BenhNhan_Id = p.BenhNhan_Id
+          left join TT_NOITRU_BENHAN (NoLock) ba on ba.BenhAn_Id = cls.BenhAn_Id
+          left join TM_NHANVIEN D on cls.BacSiChiDinh_Id = D.NhanVien_Id
+          left join TM_PHONGBAN Dep on cls.NoiYeuCau_Id = Dep.PhongBan_Id
+          where P.BenhNhan_Id = '$BenhNhan_ID$'
+          AND ndv.MaNhomDichVu IN (SELECT s FROM SplitString('$LoadDichVuCode$', ','))
+          <!--and (cls.SoPhieuYeuCau like '%0101%' or cls.SoPhieuYeuCau like '%0102%' or cls.SoPhieuYeuCau like '%0105%'
+			or cls.SoPhieuYeuCau like '%0108%' or cls.SoPhieuYeuCau like '%0109%' or cls.SoPhieuYeuCau like '%0112%'
+			or cls.SoPhieuYeuCau like '%0113%' or cls.SoPhieuYeuCau like '%0110%' or cls.SoPhieuYeuCau like '%0104%'
+			or cls.SoPhieuYeuCau like '%0106%' or cls.SoPhieuYeuCau like '%0103%' or cls.SoPhieuYeuCau like '%0114%'
+			or cls.SoPhieuYeuCau like '%HTSS%' or cls.SoPhieuYeuCau like '%0707%') -->
+            order by cls.NgayYeuCau desc
+        </statement>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetDichVuAllByBenhNhanId" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          SELECT RESULTID = cast(NULL as int), a.DICHVU_ID, c.TENDICHVU, c.MADICHVU,
+          BARCODEID = d.LABBARCODEID, d.SIDISSUEDATE, STATUSCODE = ISNULL(d.STATUS, '4'),
+          a.DVYeuCau_ID CLSYeuCau_Id, a.DVYeuCau_ID as REQUESTID, A.SOPHIEUYEUCAU, a.DVYeuCau_ID YeuCauChiTiet_Id,
+          a.DVYeuCau_ID as RequestDetailID, a.NgayYeuCau, a.NgayGioYeuCau ThoiGianYeuCau, a.BACSICHIDINH_ID,NhomDichVu_Id=c.NhomDichVu_Id,
+          a.NOIYEUCAU_ID, a.CHANDOAN,cast(1 as bit) as TESTAGAIN, a.Khan, n.TenNhomDichVu, n.MaNhomDichVu
+          FROM TT_DVYEUCAU (NoLock) a
+          JOIN TT_TiepNhan tn ON a.TiepNhan_ID = tn.TiepNhan_Id
+          JOIN TM_DICHVU (NoLock) c ON c.DichVu_Id = a.DichVu_Id
+          JOIN dbo.TM_NHOMDICHVU(NoLock) n ON n.NhomDichVu_Id = c.NhomDichVu_Id
+          <!--JOIN CLSYeuCauChiTiet (NoLock) b ON a.CLSYeuCau_Id = b.CLSYeuCau_Id-->
+          LEFT JOIN TT_LAB_SIDSTATUS (NoLock) d on d.CLSYeuCau_Id = a.DVYeuCau_ID
+          left join TT_VIENPHI VP on VP.TIEPNHAN_ID = tn.TIEPNHAN_ID and VP.DICHVU_ID = a.DICHVU_ID and VP.REF_ID = a.DVYEUCAU_ID
+          join TT_BENHNHAN (NoLock) e on e.BenhNhan_Id = a.BenhNhan_Id
+          LEFT JOIN TT_NOITRU_BENHAN ba ON ba.TIEPNHAN_ID = tn.TIEPNHAN_ID
+          WHERE CAST(a.NgayYeuCau AS DATE) BETWEEN CAST('$TuNgay$' AS DATE) AND CAST('$DenNgay$' AS DATE)
+          AND a.HUYYEUCAU = 0 AND a.NGAYHENCLS is NULL
+          AND ((a.TrangThai = 'ChuaKetQua' AND vp.DaThanhToan = '1') OR tn.TrangThai = 'CAPCUU' OR tn.TrangThai = 'NOITRU' or tn.SUDUNG_BHTN='1' or tn.BAOLANH_VIENPHI='1' or vp.DUOCPHEPTHUCHIEN = '1' OR ba.BenhAn_Id IS NOT NULL)
+          <!--AND a.TrangThai = 'ChuaKetQua'-->
+          AND n.MaNhomDichVu IN (SELECT s FROM SplitString('$LoadDichVuCode$', ','))
+          and c.TamNgung = 0
+          <!--AND vp.DaThanhToan = '1'-->
+          <!-- DucNT24  and (a.DuocPhepThucHien = 1 or b.LoaiGia_Id=6)-->
+          and e.BenhNhan_Id = '$BenhNhan_ID$'
+          AND ISNULL(d.STATUS, 4) = 4
+          AND d.CLSYeuCau_Id is null
+          order by n.NhomDichVu_Id, c.IDX
+        </statement>
+        <!--Revision:0-->
+        <insert id="DAO00081_InsertLabSIDStatus" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            UPDATE TT_DVYeuCau SET TRANGTHAI = 'DALAYMAU', DALAYMAU = '1' WHERE DVYeuCau_Id = #CLSYeuCau_Id#
+            INSERT INTO TT_Lab_SIDStatus
+            (
+            LabBarCodeID, CLSYeuCau_Id, CLSYeuCauChiTiet_Id,
+            ServiceID, SIDIssueDate, SamplePlaceID, SamplePlace,
+            Status
+            <!--, SIDIssueDateTime-->
+            )
+            VALUES
+            (
+            #LabBarCodeID#, #CLSYeuCau_Id#, #CLSYeuCauChiTiet_Id#,
+            #ServiceID#, ISNULL(#SIDIssueDate#, getdate()), #SamplePlaceID#,
+            #SamplePlace#, #Status#
+            <!--, GETDATE()-->
+            )
+            <selectKey resultClass="System.Int64" type="post">
+                SELECT @@IDENTITY as value
+            </selectKey>
+        </insert>
+        <!--Revision:0-->
+        <statement id="DAO00081_GetPatientInfoByMaYTe" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          SELECT TENBENHNHAN, SUBSTRING(LTRIM(TENBENHNHAN),0,CHARINDEX(' ', LTRIM(TENBENHNHAN))) as HO,
+          SUBSTRING(LTRIM(TENBENHNHAN),CHARINDEX(' ', LTRIM(TENBENHNHAN)) + 1, len(LTRIM(TENBENHNHAN))) as TEN,
+          null TENKHONGDAU, Convert(varchar,NGAYSINH,103) As NGAYSINH,
+          NAMSINH, DIACHICOQUAN, SODIENTHOAI, EMAIL,
+          Convert(varchar,NGAYTAO,120) As NGAYTAO, QUOCTICH_ID, TINHTHANH_ID,
+          QUANHUYEN_ID, (case when XaPhuong_Id like N'%kxd%' then NULL else XaPhuong_Id end)  as XAPHUONG_ID, NGHENGHIEP_ID, GHICHU,
+          HOCHIEU, CMND, null NgayCapCMND, null NoiCapCMND from TT_BENHNHAN
+          WHERE MAYTE = '$SoVaoVien$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0-->
+        <update id="DAO00081_DeleteLabSIDStatus" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            DECLARE @RowCountTempp INT
+            DECLARE @CLSYeuCau_ID_ INT
+            DECLARE @CLSYeuCauChiTiet_ID_ INT
+            DECLARE @DichVu_ID INT
+            SELECT @CLSYeuCau_ID_ = CLSYeuCau_Id, @CLSYeuCauChiTiet_ID_ = CLSYeuCauChiTiet_Id,
+            @DichVu_ID = ServiceID
+            FROM TT_LAB_SIDSTATUS
+            WHERE  LabBarCodeID = '$BarCodeID$' and ClsYeuCauChiTiet_Id = '$RequestDetailID$'
+            <!-- Xóa dòng trong bảng CLSKetQuaChiTiet-->
+            DELETE FROM TT_CLSKETQUACHITIET
+            WHERE (DichVu_Id = @DichVu_ID OR DichVu_Id IN (SELECT DichVu_Id FROM TM_DICHVU WHERE CapTren_Id = @DichVu_ID))
+            AND CLSKetQua_Id = (SELECT CLSKetQua_Id FROM TT_CLSKETQUA WHERE DVYEUCAU_ID = @CLSYeuCau_ID_)
+            <!-- Update CLSYeuCauChiTiet về trạng thái ChuaThucHien-->
+            UPDATE TT_DVYeuCau SET TrangThai = 'CHUAKETQUA', DALAYMAU = 0 WHERE DVYEUCAU_ID = '$RequestDetailID$'
+			UPDATE TT_VIENPHI SET DATHUCHIEN ='0' WHERE REF_ID = '$RequestDetailID$' and REF_TABLE = 'TT_DVYEUCAU'
+            <!-- Kiểm tra nếu xóa hết CLSKetQuaChiTietID thì xóa trong CLSKetQua đi-->
+            IF (NOT EXISTS(SELECT * FROM TT_CLSKETQUACHITIET WHERE CLSKetQua_Id = (SELECT CLSKetQua_Id FROM TT_CLSKETQUA WHERE DVYEUCAU_ID = @CLSYeuCau_ID_)))
+            BEGIN
+            DELETE FROM TT_CLSKETQUA WHERE CLSKETQUA_ID IN (SELECT CLSKetQua_Id FROM TT_CLSKETQUA WHERE DVYEUCAU_ID = @CLSYeuCau_ID_)
+            UPDATE TT_DVYeuCau SET TrangThai = 'CHUAKETQUA' WHERE DVYEUCAU_ID = @CLSYeuCau_ID_
+            END
+            DELETE FROM  TT_LAB_SIDSTATUS
+            WHERE  LabBarCodeID = '$BarCodeID$' and ClsYeuCauChiTiet_Id = '$RequestDetailID$'
+            SET @RowCountTempp =  @@RowCount
+            IF @RowCountTempp &gt; 1
+            SET ROWCOUNT  1
+            ELSE
+            SET ROWCOUNT  0
+        </update>
+        <!--Revision:0-->
+        <udpate id="DAO00081_Update_ClsKetQua" parameterClass="System.Collections.IDictionary">
+            UPDATE TT_CLSKETQUA
+            SET
+            SOPHIEUXETNGHIEM = #SOPHIEUYEUCAU#,
+            DVYEUCAU_ID = #CLSYeuCau_Id#,
+            NgayThucHien = #NgayThucHien#,
+            ThoiGianThucHien = #ThoiGianThucHien#,
+            NgayGioThucHien = #NgayGioThucHien#,
+            NoiThucHien_Id = #NoiThucHien_Id#,
+            BacSiKetLuan_Id = #BacSiKetLuan_Id#,
+            NgayCapNhat = #NgayTao#,
+            NguoiCapNhat_Id = #NguoiTao_Id#,
+            GioThucHien = #GioThucHien#,
+            NamThucHien = #NamThucHien#,
+            ThangThucHien = #ThangThucHien#,
+            MaNhanVienTraKetQua = #UserValidResult#,
+            ThoiGianTra = #DateTimeValidResult#,
+            BenhVien_ID = #Hospital_ID#,
+            WHERE CLSKetQua_Id = #CLSKetQua_Id#
+        </udpate>
+        <!--Revision:0,d41d8cd98f00b204e9800998ecf8427e-->
+        <insert id="DAO00081_Insert_ClsKetQua" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            INSERT INTO TT_CLSKETQUA
+            (
+            ID
+            ,SOPHIEUXETNGHIEM
+            ,DVYEUCAU_ID
+            ,NgayThucHien
+            ,ThoiGianThucHien
+            ,NoiThucHien_Id
+            ,BacSiKetLuan_Id
+            ,NguoiTao_Id
+            ,NgayTao
+            ,TrangThai
+            ,NgayGioThucHien
+            ,GioThucHien
+            ,NamThucHien
+            ,ThangThucHien
+            ,MaNhanVienTraKetQua
+            ,ThoiGianTra
+            ,BenhVien_ID
+            )
+            VALUES
+            (
+            #ID#
+            ,#SOPHIEUYEUCAU#
+            ,#CLSYeuCau_Id$#
+            ,#NgayThucHien#
+            ,#ThoiGianThucHien#
+            ,#NoiThucHien_Id#
+            ,#BacSiKetLuan_Id#
+            ,#NguoiTao_Id#
+            ,#NgayTao#
+            ,#TrangThai#
+            ,#NgayGioThucHien#
+            ,#GioThucHien#
+            ,#NamThucHien#
+            ,#ThangThucHien#
+            ,#UserValidResult#
+            ,#DateTimeValidResult#
+            ,#Hospital_ID#
+            )
+            <selectKey resultClass="System.Int64" type="post">
+                SELECT @@IDENTITY as value
+            </selectKey>
+        </insert>
+        <!--Revision:0,d41d8cd98f00b204e9800998ecf8427e-->
+        <statement id="DAO00081_GetCLSKetQuaId_byDichVuYeuCauId" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT CLSKetQua_Id  from TT_CLSKETQUA where DVYEUCAU_ID = '$CLSYeuCau_Id$'
+        </statement>
+        <!--Revision:0,d41d8cd98f00b204e9800998ecf8427e-->
+        <statement id="DAO00081_GetCLSKetQuaChiTietId_ByKetQuaId" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT CLSKetQuaChiTiet_Id
+            FROM TT_CLSKETQUACHITIET
+            WHERE CLSKetQua_Id = '$CLSKetQua_Id$' and DichVu_Id = '$DichVu_Id$'
+        </statement>
+        <!--Revision:0,d41d8cd98f00b204e9800998ecf8427e-->
+        <insert id="DAO00081_Insert_ClsKetQuaChiTiet" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            INSERT INTO TT_CLSKETQUACHITIET
+            (
+            ID
+            ,CLSKetQua_Id
+            ,DVYeuCau_ID
+            ,DichVu_Id
+            ,DonViTinh
+            ,KetQua
+            ,KetQua2
+            ,MucBinhThuong
+            ,MucBinhThuongMin
+            ,MucBinhThuongMax
+            ,BatThuong
+            ,ThucHienBenNgoai
+            ,BENHVIEN_ID
+            )
+            VALUES
+            (
+            #ID#
+            ,#CLSKetQua_Id#
+            ,#CLSYeuCau_Id#
+            ,#DichVu_Id#
+            ,#DonViTinh#
+            ,#KetQua#
+            ,#KetQua2#
+            ,#MucBinhThuong#
+            ,#MucBinhThuongMin#
+            ,#MucBinhThuongMax#
+            ,#BatThuong#
+            ,#ThucHienBenNgoai#
+            ,#BENHVIEN_ID#
+            )
+            <selectKey resultClass="System.Int64" type="post">
+                SELECT @@IDENTITY as value
+            </selectKey>
+        </insert>
+        <!--Revision:0,d41d8cd98f00b204e9800998ecf8427e-->
+        <udpate id="DAO00081_Update_ClsKetQuaChiTiet" parameterClass="System.Collections.IDictionary">
+            UPDATE TT_CLSKETQUACHITIET
+            SET
+            DonViTinh = '$DonViTinh$',
+            DVYeuCau_ID = '$CLSYeuCau_Id$',
+            KetQua = '$KetQua$',
+            KetQua2 = '$KetQua2$',
+            MucBinhThuong = '$MucBinhThuong$',
+            MucBinhThuongMin = '$MucBinhThuongMin$',
+            MucBinhThuongMax = '$MucBinhThuongMax$',
+            BatThuong = '$BatThuong$',
+            ThucHienBenNgoai = '$ThucHienBenNgoai$'
+            WHERE CLSKetQuaChiTiet_Id = #CLSKetQuaChiTiet_Id#
+        </udpate>
+        <!--Revision:0,d41d8cd98f00b204e9800998ecf8427e-->
+        <udpate id="DAO00081_Update_DVYeuCau_TrangThai" parameterClass="System.Collections.IDictionary">
+            UPDATE  TT_DVYeuCau
+            SET    TrangThai = '$TrangThai$'
+            WHERE  DVYEUCAU_ID = '$CLSYeuCau_Id$'
+        </udpate>
+      <statement id="DAO00081_InsertCLSKetQua" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        DECLARE @GioThucHien INT
+        DECLARE @NgayGioThucHien DATETIME
+        DECLARE @NamThucHien INT
+        DECLARE @ThangThucHien INT
+        DECLARE @TrangThai VARCHAR(20)
+        DECLARE @NgayTao DATETIME
+        DECLARE @NgayCapNhat DATETIME
+        DECLARE @NguoiCapNhat_Id INT
+        DECLARE @CLSKetQua_Id INT
+        DECLARE @SOPHIEUYEUCAU VARCHAR(30)
+        SET @GioThucHien = datepart(hh, '$ThoiGianThucHien$')
+        SET @NgayGioThucHien = convert(smalldatetime, '$ThoiGianThucHien$')
+        SET @NamThucHien = year('$ThoiGianThucHien$')
+        SET @ThangThucHien = month('$ThoiGianThucHien$')
+        SET @TrangThai = 'DangThucHien'
+        SET @NgayTao = GetDate()
+        SET @NgayCapNhat = Null
+        SET @NguoiCapNhat_Id = Null
+
+        SELECT @SOPHIEUYEUCAU = SOPHIEUYEUCAU FROM  TT_DVYEUCAU where DVYEUCAU_ID = '$CLSYeuCau_Id$'
+        SELECT @CLSKetQua_Id = CLSKetQua_Id from TT_CLSKETQUA where DVYEUCAU_ID = '$CLSYeuCau_Id$'
+        IF (ISNULL(@CLSKetQua_Id, 0) = 0)
+        BEGIN
+        INSERT INTO TT_CLSKETQUA
+        (
+        SOPHIEUXETNGHIEM, DVYEUCAU_ID,NgayThucHien,ThoiGianThucHien,NoiThucHien_Id,BacSiKetLuan_Id,NguoiTao_Id,NgayTao,TrangThai,
+        NgayGioThucHien,GioThucHien,NamThucHien, ThangThucHien, MaNhanVienTraKetQua, ThoiGianTra, BenhVien_ID
+        )
+        VALUES
+        (
+        @SOPHIEUYEUCAU, '$CLSYeuCau_Id$','$NgayThucHien$','$ThoiGianThucHien$',
+        '$NoiThucHien_Id$','$BacSiKetLuan_Id$','$NguoiTao_Id$', getdate(),@TrangThai,
+        @NgayGioThucHien,@GioThucHien, @NamThucHien, @ThangThucHien, '$UserValidResult$', getdate() <!--'$DateTimeValidResult$'-->, '$Hospital_ID$'
+        )
+        SET @CLSKetQua_Id =  IDENT_CURRENT('TT_CLSKETQUA')
+        UPDATE  TT_DVYeuCau
+        SET    TrangThai = 'HOANTAT'
+        WHERE  DVYEUCAU_ID = '$CLSYeuCau_Id$'
+
+        UPDATE  TT_VIENPHI
+        SET    DATHUCHIEN = 1
+        WHERE  REF_ID = '$CLSYeuCau_Id$' and REF_TABLE = 'TT_DVYEUCAU'
+
+        END
+        ELSE
+        BEGIN
+        UPDATE TT_CLSKETQUA
+        SET
+        SOPHIEUXETNGHIEM = @SOPHIEUYEUCAU,
+        DVYEUCAU_ID = '$CLSYeuCau_Id$',
+        NgayThucHien = '$NgayThucHien$',
+        ThoiGianThucHien = '$ThoiGianThucHien$',
+        NgayGioThucHien = @NgayGioThucHien,
+        NoiThucHien_Id = '$NoiThucHien_Id$',
+        BacSiKetLuan_Id = '$BacSiKetLuan_Id$',
+        <!--NgayCapNhat = '$NgayTao$',-->
+        NguoiCapNhat_Id = '$NguoiTao_Id$',
+        GioThucHien = @GioThucHien,
+        NamThucHien = @NamThucHien,
+        ThangThucHien = @ThangThucHien,
+        MaNhanVienTraKetQua = '$UserValidResult$',
+        ThoiGianTra = getdate(), <!--'$DateTimeValidResult$',-->
+        BenhVien_ID = '$Hospital_ID$',
+        ngaycapnhat = getdate()
+        WHERE CLSKetQua_Id = @CLSKetQua_Id
+        END
+        SELECT @CLSKetQua_Id As value
+      </statement>
+      <statement id="DAO00081_InsertClsKetQuaChiTiet" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        DECLARE @MucBinhThuong_ NVARCHAR(50)
+        IF '$MucBinhThuongMin$' is null and '$MucBinhThuongMax$' is null
+        SET @MucBinhThuong_ = null
+        ELSE IF '$MucBinhThuongMin$' is not null and '$MucBinhThuongMax$' is null
+        SET @MucBinhThuong_ = '$MucBinhThuongMin$'
+        ELSE IF '$MucBinhThuongMin$' is null and '$MucBinhThuongMax$' is not null
+        SET @MucBinhThuong_ = '$MucBinhThuongMax$'
+        ELSE
+        SET @MucBinhThuong_ = '$MucBinhThuongMin$' + ' - ' + '$MucBinhThuongMax$'
+        DECLARE @CLSKetQuaChiTiet_Id INT
+        SELECT @CLSKetQuaChiTiet_Id = CLSKetQuaChiTiet_Id
+        FROM TT_CLSKETQUACHITIET
+        WHERE CLSKetQua_Id = '$CLSKetQua_Id$' and DichVu_Id = '$DichVu_Id$'
+
+        IF (ISNULL(@CLSKetQuaChiTiet_Id, 0) = 0)
+        BEGIN
+        INSERT INTO TT_CLSKETQUACHITIET
+        (
+        CLSKetQua_Id, DVYeuCau_ID,DichVu_Id,DonViTinh,KetQua,KetQua2,
+        MucBinhThuong,MucBinhThuongMin,MucBinhThuongMax,BatThuong,
+        ThucHienBenNgoai,BENHVIEN_ID
+        )
+        VALUES
+        (
+        '$CLSKetQua_Id$','$CLSYeuCau_Id$','$DichVu_Id$','$DonViTinh$',#KetQua#,#KetQua2#,
+        @MucBinhThuong_,'$MucBinhThuongMin$','$MucBinhThuongMax$','$BatThuong$',
+        '$ThucHienBenNgoai$','$BENHVIEN_ID$'
+        )
+
+        SET @CLSKetQuaChiTiet_Id = IDENT_CURRENT('TT_CLSKETQUACHITIET')
+        END
+        ELSE
+        BEGIN
+        UPDATE TT_CLSKETQUACHITIET
+        SET
+        DonViTinh = '$DonViTinh$',
+        DVYeuCau_ID = '$CLSYeuCau_Id$',
+        KetQua = #KetQua#,
+        KetQua2 = #KetQua2#,
+        MucBinhThuong = @MucBinhThuong_,
+        MucBinhThuongMin = '$MucBinhThuongMin$',
+        MucBinhThuongMax = '$MucBinhThuongMax$',
+        BatThuong = '$BatThuong$',
+        ThucHienBenNgoai = '$ThucHienBenNgoai$'
+        WHERE CLSKetQuaChiTiet_Id = @CLSKetQuaChiTiet_Id
+        END
+
+        <!--UPDATE TT_DVYEUCAU
+		SET    TrangThai = '$TrangThai$'
+		WHERE DVYEUCAU = '$YeuCauChiTiet_Id$'-->
+
+        SELECT @CLSKetQuaChiTiet_Id As value
+        <!--
+		UPDATE        HoaDonChiTiet
+			SET    TrangThai = @TrangThai
+		where YeuCauChiTiet_Id = @YeuCauChiTiet_Id
+			and    DaHoanTra = 0-->
+      </statement>
+
+      <statement id="DAO00081_GetDichVuLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT DV.DICHVU_ID
+        ,DICHVUCAPTREN_ID = DV.CAPTREN_ID
+        ,DV.MADICHVU
+        ,DV.TENDICHVU
+        ,DV.TAMNGUNG
+        ,DV.DONVITINH
+        ,DV.CAP
+        ,NDV.NHOMDICHVU_ID
+        ,NDV.MANHOMDICHVU
+        ,NDV.TENNHOMDICHVU
+        ,LOAIXETNGHIEM = CASE WHEN NDV.MANHOMDICHVU = '0103' THEN 2
+                          WHEN NDV.MANHOMDICHVU = '0106' THEN 3
+                          ELSE 1 END
+        ,CHISOBINHTHUONG = ''
+        FROM TM_DICHVU DV
+        JOIN TM_NHOMDICHVU NDV ON DV.NHOMDICHVU_ID = NDV.NHOMDICHVU_ID
+        WHERE NDV.MANHOMDICHVU LIKE '01%'
+        AND DV.BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00081_GetPhongBanLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select PHONGBAN_ID
+        ,MAPHONGBAN
+        ,TENPHONGBAN
+        ,TAMNGUNG
+        from TM_PHONGBAN
+        WHERE BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00081_GetNhanVienLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select NHANVIEN_ID
+        ,MANHANVIEN
+        ,TENNHANVIEN
+        ,TAMNGUNG
+        ,PHONGBAN_ID
+        from TM_NHANVIEN
+        WHERE BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00081_GetDoiTuongLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select DOITUONG_ID
+        ,MADOITUONG
+        ,TENDOITUONG
+        ,TAMNGUNG =  case when ACTIVE = 1 then 0 else 1 end
+        from TM_DOITUONG
+        WHERE BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00081_GetCongTyKSKLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select CONGTY_ID = HOPDONG_ID
+        ,CT.MACONGTY
+        ,CT.TENCONGTY
+        ,CT.TAMNGUNG
+        from TT_KSK_HOPDONG HD
+        JOIN TT_KSK_CONGTY CT ON CT.CONGTY_ID = HD.CONGTY_ID
+        WHERE CT.BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00081_GetThietBiLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT THIETBI_ID
+        ,MATHIETBI
+        ,TENTHIETBI
+        ,TAMNGUNG
+        ,PHONGBAN_ID
+        FROM TM_THIETBI
+        WHERE BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00081_GetKhangSinhDoLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT ID = KS.KHANGSINHDO_ID
+        ,MA = KS.MAKHANGSINHDO
+        ,TEN = KS.TENKHANGSINHDO
+        ,ISVIKHUAN = CASE WHEN L.DICTIONARY_CODE = 'ViKhuan' THEN 1 ELSE 0 END
+        FROM TM_KHANGSINHDO KS
+        JOIN LST_DICTIONARY L ON L.DICTIONARY_ID = KS.LOAIKHANGSINHDO_ID
+        WHERE KS.BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00081_GetDanhSachChoLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT YC.BENHAN_ID
+        ,YC.TIEPNHAN_ID
+        ,YC.BENHNHAN_ID
+        ,BN.MAYTE
+        ,BN.TENBENHNHAN
+        ,DIACHI = BN.DIACHILIENLAC
+        ,BN.GIOITINH
+        ,BN.NAMSINH
+        ,BN.NGAYSINH
+        ,MABACSI = NULL
+        ,TENBACSI = NULL
+        ,MAPHONGBAN = NULL
+        ,TENPHONGBAN = NULL
+        ,CHANDOAN = NULL
+        ,CONGTY_ID = YC.HOPDONG_ID
+        ,MADOITUONG = DT.MADOITUONG
+        ,TENDOITUONG = DT.TENDOITUONG
+        ,NGAYCHIDINH = YC.NGAYYEUCAU
+        ,MAGIUONG = GB.MAGIUONG
+        ,LUUTRU_ID = GB.LUUTRU_ID
+        ,LUUTRUCHITIET_ID = GB.LUUTRUCHITIET_ID
+        ,KHUVUC = CASE WHEN BA.LOAIBENHAN = 1 AND YC.BENHAN_ID IS NOT NULL THEN 3
+        WHEN BA.LOAIBENHAN = 3 AND YC.BENHAN_ID IS NOT NULL THEN 2
+        ELSE 1 END
+        FROM TT_DVYEUCAU YC
+        JOIN TT_BENHNHAN BN ON BN.BENHNHAN_ID = YC.BENHNHAN_ID
+        LEFT JOIN TT_VIENPHI VP ON VP.REF_ID = YC.DVYEUCAU_ID AND VP.REF_TABLE = 'TT_DVYEUCAU'
+        LEFT JOIN TT_TIEPNHAN TN ON TN.TIEPNHAN_ID = YC.TIEPNHAN_ID
+        LEFT JOIN TM_DOITUONG DT ON DT.DOITUONG_ID = TN.DOITUONG_ID
+        LEFT JOIN TT_NOITRU_BENHAN BA ON BA.BENHAN_ID = YC.BENHAN_ID
+        LEFT JOIN (SELECT LT.BENHAN_ID,CT.LUUTRU_ID,CT.LUUTRUCHITIET_ID,G.MAGIUONG
+                  FROM TT_NOITRU_LUUTRUCHITIET CT
+                  JOIN TT_NOITRU_LUUTRU LT ON CT.LUUTRU_ID = LT.LUUTRU_ID
+                  JOIN TM_GIUONGBENH G ON G.GIUONGBENH_ID = CT.GIUONGBENH_ID
+                  WHERE CT.LUUTRUCHITIET_CURRENT = '1'
+                  ) GB ON GB.BENHAN_ID = BA.BENHAN_ID
+        LEFT JOIN TM_DICHVU DV ON DV.DICHVU_ID = YC.DICHVU_ID
+        LEFT JOIN TM_NHOMDICHVU NDV ON NDV.NHOMDICHVU_ID = DV.NHOMDICHVU_ID
+        WHERE
+        YC.NGAYYEUCAU BETWEEN #TUNGAY# AND #DENNGAY#
+        <isNotNull prepend="AND" property="CONGTY_ID">
+          YC.HOPDONG = #CONGTY_ID#
+        </isNotNull>
+        AND YC.HUYYEUCAU = 0
+        AND YC.NGAYHENCLS IS NULL
+        AND NDV.MANHOMDICHVU LIKE '01%'
+        AND (YC.BENHAN_ID IS NOT NULL OR YC.TRANGTHAI_WFL = 'CHOLAYMAU' OR VP.DATHANHTOAN = '1' OR VP.DUOCPHEPTHUCHIEN = '1')
+        and ISNULL(yc.DALAYMAU,'0') = '0'
+        AND YC.BENHVIEN_ID = #BENHVIEN_ID#
+        GROUP BY
+        YC.BENHAN_ID
+        ,YC.TIEPNHAN_ID
+        ,YC.BENHNHAN_ID
+        ,BN.MAYTE
+        ,BN.TENBENHNHAN
+        ,BN.DIACHILIENLAC
+        ,BN.GIOITINH
+        ,BN.NAMSINH
+        ,BN.NGAYSINH
+        , YC.HOPDONG_ID
+        , DT.MADOITUONG
+        , DT.TENDOITUONG
+        , YC.NGAYYEUCAU
+        ,BA.LOAIBENHAN
+        ,YC.BENHAN_ID
+        ,GB.MAGIUONG
+        ,GB.LUUTRU_ID
+        ,GB.LUUTRUCHITIET_ID
+      </statement>
+    <statement id="DAO00081_GetChiTietXetNghiemLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT YC.BENHAN_ID
+      ,YC.TIEPNHAN_ID
+      ,YC.BENHNHAN_ID
+      ,DV.DICHVU_ID
+      ,DV.MADICHVU
+      ,DV.TENDICHVU
+      ,YC.DVYEUCAU_ID
+      ,YC.SOPHIEUYEUCAU
+      ,THOIGIANCHIDINH = YC.NGAYGIOYEUCAU
+      ,TRANGTHAI = CASE WHEN ISNULL(YC.DALAYMAU,'0') = 0 THEN 1
+      WHEN ISNULL(YC.DALAYMAU,'0') = 1 AND YC.TRANGTHAI = 'DALAYMAU' THEN 2
+      WHEN ISNULL(YC.DALAYMAU,'0') = 1 AND YC.TRANGTHAI = 'HOANTAT' THEN 4
+      ELSE 3
+      END
+      ,YC.CHANDOAN
+      ,MABACSI = BSCD.MANHANVIEN
+      ,TENBACSI = BSCD.TENNHANVIEN
+      ,MAPHONGBANTH = PB.MAPHONGBAN
+      ,TENPHONGBANTH = PB.TENPHONGBAN
+      ,MAPHONGBANCD = CD.MAPHONGBAN
+      ,TENPHONGBANCD = CD.TENPHONGBAN
+      FROM TT_DVYEUCAU YC
+      JOIN TT_BENHNHAN BN ON BN.BENHNHAN_ID = YC.BENHNHAN_ID
+      LEFT JOIN TM_NHANVIEN BSCD ON BSCD.NHANVIEN_ID = YC.BACSICHIDINH_ID
+      LEFT JOIN TM_PHONGBAN PB ON PB.PHONGBAN_ID = YC.NOITHUCHIEN_ID
+      LEFT JOIN TM_PHONGBAN CD ON CD.PHONGBAN_ID = YC.NOIYEUCAU_ID
+      LEFT JOIN TT_VIENPHI VP ON VP.REF_ID = YC.DVYEUCAU_ID AND VP.REF_TABLE = 'TT_DVYEUCAU'
+      LEFT JOIN TM_DICHVU DV ON DV.DICHVU_ID = YC.DICHVU_ID
+      LEFT JOIN TM_NHOMDICHVU NDV ON NDV.NHOMDICHVU_ID = DV.NHOMDICHVU_ID
+      WHERE
+      YC.NGAYYEUCAU BETWEEN #TUNGAY# AND #DENNGAY#
+      AND YC.BENHNHAN_ID = #BENHNHAN_ID#
+      AND YC.HUYYEUCAU = 0
+      AND YC.NGAYHENCLS IS NULL
+      AND NDV.MANHOMDICHVU LIKE '01%'
+      AND (YC.BENHAN_ID IS NOT NULL OR YC.TRANGTHAI_WFL = 'CHOLAYMAU' OR VP.DATHANHTOAN = '1' OR VP.DUOCPHEPTHUCHIEN = '1')
+      AND YC.BENHVIEN_ID = #BENHVIEN_ID#
+      AND (
+      ((1 = #TRANGTHAI#) AND (ISNULL(yc.DALAYMAU,'0') = '0'))
+      OR
+      ((2 = #TRANGTHAI#) AND ISNULL(yc.DALAYMAU,'0') = '1' AND YC.TRANGTHAI = 'DALAYMAU')
+      OR
+      ((3 = #TRANGTHAI#) AND ISNULL(yc.DALAYMAU,'0') = '1' AND YC.TRANGTHAI = 'CHOXACNHAN')
+      OR
+      ((4 = #TRANGTHAI#) AND ISNULL(yc.DALAYMAU,'0') = '1' AND YC.TRANGTHAI = 'HOANTAT')
+      )
+    </statement>
+      <statement id="DAO00081_GetKetQuaChiTietLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select
+        DICHVU_ID
+        ,DONVITINH
+        ,DVYEUCAU_ID
+        ,ISBATTHUONG = BATTHUONG
+        ,ISGUINGOAI = THUCHIENBENNGOAI
+        ,KETQUA
+        ,MUCBINHTHUONG
+        ,KETQUACAY
+        ,KETQUASOI
+        from TT_CLSKETQUACHITIET
+        WHERE CLSKETQUA_ID = #CLSKETQUA_ID#
+        AND BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00081_GetKetQuaKSDLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT
+        KHANGSINHDOCAPTREN_ID = CAPTREN_ID
+        ,PHUONGPHAP
+        ,DVYEUCAU_ID
+        ,KHANGSINHDO_ID
+        ,MIC 
+        ,KETQUA = MOTA
+        FROM TT_CLSKETQUAKHANGSINHDO
+        WHERE CLSKETQUA_ID = #CLSKETQUA_ID#
+        AND BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+    <statement id="DAO00081_GetKetQuaLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT
+      A.BACSIKETLUAN_ID
+      ,A.BACSITHUCHIEN_ID
+      ,A.BENHAN_ID
+      ,A.CHANDOANLAMSANG
+      ,A.CLSKETQUA_ID
+      ,A.GIOITINH
+      ,A.KETLUAN
+      ,A.MAYTE
+      ,A.NAMSINH
+      ,A.NOITHUCHIEN_ID
+      ,A.TENBENHNHAN
+      ,A.THOIGIANTHUCHIEN
+      ,A.TIEPNHAN_ID
+      ,A.TRANGTHAI
+      ,A.KHOADULIEU
+      ,A.NGUOIKHOA_ID
+      ,A.GHICHU
+      ,A.LUUTRU_ID
+      ,A.LUUTRUCHITIET_ID
+      FROM TT_CLSKETQUA A
+      WHERE A.CLSKETQUA_ID = #CLSKETQUA_ID#
+      AND A.BENHVIEN_ID = #BENHVIEN_ID#
+    </statement>
+    <update id="DAO00081_Update_TiepNhanLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        UPDATE TT_DVYEUCAU
+        SET DALAYMAU = #DALAYMAU#
+        ,TRANGTHAI = #TRANGTHAI#
+        WHERE DVYEUCAU_ID = #DVYEUCAU_ID#
+        AND BENHVIEN_ID = #BENHVIEN_ID#
+      </update>
+    <update id="DAO00081_DuyetLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      UPDATE A
+      SET A.TRANGTHAI = 'HOANTAT'
+      ,A.KHOADULIEU = '1'
+      ,A.NGAYKHOADULIEU = #NGAYKHOADULIEU#
+      ,A.THOIGIANKHOADULIEU = #THOIGIANKHOADULIEU#
+      FROM TT_DVYEUCAU A
+      JOIN TT_CLSKETQUACHITIET B ON A.DVYEUCAU_ID = B.DVYEUCAU_ID
+      WHERE B.CLSKETQUA_ID =#CLSKETQUA_ID#
+      AND B.BENHVIEN_ID = #BENHVIEN_ID#
+
+      DECLARE @TENNGUOIKHOA NVARCHAR(255)
+      SELECT @TENNGUOIKHOA = TENNHANVIEN
+      FROM TM_NHANVIEN
+      WHERE NHANVIEN_ID = #NHANVIEN_ID#
+
+      UPDATE TT_CLSKETQUA
+      SET TRANGTHAI = 'HOANTAT'
+      ,KHOADULIEU = '1'
+      ,NGUOIKHOA_ID = #NHANVIEN_ID#
+      ,NGAYKHOADULIEU = #NGAYKHOADULIEU#
+      ,THOIGIANKHOADULIEU = #THOIGIANKHOADULIEU#
+      ,TENNGUOIKHOA = @TENNGUOIKHOA
+      WHERE CLSKETQUA_ID = #CLSKETQUA_ID#
+      AND BENHVIEN_ID = #BENHVIEN_ID#
+
+    </update>
+        <update id="DAO00081_HuyDuyetLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          UPDATE A
+          SET A.TRANGTHAI = 'CHOXACNHAN'
+          ,A.KHOADULIEU = '0'
+          ,A.NGAYKHOADULIEU = NULL
+          ,A.THOIGIANKHOADULIEU = NULL
+          FROM TT_DVYEUCAU A
+          JOIN TT_CLSKETQUACHITIET B ON A.DVYEUCAU_ID = B.DVYEUCAU_ID
+          WHERE B.CLSKETQUA_ID =#CLSKETQUA_ID#
+          AND B.BENHVIEN_ID = #BENHVIEN_ID#
+
+          UPDATE TT_CLSKETQUA
+          SET TRANGTHAI = 'CHOXACNHAN'
+          ,KHOADULIEU = '0'
+          ,NGUOIKHOA_ID = NULL
+          ,NGAYKHOADULIEU = NULL
+          ,THOIGIANKHOADULIEU = NULL
+          ,TENNGUOIKHOA = NULL
+          WHERE CLSKETQUA_ID = #CLSKETQUA_ID#
+          AND BENHVIEN_ID = #BENHVIEN_ID#
+
+        </update>
+      <statement id="DAO00081_GetDVKQLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT 
+        A.DALAYMAU
+        ,A.TRANGTHAI
+        ,COKETQUA = CASE WHEN KQ.CLSKETQUA_ID IS NOT NULL THEN 1 ELSE 0 END
+        ,K.KHOADULIEU
+        ,TTKETQUA = K.TRANGTHAI
+        FROM TT_DVYEUCAU A
+        LEFT JOIN TT_CLSKETQUACHITIET KQ ON KQ.DVYEUCAU_ID = A.DVYEUCAU_ID
+        LEFT JOIN TT_CLSKETQUA K ON K.CLSKETQUA_ID = KQ.CLSKETQUA_ID
+        WHERE A.DVYEUCAU_ID = #DVYEUCAU_ID#
+        AND A.BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+     <statement id="DAO00081_UpsertLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        Declare @CLSKETQUA_ID INT
+SET @CLSKETQUA_ID = #CLSKETQUA_ID#
+IF (@CLSKETQUA_ID IS NULL)
+BEGIN
+insert into TT_CLSKETQUA ( BENHVIEN_ID,
+				SOPHIEUXETNGHIEM,
+                BACSIKETLUAN_ID,
+                BACSITHUCHIEN_ID,
+                BENHAN_ID,
+                CHANDOANLAMSANG,
+                GIOITINH,
+                KETLUAN,
+                MAYTE,
+                NAMSINH,
+                NOITHUCHIEN_ID,
+                TENBENHNHAN,
+                THOIGIANTHUCHIEN,
+                NGAYTHUCHIEN,
+                NGAYGIOTHUCHIEN,
+                GIOTHUCHIEN,
+                THANGTHUCHIEN,
+                NAMTHUCHIEN,
+                SINHTHIET,
+                CLOTEST,
+                PHOTO,
+                VIDEO,
+                TIEMCANQUANG,
+                TIEPNHAN_ID,
+                TRANGTHAI,
+				NGAYTAO
+        ,GHICHU
+        ,LUUTRU_ID
+        ,LUUTRUCHITIET_ID)
+        values
+        ( #BENHVIEN_ID#,
+		#SOPHIEUXETNGHIEM#,
+        #BACSIKETLUAN_ID#,
+        #BACSITHUCHIEN_ID#,
+        #BENHAN_ID#,
+        #CHANDOANLAMSANG#,
+        #GIOITINH#,
+        #KETLUAN#,
+        #MAYTE#,
+        #NAMSINH#,
+        #NOITHUCHIEN_ID#,
+        #TENBENHNHAN#,
+        #THOIGIANTHUCHIEN#,
+        #NGAYTHUCHIEN#,
+        #NGAYGIOTHUCHIEN#,
+        #GIOTHUCHIEN#,
+        #THANGTHUCHIEN#,
+        #NAMTHUCHIEN#,
+        #SINHTHIET#,
+        #CLOTEST#,
+        #PHOTO#,
+        #VIDEO#,
+        #TIEMCANQUANG#,
+        #TIEPNHAN_ID#,
+        'CHOXACNHAN',
+		#NGAYTAO#
+    ,#GHICHU#
+    ,#LUUTRU_ID#
+    ,#LUUTRUCHITIET_ID#)
+
+        SELECT @CLSKETQUA_ID = SCOPE_IDENTITY() 
+END
+ELSE
+BEGIN
+	UPDATE TT_CLSKETQUA
+	SET BACSIKETLUAN_ID = #BACSIKETLUAN_ID#,
+        BACSITHUCHIEN_ID = #BACSITHUCHIEN_ID#,
+        BENHAN_ID = #BENHAN_ID#,
+        CHANDOANLAMSANG = #CHANDOANLAMSANG#,
+        GIOITINH = #GIOITINH#,
+        KETLUAN = #KETLUAN#,
+        GHICHU = #GHICHU#,
+        MAYTE = #MAYTE#,
+        NAMSINH = #NAMSINH#,
+        NOITHUCHIEN_ID = #NOITHUCHIEN_ID#,
+        TENBENHNHAN = #TENBENHNHAN#,
+        THOIGIANTHUCHIEN = #THOIGIANTHUCHIEN#,
+        TIEPNHAN_ID = #TIEPNHAN_ID#,
+        LUUTRU_ID = #LUUTRU_ID#,
+        LUUTRUCHITIET_ID = #LUUTRUCHITIET_ID#,
+		NGAYCAPNHAT = #NGAYCAPNHAT#
+	WHERE CLSKETQUA_ID = @CLSKETQUA_ID
+END
+
+
+<isNotEmpty prepend="" property="CLSKETQUACHITIET">
+  declare @JSONKQCT nvarchar(max) = #CLSKETQUACHITIET#
+  MERGE into TT_CLSKETQUACHITIET AS T
+  USING (SELECT * FROM OPENJSON(@JSONKQCT)
+  WITH (DVYeuCau_Id INT
+  ,DonViTinh NVARCHAR(20)
+  ,DichVu_Id INT
+  ,IsBatThuong CHAR(1)
+  ,IsGuiNgoai CHAR(1)
+  ,KetQua NVARCHAR(500)
+  ,MucBinhThuong NVARCHAR(100)
+  ,KetQuaCay nvarchar(255)
+  ,KetQuaSoi nvarchar(255)
+
+  ) ) AS S
+  ON (T.CLSKETQUA_ID = @CLSKETQUA_ID AND T.DVYEUCAU_ID = S.DVYEUCAU_ID AND T.DICHVU_ID = S.DICHVU_ID)
+  WHEN matched  THEN
+  UPDATE SET
+  T.DONVITINH = S.DONVITINH,
+  T.KETQUA = S.KETQUA,
+  T.MUCBINHTHUONG = S.MUCBINHTHUONG,
+  T.BATTHUONG = case when S.ISBATTHUONG = 't' then '1' else '0' end ,
+  T.THUCHIENBENNGOAI = case when S.ISGUINGOAI = 't' then '1' else '0' end,
+  T.KETQUACAY = S.KETQUACAY,
+  T.KETQUASOI = S.KETQUASOI
+  WHEN NOT matched  THEN
+  INSERT  (CLSKETQUA_ID, DVYEUCAU_ID,DICHVU_ID,DONVITINH,KETQUA,MUCBINHTHUONG,BATTHUONG,THUCHIENBENNGOAI,BENHVIEN_ID,KETQUACAY,KETQUASOI)
+  VALUES (@CLSKETQUA_ID,S.DVYEUCAU_ID,S.DICHVU_ID,S.DONVITINH,S.KETQUA,S.MUCBINHTHUONG
+  ,case when S.ISBATTHUONG = 't' then '1' else '0' end
+  ,case when S.ISGUINGOAI = 't' then '1' else '0' end
+  ,#BENHVIEN_ID#
+  ,S.KETQUACAY,S.KETQUASOI);
+
+  UPDATE A
+  SET A.TRANGTHAI = 'CHOXACNHAN'
+  FROM TT_DVYEUCAU A
+  JOIN (SELECT * FROM OPENJSON(@JSONKQCT)
+  WITH (DVYeuCau_Id INT)
+  ) AS B ON A.DVYEUCAU_ID = B.DVYeuCau_Id
+  WHERE A.TRANGTHAI <![CDATA[ <> ]]> 'CHOXACNHAN'
+  AND  A.TRANGTHAI <![CDATA[ <> ]]> 'HOANTAT'
+
+</isNotEmpty>
+       
+<isNotEmpty prepend="" property="CLSKETQUAKHANGSINHDO">
+  declare @JSONKSD nvarchar(max) = #CLSKETQUAKHANGSINHDO#
+  MERGE into TT_CLSKETQUAKHANGSINHDO AS T
+  USING (SELECT * FROM OPENJSON(@JSONKSD)
+  WITH (DVYeuCau_Id INT
+  ,KhangSinhDo_Id int
+  ,KhangSinhDoCapTren_Id int
+  ,MIC NVARCHAR(50)
+  ,KetQua NVARCHAR(500)
+  ,PhuongPhap NVARCHAR(255)
+  ) ) AS S
+  ON (T.CLSKETQUA_ID = @CLSKETQUA_ID AND T.DVYEUCAU_ID = S.DVYEUCAU_ID and t.KHANGSINHDO_ID = s.KHANGSINHDO_ID)
+  WHEN matched  THEN
+  UPDATE SET
+  T.CAPTREN_ID = S.KhangSinhDoCapTren_Id,
+  T.MOTA = S.KETQUA,
+  T.MIC = S.MIC,
+  T.PhuongPhap = S.PhuongPhap
+  WHEN NOT matched  THEN
+  INSERT  (CLSKETQUA_ID, DVYEUCAU_ID,KHANGSINHDO_ID,KHANGSINHDO,CAPTREN_ID,MOTA,MIC,PHUONGPHAP,BENHVIEN_ID)
+  VALUES (@CLSKETQUA_ID,S.DVYEUCAU_ID,S.KHANGSINHDO_ID,'0',S.KhangSinhDoCapTren_Id,S.KETQUA,S.MIC,S.PhuongPhap,#BENHVIEN_ID#);
+</isNotEmpty>
+SELECT @CLSKETQUA_ID AS CLSKETQUA_ID
+      </statement>
+
+      <statement id="DAO00081_GetPatientInfoLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT BENHAN_ID = NULL
+        ,TIEPNHAN_ID = NULL
+        ,bn.BENHNHAN_ID
+        ,BN.MAYTE
+        ,BN.TENBENHNHAN
+        ,BN.DIACHI
+        ,BN.GIOITINH
+        ,BN.NAMSINH
+        ,BN.NGAYSINH
+        ,MABACSI = NULL
+        ,TENBACSI = NULL
+        ,MAPHONGBAN = NULL
+        ,TENPHONGBAN = NULL
+        ,CHANDOAN =  NULL
+        ,CONGTY_ID = NULL
+        ,MADOITUONG = NULL
+        ,TENDOITUONG = NULL
+        ,NGAYCHIDINH = NULL
+        ,KHUVUC = NULL
+        FROM TT_BENHNHAN BN
+        WHERE
+        BN.BENHNHAN_ID = #BENHNHAN_ID#
+        AND BN.BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      
+    <statement id="DAO00081_CheckHasKQLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      
+        declare @JSONKQCT nvarchar(max) = #CLSKETQUACHITIET#
+          SELECT KQ.DVYeuCau_Id,KQ.CLSKETQUA_ID
+				FROM	(SELECT * FROM OPENJSON(@JSONKQCT)
+                WITH (DVYeuCau_Id INT
+				        ) ) AS S 
+				join TT_CLSKETQUACHITIET KQ ON KQ.DVYEUCAU_ID = S.DVYeuCau_Id AND KQ.BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+
+      <update id="DAO00081_DeleteKetQuaLISCon" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        UPDATE A
+        SET A.TRANGTHAI = 'DALAYMAU'
+        ,A.KHOADULIEU = '0'
+        ,A.NGAYKHOADULIEU = NULL
+        ,A.THOIGIANKHOADULIEU = NULL
+        FROM TT_DVYEUCAU A
+        JOIN TT_CLSKETQUACHITIET B ON A.DVYEUCAU_ID = B.DVYEUCAU_ID
+        WHERE B.CLSKETQUA_ID =#CLSKETQUA_ID#
+        AND B.BENHVIEN_ID = #BENHVIEN_ID#
+
+        DELETE TT_CLSKETQUAKHANGSINHDO
+        WHERE CLSKETQUA_ID = #CLSKETQUA_ID#
+        AND BENHVIEN_ID = #BENHVIEN_ID#
+
+        DELETE TT_CLSKETQUACHITIET
+        WHERE CLSKETQUA_ID = #CLSKETQUA_ID#
+        AND BENHVIEN_ID = #BENHVIEN_ID#
+
+        DELETE TT_CLSKETQUA
+        WHERE CLSKETQUA_ID = #CLSKETQUA_ID#
+        AND BENHVIEN_ID = #BENHVIEN_ID#
+
+      </update>
+
+    </statements>
+</sqlMap>

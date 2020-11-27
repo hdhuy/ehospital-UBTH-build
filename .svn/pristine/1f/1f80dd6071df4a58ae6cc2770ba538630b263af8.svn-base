@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,20add495ab84f21343d3963a07b3f561-->
+        <statement id="DAO00208_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT NAME FROM Sys.Tables
+            WHERE NAME NOT IN
+            (
+            SELECT DICTIONARY_CODE
+            FROM LST_DICTIONARY
+            WHERE DICTIONARY_TYPE_ID = '2361' AND ENABLED = '1'
+            )
+            ORDER BY NAME
+        </statement>
+        <!--Revision:0,ff9bcb8cfbbab8fe29fbbcc3da7cc61c-->
+        <statement id="DAO00208_GetListCondition" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT DISTINCT $COLUMN_NAME$ AS CONDITION_CODE, $COLUMN_NAME_DISPLAY$ AS CONDITION_CODE_DISPLAY
+            FROM $TABLE_NAME$
+            ORDER BY $COLUMN_NAME$
+        </statement>
+        <!--Revision:0,31a5fdfe27538b32fdd8b788f8459bfa-->
+        <statement id="DAO00208_GetDataByCategory" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT ROW_NUMBER() OVER(ORDER BY(SELECT 1)) AS PRIMARY_ID, $SELECT_FIELD$
+            FROM $TABLE_NAME$
+            $WHERE_CONDITION$
+        </statement>
+        <!--Revision:0,d5816820334185533794efeaf283dae5-->
+        <statement id="DAO00208_GetFolderHierarchy" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            WITH CategoryRec AS
+            (
+            SELECT 0 AS CATEGORY_ID, NULL AS PARENT_ID, CONVERT(nvarchar(100),'ROOT') AS CATEGORY_CODE
+            , CONVERT(nvarchar(250),'ROOT') AS CATEGORY_NAME, 0 AS [LEVEL]
+            UNION ALL
+            SELECT c.CATEGORY_ID, c.PARENT_ID, c.CATEGORY_CODE, c.CATEGORY_NAME, cr.[LEVEL] + 1
+            FROM CategoryRec AS cr
+            INNER JOIN dbo.TM_CATEGORY AS c ON cr.CATEGORY_ID = c.PARENT_ID AND c.CATEGORY_ID != 0
+            WHERE c.PARENT_ID IS NOT NULL AND c.IS_FOLDER = '1'
+            )
+            SELECT DISTINCT CATEGORY_ID, PARENT_ID, CATEGORY_CODE, CATEGORY_NAME, [LEVEL]
+            FROM  CategoryRec
+        </statement>
+        <!--Revision:0,94901e3586173c56a1b42742143adfd5-->
+        <statement id="DAO00208_GetHierarchyByCategoryID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            WITH CategoryRec AS
+            (
+            SELECT CATEGORY_ID, 0 AS [LEVEL]
+            FROM TM_CATEGORY
+            WHERE CATEGORY_ID = $CATEGORY_ID$
+            UNION ALL
+            SELECT c.CATEGORY_ID, cr.[LEVEL] + 1
+            FROM CategoryRec AS cr
+            INNER JOIN dbo.TM_CATEGORY AS c ON cr.CATEGORY_ID = c.PARENT_ID
+            )
+            SELECT DISTINCT CATEGORY_ID, [LEVEL]
+            FROM  CategoryRec
+        </statement>
+    </statements>
+</sqlMap>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,30fc9c639e51862f1f1dff6e34886250-->
+        <statement id="DAO00033_GetAll" resultClass="DataObject">
+            select *
+            from TM_NGUONHANG
+            order by NGUONDUOC_ID
+        </statement>
+        <!--Revision:0,136fafa95b2b7a0615f19ed9871fb8f0-->
+        <statement id="DAO00033_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_NGUONHANG
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="NGUONDUOC_ID">
+                    TM_NGUONHANG.NGUONDUOC_ID = '$NGUONDUOC_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="MANGUONDUOC">
+                    TM_NGUONHANG.MANGUONDUOC = '$MANGUONDUOC$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENNGUONDUOC">
+                    TM_NGUONHANG.TENNGUONDUOC = '$TENNGUONDUOC$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENNGUONDUOC_EN">
+                    TM_NGUONHANG.TENNGUONDUOC_EN = '$TENNGUONDUOC_EN$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENNGUONDUOC_RU">
+                    TM_NGUONHANG.TENNGUONDUOC_RU = '$TENNGUONDUOC_RU$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TAMNGUNG">
+                    TM_NGUONHANG.TAMNGUNG = '$TAMNGUNG$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENKHONGDAU">
+                    TM_NGUONHANG.TENKHONGDAU = '$TENKHONGDAU$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGAYTAO">
+                    TM_NGUONHANG.NGAYTAO = '$NGAYTAO$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                    TM_NGUONHANG.NGUOITAO_ID = '$NGUOITAO_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                    TM_NGUONHANG.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                    TM_NGUONHANG.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TINHTIEN">
+                    TM_NGUONHANG.TINHTIEN = '$TINHTIEN$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="PH_DUOC">
+                    TM_NGUONHANG.PH_DUOC = '$PH_DUOC$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="PH_NHM">
+                    TM_NGUONHANG.PH_NHM = '$PH_NHM$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="PH_TAISAN">
+                    TM_NGUONHANG.PH_TAISAN = '$PH_TAISAN$'
+                </isNotEmpty>
+            </isParameterPresent>
+            order by NGUONDUOC_ID
+        </statement>
+        <!--Revision:0,1977ad9a0d09299b30b6b311e6765c10-->
+        <statement id="DAO00033_GetDetail" parameterClass="System.String" resultClass="DataObject">
+            select *
+            from TM_NGUONHANG
+            where TM_NGUONHANG.NGUONDUOC_ID  = '$value$'
+            order by NGUONDUOC_ID
+        </statement>
+        <!--Revision:0,dab49fe0811ee23aa2c46bdc027ae24b-->
+        <statement id="DAO00033_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_NGUONHANG
+            where TM_NGUONHANG.NGUONDUOC_ID  = '$NGUONDUOC_ID$'
+            order by NGUONDUOC_ID
+        </statement>
+        <!--Revision:0,4aea5d138a2e0368b95d4fe2bacb8a8c-->
+        <insert id="DAO00033_Add" parameterClass="HashTable" resultClass="System.Int64">
+            insert into TM_NGUONHANG (
+            NGUONDUOC_ID
+            , MANGUONDUOC
+            , TENNGUONDUOC
+            , TENNGUONDUOC_EN
+            , TENNGUONDUOC_RU
+            , TAMNGUNG
+            , TENKHONGDAU
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , TINHTIEN
+            , PH_DUOC
+            , PH_NHM
+            , PH_TAISAN
+            ) values (
+            #NGUONDUOC_ID#
+            , #MANGUONDUOC#
+            , #TENNGUONDUOC#
+            , #TENNGUONDUOC_EN#
+            , #TENNGUONDUOC_RU#
+            , #TAMNGUNG#
+            , #TENKHONGDAU#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #TINHTIEN#
+            , #PH_DUOC#
+            , #PH_NHM#
+            , #PH_TAISAN#
+            )
+        </insert>
+        <!--Revision:0,a757983ae59fd853c5bf2a4ef3b50683-->
+        <update id="DAO00033_Update" parameterClass="HashTable">
+            update TM_NGUONHANG set
+            MANGUONDUOC = #MANGUONDUOC#
+            , TENNGUONDUOC = #TENNGUONDUOC#
+            , TENNGUONDUOC_EN = #TENNGUONDUOC_EN#
+            , TENNGUONDUOC_RU = #TENNGUONDUOC_RU#
+            , TAMNGUNG = #TAMNGUNG#
+            , TENKHONGDAU = #TENKHONGDAU#
+            <!--, NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#-->
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , TINHTIEN = #TINHTIEN#
+            , PH_DUOC = #PH_DUOC#
+            , PH_NHM = #PH_NHM#
+            , PH_TAISAN = #PH_TAISAN#
+            where
+            NGUONDUOC_ID = '%NGUONDUOC_ID$'
+        </update>
+        <!--Revision:0,ce5956c0b0aaea5240f97fad73cdb972-->
+        <statement id="DAO00033_Delete" parameterClass="System.String" resultClass="System.Int32">
+            delete from TM_NGUONHANG
+            where
+            NGUONDUOC_ID = '$NGUONDUOC_ID$'
+        </statement>
+        <!--Revision:0,45aec9ac64893bb5a138a57fa4ee450b-->
+        <statement id="DAO00033_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_NGUONHANG
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="NGUONDUOC_ID">
+                        TM_NGUONHANG.NGUONDUOC_ID = '$NGUONDUOC_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MANGUONDUOC">
+                        TM_NGUONHANG.MANGUONDUOC = '$MANGUONDUOC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNGUONDUOC">
+                        TM_NGUONHANG.TENNGUONDUOC = '$TENNGUONDUOC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNGUONDUOC_EN">
+                        TM_NGUONHANG.TENNGUONDUOC_EN = '$TENNGUONDUOC_EN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNGUONDUOC_RU">
+                        TM_NGUONHANG.TENNGUONDUOC_RU = '$TENNGUONDUOC_RU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAMNGUNG">
+                        TM_NGUONHANG.TAMNGUNG = '$TAMNGUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENKHONGDAU">
+                        TM_NGUONHANG.TENKHONGDAU = '$TENKHONGDAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_NGUONHANG.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_NGUONHANG.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_NGUONHANG.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_NGUONHANG.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TINHTIEN">
+                        TM_NGUONHANG.TINHTIEN = '$TINHTIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PH_DUOC">
+                        TM_NGUONHANG.PH_DUOC = '$PH_DUOC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PH_NHM">
+                        TM_NGUONHANG.PH_NHM = '$PH_NHM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PH_TAISAN">
+                        TM_NGUONHANG.PH_TAISAN = '$PH_TAISAN$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,145a72da47c0bfdaf23847f43856b916-->
+        <statement id="DAO00033_GetNguonHangByVTYT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select NGUONDUOC_ID  from TT_DUOC_TONKHO
+            where
+            DUOC_ID = '$DUOC_ID$'
+            and SOLUONG &gt; 0
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

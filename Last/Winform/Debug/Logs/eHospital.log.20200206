@@ -1,0 +1,596 @@
+﻿--------------------------------------------------------------------------------
+2020-02-06 14:14:34,356 [1] INFO  - [Application started.]
+2020-02-06 14:14:44,041 [1] INFO  - [_SYSTEM_] Session is starting.
+2020-02-06 14:14:44,107 [1] INFO  - LoadMasters() took 55 ms.
+2020-02-06 14:14:44,107 [1] INFO  - [_SYSTEM_] Session started.
+2020-02-06 14:16:19,205 [1] ERROR - System.Exception: Dao 'DAO00001' is not found!
+   at FPT.Framework.Utility.DebuggerUtility.DebugException(String message, Exception e) in D:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DebuggerUtility.cs:line 17
+   at FPT.eHospital.DataAccess.DaoProvider.GetDao(String name) in D:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoProvider.cs:line 115
+   at FPT.eHospital.DataService.ServiceProvider.Initialize() in D:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\ServiceProvider.cs:line 107
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile) in D:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\eHosDataContainer.cs:line 96
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataContainer.cs:line 35
+   at FPT.Framework.Application.ApplicationSession.OpenProfile() in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.ChangeUserProfile(IUserProfile newProfile) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 500
+   at FPT.eHospital.Forms.Common.VMLogin.PerformLogin() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 211
+   at FPT.eHospital.Forms.Common.VMLogin.cmdLogin(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 199
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2020-02-06 14:16:25,405 [1] INFO  - [admin] Session stopped.
+2020-02-06 14:16:25,407 [1] INFO  - Memory used before collection:  6,996,000
+2020-02-06 14:16:25,430 [1] INFO  - Memory used after collection:  5,061,592
+2020-02-06 14:16:25,542 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2020-02-06 14:34:16,776 [1] INFO  - [Application started.]
+2020-02-06 14:34:21,819 [1] INFO  - [_SYSTEM_] Session is starting.
+2020-02-06 14:34:21,860 [1] INFO  - LoadMasters() took 34 ms.
+2020-02-06 14:34:21,860 [1] INFO  - [_SYSTEM_] Session started.
+2020-02-06 14:34:28,480 [1] ERROR - System.Exception: Dao 'DAO00001' is not found!
+   at FPT.Framework.Utility.DebuggerUtility.DebugException(String message, Exception e) in D:\Working\eHospital\trunk\01.Framework\01.Framework\01.Common\DebuggerUtility.cs:line 17
+   at FPT.eHospital.DataAccess.DaoProvider.GetDao(String name) in D:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoProvider.cs:line 115
+   at FPT.eHospital.DataService.ServiceProvider.Initialize() in D:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\ServiceProvider.cs:line 107
+   at FPT.eHospital.Application.eHosDataContainer.CreateProviders(IUserProfile profile) in D:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\02.WFExtension\eHosDataContainer.cs:line 96
+   at FPT.Framework.Application.DataContainer.OpenProvider(IUserProfile profile) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataContainer.cs:line 35
+   at FPT.Framework.Application.ApplicationSession.OpenProfile() in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 224
+   at FPT.Framework.Application.ApplicationSession.ChangeUserProfile(IUserProfile newProfile) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 500
+   at FPT.eHospital.Forms.Common.VMLogin.PerformLogin() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 211
+   at FPT.eHospital.Forms.Common.VMLogin.cmdLogin(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\00.ScrSYS\VMLogin.cs:line 199
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2020-02-06 14:34:42,584 [1] INFO  - [admin] Session stopped.
+2020-02-06 14:34:42,587 [1] INFO  - Memory used before collection:  8,508,736
+2020-02-06 14:34:42,599 [1] INFO  - Memory used after collection:  5,095,192
+2020-02-06 14:34:42,638 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2020-02-06 14:42:16,060 [1] INFO  - [Application started.]
+2020-02-06 14:42:19,192 [1] INFO  - [_SYSTEM_] Session is starting.
+2020-02-06 14:42:19,232 [1] INFO  - LoadMasters() took 34 ms.
+2020-02-06 14:42:19,232 [1] INFO  - [_SYSTEM_] Session started.
+2020-02-06 14:42:24,523 [1] INFO  - StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Thu, 06 Feb 2020 07:39:56 GMT
+  Server: Microsoft-IIS/8.5
+  X-Powered-By: ASP.NET
+  Content-Length: 1245
+  Content-Type: text/html
+}
+System.Net.Http.HttpRequestException: StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Thu, 06 Feb 2020 07:39:56 GMT
+  Server: Microsoft-IIS/8.5
+  X-Powered-By: ASP.NET
+  Content-Length: 1245
+  Content-Type: text/html
+}
+   at FPT.Framework.Security.RESTClient.ExecuteForObject(String action, IDictionary`2 parameters) in D:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTClient.cs:line 74
+   at FPT.Framework.Security.RESTProfileProvider.Login(String appToken, String accName, String password, String appName, String ipNumber) in D:\Working\eHospital\trunk\01.Framework\04.UserManagement\ProfileProvider\RESTProvider.cs:line 89
+2020-02-06 14:42:29,652 [1] INFO  - [_SYSTEM_] Session stopped.
+2020-02-06 14:42:29,654 [1] INFO  - Memory used before collection:  7,032,688
+2020-02-06 14:42:29,669 [1] INFO  - Memory used after collection:  4,650,064
+2020-02-06 14:42:29,773 [1] INFO  - [Application stopped.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2020-02-06 14:43:49,186 [1] INFO  - [Application started.]
+2020-02-06 14:43:52,423 [1] INFO  - [_SYSTEM_] Session is starting.
+2020-02-06 14:43:52,464 [1] INFO  - LoadMasters() took 34 ms.
+2020-02-06 14:43:52,464 [1] INFO  - [_SYSTEM_] Session started.
+2020-02-06 14:44:03,638 [1] INFO  - [admin] Session is starting.
+2020-02-06 14:44:04,835 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:44:17,749 [5] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2020-02-06 14:44:17,749 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:45:12,557 [5] ERROR - Error when loading cache 'REFBENHNHAN_DY' => One or more errors occurred..
+2020-02-06 14:45:12,569 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:45:24,903 [5] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2020-02-06 14:45:24,903 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:45:31,247 [5] ERROR - Error when loading cache 'REFBENHNHAN_GROUP_DICHVU' => One or more errors occurred..
+2020-02-06 14:45:31,259 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:45:43,673 [5] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2020-02-06 14:45:43,673 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:45:50,137 [5] ERROR - Error when loading cache 'REFBENHNHAN_MN' => One or more errors occurred..
+2020-02-06 14:45:50,150 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:46:02,436 [5] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2020-02-06 14:46:02,436 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:46:08,667 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_CC' => One or more errors occurred..
+2020-02-06 14:46:08,679 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:46:20,983 [5] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2020-02-06 14:46:20,983 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:46:27,357 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_DY' => One or more errors occurred..
+2020-02-06 14:46:27,367 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:46:39,673 [5] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2020-02-06 14:46:39,673 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:46:45,929 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN' => One or more errors occurred..
+2020-02-06 14:46:45,941 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:46:58,257 [5] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2020-02-06 14:46:58,257 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:47:04,928 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_ALL' => One or more errors occurred..
+2020-02-06 14:47:04,940 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:47:17,250 [5] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2020-02-06 14:47:17,250 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:47:23,689 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_DV_VTYT' => One or more errors occurred..
+2020-02-06 14:47:23,701 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:47:36,034 [5] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2020-02-06 14:47:36,034 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:47:42,462 [5] ERROR - Error when loading cache 'REFBENHNHAN_TOATHUOC' => One or more errors occurred..
+2020-02-06 14:47:43,045 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:47:55,338 [5] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2020-02-06 14:47:55,338 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:48:02,111 [5] ERROR - Error when loading cache 'REFDUOC_KYGUI_TONKHO' => One or more errors occurred..
+2020-02-06 14:48:02,123 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:48:14,425 [5] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2020-02-06 14:48:14,425 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:48:21,294 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO' => One or more errors occurred..
+2020-02-06 14:48:21,305 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:48:33,719 [5] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2020-02-06 14:48:33,720 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:48:40,296 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO_BOOKING' => One or more errors occurred..
+2020-02-06 14:48:41,101 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:48:53,561 [5] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2020-02-06 14:48:53,561 [5] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:48:59,952 [5] ERROR - Error when loading cache 'REFMAU_TONKHO' => One or more errors occurred..
+2020-02-06 14:48:59,963 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:49:12,294 [5] INFO  - Can't create direct service instance of COM073 -> One or more errors occurred.
+2020-02-06 14:49:12,294 [5] INFO  - Can't create direct service instance of COM073, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:49:18,923 [5] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => One or more errors occurred..
+2020-02-06 14:49:18,935 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 14:49:31,297 [5] INFO  - Can't create direct service instance of COM072 -> One or more errors occurred.
+2020-02-06 14:49:31,297 [5] INFO  - Can't create direct service instance of COM072, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 14:49:37,733 [5] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => One or more errors occurred..
+2020-02-06 14:49:38,564 [5] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFBENHNHAN_DY, REFBENHNHAN_GROUP_DICHVU, REFBENHNHAN_MN, REFBENHNHAN_NT_CC, REFBENHNHAN_NT_DY, REFBENHNHAN_TIEPNHAN, REFBENHNHAN_TIEPNHAN_ALL, REFBENHNHAN_TIEPNHAN_DV_VTYT, REFBENHNHAN_TOATHUOC, REFDUOC_KYGUI_TONKHO, REFDUOC_TONKHO, REFDUOC_TONKHO_BOOKING, REFMAU_TONKHO, REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 239
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2020-02-06 14:49:38,582 [1] INFO  - [admin] Session started.
+2020-02-06 14:49:42,498 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2020-02-06 14:49:42,536 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2020-02-06 14:49:43,131 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2020-02-06 14:49:43,182 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2020-02-06 14:49:43,581 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2020-02-06 14:49:43,646 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2020-02-06 14:49:43,700 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2020-02-06 14:49:43,764 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2020-02-06 14:49:43,815 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2020-02-06 14:49:43,865 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2020-02-06 14:49:43,911 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2020-02-06 14:49:43,982 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2020-02-06 14:49:44,046 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2020-02-06 14:49:44,094 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2020-02-06 14:49:44,142 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2020-02-06 14:49:44,193 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2020-02-06 14:49:44,234 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2020-02-06 14:49:44,415 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2020-02-06 14:49:44,665 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2020-02-06 14:49:44,729 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2020-02-06 14:49:44,791 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2020-02-06 14:49:44,853 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2020-02-06 14:49:45,033 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2020-02-06 14:49:45,596 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2020-02-06 14:49:45,655 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2020-02-06 14:49:45,724 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2020-02-06 14:49:45,787 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2020-02-06 14:49:45,884 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2020-02-06 14:49:46,231 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2020-02-06 14:49:46,282 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2020-02-06 14:49:46,329 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2020-02-06 14:49:46,596 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2020-02-06 14:49:46,785 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2020-02-06 14:49:46,836 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2020-02-06 14:49:46,892 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2020-02-06 14:49:46,944 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2020-02-06 14:49:47,008 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2020-02-06 14:49:47,050 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2020-02-06 14:49:47,322 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2020-02-06 14:49:47,397 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2020-02-06 14:49:47,450 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2020-02-06 14:49:47,512 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2020-02-06 14:49:47,776 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2020-02-06 14:49:48,209 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2020-02-06 14:49:48,264 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2020-02-06 14:49:48,312 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2020-02-06 14:49:48,457 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2020-02-06 14:49:48,506 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2020-02-06 14:49:48,722 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2020-02-06 14:49:50,178 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-02-06 14:52:16,706 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-02-06 15:23:47,504 [1] DEBUG - Barcode delay=148, Ctrl=True, B=False
+2020-02-06 15:23:50,049 [1] DEBUG - Barcode delay=195, Ctrl=True, B=False
+2020-02-06 15:23:52,245 [1] DEBUG - Barcode delay=151, Ctrl=True, B=False
+2020-02-06 15:23:55,250 [1] DEBUG - Barcode delay=149, Ctrl=True, B=False
+2020-02-06 15:23:58,021 [1] DEBUG - Barcode delay=237, Ctrl=True, B=False
+2020-02-06 15:24:00,221 [1] DEBUG - Barcode delay=135, Ctrl=True, B=False
+2020-02-06 15:25:14,377 [1] DEBUG - Barcode delay=133, Ctrl=True, B=False
+2020-02-06 15:25:19,442 [1] DEBUG - Barcode delay=266, Ctrl=True, B=False
+2020-02-06 15:25:25,890 [1] DEBUG - Barcode delay=116, Ctrl=True, B=False
+2020-02-06 15:25:34,879 [1] WARN  - DataRepository for 'REFBENHNHAN' is null.
+2020-02-06 15:25:34,976 [1] WARN  - DataRepository for 'REFNGUOILIENHE' is null.
+2020-02-06 15:26:01,740 [1] DEBUG - Barcode delay=121, Ctrl=True, B=False
+2020-02-06 15:26:32,180 [1] DEBUG - API:http://egw.baohiemxahoi.gov.vn/api/
+2020-02-06 15:26:32,180 [1] DEBUG - user:38289_BV
+2020-02-06 15:26:32,180 [1] DEBUG - pass:hopluc123
+2020-02-06 15:27:51,352 [1] DEBUG - Barcode delay=108, Ctrl=True, B=False
+2020-02-06 15:28:20,962 [1] DEBUG - API:http://egw.baohiemxahoi.gov.vn/api/
+2020-02-06 15:28:20,962 [1] DEBUG - user:38289_BV
+2020-02-06 15:28:20,962 [1] DEBUG - pass:hopluc123
+--------------------------------------------------------------------------------
+2020-02-06 15:35:20,896 [1] INFO  - [Application started.]
+2020-02-06 15:35:25,228 [1] INFO  - [_SYSTEM_] Session is starting.
+2020-02-06 15:35:25,271 [1] INFO  - LoadMasters() took 34 ms.
+2020-02-06 15:35:25,271 [1] INFO  - [_SYSTEM_] Session started.
+2020-02-06 15:35:49,947 [1] INFO  - [admin] Session is starting.
+2020-02-06 15:35:51,123 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:36:03,800 [5] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2020-02-06 15:36:03,800 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:37:52,868 [5] ERROR - Error when loading cache 'REFBENHNHAN_DY' => One or more errors occurred..
+2020-02-06 15:37:52,881 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:38:05,219 [5] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2020-02-06 15:38:05,219 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:38:11,379 [5] ERROR - Error when loading cache 'REFBENHNHAN_GROUP_DICHVU' => One or more errors occurred..
+2020-02-06 15:38:11,391 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:38:23,735 [5] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2020-02-06 15:38:23,736 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:38:29,946 [5] ERROR - Error when loading cache 'REFBENHNHAN_MN' => One or more errors occurred..
+2020-02-06 15:38:29,959 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:38:42,275 [5] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2020-02-06 15:38:42,275 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:38:48,463 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_CC' => One or more errors occurred..
+2020-02-06 15:38:48,475 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:39:00,779 [5] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2020-02-06 15:39:00,779 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:39:07,012 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_DY' => One or more errors occurred..
+2020-02-06 15:39:07,025 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:39:19,365 [5] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2020-02-06 15:39:19,366 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:39:25,548 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN' => One or more errors occurred..
+2020-02-06 15:39:25,561 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:39:37,879 [5] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2020-02-06 15:39:37,879 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:39:44,087 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_ALL' => One or more errors occurred..
+2020-02-06 15:39:44,099 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:39:56,668 [5] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2020-02-06 15:39:56,668 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:40:02,843 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_DV_VTYT' => One or more errors occurred..
+2020-02-06 15:40:02,855 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:40:15,167 [5] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2020-02-06 15:40:15,167 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:40:21,426 [5] ERROR - Error when loading cache 'REFBENHNHAN_TOATHUOC' => One or more errors occurred..
+2020-02-06 15:40:21,882 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:40:34,224 [5] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2020-02-06 15:40:34,224 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:40:40,454 [5] ERROR - Error when loading cache 'REFDUOC_KYGUI_TONKHO' => One or more errors occurred..
+2020-02-06 15:40:40,467 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:40:52,800 [5] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2020-02-06 15:40:52,800 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:40:59,192 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO' => One or more errors occurred..
+2020-02-06 15:40:59,204 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:41:11,659 [5] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2020-02-06 15:41:11,659 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:41:17,874 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO_BOOKING' => One or more errors occurred..
+2020-02-06 15:41:18,556 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:41:30,883 [5] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2020-02-06 15:41:30,883 [5] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:41:37,276 [5] ERROR - Error when loading cache 'REFMAU_TONKHO' => One or more errors occurred..
+2020-02-06 15:41:37,289 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:41:49,959 [5] INFO  - Can't create direct service instance of COM073 -> One or more errors occurred.
+2020-02-06 15:41:49,959 [5] INFO  - Can't create direct service instance of COM073, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:41:56,131 [5] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => One or more errors occurred..
+2020-02-06 15:41:56,143 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:42:08,455 [5] INFO  - Can't create direct service instance of COM072 -> One or more errors occurred.
+2020-02-06 15:42:08,455 [5] INFO  - Can't create direct service instance of COM072, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:42:14,714 [5] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => One or more errors occurred..
+2020-02-06 15:42:15,544 [5] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFBENHNHAN_DY, REFBENHNHAN_GROUP_DICHVU, REFBENHNHAN_MN, REFBENHNHAN_NT_CC, REFBENHNHAN_NT_DY, REFBENHNHAN_TIEPNHAN, REFBENHNHAN_TIEPNHAN_ALL, REFBENHNHAN_TIEPNHAN_DV_VTYT, REFBENHNHAN_TOATHUOC, REFDUOC_KYGUI_TONKHO, REFDUOC_TONKHO, REFDUOC_TONKHO_BOOKING, REFMAU_TONKHO, REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 239
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2020-02-06 15:42:15,578 [1] INFO  - [admin] Session started.
+2020-02-06 15:42:17,506 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2020-02-06 15:42:17,546 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2020-02-06 15:42:17,890 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2020-02-06 15:42:17,937 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2020-02-06 15:42:18,306 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2020-02-06 15:42:18,353 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2020-02-06 15:42:18,397 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2020-02-06 15:42:18,445 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2020-02-06 15:42:18,496 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2020-02-06 15:42:18,540 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2020-02-06 15:42:18,582 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2020-02-06 15:42:18,623 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2020-02-06 15:42:18,687 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2020-02-06 15:42:18,733 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2020-02-06 15:42:18,781 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2020-02-06 15:42:18,826 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2020-02-06 15:42:18,869 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2020-02-06 15:42:19,064 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2020-02-06 15:42:19,369 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2020-02-06 15:42:19,441 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2020-02-06 15:42:19,494 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2020-02-06 15:42:19,549 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2020-02-06 15:42:19,696 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2020-02-06 15:42:20,144 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2020-02-06 15:42:20,190 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2020-02-06 15:42:20,247 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2020-02-06 15:42:20,294 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2020-02-06 15:42:20,380 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2020-02-06 15:42:20,593 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2020-02-06 15:42:20,648 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2020-02-06 15:42:20,694 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2020-02-06 15:42:20,854 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2020-02-06 15:42:21,022 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2020-02-06 15:42:21,082 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2020-02-06 15:42:21,139 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2020-02-06 15:42:21,198 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2020-02-06 15:42:21,244 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2020-02-06 15:42:21,298 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2020-02-06 15:42:21,585 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2020-02-06 15:42:21,660 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2020-02-06 15:42:21,715 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2020-02-06 15:42:21,780 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2020-02-06 15:42:22,137 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2020-02-06 15:42:22,444 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2020-02-06 15:42:22,489 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2020-02-06 15:42:22,533 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2020-02-06 15:42:22,645 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2020-02-06 15:42:22,692 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2020-02-06 15:42:22,906 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2020-02-06 15:42:23,854 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-02-06 15:42:42,909 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-02-06 15:42:48,346 [1] DEBUG - Barcode delay=132, Ctrl=True, B=False
+2020-02-06 15:43:12,886 [1] DEBUG - Barcode delay=115, Ctrl=True, B=False
+2020-02-06 15:43:23,954 [1] DEBUG - API:http://egw.baohiemxahoi.gov.vn/api/
+2020-02-06 15:43:23,954 [1] DEBUG - user:38289_BV
+2020-02-06 15:43:23,954 [1] DEBUG - pass:hopluc123
+--------------------------------------------------------------------------------
+2020-02-06 15:56:02,644 [1] INFO  - [Application started.]
+2020-02-06 15:56:07,432 [1] INFO  - [_SYSTEM_] Session is starting.
+2020-02-06 15:56:07,478 [1] INFO  - LoadMasters() took 36 ms.
+2020-02-06 15:56:07,478 [1] INFO  - [_SYSTEM_] Session started.
+2020-02-06 15:56:23,030 [1] INFO  - [admin] Session is starting.
+2020-02-06 15:56:24,344 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:56:38,735 [5] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2020-02-06 15:56:38,735 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:56:45,007 [5] ERROR - Error when loading cache 'REFBENHNHAN_DY' => One or more errors occurred..
+2020-02-06 15:56:45,019 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:56:59,131 [5] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2020-02-06 15:56:59,131 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:57:05,343 [5] ERROR - Error when loading cache 'REFBENHNHAN_GROUP_DICHVU' => One or more errors occurred..
+2020-02-06 15:57:05,357 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:57:18,350 [5] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2020-02-06 15:57:18,351 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:57:24,546 [5] ERROR - Error when loading cache 'REFBENHNHAN_MN' => One or more errors occurred..
+2020-02-06 15:57:24,558 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:57:36,920 [5] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2020-02-06 15:57:36,920 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:57:43,188 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_CC' => One or more errors occurred..
+2020-02-06 15:57:43,202 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:57:55,646 [5] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2020-02-06 15:57:55,646 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:58:01,848 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_DY' => One or more errors occurred..
+2020-02-06 15:58:01,860 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:58:14,199 [5] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2020-02-06 15:58:14,199 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:58:20,476 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN' => One or more errors occurred..
+2020-02-06 15:58:20,488 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:58:33,100 [5] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2020-02-06 15:58:33,100 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:58:39,330 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_ALL' => One or more errors occurred..
+2020-02-06 15:58:39,342 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:58:51,648 [5] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2020-02-06 15:58:51,648 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:58:57,892 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_DV_VTYT' => One or more errors occurred..
+2020-02-06 15:58:57,903 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:59:10,224 [5] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2020-02-06 15:59:10,225 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:59:16,425 [5] ERROR - Error when loading cache 'REFBENHNHAN_TOATHUOC' => One or more errors occurred..
+2020-02-06 15:59:16,877 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:59:29,196 [5] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2020-02-06 15:59:29,196 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:59:35,380 [5] ERROR - Error when loading cache 'REFDUOC_KYGUI_TONKHO' => One or more errors occurred..
+2020-02-06 15:59:35,392 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 15:59:47,687 [5] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2020-02-06 15:59:47,687 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 15:59:53,908 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO' => One or more errors occurred..
+2020-02-06 15:59:53,920 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:00:06,273 [5] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2020-02-06 16:00:06,273 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:00:12,589 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO_BOOKING' => One or more errors occurred..
+2020-02-06 16:00:13,410 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:00:25,719 [5] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2020-02-06 16:00:25,720 [5] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:00:31,931 [5] ERROR - Error when loading cache 'REFMAU_TONKHO' => One or more errors occurred..
+2020-02-06 16:00:31,944 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:00:44,348 [5] INFO  - Can't create direct service instance of COM073 -> One or more errors occurred.
+2020-02-06 16:00:44,348 [5] INFO  - Can't create direct service instance of COM073, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:00:50,548 [5] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => One or more errors occurred..
+2020-02-06 16:00:50,559 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:01:02,895 [5] INFO  - Can't create direct service instance of COM072 -> One or more errors occurred.
+2020-02-06 16:01:02,895 [5] INFO  - Can't create direct service instance of COM072, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:01:09,044 [5] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => One or more errors occurred..
+2020-02-06 16:01:09,880 [5] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFBENHNHAN_DY, REFBENHNHAN_GROUP_DICHVU, REFBENHNHAN_MN, REFBENHNHAN_NT_CC, REFBENHNHAN_NT_DY, REFBENHNHAN_TIEPNHAN, REFBENHNHAN_TIEPNHAN_ALL, REFBENHNHAN_TIEPNHAN_DV_VTYT, REFBENHNHAN_TOATHUOC, REFDUOC_KYGUI_TONKHO, REFDUOC_TONKHO, REFDUOC_TONKHO_BOOKING, REFMAU_TONKHO, REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 239
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2020-02-06 16:01:09,904 [1] INFO  - [admin] Session started.
+2020-02-06 16:01:10,927 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2020-02-06 16:01:10,976 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2020-02-06 16:01:11,234 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2020-02-06 16:01:11,275 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2020-02-06 16:01:11,539 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2020-02-06 16:01:11,602 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2020-02-06 16:01:11,656 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2020-02-06 16:01:11,699 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2020-02-06 16:01:11,742 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2020-02-06 16:01:11,788 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2020-02-06 16:01:11,839 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2020-02-06 16:01:11,888 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2020-02-06 16:01:11,971 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2020-02-06 16:01:12,039 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2020-02-06 16:01:12,096 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2020-02-06 16:01:12,144 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2020-02-06 16:01:12,187 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2020-02-06 16:01:12,299 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2020-02-06 16:01:12,560 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2020-02-06 16:01:12,630 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2020-02-06 16:01:12,704 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2020-02-06 16:01:12,758 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2020-02-06 16:01:12,846 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2020-02-06 16:01:13,121 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2020-02-06 16:01:13,181 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2020-02-06 16:01:13,240 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2020-02-06 16:01:13,287 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2020-02-06 16:01:13,375 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2020-02-06 16:01:13,507 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2020-02-06 16:01:13,557 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2020-02-06 16:01:13,610 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2020-02-06 16:01:13,688 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2020-02-06 16:01:13,809 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2020-02-06 16:01:13,870 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2020-02-06 16:01:13,913 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2020-02-06 16:01:13,969 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2020-02-06 16:01:14,027 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2020-02-06 16:01:14,078 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2020-02-06 16:01:14,296 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2020-02-06 16:01:14,388 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2020-02-06 16:01:14,457 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2020-02-06 16:01:14,533 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2020-02-06 16:01:14,712 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2020-02-06 16:01:14,875 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2020-02-06 16:01:14,928 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2020-02-06 16:01:14,990 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2020-02-06 16:01:15,063 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2020-02-06 16:01:15,117 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2020-02-06 16:01:15,259 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2020-02-06 16:01:15,945 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-02-06 16:01:31,512 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-02-06 16:03:14,582 [1] DEBUG - Barcode delay=141, Ctrl=True, B=False
+2020-02-06 16:03:34,520 [1] DEBUG - Barcode delay=106, Ctrl=True, B=False
+2020-02-06 16:03:43,602 [1] DEBUG - API:http://egw.baohiemxahoi.gov.vn/api/
+2020-02-06 16:03:43,602 [1] DEBUG - user:38289_BV
+2020-02-06 16:03:43,602 [1] DEBUG - pass:hopluc123
+--------------------------------------------------------------------------------
+2020-02-06 16:29:07,878 [1] INFO  - [Application started.]
+2020-02-06 16:29:13,729 [1] INFO  - [_SYSTEM_] Session is starting.
+2020-02-06 16:29:14,188 [1] INFO  - LoadMasters() took 450 ms.
+2020-02-06 16:29:14,188 [1] INFO  - [_SYSTEM_] Session started.
+2020-02-06 16:29:33,090 [1] INFO  - [admin] Session is starting.
+2020-02-06 16:29:34,245 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:29:47,805 [5] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2020-02-06 16:29:47,806 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:31:36,840 [5] ERROR - Error when loading cache 'REFBENHNHAN_DY' => One or more errors occurred..
+2020-02-06 16:31:36,853 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:31:49,232 [5] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2020-02-06 16:31:49,232 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:31:55,439 [5] ERROR - Error when loading cache 'REFBENHNHAN_GROUP_DICHVU' => One or more errors occurred..
+2020-02-06 16:31:55,451 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:32:07,775 [5] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2020-02-06 16:32:07,775 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:32:14,039 [5] ERROR - Error when loading cache 'REFBENHNHAN_MN' => One or more errors occurred..
+2020-02-06 16:32:14,050 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:32:26,366 [5] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2020-02-06 16:32:26,366 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:32:32,579 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_CC' => One or more errors occurred..
+2020-02-06 16:32:32,591 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:32:44,987 [5] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2020-02-06 16:32:44,987 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:32:51,143 [5] ERROR - Error when loading cache 'REFBENHNHAN_NT_DY' => One or more errors occurred..
+2020-02-06 16:32:51,155 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:33:03,512 [5] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2020-02-06 16:33:03,512 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:33:09,722 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN' => One or more errors occurred..
+2020-02-06 16:33:09,734 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:33:22,053 [5] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2020-02-06 16:33:22,054 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:33:28,223 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_ALL' => One or more errors occurred..
+2020-02-06 16:33:28,235 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:33:40,555 [5] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2020-02-06 16:33:40,555 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:33:46,765 [5] ERROR - Error when loading cache 'REFBENHNHAN_TIEPNHAN_DV_VTYT' => One or more errors occurred..
+2020-02-06 16:33:46,779 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:33:59,108 [5] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2020-02-06 16:33:59,108 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:34:05,281 [5] ERROR - Error when loading cache 'REFBENHNHAN_TOATHUOC' => One or more errors occurred..
+2020-02-06 16:34:05,744 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:34:18,073 [5] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2020-02-06 16:34:18,073 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:34:24,261 [5] ERROR - Error when loading cache 'REFDUOC_KYGUI_TONKHO' => One or more errors occurred..
+2020-02-06 16:34:24,273 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:34:36,608 [5] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2020-02-06 16:34:36,608 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:34:42,898 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO' => One or more errors occurred..
+2020-02-06 16:34:42,910 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:34:55,228 [5] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2020-02-06 16:34:55,228 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:35:01,401 [5] ERROR - Error when loading cache 'REFDUOC_TONKHO_BOOKING' => One or more errors occurred..
+2020-02-06 16:35:02,081 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:35:14,436 [5] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2020-02-06 16:35:14,436 [5] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:35:20,754 [5] ERROR - Error when loading cache 'REFMAU_TONKHO' => One or more errors occurred..
+2020-02-06 16:35:20,766 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:35:33,104 [5] INFO  - Can't create direct service instance of COM073 -> One or more errors occurred.
+2020-02-06 16:35:33,104 [5] INFO  - Can't create direct service instance of COM073, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:35:39,265 [5] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => One or more errors occurred..
+2020-02-06 16:35:39,276 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2020-02-06 16:35:52,339 [5] INFO  - Can't create direct service instance of COM072 -> One or more errors occurred.
+2020-02-06 16:35:52,339 [5] INFO  - Can't create direct service instance of COM072, try to use WebService with url http://10.86.222.234:2010/api/
+2020-02-06 16:35:58,832 [5] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => One or more errors occurred..
+2020-02-06 16:35:59,693 [5] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFBENHNHAN_DY, REFBENHNHAN_GROUP_DICHVU, REFBENHNHAN_MN, REFBENHNHAN_NT_CC, REFBENHNHAN_NT_DY, REFBENHNHAN_TIEPNHAN, REFBENHNHAN_TIEPNHAN_ALL, REFBENHNHAN_TIEPNHAN_DV_VTYT, REFBENHNHAN_TOATHUOC, REFDUOC_KYGUI_TONKHO, REFDUOC_TONKHO, REFDUOC_TONKHO_BOOKING, REFMAU_TONKHO, REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 239
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2020-02-06 16:35:59,713 [1] INFO  - [admin] Session started.
+2020-02-06 16:36:00,781 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2020-02-06 16:36:00,822 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2020-02-06 16:36:01,112 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2020-02-06 16:36:01,158 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2020-02-06 16:36:01,390 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2020-02-06 16:36:01,440 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2020-02-06 16:36:01,491 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2020-02-06 16:36:01,534 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2020-02-06 16:36:01,578 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2020-02-06 16:36:01,618 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2020-02-06 16:36:01,666 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2020-02-06 16:36:01,723 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2020-02-06 16:36:01,787 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2020-02-06 16:36:01,831 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2020-02-06 16:36:01,873 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2020-02-06 16:36:01,926 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2020-02-06 16:36:01,967 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2020-02-06 16:36:02,078 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2020-02-06 16:36:02,332 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2020-02-06 16:36:02,397 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2020-02-06 16:36:02,457 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2020-02-06 16:36:02,505 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2020-02-06 16:36:02,606 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2020-02-06 16:36:02,868 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2020-02-06 16:36:02,914 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2020-02-06 16:36:02,958 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2020-02-06 16:36:03,017 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2020-02-06 16:36:03,103 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2020-02-06 16:36:03,229 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2020-02-06 16:36:03,276 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2020-02-06 16:36:03,320 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2020-02-06 16:36:03,414 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2020-02-06 16:36:03,534 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2020-02-06 16:36:03,580 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2020-02-06 16:36:03,627 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2020-02-06 16:36:03,681 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2020-02-06 16:36:03,732 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2020-02-06 16:36:03,798 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2020-02-06 16:36:04,070 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2020-02-06 16:36:04,162 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2020-02-06 16:36:04,216 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2020-02-06 16:36:04,270 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2020-02-06 16:36:04,416 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2020-02-06 16:36:04,645 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2020-02-06 16:36:04,705 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2020-02-06 16:36:04,776 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2020-02-06 16:36:04,846 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2020-02-06 16:36:04,895 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2020-02-06 16:36:05,042 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2020-02-06 16:36:05,866 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-02-06 16:36:20,876 [1] WARN  - DataRepository for 'REFBENHNHAN_DY' is null.
+2020-02-06 16:36:26,850 [1] DEBUG - Barcode delay=119, Ctrl=True, B=False
+2020-02-06 16:36:31,008 [1] DEBUG - Barcode delay=21, Ctrl=True, B=False
+2020-02-06 16:36:57,710 [1] DEBUG - API:http://egw.baohiemxahoi.gov.vn/api/
+2020-02-06 16:36:57,710 [1] DEBUG - user:38289_BV
+2020-02-06 16:36:57,711 [1] DEBUG - pass:hopluc123

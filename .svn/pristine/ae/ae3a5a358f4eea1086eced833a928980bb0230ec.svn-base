@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+      <!--Revision:0,352a17d271dff1a6162ad4d84e0683ea-->
+      <statement id="DAO00008_GetFormMenuList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select
+          F.HOSPITAL_ID,
+          F.NAME,
+          F.CLASS,
+          F.ASSEMBLY,
+          F.TITLE_VI as TITLE_FORM,
+          ISNULL(M.ACTIVE,0) AS ACTIVE,
+          M.TITLE_VI as TITLE
+          from TM_SYS_FORM AS F
+          left join TM_SYS_MENU AS M ON M.SCREEN = F.NAME AND M.HOSPITAL_ID = F.HOSPITAL_ID
+          where F.HOSPITAL_ID = '$HOSPITAL_ID$'
+          ORDER BY ISNULL(M.ACTIVE,0) DESC
+      </statement>
+      <!--Revision:0,dbaa57f5d0ceb701e5ce86af3ce5734a-->
+      <statement id="DAO00008_GetAll" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          select *
+          from TM_SYS_FORM
+          where HOSPITAL_ID = #HOSPITAL_ID#
+      </statement>
+      <!--Revision:0,fcf3c677665b8b9eed865a82585534aa-->
+      <statement id="DAO00008_GetUserSettings" resultClass="DataObject">
+        select A.*, B.TENKHO , C.TENPHONGBAN, B.MAKHO, C.MAPHONGBAN
+        from TM_SYS_USERS A
+        left join TM_KHODUOC B on B.KHODUOC_ID = A.INVENTORY_ID
+        left join TM_PHONGBAN C on (C.PHONGBAN_ID = A.WORKING_DEPT_ID and C.BENHVIEN_ID = #HOSPITAL_ID#)
+        left join TM_SYS_USERKHO D on (D.ACCOUNT_ID = A.ACCOUNT_ID and D.HOSPITAL_ID = #HOSPITAL_ID#)
+        where
+        A.HOSPITAL_ID = #HOSPITAL_ID#
+        <isNotEmpty prepend="and" property="ACCOUNT_ID">
+              A.ACCOUNT_ID = #ACCOUNT_ID#
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="ACCOUNT_NAME">
+              A.ACCOUNT_NAME = #ACCOUNT_NAME#
+          </isNotEmpty>
+      </statement>
+      <!--Revision:0,071a2c857fe960edcb978c80bb0cdf8f-->
+      <statement id="DAO00008_GetDefaultUserIdPhongBanKhoDuoc" resultClass="DataObject">
+          select top 1 A.PHONGBAN_ID, D.KHODUOC_ID, B.TENKHO, C.TENPHONGBAN, B.MAKHO, C.MAPHONGBAN
+          from TM_NHANVIEN A
+          left join TM_PHONGBAN_KHODUOC D on D.PHONGBAN_ID = A.PHONGBAN_ID
+          left join TM_KHODUOC B on B.KHODUOC_ID = D.KHODUOC_ID
+          left join TM_PHONGBAN C on C.PHONGBAN_ID = A.PHONGBAN_ID
+          where A.NHANVIEN_ID = #NHANVIEN_ID# and A.BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <!--Revision:0,a92bd970e504d2811db0fb630b199dda-->
+      <statement id="DAO00008_UpdateUserIdPhongBanKhoDuoc" resultClass="DataObject">
+          IF EXISTS
+          (SELECT ACCOUNT_ID FROM TM_SYS_USERS WHERE ACCOUNT_ID = #ACCOUNT_ID# and HOSPITAL_ID = #HOSPITAL_ID#)
+          BEGIN
+          update TM_SYS_USERS set INVENTORY_ID = #INVENTORY_ID#, WORKING_DEPT_ID = #WORKING_DEPT_ID#
+          WHERE ACCOUNT_ID = #ACCOUNT_ID# and HOSPITAL_ID = #HOSPITAL_ID#
+          END
+          ELSE
+          BEGIN
+          insert into TM_SYS_USERS ([ACCOUNT_ID], [ACCOUNT_NAME], [INVENTORY_ID], [WORKING_DEPT_ID], [HOSPITAL_ID])
+          values (#ACCOUNT_ID#, #ACCOUNT_NAME#, #INVENTORY_ID#, #WORKING_DEPT_ID#, #HOSPITAL_ID#)
+          END
+      </statement>
+      <statement id="DAO00008_GetUserInvSettings" resultClass="DataObject">
+        select A.*, B.TENKHO, B.MAKHO, B.LOAIKHO_ID, B.KHOQUANLY_ID
+        from TM_SYS_USERKHO A
+        left join TM_KHO B on B.MODULE_ID = A.MODULE_ID and B.KHO_ID = A.KHO_ID
+        where A.HOSPITAL_ID = #HOSPITAL_ID# and A.ACCOUNT_ID = #ACCOUNT_ID#
+        order by B.TENKHO
+      </statement>
+      <statement id="DAO00008_GetDeptInvSettings" resultClass="DataObject">
+        select distinct C.MODULE_ID,
+        (select top 1 KHO_ID from TM_KHO where MODULE_ID = C.MODULE_ID) KHO_ID
+        from TM_NHANVIEN A
+        right join TM_PHONGBAN_KHO B on B.PHONGBAN_ID = B.PHONGBAN_ID
+        left join TM_KHO C on C.KHO_ID = B.KHO_ID
+        where A.NHANVIEN_ID = #NHANVIEN_ID# and A.BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00008_UpdateUserInvSettings" resultClass="DataObject">
+        insert into TM_SYS_USERKHO
+          (HOSPITAL_ID, ACCOUNT_ID, MODULE_ID, KHO_ID)
+        values
+          (#HOSPITAL_ID#, #ACCOUNT_ID#, #MODULE_ID#, #KHO_ID#)
+      </statement>
+      <statement id="DAO00008_DeleteUserInvSettings" resultClass="DataObject">
+        delete TM_SYS_USERKHO
+        where HOSPITAL_ID = #HOSPITAL_ID# and ACCOUNT_ID = #ACCOUNT_ID#       
+      </statement>
+    </statements>
+</sqlMap>

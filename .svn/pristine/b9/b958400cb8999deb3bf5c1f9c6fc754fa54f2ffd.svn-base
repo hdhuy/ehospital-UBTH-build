@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,15d06631b04081565e1870bcf8527f66-->
+        <statement id="DAO00017_GetList" resultClass="DataObject">
+          select A.*, B.DICTIONARY_CODE from TM_PHONGBAN A
+          inner join LST_DICTIONARY B on A.LOAIPHONGBAN_ID = B.DICTIONARY_ID
+          and B.DICTIONARY_TYPE_CODE = 'LoaiPhongBan'
+          where A.BENHVIEN_ID = '$BENHVIEN_ID$' AND A.TAMNGUNG = '0'  order by A.TENPHONGBAN asc
+        </statement>
+        <!--Revision:0,2506953376286194dbabf52817f0b069-->
+        <statement id="DAO00017_GetNameByID" resultClass="DataObject">
+            select TENPHONGBAN
+            from [TM_PHONGBAN]
+            where PHONGBAN_ID = '$PHONGBAN_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,d7c0b1d0ac632b2243ffc8a3164ac6dd-->
+        <statement id="DAO00017_GetListPhongKham" resultClass="DataObject">
+            select pb.PHONGBAN_ID, pb.TENPHONGBAN, case when dv.ATTRIBUTE5 is null then 'TT' else 'KTC' end as LOAI_CHIPHI
+            from [TM_PHONGBAN_DICHVU] as pb_dv
+            inner join [TM_PHONGBAN] as pb on pb.PHONGBAN_ID = pb_dv.PHONGBAN_ID and pb.BENHVIEN_ID = '$BENHVIEN_ID$'
+            inner join [TM_DICHVU] dv on dv.DICHVU_ID = pb_dv.DICHVU_ID and dv.MADICHVU = '$MADICHVU$' and dv.BENHVIEN_ID = '$BENHVIEN_ID$'
+            where pb_dv.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,32c73a68ac4d50dbd2a78be7533877d7-->
+        <statement id="DAO00017_GetLoaiGia" resultClass="DataObject">
+            select lg.LOAIGIA_ID, lg.TENLOAIGIA, lg.MALOAIGIA
+            from TM_LOAIGIA lg
+            inner join LST_DICTIONARY dic on lg.NHOMGIA_ID = dic.DICTIONARY_ID
+            <!--and dic.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+            where lg.TAMNGUNG = 0 and dic.DICTIONARY_TYPE_CODE = 'NhomGia' and dic.DICTIONARY_CODE = 'DichVu' and lg.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,d1df4aef4b89476cecc2cbf9519e0a27-->
+        <statement id="DAO00017_GetLoaiGiaDoiTuongDichVu" resultClass="DataObject">
+          
+          select a.LOAIGIA_ID, a.TENLOAIGIA, a.MALOAIGIA, a.CAPTREN_ID, MIN(a.UUTIEN_NGUON) AS UUTIEN_NGUON
+          , MAX(a.DOUUTIEN) AS DOUUTIEN, MIN(ISNULL(a.GIAHOTRO,0)) AS GIAHOTRO
+          from(
+          <isNotEmpty prepend="" property="ISNGUON_BENHNHAN">
+                <isEqual prepend="" property="ISNGUON_BENHNHAN" compareValue="True">
+                    select distinct A.LOAIGIA_ID, C.TENLOAIGIA, C.MALOAIGIA, 1 as UUTIEN_NGUON, 1 as DOUUTIEN, 0 as GIAHOTRO, C.CAPTREN_ID
+                    from TM_NGUONBN_LOAIGIA A
+                    <isNotEmpty property="$DICHVU_ID">
+                        inner join TM_DICHVU_DONGIA B on A.LOAIGIA_ID = B.LOAIGIA_ID and B.DICHVU_ID = '$DICHVU_ID$'
+                    </isNotEmpty>
+                    inner join TM_LOAIGIA C on A.LOAIGIA_ID = C.LOAIGIA_ID and C.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    where A.NGUON_BENHNHAN_ID = '$NGUON_BENHNHAN_ID$' and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    <isNotEmpty property="GIADICHVU">
+                        and C.CAPTREN_ID = (select LOAIGIA_ID from TM_LOAIGIA
+                        where MALOAIGIA = 'GiaDichVu'
+                        and BENHVIEN_ID = '$BENHVIEN_ID$')
+                    </isNotEmpty>
+                    union
+                </isEqual>
+            </isNotEmpty>
+            select distinct A.LOAIGIA_ID, C.TENLOAIGIA, C.MALOAIGIA, 0 as UUTIEN_NGUON, isnull(B.DOUUTIEN,0) as DOUUTIEN, B.GIAHOTRO, C.CAPTREN_ID
+            from TM_DOITUONG_GIADICHVU A
+            left join TM_DOITUONG_LOAIGIA B on A.LOAIGIA_ID = B.LOAIGIA_ID and A.DOITUONG_ID = B.DOITUONG_ID and B.BENHVIEN_ID = '$BENHVIEN_ID$'
+            inner join TM_LOAIGIA C on A.LOAIGIA_ID = C.LOAIGIA_ID and C.BENHVIEN_ID = '$BENHVIEN_ID$'
+            where A.DOITUONG_ID = '$DOITUONG_ID$' 
+            <isNotEmpty prepend="" property="COM_DUNGBANGGIA_THEO_NGUONKHACHHANG">
+            <isEqual prepend="" property="COM_DUNGBANGGIA_THEO_NGUONKHACHHANG" compareValue="False">
+              and (B.GIAHOTRO = '0')
+            </isEqual>
+          </isNotEmpty>
+            
+            <isNotEmpty property="DICHVU_ID">
+                and A.DICHVU_ID = '$DICHVU_ID$'
+            </isNotEmpty>
+            <isNotEmpty property="GIADICHVU">
+                and C.CAPTREN_ID = (select LOAIGIA_ID from TM_LOAIGIA
+                where MALOAIGIA = 'GiaDichVu'
+                and BENHVIEN_ID = '$BENHVIEN_ID$')
+            </isNotEmpty>
+          and A.BENHVIEN_ID = '$BENHVIEN_ID$'
+          <!--order by UUTIEN_NGUON, DOUUTIEN, GIAHOTRO-->
+          ) a
+          where a.DOUUTIEN != 0 and a.DOUUTIEN is not null
+          group by a.LOAIGIA_ID, a.TENLOAIGIA, a.MALOAIGIA, a.CAPTREN_ID
+          <!--order by MIN(a.UUTIEN_NGUON), MAX(a.DOUUTIEN), MIN(ISNULL(a.GIAHOTRO,0))-->
+          order by MAX(a.UUTIEN_NGUON) desc ,MAX(a.DOUUTIEN) asc
+        </statement>
+        <!--Revision:0,c62b08064c7bdda5da44dfb1456da4d4-->
+        <statement id="DAO00017_GetLoaiGiaByDoiTuongId" resultClass="DataObject">
+            select dtlg.DOUUTIEN, dtlg.DOITUONG_ID, lg.LOAIGIA_ID, lg.TENLOAIGIA, lg.MALOAIGIA
+            from TM_LOAIGIA lg
+            left join TM_DOITUONG_LOAIGIA dtlg
+            on lg.LOAIGIA_ID = dtlg.LOAIGIA_ID and dtlg.BENHVIEN_ID = '$BENHVIEN_ID$'
+            where lg.TAMNGUNG = 0 and lg.BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isPropertyAvailable prepend="AND" property="DOITUONG_ID">
+                dtlg.DOITUONG_ID = '$DOITUONG_ID$'
+            </isPropertyAvailable>
+            order by dtlg.DOUUTIEN
+        </statement>
+        <!--Revision:0,5446b0acbfcfba4df62ae6f2241d2797-->
+        <statement id="DAO00017_GetDonGia" resultClass="DataObject">
+            select distinct dongia.DONGIA
+            from TM_DICHVU_DONGIA dongia
+            inner join TM_DICHVU dv on dv.DICHVU_ID = dongia.DICHVU_ID
+            inner join TM_DOITUONG_GIADICHVU gia on gia.DICHVU_ID = dongia.DICHVU_ID
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isPropertyAvailable prepend="AND" property="MADICHVU">
+                dv.MADICHVU = '$MADICHVU$'
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="AND" property="DOITUONG_ID">
+                gia.DOITUONG_ID = '$DOITUONG_ID$'
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="AND" property="LOAIGIA_ID">
+                gia.LOAIGIA_ID = '$LOAIGIA_ID$'
+            </isPropertyAvailable>
+        </statement>
+        <!--Revision:0,2088c01c9ab39dd7e8256bfa322e7717-->
+        <statement id="DAO00017_GetDanhSachPhongBan" resultClass="DataObject">
+            select *
+            from [TM_PHONGBAN]
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,a3c278173e4c4c5b29927ecc314362ac-->
+        <statement id="DAO00017_GetDanhSachNoiThucHien" resultClass="DataObject">
+            select pb.PHONGBAN_ID, pb.TENPHONGBAN
+            from [TM_PHONGBAN] as pb
+            left join LST_DICTIONARY dic on pb.LOAIPHONGBAN_ID = dic.DICTIONARY_ID
+            where pb.BENHVIEN_ID = '$BENHVIEN_ID$'
+            <!--and dic.BENHVIEN_ID = '$BENHVIEN_ID$'-->
+          and dic.DICTIONARY_TYPE_CODE = 'LoaiPhongBan'
+          and dic.DICTIONARY_CODE in ('KhamBenh','PhongBenh','KhoaNoi','PhongMo','KhoaDuoc','KhoaCLS', 'KhoaNgoai')
+        </statement>
+    </statements>
+</sqlMap>

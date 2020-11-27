@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <statement id="DAO00313_GetAll" resultClass="DataObject">
+      select *
+      from TT_PHACDO_CHUKY_DICHVU
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      order by CHUKY_DICHVU_ID
+    </statement>
+    <statement id="DAO00313_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_PHACDO_CHUKY_DICHVU
+      where
+      CHUKY_DICHVU_ID IN (SELECT * FROM DBO.SPLIT('$CHUKY_DICHVU_ID$',', '))
+    </statement>
+    <statement id="DAO00313_AddChuKy" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TM_PHACDO_CHUKY (
+       PHACDO_ID
+      , MACHUKY
+      , TENCHUKY
+      , THUTU
+      , NGUOITAO_ID
+      , NGAYTAO
+      , NGUOICAPNHAT_ID
+      , NGAYCAPNHAT
+      , BENHVIEN_ID
+      ) values (
+       #PHACDO_ID#
+      , #MACHUKY#
+      , #TENCHUKY#
+      , #THUTU#
+      , #NGUOITAO_ID#
+      , #NGAYTAO#
+      , #NGUOICAPNHAT_ID#
+      , #NGAYCAPNHAT#
+      , #BENHVIEN_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+
+    <update id="DAO00313_UpdateChuKy" parameterClass="System.Collections.IDictionary">
+      update TM_PHACDO_CHUKY set
+      PHACDO_ID = #PHACDO_ID#
+      , MACHUKY = #MACHUKY#
+      , TENCHUKY = #TENCHUKY#
+      , THUTU = #THUTU#
+      , NGUOITAO_ID = #NGUOITAO_ID#
+      , NGAYTAO = #NGAYTAO#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      where
+      CHUKY_ID = $CHUKY_ID$
+    </update>
+
+    <statement id="DAO00313_DeleteChuKy" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TM_PHACDO_CHUKY
+      where
+      CHUKY_ID = $CHUKY_ID$
+    </statement>
+    <statement id="DAO00313_AddByJson" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      declare @JSONDATA nvarchar(max) = N'$JSON_ADDDV$'
+
+      insert into TT_PHACDO_CHUKY_DICHVU
+      SELECT * FROM OPENJSON(@JSONDATA)
+      WITH(
+      CHUKY_ID int
+      , PHACDO_ID int
+      , PHIENBAN_ID int
+      , DICHVU_ID int
+      , SOLUONG numeric(25,4)
+      , BENHVIEN_ID varchar(10)
+      , NGAYTAO datetime
+      , NGUOITAO_ID int
+      , NGAYCAPNHAT datetime
+      , NGUOICAPNHAT_ID int
+      ) 
+    </statement>
+
+    <update id="DAO00313_UpdateByJson" parameterClass="System.Collections.IDictionary">
+      declare @JSONDATA nvarchar(max) = N'$JSON_UPDATEDV$'
+
+      update TT_PHACDO_CHUKY_DICHVU set
+      CHUKY_ID = json.CHUKY_ID
+      , PHACDO_ID = json.PHACDO_ID
+      , DICHVU_ID = json.DICHVU_ID
+      , SOLUONG = json.SOLUONG
+      , BENHVIEN_ID = json.BENHVIEN_ID
+      , NGAYCAPNHAT = json.NGAYCAPNHAT
+      , NGUOICAPNHAT_ID = json.NGUOICAPNHAT_ID
+      FROM OPENJSON(@JSONDATA)
+      WITH
+      (
+      CHUKY_DICHVU_ID int
+      , CHUKY_ID int
+      , PHACDO_ID int
+      , PHIENBAN_ID int
+      , DICHVU_ID int
+      , SOLUONG numeric(25,4)
+      , BENHVIEN_ID varchar(10)
+      , NGAYCAPNHAT datetime
+      , NGUOICAPNHAT_ID int
+      )json
+      where
+      TT_PHACDO_CHUKY_DICHVU.CHUKY_DICHVU_ID = json.CHUKY_DICHVU_ID
+    </update>
+    </statements>
+</sqlMap>

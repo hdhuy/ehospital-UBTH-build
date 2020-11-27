@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Localization>
+  <vi-vn>
+    <string id="MODL0001" string="Home"/>
+    <string id="MODL0002" string="Chức năng chung"/>
+    <string id="MODL0003" string="Tiếp nhận"/>
+    <string id="MODL0004" string="Khám bệnh"/>
+    <string id="MODL0005" string="Quản lý người bệnh"/>
+    <string id="MODL0006" string="Quản lý dược"/>
+    <string id="MODL0007" string="Quản trị hệ thống"/>
+    <string id="MODL0008" string="Quản lý lịch"/>
+    <string id="MODL0009" string=""/>
+    <string id="MODL0010" string="Viện phí"/>
+    <string id="MODL0011" string="Cấp cứu"/>
+    <string id="MODL0012" string="Nội trú"/>
+    <string id="MODL0013" string="Cận lâm sàng"/>
+    <string id="MODL0014" string="Báo cáo"/>
+    <string id="MODL0015" string="Danh mục"/>
+    <string id="MODL0016" string="Ngoại trú"/>
+    <string id="MODL0017" string="Chăm sóc khách hàng"/>
+    <string id="MODL0018" string="Quản lý bệnh án giấy"/>
+    <string id="MODL0019" string="Tiện ích"/>
+    <string id="MODL0020" string="Quản lý dinh dưỡng"/>
+    <string id="MODL0021" string="Quản lý mua hàng"/>
+    <string id="MODL0022" string="CSKH"/>
+    <string id="MODL0023" string="Quản lý văn phòng phẩm"/>
+    <string id="MODL0024" string="Khám sức khỏe"/>
+    <string id="MODL0025" string="Ngoại trú"/>
+
+    <string id="FORM0001" string="Tiếp nhận"/>
+    <string id="FORM0002" string="Khám bệnh"/>
+    <string id="FORM0003" string="Chẩn đoán hình ảnh"/>
+    <string id="FORM0004" string="Chỉ định dịch vụ ngoại trú"/>
+    <string id="FORM0005" string="Thu tiền viện phí ngoại trú"/>
+    <string id="FORM0006" string="Nhập dược từ nhà cung cấp"/>
+    <string id="FORM0007" string="Thông tin người bệnh"/>
+    <string id="FORM0008" string="Tìm kiếm người bệnh"/>
+    <string id="FORM0009" string="Trả dược nhà cung cấp"/>
+    <string id="FORM0010" string="Trạng thái điều trị"/>
+    <string id="FORM0011" string="Lập phiếu lĩnh dược"/>
+    <string id="FORM0012" string="Duyệt phiếu lĩnh dược"/>
+    <string id="FORM0013" string="Xuất dược nội bộ"/>
+    <string id="FORM0014" string="Xét nghiệm"/>
+    <string id="FORM0015" string="Nhập dược nội bộ"/>
+    <string id="FORM0016" string="Duyệt toa thuốc BHYT"/>
+    <string id="FORM0017" string="Xuất thuốc BHYT ngoại trú"/>
+    <string id="FORM0018" string="Phẫu thuật"/>
+    <string id="FORM0019" string="Hồ sơ bệnh án điện tử"/>
+    <string id="FORM0020" string="Sinh hiệu"/>
+    <string id="FORM0021" string="Cho y lệnh thuốc"/>
+    <string id="FORM0022" string="Xác nhận BHYT ngoại trú"/>
+    <string id="FORM0023" string="Xác nhận BHYT nội trú"/>
+    <!--<string id="FORM0023" string="Xác nhận thanh toán nội trú/ Cấp cứu"/>-->
+    <string id="FORM0024" string="Tính số dư đầu kỳ"/>
+    <string id="FORM0025" string="Cấp hồ sơ bệnh án"/>
+    <string id="FORM0026" string="Phiếu điều chỉnh tăng"/>
+    <string id="FORM0027" string="Khóa/mở sổ chứng từ"/>
+    <string id="FORM0028" string="Thanh lý dược"/>
+    <string id="FORM0029" string="Nhập số dư đầu kỳ"/>
+    <string id="FORM0030" string="Thay đổi kho dược/ phòng ban"/>
+    <string id="FORM0031" string="Duyệt toa thuốc tại quầy"/>
+    <string id="FORM0032" string="Bán thuốc theo toa tại quầy"/>
+    <string id="FORM0033" string="Trả thuốc tại quầy"/>
+    <string id="FORM0034" string="Danh sách cấp cứu"/>
+    <string id="FORM0035" string="Danh sách nội trú"/>
+    <string id="FORM0036" string="Thu tiền viện phí nội trú"/>
+    <string id="FORM0037" string="Công nợ nội trú"/>
+    <string id="FORM0038" string="Cập nhật đối tượng/giá nội trú"/>
+    <string id="FORM0039" string="Quản lý giường bệnh"/>
+    <string id="FORM0040" string="Thiết lập báo cáo"/>
+    <string id="FORM0041" string="Theo dõi đường huyết"/>
+    <string id="FORM0042" string="Hoàn trả nội bộ"/>
+    <string id="FORM0043" string="Chăm sóc người bệnh"/>
+    <string id="FORM0044" string="Biên bản hội chẩn"/>
+    <string id="FORM0045" string="Nhận hoàn trả nội bộ"/>
+    <string id="FORM0046" string="Hồ sơ bệnh án nội trú"/>
+    <string id="FORM0047" string="Xuất sử dụng thuốc/VTYT"/>
+    <string id="FORM0048" string="Danh sách hội chẩn"/>
+    <string id="FORM0049" string="Ghi nhận hỗ trợ miễn giảm ngoại trú"/>
+    <string id="FORM0050" string="Duyệt ghi nhận hỗ trợ miễn giảm ngoại trú"/>
+    <string id="FORM0051" string="Kiểm kê dược"/>
+    <string id="FORM0052" string="Hồ sơ bệnh án cấp cứu"/>
+    <string id="FORM0053" string="Hồ sơ bệnh án ngoại trú"/>
+    <string id="FORM0054" string="Chỉ định dịch vụ nội trú"/>
+    <string id="FORM0055" string="Thiết lập danh mục"/>
+    <string id="FORM0056" string="Cho y lệnh vật tư y tế"/>
+    <string id="FORM0057" string="Hệ thống danh mục"/>
+    <string id="FORM0058" string="Chuyển khoa"/>
+    <string id="FORM0059" string="Báo cáo OLAP"/>
+    <string id="FORM0060" string="Thiết lập báo cáo OLAP"/>
+    <string id="FORM0061" string="Xác nhận BHYT cấp cứu"/>
+    <string id="FORM0062" string="Nhóm DM dược phẩm"/>
+    <string id="FORM0063" string="Danh mục dược"/>
+    <string id="FORM0064" string="Phiếu điều chỉnh giảm"/>
+    <string id="FORM0065" string="Nhóm DM dịch vụ"/>
+    <string id="FORM0066" string="Danh mục dịch vụ"/>
+    <string id="FORM0067" string="Thủ thuật"/>
+    <string id="FORM0068" string="Tìm kiếm thông tin người bệnh"/>
+    <string id="FORM0069" string="Nhóm DM Phòng ban"/>
+    <string id="FORM0070" string="Danh mục Phòng ban"/>
+    <string id="FORM0071" string="Nhóm DM Nhân viên"/>
+    <string id="FORM0072" string="Danh mục Nhân viên"/>
+    <string id="FORM0073" string="Nhóm DM Cận lâm sàng"/>
+    <string id="FORM0074" string="Nhóm DM Giường bệnh"/>
+    <string id="FORM0075" string="Danh mục Giường bệnh"/>
+    <string id="FORM0076" string="Từ điển kết luận"/>
+    <string id="FORM0077" string="Danh mục Phòng ban - Dịch vụ"/>
+    <string id="FORM0078" string="Danh mục Phòng khám - Bác sĩ"/>
+    <string id="FORM0079" string="Danh mục Phòng ban - Kho dược"/>
+    <string id="FORM0080" string="Danh mục Phòng ban - Giường bệnh"/>
+    <string id="FORM0081" string="Danh mục Hoạt chất"/>
+    <string id="FORM0082" string="Danh mục Tương tác thuốc"/>
+    <string id="FORM0083" string="Danh mục Nhà cung cấp"/>
+    <string id="FORM0084" string="Danh mục Dược theo nguồn hàng"/>
+    <string id="FORM0085" string="Tạo quyển Biên lai/Hoá đơn"/>
+    <string id="FORM0086" string="Danh mục Dược theo phạm vi"/>
+    <string id="FORM0087" string="Danh mục Dược - Nơi phát hành giá"/>
+    <string id="FORM0088" string="Danh mục Kho dược booking theo phạm vi"/>
+    <string id="FORM0089" string="Nhóm DM Đối tượng"/>
+    <string id="FORM0090" string="Danh mục Đối tượng - Nguồn hàng"/>
+    <string id="FORM0091" string="Danh mục Dịch vụ - Giá trị chuẩn"/>
+    <string id="FORM0092" string="Danh mục Dịch vụ - Kỹ thuật cao"/>
+    <string id="FORM0093" string="Khóa bệnh án"/>
+    <string id="FORM0094" string="Danh mục Phân loại phẫu thuật"/>
+    <string id="FORM0095" string="Danh mục Nội dung nhóm bệnh"/>
+    <string id="FORM0096" string="Danh mục Công Ty BHTN - Dịch vụ"/>
+    <string id="FORM0097" string="Danh mục Nhân viên - Người sử dụng"/>
+    <string id="FORM0098" string="Danh mục Bác sĩ bên ngoài"/>
+    <string id="FORM0099" string="Danh mục Thẻ nhân viên"/>
+    <string id="FORM0100" string="Danh mục Đối tượng - Loại giá"/>
+    <string id="FORM0101" string="Thực hiện dịch vụ"/>
+    <string id="FORM0102" string="Danh mục Đối tượng - Kho dược"/>
+    <string id="FORM0103" string="Danh mục Đối tượng - Dịch vụ"/>
+    <string id="FORM0104" string="Danh mục Đối tượng - Phòng bệnh"/>
+    <string id="FORM0105" string="Danh mục Đối tượng - Giường bệnh"/>
+    <string id="FORM0106" string="Ghi nhận hỗ trợ miễn giảm nội trú"/>
+    <string id="FORM0107" string="Duyệt ghi nhận hỗ trợ miễn giảm nội trú"/>
+    <string id="FORM0108" string="Cập nhật đối tượng/giá ngoại trú"/>
+    <string id="FORM0109" string="Nhóm DM Lâm sàng"/>
+    <string id="FORM0110" string="Chu kỳ điều trị"/>
+    <string id="FORM0111" string="Danh mục phát đồ ICD"/>
+    <string id="FORM0112" string="Danh mục phát đồ điều trị"/>
+    <string id="FORM0113" string="Danh mục Dịch vụ - Vật tư"/>
+    <string id="FORM0114" string="Danh mục Dược đồng chi trả"/>
+    <string id="FORM0115" string="Danh mục Giá hợp đồng bệnh viện"/>
+    <string id="FORM0116" string="Nhóm DM Khác"/>
+    <string id="FORM0117" string="Thiết lập báo cáo theo dịch vụ"/>
+    <string id="FORM0118" string="Thiết lập báo cáo theo ICD"/>
+    <string id="FORM0119" string="Danh mục Giá bán dược - Bệnh viện"/>
+    <string id="FORM0120" string="Danh mục Giá bán dược - Nhà thuốc"/>
+
+    <string id="FORM0121" string="Danh sách khám bệnh"/>
+    <string id="FORM0122" string="Danh sách Nb chưa thu viện phí ngoại trú"/>
+    <string id="FORM0123" string="Danh sách thủ thuật"/>
+    <string id="FORM0124" string="Danh sách phẫu thuật"/>
+    <string id="FORM0125" string="Danh sách CĐHA"/>
+    <string id="FORM0126" string="Danh sách xét nghiệm"/>
+    <string id="FORM0127" string="Chuyển chi phí ngoại trú"/>
+    <string id="FORM0128" string="Danh mục Giá dịch vụ"/>
+    <string id="FORM0129" string="Danh mục Giá giường bệnh"/>
+    <string id="FORM0130" string="Danh mục Giá phòng bệnh"/>
+    <string id="FORM0131" string="Danh sách ghi nhận VTYT khám bệnh"/>
+    <string id="FORM0132" string="Xem kết quả cận lâm sàng"/>
+    <string id="FORM0133" string="Duyệt hủy biên lai ngoại trú"/>
+    <string id="FORM0134" string="Ghi nhận vật tư y tế"/>
+
+    <string id="FORM0135" string="Đăng ký thành viên"/>
+    <string id="FORM0136" string="Danh sách thành viên"/>
+    <string id="FORM0137" string="Quản lý thành viên"/>
+    <string id="FORM0138" string="Duyệt hủy biên lai nội trú"/>
+    <string id="FORM0139" string="Ghi nhận BHTN ngoại trú"/>
+    <string id="FORM0140" string="Ghi nhận BHTN nội trú"/>
+    <string id="FORM0142" string="Ngưng y lệnh"/>
+    <string id="FORM0143" string="Lịch hẹn người bệnh"/>
+    <string id="FORM0144" string="Quản lý lịch làm việc"/>
+    <string id="FORM0145" string="Quản lý lịch làm việc"/>
+    <string id="FORM0146" string="Duyệt ghi nhận BHTN ngoại trú"/>
+    <string id="FORM0147" string="Duyệt ghi nhận BHTN nội trú"/>
+    <string id="FORM0148" string="Ghi nhận vật tư y tế khám bệnh"/>
+    <string id="FORM0149" string="Xuất thuốc BHYT nội trú"/>
+    <string id="FORM0150" string="Nhận hồ sơ bệnh án"/>
+    <string id="FORM0151" string="Mượn hồ sơ bệnh án"/>
+    <string id="FORM0152" string="Định nghĩa gõ tắt"/>
+    <string id="FORM0153" string="Thay đổi mật khẩu"/>
+    <string id="FORM0160" string="Thực thi báo cáo"/>
+    <string id="FORM0161" string="Phân quyền chức năng"/>
+    <string id="FORM0162" string="Đính kèm file"/>
+    <string id="FORM0163" string="Cài đặt chính sách mật khẩu"/>
+    <string id="FORM0164" string="Danh sách xuất thuốc BHYT ngoại trú"/>
+    <string id="FORM0165" string="Tình trạng Login/ Logout người dùng"/>
+
+    <string id="FORM0166" string="Chỉ định khẩu phần ăn"/>
+    <string id="FORM0167" string="Tổng hợp khẩu phần ăn"/>
+    <string id="FORM0168" string="Xác nhận khẩu phần ăn"/>
+    <string id="FORM0194" string="Danh mục sản phẩm"/>
+    <string id="FORM0195" string="Danh mục buổi ăn"/>
+
+    <string id="FORM0169" string="Khóa đợt điều trị ngoại trú"/>
+    <string id="FORM0170" string="Xem báo cáo bệnh sử"/>
+
+    <string id="FORM0171" string="Danh mục Nguồn người bệnh - Loại giá"/>
+    <string id="FORM0172" string="Quản lý gói dịch vụ"/>
+    <string id="FORM0173" string="Danh mục"/>
+    <string id="FORM0174" string="Danh mục thẻ thành viên"/>
+    <string id="FORM0175" string="Tạo gói dịch vụ"/>
+    <string id="FORM0176" string="Đăng ký gói dịch vụ"/>
+    <string id="FORM0177" string="Khóa gói dịch vụ"/>
+    <string id="FORM0179" string="Kích hoạt gói dịch vụ"/>
+
+    <string id="FORM0178" string="Lấy mẫu bệnh phẩm"/>
+    <string id="FORM0180" string="Danh sách lấy mẫu bệnh phẩm"/>
+
+    <string id="FORM0181" string="Thu tiền thành viên/ Gói"/>
+
+    <string id="FORM0182" string="Xét nghiệm vi sinh"/>
+    <string id="FORM0183" string="Lập dự trù"/>
+    <string id="FORM0184" string="Duyệt dự trù"/>
+
+    <string id="FORM0185" string="Loại đặc tính của thành viên"/>
+    <string id="FORM0186" string="Định nghĩa quyền lợi thẻ thành viên - đặc tính"/>
+    <string id="FORM0187" string="Định nghĩa quyền lợi thẻ thành viên - dịch vụ"/>
+
+    <string id="FORM0188" string="In hóa đơn VAT"/>
+    <string id="FORM0189" string="Chi tiết công nợ nội trú"/>
+    <string id="FORM0190" string="Duyệt hủy thu tiền thành viên/ Gói"/>
+    <string id="FORM0191" string="Xét nghiệm giải phẫu bệnh"/>
+    <string id="FORM0192" string="Duyệt hủy hóa đơn VAT"/>
+    <string id="FORM0193" string="Danh mục giá khẩu phần ăn"/>
+
+    <string id="FORM0196" string="Nhập hàng ký gửi"/>
+    <string id="FORM0197" string="Trả hàng ký gửi"/>
+    <string id="FORM0200" string="Xuất hàng ký gửi"/>
+
+    <string id="FORM0198" string="Danh sách xét nghiệm vi sinh"/>
+    <string id="FORM0199" string="Danh sách xét nghiệm giải phẩu bệnh"/>
+    <string id="FORM0201" string="Tư vấn gói dịch vụ"/>
+
+    <string id="FORM0202" string="Chẩn đoán hình ảnh (KTV)"/>
+    <string id="FORM0203" string="Quản lý booking dược ngoại trú và nội trú"/>
+    <string id="FORM0204" string="Thu tiền thuốc mua ngoài"/>
+    <string id="FORM0205" string="Duyệt hủy thuốc mua ngoài"/>
+    <string id="FORM0206" string="Gộp mã người bệnh"/>
+    <string id="FORM0207" string="Danh mục gói dịch vụ"/>
+    <string id="FORM0208" string="Danh mục Kháng sinh đồ - Nhóm"/>
+    <string id="FORM0209" string="Hóa đơn"/>
+    <string id="FORM0210" string="Nhà thuốc"/>
+
+    <string id="FORM0211" string="Dự trù và nhập NCC"/>
+    <string id="FORM0212" string="Xuất thuốc BHYT"/>
+    <string id="FORM0213" string="Bán thuốc tại quầy"/>
+    <string id="FORM0214" string="Nhập xuất dược nội bộ"/>
+    <string id="FORM0215" string="Quản lý kho dược"/>
+    <string id="FORM0216" string="Quản lý thông tin sử dụng gói dịch vụ"/>
+    <string id="FORM0217" string="Theo dõi gói dịch vụ"/>
+    <string id="FORM0218" string="Bệnh án chuyên khoa"/>
+    <string id="FORM0219" string="Nội khoa"/>
+    <string id="FORM0220" string="Ngoại khoa"/>
+    <string id="FORM0221" string="Danh sách người bệnh"/>
+    <!--Mua hàng-->
+    <string id="FORM0400" string="Danh mục quy trình"/>
+    <string id="FORM0401" string="Danh mục trạng thái"/>
+    <string id="FORM0402" string="Danh mục trạng thái hành động"/>
+    <string id="FORM0403" string="Danh mục lựa chọn giá"/>
+    <string id="FORM0404" string="Danh mục loại hàng hóa"/>
+    <string id="FORM0409" string="Danh mục nhóm hàng hóa"/>
+    <string id="FORM0405" string="Phòng ban - người duyệt"/>
+    <string id="FORM0406" string="Cấu hình người duyệt phiếu yêu cầu (PR)"/>
+    <string id="FORM0407" string="Cấu hình người duyệt mua hàng (PO)"/>
+    <string id="FORM0408" string="Danh mục hàng hóa"/>
+    <string id="FORM0411" string="Lập phiếu yêu cầu đặt hàng"/>
+    <string id="FORM0412" string="Danh sách phiếu yêu cầu"/>
+    <string id="FORM0413" string="Duyệt theo nhóm hàng"/>
+    <string id="FORM0414" string="Lập phiếu PR"/>
+    <string id="FORM0415" string="Cấu hình gửi E-mail"/>
+    <string id="FORM0416" string="Duyệt phiếu PR"/>
+    <string id="FORM0417" string="Phân công PR"/>
+    <string id="FORM0418" string="Tiếp nhận PR"/>
+    <string id="FORM0419" string="Lập phiếu PO"/>
+    <string id="FORM0420" string="Duyệt phiếu PO"/>
+    <string id="FORM0421" string="Cập nhật trạng thái phiếu PO"/>
+    <string id="FORM0422" string="Chỉ định dịch vụ cấp cứu"/>
+    <string id="FORM0423" string="Quản lý người dùng"/>
+    
+
+    <!--văn phòng phẩm-->
+    <string id="FORM0424" string="Nhập kho"/>
+
+    <string id="FORM0425" string="Danh sách ghi nhận Thuốc/VTYT PTTT"/>
+    <!--Mua hàng-->
+    <string id="FORM0426" string="Danh mục"/>
+    <string id="FORM0427" string="Cấu hình"/>
+    <string id="FORM0428" string="Danh mục giá hợp đồng"/>
+    
+    <string id="FORM0429" string="Quản lý thông tin sử dụng thẻ thành viên"/>
+    <string id="FORM0430" string="Xét nghiệm"/>
+    <string id="FORM0431" string="Chẩn đoán hình ảnh"/>
+    <string id="FORM0432" string="Phẫu thuật/Thủ thuật"/>
+
+    <string id="FORM0433" string="Khám sức khỏe công ty"/>
+    <string id="FORM0434" string="Danh sách công ty KSK"/>
+
+    <string id="FORM0435" string="Hồ sơ ngoại trú khám bệnh"/>
+
+    <!--văn phòng phẩm-->
+    <string id="FORM0436" string="Phiếu yêu cầu"/>
+    <string id="FORM0437" string="Phiếu xuất kho"/>
+
+    <string id="FORM0438" string="Ghi nhận công ty chi trả ngoại trú"/>
+    <!--văn phòng phẩm-->
+    <string id="FORM0439" string="Tính số dư đầu kỳ"/>
+    <string id="FORM0440" string="Phiếu điều chỉnh tăng"/>
+    <string id="FORM0441" string="Phiếu điều chỉnh giảm"/>
+    <string id="FORM0442" string="Khóa sổ chứng từ"/>
+    <string id="FORM0443" string="Kiểm kê"/>
+    
+    <!--Bệnh án giấy-->
+    <string id="FORM0500" string="Thanh lý hồ sơ bệnh án"/>
+    <string id="FORM0501" string="Trả hồ sơ bệnh án"/>
+    <string id="FORM0502" string="Tra cứu hồ sơ bệnh án"/>
+    <string id="FORM0503" string="Tóm tắt bệnh án"/>
+    <string id="FORM0450" string="Quản lý cấu hình hệ thống"/>
+    <string id="FORM0451" string="Phân quyền phòng ban/kho dược"/>
+    <string id="FORM0452" string="In hóa đơn"/>
+    <string id="FORM0453" string="Ghi nhận công ty chi trả nội trú"/>
+
+    <string id="FORM0901" string="Phân Loại Cấp Cứu"/>
+    <string id="FORM0902" string="Khám tiền mê"/>
+    <string id="FORM0903" string="Thử phản ứng có hại của thuốc ADR"/>
+    <string id="FORM0904" string="Ghi nhận phiếu gây mê"/>
+    <string id="FORM0905" string="Danh sách khám tiền mê"/>
+    <string id="FORM0906" string="Danh sách ghi nhận phiếu gây mê"/>
+    <string id="FORM0907" string="Xem lịch phòng mổ"/>
+    
+    <!--Ngoại trú-->
+    <string id="FORM0454" string="Đợt điều trị"/>
+    <string id="FORM0455" string="Cấp hồ sơ bệnh án ngoại trú"/>
+    <string id="FORM0456" string="Danh sách ngoại trú"/>
+    <string id="FORM0457" string="Biên bản hội chuẩn"/>
+    <string id="FORM0458" string="Chăm sóc người bệnh"/>
+    <string id="FORM0459" string="Hồ sơ bệnh án ngoại trú"/>
+    <string id="FORM0460" string="Bệnh án chuyên khoa ngoại trú"/>
+    <string id="FORM0461" string="Nội khoa"/>
+    <string id="FORM0462" string="Ngoại khoa"/>
+    <string id="FORM0463" string="Chuyển khoa ngoại trú"/>
+    <string id="FORM0464" string="Cho y lệnh thuốc"/>
+    <string id="FORM0465" string="Cho y lệnh vật tư y tế"/>
+    <string id="FORM0466" string="Chỉ định dịch vụ ngoại trú"/>
+    <string id="FORM0469" string="Thử phản ứng có hại của thuốc (ADR)"/>
+    <string id="FORM0470" string="Ngưng y lệnh thuốc"/>
+    <string id="FORM0471" string="Thực hiện dịch vụ"/>
+    <string id="FORM0472" string="Thu tiền viện phí bệnh án ngoại trú"/>
+    <string id="FORM0473" string="Duyệt hủy biên lai bệnh án ngoại trú"/>
+    <string id="FORM0474" string="Ghi nhận BHTN bệnh án ngoại trú "/>
+    <string id="FORM0475" string="Duyệt ghi nhận BHTN bệnh án ngoại trú"/>
+    <string id="FORM0476" string="Xác nhận BHYT bệnh án ngoại trú"/>
+    <string id="FORM0477" string="Ghi nhận công ty chi trả bệnh án ngoại trú"/>
+    <string id="FORM0478" string="Chuyển chi phí bệnh án ngoại trú"/>
+    <string id="FORM0479" string="Duyệt công nợ người bệnh ngoại trú"/>
+    <string id="FORM0480" string="Khóa bệnh án ngoại trú"/>
+    <string id="FORM0481" string="Công nợ bệnh án ngoại trú"/>
+    <string id="FORM0482" string="Chi tiết công nợ bệnh án ngoại trú"/>
+    <string id="FORM0483" string="Cập nhật đối tượng/ giá bệnh án ngoại trú"/>
+    <string id="FORM0484" string="Tạo quyển biên lai hóa đơn"/>
+    <string id="FORM0485" string="Ghi nhận miễn giảm hỗ trợ bệnh án ngoại trú"/>
+
+    <string id="FORM9999" string="Test"/>
+    
+
+  </vi-vn>
+</Localization>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,b0cf4d352f668656c801db6931b26cb0-->
+        <statement id="DAO00035_GetAll" resultClass="DataObject">
+            select *
+            from TM_DONVITINH
+            order by DONVITINH_ID
+        </statement>
+        <!--Revision:0,a19bfc3880d0660ef0bcde04ff08c141-->
+        <statement id="DAO00035_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_DONVITINH
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="DONVITINH_ID">
+                    TM_DONVITINH.DONVITINH_ID = '$DONVITINH_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="LOAIVATTU_ID">
+                    TM_DONVITINH.LOAIVATTU_ID = '$LOAIVATTU_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="MADONVITINH">
+                    TM_DONVITINH.MADONVITINH = '$MADONVITINH$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENDONVITINH">
+                    TM_DONVITINH.TENDONVITINH = '$TENDONVITINH$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="DONVICOBAN">
+                    TM_DONVITINH.DONVICOBAN = '$DONVICOBAN$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="DONVICOBAN_ID">
+                    TM_DONVITINH.DONVICOBAN_ID = '$DONVICOBAN_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="GIATRIQUIDOI">
+                    TM_DONVITINH.GIATRIQUIDOI = '$GIATRIQUIDOI$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENKHONGDAU">
+                    TM_DONVITINH.TENKHONGDAU = '$TENKHONGDAU$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TAMNGUNG">
+                    TM_DONVITINH.TAMNGUNG = '$TAMNGUNG$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGAYTAO">
+                    TM_DONVITINH.NGAYTAO = '$NGAYTAO$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                    TM_DONVITINH.NGUOITAO_ID = '$NGUOITAO_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                    TM_DONVITINH.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                    TM_DONVITINH.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                </isNotEmpty>
+            </isParameterPresent>
+            order by DONVITINH_ID
+        </statement>
+        <!--Revision:0,8872c2e504d5aaccade22f46fa45d7c6-->
+        <statement id="DAO00035_GetDetail" parameterClass="System.String" resultClass="DataObject">
+            select *
+            from TM_DONVITINH
+            where TM_DONVITINH.DONVITINH_ID  = '$value$'
+            order by DONVITINH_ID
+        </statement>
+        <!--Revision:0,df38701eb1c619b1dd49cc534cff25e1-->
+        <statement id="DAO00035_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_DONVITINH
+            where TM_DONVITINH.DONVITINH_ID  = '$DONVITINH_ID$'
+            order by DONVITINH_ID
+        </statement>
+        <!--Revision:0,0846fd5dab90b2b646f2f9899ab58325-->
+        <insert id="DAO00035_Add" parameterClass="HashTable" resultClass="System.Int64">
+            insert into TM_DONVITINH (
+            DONVITINH_ID
+            , LOAIVATTU_ID
+            , MADONVITINH
+            , TENDONVITINH
+            , DONVICOBAN
+            , DONVICOBAN_ID
+            , GIATRIQUIDOI
+            , TENKHONGDAU
+            , TAMNGUNG
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            ) values (
+            #DONVITINH_ID#
+            , #LOAIVATTU_ID#
+            , #MADONVITINH#
+            , #TENDONVITINH#
+            , #DONVICOBAN#
+            , #DONVICOBAN_ID#
+            , #GIATRIQUIDOI#
+            , #TENKHONGDAU#
+            , #TAMNGUNG#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            )
+        </insert>
+        <!--Revision:0,13956632fac491f2d7272d1a623d3546-->
+        <update id="DAO00035_Update" parameterClass="HashTable">
+            update TM_DONVITINH set
+            LOAIVATTU_ID = #LOAIVATTU_ID#
+            , MADONVITINH = #MADONVITINH#
+            , TENDONVITINH = #TENDONVITINH#
+            , DONVICOBAN = #DONVICOBAN#
+            , DONVICOBAN_ID = #DONVICOBAN_ID#
+            , GIATRIQUIDOI = #GIATRIQUIDOI#
+            , TENKHONGDAU = #TENKHONGDAU#
+            , TAMNGUNG = #TAMNGUNG#
+            <!--, NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#-->
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            DONVITINH_ID = '%DONVITINH_ID$'
+        </update>
+        <!--Revision:0,91fe0cd0815f086b11a53906bc8b3460-->
+        <statement id="DAO00035_Delete" parameterClass="System.String" resultClass="System.Int32">
+            delete from TM_DONVITINH
+            where
+            DONVITINH_ID = '$DONVITINH_ID$'
+        </statement>
+        <!--Revision:0,ee1090a35718049746ce5f2bd340f86f-->
+        <statement id="DAO00035_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DONVITINH
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="DONVITINH_ID">
+                        TM_DONVITINH.DONVITINH_ID = '$DONVITINH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIVATTU_ID">
+                        TM_DONVITINH.LOAIVATTU_ID = '$LOAIVATTU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MADONVITINH">
+                        TM_DONVITINH.MADONVITINH = '$MADONVITINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENDONVITINH">
+                        TM_DONVITINH.TENDONVITINH = '$TENDONVITINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONVICOBAN">
+                        TM_DONVITINH.DONVICOBAN = '$DONVICOBAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONVICOBAN_ID">
+                        TM_DONVITINH.DONVICOBAN_ID = '$DONVICOBAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIATRIQUIDOI">
+                        TM_DONVITINH.GIATRIQUIDOI = '$GIATRIQUIDOI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENKHONGDAU">
+                        TM_DONVITINH.TENKHONGDAU = '$TENKHONGDAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAMNGUNG">
+                        TM_DONVITINH.TAMNGUNG = '$TAMNGUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_DONVITINH.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_DONVITINH.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_DONVITINH.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_DONVITINH.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

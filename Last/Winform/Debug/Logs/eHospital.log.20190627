@@ -1,0 +1,965 @@
+﻿--------------------------------------------------------------------------------
+2019-06-27 15:15:54,602 [1] INFO  - [Application started.]
+2019-06-27 15:15:59,904 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-06-27 15:16:00,269 [1] INFO  - LoadMasters() took 352 ms.
+2019-06-27 15:16:00,270 [1] INFO  - [_SYSTEM_] Session started.
+2019-06-27 15:16:36,017 [1] INFO  - [admin] Session is starting.
+2019-06-27 15:16:37,106 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:16:43,588 [6] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2019-06-27 15:16:43,589 [6] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:16:51,674 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:16:58,058 [6] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2019-06-27 15:16:58,059 [6] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:16:58,232 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:17:04,392 [6] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2019-06-27 15:17:04,394 [6] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:17:07,555 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:17:13,699 [6] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2019-06-27 15:17:13,701 [6] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:17:13,848 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:17:20,039 [6] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2019-06-27 15:17:20,040 [6] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:17:20,237 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:17:26,420 [6] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2019-06-27 15:17:26,422 [6] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:17:26,896 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:17:33,111 [6] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2019-06-27 15:17:33,112 [6] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:17:33,321 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:17:39,510 [6] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2019-06-27 15:17:39,511 [6] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:17:39,714 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:17:45,917 [6] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2019-06-27 15:17:45,918 [6] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:17:46,791 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:17:52,966 [6] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2019-06-27 15:17:52,967 [6] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:17:53,159 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:17:59,377 [6] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2019-06-27 15:17:59,378 [6] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:17:59,584 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:18:05,782 [6] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2019-06-27 15:18:05,783 [6] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:18:06,678 [6] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:18:12,948 [6] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2019-06-27 15:18:12,949 [6] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:18:13,231 [6] INFO  - Can't create direct service instance of COM073 -> Service 'COM073' is not found!
+2019-06-27 15:18:13,246 [6] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => Object reference not set to an instance of an object..
+2019-06-27 15:18:13,274 [6] INFO  - Can't create direct service instance of COM072 -> Service 'COM072' is not found!
+2019-06-27 15:18:13,289 [6] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => Object reference not set to an instance of an object..
+2019-06-27 15:18:14,113 [6] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 236
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2019-06-27 15:18:14,129 [1] INFO  - [admin] Session started.
+2019-06-27 15:18:16,210 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-06-27 15:18:16,239 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-06-27 15:18:16,807 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-06-27 15:18:16,847 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-06-27 15:18:17,303 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-06-27 15:18:17,333 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-06-27 15:18:17,362 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-06-27 15:18:17,388 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-06-27 15:18:17,415 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-06-27 15:18:17,438 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-06-27 15:18:17,500 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-06-27 15:18:17,529 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-06-27 15:18:17,557 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-06-27 15:18:17,583 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-06-27 15:18:17,627 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-06-27 15:18:17,652 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-06-27 15:18:17,679 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-06-27 15:18:17,705 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-06-27 15:18:17,735 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-06-27 15:18:17,894 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-06-27 15:18:18,223 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-06-27 15:18:18,251 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-06-27 15:18:18,277 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-06-27 15:18:18,314 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-06-27 15:18:18,477 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-06-27 15:18:19,071 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-06-27 15:18:19,097 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-06-27 15:18:19,124 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-06-27 15:18:19,152 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-06-27 15:18:19,177 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-06-27 15:18:19,205 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-06-27 15:18:19,394 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-06-27 15:18:19,685 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-06-27 15:18:19,720 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-06-27 15:18:19,758 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-06-27 15:18:19,958 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-06-27 15:18:20,202 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-06-27 15:18:20,233 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-06-27 15:18:20,261 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-06-27 15:18:20,289 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-06-27 15:18:20,335 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-06-27 15:18:20,367 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-06-27 15:18:20,830 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-06-27 15:18:20,878 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-06-27 15:18:20,902 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-06-27 15:18:20,925 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-06-27 15:18:21,252 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-06-27 15:18:21,669 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-06-27 15:18:21,690 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-06-27 15:18:21,718 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-06-27 15:18:21,823 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-06-27 15:18:21,852 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-06-27 15:18:22,152 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-06-27 15:18:22,301 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-06-27 15:18:22,327 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-06-27 15:18:22,352 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-06-27 15:18:22,377 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+2019-06-27 15:27:35,922 [1] ERROR - Không tìm thấy file C:/eHosResources/Temp/HLU01/DM_ExportRowData.xlsx
+System.IO.FileNotFoundException: File not found
+File name: 'C:/eHosResources/Temp/HLU01/DM_ExportRowData.xlsx'
+   at FPT.Framework.Utility.Office.ExcelObject.Open(String filePath) in D:\Working\eHospital\trunk\01.Framework\01.Framework\12.OfficeLib\ExcelObject.cs:line 36
+   at FPT.eHospital.Forms.Administration.VMEDATA.btnExport_Click(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\01.ScrCOM\BaseViewModels\VMEDATA.cs:line 126
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2019-06-27 15:31:38,276 [1] INFO  - [Application started.]
+2019-06-27 15:31:41,308 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-06-27 15:31:41,350 [1] INFO  - LoadMasters() took 34 ms.
+2019-06-27 15:31:41,352 [1] INFO  - [_SYSTEM_] Session started.
+2019-06-27 15:34:16,620 [1] INFO  - [admin] Session is starting.
+2019-06-27 15:34:17,409 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:34:23,677 [5] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2019-06-27 15:34:23,679 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:34:23,914 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:34:30,113 [5] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2019-06-27 15:34:30,114 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:34:30,285 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:34:36,588 [5] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2019-06-27 15:34:36,589 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:34:36,866 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:34:43,044 [5] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2019-06-27 15:34:43,045 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:34:43,214 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:34:49,426 [5] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2019-06-27 15:34:49,427 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:34:49,604 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:34:55,767 [5] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2019-06-27 15:34:55,768 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:34:55,949 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:35:02,095 [5] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2019-06-27 15:35:02,098 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:35:02,288 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:35:08,461 [5] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2019-06-27 15:35:08,462 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:35:08,643 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:35:14,840 [5] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2019-06-27 15:35:14,841 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:35:15,449 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:35:21,604 [5] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2019-06-27 15:35:21,608 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:35:21,799 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:35:27,967 [5] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2019-06-27 15:35:27,968 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:35:28,120 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:35:34,275 [5] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2019-06-27 15:35:34,276 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:35:35,151 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:35:41,323 [5] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2019-06-27 15:35:41,324 [5] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:35:41,542 [5] INFO  - Can't create direct service instance of COM073 -> Service 'COM073' is not found!
+2019-06-27 15:35:41,555 [5] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => Object reference not set to an instance of an object..
+2019-06-27 15:35:41,579 [5] INFO  - Can't create direct service instance of COM072 -> Service 'COM072' is not found!
+2019-06-27 15:35:41,592 [5] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => Object reference not set to an instance of an object..
+2019-06-27 15:35:42,466 [5] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 236
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2019-06-27 15:35:42,478 [1] INFO  - [admin] Session started.
+2019-06-27 15:35:43,229 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-06-27 15:35:43,254 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-06-27 15:35:43,395 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-06-27 15:35:43,417 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-06-27 15:35:43,627 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-06-27 15:35:43,659 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-06-27 15:35:43,713 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-06-27 15:35:43,738 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-06-27 15:35:43,768 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-06-27 15:35:43,792 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-06-27 15:35:43,820 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-06-27 15:35:43,849 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-06-27 15:35:43,876 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-06-27 15:35:43,905 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-06-27 15:35:43,944 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-06-27 15:35:43,965 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-06-27 15:35:43,986 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-06-27 15:35:44,012 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-06-27 15:35:44,040 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-06-27 15:35:44,091 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-06-27 15:35:44,207 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-06-27 15:35:44,233 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-06-27 15:35:44,257 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-06-27 15:35:44,278 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-06-27 15:35:44,321 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-06-27 15:35:44,511 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-06-27 15:35:44,533 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-06-27 15:35:44,555 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-06-27 15:35:44,583 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-06-27 15:35:44,610 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-06-27 15:35:44,649 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-06-27 15:35:44,703 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-06-27 15:35:44,785 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-06-27 15:35:44,808 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-06-27 15:35:44,835 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-06-27 15:35:44,888 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-06-27 15:35:45,006 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-06-27 15:35:45,032 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-06-27 15:35:45,054 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-06-27 15:35:45,079 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-06-27 15:35:45,103 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-06-27 15:35:45,128 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-06-27 15:35:45,278 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-06-27 15:35:45,323 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-06-27 15:35:45,351 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-06-27 15:35:45,377 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-06-27 15:35:45,489 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-06-27 15:35:45,560 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-06-27 15:35:45,584 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-06-27 15:35:45,611 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-06-27 15:35:45,657 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-06-27 15:35:45,682 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-06-27 15:35:45,762 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-06-27 15:35:45,801 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-06-27 15:35:45,823 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-06-27 15:35:45,851 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-06-27 15:35:45,879 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+--------------------------------------------------------------------------------
+2019-06-27 15:50:58,275 [1] INFO  - [Application started.]
+2019-06-27 15:51:01,517 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-06-27 15:51:01,561 [1] INFO  - LoadMasters() took 33 ms.
+2019-06-27 15:51:01,562 [1] INFO  - [_SYSTEM_] Session started.
+2019-06-27 15:51:08,755 [1] INFO  - [admin] Session is starting.
+2019-06-27 15:51:09,575 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:51:15,826 [8] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2019-06-27 15:51:15,828 [8] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:51:16,032 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:51:22,203 [8] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2019-06-27 15:51:22,204 [8] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:51:22,393 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:51:28,548 [8] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2019-06-27 15:51:28,549 [8] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:51:28,755 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:51:34,920 [8] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2019-06-27 15:51:34,921 [8] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:51:35,099 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:51:41,255 [8] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2019-06-27 15:51:41,256 [8] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:51:41,444 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:51:47,620 [8] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2019-06-27 15:51:47,621 [8] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:51:52,645 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:51:58,915 [8] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2019-06-27 15:51:58,916 [8] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:51:59,097 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:52:05,364 [8] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2019-06-27 15:52:05,365 [8] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:52:08,561 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:52:14,770 [8] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2019-06-27 15:52:14,771 [8] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:52:15,426 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:52:21,612 [8] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2019-06-27 15:52:21,613 [8] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:52:21,786 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:52:27,964 [8] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2019-06-27 15:52:27,964 [8] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:52:28,159 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:52:34,338 [8] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2019-06-27 15:52:34,339 [8] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:52:35,212 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 15:52:41,411 [8] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2019-06-27 15:52:41,412 [8] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 15:52:44,612 [8] INFO  - Can't create direct service instance of COM073 -> Service 'COM073' is not found!
+2019-06-27 15:52:44,628 [8] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => Object reference not set to an instance of an object..
+2019-06-27 15:52:44,655 [8] INFO  - Can't create direct service instance of COM072 -> Service 'COM072' is not found!
+2019-06-27 15:52:44,666 [8] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => Object reference not set to an instance of an object..
+2019-06-27 15:52:45,458 [8] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 236
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2019-06-27 15:52:45,476 [1] INFO  - [admin] Session started.
+2019-06-27 15:52:46,206 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-06-27 15:52:46,234 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-06-27 15:52:46,361 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-06-27 15:52:46,383 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-06-27 15:52:46,522 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-06-27 15:52:46,548 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-06-27 15:52:46,572 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-06-27 15:52:46,592 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-06-27 15:52:46,616 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-06-27 15:52:46,637 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-06-27 15:52:46,662 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-06-27 15:52:46,684 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-06-27 15:52:46,706 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-06-27 15:52:46,726 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-06-27 15:52:46,776 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-06-27 15:52:46,800 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-06-27 15:52:46,820 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-06-27 15:52:46,843 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-06-27 15:52:46,866 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-06-27 15:52:46,909 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-06-27 15:52:46,995 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-06-27 15:52:47,020 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-06-27 15:52:47,042 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-06-27 15:52:47,063 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-06-27 15:52:47,107 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-06-27 15:52:47,271 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-06-27 15:52:47,294 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-06-27 15:52:47,319 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-06-27 15:52:47,349 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-06-27 15:52:47,373 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-06-27 15:52:47,395 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-06-27 15:52:47,464 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-06-27 15:52:47,528 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-06-27 15:52:47,553 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-06-27 15:52:47,574 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-06-27 15:52:47,613 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-06-27 15:52:47,689 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-06-27 15:52:47,710 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-06-27 15:52:47,733 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-06-27 15:52:47,754 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-06-27 15:52:47,774 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-06-27 15:52:47,795 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-06-27 15:52:47,902 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-06-27 15:52:47,946 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-06-27 15:52:47,971 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-06-27 15:52:47,993 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-06-27 15:52:48,079 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-06-27 15:52:48,160 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-06-27 15:52:48,183 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-06-27 15:52:48,204 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-06-27 15:52:48,238 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-06-27 15:52:48,259 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-06-27 15:52:48,349 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-06-27 15:52:48,393 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-06-27 15:52:48,415 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-06-27 15:52:48,437 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-06-27 15:52:48,460 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+2019-06-27 15:58:04,275 [1] INFO  - Can't create direct service instance of HIX030 -> Service 'HIX030' is not found!
+2019-06-27 15:58:06,809 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.Framework.DataService.DirectServiceProvider.GetService(String name) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectServiceProvider.cs:line 43
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in D:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 114
+   at FPT.eHospital.Forms.HIX.VMHIX20.CmdXuatXMLBHYT(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\98.ScrHIX\VMHIX20.cs:line 138
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+2019-06-27 15:58:29,483 [1] INFO  - Can't create direct service instance of HIX030 -> Service 'HIX030' is not found!
+2019-06-27 15:58:29,499 [1] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FPT.Framework.DataService.DirectServiceProvider.GetService(String name) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectServiceProvider.cs:line 43
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in D:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 114
+   at FPT.eHospital.Forms.HIX.VMHIX20.CmdXuatXMLBHYT(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\98.ScrHIX\VMHIX20.cs:line 138
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2019-06-27 16:08:36,618 [1] INFO  - [Application started.]
+2019-06-27 16:08:39,494 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-06-27 16:08:39,552 [1] INFO  - LoadMasters() took 47 ms.
+2019-06-27 16:08:39,553 [1] INFO  - [_SYSTEM_] Session started.
+2019-06-27 16:08:51,129 [1] INFO  - [admin] Session is starting.
+2019-06-27 16:08:51,945 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:08:58,159 [5] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2019-06-27 16:08:58,160 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:08:58,377 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:09:04,578 [5] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2019-06-27 16:09:04,579 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:09:04,764 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:09:11,559 [5] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2019-06-27 16:09:11,561 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:09:12,029 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:09:18,988 [5] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2019-06-27 16:09:18,989 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:09:19,283 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:09:25,465 [5] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2019-06-27 16:09:25,466 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:09:25,669 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:09:31,850 [5] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2019-06-27 16:09:31,852 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:09:32,005 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:09:38,397 [5] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2019-06-27 16:09:38,398 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:09:39,028 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:09:45,331 [5] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2019-06-27 16:09:45,332 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:09:45,561 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:09:51,744 [5] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2019-06-27 16:09:51,745 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:09:52,356 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:09:58,499 [5] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2019-06-27 16:09:58,500 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:09:58,641 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:10:04,780 [5] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2019-06-27 16:10:04,781 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:10:04,969 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:10:11,146 [5] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2019-06-27 16:10:11,146 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:10:12,144 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:10:18,341 [5] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2019-06-27 16:10:18,343 [5] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:10:18,549 [5] INFO  - Can't create direct service instance of COM073 -> Service 'COM073' is not found!
+2019-06-27 16:10:18,568 [5] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => Object reference not set to an instance of an object..
+2019-06-27 16:10:18,595 [5] INFO  - Can't create direct service instance of COM072 -> Service 'COM072' is not found!
+2019-06-27 16:10:18,607 [5] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => Object reference not set to an instance of an object..
+2019-06-27 16:10:19,405 [5] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 236
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2019-06-27 16:10:19,417 [1] INFO  - [admin] Session started.
+2019-06-27 16:10:20,218 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-06-27 16:10:20,243 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-06-27 16:10:20,391 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-06-27 16:10:20,412 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-06-27 16:10:20,545 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-06-27 16:10:20,571 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-06-27 16:10:20,597 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-06-27 16:10:20,620 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-06-27 16:10:20,645 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-06-27 16:10:20,666 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-06-27 16:10:20,689 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-06-27 16:10:20,710 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-06-27 16:10:20,730 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-06-27 16:10:20,750 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-06-27 16:10:20,783 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-06-27 16:10:20,804 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-06-27 16:10:20,827 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-06-27 16:10:20,852 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-06-27 16:10:20,877 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-06-27 16:10:20,927 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-06-27 16:10:21,030 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-06-27 16:10:21,053 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-06-27 16:10:21,077 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-06-27 16:10:21,104 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-06-27 16:10:21,148 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-06-27 16:10:21,273 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-06-27 16:10:21,296 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-06-27 16:10:21,319 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-06-27 16:10:21,339 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-06-27 16:10:21,361 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-06-27 16:10:21,380 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-06-27 16:10:21,423 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-06-27 16:10:21,502 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-06-27 16:10:21,530 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-06-27 16:10:21,554 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-06-27 16:10:21,594 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-06-27 16:10:21,674 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-06-27 16:10:21,698 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-06-27 16:10:21,720 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-06-27 16:10:21,742 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-06-27 16:10:21,766 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-06-27 16:10:21,786 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-06-27 16:10:21,883 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-06-27 16:10:21,918 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-06-27 16:10:21,941 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-06-27 16:10:21,964 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-06-27 16:10:22,047 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-06-27 16:10:22,121 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-06-27 16:10:22,143 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-06-27 16:10:22,168 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-06-27 16:10:22,203 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-06-27 16:10:22,225 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-06-27 16:10:22,299 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-06-27 16:10:22,335 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-06-27 16:10:22,356 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-06-27 16:10:22,379 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-06-27 16:10:22,402 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+2019-06-27 16:11:51,993 [1] ERROR - Path cannot be the empty string or all whitespace.
+System.ArgumentException: Path cannot be the empty string or all whitespace.
+   at System.IO.Directory.CreateDirectory(String path)
+   at FPT.Framework.Platform.WinStorage.CreateFolder(String path) in D:\Working\eHospital\trunk\01.Framework\01.Framework\10.WinPlatform\WinStorage.cs:line 130
+   at FPT.eHospital.Services.HIX030.CreateFolderExport(Int32 iExportTime) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\98.SvcHIX\HIX030.cs:line 159
+   at FPT.eHospital.Services.HIX030.XuatXML_BHXH_Noitru(IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\98.SvcHIX\HIX030.cs:line 112
+   at FPT.eHospital.Services.HIX030.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\98.SvcHIX\HIX030.cs:line 81
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 87
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in D:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 123
+   at FPT.eHospital.Forms.HIX.VMHIX20.CmdXuatXMLBHYT(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\98.ScrHIX\VMHIX20.cs:line 138
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+--------------------------------------------------------------------------------
+2019-06-27 16:16:23,510 [1] INFO  - [Application started.]
+2019-06-27 16:16:26,676 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-06-27 16:16:26,726 [1] INFO  - LoadMasters() took 40 ms.
+2019-06-27 16:16:26,727 [1] INFO  - [_SYSTEM_] Session started.
+2019-06-27 16:16:33,804 [1] INFO  - [admin] Session is starting.
+2019-06-27 16:16:34,571 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:16:40,796 [8] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2019-06-27 16:16:40,799 [8] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:16:40,972 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:16:47,251 [8] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2019-06-27 16:16:47,252 [8] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:16:47,412 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:16:53,563 [8] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2019-06-27 16:16:53,563 [8] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:16:53,720 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:16:59,919 [8] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2019-06-27 16:16:59,920 [8] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:17:00,084 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:17:06,236 [8] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2019-06-27 16:17:06,238 [8] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:17:06,391 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:17:12,544 [8] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2019-06-27 16:17:12,545 [8] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:17:12,844 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:17:19,045 [8] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2019-06-27 16:17:19,046 [8] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:17:19,211 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:17:25,408 [8] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2019-06-27 16:17:25,409 [8] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:17:25,603 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:17:31,762 [8] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2019-06-27 16:17:31,765 [8] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:17:32,548 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:17:38,733 [8] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2019-06-27 16:17:38,734 [8] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:17:39,045 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:17:45,227 [8] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2019-06-27 16:17:45,228 [8] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:17:45,562 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:17:51,789 [8] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2019-06-27 16:17:51,790 [8] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:17:52,674 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:17:58,839 [8] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2019-06-27 16:17:58,840 [8] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:17:59,153 [8] INFO  - Can't create direct service instance of COM073 -> Service 'COM073' is not found!
+2019-06-27 16:17:59,165 [8] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => Object reference not set to an instance of an object..
+2019-06-27 16:17:59,190 [8] INFO  - Can't create direct service instance of COM072 -> Service 'COM072' is not found!
+2019-06-27 16:17:59,202 [8] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => Object reference not set to an instance of an object..
+2019-06-27 16:17:59,997 [8] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 236
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2019-06-27 16:18:00,013 [1] INFO  - [admin] Session started.
+2019-06-27 16:18:00,855 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-06-27 16:18:00,880 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-06-27 16:18:01,010 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-06-27 16:18:01,033 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-06-27 16:18:01,168 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-06-27 16:18:01,193 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-06-27 16:18:01,218 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-06-27 16:18:01,241 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-06-27 16:18:01,264 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-06-27 16:18:01,294 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-06-27 16:18:01,315 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-06-27 16:18:01,338 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-06-27 16:18:01,361 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-06-27 16:18:01,384 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-06-27 16:18:01,426 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-06-27 16:18:01,447 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-06-27 16:18:01,469 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-06-27 16:18:01,491 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-06-27 16:18:01,515 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-06-27 16:18:01,559 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-06-27 16:18:01,651 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-06-27 16:18:01,676 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-06-27 16:18:01,698 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-06-27 16:18:01,721 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-06-27 16:18:01,772 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-06-27 16:18:01,918 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-06-27 16:18:01,937 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-06-27 16:18:01,959 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-06-27 16:18:01,982 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-06-27 16:18:02,007 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-06-27 16:18:02,029 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-06-27 16:18:02,070 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-06-27 16:18:02,136 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-06-27 16:18:02,158 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-06-27 16:18:02,179 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-06-27 16:18:02,221 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-06-27 16:18:02,297 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-06-27 16:18:02,323 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-06-27 16:18:02,345 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-06-27 16:18:02,366 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-06-27 16:18:02,388 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-06-27 16:18:02,410 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-06-27 16:18:02,517 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-06-27 16:18:02,552 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-06-27 16:18:02,573 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-06-27 16:18:02,594 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-06-27 16:18:02,676 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-06-27 16:18:02,751 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-06-27 16:18:02,775 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-06-27 16:18:02,802 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-06-27 16:18:02,839 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-06-27 16:18:02,866 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-06-27 16:18:02,942 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-06-27 16:18:02,979 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-06-27 16:18:02,999 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-06-27 16:18:03,019 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-06-27 16:18:03,040 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+--------------------------------------------------------------------------------
+2019-06-27 16:36:25,754 [1] INFO  - [Application started.]
+2019-06-27 16:36:28,661 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-06-27 16:36:28,724 [1] INFO  - LoadMasters() took 52 ms.
+2019-06-27 16:36:28,725 [1] INFO  - [_SYSTEM_] Session started.
+2019-06-27 16:37:11,110 [1] INFO  - [admin] Session is starting.
+2019-06-27 16:37:12,300 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:37:18,610 [10] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2019-06-27 16:37:18,612 [10] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:37:18,775 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:37:24,947 [10] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2019-06-27 16:37:24,949 [10] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:37:25,188 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:37:31,504 [10] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2019-06-27 16:37:31,505 [10] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:37:31,662 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:37:37,881 [10] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2019-06-27 16:37:37,882 [10] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:37:38,032 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:37:44,271 [10] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2019-06-27 16:37:44,272 [10] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:37:44,471 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:37:50,655 [10] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2019-06-27 16:37:50,657 [10] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:37:50,854 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:37:57,042 [10] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2019-06-27 16:37:57,043 [10] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:37:57,203 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:38:03,390 [10] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2019-06-27 16:38:03,391 [10] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:38:03,574 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:38:09,710 [10] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2019-06-27 16:38:09,711 [10] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:38:10,419 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:38:16,610 [10] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2019-06-27 16:38:16,611 [10] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:38:16,770 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:38:23,049 [10] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2019-06-27 16:38:23,050 [10] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:38:23,232 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:38:29,412 [10] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2019-06-27 16:38:29,413 [10] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:38:30,488 [10] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:38:36,663 [10] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2019-06-27 16:38:36,663 [10] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:38:36,833 [10] INFO  - Can't create direct service instance of COM073 -> Service 'COM073' is not found!
+2019-06-27 16:38:36,847 [10] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => Object reference not set to an instance of an object..
+2019-06-27 16:38:36,871 [10] INFO  - Can't create direct service instance of COM072 -> Service 'COM072' is not found!
+2019-06-27 16:38:36,882 [10] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => Object reference not set to an instance of an object..
+2019-06-27 16:38:37,698 [10] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 236
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2019-06-27 16:38:37,712 [1] INFO  - [admin] Session started.
+2019-06-27 16:38:38,994 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-06-27 16:38:39,018 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-06-27 16:38:39,173 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-06-27 16:38:39,197 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-06-27 16:38:39,367 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-06-27 16:38:39,393 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-06-27 16:38:39,434 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-06-27 16:38:39,457 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-06-27 16:38:39,495 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-06-27 16:38:39,517 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-06-27 16:38:39,544 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-06-27 16:38:39,568 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-06-27 16:38:39,591 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-06-27 16:38:39,619 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-06-27 16:38:39,661 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-06-27 16:38:39,687 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-06-27 16:38:39,714 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-06-27 16:38:39,745 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-06-27 16:38:39,775 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-06-27 16:38:39,824 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-06-27 16:38:39,967 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-06-27 16:38:40,002 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-06-27 16:38:40,034 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-06-27 16:38:40,058 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-06-27 16:38:40,119 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-06-27 16:38:40,453 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-06-27 16:38:40,499 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-06-27 16:38:40,533 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-06-27 16:38:40,559 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-06-27 16:38:40,586 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-06-27 16:38:40,610 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-06-27 16:38:40,676 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-06-27 16:38:40,759 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-06-27 16:38:40,787 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-06-27 16:38:40,820 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-06-27 16:38:40,916 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-06-27 16:38:41,112 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-06-27 16:38:41,154 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-06-27 16:38:41,182 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-06-27 16:38:41,210 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-06-27 16:38:41,238 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-06-27 16:38:41,270 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-06-27 16:38:41,523 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-06-27 16:38:41,580 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-06-27 16:38:41,610 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-06-27 16:38:41,638 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-06-27 16:38:41,776 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-06-27 16:38:41,861 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-06-27 16:38:41,886 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-06-27 16:38:41,910 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-06-27 16:38:41,955 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-06-27 16:38:41,992 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-06-27 16:38:42,082 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-06-27 16:38:42,132 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-06-27 16:38:42,157 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-06-27 16:38:42,180 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-06-27 16:38:42,208 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+2019-06-27 16:42:09,813 [1] ERROR - Error when executing 'DAO09830_SP_TM_SYS_UPLOAD_BHYT_XML'
+2019-06-27 16:42:11,895 [1] ERROR - Lỗi kết nối database: Error converting data type nvarchar to int.
+System.Data.SqlClient.SqlException (0x80131904): Error converting data type nvarchar to int.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject(RequestScope request, ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done) in D:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 195
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount) in D:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 172
+   at FPT.Framework.DataAccess.EntityMapper.QueryForObject(String statementName, Object objParam) in D:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\EntityMapper.cs:line 57
+   at FPT.Framework.DataAccess.DaoBase.QueryForObject(String strStatementId, Object parameters) in D:\Working\eHospital\trunk\01.Framework\01.Framework\03.DataAccess.iBatis\DaoBase.cs:line 188
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForObject(String strStatementId, Object parameters) in D:\Working\eHospital\trunk\02.eHospital\01.Framework.Extension\01.DataService\DaoWrapper.cs:line 102
+   at FPT.eHospital.Services.HIX030.ExportBHXH_XML9234(DataObject dtTiepNhan, String stLoaiBangKe) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\98.SvcHIX\HIX030.cs:line 222
+   at FPT.eHospital.Services.HIX030.XuatXML_BHXH_Noitru(IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\98.SvcHIX\HIX030.cs:line 122
+   at FPT.eHospital.Services.HIX030.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\98.SvcHIX\HIX030.cs:line 81
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DirectService.cs:line 87
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in D:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 123
+   at FPT.eHospital.Forms.HIX.VMHIX20.CmdXuatXMLBHYT(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\98.ScrHIX\VMHIX20.cs:line 143
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\VMCommand.cs:line 49
+ClientConnectionId:82097a0e-9b22-4aac-a025-993f01bb4521
+Error Number:8114,State:5,Class:16
+--------------------------------------------------------------------------------
+2019-06-27 16:48:11,591 [1] INFO  - [Application started.]
+2019-06-27 16:48:14,671 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-06-27 16:48:14,713 [1] INFO  - LoadMasters() took 30 ms.
+2019-06-27 16:48:14,714 [1] INFO  - [_SYSTEM_] Session started.
+2019-06-27 16:48:22,318 [1] INFO  - [admin] Session is starting.
+2019-06-27 16:48:23,085 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:48:29,349 [8] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2019-06-27 16:48:29,350 [8] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:48:29,681 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:48:35,828 [8] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2019-06-27 16:48:35,829 [8] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:48:36,036 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:48:42,211 [8] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2019-06-27 16:48:42,212 [8] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:48:42,414 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:48:48,652 [8] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2019-06-27 16:48:48,653 [8] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:48:48,816 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:48:55,183 [8] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2019-06-27 16:48:55,184 [8] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:48:55,889 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:49:02,109 [8] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2019-06-27 16:49:02,110 [8] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:49:02,363 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:49:08,566 [8] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2019-06-27 16:49:08,567 [8] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:49:08,720 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:49:14,899 [8] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2019-06-27 16:49:14,901 [8] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:49:15,219 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:49:21,403 [8] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2019-06-27 16:49:21,405 [8] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:49:22,040 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:49:28,238 [8] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2019-06-27 16:49:28,239 [8] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:49:28,501 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:49:34,706 [8] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2019-06-27 16:49:34,707 [8] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:49:34,870 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:49:41,162 [8] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2019-06-27 16:49:41,163 [8] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:49:42,018 [8] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 16:49:48,184 [8] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2019-06-27 16:49:48,184 [8] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 16:49:48,474 [8] INFO  - Can't create direct service instance of COM073 -> Service 'COM073' is not found!
+2019-06-27 16:49:48,497 [8] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => Object reference not set to an instance of an object..
+2019-06-27 16:49:48,538 [8] INFO  - Can't create direct service instance of COM072 -> Service 'COM072' is not found!
+2019-06-27 16:49:48,550 [8] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => Object reference not set to an instance of an object..
+2019-06-27 16:49:49,360 [8] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 236
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2019-06-27 16:49:49,374 [1] INFO  - [admin] Session started.
+2019-06-27 16:49:50,295 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-06-27 16:49:50,321 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-06-27 16:49:50,448 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-06-27 16:49:50,469 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-06-27 16:49:50,600 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-06-27 16:49:50,627 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-06-27 16:49:50,662 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-06-27 16:49:50,683 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-06-27 16:49:50,708 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-06-27 16:49:50,729 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-06-27 16:49:50,751 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-06-27 16:49:50,772 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-06-27 16:49:50,797 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-06-27 16:49:50,825 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-06-27 16:49:50,870 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-06-27 16:49:50,893 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-06-27 16:49:50,913 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-06-27 16:49:50,934 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-06-27 16:49:50,955 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-06-27 16:49:50,993 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-06-27 16:49:51,090 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-06-27 16:49:51,114 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-06-27 16:49:51,136 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-06-27 16:49:51,157 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-06-27 16:49:51,198 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-06-27 16:49:51,336 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-06-27 16:49:51,360 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-06-27 16:49:51,379 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-06-27 16:49:51,400 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-06-27 16:49:51,422 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-06-27 16:49:51,444 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-06-27 16:49:51,489 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-06-27 16:49:51,552 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-06-27 16:49:51,575 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-06-27 16:49:51,596 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-06-27 16:49:51,636 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-06-27 16:49:51,728 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-06-27 16:49:51,749 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-06-27 16:49:51,770 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-06-27 16:49:51,791 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-06-27 16:49:51,811 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-06-27 16:49:51,832 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-06-27 16:49:51,949 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-06-27 16:49:51,985 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-06-27 16:49:52,007 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-06-27 16:49:52,029 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-06-27 16:49:52,110 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-06-27 16:49:52,185 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-06-27 16:49:52,206 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-06-27 16:49:52,227 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-06-27 16:49:52,264 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-06-27 16:49:52,288 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-06-27 16:49:52,375 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-06-27 16:49:52,412 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-06-27 16:49:52,436 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-06-27 16:49:52,457 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-06-27 16:49:52,477 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+--------------------------------------------------------------------------------
+2019-06-27 17:12:12,165 [1] INFO  - [Application started.]
+2019-06-27 17:12:15,068 [1] INFO  - [_SYSTEM_] Session is starting.
+2019-06-27 17:12:15,117 [1] INFO  - LoadMasters() took 34 ms.
+2019-06-27 17:12:15,119 [1] INFO  - [_SYSTEM_] Session started.
+2019-06-27 17:12:25,487 [1] INFO  - [admin] Session is starting.
+2019-06-27 17:12:26,344 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:12:32,742 [5] INFO  - Can't create direct service instance of COM005 -> One or more errors occurred.
+2019-06-27 17:12:32,744 [5] INFO  - Can't create direct service instance of COM005, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:12:38,662 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:12:44,843 [5] INFO  - Can't create direct service instance of COM015 -> One or more errors occurred.
+2019-06-27 17:12:44,844 [5] INFO  - Can't create direct service instance of COM015, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:12:45,035 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:12:51,301 [5] INFO  - Can't create direct service instance of COM067 -> One or more errors occurred.
+2019-06-27 17:12:51,302 [5] INFO  - Can't create direct service instance of COM067, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:12:51,453 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:12:57,648 [5] INFO  - Can't create direct service instance of COM008 -> One or more errors occurred.
+2019-06-27 17:12:57,657 [5] INFO  - Can't create direct service instance of COM008, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:12:58,021 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:13:04,184 [5] INFO  - Can't create direct service instance of COM068 -> One or more errors occurred.
+2019-06-27 17:13:04,186 [5] INFO  - Can't create direct service instance of COM068, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:13:04,398 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:13:10,643 [5] INFO  - Can't create direct service instance of COM006 -> One or more errors occurred.
+2019-06-27 17:13:10,644 [5] INFO  - Can't create direct service instance of COM006, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:13:10,815 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:13:17,015 [5] INFO  - Can't create direct service instance of COM030 -> One or more errors occurred.
+2019-06-27 17:13:17,017 [5] INFO  - Can't create direct service instance of COM030, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:13:17,195 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:13:23,352 [5] INFO  - Can't create direct service instance of COM025 -> One or more errors occurred.
+2019-06-27 17:13:23,353 [5] INFO  - Can't create direct service instance of COM025, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:13:23,514 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:13:29,659 [5] INFO  - Can't create direct service instance of COM024 -> One or more errors occurred.
+2019-06-27 17:13:29,661 [5] INFO  - Can't create direct service instance of COM024, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:13:30,271 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:13:36,407 [5] INFO  - Can't create direct service instance of COM033 -> One or more errors occurred.
+2019-06-27 17:13:36,409 [5] INFO  - Can't create direct service instance of COM033, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:13:36,566 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:13:42,718 [5] INFO  - Can't create direct service instance of COM018 -> One or more errors occurred.
+2019-06-27 17:13:42,718 [5] INFO  - Can't create direct service instance of COM018, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:13:42,876 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:13:49,053 [5] INFO  - Can't create direct service instance of COM023 -> One or more errors occurred.
+2019-06-27 17:13:49,054 [5] INFO  - Can't create direct service instance of COM023, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:13:49,942 [5] DEBUG - Hospital_ID = BENHVIEN_ID = HLU01
+2019-06-27 17:13:56,517 [5] INFO  - Can't create direct service instance of COM071 -> One or more errors occurred.
+2019-06-27 17:13:56,519 [5] INFO  - Can't create direct service instance of COM071, try to use WebService with url http://10.86.222.234:2010/api/
+2019-06-27 17:13:56,699 [5] INFO  - Can't create direct service instance of COM073 -> Service 'COM073' is not found!
+2019-06-27 17:13:56,712 [5] ERROR - Error when loading cache 'REFMAU_TONKHO_BOOKING' => Object reference not set to an instance of an object..
+2019-06-27 17:13:56,737 [5] INFO  - Can't create direct service instance of COM072 -> Service 'COM072' is not found!
+2019-06-27 17:13:56,748 [5] ERROR - Error when loading cache 'REFMAU_TONKHOBANGKHONG' => Object reference not set to an instance of an object..
+2019-06-27 17:13:57,554 [5] DEBUG - LoadMasters() error.
+System.InvalidOperationException: Error when loading caches 'REFMAU_TONKHO_BOOKING, REFMAU_TONKHOBANGKHONG'.
+   at FPT.Framework.Application.DataRepositoryProvider.PrefetchData(String cacheFolder, String rootPath, JobRunFeedbackBase feedback) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\DataRepositoryProvider.cs:line 236
+   at FPT.Framework.Application.ApplicationSession.LoadMasters(SessionLoadingFeedback runner) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 318
+   at FPT.Framework.Application.ApplicationSession.SessionLoad(Object data) in D:\Working\eHospital\trunk\01.Framework\01.Framework\06.Application\ApplicationSession.cs:line 605
+2019-06-27 17:13:57,565 [1] INFO  - [admin] Session started.
+2019-06-27 17:13:58,398 [1] WARN  - Can't get type of type 'ADM07', assembly 'Screens/ScrADM'
+2019-06-27 17:13:58,418 [1] WARN  - Can't get type of type 'ADM08', assembly 'Screens/ScrADM'
+2019-06-27 17:13:58,556 [1] WARN  - Can't get type of type 'APT03', assembly 'Screens/ScrAPT'
+2019-06-27 17:13:58,578 [1] WARN  - Can't get type of type 'APT04', assembly 'Screens/ScrAPT'
+2019-06-27 17:13:58,733 [1] WARN  - Can't get type of type 'BIL04', assembly 'Screens/ScrBIL'
+2019-06-27 17:13:58,758 [1] WARN  - Can't get type of type 'BIL06', assembly 'Screens/ScrBIL'
+2019-06-27 17:13:58,781 [1] WARN  - Can't get type of type 'BIL07', assembly 'Screens/ScrBIL'
+2019-06-27 17:13:58,802 [1] WARN  - Can't get type of type 'BIL08', assembly 'Screens/ScrBIL'
+2019-06-27 17:13:58,827 [1] WARN  - Can't get type of type 'BIL28', assembly 'Screens/ScrBIL'
+2019-06-27 17:13:58,847 [1] WARN  - Can't get type of type 'BIL29', assembly 'Screens/ScrBIL'
+2019-06-27 17:13:58,867 [1] WARN  - Can't get type of type 'BIL34', assembly 'Screens/ScrBIL'
+2019-06-27 17:13:58,887 [1] WARN  - Can't get type of type 'BIL35', assembly 'Screens/ScrBIL'
+2019-06-27 17:13:58,912 [1] WARN  - Can't get type of type 'BIL40', assembly 'Screens/ScrBIL'
+2019-06-27 17:13:58,934 [1] WARN  - Can't get type of type 'BIL44', assembly 'Screens/ScrBIL'
+2019-06-27 17:13:58,969 [1] WARN  - Can't get type of type 'COM26', assembly 'Screens/ScrCOM'
+2019-06-27 17:13:58,992 [1] WARN  - Can't get type of type 'COM28', assembly 'Screens/ScrCOM'
+2019-06-27 17:13:59,013 [1] WARN  - Can't get type of type 'COM29', assembly 'Screens/ScrCOM'
+2019-06-27 17:13:59,039 [1] WARN  - Can't get type of type 'COM61', assembly 'Screens/ScrCOM'
+2019-06-27 17:13:59,060 [1] WARN  - Can't get type of type 'CONTENT', assembly 'Screens/ScrSYS'
+2019-06-27 17:13:59,108 [1] WARN  - Can't get type of type 'EME07', assembly 'Screens/ScrEME'
+2019-06-27 17:13:59,204 [1] WARN  - Can't get type of type 'EME40', assembly 'Screens/ScrEME'
+2019-06-27 17:13:59,230 [1] WARN  - Can't get type of type 'EME41', assembly 'Screens/ScrEME'
+2019-06-27 17:13:59,255 [1] WARN  - Can't get type of type 'EME42', assembly 'Screens/ScrEME'
+2019-06-27 17:13:59,278 [1] WARN  - Can't get type of type 'EMP02', assembly 'Screens/ScrCOM'
+2019-06-27 17:13:59,332 [1] WARN  - Can't get type of type 'EMR51', assembly 'Screens/ScrEMR'
+2019-06-27 17:13:59,539 [1] WARN  - Can't get type of type 'IPD80', assembly 'Screens/ScrIPD'
+2019-06-27 17:13:59,566 [1] WARN  - Can't get type of type 'IPD81', assembly 'Screens/ScrIPD'
+2019-06-27 17:13:59,590 [1] WARN  - Can't get type of type 'IPD82', assembly 'Screens/ScrIPD'
+2019-06-27 17:13:59,616 [1] WARN  - Can't get type of type 'IPD83', assembly 'Screens/ScrIPD'
+2019-06-27 17:13:59,641 [1] WARN  - Can't get type of type 'IPD90', assembly 'Screens/ScrIPD'
+2019-06-27 17:13:59,665 [1] WARN  - Can't get type of type 'IPD92', assembly 'Screens/ScrIPD'
+2019-06-27 17:13:59,716 [1] WARN  - Can't get type of type 'MAIN', assembly 'Screens/ScrSYS'
+2019-06-27 17:13:59,799 [1] WARN  - Can't get type of type 'MRA02', assembly 'Screens/ScrMRA'
+2019-06-27 17:13:59,824 [1] WARN  - Can't get type of type 'MRA52', assembly 'Screens/ScrMRA'
+2019-06-27 17:13:59,850 [1] WARN  - Can't get type of type 'MRA53', assembly 'Screens/ScrMRA'
+2019-06-27 17:13:59,904 [1] WARN  - Can't get type of type 'NUT07', assembly 'Screens/ScrNUT'
+2019-06-27 17:14:00,024 [1] WARN  - Can't get type of type 'OPD40', assembly 'Screens/ScrOPD'
+2019-06-27 17:14:00,047 [1] WARN  - Can't get type of type 'OPD41', assembly 'Screens/ScrOPD'
+2019-06-27 17:14:00,067 [1] WARN  - Can't get type of type 'OPD42', assembly 'Screens/ScrOPD'
+2019-06-27 17:14:00,092 [1] WARN  - Can't get type of type 'OPD80', assembly 'Screens/ScrOPD'
+2019-06-27 17:14:00,117 [1] WARN  - Can't get type of type 'OPD81', assembly 'Screens/ScrOPD'
+2019-06-27 17:14:00,142 [1] WARN  - Can't get type of type 'OPD82', assembly 'Screens/ScrOPD'
+2019-06-27 17:14:00,280 [1] WARN  - Can't get type of type 'PHA02', assembly 'Screens/ScrPHA'
+2019-06-27 17:14:00,318 [1] WARN  - Can't get type of type 'PHA80', assembly 'Screens/ScrPHA'
+2019-06-27 17:14:00,343 [1] WARN  - Can't get type of type 'PHA83', assembly 'Screens/ScrPHA'
+2019-06-27 17:14:00,372 [1] WARN  - Can't get type of type 'PHATT', assembly 'Screens/ScrPHA'
+2019-06-27 17:14:00,500 [1] WARN  - Can't get type of type 'QMS30', assembly 'Screens/ScrQMS'
+2019-06-27 17:14:00,575 [1] WARN  - Can't get type of type 'ROS11', assembly 'Screens/ScrROS'
+2019-06-27 17:14:00,600 [1] WARN  - Can't get type of type 'ROS12', assembly 'Screens/ScrROS'
+2019-06-27 17:14:00,632 [1] WARN  - Can't get type of type 'RPT12', assembly 'Screens/ScrCOM'
+2019-06-27 17:14:00,672 [1] WARN  - Can't get type of type 'SMR06', assembly 'Screens/ScrIPD'
+2019-06-27 17:14:00,696 [1] WARN  - Can't get type of type 'SMR07', assembly 'Screens/ScrIPD'
+2019-06-27 17:14:00,784 [1] WARN  - Can't get type of type 'TES02', assembly 'Screens/ScrOPT'
+2019-06-27 17:14:00,824 [1] WARN  - Can't get type of type 'UTL03', assembly 'Screens/ScrUTL'
+2019-06-27 17:14:00,890 [1] WARN  - Can't get type of type 'UTL04', assembly 'Screens/ScrUTL'
+2019-06-27 17:14:00,955 [1] WARN  - Can't get type of type 'UTL05', assembly 'Screens/ScrUTL'
+2019-06-27 17:14:00,982 [1] WARN  - Can't get type of type 'UTL06', assembly 'Screens/ScrUTL'
+2019-06-27 17:44:10,196 [1] DEBUG - tính vp lần 1 - BHYT tong:8548500.00|0, tỷ lệ:1, benh nhan: TN190327.0000283||BT238382127611338245
+2019-06-27 17:45:06,099 [1] DEBUG - tính vp lần 1 - BHYT tong:277800.00|0, tỷ lệ:1, benh nhan: TN190603.0000424||XD238382248459938501
+2019-06-27 17:45:31,984 [1] DEBUG - tính vp lần 1 - BHYT tong:277800.00|0, tỷ lệ:1, benh nhan: TN190603.0000424||XD238382248459938501

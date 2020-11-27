@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:2,6ce6033201ec2528c317d016b34482a2-->
+        <statement id="DAO00213_GetAll" resultClass="DataObject">
+            select HOATCHAT_FIRST_ID
+            ,HOATCHAT_SECOND_ID
+            ,LEVELSEVERITY_ID
+            ,LEVELDOCUMENT_ID
+            ,MECHANISM
+            ,ACTIONS
+            ,REFERENCEINFO
+            ,COMMENTS AS "COMMENT"
+            ,NGUOITAO_ID
+            ,NGAYTAO
+            ,NGUOICAPNHAT_ID
+            ,NGAYCAPNHAT
+            ,ADVERSEEFFECT
+            ,BENHVIEN_ID
+            from TM_DUOC_INTERACTIONDETAIL
+            order by HOATCHAT_FIRST_ID
+        </statement>
+        <!--Revision:2,3e94cd4c44bfd91a64b142833c76c7dc-->
+        <statement id="DAO00213_GetInteractFromHC1" resultClass="DataObject">
+            select DI.HOATCHAT_FIRST_ID
+            ,DI.HOATCHAT_SECOND_ID
+            ,DI.LEVELSEVERITY_ID
+            ,DI.LEVELDOCUMENT_ID
+            ,DI.MECHANISM
+            ,DI.ACTIONS
+            ,DI.REFERENCEINFO
+            ,DI.COMMENTS AS "COMMENT"
+            ,DI.NGUOITAO_ID
+            ,DI.NGAYTAO
+            ,DI.NGUOICAPNHAT_ID
+            ,DI.NGAYCAPNHAT
+            ,DI.ADVERSEEFFECT
+            ,DI.BENHVIEN_ID, HC.TENHOATCHAT AS TENHOATCHAT_1, HC2.TENHOATCHAT AS TENHOATCHAT_2, DLS.LEVELSEVERITY_NAME
+            from TM_DUOC_INTERACTIONDETAIL DI
+            INNER JOIN TM_DUOC_HOATCHAT HC ON DI.HOATCHAT_FIRST_ID = HC.HOATCHAT_ID
+            INNER JOIN TM_DUOC_HOATCHAT HC2 ON DI.HOATCHAT_SECOND_ID = HC2.HOATCHAT_ID
+            INNER JOIN TM_DUOC_LEVELSEVERITY DLS ON DLS.LEVELSEVERITY_ID = DI.LEVELSEVERITY_ID
+            where DI.HOATCHAT_FIRST_ID = '$HOATCHAT_FIRST_ID$' AND DI.BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:2,b09ac2a33d2e66260451485c9ddc93c9-->
+        <statement id="DAO00213_GetInteractDetail" resultClass="DataObject">
+            select HOATCHAT_FIRST_ID
+            ,HOATCHAT_SECOND_ID
+            ,LEVELSEVERITY_ID
+            ,LEVELDOCUMENT_ID
+            ,MECHANISM
+            ,ACTIONS
+            ,REFERENCEINFO
+            ,COMMENTS AS "COMMENT"
+            ,NGUOITAO_ID
+            ,NGAYTAO
+            ,NGUOICAPNHAT_ID
+            ,NGAYCAPNHAT
+            ,ADVERSEEFFECT
+            ,BENHVIEN_ID
+            from TM_DUOC_INTERACTIONDETAIL
+            where HOATCHAT_FIRST_ID = '$HOATCHAT_FIRST_ID$' AND HOATCHAT_SECOND_ID = '$HOATCHAT_SECOND_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,4d0e78ed143fe3b75e49ba9bc35c5b14-->
+        <statement id="DAO00213_GetLevelSeverity" resultClass="DataObject">
+            select *
+            from TM_DUOC_LEVELSEVERITY
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,f2e6c2873657fdd2f3a03a48c3e00d06-->
+        <statement id="DAO00213_GetLevelDocument" resultClass="DataObject">
+            select *
+            from TM_DUOC_LEVELDOCUMENT
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,3b648a7686891115526600361dd19df0-->
+        <statement id="DAO00213_GetAllHoatChat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT HC.HOATCHAT_ID, HC.MAHOATCHAT || '-' || HC.TENHOATCHAT || '-' || D.DICTIONARY_NAME AS TENHOATCHAT
+            FROM TM_DUOC_HOATCHAT HC
+            INNER JOIN LST_DICTIONARY D ON D.DICTIONARY_CODE = HC.LOAIVATTU_ID AND D.DICTIONARY_TYPE_CODE = 'LoaiVatTu'
+            AND D.ENABLED = '1' AND D.BENHVIEN_ID = '$BENHVIEN_ID$'
+            WHERE HC.BENHVIEN_ID = '$BENHVIEN_ID$'
+            <!--WITH HoatchatRec AS
+      (
+      SELECT DH.HOATCHAT_ID AS CATEGORY_ID, DH.MAHOATCHAT AS CATEGORY_CODE, DH.TENHOATCHAT AS CATEGORY_NAME, DH.CAP AS FOLDER_LEVEL, ISNULL(DH.CAPTREN_ID,0) AS PARENT_ID, '0' AS IS_FOLDER
+      FROM TM_DUOC_HOATCHAT AS DH
+      WHERE DH.CAP = 1 AND ISNULL(DH.CAPTREN_ID,0) = 0 AND DH.BENHVIEN_ID = '$BENHVIEN_ID$'
+      UNION ALL
+      SELECT DH.HOATCHAT_ID AS CATEGORY_ID, DH.MAHOATCHAT AS CATEGORY_CODE, DH.TENHOATCHAT AS CATEGORY_NAME, DH.CAP AS FOLDER_LEVEL, DH.CAPTREN_ID AS PARENT_ID, '0' AS IS_FOLDER
+      FROM HoatchatRec AS HCR
+      INNER JOIN TM_DUOC_HOATCHAT AS DH ON DH.CAPTREN_ID = HCR.CATEGORY_ID AND DH.BENHVIEN_ID = '$BENHVIEN_ID$'
+      )
+      SELECT * FROM HoatchatRec AS HR-->
+        </statement>
+        <!--Revision:2,b5568896da5b1f1d6dd9c1eab8521401-->
+        <statement id="DAO00213_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select HOATCHAT_FIRST_ID
+            ,HOATCHAT_SECOND_ID
+            ,LEVELSEVERITY_ID
+            ,LEVELDOCUMENT_ID
+            ,MECHANISM
+            ,ACTIONS
+            ,REFERENCEINFO
+            ,COMMENTS AS "COMMENT"
+            ,NGUOITAO_ID
+            ,NGAYTAO
+            ,NGUOICAPNHAT_ID
+            ,NGAYCAPNHAT
+            ,ADVERSEEFFECT
+            ,BENHVIEN_ID
+            from TM_DUOC_INTERACTIONDETAIL
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="HOATCHAT_FIRST_ID">
+                        TM_DUOC_INTERACTIONDETAIL.HOATCHAT_FIRST_ID = '$HOATCHAT_FIRST_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HOATCHAT_SECOND_ID">
+                        TM_DUOC_INTERACTIONDETAIL.HOATCHAT_SECOND_ID = '$HOATCHAT_SECOND_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LEVELSEVERITY_ID">
+                        TM_DUOC_INTERACTIONDETAIL.LEVELSEVERITY_ID = '$LEVELSEVERITY_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LEVELDOCUMENT_ID">
+                        TM_DUOC_INTERACTIONDETAIL.LEVELDOCUMENT_ID = '$LEVELDOCUMENT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MECHANISM">
+                        TM_DUOC_INTERACTIONDETAIL.MECHANISM = '$MECHANISM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ACTIONS">
+                        TM_DUOC_INTERACTIONDETAIL.ACTIONS = '$ACTIONS$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REFERENCEINFO">
+                        TM_DUOC_INTERACTIONDETAIL.REFERENCEINFO = '$REFERENCEINFO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="COMMENT">
+                        TM_DUOC_INTERACTIONDETAIL.COMMENTS = '$COMMENT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_DUOC_INTERACTIONDETAIL.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_DUOC_INTERACTIONDETAIL.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_DUOC_INTERACTIONDETAIL.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_DUOC_INTERACTIONDETAIL.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ADVERSEEFFECT">
+                        TM_DUOC_INTERACTIONDETAIL.ADVERSEEFFECT = '$ADVERSEEFFECT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_DUOC_INTERACTIONDETAIL.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by HOATCHAT_FIRST_ID
+        </statement>
+        <!--Revision:2,a89ba04ee909ee8cb77f68a486dfa56b-->
+        <statement id="DAO00213_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select HOATCHAT_FIRST_ID
+            ,HOATCHAT_SECOND_ID
+            ,LEVELSEVERITY_ID
+            ,LEVELDOCUMENT_ID
+            ,MECHANISM
+            ,ACTIONS
+            ,REFERENCEINFO
+            ,COMMENTS AS "COMMENT"
+            ,NGUOITAO_ID
+            ,NGAYTAO
+            ,NGUOICAPNHAT_ID
+            ,NGAYCAPNHAT
+            ,ADVERSEEFFECT
+            ,BENHVIEN_ID
+            from TM_DUOC_INTERACTIONDETAIL
+            where TM_DUOC_INTERACTIONDETAIL.HOATCHAT_FIRST_ID  = '$value$'
+            order by HOATCHAT_FIRST_ID
+        </statement>
+        <!--Revision:2,5b795855f3a4630fe0d9304b3a880ff1-->
+        <statement id="DAO00213_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select HOATCHAT_FIRST_ID
+            ,HOATCHAT_SECOND_ID
+            ,LEVELSEVERITY_ID
+            ,LEVELDOCUMENT_ID
+            ,MECHANISM
+            ,ACTIONS
+            ,REFERENCEINFO
+            ,COMMENTS AS "COMMENT"
+            ,NGUOITAO_ID
+            ,NGAYTAO
+            ,NGUOICAPNHAT_ID
+            ,NGAYCAPNHAT
+            ,ADVERSEEFFECT
+            ,BENHVIEN_ID
+            from TM_DUOC_INTERACTIONDETAIL
+            where TM_DUOC_INTERACTIONDETAIL.HOATCHAT_FIRST_ID  = '$HOATCHAT_FIRST_ID$'
+            order by HOATCHAT_FIRST_ID
+        </statement>
+        <!--Revision:2,1e88a46ec13ebd90ebc71cd132a7c2cf-->
+        <insert id="DAO00213_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_DUOC_INTERACTIONDETAIL (
+            HOATCHAT_FIRST_ID
+            , HOATCHAT_SECOND_ID
+            , LEVELSEVERITY_ID
+            , LEVELDOCUMENT_ID
+            , MECHANISM
+            , ACTIONS
+            , REFERENCEINFO
+            , COMMENTS
+            , NGUOITAO_ID
+            , NGAYTAO
+            , NGUOICAPNHAT_ID
+            , NGAYCAPNHAT
+            , ADVERSEEFFECT
+            , BENHVIEN_ID
+            ) values (
+            #HOATCHAT_FIRST_ID#
+            , #HOATCHAT_SECOND_ID#
+            , #LEVELSEVERITY_ID#
+            , #LEVELDOCUMENT_ID#
+            , #MECHANISM#
+            , #ACTIONS#
+            , #REFERENCEINFO#
+            , #COMMENT#
+            , #NGUOITAO_ID#
+            , #NGAYTAO#
+            , #NGUOICAPNHAT_ID#
+            , #NGAYCAPNHAT#
+            , #ADVERSEEFFECT#
+            , #BENHVIEN_ID#
+            )
+            <selectKey resultClass="System.Int64" type="post">
+                SELECT #HOATCHAT_SECOND_ID# as value from DUAL
+            </selectKey>
+        </insert>
+        <!--Revision:1,b1871902cdd50a958e03128c846ce23c-->
+        <update id="DAO00213_Update" parameterClass="System.Collections.IDictionary">
+            update TM_DUOC_INTERACTIONDETAIL set
+            LEVELSEVERITY_ID = #LEVELSEVERITY_ID#
+            , LEVELDOCUMENT_ID = #LEVELDOCUMENT_ID#
+            , MECHANISM = #MECHANISM#
+            , ACTIONS = #ACTIONS#
+            , REFERENCEINFO = #REFERENCEINFO#
+            , COMMENTS = #COMMENT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , ADVERSEEFFECT = #ADVERSEEFFECT#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            HOATCHAT_FIRST_ID = '$HOATCHAT_FIRST_ID$'
+            AND HOATCHAT_SECOND_ID = '$HOATCHAT_SECOND_ID$'
+        </update>
+        <!--Revision:0,09616c4abe68b50587c25f42fcee0d37-->
+        <statement id="DAO00213_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DUOC_INTERACTIONDETAIL
+            where
+            HOATCHAT_FIRST_ID = '$HOATCHAT_FIRST_ID$'
+            AND HOATCHAT_SECOND_ID = '$HOATCHAT_SECOND_ID$'
+        </statement>
+        <!--Revision:1,dec89d37fec6123aaa305f1f7a6b3e91-->
+        <statement id="DAO00213_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_DUOC_INTERACTIONDETAIL
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="HOATCHAT_FIRST_ID">
+                        TM_DUOC_INTERACTIONDETAIL.HOATCHAT_FIRST_ID = '$HOATCHAT_FIRST_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HOATCHAT_SECOND_ID">
+                        TM_DUOC_INTERACTIONDETAIL.HOATCHAT_SECOND_ID = '$HOATCHAT_SECOND_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LEVELSEVERITY_ID">
+                        TM_DUOC_INTERACTIONDETAIL.LEVELSEVERITY_ID = '$LEVELSEVERITY_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LEVELDOCUMENT_ID">
+                        TM_DUOC_INTERACTIONDETAIL.LEVELDOCUMENT_ID = '$LEVELDOCUMENT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MECHANISM">
+                        TM_DUOC_INTERACTIONDETAIL.MECHANISM = '$MECHANISM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ACTIONS">
+                        TM_DUOC_INTERACTIONDETAIL.ACTIONS = '$ACTIONS$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="REFERENCEINFO">
+                        TM_DUOC_INTERACTIONDETAIL.REFERENCEINFO = '$REFERENCEINFO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="COMMENT">
+                        TM_DUOC_INTERACTIONDETAIL.COMMENTS = '$COMMENT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_DUOC_INTERACTIONDETAIL.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_DUOC_INTERACTIONDETAIL.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_DUOC_INTERACTIONDETAIL.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_DUOC_INTERACTIONDETAIL.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ADVERSEEFFECT">
+                        TM_DUOC_INTERACTIONDETAIL.ADVERSEEFFECT = '$ADVERSEEFFECT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TM_DUOC_INTERACTIONDETAIL.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

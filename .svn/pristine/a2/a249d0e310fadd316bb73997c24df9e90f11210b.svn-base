@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <statement id="DAO00328_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      SELECT GOI.GOI_ID, GOI.MAGOI, GOI.TENGOI, GOI.GIATRIGOI
+      FROM TM_CSKH_GOI GOI INNER JOIN LST_DICTIONARY L ON L.DICTIONARY_ID = GOI.LOAIGOI_ID
+      WHERE GOI.TRANGTHAI='GOIDUOCPHEPBAN' AND L.DICTIONARY_TYPE_CODE = 'LoaiGoiDV' AND L.DICTIONARY_CODE = 'KhamSucKhoe'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        GOI.BENHVIEN_ID ='$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+    <statement id="DAO00328_DeletePatientImport" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      delete
+      from TT_KSK_HOPDONG_BENHNHAN
+      where HOPDONG_BENHNHAN_ID IN (SELECT * FROM DBO.SPLIT('$HOPDONG_BENHNHAN_ID$',', '))
+    </statement>
+    <statement id="DAO00328_GetKetQuaKSK" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_KSK_KETQUA
+      where HOPDONG_BENHNHAN_ID  = '$HOPDONG_BENHNHAN_ID$' and KETQUA_ID = '$KETQUA_ID$'
+      <dynamic>
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00328_GetPatientId" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select BN.*, KQ.KETQUA_ID
+      from TT_KSK_HOPDONG_BENHNHAN BN
+      left join TT_KSK_KETQUA KQ on KQ.HOPDONG_BENHNHAN_ID = BN.HOPDONG_BENHNHAN_ID
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="BENHNHAN_ID">
+            BN.BENHNHAN_ID = '$BENHNHAN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            BN.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <update id="DAO00328_UpdateBenhNhanTonTai" parameterClass="System.Collections.IDictionary">
+      update TT_KSK_HOPDONG_BENHNHAN 
+      set TONTAI = '1' 
+      where HOPDONG_BENHNHAN_ID = '$HOPDONG_BENHNHAN_ID$'
+    </update>
+  </statements>
+</sqlMap>

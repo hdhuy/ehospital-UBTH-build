@@ -1,0 +1,3065 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,9676a5bfddd22988848bd21d7b194e06-->
+        <statement id="DAO00037_GetTrangThaiKhoaDuLieu" resultClass="DataObject">
+            select KHOADULIEU, NGAYKHOADULIEU, THOIGIANKHOADULIEU, NGUOIKHOA_ID
+            from TT_CLSKETQUA
+            where CLSKETQUA_ID = '$CLSKETQUA_ID$'
+        </statement>
+        <!--Revision:0,47b66bac69b240d69805ecdff7643f41-->
+        <statement id="DAO00037_GetAll" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUA
+            order by CLSKETQUA_ID
+        </statement>
+        <!--Revision:0,ecb1a0f49daef3184bdd9e5ddf20e2e8-->
+        <statement id="DAO00037_GetCLSKetQua" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUA
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CLSKETQUA_ID">
+                        TT_CLSKETQUA.CLSKETQUA_ID = '$CLSKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIEUXETNGHIEM">
+                        TT_CLSKETQUA.SOPHIEUXETNGHIEM = '$SOPHIEUXETNGHIEM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                        TT_CLSKETQUA.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHAN_ID">
+                        TT_CLSKETQUA.BENHAN_ID = '$BENHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRU_ID">
+                        TT_CLSKETQUA.LUUTRU_ID = '$LUUTRU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+                        TT_CLSKETQUA.DVYEUCAU_ID = '$DVYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHVU_ID">
+                        TT_CLSKETQUA.DICHVU_ID = '$DICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHOMDICHVU_ID">
+                        TT_CLSKETQUA.NHOMDICHVU_ID = '$NHOMDICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTHUCHIEN">
+                        TT_CLSKETQUA.NGAYTHUCHIEN = '$NGAYTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANTHUCHIEN">
+                        TT_CLSKETQUA.THOIGIANTHUCHIEN = '$THOIGIANTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYGIOTHUCHIEN">
+                        TT_CLSKETQUA.NGAYGIOTHUCHIEN = '$NGAYGIOTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIOTHUCHIEN">
+                        TT_CLSKETQUA.GIOTHUCHIEN = '$GIOTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NAMTHUCHIEN">
+                        TT_CLSKETQUA.NAMTHUCHIEN = '$NAMTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THANGTHUCHIEN">
+                        TT_CLSKETQUA.THANGTHUCHIEN = '$THANGTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOITHUCHIEN_ID">
+                        TT_CLSKETQUA.NOITHUCHIEN_ID = '$NOITHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSICHIDINH_ID">
+                        TT_CLSKETQUA.BACSICHIDINH_ID = '$BACSICHIDINH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSICHIDINH">
+                        TT_CLSKETQUA.BACSICHIDINH = '$BACSICHIDINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCHIDINH">
+                        TT_CLSKETQUA.NGAYCHIDINH = '$NGAYCHIDINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSITHUCHIEN_ID">
+                        TT_CLSKETQUA.BACSITHUCHIEN_ID = '$BACSITHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSIKETLUAN_ID">
+                        TT_CLSKETQUA.BACSIKETLUAN_ID = '$BACSIKETLUAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUATVIEN01_ID">
+                        TT_CLSKETQUA.KYTHUATVIEN01_ID = '$KYTHUATVIEN01_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUATVIEN02_ID">
+                        TT_CLSKETQUA.KYTHUATVIEN02_ID = '$KYTHUATVIEN02_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHANDOANLAMSANG">
+                        TT_CLSKETQUA.CHANDOANLAMSANG = '$CHANDOANLAMSANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DENGHI">
+                        TT_CLSKETQUA.DENGHI = '$DENGHI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SINHTHIET">
+                        TT_CLSKETQUA.SINHTHIET = '$SINHTHIET$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CLOTEST">
+                        TT_CLSKETQUA.CLOTEST = '$CLOTEST$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHOTO">
+                        TT_CLSKETQUA.PHOTO = '$PHOTO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="VIDEO">
+                        TT_CLSKETQUA.VIDEO = '$VIDEO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEMCANQUANG">
+                        TT_CLSKETQUA.TIEMCANQUANG = '$TIEMCANQUANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHANLOAIKETQUA_ID">
+                        TT_CLSKETQUA.PHANLOAIKETQUA_ID = '$PHANLOAIKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THUCHIENBENNGOAI">
+                        TT_CLSKETQUA.THUCHIENBENNGOAI = '$THUCHIENBENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIENTHUCHIEN_ID">
+                        TT_CLSKETQUA.BENHVIENTHUCHIEN_ID = '$BENHVIENTHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENBACSIBENNGOAI">
+                        TT_CLSKETQUA.TENBACSIBENNGOAI = '$TENBACSIBENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOABENNGOAI_ID">
+                        TT_CLSKETQUA.KHOABENNGOAI_ID = '$KHOABENNGOAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOABENNGOAI">
+                        TT_CLSKETQUA.KHOABENNGOAI = '$KHOABENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="VUNGKHAOSAT">
+                        TT_CLSKETQUA.VUNGKHAOSAT = '$VUNGKHAOSAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MOTA">
+                        TT_CLSKETQUA.MOTA = '$MOTA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MOTA_TEXT">
+                        TT_CLSKETQUA.MOTA_TEXT = '$MOTA_TEXT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETLUAN">
+                        TT_CLSKETQUA.KETLUAN = '$KETLUAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GHICHU">
+                        TT_CLSKETQUA.GHICHU = '$GHICHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAPHIM">
+                        TT_CLSKETQUA.MAPHIM = '$MAPHIM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_AMSO">
+                        TT_CLSKETQUA.GPB_AMSO = '$GPB_AMSO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_PHANLOAIKETQUA_ID">
+                        TT_CLSKETQUA.GPB_PHANLOAIKETQUA_ID = '$GPB_PHANLOAIKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_PHUONGPHAPLAYBENHPHAM_ID">
+                        TT_CLSKETQUA.GPB_PHUONGPHAPLAYBENHPHAM_ID = '$GPB_PHUONGPHAPLAYBENHPHAM_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_SOMAU">
+                        TT_CLSKETQUA.GPB_SOMAU = '$GPB_SOMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_SOLUONGMAU">
+                        TT_CLSKETQUA.GPB_SOLUONGMAU = '$GPB_SOLUONGMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_TOPO_ID">
+                        TT_CLSKETQUA.GPB_TOPO_ID = '$GPB_TOPO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_TOPOREGIONS_ID">
+                        TT_CLSKETQUA.GPB_TOPOREGIONS_ID = '$GPB_TOPOREGIONS_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_MORPHO_ID">
+                        TT_CLSKETQUA.GPB_MORPHO_ID = '$GPB_MORPHO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_ETIO_ID">
+                        TT_CLSKETQUA.GPB_ETIO_ID = '$GPB_ETIO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_DAITHE">
+                        TT_CLSKETQUA.GPB_DAITHE = '$GPB_DAITHE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_VITHE">
+                        TT_CLSKETQUA.GPB_VITHE = '$GPB_VITHE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_HE">
+                        TT_CLSKETQUA.GPB_NHUOM_HE = '$GPB_NHUOM_HE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_PAS">
+                        TT_CLSKETQUA.GPB_NHUOM_PAS = '$GPB_NHUOM_PAS$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_TRI">
+                        TT_CLSKETQUA.GPB_NHUOM_TRI = '$GPB_NHUOM_TRI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_AFB">
+                        TT_CLSKETQUA.GPB_NHUOM_AFB = '$GPB_NHUOM_AFB$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_GIEMSA">
+                        TT_CLSKETQUA.GPB_NHUOM_GIEMSA = '$GPB_NHUOM_GIEMSA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_OTHER">
+                        TT_CLSKETQUA.GPB_NHUOM_OTHER = '$GPB_NHUOM_OTHER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_HOAMIENDICH">
+                        TT_CLSKETQUA.GPB_HOAMIENDICH = '$GPB_HOAMIENDICH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_HOAMIENDICHHUYNHQUANG">
+                        TT_CLSKETQUA.GPB_HOAMIENDICHHUYNHQUANG = '$GPB_HOAMIENDICHHUYNHQUANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_HOICHAN">
+                        TT_CLSKETQUA.GPB_HOICHAN = '$GPB_HOICHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIFILM_ID">
+                        TT_CLSKETQUA.LOAIFILM_ID = '$LOAIFILM_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMSUDUNG">
+                        TT_CLSKETQUA.SOPHIMSUDUNG = '$SOPHIMSUDUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THIETBI_ID">
+                        TT_CLSKETQUA.THIETBI_ID = '$THIETBI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOTHUOCSUDUNG">
+                        TT_CLSKETQUA.SOTHUOCSUDUNG = '$SOTHUOCSUDUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOADULIEU">
+                        TT_CLSKETQUA.KHOADULIEU = '$KHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYKHOADULIEU">
+                        TT_CLSKETQUA.NGAYKHOADULIEU = '$NGAYKHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANKHOADULIEU">
+                        TT_CLSKETQUA.THOIGIANKHOADULIEU = '$THOIGIANKHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOIKHOA_ID">
+                        TT_CLSKETQUA.NGUOIKHOA_ID = '$NGUOIKHOA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MANGUOIKHOA">
+                        TT_CLSKETQUA.MANGUOIKHOA = '$MANGUOIKHOA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNGUOIKHOA">
+                        TT_CLSKETQUA.TENNGUOIKHOA = '$TENNGUOIKHOA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRANGTHAI">
+                        TT_CLSKETQUA.TRANGTHAI = '$TRANGTHAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MACH">
+                        TT_CLSKETQUA.MACH = '$MACH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HUYETAP">
+                        TT_CLSKETQUA.HUYETAP = '$HUYETAP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHIPTHO">
+                        TT_CLSKETQUA.NHIPTHO = '$NHIPTHO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHIETDO">
+                        TT_CLSKETQUA.NHIETDO = '$NHIETDO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHIEUCAO">
+                        TT_CLSKETQUA.CHIEUCAO = '$CHIEUCAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CANNANG">
+                        TT_CLSKETQUA.CANNANG = '$CANNANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BSA">
+                        TT_CLSKETQUA.BSA = '$BSA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TINHTRANGDIENNAO">
+                        TT_CLSKETQUA.TINHTRANGDIENNAO = '$TINHTRANGDIENNAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOVAOVIEN">
+                        TT_CLSKETQUA.SOVAOVIEN = '$SOVAOVIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAYTE">
+                        TT_CLSKETQUA.MAYTE = '$MAYTE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENBENHNHAN">
+                        TT_CLSKETQUA.TENBENHNHAN = '$TENBENHNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NAMSINH">
+                        TT_CLSKETQUA.NAMSINH = '$NAMSINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIOITINH">
+                        TT_CLSKETQUA.GIOITINH = '$GIOITINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DIACHI">
+                        TT_CLSKETQUA.DIACHI = '$DIACHI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOICHIDINH_ID">
+                        TT_CLSKETQUA.NOICHIDINH_ID = '$NOICHIDINH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAUTHU_ID">
+                        TT_CLSKETQUA.MAUTHU_ID = '$MAUTHU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANNHAN">
+                        TT_CLSKETQUA.THOIGIANNHAN = '$THOIGIANNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAU">
+                        TT_CLSKETQUA.MAU = '$MAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAITHUOCCANQUANG_ID">
+                        TT_CLSKETQUA.LOAITHUOCCANQUANG_ID = '$LOAITHUOCCANQUANG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MA">
+                        TT_CLSKETQUA.MA = '$MA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IDHINH">
+                        TT_CLSKETQUA.IDHINH = '$IDHINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMHU">
+                        TT_CLSKETQUA.SOPHIMHU = '$SOPHIMHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIPHIMHU_ID">
+                        TT_CLSKETQUA.LOAIPHIMHU_ID = '$LOAIPHIMHU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DOSOI">
+                        TT_CLSKETQUA.DOSOI = '$DOSOI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DOSOI_ID">
+                        TT_CLSKETQUA.DOSOI_ID = '$DOSOI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BANKINHSOI">
+                        TT_CLSKETQUA.BANKINHSOI = '$BANKINHSOI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SODT">
+                        TT_CLSKETQUA.SODT = '$SODT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUAT">
+                        TT_CLSKETQUA.KYTHUAT = '$KYTHUAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUAT_TEXT">
+                        TT_CLSKETQUA.KYTHUAT_TEXT = '$KYTHUAT_TEXT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMSUDUNG2">
+                        TT_CLSKETQUA.SOPHIMSUDUNG2 = '$SOPHIMSUDUNG2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIFILM_ID2">
+                        TT_CLSKETQUA.LOAIFILM_ID2 = '$LOAIFILM_ID2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMSUDUNG3">
+                        TT_CLSKETQUA.SOPHIMSUDUNG3 = '$SOPHIMSUDUNG3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIFILM_ID3">
+                        TT_CLSKETQUA.LOAIFILM_ID3 = '$LOAIFILM_ID3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="RESISTANCEMARKERS">
+                        TT_CLSKETQUA.RESISTANCEMARKERS = '$RESISTANCEMARKERS$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_CLSKETQUA.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_CLSKETQUA.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_CLSKETQUA.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_CLSKETQUA.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_CLSKETQUA.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOLUONGONG">
+                        TT_CLSKETQUA.SOLUONGONG = '$SOLUONGONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOMLMAU">
+                        TT_CLSKETQUA.SOMLMAU = '$SOMLMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANLAYMAU">
+                        TT_CLSKETQUA.THOIGIANLAYMAU = '$THOIGIANLAYMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANNHANMAU">
+                        TT_CLSKETQUA.THOIGIANNHANMAU = '$THOIGIANNHANMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOONGTHUCNHAN">
+                        TT_CLSKETQUA.SOONGTHUCNHAN = '$SOONGTHUCNHAN$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by CLSKETQUA_ID
+        </statement>
+        <!--Revision:0,f2e3c0fad8e986e2020b8c90e7c1c1b2-->
+        <statement id="DAO00037_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUA
+            where TT_CLSKETQUA.CLSKETQUA_ID  = '$value$'
+            order by CLSKETQUA_ID
+        </statement>
+        <!--Revision:0,2512ae8eb2e4f36299a88115788b75fc-->
+        <statement id="DAO00037_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_CLSKETQUA
+            where TT_CLSKETQUA.CLSKETQUA_ID  = '$CLSKETQUA_ID$'
+            order by CLSKETQUA_ID
+        </statement>
+        <!--Revision:0,5f66fa34f9f5f0fcf48f752169ff9c93-->
+        <statement id="DAO00037_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TT_CLSKETQUA (
+            SOPHIEUXETNGHIEM
+            , TIEPNHAN_ID
+            , BENHAN_ID
+            , LUUTRU_ID
+            <isNotEmpty prepend="," property="LUUTRUCHITIET_ID">
+                LUUTRUCHITIET_ID
+            </isNotEmpty>
+            , DVYEUCAU_ID
+            , DICHVU_ID
+            , NHOMDICHVU_ID
+            , NGAYTHUCHIEN
+            , THOIGIANTHUCHIEN
+            , NGAYGIOTHUCHIEN
+            , GIOTHUCHIEN
+            , NAMTHUCHIEN
+            , THANGTHUCHIEN
+            , NOITHUCHIEN_ID
+            , BACSICHIDINH_ID
+            , BACSICHIDINH
+            , NGAYCHIDINH
+            , BACSITHUCHIEN_ID
+            , BACSIKETLUAN_ID
+            , BACSIGMHS_ID
+            , DIEUDUONG_ID
+            , KYTHUATVIEN01_ID
+            , KYTHUATVIEN02_ID
+            , CHANDOANLAMSANG
+            , DENGHI
+            , SINHTHIET
+            , CLOTEST
+            , PHOTO
+            , VIDEO
+            , TIEMCANQUANG
+            , PHANLOAIKETQUA_ID
+            , THUCHIENBENNGOAI
+            , BENHVIENTHUCHIEN_ID
+            , TENBACSIBENNGOAI
+            , KHOABENNGOAI_ID
+            , GUINGOAI
+            , NOIGUIDEN_ID
+            , ICD_ID1
+            , ICD_ID2
+            , ICD_ID3
+            , DIUNGTHUOC
+            , TIENME
+            , DACBIET
+            , KQCUOICUNG
+            , THONGTINNHAN
+            , KETLUANKSK
+            , VUNGKHAOSAT
+            , MOTA
+            , MOTA_TEXT
+            , KETLUAN
+            , GHICHU
+            , MAPHIM
+            , GPB_AMSO
+            , GPB_PHANLOAIKETQUA_ID
+            , GPB_PHUONGPHAPLAYBENHPHAM_ID
+            , GPB_SOMAU
+            , GPB_SOLUONGMAU
+            , GPB_TOPO_ID
+            , GPB_TOPOREGIONS_ID
+            , GPB_MORPHO_ID
+            , GPB_ETIO_ID
+            , GPB_DAITHE
+            , GPB_VITHE
+            , GPB_NHUOM_HE
+            , GPB_NHUOM_PAS
+            , GPB_NHUOM_TRI
+            , GPB_NHUOM_AFB
+            , GPB_NHUOM_GIEMSA
+            , GPB_NHUOM_PAPANICOLAOU
+            , GPB_NHUOM_RETICULINE
+            , GPB_NHUOM_OTHER
+            , GPB_HOAMIENDICH
+            , GPB_HOAMIENDICHHUYNHQUANG
+            , GPB_HOICHAN
+            , GPB_MAUTHU
+            , GPB_NOILAYMAUTHU
+            , HLVIKHUAN1
+            , HLVIKHUAN2
+            , LOAIFILM_ID
+            , SOPHIMSUDUNG
+            , THIETBI_ID
+            , SOTHUOCSUDUNG
+            , KHOADULIEU
+            , NGAYKHOADULIEU
+            , THOIGIANKHOADULIEU
+            , NGUOIKHOA_ID
+            , MANGUOIKHOA
+            , TENNGUOIKHOA
+            , TRANGTHAI
+            , MACH
+            , HUYETAP
+            , NHIPTHO
+            , NHIETDO
+            , CHIEUCAO
+            , CANNANG
+            , BSA
+            , TINHTRANGDIENNAO
+            , SOVAOVIEN
+            , MAYTE
+            , TENBENHNHAN
+            , NAMSINH
+            , GIOITINH
+            , DIACHI
+            , NOICHIDINH_ID
+            , MAUTHU_ID
+            , THOIGIANNHAN
+            , MAU
+            , LOAITHUOCCANQUANG_ID
+            , MA
+            , IDHINH
+            , SOPHIMHU
+            , LOAIPHIMHU_ID
+            , DOSOI
+            , DOSOI_ID
+            , BANKINHSOI
+            , SODT
+            , KYTHUAT
+            , KYTHUAT_TEXT
+            , SOPHIMSUDUNG2
+            , LOAIFILM_ID2
+            , SOPHIMSUDUNG3
+            , LOAIFILM_ID3
+            , RESISTANCEMARKERS
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , SOLUONGONG
+            , SOMLMAU
+            , THOIGIANLAYMAU
+            , THOIGIANNHANMAU
+            , THOIGIANCDBENHPHAM
+            , DUNGDICHCD_ID
+            , SOONGTHUCNHAN
+            , THUOCDADUNG
+            , NGAYGANMAY
+            , NGAYTHAOMAY
+            , LOAIMAUBENHPHAM
+            ) values (
+            #SOPHIEUXETNGHIEM#
+            , #TIEPNHAN_ID#
+            , #BENHAN_ID#
+            , #LUUTRU_ID#
+            <isNotEmpty prepend="," property="LUUTRUCHITIET_ID">
+                #LUUTRUCHITIET_ID#
+            </isNotEmpty>
+          , #DVYEUCAU_ID#
+          , #DICHVU_ID#
+          , #NHOMDICHVU_ID#
+          , #NGAYTHUCHIEN#
+          , #THOIGIANTHUCHIEN#
+          , #NGAYGIOTHUCHIEN#
+          , #GIOTHUCHIEN#
+          , #NAMTHUCHIEN#
+          , #THANGTHUCHIEN#
+          , #NOITHUCHIEN_ID#
+          , #BACSICHIDINH_ID#
+          , #BACSICHIDINH#
+          , #NGAYCHIDINH#
+          , #BACSITHUCHIEN_ID#
+          , #BACSIKETLUAN_ID#
+          , #BACSIGMHS_ID#
+          , #DIEUDUONG_ID#
+          , #KYTHUATVIEN01_ID#
+          , #KYTHUATVIEN02_ID#
+          , #CHANDOANLAMSANG#
+          , #DENGHI#
+          , #SINHTHIET#
+          , #CLOTEST#
+          , #PHOTO#
+          , #VIDEO#
+          , #TIEMCANQUANG#
+          , #PHANLOAIKETQUA_ID#
+          , #THUCHIENBENNGOAI#
+          , #BENHVIENTHUCHIEN_ID#
+          , #TENBACSIBENNGOAI#
+          , #KHOABENNGOAI_ID#
+          , #GUINGOAI#
+          , #NOIGUIDEN_ID#
+          , #ICD_ID1#
+          , #ICD_ID2#
+          , #ICD_ID3#
+          , #DIUNGTHUOC#
+          , #TIENME#
+          , #DACBIET#
+          , #KQCUOICUNG#
+          , #THONGTINNHAN#
+          , #KETLUANKSK#
+          , #VUNGKHAOSAT#
+          , #MOTA#
+          , #MOTA_TEXT#
+          , #KETLUAN#
+          , #GHICHU#
+          , #MAPHIM#
+          , #GPB_AMSO#
+          , #GPB_PHANLOAIKETQUA_ID#
+          , #GPB_PHUONGPHAPLAYBENHPHAM_ID#
+          , #GPB_SOMAU#
+          , #GPB_SOLUONGMAU#
+          , #GPB_TOPO_ID#
+          , #GPB_TOPOREGIONS_ID#
+          , #GPB_MORPHO_ID#
+          , #GPB_ETIO_ID#
+          , #GPB_DAITHE#
+          , #GPB_VITHE#
+          , #GPB_NHUOM_HE#
+          , #GPB_NHUOM_PAS#
+          , #GPB_NHUOM_TRI#
+          , #GPB_NHUOM_AFB#
+          , #GPB_NHUOM_GIEMSA#
+          , #GPB_NHUOM_PAPANICOLAOU#
+          , #GPB_NHUOM_RETICULINE#
+          , #GPB_NHUOM_OTHER#
+          , #GPB_HOAMIENDICH#
+          , #GPB_HOAMIENDICHHUYNHQUANG#
+          , #GPB_HOICHAN#
+          , #GPB_MAUTHU#
+          , #GPB_NOILAYMAUTHU#
+          , #HLVIKHUAN1#
+          , #HLVIKHUAN2#
+          , #LOAIFILM_ID#
+          , #SOPHIMSUDUNG#
+          , #THIETBI_ID#
+          , #SOTHUOCSUDUNG#
+          , #KHOADULIEU#
+          , #NGAYKHOADULIEU#
+          , #THOIGIANKHOADULIEU#
+          , #NGUOIKHOA_ID#
+          , #MANGUOIKHOA#
+          , #TENNGUOIKHOA#
+          , #TRANGTHAI#
+          , #MACH#
+          , #HUYETAP#
+          , #NHIPTHO#
+          , #NHIETDO#
+          , #CHIEUCAO#
+          , #CANNANG#
+          , #BSA#
+          , #TINHTRANGDIENNAO#
+          , #SOVAOVIEN#
+          , #MAYTE#
+          , #TENBENHNHAN#
+          , #NAMSINH#
+          , #GIOITINH#
+          , #DIACHI#
+          , #NOICHIDINH_ID#
+          , #MAUTHU_ID#
+          , #THOIGIANNHAN#
+          , #MAU#
+          , #LOAITHUOCCANQUANG_ID#
+          , #MA#
+          , #IDHINH#
+          , #SOPHIMHU#
+          , #LOAIPHIMHU_ID#
+          , #DOSOI#
+          , #DOSOI_ID#
+          , #BANKINHSOI#
+          , #SODT#
+          , #KYTHUAT#
+          , #KYTHUAT_TEXT#
+          , #SOPHIMSUDUNG2#
+          , #LOAIFILM_ID2#
+          , #SOPHIMSUDUNG3#
+          , #LOAIFILM_ID3#
+          , #RESISTANCEMARKERS#
+          , #BENHVIEN_ID#
+          , #NGAYTAO#
+          , #NGUOITAO_ID#
+          , #NGAYCAPNHAT#
+          , #NGUOICAPNHAT_ID#
+          , #SOLUONGONG#
+          , #SOMLMAU#
+          , #THOIGIANLAYMAU#
+          , #THOIGIANNHANMAU#
+          , #THOIGIANCDBENHPHAM#
+          , #DUNGDICHCD_ID#
+          , #SOONGTHUCNHAN#
+          , #THUOCDADUNG#
+          , #NGAYGANMAY#
+          , #NGAYTHAOMAY#
+          , #LOAIMAUBENHPHAM#
+          )
+          SELECT SCOPE_IDENTITY()
+          <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+        </statement>
+        <!--Revision:0,f1cd9b2ec9d79cbd80c6f6701fcfd669-->
+      <statement id="DAO00037_GetSieuAmTimDoppler" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT TT_CLSKETQUA.*,
+        SAT.CLSKETQUA_SAT_ID,
+
+        SAT.TTR_VACHLIENTHAT,
+        SAT.TTR_THATTRAI,
+        SAT.TTR_THANHSAU,
+        SAT.TTR_SF,
+        SAT.TTR_EF,
+        SAT.TTR_THATPHAI,
+        SAT.TTH_VACHLIENTHAT,
+        SAT.TTH_THATTRAI,
+        SAT.TTH_THANHSAU,
+        SAT.TTH_DONGMACHCHU,
+        SAT.TTH_NHITRAI,
+        SAT.TTH_TAPSE,
+        SAT.CHISO_KC_THATTRAI,
+        SAT.D_SITUS,
+        SAT.D_VITRITIM,
+        SAT.D_TM_TRENTRAI,
+        SAT.D_TM_TRENPHAI,
+        SAT.D_TM_DUOI,
+        SAT.D_TM_PHOI,
+        SAT.D_NHI,
+        SAT.D_VAN_2LA,
+        SAT.D_VAN_3LA,
+        SAT.D_VAN_LATRUOC,
+        SAT.D_THAT,
+        SAT.D_DMC_D2,
+        SAT.D_DMC_NGANG,
+        SAT.D_DMC_LEN,
+        SAT.D_DMC_EO,
+        SAT.D_DMP_VONG,
+        SAT.D_DMP_TRAI,
+        SAT.D_DMP_PHAI,
+        SAT.D_DMP_THAN,
+        SAT.D_MANGNGOAITIM,
+        SAT.DOP_V2LA_VMAX,
+        SAT.DOP_V2LA_HOVAN,
+        SAT.DOP_V2LA_HEPVAN,
+        SAT.DOP_V2LA_PGMAX,
+        SAT.DOP_V2LA_VC,
+        SAT.DOP_V2LA_EROA,
+        SAT.DOP_V2LA_DTVAN,
+        SAT.DOP_V2LA_PGMEAN,
+        SAT.DOP_V2LA_TILE_DH,
+        SAT.DOP_V2LA_E_A,
+        SAT.DOP_DMC_VMAX,
+        SAT.DOP_DMC_HOVAN,
+        SAT.DOP_DMC_HEPVAN,
+        SAT.DOP_DMC_PGMAX,
+        SAT.DOP_DMC_DFO,
+        SAT.DOP_DMC_VC,
+        SAT.DOP_DMC_DTVAN,
+        SAT.DOP_DMC_PGMEAN,
+        SAT.DOP_DMC_EDTD,
+        SAT.DOP_DMC_TILE_DH,
+        SAT.DOP_V3LA_VMAX_HO,
+        SAT.DOP_V3LA_HOVAN,
+        SAT.DOP_V3LA_VMAX,
+        SAT.DOP_V3LA_APLUC_PTT,
+        SAT.DOP_V3LA_VC,
+        SAT.DOP_V3LA_PGMAX,
+        SAT.DOP_V3LA_TILE_DH,
+        SAT.DOP_V3LA_PGMEAN,
+        SAT.DOP_DMP_VMAX,
+        SAT.DOP_DMP_HOVAN,
+        SAT.DOP_DMP_HEPVAN,
+        SAT.DOP_DMP_PGMAX,
+        SAT.DOP_DMP_VC,
+        SAT.DOP_DMP_TRUNGBINH,
+        SAT.DOP_DMP_PGMEAN,
+        SAT.DOP_DMP_TILE_DH,
+        SAT.DOP_DMP_TAMTRUONG,
+        SAT.NHANXET,
+        SAT.KETLUAN_SAT,
+        [CSC_NHIPTIM]
+        ,[CSC_NHITRAI]
+        ,[CSC_DMC]
+        ,[CSC_THATPHAI]
+        ,[CSC_DD]
+        ,[CSC_DS]
+        ,[CSC_VD]
+        ,[CSC_VS]
+        ,[CSC_D]
+        ,[CSC_EF]
+        ,[CSC_VLT_TTR]
+        ,[CSC_VLT_TTH]
+        ,[CSC_TSTT_TTR]
+        ,[CSC_TSTT_TTH]
+        ,[TM_VHL_TINHTRANG]
+        ,[TM_VHL_DANGDIDONG]
+        ,[TM_VHL_KC2BOVAN]
+        ,[TM_VHL_DOCTAMTRUONG]
+        ,[TM_VHL_DTDONGHO]
+        ,[TM_VDMC_TINHTRANG]
+        ,[TM_VDMC_BIENDO]
+        ,[TM_VDMC_DANGVANDONG]
+        ,[TM_VBL_TINHTRANG]
+        ,[TM_VDMP_TINHTRANG]
+        ,[TM_VDMP_DKGOC]
+        ,[TM_VDMP_APLUCUOCTINH]
+        ,[DOP_VHL_HOVAN]
+        ,[DOP_VHL_GRADIENT_MAX]
+        ,[DOP_VHL_GRADIENT_AVG]
+        ,[DOP_VHL_DIENTICH2D]
+        ,[DOP_VHL_DIENTICHPHT]
+        ,[DOP_VHL_HUYETKHOINT]
+        ,[DOP_VHL_E_VLT]
+        ,[DOP_VDMC_HOVAN]
+        ,[DOP_VDMC_GRADIENT_MAX]
+        ,[DOP_VDMC_GRADIENT_AVG]
+        ,[DOP_VBL_HOVAN]
+        ,[DOP_VBL_GRADIENT_MAX]
+        ,[DOP_VDMP_HOVAN]
+        ,[DOP_VDMP_GRADIENT_MAX]
+        ,[DOP_VDMP_CUOITT]
+        ,[DOP_VDMP_TB]
+
+        FROM TT_CLSKETQUA
+        LEFT JOIN TT_CLSKETQUA_SAT SAT ON TT_CLSKETQUA.CLSKETQUA_ID = SAT.CLSKETQUA_ID
+        <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CLSKETQUA_ID">
+                        TT_CLSKETQUA.CLSKETQUA_ID = '$CLSKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIEUXETNGHIEM">
+                        TT_CLSKETQUA.SOPHIEUXETNGHIEM = '$SOPHIEUXETNGHIEM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                        TT_CLSKETQUA.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHAN_ID">
+                        TT_CLSKETQUA.BENHAN_ID = '$BENHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRU_ID">
+                        TT_CLSKETQUA.LUUTRU_ID = '$LUUTRU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+                        TT_CLSKETQUA.DVYEUCAU_ID = '$DVYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHVU_ID">
+                        TT_CLSKETQUA.DICHVU_ID = '$DICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHOMDICHVU_ID">
+                        TT_CLSKETQUA.NHOMDICHVU_ID = '$NHOMDICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTHUCHIEN">
+                        TT_CLSKETQUA.NGAYTHUCHIEN = '$NGAYTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANTHUCHIEN">
+                        TT_CLSKETQUA.THOIGIANTHUCHIEN = '$THOIGIANTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYGIOTHUCHIEN">
+                        TT_CLSKETQUA.NGAYGIOTHUCHIEN = '$NGAYGIOTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIOTHUCHIEN">
+                        TT_CLSKETQUA.GIOTHUCHIEN = '$GIOTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NAMTHUCHIEN">
+                        TT_CLSKETQUA.NAMTHUCHIEN = '$NAMTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THANGTHUCHIEN">
+                        TT_CLSKETQUA.THANGTHUCHIEN = '$THANGTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOITHUCHIEN_ID">
+                        TT_CLSKETQUA.NOITHUCHIEN_ID = '$NOITHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSICHIDINH_ID">
+                        TT_CLSKETQUA.BACSICHIDINH_ID = '$BACSICHIDINH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSICHIDINH">
+                        TT_CLSKETQUA.BACSICHIDINH = '$BACSICHIDINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCHIDINH">
+                        TT_CLSKETQUA.NGAYCHIDINH = '$NGAYCHIDINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSITHUCHIEN_ID">
+                        TT_CLSKETQUA.BACSITHUCHIEN_ID = '$BACSITHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSIKETLUAN_ID">
+                        TT_CLSKETQUA.BACSIKETLUAN_ID = '$BACSIKETLUAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUATVIEN01_ID">
+                        TT_CLSKETQUA.KYTHUATVIEN01_ID = '$KYTHUATVIEN01_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUATVIEN02_ID">
+                        TT_CLSKETQUA.KYTHUATVIEN02_ID = '$KYTHUATVIEN02_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHANDOANLAMSANG">
+                        TT_CLSKETQUA.CHANDOANLAMSANG = '$CHANDOANLAMSANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DENGHI">
+                        TT_CLSKETQUA.DENGHI = '$DENGHI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SINHTHIET">
+                        TT_CLSKETQUA.SINHTHIET = '$SINHTHIET$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CLOTEST">
+                        TT_CLSKETQUA.CLOTEST = '$CLOTEST$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHOTO">
+                        TT_CLSKETQUA.PHOTO = '$PHOTO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="VIDEO">
+                        TT_CLSKETQUA.VIDEO = '$VIDEO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEMCANQUANG">
+                        TT_CLSKETQUA.TIEMCANQUANG = '$TIEMCANQUANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHANLOAIKETQUA_ID">
+                        TT_CLSKETQUA.PHANLOAIKETQUA_ID = '$PHANLOAIKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THUCHIENBENNGOAI">
+                        TT_CLSKETQUA.THUCHIENBENNGOAI = '$THUCHIENBENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIENTHUCHIEN_ID">
+                        TT_CLSKETQUA.BENHVIENTHUCHIEN_ID = '$BENHVIENTHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENBACSIBENNGOAI">
+                        TT_CLSKETQUA.TENBACSIBENNGOAI = '$TENBACSIBENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOABENNGOAI_ID">
+                        TT_CLSKETQUA.KHOABENNGOAI_ID = '$KHOABENNGOAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOABENNGOAI">
+                        TT_CLSKETQUA.KHOABENNGOAI = '$KHOABENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="VUNGKHAOSAT">
+                        TT_CLSKETQUA.VUNGKHAOSAT = '$VUNGKHAOSAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MOTA">
+                        TT_CLSKETQUA.MOTA = '$MOTA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MOTA_TEXT">
+                        TT_CLSKETQUA.MOTA_TEXT = '$MOTA_TEXT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETLUAN">
+                        TT_CLSKETQUA.KETLUAN = '$KETLUAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GHICHU">
+                        TT_CLSKETQUA.GHICHU = '$GHICHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAPHIM">
+                        TT_CLSKETQUA.MAPHIM = '$MAPHIM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_AMSO">
+                        TT_CLSKETQUA.GPB_AMSO = '$GPB_AMSO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_PHANLOAIKETQUA_ID">
+                        TT_CLSKETQUA.GPB_PHANLOAIKETQUA_ID = '$GPB_PHANLOAIKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_PHUONGPHAPLAYBENHPHAM_ID">
+                        TT_CLSKETQUA.GPB_PHUONGPHAPLAYBENHPHAM_ID = '$GPB_PHUONGPHAPLAYBENHPHAM_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_SOMAU">
+                        TT_CLSKETQUA.GPB_SOMAU = '$GPB_SOMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_SOLUONGMAU">
+                        TT_CLSKETQUA.GPB_SOLUONGMAU = '$GPB_SOLUONGMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_TOPO_ID">
+                        TT_CLSKETQUA.GPB_TOPO_ID = '$GPB_TOPO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_TOPOREGIONS_ID">
+                        TT_CLSKETQUA.GPB_TOPOREGIONS_ID = '$GPB_TOPOREGIONS_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_MORPHO_ID">
+                        TT_CLSKETQUA.GPB_MORPHO_ID = '$GPB_MORPHO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_ETIO_ID">
+                        TT_CLSKETQUA.GPB_ETIO_ID = '$GPB_ETIO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_DAITHE">
+                        TT_CLSKETQUA.GPB_DAITHE = '$GPB_DAITHE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_VITHE">
+                        TT_CLSKETQUA.GPB_VITHE = '$GPB_VITHE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_HE">
+                        TT_CLSKETQUA.GPB_NHUOM_HE = '$GPB_NHUOM_HE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_PAS">
+                        TT_CLSKETQUA.GPB_NHUOM_PAS = '$GPB_NHUOM_PAS$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_TRI">
+                        TT_CLSKETQUA.GPB_NHUOM_TRI = '$GPB_NHUOM_TRI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_AFB">
+                        TT_CLSKETQUA.GPB_NHUOM_AFB = '$GPB_NHUOM_AFB$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_GIEMSA">
+                        TT_CLSKETQUA.GPB_NHUOM_GIEMSA = '$GPB_NHUOM_GIEMSA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_OTHER">
+                        TT_CLSKETQUA.GPB_NHUOM_OTHER = '$GPB_NHUOM_OTHER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_HOAMIENDICH">
+                        TT_CLSKETQUA.GPB_HOAMIENDICH = '$GPB_HOAMIENDICH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_HOAMIENDICHHUYNHQUANG">
+                        TT_CLSKETQUA.GPB_HOAMIENDICHHUYNHQUANG = '$GPB_HOAMIENDICHHUYNHQUANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_HOICHAN">
+                        TT_CLSKETQUA.GPB_HOICHAN = '$GPB_HOICHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIFILM_ID">
+                        TT_CLSKETQUA.LOAIFILM_ID = '$LOAIFILM_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMSUDUNG">
+                        TT_CLSKETQUA.SOPHIMSUDUNG = '$SOPHIMSUDUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THIETBI_ID">
+                        TT_CLSKETQUA.THIETBI_ID = '$THIETBI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOTHUOCSUDUNG">
+                        TT_CLSKETQUA.SOTHUOCSUDUNG = '$SOTHUOCSUDUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOADULIEU">
+                        TT_CLSKETQUA.KHOADULIEU = '$KHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYKHOADULIEU">
+                        TT_CLSKETQUA.NGAYKHOADULIEU = '$NGAYKHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANKHOADULIEU">
+                        TT_CLSKETQUA.THOIGIANKHOADULIEU = '$THOIGIANKHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOIKHOA_ID">
+                        TT_CLSKETQUA.NGUOIKHOA_ID = '$NGUOIKHOA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MANGUOIKHOA">
+                        TT_CLSKETQUA.MANGUOIKHOA = '$MANGUOIKHOA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNGUOIKHOA">
+                        TT_CLSKETQUA.TENNGUOIKHOA = '$TENNGUOIKHOA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRANGTHAI">
+                        TT_CLSKETQUA.TRANGTHAI = '$TRANGTHAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MACH">
+                        TT_CLSKETQUA.MACH = '$MACH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HUYETAP">
+                        TT_CLSKETQUA.HUYETAP = '$HUYETAP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHIPTHO">
+                        TT_CLSKETQUA.NHIPTHO = '$NHIPTHO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHIETDO">
+                        TT_CLSKETQUA.NHIETDO = '$NHIETDO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHIEUCAO">
+                        TT_CLSKETQUA.CHIEUCAO = '$CHIEUCAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CANNANG">
+                        TT_CLSKETQUA.CANNANG = '$CANNANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BSA">
+                        TT_CLSKETQUA.BSA = '$BSA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TINHTRANGDIENNAO">
+                        TT_CLSKETQUA.TINHTRANGDIENNAO = '$TINHTRANGDIENNAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOVAOVIEN">
+                        TT_CLSKETQUA.SOVAOVIEN = '$SOVAOVIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAYTE">
+                        TT_CLSKETQUA.MAYTE = '$MAYTE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENBENHNHAN">
+                        TT_CLSKETQUA.TENBENHNHAN = '$TENBENHNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NAMSINH">
+                        TT_CLSKETQUA.NAMSINH = '$NAMSINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIOITINH">
+                        TT_CLSKETQUA.GIOITINH = '$GIOITINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DIACHI">
+                        TT_CLSKETQUA.DIACHI = '$DIACHI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOICHIDINH_ID">
+                        TT_CLSKETQUA.NOICHIDINH_ID = '$NOICHIDINH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAUTHU_ID">
+                        TT_CLSKETQUA.MAUTHU_ID = '$MAUTHU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANNHAN">
+                        TT_CLSKETQUA.THOIGIANNHAN = '$THOIGIANNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAU">
+                        TT_CLSKETQUA.MAU = '$MAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAITHUOCCANQUANG_ID">
+                        TT_CLSKETQUA.LOAITHUOCCANQUANG_ID = '$LOAITHUOCCANQUANG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MA">
+                        TT_CLSKETQUA.MA = '$MA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IDHINH">
+                        TT_CLSKETQUA.IDHINH = '$IDHINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMHU">
+                        TT_CLSKETQUA.SOPHIMHU = '$SOPHIMHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIPHIMHU_ID">
+                        TT_CLSKETQUA.LOAIPHIMHU_ID = '$LOAIPHIMHU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DOSOI">
+                        TT_CLSKETQUA.DOSOI = '$DOSOI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DOSOI_ID">
+                        TT_CLSKETQUA.DOSOI_ID = '$DOSOI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BANKINHSOI">
+                        TT_CLSKETQUA.BANKINHSOI = '$BANKINHSOI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SODT">
+                        TT_CLSKETQUA.SODT = '$SODT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUAT">
+                        TT_CLSKETQUA.KYTHUAT = '$KYTHUAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUAT_TEXT">
+                        TT_CLSKETQUA.KYTHUAT_TEXT = '$KYTHUAT_TEXT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMSUDUNG2">
+                        TT_CLSKETQUA.SOPHIMSUDUNG2 = '$SOPHIMSUDUNG2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIFILM_ID2">
+                        TT_CLSKETQUA.LOAIFILM_ID2 = '$LOAIFILM_ID2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMSUDUNG3">
+                        TT_CLSKETQUA.SOPHIMSUDUNG3 = '$SOPHIMSUDUNG3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIFILM_ID3">
+                        TT_CLSKETQUA.LOAIFILM_ID3 = '$LOAIFILM_ID3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="RESISTANCEMARKERS">
+                        TT_CLSKETQUA.RESISTANCEMARKERS = '$RESISTANCEMARKERS$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_CLSKETQUA.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_CLSKETQUA.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_CLSKETQUA.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_CLSKETQUA.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_CLSKETQUA.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOLUONGONG">
+                        TT_CLSKETQUA.SOLUONGONG = '$SOLUONGONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOMLMAU">
+                        TT_CLSKETQUA.SOMLMAU = '$SOMLMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANLAYMAU">
+                        TT_CLSKETQUA.THOIGIANLAYMAU = '$THOIGIANLAYMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANNHANMAU">
+                        TT_CLSKETQUA.THOIGIANNHANMAU = '$THOIGIANNHANMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOONGTHUCNHAN">
+                        TT_CLSKETQUA.SOONGTHUCNHAN = '$SOONGTHUCNHAN$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by CLSKETQUA_ID
+        </statement>
+      <statement id="DAO00037_ThemSieuAmTimDoppler" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        INSERT INTO TT_CLSKETQUA_SAT(
+          <!--CLSKETQUA_SAT_ID,-->
+        CLSKETQUA_ID,
+        TTR_VACHLIENTHAT,
+        TTR_THATTRAI,
+        TTR_THANHSAU,
+        TTR_SF,
+        TTR_EF,
+        TTR_THATPHAI,
+        TTH_VACHLIENTHAT,
+        TTH_THATTRAI,
+        TTH_THANHSAU,
+        TTH_DONGMACHCHU,
+        TTH_NHITRAI,
+        TTH_TAPSE,
+        CHISO_KC_THATTRAI,
+        D_SITUS,
+        D_VITRITIM,
+        D_TM_TRENTRAI,
+        D_TM_TRENPHAI,
+        D_TM_DUOI,
+        D_TM_PHOI,
+        D_NHI,
+        D_VAN_2LA,
+        D_VAN_3LA,
+        D_VAN_LATRUOC,
+        D_THAT,
+        D_DMC_D2,
+        D_DMC_NGANG,
+        D_DMC_LEN,
+        D_DMC_EO,
+        D_DMP_VONG,
+        D_DMP_TRAI,
+        D_DMP_PHAI,
+        D_DMP_THAN,
+        D_MANGNGOAITIM,
+        DOP_V2LA_VMAX,
+        DOP_V2LA_HOVAN,
+        DOP_V2LA_HEPVAN,
+        DOP_V2LA_PGMAX,
+        DOP_V2LA_VC,
+        DOP_V2LA_EROA,
+        DOP_V2LA_DTVAN,
+        DOP_V2LA_PGMEAN,
+        DOP_V2LA_TILE_DH,
+        DOP_V2LA_E_A,
+        DOP_DMC_VMAX,
+        DOP_DMC_HOVAN,
+        DOP_DMC_HEPVAN,
+        DOP_DMC_PGMAX,
+        DOP_DMC_DFO,
+        DOP_DMC_VC,
+        DOP_DMC_DTVAN,
+        DOP_DMC_PGMEAN,
+        DOP_DMC_EDTD,
+        DOP_DMC_TILE_DH,
+        DOP_V3LA_VMAX_HO,
+        DOP_V3LA_HOVAN,
+        DOP_V3LA_VMAX,
+        DOP_V3LA_APLUC_PTT,
+        DOP_V3LA_VC,
+        DOP_V3LA_PGMAX,
+        DOP_V3LA_TILE_DH,
+        DOP_V3LA_PGMEAN,
+        DOP_DMP_VMAX,
+        DOP_DMP_HOVAN,
+        DOP_DMP_HEPVAN,
+        DOP_DMP_PGMAX,
+        DOP_DMP_VC,
+        DOP_DMP_TRUNGBINH,
+        DOP_DMP_PGMEAN,
+        DOP_DMP_TILE_DH,
+        DOP_DMP_TAMTRUONG,
+        NHANXET,
+        KETLUAN_SAT,
+        [CSC_NHIPTIM]
+        ,[CSC_NHITRAI]
+        ,[CSC_DMC]
+        ,[CSC_THATPHAI]
+        ,[CSC_DD]
+        ,[CSC_DS]
+        ,[CSC_VD]
+        ,[CSC_VS]
+        ,[CSC_D]
+        ,[CSC_EF]
+        ,[CSC_VLT_TTR]
+        ,[CSC_VLT_TTH]
+        ,[CSC_TSTT_TTR]
+        ,[CSC_TSTT_TTH]
+        ,[TM_VHL_TINHTRANG]
+        ,[TM_VHL_DANGDIDONG]
+        ,[TM_VHL_KC2BOVAN]
+        ,[TM_VHL_DOCTAMTRUONG]
+        ,[TM_VHL_DTDONGHO]
+        ,[TM_VDMC_TINHTRANG]
+        ,[TM_VDMC_BIENDO]
+        ,[TM_VDMC_DANGVANDONG]
+        ,[TM_VBL_TINHTRANG]
+        ,[TM_VDMP_TINHTRANG]
+        ,[TM_VDMP_DKGOC]
+        ,[TM_VDMP_APLUCUOCTINH]
+        ,[DOP_VHL_HOVAN]
+        ,[DOP_VHL_GRADIENT_MAX]
+        ,[DOP_VHL_GRADIENT_AVG]
+        ,[DOP_VHL_DIENTICH2D]
+        ,[DOP_VHL_DIENTICHPHT]
+        ,[DOP_VHL_HUYETKHOINT]
+        ,[DOP_VHL_E_VLT]
+        ,[DOP_VDMC_HOVAN]
+        ,[DOP_VDMC_GRADIENT_MAX]
+        ,[DOP_VDMC_GRADIENT_AVG]
+        ,[DOP_VBL_HOVAN]
+        ,[DOP_VBL_GRADIENT_MAX]
+        ,[DOP_VDMP_HOVAN]
+        ,[DOP_VDMP_GRADIENT_MAX]
+        ,[DOP_VDMP_CUOITT]
+        ,[DOP_VDMP_TB],
+        BENHVIEN_ID,
+        NGUOITAO_ID,
+        NGAYTAO,
+        NGUOICAPNHAT_ID,
+        NGAYCAPNHAT)
+        VALUES(
+        <!--#CLSKETQUA_SAT_ID#,-->
+        #CLSKETQUA_ID#,
+        #TTR_VACHLIENTHAT#,
+        #TTR_THATTRAI#,
+        #TTR_THANHSAU#,
+        #TTR_SF#,
+        #TTR_EF#,
+        #TTR_THATPHAI#,
+        #TTH_VACHLIENTHAT#,
+        #TTH_THATTRAI#,
+        #TTH_THANHSAU#,
+        #TTH_DONGMACHCHU#,
+        #TTH_NHITRAI#,
+        #TTH_TAPSE#,
+        #CHISO_KC_THATTRAI#,
+        #D_SITUS#,
+        #D_VITRITIM#,
+        #D_TM_TRENTRAI#,
+        #D_TM_TRENPHAI#,
+        #D_TM_DUOI#,
+        #D_TM_PHOI#,
+        #D_NHI#,
+        #D_VAN_2LA#,
+        #D_VAN_3LA#,
+        #D_VAN_LATRUOC#,
+        #D_THAT#,
+        #D_DMC_D2#,
+        #D_DMC_NGANG#,
+        #D_DMC_LEN#,
+        #D_DMC_EO#,
+        #D_DMP_VONG#,
+        #D_DMP_TRAI#,
+        #D_DMP_PHAI#,
+        #D_DMP_THAN#,
+        #D_MANGNGOAITIM#,
+        #DOP_V2LA_VMAX#,
+        #DOP_V2LA_HOVAN#,
+        #DOP_V2LA_HEPVAN#,
+        #DOP_V2LA_PGMAX#,
+        #DOP_V2LA_VC#,
+        #DOP_V2LA_EROA#,
+        #DOP_V2LA_DTVAN#,
+        #DOP_V2LA_PGMEAN#,
+        #DOP_V2LA_TILE_DH#,
+        #DOP_V2LA_E_A#,
+        #DOP_DMC_VMAX#,
+        #DOP_DMC_HOVAN#,
+        #DOP_DMC_HEPVAN#,
+        #DOP_DMC_PGMAX#,
+        #DOP_DMC_DFO#,
+        #DOP_DMC_VC#,
+        #DOP_DMC_DTVAN#,
+        #DOP_DMC_PGMEAN#,
+        #DOP_DMC_EDTD#,
+        #DOP_DMC_TILE_DH#,
+        #DOP_V3LA_VMAX_HO#,
+        #DOP_V3LA_HOVAN#,
+        #DOP_V3LA_VMAX#,
+        #DOP_V3LA_APLUC_PTT#,
+        #DOP_V3LA_VC#,
+        #DOP_V3LA_PGMAX#,
+        #DOP_V3LA_TILE_DH#,
+        #DOP_V3LA_PGMEAN#,
+        #DOP_DMP_VMAX#,
+        #DOP_DMP_HOVAN#,
+        #DOP_DMP_HEPVAN#,
+        #DOP_DMP_PGMAX#,
+        #DOP_DMP_VC#,
+        #DOP_DMP_TRUNGBINH#,
+        #DOP_DMP_PGMEAN#,
+        #DOP_DMP_TILE_DH#,
+        #DOP_DMP_TAMTRUONG#,
+        #NHANXET#,
+        #KETLUAN_SAT#,
+        #CSC_NHIPTIM#
+        ,#CSC_NHITRAI#
+        ,#CSC_DMC#
+        ,#CSC_THATPHAI#
+        ,#CSC_DD#
+        ,#CSC_DS#
+        ,#CSC_VD#
+        ,#CSC_VS#
+        ,#CSC_D#
+        ,#CSC_EF#
+        ,#CSC_VLT_TTR#
+        ,#CSC_VLT_TTH#
+        ,#CSC_TSTT_TTR#
+        ,#CSC_TSTT_TTH#
+        ,#TM_VHL_TINHTRANG#
+        ,#TM_VHL_DANGDIDONG#
+        ,#TM_VHL_KC2BOVAN#
+        ,#TM_VHL_DOCTAMTRUONG#
+        ,#TM_VHL_DTDONGHO#
+        ,#TM_VDMC_TINHTRANG#
+        ,#TM_VDMC_BIENDO#
+        ,#TM_VDMC_DANGVANDONG#
+        ,#TM_VBL_TINHTRANG#
+        ,#TM_VDMP_TINHTRANG#
+        ,#TM_VDMP_DKGOC#
+        ,#TM_VDMP_APLUCUOCTINH#
+        ,#DOP_VHL_HOVAN#
+        ,#DOP_VHL_GRADIENT_MAX#
+        ,#DOP_VHL_GRADIENT_AVG#
+        ,#DOP_VHL_DIENTICH2D#
+        ,#DOP_VHL_DIENTICHPHT#
+        ,#DOP_VHL_HUYETKHOINT#
+        ,#DOP_VHL_E_VLT#
+        ,#DOP_VDMC_HOVAN#
+        ,#DOP_VDMC_GRADIENT_MAX#
+        ,#DOP_VDMC_GRADIENT_AVG#
+        ,#DOP_VBL_HOVAN#
+        ,#DOP_VBL_GRADIENT_MAX#
+        ,#DOP_VDMP_HOVAN#
+        ,#DOP_VDMP_GRADIENT_MAX#
+        ,#DOP_VDMP_CUOITT#
+        ,#DOP_VDMP_TB#,
+        #BENHVIEN_ID#,
+        #NGUOITAO_ID#,
+        #NGAYTAO#,
+        #NGUOICAPNHAT_ID#,
+        #NGAYCAPNHAT#)
+        SELECT SCOPE_IDENTITY()
+      </statement>
+      <statement id="DAO00037_SuaSieuAmTimDoppler" parameterClass="System.Int32">
+        UPDATE TT_CLSKETQUA_SAT SET
+
+        CLSKETQUA_ID =  #CLSKETQUA_ID#,
+        TTR_VACHLIENTHAT =  #TTR_VACHLIENTHAT#,
+        TTR_THATTRAI =  #TTR_THATTRAI#,
+        TTR_THANHSAU =  #TTR_THANHSAU#,
+        TTR_SF =  #TTR_SF#,
+        TTR_EF =  #TTR_EF#,
+        TTR_THATPHAI =  #TTR_THATPHAI#,
+        TTH_VACHLIENTHAT =  #TTH_VACHLIENTHAT#,
+        TTH_THATTRAI =  #TTH_THATTRAI#,
+        TTH_THANHSAU =  #TTH_THANHSAU#,
+        TTH_DONGMACHCHU =  #TTH_DONGMACHCHU#,
+        TTH_NHITRAI =  #TTH_NHITRAI#,
+        TTH_TAPSE =  #TTH_TAPSE#,
+        CHISO_KC_THATTRAI =  #CHISO_KC_THATTRAI#,
+        D_SITUS =  #D_SITUS#,
+        D_VITRITIM =  #D_VITRITIM#,
+        D_TM_TRENTRAI =  #D_TM_TRENTRAI#,
+        D_TM_TRENPHAI =  #D_TM_TRENPHAI#,
+        D_TM_DUOI =  #D_TM_DUOI#,
+        D_TM_PHOI =  #D_TM_PHOI#,
+        D_NHI =  #D_NHI#,
+        D_VAN_2LA =  #D_VAN_2LA#,
+        D_VAN_3LA =  #D_VAN_3LA#,
+        D_VAN_LATRUOC =  #D_VAN_LATRUOC#,
+        D_THAT =  #D_THAT#,
+        D_DMC_D2 =  #D_DMC_D2#,
+        D_DMC_NGANG =  #D_DMC_NGANG#,
+        D_DMC_LEN =  #D_DMC_LEN#,
+        D_DMC_EO =  #D_DMC_EO#,
+        D_DMP_VONG =  #D_DMP_VONG#,
+        D_DMP_TRAI =  #D_DMP_TRAI#,
+        D_DMP_PHAI =  #D_DMP_PHAI#,
+        D_DMP_THAN =  #D_DMP_THAN#,
+        D_MANGNGOAITIM =  #D_MANGNGOAITIM#,
+        DOP_V2LA_VMAX =  #DOP_V2LA_VMAX#,
+        DOP_V2LA_HOVAN =  #DOP_V2LA_HOVAN#,
+        DOP_V2LA_HEPVAN =  #DOP_V2LA_HEPVAN#,
+        DOP_V2LA_PGMAX =  #DOP_V2LA_PGMAX#,
+        DOP_V2LA_VC =  #DOP_V2LA_VC#,
+        DOP_V2LA_EROA =  #DOP_V2LA_EROA#,
+        DOP_V2LA_DTVAN =  #DOP_V2LA_DTVAN#,
+        DOP_V2LA_PGMEAN =  #DOP_V2LA_PGMEAN#,
+        DOP_V2LA_TILE_DH =  #DOP_V2LA_TILE_DH#,
+        DOP_V2LA_E_A =  #DOP_V2LA_E_A#,
+        DOP_DMC_VMAX =  #DOP_DMC_VMAX#,
+        DOP_DMC_HOVAN =  #DOP_DMC_HOVAN#,
+        DOP_DMC_HEPVAN =  #DOP_DMC_HEPVAN#,
+        DOP_DMC_PGMAX =  #DOP_DMC_PGMAX#,
+        DOP_DMC_DFO =  #DOP_DMC_DFO#,
+        DOP_DMC_VC =  #DOP_DMC_VC#,
+        DOP_DMC_DTVAN =  #DOP_DMC_DTVAN#,
+        DOP_DMC_PGMEAN =  #DOP_DMC_PGMEAN#,
+        DOP_DMC_EDTD =  #DOP_DMC_EDTD#,
+        DOP_DMC_TILE_DH =  #DOP_DMC_TILE_DH#,
+        DOP_V3LA_VMAX_HO =  #DOP_V3LA_VMAX_HO#,
+        DOP_V3LA_HOVAN =  #DOP_V3LA_HOVAN#,
+        DOP_V3LA_VMAX =  #DOP_V3LA_VMAX#,
+        DOP_V3LA_APLUC_PTT =  #DOP_V3LA_APLUC_PTT#,
+        DOP_V3LA_VC =  #DOP_V3LA_VC#,
+        DOP_V3LA_PGMAX =  #DOP_V3LA_PGMAX#,
+        DOP_V3LA_TILE_DH =  #DOP_V3LA_TILE_DH#,
+        DOP_V3LA_PGMEAN =  #DOP_V3LA_PGMEAN#,
+        DOP_DMP_VMAX =  #DOP_DMP_VMAX#,
+        DOP_DMP_HOVAN =  #DOP_DMP_HOVAN#,
+        DOP_DMP_HEPVAN =  #DOP_DMP_HEPVAN#,
+        DOP_DMP_PGMAX =  #DOP_DMP_PGMAX#,
+        DOP_DMP_VC =  #DOP_DMP_VC#,
+        DOP_DMP_TRUNGBINH =  #DOP_DMP_TRUNGBINH#,
+        DOP_DMP_PGMEAN =  #DOP_DMP_PGMEAN#,
+        DOP_DMP_TILE_DH =  #DOP_DMP_TILE_DH#,
+        DOP_DMP_TAMTRUONG =  #DOP_DMP_TAMTRUONG#,
+        NHANXET =  #NHANXET#,
+        KETLUAN_SAT =  #KETLUAN_SAT#,
+        [CSC_NHIPTIM] = #CSC_NHIPTIM#
+        ,[CSC_NHITRAI] = #CSC_NHITRAI#
+        ,[CSC_DMC] = #CSC_DMC#
+        ,[CSC_THATPHAI] = #CSC_THATPHAI#
+        ,[CSC_DD] = #CSC_DD#
+        ,[CSC_DS] = #CSC_DS#
+        ,[CSC_VD] = #CSC_VD#
+        ,[CSC_VS] = #CSC_VS#
+        ,[CSC_D] = #CSC_D#
+        ,[CSC_EF] = #CSC_EF#
+        ,[CSC_VLT_TTR] = #CSC_VLT_TTR#
+        ,[CSC_VLT_TTH] = #CSC_VLT_TTH#
+        ,[CSC_TSTT_TTR] = #CSC_TSTT_TTR#
+        ,[CSC_TSTT_TTH] = #CSC_TSTT_TTH#
+        ,[TM_VHL_TINHTRANG] = #TM_VHL_TINHTRANG#
+        ,[TM_VHL_DANGDIDONG] = #TM_VHL_DANGDIDONG#
+        ,[TM_VHL_KC2BOVAN] = #TM_VHL_KC2BOVAN#
+        ,[TM_VHL_DOCTAMTRUONG] = #TM_VHL_DOCTAMTRUONG#
+        ,[TM_VHL_DTDONGHO] = #TM_VHL_DTDONGHO#
+        ,[TM_VDMC_TINHTRANG] = #TM_VDMC_TINHTRANG#
+        ,[TM_VDMC_BIENDO] = #TM_VDMC_BIENDO#
+        ,[TM_VDMC_DANGVANDONG] = #TM_VDMC_DANGVANDONG#
+        ,[TM_VBL_TINHTRANG] = #TM_VBL_TINHTRANG#
+        ,[TM_VDMP_TINHTRANG] = #TM_VDMP_TINHTRANG#
+        ,[TM_VDMP_DKGOC] = #TM_VDMP_DKGOC#
+        ,[TM_VDMP_APLUCUOCTINH] = #TM_VDMP_APLUCUOCTINH#
+        ,[DOP_VHL_HOVAN] = #DOP_VHL_HOVAN#
+        ,[DOP_VHL_GRADIENT_MAX] = #DOP_VHL_GRADIENT_MAX#
+        ,[DOP_VHL_GRADIENT_AVG] = #DOP_VHL_GRADIENT_AVG#
+        ,[DOP_VHL_DIENTICH2D] = #DOP_VHL_DIENTICH2D#
+        ,[DOP_VHL_DIENTICHPHT] = #DOP_VHL_DIENTICHPHT#
+        ,[DOP_VHL_HUYETKHOINT] = #DOP_VHL_HUYETKHOINT#
+        ,[DOP_VHL_E_VLT] = #DOP_VHL_E_VLT#
+        ,[DOP_VDMC_HOVAN] = #DOP_VDMC_HOVAN#
+        ,[DOP_VDMC_GRADIENT_MAX] = #DOP_VDMC_GRADIENT_MAX#
+        ,[DOP_VDMC_GRADIENT_AVG] = #DOP_VDMC_GRADIENT_AVG#
+        ,[DOP_VBL_HOVAN] = #DOP_VBL_HOVAN#
+        ,[DOP_VBL_GRADIENT_MAX] = #DOP_VBL_GRADIENT_MAX#
+        ,[DOP_VDMP_HOVAN] = #DOP_VDMP_HOVAN#
+        ,[DOP_VDMP_GRADIENT_MAX] = #DOP_VDMP_GRADIENT_MAX#
+        ,[DOP_VDMP_CUOITT] = #DOP_VDMP_CUOITT#
+        ,[DOP_VDMP_TB] = #DOP_VDMP_TB#,
+        BENHVIEN_ID =  #BENHVIEN_ID#,
+        NGUOITAO_ID =  #NGUOITAO_ID#,
+        NGAYTAO =  #NGAYTAO#,
+        NGUOICAPNHAT_ID =  #NGUOICAPNHAT_ID#,
+        NGAYCAPNHAT =  #NGAYCAPNHAT#
+        WHERE
+        CLSKETQUA_SAT_ID =  #CLSKETQUA_SAT_ID#
+        select @@ROWCOUNT
+      </statement>
+       <statement id="DAO00037_XoaSieuAmTimDoppler" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            DELETE FROM TT_CLSKETQUA_SAT
+            WHERE 
+             CLSKETQUA_SAT_ID =  #CLSKETQUA_SAT_ID#
+             select @@ROWCOUNT
+        </statement>
+
+      <statement id="DAO00037_GetSieuAmTimGangSucDBTM" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT KQ.*,
+          [CLSKETQUA_SATD_ID],
+          <!--[CLSKETQUA_ID],-->
+          [DTNG_DIENHINH],
+          [DTNG_0DIENHINH],
+          [DTNG_0DOTIM],
+          [TDD_TRUOC2NGAY],
+          [TDD_TRONGNGAY],
+          [TC_TANGHA],
+          [TC_RLLP_MAU],
+          [TC_DTD],
+          [TC_HUTTL],
+          [TC_UT_NGUATHAI],
+          [DTGSDTH_CO],
+          [DTGSDTH_CO_AM],
+          [DTGSDTH_CO_NN],
+          [DTGSDTH_CO_DUONG],
+          [DTGSDTH_KHONG],
+          [DTGSDTH_KHONG_LYDO],
+          [ECG_LUCNGHI],
+          [SIEUAMTIM],
+          [NHANAP_MATPHAI],
+          [NHANAP_MATRAI],
+          [DBTM_TANSOTIM],
+          [THOIDIEM_THEM],
+          [VTT_TRUOC],
+          [VTT_5M],
+          [VTT_10M],
+          [VTT_20M],
+          [VTT_30M],
+          [VTT_40M],
+          [VTT_50M],
+          [VTT_THEM],
+          [VTT_1PHUT],
+          [VTT_3PHUT],
+          [VTT_5PHUT],
+          [VTT_10PHUT],
+          [HA_TRUOC],
+          [HA_5M],
+          [HA_10M],
+          [HA_20M],
+          [HA_30M],
+          [HA_40M],
+          [HA_50M],
+          [HA_THEM],
+          [HA_1PHUT],
+          [HA_3PHUT],
+          [HA_5PHUT],
+          [HA_10PHUT],
+          [TST_TRUOC],
+          [TST_5M],
+          [TST_10M],
+          [TST_20M],
+          [TST_30M],
+          [TST_40M],
+          [TST_50M],
+          [TST_THEM],
+          [TST_1PHUT],
+          [TST_3PHUT],
+          [TST_5PHUT],
+          [TST_10PHUT],
+          [KQ_TRUOC_TT_M],
+          [KQ_TRUOC_TT_G],
+          [KQ_TRUOC_TT_D],
+          [KQ_TRUOC_TTV_M],
+          [KQ_TRUOC_TTV_G],
+          [KQ_TRUOC_TTV_D],
+          [KQ_TRUOC_VLT_M],
+          [KQ_TRUOC_VLT_G],
+          [KQ_TRUOC_VLT_D],
+          [KQ_TRUOC_TD_M],
+          [KQ_TRUOC_TD_G],
+          [KQ_TRUOC_TD_D],
+          [KQ_TRUOC_TS_M],
+          [KQ_TRUOC_TS_G],
+          [KQ_TRUOC_TS_D],
+          [KQ_TRUOC_TB_M],
+          [KQ_TRUOC_TB_G],
+          [KQ_TRUOC_TB_D],
+          [KQ_THAP_TT_M],
+          [KQ_THAP_TT_G],
+          [KQ_THAP_TT_D],
+          [KQ_THAP_TTV_M],
+          [KQ_THAP_TTV_G],
+          [KQ_THAP_TTV_D],
+          [KQ_THAP_VLT_M],
+          [KQ_THAP_VLT_G],
+          [KQ_THAP_VLT_D],
+          [KQ_THAP_TD_M],
+          [KQ_THAP_TD_G],
+          [KQ_THAP_TD_D],
+          [KQ_THAP_TS_M],
+          [KQ_THAP_TS_G],
+          [KQ_THAP_TS_D],
+          [KQ_THAP_TB_M],
+          [KQ_THAP_TB_G],
+          [KQ_THAP_TB_D],
+          [KQ_CAO_TT_M],
+          [KQ_CAO_TT_G],
+          [KQ_CAO_TT_D],
+          [KQ_CAO_TTV_M],
+          [KQ_CAO_TTV_G],
+          [KQ_CAO_TTV_D],
+          [KQ_CAO_VLT_M],
+          [KQ_CAO_VLT_G],
+          [KQ_CAO_VLT_D],
+          [KQ_CAO_TD_M],
+          [KQ_CAO_TD_G],
+          [KQ_CAO_TD_D],
+          [KQ_CAO_TS_M],
+          [KQ_CAO_TS_G],
+          [KQ_CAO_TS_D],
+          [KQ_CAO_TB_M],
+          [KQ_CAO_TB_G],
+          [KQ_CAO_TB_D],
+          [KQ_KL_TT_M],
+          [KQ_KL_TT_G],
+          [KQ_KL_TT_D],
+          [KQ_KL_TTV_M],
+          [KQ_KL_TTV_G],
+          [KQ_KL_TTV_D],
+          [KQ_KL_VLT_M],
+          [KQ_KL_VLT_G],
+          [KQ_KL_VLT_D],
+          [KQ_KL_TD_M],
+          [KQ_KL_TD_G],
+          [KQ_KL_TD_D],
+          [KQ_KL_TS_M],
+          [KQ_KL_TS_G],
+          [KQ_KL_TS_D],
+          [KQ_KL_TB_M],
+          [KQ_KL_TB_G],
+          [KQ_KL_TB_D],
+          [NHANXET],
+          [KETLUAN_SATD]
+      
+      FROM TT_CLSKETQUA KQ
+      LEFT JOIN TT_CLSKETQUA_SATD SATD ON SATD.CLSKETQUA_ID = KQ.CLSKETQUA_ID
+      WHERE
+      KQ.DVYEUCAU_ID = #DVYEUCAU_ID#
+      AND KQ.BENHVIEN_ID = #BENHVIEN_ID#
+    </statement>
+      <statement id="DAO00037_ThemSieuAmTimGangSucDBTM" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        INSERT INTO [TT_CLSKETQUA_SATD] (
+        <!--[CLSKETQUA_SATD_ID],-->
+        [CLSKETQUA_ID],
+        [DTNG_DIENHINH],
+        [DTNG_0DIENHINH],
+        [DTNG_0DOTIM],
+        [TDD_TRUOC2NGAY],
+        [TDD_TRONGNGAY],
+        [TC_TANGHA],
+        [TC_RLLP_MAU],
+        [TC_DTD],
+        [TC_HUTTL],
+        [TC_UT_NGUATHAI],
+        [DTGSDTH_CO],
+        [DTGSDTH_CO_AM],
+        [DTGSDTH_CO_NN],
+        [DTGSDTH_CO_DUONG],
+        [DTGSDTH_KHONG],
+        [DTGSDTH_KHONG_LYDO],
+        [ECG_LUCNGHI],
+        [SIEUAMTIM],
+        [NHANAP_MATPHAI],
+        [NHANAP_MATRAI],
+        [DBTM_TANSOTIM],
+        [THOIDIEM_THEM],
+        [VTT_TRUOC],
+        [VTT_5M],
+        [VTT_10M],
+        [VTT_20M],
+        [VTT_30M],
+        [VTT_40M],
+        [VTT_50M],
+        [VTT_THEM],
+        [VTT_1PHUT],
+        [VTT_3PHUT],
+        [VTT_5PHUT],
+        [VTT_10PHUT],
+        [HA_TRUOC],
+        [HA_5M],
+        [HA_10M],
+        [HA_20M],
+        [HA_30M],
+        [HA_40M],
+        [HA_50M],
+        [HA_THEM],
+        [HA_1PHUT],
+        [HA_3PHUT],
+        [HA_5PHUT],
+        [HA_10PHUT],
+        [TST_TRUOC],
+        [TST_5M],
+        [TST_10M],
+        [TST_20M],
+        [TST_30M],
+        [TST_40M],
+        [TST_50M],
+        [TST_THEM],
+        [TST_1PHUT],
+        [TST_3PHUT],
+        [TST_5PHUT],
+        [TST_10PHUT],
+        [KQ_TRUOC_TT_M],
+        [KQ_TRUOC_TT_G],
+        [KQ_TRUOC_TT_D],
+        [KQ_TRUOC_TTV_M],
+        [KQ_TRUOC_TTV_G],
+        [KQ_TRUOC_TTV_D],
+        [KQ_TRUOC_VLT_M],
+        [KQ_TRUOC_VLT_G],
+        [KQ_TRUOC_VLT_D],
+        [KQ_TRUOC_TD_M],
+        [KQ_TRUOC_TD_G],
+        [KQ_TRUOC_TD_D],
+        [KQ_TRUOC_TS_M],
+        [KQ_TRUOC_TS_G],
+        [KQ_TRUOC_TS_D],
+        [KQ_TRUOC_TB_M],
+        [KQ_TRUOC_TB_G],
+        [KQ_TRUOC_TB_D],
+        [KQ_THAP_TT_M],
+        [KQ_THAP_TT_G],
+        [KQ_THAP_TT_D],
+        [KQ_THAP_TTV_M],
+        [KQ_THAP_TTV_G],
+        [KQ_THAP_TTV_D],
+        [KQ_THAP_VLT_M],
+        [KQ_THAP_VLT_G],
+        [KQ_THAP_VLT_D],
+        [KQ_THAP_TD_M],
+        [KQ_THAP_TD_G],
+        [KQ_THAP_TD_D],
+        [KQ_THAP_TS_M],
+        [KQ_THAP_TS_G],
+        [KQ_THAP_TS_D],
+        [KQ_THAP_TB_M],
+        [KQ_THAP_TB_G],
+        [KQ_THAP_TB_D],
+        [KQ_CAO_TT_M],
+        [KQ_CAO_TT_G],
+        [KQ_CAO_TT_D],
+        [KQ_CAO_TTV_M],
+        [KQ_CAO_TTV_G],
+        [KQ_CAO_TTV_D],
+        [KQ_CAO_VLT_M],
+        [KQ_CAO_VLT_G],
+        [KQ_CAO_VLT_D],
+        [KQ_CAO_TD_M],
+        [KQ_CAO_TD_G],
+        [KQ_CAO_TD_D],
+        [KQ_CAO_TS_M],
+        [KQ_CAO_TS_G],
+        [KQ_CAO_TS_D],
+        [KQ_CAO_TB_M],
+        [KQ_CAO_TB_G],
+        [KQ_CAO_TB_D],
+        [KQ_KL_TT_M],
+        [KQ_KL_TT_G],
+        [KQ_KL_TT_D],
+        [KQ_KL_TTV_M],
+        [KQ_KL_TTV_G],
+        [KQ_KL_TTV_D],
+        [KQ_KL_VLT_M],
+        [KQ_KL_VLT_G],
+        [KQ_KL_VLT_D],
+        [KQ_KL_TD_M],
+        [KQ_KL_TD_G],
+        [KQ_KL_TD_D],
+        [KQ_KL_TS_M],
+        [KQ_KL_TS_G],
+        [KQ_KL_TS_D],
+        [KQ_KL_TB_M],
+        [KQ_KL_TB_G],
+        [KQ_KL_TB_D],
+        [NHANXET],
+        [KETLUAN_SATD],
+        [BENHVIEN_ID],
+        [NGUOITAO_ID],
+        [NGAYTAO],
+        [NGUOICAPNHAT_ID],
+        [NGAYCAPNHAT])
+        VALUES (
+        <!--#CLSKETQUA_SATD_ID#,-->
+        #CLSKETQUA_ID#,
+        #DTNG_DIENHINH#,
+        #DTNG_0DIENHINH#,
+        #DTNG_0DOTIM#,
+        #TDD_TRUOC2NGAY#,
+        #TDD_TRONGNGAY#,
+        #TC_TANGHA#,
+        #TC_RLLP_MAU#,
+        #TC_DTD#,
+        #TC_HUTTL#,
+        #TC_UT_NGUATHAI#,
+        #DTGSDTH_CO#,
+        #DTGSDTH_CO_AM#,
+        #DTGSDTH_CO_NN#,
+        #DTGSDTH_CO_DUONG#,
+        #DTGSDTH_KHONG#,
+        #DTGSDTH_KHONG_LYDO#,
+        #ECG_LUCNGHI#,
+        #SIEUAMTIM#,
+        #NHANAP_MATPHAI#,
+        #NHANAP_MATRAI#,
+        #DBTM_TANSOTIM#,
+        #THOIDIEM_THEM#,
+        #VTT_TRUOC#,
+        #VTT_5M#,
+        #VTT_10M#,
+        #VTT_20M#,
+        #VTT_30M#,
+        #VTT_40M#,
+        #VTT_50M#,
+        #VTT_THEM#,
+        #VTT_1PHUT#,
+        #VTT_3PHUT#,
+        #VTT_5PHUT#,
+        #VTT_10PHUT#,
+        #HA_TRUOC#,
+        #HA_5M#,
+        #HA_10M#,
+        #HA_20M#,
+        #HA_30M#,
+        #HA_40M#,
+        #HA_50M#,
+        #HA_THEM#,
+        #HA_1PHUT#,
+        #HA_3PHUT#,
+        #HA_5PHUT#,
+        #HA_10PHUT#,
+        #TST_TRUOC#,
+        #TST_5M#,
+        #TST_10M#,
+        #TST_20M#,
+        #TST_30M#,
+        #TST_40M#,
+        #TST_50M#,
+        #TST_THEM#,
+        #TST_1PHUT#,
+        #TST_3PHUT#,
+        #TST_5PHUT#,
+        #TST_10PHUT#,
+        #KQ_TRUOC_TT_M#,
+        #KQ_TRUOC_TT_G#,
+        #KQ_TRUOC_TT_D#,
+        #KQ_TRUOC_TTV_M#,
+        #KQ_TRUOC_TTV_G#,
+        #KQ_TRUOC_TTV_D#,
+        #KQ_TRUOC_VLT_M#,
+        #KQ_TRUOC_VLT_G#,
+        #KQ_TRUOC_VLT_D#,
+        #KQ_TRUOC_TD_M#,
+        #KQ_TRUOC_TD_G#,
+        #KQ_TRUOC_TD_D#,
+        #KQ_TRUOC_TS_M#,
+        #KQ_TRUOC_TS_G#,
+        #KQ_TRUOC_TS_D#,
+        #KQ_TRUOC_TB_M#,
+        #KQ_TRUOC_TB_G#,
+        #KQ_TRUOC_TB_D#,
+        #KQ_THAP_TT_M#,
+        #KQ_THAP_TT_G#,
+        #KQ_THAP_TT_D#,
+        #KQ_THAP_TTV_M#,
+        #KQ_THAP_TTV_G#,
+        #KQ_THAP_TTV_D#,
+        #KQ_THAP_VLT_M#,
+        #KQ_THAP_VLT_G#,
+        #KQ_THAP_VLT_D#,
+        #KQ_THAP_TD_M#,
+        #KQ_THAP_TD_G#,
+        #KQ_THAP_TD_D#,
+        #KQ_THAP_TS_M#,
+        #KQ_THAP_TS_G#,
+        #KQ_THAP_TS_D#,
+        #KQ_THAP_TB_M#,
+        #KQ_THAP_TB_G#,
+        #KQ_THAP_TB_D#,
+        #KQ_CAO_TT_M#,
+        #KQ_CAO_TT_G#,
+        #KQ_CAO_TT_D#,
+        #KQ_CAO_TTV_M#,
+        #KQ_CAO_TTV_G#,
+        #KQ_CAO_TTV_D#,
+        #KQ_CAO_VLT_M#,
+        #KQ_CAO_VLT_G#,
+        #KQ_CAO_VLT_D#,
+        #KQ_CAO_TD_M#,
+        #KQ_CAO_TD_G#,
+        #KQ_CAO_TD_D#,
+        #KQ_CAO_TS_M#,
+        #KQ_CAO_TS_G#,
+        #KQ_CAO_TS_D#,
+        #KQ_CAO_TB_M#,
+        #KQ_CAO_TB_G#,
+        #KQ_CAO_TB_D#,
+        #KQ_KL_TT_M#,
+        #KQ_KL_TT_G#,
+        #KQ_KL_TT_D#,
+        #KQ_KL_TTV_M#,
+        #KQ_KL_TTV_G#,
+        #KQ_KL_TTV_D#,
+        #KQ_KL_VLT_M#,
+        #KQ_KL_VLT_G#,
+        #KQ_KL_VLT_D#,
+        #KQ_KL_TD_M#,
+        #KQ_KL_TD_G#,
+        #KQ_KL_TD_D#,
+        #KQ_KL_TS_M#,
+        #KQ_KL_TS_G#,
+        #KQ_KL_TS_D#,
+        #KQ_KL_TB_M#,
+        #KQ_KL_TB_G#,
+        #KQ_KL_TB_D#,
+        #NHANXET#,
+        #KETLUAN_SATD#,
+        #BENHVIEN_ID#,
+        #NGUOITAO_ID#,
+        #NGAYTAO#,
+        #NGUOICAPNHAT_ID#,
+        #NGAYCAPNHAT#)
+        SELECT SCOPE_IDENTITY()
+      </statement>
+      <statement id="DAO00037_SuaSieuAmTimGangSucDBTM" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        UPDATE [TT_CLSKETQUA_SATD]
+        SET
+        [CLSKETQUA_ID] = #CLSKETQUA_ID#,
+        [DTNG_DIENHINH] = #DTNG_DIENHINH#,
+        [DTNG_0DIENHINH] = #DTNG_0DIENHINH#,
+        [DTNG_0DOTIM] = #DTNG_0DOTIM#,
+        [TDD_TRUOC2NGAY] = #TDD_TRUOC2NGAY#,
+        [TDD_TRONGNGAY] = #TDD_TRONGNGAY#,
+        [TC_TANGHA] = #TC_TANGHA#,
+        [TC_RLLP_MAU] = #TC_RLLP_MAU#,
+        [TC_DTD] = #TC_DTD#,
+        [TC_HUTTL] = #TC_HUTTL#,
+        [TC_UT_NGUATHAI] = #TC_UT_NGUATHAI#,
+        [DTGSDTH_CO] = #DTGSDTH_CO#,
+        [DTGSDTH_CO_AM] = #DTGSDTH_CO_AM#,
+        [DTGSDTH_CO_NN] = #DTGSDTH_CO_NN#,
+        [DTGSDTH_CO_DUONG] = #DTGSDTH_CO_DUONG#,
+        [DTGSDTH_KHONG] = #DTGSDTH_KHONG#,
+        [DTGSDTH_KHONG_LYDO] = #DTGSDTH_KHONG_LYDO#,
+        [ECG_LUCNGHI] = #ECG_LUCNGHI#,
+        [SIEUAMTIM] = #SIEUAMTIM#,
+        [NHANAP_MATPHAI] = #NHANAP_MATPHAI#,
+        [NHANAP_MATRAI] = #NHANAP_MATRAI#,
+        [DBTM_TANSOTIM] = #DBTM_TANSOTIM#,
+        [THOIDIEM_THEM] = #THOIDIEM_THEM#,
+        [VTT_TRUOC] = #VTT_TRUOC#,
+        [VTT_5M] = #VTT_5M#,
+        [VTT_10M] = #VTT_10M#,
+        [VTT_20M] = #VTT_20M#,
+        [VTT_30M] = #VTT_30M#,
+        [VTT_40M] = #VTT_40M#,
+        [VTT_50M] = #VTT_50M#,
+        [VTT_THEM] = #VTT_THEM#,
+        [VTT_1PHUT] = #VTT_1PHUT#,
+        [VTT_3PHUT] = #VTT_3PHUT#,
+        [VTT_5PHUT] = #VTT_5PHUT#,
+        [VTT_10PHUT] = #VTT_10PHUT#,
+        [HA_TRUOC] = #HA_TRUOC#,
+        [HA_5M] = #HA_5M#,
+        [HA_10M] = #HA_10M#,
+        [HA_20M] = #HA_20M#,
+        [HA_30M] = #HA_30M#,
+        [HA_40M] = #HA_40M#,
+        [HA_50M] = #HA_50M#,
+        [HA_THEM] = #HA_THEM#,
+        [HA_1PHUT] = #HA_1PHUT#,
+        [HA_3PHUT] = #HA_3PHUT#,
+        [HA_5PHUT] = #HA_5PHUT#,
+        [HA_10PHUT] = #HA_10PHUT#,
+        [TST_TRUOC] = #TST_TRUOC#,
+        [TST_5M] = #TST_5M#,
+        [TST_10M] = #TST_10M#,
+        [TST_20M] = #TST_20M#,
+        [TST_30M] = #TST_30M#,
+        [TST_40M] = #TST_40M#,
+        [TST_50M] = #TST_50M#,
+        [TST_THEM] = #TST_THEM#,
+        [TST_1PHUT] = #TST_1PHUT#,
+        [TST_3PHUT] = #TST_3PHUT#,
+        [TST_5PHUT] = #TST_5PHUT#,
+        [TST_10PHUT] = #TST_10PHUT#,
+        [KQ_TRUOC_TT_M] = #KQ_TRUOC_TT_M#,
+        [KQ_TRUOC_TT_G] = #KQ_TRUOC_TT_G#,
+        [KQ_TRUOC_TT_D] = #KQ_TRUOC_TT_D#,
+        [KQ_TRUOC_TTV_M] = #KQ_TRUOC_TTV_M#,
+        [KQ_TRUOC_TTV_G] = #KQ_TRUOC_TTV_G#,
+        [KQ_TRUOC_TTV_D] = #KQ_TRUOC_TTV_D#,
+        [KQ_TRUOC_VLT_M] = #KQ_TRUOC_VLT_M#,
+        [KQ_TRUOC_VLT_G] = #KQ_TRUOC_VLT_G#,
+        [KQ_TRUOC_VLT_D] = #KQ_TRUOC_VLT_D#,
+        [KQ_TRUOC_TD_M] = #KQ_TRUOC_TD_M#,
+        [KQ_TRUOC_TD_G] = #KQ_TRUOC_TD_G#,
+        [KQ_TRUOC_TD_D] = #KQ_TRUOC_TD_D#,
+        [KQ_TRUOC_TS_M] = #KQ_TRUOC_TS_M#,
+        [KQ_TRUOC_TS_G] = #KQ_TRUOC_TS_G#,
+        [KQ_TRUOC_TS_D] = #KQ_TRUOC_TS_D#,
+        [KQ_TRUOC_TB_M] = #KQ_TRUOC_TB_M#,
+        [KQ_TRUOC_TB_G] = #KQ_TRUOC_TB_G#,
+        [KQ_TRUOC_TB_D] = #KQ_TRUOC_TB_D#,
+        [KQ_THAP_TT_M] = #KQ_THAP_TT_M#,
+        [KQ_THAP_TT_G] = #KQ_THAP_TT_G#,
+        [KQ_THAP_TT_D] = #KQ_THAP_TT_D#,
+        [KQ_THAP_TTV_M] = #KQ_THAP_TTV_M#,
+        [KQ_THAP_TTV_G] = #KQ_THAP_TTV_G#,
+        [KQ_THAP_TTV_D] = #KQ_THAP_TTV_D#,
+        [KQ_THAP_VLT_M] = #KQ_THAP_VLT_M#,
+        [KQ_THAP_VLT_G] = #KQ_THAP_VLT_G#,
+        [KQ_THAP_VLT_D] = #KQ_THAP_VLT_D#,
+        [KQ_THAP_TD_M] = #KQ_THAP_TD_M#,
+        [KQ_THAP_TD_G] = #KQ_THAP_TD_G#,
+        [KQ_THAP_TD_D] = #KQ_THAP_TD_D#,
+        [KQ_THAP_TS_M] = #KQ_THAP_TS_M#,
+        [KQ_THAP_TS_G] = #KQ_THAP_TS_G#,
+        [KQ_THAP_TS_D] = #KQ_THAP_TS_D#,
+        [KQ_THAP_TB_M] = #KQ_THAP_TB_M#,
+        [KQ_THAP_TB_G] = #KQ_THAP_TB_G#,
+        [KQ_THAP_TB_D] = #KQ_THAP_TB_D#,
+        [KQ_CAO_TT_M] = #KQ_CAO_TT_M#,
+        [KQ_CAO_TT_G] = #KQ_CAO_TT_G#,
+        [KQ_CAO_TT_D] = #KQ_CAO_TT_D#,
+        [KQ_CAO_TTV_M] = #KQ_CAO_TTV_M#,
+        [KQ_CAO_TTV_G] = #KQ_CAO_TTV_G#,
+        [KQ_CAO_TTV_D] = #KQ_CAO_TTV_D#,
+        [KQ_CAO_VLT_M] = #KQ_CAO_VLT_M#,
+        [KQ_CAO_VLT_G] = #KQ_CAO_VLT_G#,
+        [KQ_CAO_VLT_D] = #KQ_CAO_VLT_D#,
+        [KQ_CAO_TD_M] = #KQ_CAO_TD_M#,
+        [KQ_CAO_TD_G] = #KQ_CAO_TD_G#,
+        [KQ_CAO_TD_D] = #KQ_CAO_TD_D#,
+        [KQ_CAO_TS_M] = #KQ_CAO_TS_M#,
+        [KQ_CAO_TS_G] = #KQ_CAO_TS_G#,
+        [KQ_CAO_TS_D] = #KQ_CAO_TS_D#,
+        [KQ_CAO_TB_M] = #KQ_CAO_TB_M#,
+        [KQ_CAO_TB_G] = #KQ_CAO_TB_G#,
+        [KQ_CAO_TB_D] = #KQ_CAO_TB_D#,
+        [KQ_KL_TT_M] = #KQ_KL_TT_M#,
+        [KQ_KL_TT_G] = #KQ_KL_TT_G#,
+        [KQ_KL_TT_D] = #KQ_KL_TT_D#,
+        [KQ_KL_TTV_M] = #KQ_KL_TTV_M#,
+        [KQ_KL_TTV_G] = #KQ_KL_TTV_G#,
+        [KQ_KL_TTV_D] = #KQ_KL_TTV_D#,
+        [KQ_KL_VLT_M] = #KQ_KL_VLT_M#,
+        [KQ_KL_VLT_G] = #KQ_KL_VLT_G#,
+        [KQ_KL_VLT_D] = #KQ_KL_VLT_D#,
+        [KQ_KL_TD_M] = #KQ_KL_TD_M#,
+        [KQ_KL_TD_G] = #KQ_KL_TD_G#,
+        [KQ_KL_TD_D] = #KQ_KL_TD_D#,
+        [KQ_KL_TS_M] = #KQ_KL_TS_M#,
+        [KQ_KL_TS_G] = #KQ_KL_TS_G#,
+        [KQ_KL_TS_D] = #KQ_KL_TS_D#,
+        [KQ_KL_TB_M] = #KQ_KL_TB_M#,
+        [KQ_KL_TB_G] = #KQ_KL_TB_G#,
+        [KQ_KL_TB_D] = #KQ_KL_TB_D#,
+        [NHANXET] = #NHANXET#,
+        [KETLUAN_SATD] = #KETLUAN_SATD#,
+        [BENHVIEN_ID] = #BENHVIEN_ID#,
+        [NGUOITAO_ID] = #NGUOITAO_ID#,
+        [NGAYTAO] = #NGAYTAO#,
+        [NGUOICAPNHAT_ID] = #NGUOICAPNHAT_ID#,
+        [NGAYCAPNHAT] = #NGAYCAPNHAT#
+        WHERE
+        [CLSKETQUA_SATD_ID] = #CLSKETQUA_SATD_ID#
+        select @@ROWCOUNT
+      </statement>
+      <statement id="DAO00037_XoaSieuAmTimGangSucDBTM" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        DELETE FROM TT_CLSKETQUA_SATD
+        WHERE
+        CLSKETQUA_SATD_ID =  #CLSKETQUA_SATD_ID#
+        select @@ROWCOUNT
+      </statement>
+      
+        <update id="DAO00037_Update" parameterClass="System.Collections.IDictionary">
+            update TT_CLSKETQUA set
+            NGAYTHUCHIEN = #NGAYTHUCHIEN#
+            , THOIGIANTHUCHIEN = #THOIGIANTHUCHIEN#
+            , NGAYGIOTHUCHIEN = #NGAYGIOTHUCHIEN#
+            , GIOTHUCHIEN = #GIOTHUCHIEN#
+            , NAMTHUCHIEN = #NAMTHUCHIEN#
+            , THANGTHUCHIEN = #THANGTHUCHIEN#
+            , NOITHUCHIEN_ID = #NOITHUCHIEN_ID#
+            , BACSICHIDINH_ID = #BACSICHIDINH_ID#
+            , BACSICHIDINH = #BACSICHIDINH#
+            , NGAYCHIDINH = #NGAYCHIDINH#
+            , BACSITHUCHIEN_ID = #BACSITHUCHIEN_ID#
+            , BACSIKETLUAN_ID = #BACSIKETLUAN_ID#
+            , BACSIGMHS_ID = #BACSIGMHS_ID#
+            , DIEUDUONG_ID = #DIEUDUONG_ID#
+            , KYTHUATVIEN01_ID = #KYTHUATVIEN01_ID#
+            , KYTHUATVIEN02_ID = #KYTHUATVIEN02_ID#
+            , CHANDOANLAMSANG = #CHANDOANLAMSANG#
+            , DENGHI = #DENGHI#
+            , SINHTHIET = #SINHTHIET#
+            , CLOTEST = #CLOTEST#
+            , PHOTO = #PHOTO#
+            , VIDEO = #VIDEO#
+            , TIEMCANQUANG = #TIEMCANQUANG#
+            , PHANLOAIKETQUA_ID = #PHANLOAIKETQUA_ID#
+            , THUCHIENBENNGOAI = #THUCHIENBENNGOAI#
+            , BENHVIENTHUCHIEN_ID = #BENHVIENTHUCHIEN_ID#
+            , TENBACSIBENNGOAI = #TENBACSIBENNGOAI#
+            , KHOABENNGOAI_ID = #KHOABENNGOAI_ID#
+            , GUINGOAI = #GUINGOAI#
+            , NOIGUIDEN_ID = #NOIGUIDEN_ID#
+            , ICD_ID1 = #ICD_ID1#
+            , ICD_ID2 = #ICD_ID2#
+            , ICD_ID3 = #ICD_ID3#
+            , DIUNGTHUOC = #DIUNGTHUOC#
+            , TIENME = #TIENME#
+            , DACBIET = #DACBIET#
+            , KQCUOICUNG = #KQCUOICUNG#
+            , THONGTINNHAN = #THONGTINNHAN#
+            , KETLUANKSK = #KETLUANKSK#
+            , VUNGKHAOSAT = #VUNGKHAOSAT#
+            , MOTA = #MOTA#
+            , MOTA_TEXT = #MOTA_TEXT#
+            , KETLUAN = #KETLUAN#
+            , GHICHU = #GHICHU#
+            , MAPHIM = #MAPHIM#
+            , GPB_AMSO = #GPB_AMSO#
+            , GPB_PHANLOAIKETQUA_ID = #GPB_PHANLOAIKETQUA_ID#
+            , GPB_PHUONGPHAPLAYBENHPHAM_ID = #GPB_PHUONGPHAPLAYBENHPHAM_ID#
+            , GPB_SOMAU = #GPB_SOMAU#
+            , GPB_SOLUONGMAU = #GPB_SOLUONGMAU#
+            , GPB_TOPO_ID = #GPB_TOPO_ID#
+            , GPB_TOPOREGIONS_ID = #GPB_TOPOREGIONS_ID#
+            , GPB_MORPHO_ID = #GPB_MORPHO_ID#
+            , GPB_ETIO_ID = #GPB_ETIO_ID#
+            , GPB_DAITHE = #GPB_DAITHE#
+            , GPB_VITHE = #GPB_VITHE#
+            , GPB_NHUOM_HE = #GPB_NHUOM_HE#
+            , GPB_NHUOM_PAS = #GPB_NHUOM_PAS#
+            , GPB_NHUOM_TRI = #GPB_NHUOM_TRI#
+            , GPB_NHUOM_AFB = #GPB_NHUOM_AFB#
+            , GPB_NHUOM_GIEMSA = #GPB_NHUOM_GIEMSA#
+            , GPB_NHUOM_PAPANICOLAOU = #GPB_NHUOM_PAPANICOLAOU#
+            , GPB_NHUOM_RETICULINE = #GPB_NHUOM_RETICULINE#
+            , GPB_NHUOM_OTHER = #GPB_NHUOM_OTHER#
+            , GPB_HOAMIENDICH = #GPB_HOAMIENDICH#
+            , GPB_HOAMIENDICHHUYNHQUANG = #GPB_HOAMIENDICHHUYNHQUANG#
+            , GPB_HOICHAN = #GPB_HOICHAN#
+            , GPB_MAUTHU = #GPB_MAUTHU#
+            , GPB_NOILAYMAUTHU = #GPB_NOILAYMAUTHU#
+            , HLVIKHUAN1 = #HLVIKHUAN1#
+            , HLVIKHUAN2 = #HLVIKHUAN2#
+            , LOAIFILM_ID = #LOAIFILM_ID#
+            , SOPHIMSUDUNG = #SOPHIMSUDUNG#
+            , THIETBI_ID = #THIETBI_ID#
+            , SOTHUOCSUDUNG = #SOTHUOCSUDUNG#
+            , KHOADULIEU = #KHOADULIEU#
+            , NGAYKHOADULIEU = #NGAYKHOADULIEU#
+            , THOIGIANKHOADULIEU = #THOIGIANKHOADULIEU#
+            , NGUOIKHOA_ID = #NGUOIKHOA_ID#
+            , MANGUOIKHOA = #MANGUOIKHOA#
+            , TENNGUOIKHOA = #TENNGUOIKHOA#
+            , TRANGTHAI = #TRANGTHAI#
+            , MACH = #MACH#
+            , HUYETAP = #HUYETAP#
+            , NHIPTHO = #NHIPTHO#
+            , NHIETDO = #NHIETDO#
+            , CHIEUCAO = #CHIEUCAO#
+            , CANNANG = #CANNANG#
+            , BSA = #BSA#
+            , TINHTRANGDIENNAO = #TINHTRANGDIENNAO#
+            , SOVAOVIEN = #SOVAOVIEN#
+            , MAYTE = #MAYTE#
+            , TENBENHNHAN = #TENBENHNHAN#
+            , NAMSINH = #NAMSINH#
+            , GIOITINH = #GIOITINH#
+            , DIACHI = #DIACHI#
+            , NOICHIDINH_ID = #NOICHIDINH_ID#
+            , MAUTHU_ID = #MAUTHU_ID#
+            , THOIGIANNHAN = #THOIGIANNHAN#
+            , MAU = #MAU#
+            , LOAITHUOCCANQUANG_ID = #LOAITHUOCCANQUANG_ID#
+            , MA = #MA#
+            , IDHINH = #IDHINH#
+            , SOPHIMHU = #SOPHIMHU#
+            , LOAIPHIMHU_ID = #LOAIPHIMHU_ID#
+            , DOSOI = #DOSOI#
+            , DOSOI_ID = #DOSOI_ID#
+            , BANKINHSOI = #BANKINHSOI#
+            , SODT = #SODT#
+            , KYTHUAT = #KYTHUAT#
+            , KYTHUAT_TEXT = #KYTHUAT_TEXT#
+            , SOPHIMSUDUNG2 = #SOPHIMSUDUNG2#
+            , LOAIFILM_ID2 = #LOAIFILM_ID2#
+            , SOPHIMSUDUNG3 = #SOPHIMSUDUNG3#
+            , LOAIFILM_ID3 = #LOAIFILM_ID3#
+            , RESISTANCEMARKERS = #RESISTANCEMARKERS#
+            <!--, BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#-->
+          , NGAYCAPNHAT = #NGAYCAPNHAT#
+          , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+          , SOLUONGONG = #SOLUONGONG#
+          , SOMLMAU = #SOMLMAU#
+          , THOIGIANLAYMAU = #THOIGIANLAYMAU#
+          , THOIGIANNHANMAU = #THOIGIANNHANMAU#
+          , THOIGIANCDBENHPHAM = #THOIGIANCDBENHPHAM#
+          , DUNGDICHCD_ID = #DUNGDICHCD_ID#
+          , SOONGTHUCNHAN = #SOONGTHUCNHAN#
+          , THUOCDADUNG = #THUOCDADUNG#
+          , NGAYGANMAY = #NGAYGANMAY#
+          , NGAYTHAOMAY = #NGAYTHAOMAY#
+          , LOAIMAUBENHPHAM = #LOAIMAUBENHPHAM#
+          where
+          CLSKETQUA_ID = '$CLSKETQUA_ID$'
+        </update>
+        <!--Revision:0,6d90b1ae206025a91863aedd904534e1-->
+        <update id="DAO00037_Duyet" parameterClass="System.Collections.IDictionary">
+          update TT_CLSKETQUA set
+          KHOADULIEU = #KHOADULIEU#
+          , NGAYKHOADULIEU = #NGAYKHOADULIEU#
+          , THOIGIANKHOADULIEU = #THOIGIANKHOADULIEU#
+          , NGUOIKHOA_ID = #NGUOIKHOA_ID#
+          , TENNGUOIKHOA = #TENNGUOIKHOA#
+          , TRANGTHAI = #TRANGTHAI#
+          where
+          CLSKETQUA_ID = '$CLSKETQUA_ID$'
+
+          update TT_DVYEUCAU set
+          TRANGTHAI = #TRANGTHAI#
+          , NGAYCAPNHAT = #NGAYCAPNHAT#
+          , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+          , KHOADULIEU = #KHOADULIEU#
+          , NGAYKHOADULIEU = #NGAYKHOADULIEU#
+          , THOIGIANKHOADULIEU = #THOIGIANKHOADULIEU#
+          , NGUOIKHOA_ID = #NGUOIKHOA_ID#
+          , MANGUOIKHOA = #MANGUOIKHOA#
+          , TENNGUOIKHOA = #TENNGUOIKHOA#
+          where DVYEUCAU_ID = '$DVYEUCAU_ID$'
+        </update>
+        <!--Revision:0,39ba5235798488602799c3bfea8f1799-->
+        <statement id="DAO00037_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUA
+            where
+            CLSKETQUA_ID = '$CLSKETQUA_ID$'
+        </statement>
+        <!--Revision:0,1bb8b6931eaf8e2f576dde6d9da379ab-->
+        <update id="DAO00037_XoaTTinKTVGhiNhan" parameterClass="System.Collections.IDictionary">
+            update TT_CLSKETQUA set
+            KYTHUATVIEN01_ID = null
+            , KYTHUATVIEN02_ID = null
+            , DIEUDUONG_ID = null
+            , THIETBI_ID = null
+            , TIEMCANQUANG = 0
+            , SOTHUOCSUDUNG = null
+            , LOAITHUOCCANQUANG_ID = null
+            , SOPHIMSUDUNG = null
+            , LOAIFILM_ID = null
+            where
+            CLSKETQUA_ID = '$CLSKETQUA_ID$'
+        </update>
+        <!--Revision:0,98db0aadeb4a990110d22c303617d3ff-->
+        <statement id="DAO00037_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUA
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CLSKETQUA_ID">
+                        TT_CLSKETQUA.CLSKETQUA_ID = '$CLSKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIEUXETNGHIEM">
+                        TT_CLSKETQUA.SOPHIEUXETNGHIEM = '$SOPHIEUXETNGHIEM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                        TT_CLSKETQUA.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHAN_ID">
+                        TT_CLSKETQUA.BENHAN_ID = '$BENHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRU_ID">
+                        TT_CLSKETQUA.LUUTRU_ID = '$LUUTRU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="," property="LUUTRUCHITIET_ID">
+                        TT_CLSKETQUA.LUUTRUCHITIET_ID = '$LUUTRUCHITIET_ID $'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+                        TT_CLSKETQUA.DVYEUCAU_ID = '$DVYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHVU_ID">
+                        TT_CLSKETQUA.DICHVU_ID = '$DICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHOMDICHVU_ID">
+                        TT_CLSKETQUA.NHOMDICHVU_ID = '$NHOMDICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTHUCHIEN">
+                        TT_CLSKETQUA.NGAYTHUCHIEN = '$NGAYTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANTHUCHIEN">
+                        TT_CLSKETQUA.THOIGIANTHUCHIEN = '$THOIGIANTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYGIOTHUCHIEN">
+                        TT_CLSKETQUA.NGAYGIOTHUCHIEN = '$NGAYGIOTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIOTHUCHIEN">
+                        TT_CLSKETQUA.GIOTHUCHIEN = '$GIOTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NAMTHUCHIEN">
+                        TT_CLSKETQUA.NAMTHUCHIEN = '$NAMTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THANGTHUCHIEN">
+                        TT_CLSKETQUA.THANGTHUCHIEN = '$THANGTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOITHUCHIEN_ID">
+                        TT_CLSKETQUA.NOITHUCHIEN_ID = '$NOITHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSICHIDINH_ID">
+                        TT_CLSKETQUA.BACSICHIDINH_ID = '$BACSICHIDINH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSICHIDINH">
+                        TT_CLSKETQUA.BACSICHIDINH = '$BACSICHIDINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCHIDINH">
+                        TT_CLSKETQUA.NGAYCHIDINH = '$NGAYCHIDINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSITHUCHIEN_ID">
+                        TT_CLSKETQUA.BACSITHUCHIEN_ID = '$BACSITHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSIKETLUAN_ID">
+                        TT_CLSKETQUA.BACSIKETLUAN_ID = '$BACSIKETLUAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUATVIEN01_ID">
+                        TT_CLSKETQUA.KYTHUATVIEN01_ID = '$KYTHUATVIEN01_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUATVIEN02_ID">
+                        TT_CLSKETQUA.KYTHUATVIEN02_ID = '$KYTHUATVIEN02_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHANDOANLAMSANG">
+                        TT_CLSKETQUA.CHANDOANLAMSANG = '$CHANDOANLAMSANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DENGHI">
+                        TT_CLSKETQUA.DENGHI = '$DENGHI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SINHTHIET">
+                        TT_CLSKETQUA.SINHTHIET = '$SINHTHIET$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CLOTEST">
+                        TT_CLSKETQUA.CLOTEST = '$CLOTEST$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHOTO">
+                        TT_CLSKETQUA.PHOTO = '$PHOTO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="VIDEO">
+                        TT_CLSKETQUA.VIDEO = '$VIDEO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEMCANQUANG">
+                        TT_CLSKETQUA.TIEMCANQUANG = '$TIEMCANQUANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHANLOAIKETQUA_ID">
+                        TT_CLSKETQUA.PHANLOAIKETQUA_ID = '$PHANLOAIKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THUCHIENBENNGOAI">
+                        TT_CLSKETQUA.THUCHIENBENNGOAI = '$THUCHIENBENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIENTHUCHIEN_ID">
+                        TT_CLSKETQUA.BENHVIENTHUCHIEN_ID = '$BENHVIENTHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENBACSIBENNGOAI">
+                        TT_CLSKETQUA.TENBACSIBENNGOAI = '$TENBACSIBENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOABENNGOAI_ID">
+                        TT_CLSKETQUA.KHOABENNGOAI_ID = '$KHOABENNGOAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="VUNGKHAOSAT">
+                        TT_CLSKETQUA.VUNGKHAOSAT = '$VUNGKHAOSAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MOTA">
+                        TT_CLSKETQUA.MOTA = '$MOTA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MOTA_TEXT">
+                        TT_CLSKETQUA.MOTA_TEXT = '$MOTA_TEXT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETLUAN">
+                        TT_CLSKETQUA.KETLUAN = '$KETLUAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GHICHU">
+                        TT_CLSKETQUA.GHICHU = '$GHICHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAPHIM">
+                        TT_CLSKETQUA.MAPHIM = '$MAPHIM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_AMSO">
+                        TT_CLSKETQUA.GPB_AMSO = '$GPB_AMSO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_PHANLOAIKETQUA_ID">
+                        TT_CLSKETQUA.GPB_PHANLOAIKETQUA_ID = '$GPB_PHANLOAIKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_PHUONGPHAPLAYBENHPHAM_ID">
+                        TT_CLSKETQUA.GPB_PHUONGPHAPLAYBENHPHAM_ID = '$GPB_PHUONGPHAPLAYBENHPHAM_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_SOMAU">
+                        TT_CLSKETQUA.GPB_SOMAU = '$GPB_SOMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_SOLUONGMAU">
+                        TT_CLSKETQUA.GPB_SOLUONGMAU = '$GPB_SOLUONGMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_TOPO_ID">
+                        TT_CLSKETQUA.GPB_TOPO_ID = '$GPB_TOPO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_TOPOREGIONS_ID">
+                        TT_CLSKETQUA.GPB_TOPOREGIONS_ID = '$GPB_TOPOREGIONS_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_MORPHO_ID">
+                        TT_CLSKETQUA.GPB_MORPHO_ID = '$GPB_MORPHO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_ETIO_ID">
+                        TT_CLSKETQUA.GPB_ETIO_ID = '$GPB_ETIO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_DAITHE">
+                        TT_CLSKETQUA.GPB_DAITHE = '$GPB_DAITHE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_VITHE">
+                        TT_CLSKETQUA.GPB_VITHE = '$GPB_VITHE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_HE">
+                        TT_CLSKETQUA.GPB_NHUOM_HE = '$GPB_NHUOM_HE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_PAS">
+                        TT_CLSKETQUA.GPB_NHUOM_PAS = '$GPB_NHUOM_PAS$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_TRI">
+                        TT_CLSKETQUA.GPB_NHUOM_TRI = '$GPB_NHUOM_TRI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_AFB">
+                        TT_CLSKETQUA.GPB_NHUOM_AFB = '$GPB_NHUOM_AFB$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_GIEMSA">
+                        TT_CLSKETQUA.GPB_NHUOM_GIEMSA = '$GPB_NHUOM_GIEMSA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_NHUOM_OTHER">
+                        TT_CLSKETQUA.GPB_NHUOM_OTHER = '$GPB_NHUOM_OTHER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_HOAMIENDICH">
+                        TT_CLSKETQUA.GPB_HOAMIENDICH = '$GPB_HOAMIENDICH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_HOAMIENDICHHUYNHQUANG">
+                        TT_CLSKETQUA.GPB_HOAMIENDICHHUYNHQUANG = '$GPB_HOAMIENDICHHUYNHQUANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GPB_HOICHAN">
+                        TT_CLSKETQUA.GPB_HOICHAN = '$GPB_HOICHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIFILM_ID">
+                        TT_CLSKETQUA.LOAIFILM_ID = '$LOAIFILM_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMSUDUNG">
+                        TT_CLSKETQUA.SOPHIMSUDUNG = '$SOPHIMSUDUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THIETBI_ID">
+                        TT_CLSKETQUA.THIETBI_ID = '$THIETBI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOTHUOCSUDUNG">
+                        TT_CLSKETQUA.SOTHUOCSUDUNG = '$SOTHUOCSUDUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOADULIEU">
+                        TT_CLSKETQUA.KHOADULIEU = '$KHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYKHOADULIEU">
+                        TT_CLSKETQUA.NGAYKHOADULIEU = '$NGAYKHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANKHOADULIEU">
+                        TT_CLSKETQUA.THOIGIANKHOADULIEU = '$THOIGIANKHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOIKHOA_ID">
+                        TT_CLSKETQUA.NGUOIKHOA_ID = '$NGUOIKHOA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MANGUOIKHOA">
+                        TT_CLSKETQUA.MANGUOIKHOA = '$MANGUOIKHOA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNGUOIKHOA">
+                        TT_CLSKETQUA.TENNGUOIKHOA = '$TENNGUOIKHOA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRANGTHAI">
+                        TT_CLSKETQUA.TRANGTHAI = '$TRANGTHAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MACH">
+                        TT_CLSKETQUA.MACH = '$MACH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HUYETAP">
+                        TT_CLSKETQUA.HUYETAP = '$HUYETAP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHIPTHO">
+                        TT_CLSKETQUA.NHIPTHO = '$NHIPTHO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHIETDO">
+                        TT_CLSKETQUA.NHIETDO = '$NHIETDO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHIEUCAO">
+                        TT_CLSKETQUA.CHIEUCAO = '$CHIEUCAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CANNANG">
+                        TT_CLSKETQUA.CANNANG = '$CANNANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BSA">
+                        TT_CLSKETQUA.BSA = '$BSA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TINHTRANGDIENNAO">
+                        TT_CLSKETQUA.TINHTRANGDIENNAO = '$TINHTRANGDIENNAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOVAOVIEN">
+                        TT_CLSKETQUA.SOVAOVIEN = '$SOVAOVIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAYTE">
+                        TT_CLSKETQUA.MAYTE = '$MAYTE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENBENHNHAN">
+                        TT_CLSKETQUA.TENBENHNHAN = '$TENBENHNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NAMSINH">
+                        TT_CLSKETQUA.NAMSINH = '$NAMSINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIOITINH">
+                        TT_CLSKETQUA.GIOITINH = '$GIOITINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DIACHI">
+                        TT_CLSKETQUA.DIACHI = '$DIACHI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOICHIDINH_ID">
+                        TT_CLSKETQUA.NOICHIDINH_ID = '$NOICHIDINH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAUTHU_ID">
+                        TT_CLSKETQUA.MAUTHU_ID = '$MAUTHU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANNHAN">
+                        TT_CLSKETQUA.THOIGIANNHAN = '$THOIGIANNHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAU">
+                        TT_CLSKETQUA.MAU = '$MAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAITHUOCCANQUANG_ID">
+                        TT_CLSKETQUA.LOAITHUOCCANQUANG_ID = '$LOAITHUOCCANQUANG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MA">
+                        TT_CLSKETQUA.MA = '$MA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="IDHINH">
+                        TT_CLSKETQUA.IDHINH = '$IDHINH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMHU">
+                        TT_CLSKETQUA.SOPHIMHU = '$SOPHIMHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIPHIMHU_ID">
+                        TT_CLSKETQUA.LOAIPHIMHU_ID = '$LOAIPHIMHU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DOSOI">
+                        TT_CLSKETQUA.DOSOI = '$DOSOI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DOSOI_ID">
+                        TT_CLSKETQUA.DOSOI_ID = '$DOSOI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BANKINHSOI">
+                        TT_CLSKETQUA.BANKINHSOI = '$BANKINHSOI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SODT">
+                        TT_CLSKETQUA.SODT = '$SODT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUAT">
+                        TT_CLSKETQUA.KYTHUAT = '$KYTHUAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYTHUAT_TEXT">
+                        TT_CLSKETQUA.KYTHUAT_TEXT = '$KYTHUAT_TEXT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMSUDUNG2">
+                        TT_CLSKETQUA.SOPHIMSUDUNG2 = '$SOPHIMSUDUNG2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIFILM_ID2">
+                        TT_CLSKETQUA.LOAIFILM_ID2 = '$LOAIFILM_ID2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIMSUDUNG3">
+                        TT_CLSKETQUA.SOPHIMSUDUNG3 = '$SOPHIMSUDUNG3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIFILM_ID3">
+                        TT_CLSKETQUA.LOAIFILM_ID3 = '$LOAIFILM_ID3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="RESISTANCEMARKERS">
+                        TT_CLSKETQUA.RESISTANCEMARKERS = '$RESISTANCEMARKERS$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_CLSKETQUA.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_CLSKETQUA.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_CLSKETQUA.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_CLSKETQUA.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_CLSKETQUA.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOLUONGONG">
+                        TT_CLSKETQUA.SOLUONGONG = '$SOLUONGONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOMLMAU">
+                        TT_CLSKETQUA.SOMLMAU = '$SOMLMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANLAYMAU">
+                        TT_CLSKETQUA.THOIGIANLAYMAU = '$THOIGIANLAYMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANNHANMAU">
+                        TT_CLSKETQUA.THOIGIANNHANMAU = '$THOIGIANNHANMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOONGTHUCNHAN">
+                        TT_CLSKETQUA.SOONGTHUCNHAN = '$SOONGTHUCNHAN$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,9571996eca01a850ea8a539c0d7f98e5-->
+        <update id="DAO00037_UpdateTrangThaiCLSKQ" parameterClass="System.Collections.IDictionary">
+          update TT_CLSKETQUA set
+          KHOADULIEU = #KHOADULIEU#
+          , NGAYKHOADULIEU = #NGAYKHOADULIEU#
+          , THOIGIANKHOADULIEU = #THOIGIANKHOADULIEU#
+          , NGUOIKHOA_ID = #NGUOIKHOA_ID#
+          , MANGUOIKHOA = #MANGUOIKHOA#
+          , TENNGUOIKHOA = #TENNGUOIKHOA#
+          , TRANGTHAI = #TRANGTHAI#
+          , NGAYCAPNHAT = #NGAYCAPNHAT#
+          , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+          where
+          CLSKETQUA_ID = '$CLSKETQUA_ID$'
+
+          update TT_DVYEUCAU set
+          TRANGTHAI = #TRANGTHAI#
+          , NGAYCAPNHAT = #NGAYCAPNHAT#
+          , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+          , KHOADULIEU = #KHOADULIEU#
+          , NGAYKHOADULIEU = #NGAYKHOADULIEU#
+          , THOIGIANKHOADULIEU = #THOIGIANKHOADULIEU#
+          , NGUOIKHOA_ID = #NGUOIKHOA_ID#
+          , TENNGUOIKHOA = #TENNGUOIKHOA#
+          where DVYEUCAU_ID IN ($LISTDVYC_ID$)
+        </update>
+        <!--Revision:0,73f6eef5a01a6c7338205172955d50d4-->
+        <statement id="DAO00037_GetDSCLSKetQua" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *, SOPHIEUXETNGHIEM as SOPHIEU from TT_CLSKETQUA
+            where
+            TIEPNHAN_ID = '$TIEPNHAN_ID$'
+            <!--<isNotEmpty prepend="and" property="BENHAN_ID">
+                BENHAN_ID = '$BENHAN_ID$'
+            </isNotEmpty>-->
+            <isNotNull prepend="and" property="NHOMDICHVU_ID">
+                NHOMDICHVU_ID = '$NHOMDICHVU_ID$'
+            </isNotNull>
+            <isNull prepend="and" property="NHOMDICHVU_ID">
+                NHOMDICHVU_ID is null
+            </isNull>
+        </statement>
+        <!--Revision:0,8f4d3a253dc7cabc1ac0dfdc271ba6c5-->
+        <statement id="DAO00037_GetCLSKetQuaIdByDVYeuCauId" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select top (1) CLSKETQUA_ID from TT_CLSKETQUACHITIET
+            where
+            DVYEUCAU_ID = '$DVYEUCAU_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+      <statement id="DAO00037_TT_CLSKETQUA_DTGS_get" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TT_CLSKETQUA_DTGS
+            where CLSKETQUA_ID = #CLSKETQUA_ID# and BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00037_TT_CLSKETQUA_DTGS_insert" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        insert into TT_CLSKETQUA_DTGS values(
+          #CLSKETQUA_ID#,
+          #BENHMACHVANH#,
+          #ROILOANNHIP#,
+          #KHANANGGANGSUC#,
+          #DIENHINH#,
+          #KHONGDIENHINH#,
+          #KHONGDOTIM#,
+          #TRUOCNGAYGANGSUC#,
+          #TRONGNGAYGANGSUC#,
+          #TANGHUYETAP#,
+          #ROILOANLIPIDMAU#,
+          #DAITHAODUONG#,
+          #HUTTHUOCLA#,
+          #UONGTHUOCNGUATHAI#,
+          #NHOIMAUCOTIMCAP#,
+          #DAUTHATNGUCKHONGONDINH#,
+          #ROILOANNHIPTIM_ROILOANHUYETDONG#,
+          #HEPDONGMACHCHU#,
+          #SUYTIM#,
+          #THUYENTACPHOI_NHOIMAUPHOI#,
+          #VIENCOTIM_VIEMMANNGOAITIM#,
+          #BOCTACHDONGMACHCHU#,
+          #HUYETKHOITRONGTIM_MACHMAU#,
+          #HEPTHANCHUNGDONGMACHVANH#,
+          #HUYETAPCAO#,
+          #TACNGHENDUONGTHOATTHAT#,
+          #BLOCKNHITHATCAODO#,
+          #ECG_LUCNGHI#,
+          #SIEUAMTIM#,
+          #CONDAUTHATNGUC#,
+          #BENHVIEN_ID#
+         )SELECT SCOPE_IDENTITY()
+      </statement>
+      <statement id="DAO00037_TT_CLSKETQUA_DTGS_update" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        update TT_CLSKETQUA_DTGS set
+          CLSKETQUA_ID = #CLSKETQUA_ID#,
+          BENHMACHVANH = #BENHMACHVANH#,
+          ROILOANNHIP = #ROILOANNHIP#,
+          KHANANGGANGSUC = #KHANANGGANGSUC#,
+          DIENHINH = #DIENHINH#,
+          KHONGDIENHINH = #KHONGDIENHINH#,
+          KHONGDOTIM = #KHONGDOTIM#,
+          TRUOCNGAYGANGSUC = #TRUOCNGAYGANGSUC#,
+          TRONGNGAYGANGSUC = #TRONGNGAYGANGSUC#,
+          TANGHUYETAP = #TANGHUYETAP#,
+          ROILOANLIPIDMAU = #ROILOANLIPIDMAU#,
+          DAITHAODUONG = #DAITHAODUONG#,
+          HUTTHUOCLA = #HUTTHUOCLA#,
+          UONGTHUOCNGUATHAI = #UONGTHUOCNGUATHAI#,
+          NHOIMAUCOTIMCAP = #NHOIMAUCOTIMCAP#,
+          DAUTHATNGUCKHONGONDINH = #DAUTHATNGUCKHONGONDINH#,
+          ROILOANNHIPTIM_ROILOANHUYETDONG = #ROILOANNHIPTIM_ROILOANHUYETDONG#,
+          HEPDONGMACHCHU = #HEPDONGMACHCHU#,
+          SUYTIM = #SUYTIM#,
+          THUYENTACPHOI_NHOIMAUPHOI = #THUYENTACPHOI_NHOIMAUPHOI#,
+          VIENCOTIM_VIEMMANNGOAITIM = #VIENCOTIM_VIEMMANNGOAITIM#,
+          BOCTACHDONGMACHCHU = #BOCTACHDONGMACHCHU#,
+          HUYETKHOITRONGTIM_MACHMAU = #HUYETKHOITRONGTIM_MACHMAU#,
+          HEPTHANCHUNGDONGMACHVANH = #HEPTHANCHUNGDONGMACHVANH#,
+          HUYETAPCAO = #HUYETAPCAO#,
+          TACNGHENDUONGTHOATTHAT_PHINHVACHTHAT = #TACNGHENDUONGTHOATTHAT#,
+          BLOCKNHITHATCAODO = #BLOCKNHITHATCAODO#,
+          ECG_LUCNGHI = #ECG_LUCNGHI#,
+          SIEUAMTIM = #SIEUAMTIM#,
+          CONDAUTHATNGUC = #CONDAUTHATNGUC#          
+        where CLSKETQUA_DTGS_ID=#CLSKETQUA_DTGS_ID# and BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00037_TT_CLSKETQUA_DTGS_delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_CLSKETQUA_DTGS
+            where
+            CLSKETQUA_DTGS_ID = #CLSKETQUA_DTGS_ID# and BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+
+      <statement id="DAO00037_TT_CLSKETQUA_SATTL_get" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select * from TT_CLSKETQUA_SATTL
+        where CLSKETQUA_ID = #CLSKETQUA_ID# and BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00037_TT_CLSKETQUA_SATTL_insert" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        insert into TT_CLSKETQUA_SATTL values(
+        #CLSKETQUA_ID#,
+        #TNP_TT_MOM#,
+        #TNP_TT_GIUA#,
+        #TNP_TT_DAY#,
+        #KGSTD_TT_MOM#,
+        #KGSTD_TT_GIUA#,
+        #KGSTD_TT_DAY#,
+        #KL_TT_MOM#,
+        #KL_TT_GIUA#,
+        #KL_TT_DAY#,
+        #TNP_TTV_MOM#,
+        #TNP_TTV_GIUA#,
+        #TNP_TTV_DAY#,
+        #KGSTD_TTV_MOM#,
+        #KGSTD_TTV_GIUA#,
+        #KGSTD_TTV_DAY#,
+        #KL_TTV_MOM#,
+        #KL_TTV_GIUA#,
+        #KL_TTV_DAY#,
+        #TNP_VLT_MOM#,
+        #TNP_VLT_GIUA#,
+        #TNP_VLT_DAY#,
+        #KGSTD_VLT_MOM#,
+        #KGSTD_VLT_GIUA#,
+        #KGSTD_VLT_DAY#,
+        #KL_VLT_MOM#,
+        #KL_VLT_GIUA#,
+        #KL_VLT_DAY#,
+        #TNP_TD_MOM#,
+        #TNP_TD_GIUA#,
+        #TNP_TD_DAY#,
+        #KGSTD_TD_MOM#,
+        #KGSTD_TD_GIUA#,
+        #KGSTD_TD_DAY#,
+        #KL_TD_MOM#,
+        #KL_TD_GIUA#,
+        #KL_TD_DAY#,
+        #TNP_TS_MOM#,
+        #TNP_TS_GIUA#,
+        #TNP_TS_DAY#,
+        #KGSTD_TS_MOM#,
+        #KGSTD_TS_GIUA#,
+        #KGSTD_TS_DAY#,
+        #KL_TS_MOM#,
+        #KL_TS_GIUA#,
+        #KL_TS_DAY#,
+        #TNP_TB_MOM#,
+        #TNP_TB_GIUA#,
+        #TNP_TB_DAY#,
+        #KGSTD_TB_MOM#,
+        #KGSTD_TB_GIUA#,
+        #KGSTD_TB_DAY#,
+        #KL_TB_MOM#,
+        #KL_TB_GIUA#,
+        #KL_TB_DAY#,
+        #BENHVIEN_ID#
+        )SELECT SCOPE_IDENTITY()
+      </statement>
+      <statement id="DAO00037_TT_CLSKETQUA_SATTL_update" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        update TT_CLSKETQUA_SATTL set
+        CLSKETQUA_ID = #CLSKETQUA_ID#,
+        TNP_TT_MOM = #TNP_TT_MOM#,
+        TNP_TT_GIUA = #TNP_TT_GIUA#,
+        TNP_TT_DAY = #TNP_TT_DAY#,
+        KGSTD_TT_MOM = #KGSTD_TT_MOM#,
+        KGSTD_TT_GIUA = #KGSTD_TT_GIUA#,
+        KGSTD_TT_DAY = #KGSTD_TT_DAY#,
+        KL_TT_MOM = #KL_TT_MOM#,
+        KL_TT_GIUA = #KL_TT_GIUA#,
+        KL_TT_DAY = #KL_TT_DAY#,
+        TNP_TTV_MOM = #TNP_TTV_MOM#,
+        TNP_TTV_GIUA = #TNP_TTV_GIUA#,
+        TNP_TTV_DAY = #TNP_TTV_DAY#,
+        KGSTD_TTV_MOM = #KGSTD_TTV_MOM#,
+        KGSTD_TTV_GIUA = #KGSTD_TTV_GIUA#,
+        KGSTD_TTV_DAY = #KGSTD_TTV_DAY#,
+        KL_TTV_MOM = #KL_TTV_MOM#,
+        KL_TTV_GIUA = #KL_TTV_GIUA#,
+        KL_TTV_DAY = #KL_TTV_DAY#,
+        TNP_VLT_MOM = #TNP_VLT_MOM#,
+        TNP_VLT_GIUA = #TNP_VLT_GIUA#,
+        TNP_VLT_DAY = #TNP_VLT_DAY#,
+        KGSTD_VLT_MOM = #KGSTD_VLT_MOM#,
+        KGSTD_VLT_GIUA = #KGSTD_VLT_GIUA#,
+        KGSTD_VLT_DAY = #KGSTD_VLT_DAY#,
+        KL_VLT_MOM = #KL_VLT_MOM#,
+        KL_VLT_GIUA = #KL_VLT_GIUA#,
+        KL_VLT_DAY = #KL_VLT_DAY#,
+        TNP_TD_MOM = #TNP_TD_MOM#,
+        TNP_TD_GIUA = #TNP_TD_GIUA#,
+        TNP_TD_DAY = #TNP_TD_DAY#,
+        KGSTD_TD_MOM = #KGSTD_TD_MOM#,
+        KGSTD_TD_GIUA = #KGSTD_TD_GIUA#,
+        KGSTD_TD_DAY = #KGSTD_TD_DAY#,
+        KL_TD_MOM = #KL_TD_MOM#,
+        KL_TD_GIUA = #KL_TD_GIUA#,
+        KL_TD_DAY = #KL_TD_DAY#,
+        TNP_TS_MOM = #TNP_TS_MOM#,
+        TNP_TS_GIUA = #TNP_TS_GIUA#,
+        TNP_TS_DAY = #TNP_TS_DAY#,
+        KGSTD_TS_MOM = #KGSTD_TS_MOM#,
+        KGSTD_TS_GIUA = #KGSTD_TS_GIUA#,
+        KGSTD_TS_DAY = #KGSTD_TS_DAY#,
+        KL_TS_MOM = #KL_TS_MOM#,
+        KL_TS_GIUA = #KL_TS_GIUA#,
+        KL_TS_DAY = #KL_TS_DAY#,
+        TNP_TB_MOM = #TNP_TB_MOM#,
+        TNP_TB_GIUA = #TNP_TB_GIUA#,
+        TNP_TB_DAY = #TNP_TB_DAY#,
+        KGSTD_TB_MOM = #KGSTD_TB_MOM#,
+        KGSTD_TB_GIUA = #KGSTD_TB_GIUA#,
+        KGSTD_TB_DAY = #KGSTD_TB_DAY#,
+        KL_TB_MOM = #KL_TB_MOM#,
+        KL_TB_GIUA = #KL_TB_GIUA#,
+        KL_TB_DAY = #KL_TB_DAY#
+        where CLSKETQUA_SATTL_ID=#CLSKETQUA_SATTL_ID# and BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00037_TT_CLSKETQUA_SATTL_delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        delete from TT_CLSKETQUA_SATTL
+        where
+        CLSKETQUA_SATTL_ID = #CLSKETQUA_SATTL_ID# and BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+
+      <!--CLS_KETQUA_HUYETAP_STT-->
+      <statement id="DAO00037_TT_CLSKETQUA_HA_GET" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select * from TT_CLSKETQUA_HUYETAP
+            where CLSKETQUA_ID = #CLSKETQUA_ID# and BENHVIEN_ID = #BENHVIEN_ID#
+      </statement>
+      <statement id="DAO00037_TT_CLSKETQUA_HA_INS" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        INSERT INTO [dbo].[TT_CLSKETQUA_HUYETAP]
+        ([CLSKETQUA_ID]
+        ,[TRONGNGAY_HA]
+        ,[TRONGNGAY_TILE]
+        ,[TRONGNGAY_TILE2]
+        ,[TRONGNGAY_NHIPTIM]
+        ,[BANNGAY_HA]
+        ,[BANNGAY_TILE]
+        ,[BANNGAY_TILE2]
+        ,[BANNGAY_NHIPTIM]
+        ,[BANDEM_HA]
+        ,[BANDEM_TILE]
+        ,[BANDEM_TILE2]
+        ,[BANDEM_NHIPTIM]
+        ,[HACAO_TAMTHU]
+        ,[HACAO_TAMTRUONG]
+        ,[HACAO_TAMTHU_GIO]
+        ,[HACAO_TAMTRUONG_GIO]
+        ,[HATHAP_TAMTHU]
+        ,[HATHAP_TAMTRUONG]
+        ,[HATHAP_TAMTHU_GIO]
+        ,[HATHAP_TAMTRUONG_GIO]
+        ,[KETLUAN_HA]
+        ,[BENHVIEN_ID]
+        ,[NGUOITAO_ID]
+        ,[NGAYTAO]
+        ,[NGUOICAPNHAT_ID]
+        ,[NGAYCAPNHAT])
+        VALUES
+        (#CLSKETQUA_ID#
+        ,#TRONGNGAY_HA#
+        ,#TRONGNGAY_TILE#
+        ,#TRONGNGAY_TILE2#
+        ,#TRONGNGAY_NHIPTIM#
+        ,#BANNGAY_HA#
+        ,#BANNGAY_TILE#
+        ,#BANNGAY_TILE2#
+        ,#BANNGAY_NHIPTIM#
+        ,#BANDEM_HA#
+        ,#BANDEM_TILE#
+        ,#BANDEM_TILE2#
+        ,#BANDEM_NHIPTIM#
+        ,#HACAO_TAMTHU#
+        ,#HACAO_TAMTRUONG#
+        ,#HACAO_TAMTHU_GIO#
+        ,#HACAO_TAMTRUONG_GIO#
+        ,#HATHAP_TAMTHU#
+        ,#HATHAP_TAMTRUONG#
+        ,#HATHAP_TAMTHU_GIO#
+        ,#HATHAP_TAMTRUONG_GIO#
+        ,#KETLUAN#
+        ,#BENHVIEN_ID#
+        ,#NGUOITAO_ID#
+        ,#NGAYTAO#
+        ,#NGUOICAPNHAT_ID#
+        ,#NGAYCAPNHAT#)
+        SELECT SCOPE_IDENTITY()
+      </statement>
+      <statement id="DAO00037_TT_CLSKETQUA_HA_UPD" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        UPDATE TT_CLSKETQUA_HUYETAP
+        SET CLSKETQUA_ID = #CLSKETQUA_ID#
+        ,TRONGNGAY_HA = #TRONGNGAY_HA#
+        ,TRONGNGAY_TILE = #TRONGNGAY_TILE#
+        ,TRONGNGAY_TILE2 = #TRONGNGAY_TILE2#
+        ,TRONGNGAY_NHIPTIM = #TRONGNGAY_NHIPTIM#
+        ,BANNGAY_HA = #BANNGAY_HA#
+        ,BANNGAY_TILE = #BANNGAY_TILE#
+        ,BANNGAY_TILE2 = #BANNGAY_TILE2#
+        ,BANNGAY_NHIPTIM = #BANNGAY_NHIPTIM#
+        ,BANDEM_HA = #BANDEM_HA#
+        ,BANDEM_TILE = #BANDEM_TILE#
+        ,BANDEM_TILE2 = #BANDEM_TILE2#
+        ,BANDEM_NHIPTIM = #BANDEM_NHIPTIM#
+        ,HACAO_TAMTHU = #HACAO_TAMTHU#
+        ,HACAO_TAMTRUONG = #HACAO_TAMTRUONG#
+        ,HACAO_TAMTHU_GIO = #HACAO_TAMTHU_GIO#
+        ,HACAO_TAMTRUONG_GIO = #HACAO_TAMTRUONG_GIO#
+        ,HATHAP_TAMTHU = #HATHAP_TAMTHU#
+        ,HATHAP_TAMTRUONG = #HATHAP_TAMTRUONG#
+        ,HATHAP_TAMTHU_GIO = #HATHAP_TAMTHU_GIO#
+        ,HATHAP_TAMTRUONG_GIO = #HATHAP_TAMTRUONG_GIO#
+        ,KETLUAN_HA = #KETLUAN#
+        ,BENHVIEN_ID = #BENHVIEN_ID#
+        ,NGUOITAO_ID = #NGUOITAO_ID#
+        ,NGAYTAO = #NGAYTAO#
+        ,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+        ,NGAYCAPNHAT = #NGAYCAPNHAT#
+        WHERE CLSKETQUA_HA_ID = '$CLSKETQUA_HA_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <statement id="DAO00037_TT_CLSKETQUA_HA_DEL" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            DELETE FROM TT_CLSKETQUA_HUYETAP
+            WHERE CLSKETQUA_HA_ID = '$CLSKETQUA_HA_ID$' AND BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <!--CLS_KETQUA_HUYETAP_END-->
+      <statement id="DAO00037_KiemTraTrangThaiYeuCau" resultClass="DataObject">
+        IF EXISTS (
+        select DVYEUCAU_ID
+        from TT_DVYEUCAU
+        where DVYEUCAU_ID = $DVYEUCAU_ID$
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        and HUYYEUCAU = 0
+        )
+        BEGIN
+        SELECT -1 AS RESULT
+        END
+        ELSE
+        BEGIN
+        SELECT 1 AS RESULT
+        END
+      </statement>
+      <statement id="DAO00037_GetSoLuotBacSiCLSTraLoiKQ" resultClass="DataObject">
+        select count(1) AS SOLUONG
+        from TT_CLSKETQUA KQ
+        left join TT_DVYEUCAU YC on YC.DVYEUCAU_ID = KQ.DVYEUCAU_ID and YC.BENHVIEN_ID = KQ.BENHVIEN_ID
+        left join TM_DICHVU DV on DV.DICHVU_ID = YC.DICHVU_ID and DV.BENHVIEN_ID = YC.BENHVIEN_ID
+        left join TT_TIEPNHAN TN on TN.TIEPNHAN_ID = KQ.TIEPNHAN_ID
+        where DV.BHYT = '1' and YC.BHYTDONGTIEN = '0' and TN.SOBHYT IS NOT NULL and TN.SOBHYT != ''
+        and KQ.BACSIKETLUAN_ID = $BACSIKETLUAN_ID$
+        and KQ.BENHVIEN_ID = '$BENHVIEN_ID$'
+        and KQ.NGAYTHUCHIEN = '$NGAYTHUCHIEN$'
+      </statement>
+      <statement id="DAO00037_GetSoLuotSuDungThietBiTrongNgay" resultClass="DataObject">
+        select count(1) AS SOLUONG
+        from TT_CLSKETQUA KQ
+        left join TT_DVYEUCAU YC on YC.DVYEUCAU_ID = KQ.DVYEUCAU_ID and YC.BENHVIEN_ID = KQ.BENHVIEN_ID
+        left join TM_DICHVU DV on DV.DICHVU_ID = YC.DICHVU_ID and DV.BENHVIEN_ID = YC.BENHVIEN_ID
+        left join TT_TIEPNHAN TN on TN.TIEPNHAN_ID = KQ.TIEPNHAN_ID
+        where DV.BHYT = '1' and YC.BHYTDONGTIEN = '0' and TN.SOBHYT IS NOT NULL and TN.SOBHYT != ''
+        and KQ.THIETBI_ID = $THIETBI_ID$
+        and KQ.BENHVIEN_ID = '$BENHVIEN_ID$'
+        and KQ.NGAYTHUCHIEN = '$NGAYTHUCHIEN$'
+      </statement>
+      <statement id="DAO00037_GetTTCanhBaoSuDungThietBiTrongNgay" resultClass="DataObject">
+        select count(1) AS YC_SOLUONG, TB.SL_THIETBI
+        from TT_DVYEUCAU YC
+        left join TM_DICHVU DV on DV.DICHVU_ID = YC.DICHVU_ID and DV.BENHVIEN_ID = YC.BENHVIEN_ID
+        left join TT_TIEPNHAN TN on TN.TIEPNHAN_ID = YC.TIEPNHAN_ID
+        left join (
+        select COUNT(1) SL_THIETBI, PHONGBAN_ID from TM_THIETBI group by PHONGBAN_ID
+        ) TB on TB.PHONGBAN_ID = YC.NOITHUCHIEN_ID
+        where DV.BHYT = '1' and YC.BHYTDONGTIEN = '0' and TN.SOBHYT IS NOT NULL and TN.SOBHYT != ''
+        and YC.NOITHUCHIEN_ID = $NOITHUCHIEN_ID$
+        and YC.BENHVIEN_ID = '$BENHVIEN_ID$'
+        and YC.NGAYYEUCAU = '$NGAYYEUCAU$'
+        group by TB.SL_THIETBI
+      </statement>
+    </statements>
+</sqlMap>

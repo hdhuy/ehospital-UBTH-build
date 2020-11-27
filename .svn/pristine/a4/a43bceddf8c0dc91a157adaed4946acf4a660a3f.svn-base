@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,51d7c315481fbc5e568319090a84321f-->
+        <statement id="DAO00021_GetListSoBienLai" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          <!--select
+          BLCT.BIENLAICHITIET_ID
+          ,BL.BIENLAI_ID
+          ,BL.LOAIBIENLAI_ID
+          ,BL.LOAIBIENLAI
+          ,BL.NGAYPHATHANH
+          ,BL.THOIGIANPHATHANH
+          ,BL.KYHIEU
+          ,BL.SERIES
+          ,BL.KYHIEU + '/' + SERIES AS 'KYHIEU_SOQUYEN'
+          ,BL.MIN_NUMBER
+          ,BL.MAX_NUMBER
+          ,BLCT.START_NUMBER
+          ,BLCT.CURRENT_NUMBER
+          ,BLCT.HIEULUC
+          from
+          TT_BIENLAI BL,TT_BIENLAICHITIET BLCT
+          where
+          BL.BIENLAI_ID = BLCT.BIENLAI_ID
+          and BLCT.NGUOISUDUNG_ID =  #NGUOISUDUNG_ID#
+          and BLCT.HIEULUC = 1
+          and BL.BENHVIEN_ID = #BENHVIEN_ID#
+          and (bl.MAX_NUMBER > BLCT.CURRENT_NUMBER  or BLCT.CURRENT_NUMBER is null)
+          <isNotEmpty prepend="and" property="BIENLAICHITIET_ID">
+            BLCT.BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$'
+          </isNotEmpty>
+          order by BLCT.THOIGIANSUDUNG DESC-->
+          select
+          BLCT.BIENLAICHITIET_ID
+          ,BL.BIENLAI_ID
+          ,BL.LOAIBIENLAI_ID
+          ,BL.LOAIBIENLAI
+          ,BL.NGAYPHATHANH
+          ,BL.THOIGIANPHATHANH
+          ,BL.KYHIEU
+          ,BL.SERIES
+          ,BL.KYHIEU + '/' + SERIES AS 'KYHIEU_SOQUYEN'
+          ,BL.MIN_NUMBER
+          ,BL.MAX_NUMBER
+          ,BLCT.START_NUMBER
+          ,BLCT.CURRENT_NUMBER
+          ,BLCT.HIEULUC
+          ,BLCT.NGUOISUDUNG_ID
+          from TT_BIENLAICHITIET BLCT
+          left join TT_BIENLAI BL on BL.BIENLAI_ID = BLCT.BIENLAI_ID
+          where
+          (bl.MAX_NUMBER > (select MAX(CURRENT_NUMBER) from TT_BIENLAICHITIET where BIENLAI_ID = BLCT.BIENLAI_ID) or BLCT.CURRENT_NUMBER is null)
+          and BLCT.HIEULUC = 1
+          and BLCT.NGUOISUDUNG_ID =  #NGUOISUDUNG_ID#
+          and BL.BENHVIEN_ID = #BENHVIEN_ID#
+          <isNotEmpty prepend="and" property="BIENLAICHITIET_ID">
+            BLCT.BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$'
+          </isNotEmpty>
+          order by BLCT.THOIGIANSUDUNG DESC
+        </statement>
+      <statement id="DAO00021_GetListSoBienLaiKhiThanhToan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+
+        select top 1
+        BLCT.BIENLAICHITIET_ID
+        ,BL.BIENLAI_ID
+        ,BL.LOAIBIENLAI_ID
+        ,BL.LOAIBIENLAI
+        ,BL.NGAYPHATHANH
+        ,BL.THOIGIANPHATHANH
+        ,BL.KYHIEU
+        ,BL.SERIES
+        ,BL.KYHIEU + '/' + SERIES AS 'KYHIEU_SOQUYEN'
+        ,BL.MIN_NUMBER
+        ,BL.MAX_NUMBER
+        ,BLCT.START_NUMBER
+        ,BLCT.CURRENT_NUMBER
+        ,BLCT.HIEULUC
+        ,BLCT.NGUOISUDUNG_ID
+        from TT_BIENLAICHITIET BLCT
+        left join TT_BIENLAI BL on BL.BIENLAI_ID = BLCT.BIENLAI_ID
+        where
+        (bl.MAX_NUMBER > (select MAX(CURRENT_NUMBER) from TT_BIENLAICHITIET where BIENLAI_ID = BLCT.BIENLAI_ID) or BLCT.CURRENT_NUMBER is null)
+        and BLCT.HIEULUC = 1
+        <!--and BLCT.NGUOISUDUNG_ID =  #NGUOISUDUNG_ID#-->
+        and BL.BENHVIEN_ID = #BENHVIEN_ID#
+        <isNotEmpty prepend="and" property="BIENLAICHITIET_ID">
+          <!--BLCT.BIENLAI_ID in (select BIENLAI_ID from TT_BIENLAICHITIET where BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$')-->
+          exists (select BIENLAI_ID from TT_BIENLAICHITIET where BLCT.BIENLAI_ID = BIENLAI_ID and BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$')
+        </isNotEmpty>
+        order by CURRENT_NUMBER DESC
+
+        update TT_BIENLAICHITIET set CURRENT_NUMBER = isnull((
+        select top 1
+        BLCT.CURRENT_NUMBER
+        from TT_BIENLAICHITIET BLCT
+        left join TT_BIENLAI BL on BL.BIENLAI_ID = BLCT.BIENLAI_ID
+        where
+        (bl.MAX_NUMBER > (select MAX(CURRENT_NUMBER) from TT_BIENLAICHITIET where BIENLAI_ID = BLCT.BIENLAI_ID) or BLCT.CURRENT_NUMBER is null)
+        and
+        BLCT.HIEULUC = 1
+        <!--and  BLCT.BIENLAI_ID in (select BIENLAI_ID from TT_BIENLAICHITIET where BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$')-->
+        and exists (select BIENLAI_ID from TT_BIENLAICHITIET where BLCT.BIENLAI_ID = BIENLAI_ID and BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$')
+        order by CURRENT_NUMBER DESC), 0) + 1 where BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$'
+
+        <!--select top 1
+        BLCT.BIENLAICHITIET_ID
+        ,BL.BIENLAI_ID
+        ,BL.LOAIBIENLAI_ID
+        ,BL.LOAIBIENLAI
+        ,BL.NGAYPHATHANH
+        ,BL.THOIGIANPHATHANH
+        ,BL.KYHIEU
+        ,BL.SERIES
+        ,BL.KYHIEU + '/' + SERIES AS 'KYHIEU_SOQUYEN'
+        ,BL.MIN_NUMBER
+        ,BL.MAX_NUMBER
+        ,BLCT.START_NUMBER
+        ,BLCT.CURRENT_NUMBER
+        ,BLCT.HIEULUC
+        from
+        TT_BIENLAI BL,TT_BIENLAICHITIET BLCT
+        where
+        BL.BIENLAI_ID = BLCT.BIENLAI_ID
+        --><!--and BLCT.NGUOISUDUNG_ID =  #NGUOISUDUNG_ID#--><!--
+        and BLCT.HIEULUC = 1
+        and BL.BENHVIEN_ID = #BENHVIEN_ID#
+        and (BLCT.CURRENT_NUMBER &lt; bl.MAX_NUMBER or BLCT.CURRENT_NUMBER is null)
+        <isNotEmpty prepend="and" property="BIENLAICHITIET_ID">
+        BLCT.BIENLAI_ID in (select BIENLAI_ID from TT_BIENLAICHITIET where BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$')
+      </isNotEmpty>
+        order by CURRENT_NUMBER DESC-->
+      </statement>
+      <statement id="DAO00021_GetAndInsertSoBienLaiKhiThanhToan" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        declare @currentHD int = 1
+        declare @BienlaiId int = 0
+        declare @Sohoadon varchar(100)
+        begin        
+        select top 1
+        @currentHD = isnull(BLCT.CURRENT_NUMBER, BLCT.START_NUMBER)
+        ,@BienlaiId = BL.BIENLAI_ID
+        , @Sohoadon = (BL.KYHIEU + '/' + SERIES + '-' + convert(varchar(50),isnull(BLCT.CURRENT_NUMBER, BLCT.START_NUMBER)))
+        from
+        TT_BIENLAICHITIET BLCT
+        left join TT_BIENLAI BL on BLCT.BIENLAI_ID = BL.BIENLAI_ID
+        where
+        <!--BLCT.BIENLAI_ID in (select BIENLAI_ID from TT_BIENLAICHITIET where BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$')-->
+        exists (select BIENLAI_ID from TT_BIENLAICHITIET where BLCT.BIENLAI_ID = BIENLAI_ID and BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$')
+        order by BLCT.CURRENT_NUMBER desc
+
+        update TT_BIENLAICHITIET set CURRENT_NUMBER = @currentHD + 1, MACHINENAME = '$MACHINENAME$', THOIGIANSUDUNG = getdate()  where BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$'
+        select @Sohoadon as SOHOADON
+        end
+      </statement>
+        <!--Revision:0,6244c24609e103b095911e840c245ada-->
+        <statement id="DAO00021_GetDSBienLai" resultClass="DataObject">
+            select *
+            from TT_BIENLAI
+            where  BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by BIENLAI_ID
+        </statement>
+        <!--Revision:0,330b9c452f07b5e72dfa79b291d96702-->
+        <statement id="DAO00021_TT_BIENLAI_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select TT_BIENLAI.*, TT_BIENLAICHITIET.CURRENT_NUMBER, TT_BIENLAICHITIET.HIEULUC
+            from TT_BIENLAI
+            left join TT_BIENLAICHITIET ON TT_BIENLAICHITIET.BIENLAI_ID = TT_BIENLAI.BIENLAI_ID
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="BIENLAI_ID">
+                        TT_BIENLAI.BIENLAI_ID = '$BIENLAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIBIENLAI_ID">
+                        TT_BIENLAI.LOAIBIENLAI_ID = '$LOAIBIENLAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIBIENLAI">
+                        TT_BIENLAI.LOAIBIENLAI = '$LOAIBIENLAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYPHATHANH">
+                        TT_BIENLAI.NGAYPHATHANH = '$NGAYPHATHANH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANPHATHANH">
+                        TT_BIENLAI.THOIGIANPHATHANH = '$THOIGIANPHATHANH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYHIEU">
+                        TT_BIENLAI.KYHIEU = '$KYHIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SERIES">
+                        TT_BIENLAI.SERIES = '$SERIES$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MIN_NUMBER">
+                        TT_BIENLAI.MIN_NUMBER = '$MIN_NUMBER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAX_NUMBER">
+                        TT_BIENLAI.MAX_NUMBER = '$MAX_NUMBER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_BIENLAI.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_BIENLAI.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_BIENLAI.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MACHINE_NAME">
+                        TT_BIENLAI.MACHINE_NAME = '$MACHINE_NAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOISUDUNG_ID">
+                        TT_BIENLAICHITIET.NGUOISUDUNG_ID = '$NGUOISUDUNG_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by BIENLAI_ID
+        </statement>
+        <!--Revision:0,695ea9502e558fe1fe884b952b73c044-->
+        <statement id="DAO00021_TT_BIENLAI_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_BIENLAI
+            where TT_BIENLAI.BIENLAI_ID  = '$value$'  and BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by BIENLAI_ID
+        </statement>
+        <!--Revision:0,0bebd81c0e457bca584654ff36736dde-->
+        <statement id="DAO00021_TT_BIENLAI_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_BIENLAI
+            where TT_BIENLAI.BIENLAI_ID  = '$BIENLAI_ID$'  and BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by BIENLAI_ID
+        </statement>
+        <!--Revision:0,696329e81c02a37cbff55864ae5418a9-->
+        <statement id="DAO00021_LuuBienLai" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TT_BIENLAI (
+            LOAIBIENLAI_ID
+            , LOAIBIENLAI
+            , NGAYPHATHANH
+            , THOIGIANPHATHANH
+            , KYHIEU
+            , SERIES
+            , MIN_NUMBER
+            , MAX_NUMBER
+            , BENHVIEN_ID
+            , NGUOITAO_ID
+            , NGAYTAO
+            , MACHINE_NAME
+            ) values (
+            #LOAIBIENLAI_ID#
+            , #LOAIBIENLAI#
+            , #NGAYPHATHANH#
+            , #THOIGIANPHATHANH#
+            , #KYHIEU#
+            , #SERIES#
+            , #MIN_NUMBER#
+            , #MAX_NUMBER#
+            , #BENHVIEN_ID#
+            , #NGUOITAO_ID#
+            , #NGAYTAO#
+            , #MACHINE_NAME#
+            )
+            SELECT SCOPE_IDENTITY()
+            <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+        </statement>
+        <!--Revision:0,159dd4002888d97ad64215f29e2aa18d-->
+        <delete id="DAO00021_XoaBienLai" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete TT_BIENLAI
+            where
+            BIENLAI_ID = '$BIENLAI_ID$'  and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </delete>
+        <!--Revision:0,97e94ffeadd5de8afecb0116835513dd-->
+        <update id="DAO00021_CapNhatBienLai" parameterClass="System.Collections.IDictionary">
+            update TT_BIENLAI set
+            LOAIBIENLAI_ID = #LOAIBIENLAI_ID#
+            , LOAIBIENLAI = #LOAIBIENLAI#
+            , NGAYPHATHANH = #NGAYPHATHANH#
+            , THOIGIANPHATHANH = #THOIGIANPHATHANH#
+            , KYHIEU = #KYHIEU#
+            , SERIES = #SERIES#
+            , MIN_NUMBER = #MIN_NUMBER#
+            , MAX_NUMBER = #MAX_NUMBER#
+            <!--, BENHVIEN_ID = #BENHVIEN_ID#
+      , NGUOITAO_ID = #NGUOITAO_ID#
+      , NGAYTAO = #NGAYTAO#-->
+            , MACHINE_NAME = #MACHINE_NAME#
+            where
+            BIENLAI_ID = '$BIENLAI_ID$'
+        </update>
+        <!--Revision:0,8be2129e9100f5bc0f33fdfb308c94a0-->
+        <statement id="DAO00021_TT_BIENLAI_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_BIENLAI
+            where
+            BIENLAI_ID = '$BIENLAI_ID$'
+        </statement>
+        <!--Revision:0,1ba98eb639d58b9b08548ba5fa154efe-->
+        <statement id="DAO00021_TT_BIENLAI_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_BIENLAI
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="BIENLAI_ID">
+                        TT_BIENLAI.BIENLAI_ID = '$BIENLAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIBIENLAI_ID">
+                        TT_BIENLAI.LOAIBIENLAI_ID = '$LOAIBIENLAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIBIENLAI">
+                        TT_BIENLAI.LOAIBIENLAI = '$LOAIBIENLAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYPHATHANH">
+                        TT_BIENLAI.NGAYPHATHANH = '$NGAYPHATHANH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANPHATHANH">
+                        TT_BIENLAI.THOIGIANPHATHANH = '$THOIGIANPHATHANH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KYHIEU">
+                        TT_BIENLAI.KYHIEU = '$KYHIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SERIES">
+                        TT_BIENLAI.SERIES = '$SERIES$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MIN_NUMBER">
+                        TT_BIENLAI.MIN_NUMBER = '$MIN_NUMBER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MAX_NUMBER">
+                        TT_BIENLAI.MAX_NUMBER = '$MAX_NUMBER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_BIENLAI.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_BIENLAI.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_BIENLAI.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MACHINE_NAME">
+                        TT_BIENLAI.MACHINE_NAME = '$MACHINE_NAME$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,78447461fea92eaf7ca8b59bd05b58da-->
+        <statement id="DAO00021_TT_BIENLAICHITIET_GetAll" resultClass="DataObject">
+            select *
+            from TT_BIENLAICHITIET
+            order by BIENLAICHITIET_ID
+        </statement>
+        <!--Revision:0,59dd633e62652d8093f43aec569a7878-->
+        <statement id="DAO00021_TT_BIENLAICHITIET_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_BIENLAICHITIET
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="BIENLAICHITIET_ID">
+                        TT_BIENLAICHITIET.BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BIENLAI_ID">
+                        TT_BIENLAICHITIET.BIENLAI_ID = '$BIENLAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOISUDUNG_ID">
+                        TT_BIENLAICHITIET.NGUOISUDUNG_ID = '$NGUOISUDUNG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MACHINENAME">
+                        TT_BIENLAICHITIET.MACHINENAME = '$MACHINENAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="START_NUMBER">
+                        TT_BIENLAICHITIET.START_NUMBER = '$START_NUMBER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CURRENT_NUMBER">
+                        TT_BIENLAICHITIET.CURRENT_NUMBER = '$CURRENT_NUMBER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANSUDUNG">
+                        TT_BIENLAICHITIET.THOIGIANSUDUNG = '$THOIGIANSUDUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HIEULUC">
+                        TT_BIENLAICHITIET.HIEULUC = '$HIEULUC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_BIENLAICHITIET.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by BIENLAICHITIET_ID
+        </statement>
+        <!--Revision:0,c55d23973873950251893e968fd3c02d-->
+        <statement id="DAO00021_TT_BIENLAICHITIET_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_BIENLAICHITIET
+            where TT_BIENLAICHITIET.BIENLAICHITIET_ID  = '$value$'
+            order by BIENLAICHITIET_ID
+        </statement>
+        <!--Revision:0,1d1d5c9f7da6819bea2d0ce245c78e54-->
+        <statement id="DAO00021_TT_BIENLAICHITIET_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_BIENLAICHITIET
+            where TT_BIENLAICHITIET.BIENLAICHITIET_ID  = '$BIENLAICHITIET_ID$'
+            order by BIENLAICHITIET_ID
+        </statement>
+        <!--Revision:0,7e8849d02fff463c817f6bd2c46db515-->
+        <statement id="DAO00021_ThemBienLaiChiTiet" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TT_BIENLAICHITIET (
+            BIENLAI_ID
+            , NGUOISUDUNG_ID
+            , MACHINENAME
+            , START_NUMBER
+            , CURRENT_NUMBER
+            , THOIGIANSUDUNG
+            , HIEULUC
+            , BENHVIEN_ID
+            ) values (
+            #BIENLAI_ID#
+            , #NGUOISUDUNG_ID#
+            , #MACHINENAME#
+            , #START_NUMBER#
+            , #CURRENT_NUMBER#
+            , #THOIGIANSUDUNG#
+            , #HIEULUC#
+            , #BENHVIEN_ID#
+            )
+            SELECT SCOPE_IDENTITY()
+            <!--<selectKey resultClass="System.Int64" type="post" >
+        SELECT @@IDENTITY as value
+      </selectKey>-->
+        </statement>
+        <!--Revision:0,4a2a193542324641db70b6ececc6b593-->
+        <update id="DAO00021_TT_BIENLAICHITIET_Update" parameterClass="System.Collections.IDictionary">
+            update TT_BIENLAICHITIET set
+            BIENLAI_ID = #BIENLAI_ID#
+            , NGUOISUDUNG_ID = #NGUOISUDUNG_ID#
+            , MACHINENAME = #MACHINENAME#
+            , START_NUMBER = #START_NUMBER#
+            , CURRENT_NUMBER = #CURRENT_NUMBER#
+            , THOIGIANSUDUNG = #THOIGIANSUDUNG#
+            , HIEULUC = #HIEULUC#
+            , BENHVIEN_ID = #BENHVIEN_ID#
+            where
+            BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$'
+        </update>
+        <!--Revision:0,f9e114f6ba210fcc43f0c66b8e9ab6e3-->
+        <update id="DAO00021_TT_BIENLAICHITIET_UpdateCurrentNumber" parameterClass="System.Collections.IDictionary">
+            update TT_BIENLAICHITIET set
+            MACHINENAME = #MACHINENAME#
+            , CURRENT_NUMBER = #CURRENT_NUMBER#
+            , THOIGIANSUDUNG = #THOIGIANSUDUNG#
+            where
+            BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$'
+        </update>
+        <!--Revision:0,4c7c3038dde15ceed4d782468fd2ab6e-->
+        <statement id="DAO00021_TT_BIENLAICHITIET_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_BIENLAICHITIET
+            where
+            BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$'
+        </statement>
+        <!--Revision:0,d2604b2a9cb9badb8a476206bbdf7bcc-->
+        <statement id="DAO00021_TT_BIENLAICHITIET_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_BIENLAICHITIET
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="BIENLAICHITIET_ID">
+                        TT_BIENLAICHITIET.BIENLAICHITIET_ID = '$BIENLAICHITIET_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BIENLAI_ID">
+                        TT_BIENLAICHITIET.BIENLAI_ID = '$BIENLAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOISUDUNG_ID">
+                        TT_BIENLAICHITIET.NGUOISUDUNG_ID = '$NGUOISUDUNG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MACHINENAME">
+                        TT_BIENLAICHITIET.MACHINENAME = '$MACHINENAME$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="START_NUMBER">
+                        TT_BIENLAICHITIET.START_NUMBER = '$START_NUMBER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CURRENT_NUMBER">
+                        TT_BIENLAICHITIET.CURRENT_NUMBER = '$CURRENT_NUMBER$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANSUDUNG">
+                        TT_BIENLAICHITIET.THOIGIANSUDUNG = '$THOIGIANSUDUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HIEULUC">
+                        TT_BIENLAICHITIET.HIEULUC = '$HIEULUC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_BIENLAICHITIET.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+        <!--Revision:0,dd08006e67a9b2d1ab82699e08af4510-->
+        <update id="DAO00021_CapNhatHieuLucBienLai" resultClass="DataObject">
+            update TT_BIENLAICHITIET
+            set HIEULUC = #HIEULUC#
+            where
+            BIENLAI_ID = '$BIENLAI_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </update>
+        <!--Revision:0,5d296a5798b6df1419f73384310a25ba-->
+        <statement id="DAO00021_GetDSBLChiTiet" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_BIENLAICHITIET
+            where
+            BIENLAI_ID = '$BIENLAI_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+        <!--Revision:0,decaa395266744aef380dd4a86453c64-->
+        <delete id="DAO00021_XoaBLChiTiet" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete TT_BIENLAICHITIET
+            where
+            BIENLAI_ID = '$BIENLAI_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </delete>
+        <!--Revision:0,8537fedfffbe3fad38c44c9d9e80cf4f-->
+        <delete id="DAO00021_XoaDSBLChiTiet" parameterClass="HashTable">
+            delete TT_BIENLAICHITIET
+            where  BIENLAICHITIET_ID in
+            <iterate open="(" close=")" conjunction=",  " property="LSTDELNGUOISDID">
+                #LSTDELNGUOISDID[]#
+            </iterate>
+            and BIENLAI_ID = '$BIENLAI_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </delete>
+        <!--Revision:0,58e350fcaf61b3311f1b48677ed4c8ce-->
+        <statement id="DAO00021_GetNhanVienIDByAccountID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT TOP 1 N.NHANVIEN_ID, B.PHONGBAN_ID, B.TENPHONGBAN
+            FROM TBL_USER AS U
+            INNER JOIN TBL_DEPARTMENT AS D ON D.DEPARTMENTID = U.DEPARTMENTID
+            INNER JOIN TBL_COMPANY AS C ON C.COMPANYID = D.COMPANYID
+            INNER JOIN TM_NHANVIEN AS N ON N.NHANVIEN_ID = U.EMPLOYEEID
+            INNER JOIN TM_PHONGBAN AS B ON B.PHONGBAN_ID = N.PHONGBAN_ID
+            WHERE
+            C.COMPANYNAME = '$BENHVIEN_ID$' AND U.USERID = '$ACCOUNTID$'
+        </statement>
+    </statements>
+</sqlMap>

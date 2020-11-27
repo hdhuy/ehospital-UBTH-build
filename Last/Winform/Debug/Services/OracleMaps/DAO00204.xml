@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:1,c49cdbbafaaa8a0b74a57843654a1931-->
+        <statement id="DAO00204_GetListProcedure" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT OBJECT_NAME AS name FROM User_Procedures
+            WHERE OBJECT_TYPE = 'PROCEDURE'
+        </statement>
+        <!--Revision:0,279cbd0fa2a8451e19ee168f5619782d-->
+        <statement id="DAO00204_GetListParameter" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            SELECT ARGUMENT_NAME AS PARAMETER, POSITION AS Idx, '1' AS Allow_Null
+            FROM SYS.ALL_ARGUMENTS
+            WHERE object_name  = '$value$' AND IN_OUT = 'IN'
+            ORDER BY POSITION
+        </statement>
+        <!--Revision:2,0bf602a3b2f3ee034e694a8a2b202d68-->
+        <procedure id="DAO00204_GetReportData" parameterMap="parameters" resultClass="DataObject">
+            $PROCEDURE_NAME$
+        </procedure>
+    </statements>
+  <parameterMaps>
+    <parameterMap id="parameters" class="System.Collections.IDictionary">
+      <parameter property="cv_1"   dbType="RefCursor" direction="Output" column="cv_1"/>
+    </parameterMap>
+  </parameterMaps>
+</sqlMap>

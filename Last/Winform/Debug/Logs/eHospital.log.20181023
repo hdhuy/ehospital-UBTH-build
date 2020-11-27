@@ -1,0 +1,564 @@
+﻿--------------------------------------------------------------------------------
+2018-10-23 09:20:24,365 [1] INFO  - [Application started.]
+2018-10-23 09:20:27,242 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 09:20:29,004 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 09:20:29,023 [1] INFO  - LoadMasters() took 11 ms.
+2018-10-23 09:20:29,024 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 09:23:32,961 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 09:23:37,418 [1] INFO  - [test] Session is starting.
+2018-10-23 09:23:38,443 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:38,978 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:39,025 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:39,070 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:39,117 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:39,192 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:39,231 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:39,277 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:39,317 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:39,778 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:39,861 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:40,102 [6] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 09:23:43,284 [6] INFO  - LoadMasters() took 5,865 ms.
+2018-10-23 09:23:43,293 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 09:37:38,639 [1] INFO  - [Application started.]
+2018-10-23 09:37:40,937 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 09:37:42,348 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 09:37:42,387 [1] INFO  - LoadMasters() took 31 ms.
+2018-10-23 09:37:42,388 [1] INFO  - [_SYSTEM_] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 10:30:11,892 [1] INFO  - [Application started.]
+2018-10-23 10:30:13,251 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 10:30:14,400 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 10:30:14,417 [1] INFO  - LoadMasters() took 8 ms.
+2018-10-23 10:30:14,417 [1] INFO  - [_SYSTEM_] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 11:06:50,858 [1] INFO  - [Application started.]
+2018-10-23 11:06:52,211 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 11:06:52,872 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 11:06:52,889 [1] INFO  - LoadMasters() took 9 ms.
+2018-10-23 11:06:52,890 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 11:07:27,352 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 11:07:29,327 [1] INFO  - [test] Session is starting.
+2018-10-23 11:07:29,843 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:07:30,128 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:07:30,166 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:07:30,207 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:07:30,247 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:07:30,282 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:07:30,319 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:07:30,354 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:07:30,389 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:07:30,830 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:07:30,874 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:07:31,067 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+--------------------------------------------------------------------------------
+2018-10-23 11:08:04,173 [1] INFO  - [Application started.]
+2018-10-23 11:08:05,492 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 11:08:06,148 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 11:08:06,171 [1] INFO  - LoadMasters() took 10 ms.
+2018-10-23 11:08:06,172 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 11:08:10,512 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 11:08:12,107 [1] INFO  - [test] Session is starting.
+2018-10-23 11:08:12,549 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:12,725 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:12,767 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:12,813 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:12,849 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:12,891 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:12,940 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:12,989 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:13,028 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:13,477 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:13,542 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:13,772 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:08:16,651 [5] INFO  - LoadMasters() took 4,543 ms.
+2018-10-23 11:08:16,669 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 11:33:49,804 [1] INFO  - [Application started.]
+2018-10-23 11:33:51,309 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 11:33:52,149 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 11:33:52,171 [1] INFO  - LoadMasters() took 9 ms.
+2018-10-23 11:33:52,172 [1] INFO  - [_SYSTEM_] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 11:42:58,959 [1] INFO  - [Application started.]
+2018-10-23 11:43:00,242 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 11:43:01,166 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 11:43:01,184 [1] INFO  - LoadMasters() took 9 ms.
+2018-10-23 11:43:01,185 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 11:43:05,281 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 11:43:06,944 [1] INFO  - [test] Session is starting.
+2018-10-23 11:43:07,355 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:07,555 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:07,598 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:07,639 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:07,685 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:07,727 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:07,783 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:07,835 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:07,873 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:08,322 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:08,382 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:08,619 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:43:13,343 [5] INFO  - LoadMasters() took 6,398 ms.
+2018-10-23 11:43:13,354 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 11:45:36,306 [1] INFO  - [Application started.]
+2018-10-23 11:45:37,875 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 11:45:38,709 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 11:45:38,730 [1] INFO  - LoadMasters() took 11 ms.
+2018-10-23 11:45:38,731 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 11:45:45,116 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 11:45:46,609 [1] INFO  - [test] Session is starting.
+2018-10-23 11:45:47,022 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:47,187 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:47,222 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:47,261 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:47,307 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:47,358 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:47,394 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:47,429 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:47,464 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:47,910 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:47,967 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:48,239 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 11:45:52,907 [7] INFO  - LoadMasters() took 6,297 ms.
+2018-10-23 11:45:52,926 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 13:35:29,713 [1] INFO  - [Application started.]
+2018-10-23 13:35:31,332 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 13:35:32,063 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 13:35:32,083 [1] INFO  - LoadMasters() took 7 ms.
+2018-10-23 13:35:32,084 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 13:35:35,845 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 13:35:37,320 [1] INFO  - [test] Session is starting.
+2018-10-23 13:35:37,728 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:37,908 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:37,961 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:38,013 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:38,068 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:38,104 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:38,145 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:38,182 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:38,221 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:38,668 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:38,716 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:38,923 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:35:43,879 [5] INFO  - LoadMasters() took 6,557 ms.
+2018-10-23 13:35:43,889 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 13:53:37,214 [1] INFO  - [Application started.]
+2018-10-23 13:53:38,750 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 13:53:39,550 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 13:53:39,572 [1] INFO  - LoadMasters() took 8 ms.
+2018-10-23 13:53:39,573 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 13:53:43,191 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 13:53:44,559 [1] INFO  - [test] Session is starting.
+2018-10-23 13:53:44,951 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:45,131 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:45,176 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:45,211 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:45,262 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:45,303 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:45,348 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:45,383 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:45,451 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:45,907 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:45,961 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:46,172 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 13:53:48,927 [5] INFO  - LoadMasters() took 4,366 ms.
+2018-10-23 13:53:48,938 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 14:07:39,442 [1] INFO  - [Application started.]
+2018-10-23 14:07:40,674 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 14:07:41,789 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 14:07:41,816 [1] INFO  - LoadMasters() took 12 ms.
+2018-10-23 14:07:41,817 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 14:07:52,893 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 14:07:54,461 [1] INFO  - [test] Session is starting.
+2018-10-23 14:07:54,873 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:55,068 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:55,107 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:55,142 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:55,176 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:55,211 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:55,244 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:55,280 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:55,313 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:55,746 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:55,789 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:56,001 [7] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:07:58,572 [7] INFO  - LoadMasters() took 4,109 ms.
+2018-10-23 14:07:58,583 [1] INFO  - [test] Session started.
+2018-10-23 14:11:00,899 [1] ERROR - Error when executing 'DAO00080_Update_BenhAn_YHCT'
+--------------------------------------------------------------------------------
+2018-10-23 14:17:09,242 [1] INFO  - [Application started.]
+2018-10-23 14:17:10,494 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 14:17:11,135 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 14:17:11,150 [1] INFO  - LoadMasters() took 8 ms.
+2018-10-23 14:17:11,151 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 14:17:44,668 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 14:17:45,968 [1] INFO  - [test] Session is starting.
+2018-10-23 14:17:46,369 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:46,551 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:46,588 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:46,623 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:46,660 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:46,695 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:46,730 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:46,766 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:46,801 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:47,249 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:47,303 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:47,559 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:17:50,219 [5] INFO  - LoadMasters() took 4,249 ms.
+2018-10-23 14:17:50,231 [1] INFO  - [test] Session started.
+2018-10-23 14:19:56,353 [1] ERROR - Error when executing 'DAO00080_Update_BenhAn_YHCT'
+--------------------------------------------------------------------------------
+2018-10-23 14:23:14,974 [1] INFO  - [Application started.]
+2018-10-23 14:23:16,242 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 14:23:17,123 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 14:23:17,142 [1] INFO  - LoadMasters() took 8 ms.
+2018-10-23 14:23:17,143 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 14:23:21,142 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 14:23:22,469 [1] INFO  - [test] Session is starting.
+2018-10-23 14:23:22,869 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:23,029 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:23,066 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:23,105 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:23,152 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:23,193 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:23,232 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:23,271 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:23,310 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:23,759 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:23,803 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:24,048 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:23:26,736 [5] INFO  - LoadMasters() took 4,266 ms.
+2018-10-23 14:23:26,749 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 14:33:13,253 [1] INFO  - [Application started.]
+2018-10-23 14:33:14,576 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 14:33:15,290 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 14:33:15,304 [1] INFO  - LoadMasters() took 7 ms.
+2018-10-23 14:33:15,305 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 14:33:18,924 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 14:33:20,314 [1] INFO  - [test] Session is starting.
+2018-10-23 14:33:20,718 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:20,892 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:20,931 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:20,966 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:21,002 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:21,047 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:21,087 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:21,126 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:21,162 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:21,612 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:21,661 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:21,872 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:33:24,539 [5] INFO  - LoadMasters() took 4,223 ms.
+2018-10-23 14:33:24,549 [1] INFO  - [test] Session started.
+2018-10-23 14:34:21,997 [1] ERROR - Error when executing 'DAO00080_Update_BenhAn_YHCT'
+2018-10-23 14:35:11,281 [1] ERROR - Lỗi kết nối database: Incorrect syntax near '='.
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '='.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done)
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount)
+   at FPT.Framework.DataAccess.EntityMapper.Update(String statementName, Object objParam)
+   at FPT.Framework.DataAccess.DaoBase.Update(String strStatementId, Object parameters)
+   at FPT.eHospital.DataAccess.DaoWrapper.Update(String strStatementId, Object parameters)
+   at FPT.eHospital.Services.IPD003.InternalExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\07.SvcIPD\IPD003.cs:line 131
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3)
+   at FPT.eHospital.Services.IPD003.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\07.SvcIPD\IPD003.cs:line 23
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters)
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.IPD.VMIPDA6.AddUpdateBenhAnChuyenKhoa(IDictionary`2 dicSave) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\MedicalSpecialty\VMIPDA6.cs:line 205
+   at FPT.eHospital.Forms.IPD.VMIPDA6.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\MedicalSpecialty\VMIPDA6.cs:line 246
+   at FPT.eHospital.Forms.IPD.VMIPDA6.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\MedicalSpecialty\VMIPDA6.cs:line 284
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+ClientConnectionId:e982b70e-37f5-4aeb-b618-6bdb7c4d95a0
+Error Number:102,State:1,Class:15
+2018-10-23 14:35:24,333 [1] ERROR - Error when executing 'DAO00080_Update_BenhAn_YHCT'
+2018-10-23 14:35:29,751 [1] ERROR - Lỗi kết nối database: Incorrect syntax near '='.
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '='.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteNonQuery()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteUpdate(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.Update(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done)
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount)
+   at FPT.Framework.DataAccess.EntityMapper.Update(String statementName, Object objParam)
+   at FPT.Framework.DataAccess.DaoBase.Update(String strStatementId, Object parameters)
+   at FPT.eHospital.DataAccess.DaoWrapper.Update(String strStatementId, Object parameters)
+   at FPT.eHospital.Services.IPD003.InternalExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\07.SvcIPD\IPD003.cs:line 131
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3)
+   at FPT.eHospital.Services.IPD003.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\07.SvcIPD\IPD003.cs:line 23
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters)
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.IPD.VMIPDA6.AddUpdateBenhAnChuyenKhoa(IDictionary`2 dicSave) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\MedicalSpecialty\VMIPDA6.cs:line 205
+   at FPT.eHospital.Forms.IPD.VMIPDA6.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\MedicalSpecialty\VMIPDA6.cs:line 246
+   at FPT.eHospital.Forms.IPD.VMIPDA6.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\MedicalSpecialty\VMIPDA6.cs:line 284
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)
+ClientConnectionId:e982b70e-37f5-4aeb-b618-6bdb7c4d95a0
+Error Number:102,State:1,Class:15
+--------------------------------------------------------------------------------
+2018-10-23 14:50:43,514 [1] INFO  - [Application started.]
+2018-10-23 14:50:45,107 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 14:50:45,900 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 14:50:45,924 [1] INFO  - LoadMasters() took 10 ms.
+2018-10-23 14:50:45,925 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 14:54:09,936 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 14:54:11,133 [1] INFO  - [test] Session is starting.
+2018-10-23 14:54:11,561 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:11,724 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:11,761 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:11,796 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:11,834 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:11,869 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:11,904 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:11,938 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:11,976 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:12,417 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:12,477 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:12,700 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 14:54:15,305 [5] INFO  - LoadMasters() took 4,171 ms.
+2018-10-23 14:54:15,319 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 15:05:34,329 [1] INFO  - [Application started.]
+2018-10-23 15:05:35,515 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 15:05:36,204 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 15:05:36,219 [1] INFO  - LoadMasters() took 7 ms.
+2018-10-23 15:05:36,220 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 15:06:02,255 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 15:06:03,456 [1] INFO  - [test] Session is starting.
+2018-10-23 15:06:03,830 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:03,995 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:04,031 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:04,067 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:04,105 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:04,141 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:04,175 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:04,210 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:04,253 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:04,705 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:04,754 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:04,981 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:06:07,505 [5] INFO  - LoadMasters() took 4,047 ms.
+2018-10-23 15:06:07,518 [1] INFO  - [test] Session started.
+--------------------------------------------------------------------------------
+2018-10-23 15:15:58,539 [1] INFO  - [Application started.]
+2018-10-23 15:15:59,832 [1] ERROR - Session created fail!
+System.IO.FileNotFoundException: Could not find file 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'.
+File name: 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\HotKeys.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at FPT.Framework.Platform.WinStorage.CreateInputFileStream(String strPath)
+   at FPT.Framework.Application.ApplicationSession..ctor(ApplicationContext appContext, IUserProfile profile)
+2018-10-23 15:16:00,550 [1] INFO  - [_SYSTEM_] Session is starting.
+2018-10-23 15:16:00,567 [1] INFO  - LoadMasters() took 8 ms.
+2018-10-23 15:16:00,568 [1] INFO  - [_SYSTEM_] Session started.
+2018-10-23 15:16:33,783 [1] ERROR - 'D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\99.Build\Last\Winform\Debug\Services\SQLMaps\DAO00450.xml' not found.
+2018-10-23 15:16:35,230 [1] INFO  - [test] Session is starting.
+2018-10-23 15:16:35,631 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:35,845 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:35,886 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:35,929 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:35,975 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:36,011 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:36,050 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:36,085 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:36,120 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:36,569 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:36,618 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:36,837 [5] DEBUG - Hospital_ID = BENHVIEN_ID = FPT00001
+2018-10-23 15:16:39,419 [5] INFO  - LoadMasters() took 4,187 ms.
+2018-10-23 15:16:39,435 [1] INFO  - [test] Session started.
+2018-10-23 15:19:28,490 [1] ERROR - Error when executing 'DAO00080_KiemtraBenhAnRaVien'
+2018-10-23 15:19:39,032 [1] ERROR - Lỗi kết nối database: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0".
+IBatisNet.DataMapper.Exceptions.DataMapperException: Unable to open connection to "Microsoft SQL Server, provider V4.0.0.0 in framework .NET V4.0". ---> System.Data.SqlClient.SqlException: A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.) ---> System.ComponentModel.Win32Exception: The network connection was aborted by the local system
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlDelegatedTransaction.Initialize()
+   at System.Transactions.TransactionStatePSPEOperation.PSPEInitialize(InternalTransaction tx, IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType)
+   at System.Transactions.TransactionStateActive.EnlistPromotableSinglePhase(InternalTransaction tx, IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Transaction atomicTransaction, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType)
+   at System.Transactions.Transaction.EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification)
+   at System.Data.SqlClient.SqlInternalConnection.EnlistNonNull(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnection.Enlist(Transaction tx)
+   at System.Data.SqlClient.SqlInternalConnectionTds.Activate(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionInternal.ActivateConnection(Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.PrepareConnection(DbConnection owningObject, DbConnectionInternal obj, Transaction transaction)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   --- End of inner exception stack trace ---
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection(String connectionString)
+   at IBatisNet.DataMapper.SqlMapSession.OpenConnection()
+   at IBatisNet.DataMapper.Commands.DbCommandDecorator.System.Data.IDbCommand.ExecuteReader()
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.RunQueryForObject(RequestScope request, ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject, Object resultObject)
+   at IBatisNet.DataMapper.MappedStatements.MappedStatement.ExecuteQueryForObject(ISqlMapSession session, Object parameterObject)
+   at IBatisNet.DataMapper.SqlMapper.QueryForObject(String statementName, Object parameterObject)
+   at FPT.Framework.DataAccess.EntityMapper.InternalExecute[T](Func`3 func, String statement, Object param, Boolean& done)
+   at FPT.Framework.DataAccess.EntityMapper.Execute[T](Func`3 func, String statement, Object param, Int32 tryCount)
+   at FPT.Framework.DataAccess.EntityMapper.QueryForObject(String statementName, Object objParam)
+   at FPT.Framework.DataAccess.DaoBase.QueryForObject(String strStatementId, Object parameters)
+   at FPT.eHospital.DataAccess.DaoWrapper.QueryForObject(String strStatementId, Object parameters)
+   at FPT.eHospital.Services.IPD003.InternalExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\07.SvcIPD\IPD003.cs:line 141
+   at FPT.Framework.DataAccess.DaoProvider.TransactionExecute[T1,T2,T3,TResult](Func`4 doMethod, T1 param1, T2 param2, T3 param3)
+   at FPT.eHospital.Services.IPD003.ExecuteForObject(String target, String action, IDictionary`2 parameters) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\04.Services\07.SvcIPD\IPD003.cs:line 23
+   at FPT.Framework.DataService.DirectService.ExecuteForObject(String target, String action, IDictionary`2 parameters)
+   at FPT.eHospital.Forms.Base.VMHosBase.ExecuteForObject(String svcname, String target, String action, IDictionary`2 parameters) in E:\Working\eHospital\trunk\02.eHospital\05.Screens\00.ScrSYS\VMHosBase.cs:line 115
+   at FPT.eHospital.Forms.IPD.VMIPDA6.Save() in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\MedicalSpecialty\VMIPDA6.cs:line 215
+   at FPT.eHospital.Forms.IPD.VMIPDA6.CmdToolbarLuu(ICmdParameter p) in D:\FPT_IS\4.Project\25.SYT-DaNang\5.trunk\02.eHospital\05.Screens\07.ScrIPD\MedicalSpecialty\VMIPDA6.cs:line 284
+   at FPT.Framework.Presentation.VMCommand.Execute(Object parameter)

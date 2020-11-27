@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,6570f22d4c721540fbdb4d6a60845a17-->
+        <statement id="DAO00077_GetAll" resultClass="DataObject">
+            select *
+            from TT_NOITRU_CHAMSOC
+            order by CHAMSOC_ID
+        </statement>
+        <!--Revision:0,4b9fbb995b0919347de24f1010ef1da7-->
+        <statement id="DAO00077_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_NOITRU_CHAMSOC
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CHAMSOC_ID">
+                        TT_NOITRU_CHAMSOC.CHAMSOC_ID = '$CHAMSOC_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHAN_ID">
+                        TT_NOITRU_CHAMSOC.BENHAN_ID = '$BENHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRU_ID">
+                        TT_NOITRU_CHAMSOC.LUUTRU_ID = '$LUUTRU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DOITUONG_ID">
+                        TT_NOITRU_CHAMSOC.DOITUONG_ID = '$DOITUONG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTHUCHIEN">
+                        TT_NOITRU_CHAMSOC.NGAYTHUCHIEN = '$NGAYTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANTHUCHIEN">
+                        TT_NOITRU_CHAMSOC.THOIGIANTHUCHIEN = '$THOIGIANTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITHUCHIEN_ID">
+                        TT_NOITRU_CHAMSOC.NGUOITHUCHIEN_ID = '$NGUOITHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MACH">
+                        TT_NOITRU_CHAMSOC.MACH = '$MACH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHIETDO">
+                        TT_NOITRU_CHAMSOC.NHIETDO = '$NHIETDO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HUYETAPTHAP">
+                        TT_NOITRU_CHAMSOC.HUYETAPTHAP = '$HUYETAPTHAP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HUYETAPCAO">
+                        TT_NOITRU_CHAMSOC.HUYETAPCAO = '$HUYETAPCAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CANNANG">
+                        TT_NOITRU_CHAMSOC.CANNANG = '$CANNANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHIPTHO">
+                        TT_NOITRU_CHAMSOC.NHIPTHO = '$NHIPTHO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MUCDODAU">
+                        TT_NOITRU_CHAMSOC.MUCDODAU = '$MUCDODAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHIEUCAO">
+                        TT_NOITRU_CHAMSOC.CHIEUCAO = '$CHIEUCAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SPO2">
+                        TT_NOITRU_CHAMSOC.SPO2 = '$SPO2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NUOCTIEU">
+                        TT_NOITRU_CHAMSOC.NUOCTIEU = '$NUOCTIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHAN">
+                        TT_NOITRU_CHAMSOC.PHAN = '$PHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DIENBENH">
+                        TT_NOITRU_CHAMSOC.DIENBENH = '$DIENBENH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="YLENHCHAMSOC">
+                        TT_NOITRU_CHAMSOC.YLENHCHAMSOC = '$YLENHCHAMSOC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHANDOANDIEUDUONG">
+                        TT_NOITRU_CHAMSOC.CHANDOANDIEUDUONG = '$CHANDOANDIEUDUONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUONGGIA">
+                        TT_NOITRU_CHAMSOC.LUONGGIA = '$LUONGGIA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="UONG">
+                        TT_NOITRU_CHAMSOC.UONG = '$UONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="AN">
+                        TT_NOITRU_CHAMSOC.AN = '$AN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEMTRUYEN">
+                        TT_NOITRU_CHAMSOC.TIEMTRUYEN = '$TIEMTRUYEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRUYENMAU">
+                        TT_NOITRU_CHAMSOC.TRUYENMAU = '$TRUYENMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NON">
+                        TT_NOITRU_CHAMSOC.NON = '$NON$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DANLUU">
+                        TT_NOITRU_CHAMSOC.DANLUU = '$DANLUU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHDANLUU1">
+                        TT_NOITRU_CHAMSOC.DICHDANLUU1 = '$DICHDANLUU1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHDANLUU2">
+                        TT_NOITRU_CHAMSOC.DICHDANLUU2 = '$DICHDANLUU2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GHICHU">
+                        TT_NOITRU_CHAMSOC.GHICHU = '$GHICHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_NOITRU_CHAMSOC.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_NOITRU_CHAMSOC.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_NOITRU_CHAMSOC.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_NOITRU_CHAMSOC.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_NOITRU_CHAMSOC.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by CHAMSOC_ID
+        </statement>
+        <!--Revision:0,9cd64a58c5be5aa316f50eb3af8e3753-->
+        <statement id="DAO00077_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_NOITRU_CHAMSOC
+            where TT_NOITRU_CHAMSOC.CHAMSOC_ID  = '$value$'
+            order by CHAMSOC_ID
+        </statement>
+        <!--Revision:0,b7377fd2b9ce4685cd8153b8ff672d3d-->
+        <statement id="DAO00077_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_NOITRU_CHAMSOC
+            where TT_NOITRU_CHAMSOC.CHAMSOC_ID  = '$CHAMSOC_ID$'
+            order by CHAMSOC_ID
+        </statement>
+        <!--Revision:0,5ead342833095b59d9bb8a730a771ed1-->
+        <insert id="DAO00077_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            <selectKey property="ID" type="pre" resultClass="System.Int64">
+              select TT_NOITRU_CHAMSOC_S.nextval as value from dual
+            </selectKey>
+            insert into TT_NOITRU_CHAMSOC (
+            CHAMSOC_ID
+            , BENHAN_ID
+            , LUUTRU_ID
+            , DOITUONG_ID
+            , NGAYTHUCHIEN
+            , THOIGIANTHUCHIEN
+            , NGUOITHUCHIEN_ID
+            , MACH
+            , NHIETDO
+            , HUYETAPTHAP
+            , HUYETAPCAO
+            , CANNANG
+            , NHIPTHO
+            , MUCDODAU
+            , CHIEUCAO
+            , SPO2
+            , NUOCTIEU
+            , PHAN
+            , DIENBENH
+            , YLENHCHAMSOC
+            , CHANDOANDIEUDUONG
+            , LUONGGIA
+            , UONG
+            , AN
+            , TIEMTRUYEN
+            , TRUYENMAU
+            , NON
+            , DANLUU
+            , DICHDANLUU1
+            , DICHDANLUU2
+            , GHICHU
+            , BENHVIEN_ID
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            ) values (
+            #ID#
+            , #BENHAN_ID#
+            , #LUUTRU_ID#
+            , #DOITUONG_ID#
+            , #NGAYTHUCHIEN#
+            , #THOIGIANTHUCHIEN#
+            , #NGUOITHUCHIEN_ID#
+            , #MACH#
+            , #NHIETDO#
+            , #HUYETAPTHAP#
+            , #HUYETAPCAO#
+            , #CANNANG#
+            , #NHIPTHO#
+            , #MUCDODAU#
+            , #CHIEUCAO#
+            , #SPO2#
+            , #NUOCTIEU#
+            , #PHAN#
+            , #DIENBENH#
+            , #YLENHCHAMSOC#
+            , #CHANDOANDIEUDUONG#
+            , #LUONGGIA#
+            , #UONG#
+            , #AN#
+            , #TIEMTRUYEN#
+            , #TRUYENMAU#
+            , #NON#
+            , #DANLUU#
+            , #DICHDANLUU1#
+            , #DICHDANLUU2#
+            , #GHICHU#
+            , #BENHVIEN_ID#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            )
+        </insert>
+        <!--Revision:0,3b811adc57d097282e2c1dbd91d5a5f6-->
+        <update id="DAO00077_Update" parameterClass="System.Collections.IDictionary">
+            update TT_NOITRU_CHAMSOC set
+            BENHAN_ID = #BENHAN_ID#
+            , LUUTRU_ID = #LUUTRU_ID#
+            , DOITUONG_ID = #DOITUONG_ID#
+            , NGAYTHUCHIEN = #NGAYTHUCHIEN#
+            , THOIGIANTHUCHIEN = #THOIGIANTHUCHIEN#
+            , NGUOITHUCHIEN_ID = #NGUOITHUCHIEN_ID#
+            , MACH = #MACH#
+            , NHIETDO = #NHIETDO#
+            , HUYETAPTHAP = #HUYETAPTHAP#
+            , HUYETAPCAO = #HUYETAPCAO#
+            , CANNANG = #CANNANG#
+            , NHIPTHO = #NHIPTHO#
+            , MUCDODAU = #MUCDODAU#
+            , CHIEUCAO = #CHIEUCAO#
+            , SPO2 = #SPO2#
+            , NUOCTIEU = #NUOCTIEU#
+            , PHAN = #PHAN#
+            , DIENBENH = #DIENBENH#
+            , YLENHCHAMSOC = #YLENHCHAMSOC#
+            , CHANDOANDIEUDUONG = #CHANDOANDIEUDUONG#
+            , LUONGGIA = #LUONGGIA#
+            , UONG = #UONG#
+            , AN = #AN#
+            , TIEMTRUYEN = #TIEMTRUYEN#
+            , TRUYENMAU = #TRUYENMAU#
+            , NON = #NON#
+            , DANLUU = #DANLUU#
+            , DICHDANLUU1 = #DICHDANLUU1#
+            , DICHDANLUU2 = #DICHDANLUU2#
+            , GHICHU = #GHICHU#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            CHAMSOC_ID = '$CHAMSOC_ID$'
+        </update>
+        <!--Revision:0,de731cc3ca6e49993dff04bafb23100a-->
+        <statement id="DAO00077_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_NOITRU_CHAMSOC
+            where
+            CHAMSOC_ID = '$CHAMSOC_ID$'
+        </statement>
+        <!--Revision:0,450382bb3fbe0c8aa312b7802af127ee-->
+        <statement id="DAO00077_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_NOITRU_CHAMSOC
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="CHAMSOC_ID">
+                        TT_NOITRU_CHAMSOC.CHAMSOC_ID = '$CHAMSOC_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHAN_ID">
+                        TT_NOITRU_CHAMSOC.BENHAN_ID = '$BENHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRU_ID">
+                        TT_NOITRU_CHAMSOC.LUUTRU_ID = '$LUUTRU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DOITUONG_ID">
+                        TT_NOITRU_CHAMSOC.DOITUONG_ID = '$DOITUONG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTHUCHIEN">
+                        TT_NOITRU_CHAMSOC.NGAYTHUCHIEN = '$NGAYTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANTHUCHIEN">
+                        TT_NOITRU_CHAMSOC.THOIGIANTHUCHIEN = '$THOIGIANTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITHUCHIEN_ID">
+                        TT_NOITRU_CHAMSOC.NGUOITHUCHIEN_ID = '$NGUOITHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MACH">
+                        TT_NOITRU_CHAMSOC.MACH = '$MACH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHIETDO">
+                        TT_NOITRU_CHAMSOC.NHIETDO = '$NHIETDO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HUYETAPTHAP">
+                        TT_NOITRU_CHAMSOC.HUYETAPTHAP = '$HUYETAPTHAP$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HUYETAPCAO">
+                        TT_NOITRU_CHAMSOC.HUYETAPCAO = '$HUYETAPCAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CANNANG">
+                        TT_NOITRU_CHAMSOC.CANNANG = '$CANNANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHIPTHO">
+                        TT_NOITRU_CHAMSOC.NHIPTHO = '$NHIPTHO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MUCDODAU">
+                        TT_NOITRU_CHAMSOC.MUCDODAU = '$MUCDODAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHIEUCAO">
+                        TT_NOITRU_CHAMSOC.CHIEUCAO = '$CHIEUCAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SPO2">
+                        TT_NOITRU_CHAMSOC.SPO2 = '$SPO2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NUOCTIEU">
+                        TT_NOITRU_CHAMSOC.NUOCTIEU = '$NUOCTIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="PHAN">
+                        TT_NOITRU_CHAMSOC.PHAN = '$PHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DIENBENH">
+                        TT_NOITRU_CHAMSOC.DIENBENH = '$DIENBENH$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="YLENHCHAMSOC">
+                        TT_NOITRU_CHAMSOC.YLENHCHAMSOC = '$YLENHCHAMSOC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHANDOANDIEUDUONG">
+                        TT_NOITRU_CHAMSOC.CHANDOANDIEUDUONG = '$CHANDOANDIEUDUONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUONGGIA">
+                        TT_NOITRU_CHAMSOC.LUONGGIA = '$LUONGGIA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="UONG">
+                        TT_NOITRU_CHAMSOC.UONG = '$UONG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="AN">
+                        TT_NOITRU_CHAMSOC.AN = '$AN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEMTRUYEN">
+                        TT_NOITRU_CHAMSOC.TIEMTRUYEN = '$TIEMTRUYEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRUYENMAU">
+                        TT_NOITRU_CHAMSOC.TRUYENMAU = '$TRUYENMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NON">
+                        TT_NOITRU_CHAMSOC.NON = '$NON$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DANLUU">
+                        TT_NOITRU_CHAMSOC.DANLUU = '$DANLUU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHDANLUU1">
+                        TT_NOITRU_CHAMSOC.DICHDANLUU1 = '$DICHDANLUU1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHDANLUU2">
+                        TT_NOITRU_CHAMSOC.DICHDANLUU2 = '$DICHDANLUU2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GHICHU">
+                        TT_NOITRU_CHAMSOC.GHICHU = '$GHICHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_NOITRU_CHAMSOC.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_NOITRU_CHAMSOC.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_NOITRU_CHAMSOC.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_NOITRU_CHAMSOC.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_NOITRU_CHAMSOC.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

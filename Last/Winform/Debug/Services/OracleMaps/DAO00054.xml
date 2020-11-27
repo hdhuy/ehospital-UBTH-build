@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,3cf2c1c127975ce0520f466c92528a80-->
+        <statement id="DAO00054_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from VIEW_DVYEUCAU_CLSKETQUACHITIET
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+                        DVYEUCAU_ID = '$DVYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                        TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHAN_ID">
+                        BENHAN_ID = '$BENHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHAMBENH_ID">
+                        KHAMBENH_ID = '$KHAMBENH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SODICHVUYEUCAU">
+                        SODICHVUYEUCAU = '$SODICHVUYEUCAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOPHIEUYEUCAU">
+                        SOPHIEUYEUCAU = '$SOPHIEUYEUCAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SOTHUTU">
+                        SOTHUTU = '$SOTHUTU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHNHAN_ID">
+                        BENHNHAN_ID = '$BENHNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DOITUONG_ID">
+                        DOITUONG_ID = '$DOITUONG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHVU_ID">
+                        DICHVU_ID = '$DICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSICHIDINH_ID">
+                        BACSICHIDINH_ID = '$BACSICHIDINH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GIOYEUCAU">
+                        GIOYEUCAU = '$GIOYEUCAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYYEUCAU">
+                        NGAYYEUCAU = '$NGAYYEUCAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THANGYEUCAU">
+                        THANGYEUCAU = '$THANGYEUCAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NAMYEUCAU">
+                        NAMYEUCAU = '$NAMYEUCAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYGIOYEUCAU">
+                        NGAYGIOYEUCAU = '$NGAYGIOYEUCAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THUTUYEUCAU">
+                        THUTUYEUCAU = '$THUTUYEUCAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOIYEUCAU_ID">
+                        NOIYEUCAU_ID = '$NOIYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOITHUCHIEN_ID">
+                        NOITHUCHIEN_ID = '$NOITHUCHIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRANGTHAI_HANGDOI">
+                        TRANGTHAI_HANGDOI = '$TRANGTHAI_HANGDOI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOIDUNGCHITIET">
+                        NOIDUNGCHITIET = '$NOIDUNGCHITIET$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CHANDOAN">
+                        CHANDOAN = '$CHANDOAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LUUTRU_ID">
+                        LUUTRU_ID = '$LUUTRU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SODICHVUDONGTIEN">
+                        SODICHVUDONGTIEN = '$SODICHVUDONGTIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHVU_KHAMBENH_ID">
+                        DICHVU_KHAMBENH_ID = '$DICHVU_KHAMBENH_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DALAYMAU">
+                        DALAYMAU = '$DALAYMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SINHTHIET">
+                        SINHTHIET = '$SINHTHIET$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CLOTEST">
+                        CLOTEST = '$CLOTEST$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEMCANQUANG">
+                        TIEMCANQUANG = '$TIEMCANQUANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRIEUCHUNG">
+                        TRIEUCHUNG = '$TRIEUCHUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DAITHE">
+                        DAITHE = '$DAITHE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="VITHE">
+                        VITHE = '$VITHE$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHPHAM">
+                        BENHPHAM = '$BENHPHAM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DANHANBENHPHAM">
+                        DANHANBENHPHAM = '$DANHANBENHPHAM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYNHANBENHPHAM">
+                        NGAYNHANBENHPHAM = '$NGAYNHANBENHPHAM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANNHANBENHPHAM">
+                        THOIGIANNHANBENHPHAM = '$THOIGIANNHANBENHPHAM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOINHANBENHPHAM_ID">
+                        NGUOINHANBENHPHAM_ID = '$NGUOINHANBENHPHAM_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MANGUOINHAPBENHPHAM">
+                        MANGUOINHAPBENHPHAM = '$MANGUOINHAPBENHPHAM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNGUOINHAPBENHPHAM">
+                        TENNGUOINHAPBENHPHAM = '$TENNGUOINHAPBENHPHAM$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETQUAXNKHAC">
+                        KETQUAXNKHAC = '$KETQUAXNKHAC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="YEUCAUBENNGOAI">
+                        YEUCAUBENNGOAI = '$YEUCAUBENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THUCHIENBENNGOAI">
+                        THUCHIENBENNGOAI = '$THUCHIENBENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DONVIBENNGOAI_ID">
+                        DONVIBENNGOAI_ID = '$DONVIBENNGOAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BACSIBENNGOAI_ID">
+                        BACSIBENNGOAI_ID = '$BACSIBENNGOAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENBACSIBENNGOAI">
+                        TENBACSIBENNGOAI = '$TENBACSIBENNGOAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOABENNGOAI_ID">
+                        KHOABENNGOAI_ID = '$KHOABENNGOAI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NOITHUCHIENTHAYDOI_ID">
+                        NOITHUCHIENTHAYDOI_ID = '$NOITHUCHIENTHAYDOI_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LOAIKHACHHANG_ID">
+                        LOAIKHACHHANG_ID = '$LOAIKHACHHANG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THE_ID">
+                        THE_ID = '$THE_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BARCODEID">
+                        BARCODEID = '$BARCODEID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HOPDONG_ID">
+                        HOPDONG_ID = '$HOPDONG_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HOPDONG_BENHNHAN_ID">
+                        HOPDONG_BENHNHAN_ID = '$HOPDONG_BENHNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HINHTHUCTHANHTOAN_ID">
+                        HINHTHUCTHANHTOAN_ID = '$HINHTHUCTHANHTOAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DANGKY_ID">
+                        DANGKY_ID = '$DANGKY_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DANGKY_CHITIET_ID">
+                        DANGKY_CHITIET_ID = '$DANGKY_CHITIET_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LICHHEN_ID">
+                        LICHHEN_ID = '$LICHHEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANLICHHEN">
+                        THOIGIANLICHHEN = '$THOIGIANLICHHEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BNKHONGDENBV">
+                        BNKHONGDENBV = '$BNKHONGDENBV$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GHICHU">
+                        GHICHU = '$GHICHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THANHTOANTRUOC">
+                        THANHTOANTRUOC = '$THANHTOANTRUOC$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHAN">
+                        KHAN = '$KHAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DUOCPHEPTHUCHIEN">
+                        DUOCPHEPTHUCHIEN = '$DUOCPHEPTHUCHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HUYYEUCAU">
+                        HUYYEUCAU = '$HUYYEUCAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TRANGTHAI">
+                        TRANGTHAI = '$TRANGTHAI$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KHOADULIEU">
+                        KHOADULIEU = '$KHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYKHOADULIEU">
+                        NGAYKHOADULIEU = '$NGAYKHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THOIGIANKHOADULIEU">
+                        THOIGIANKHOADULIEU = '$THOIGIANKHOADULIEU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOIKHOA_ID">
+                        NGUOIKHOA_ID = '$NGUOIKHOA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MANGUOIKHOA">
+                        MANGUOIKHOA = '$MANGUOIKHOA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNGUOIKHOA">
+                        TENNGUOIKHOA = '$TENNGUOIKHOA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYHENCLS">
+                        NGAYHENCLS = '$NGAYHENCLS$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="CREATININEMAU">
+                        CREATININEMAU = '$CREATININEMAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="VUNGCANKHAOSAT">
+                        VUNGCANKHAOSAT = '$VUNGCANKHAOSAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BHYTDONGTIEN">
+                        BHYTDONGTIEN = '$BHYTDONGTIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="THUTIENSAU">
+                        THUTIENSAU = '$THUTIENSAU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DVKEMTHEO">
+                        DVKEMTHEO = '$DVKEMTHEO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by DVYEUCAU_ID
+        </statement>
+        <!--Revision:0,e26f9e5307494f41489f421eb7d84708-->
+        <statement id="DAO00054_GETLISTCLSKETQUAID" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select DISTINCT CLSKETQUA_ID
+            from VIEW_DVYEUCAU_CLSKETQUACHITIET
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="DVYEUCAU_ID">
+                        DVYEUCAU_ID = '$DVYEUCAU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TIEPNHAN_ID">
+                        TIEPNHAN_ID = '$TIEPNHAN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by CLSKETQUA_ID
+        </statement>
+    </statements>
+</sqlMap>

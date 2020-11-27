@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,510517cf05327c9d9ba359217bf91c9f-->
+        <statement id="DAO00018_GetList" resultClass="DataObject">
+          select A.*, B.DICTIONARY_NAME, B.DICTIONARY_CODE, B.DICTIONARY_NAME_EN CHUCDANH, (B.DICTIONARY_NAME_EN + '. ' + A.TENNHANVIEN) TENHOCVIHOCHAM
+          from TM_NHANVIEN A
+          left join (select * from LST_DICTIONARY where DICTIONARY_TYPE_CODE = 'chucdanh' and DICTIONARY_NAME_EN is not null) B on A.CHUCDANH_ID = B.DICTIONARY_ID
+          where A.BENHVIEN_ID = '$BENHVIEN_ID$'
+          <isPropertyAvailable prepend="and" property="DICTIONARY_CODE">
+                A.CHUCDANH_ID in (select DICTIONARY_ID from LST_DICTIONARY where DICTIONARY_CODE in $DICTIONARY_CODE$)
+            </isPropertyAvailable>
+            <isPropertyAvailable prepend="and" property="PHONGBAN_ID">
+              A.PHONGBAN_ID = '$PHONGBAN_ID$'
+            </isPropertyAvailable>
+        </statement>
+        <!--Revision:0,f062734cfa2f57b8baa08701248be1b6-->
+        <statement id="DAO00018_GetNameById" resultClass="DataObject">
+            select TENNHANVIEN
+            from [TM_NHANVIEN]
+            where
+            NHANVIEN_ID = '$NHANVIEN_ID$'
+        </statement>
+    </statements>
+</sqlMap>

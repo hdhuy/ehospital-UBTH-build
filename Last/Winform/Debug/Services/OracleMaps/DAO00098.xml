@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,24644038eb370bcf71c97a632636e1b4-->
+        <statement id="DAO00098_GetAll" resultClass="DataObject">
+            select *
+            from TT_BENHNHAN_DIUNG_THUOC
+            order by BENHNHAN_DI_UNGTHUOC_ID
+        </statement>
+        <!--Revision:0,5d622c3e1d3b898ae71128f2a2b02f59-->
+        <statement id="DAO00098_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_BENHNHAN_DIUNG_THUOC
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="BENHNHAN_DI_UNGTHUOC_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.BENHNHAN_DI_UNGTHUOC_ID = '$BENHNHAN_DI_UNGTHUOC_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHNHAN_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.BENHNHAN_ID = '$BENHNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HOATCHAT_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.HOATCHAT_ID = '$HOATCHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYPHATHIEN">
+                        TT_BENHNHAN_DIUNG_THUOC.NGAYPHATHIEN = '$NGAYPHATHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TINHTRANG">
+                        TT_BENHNHAN_DIUNG_THUOC.TINHTRANG = '$TINHTRANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GHICHU">
+                        TT_BENHNHAN_DIUNG_THUOC.GHICHU = '$GHICHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_BENHNHAN_DIUNG_THUOC.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_BENHNHAN_DIUNG_THUOC.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+            order by BENHNHAN_DI_UNGTHUOC_ID
+        </statement>
+        <!--Revision:0,a11d9594c411cd8b46b2938d2bf2d9d3-->
+        <statement id="DAO00098_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_BENHNHAN_DIUNG_THUOC
+            where BENHNHAN_DI_UNGTHUOC_ID  = '$value$'
+            order by BENHNHAN_DI_UNGTHUOC_ID
+        </statement>
+        <!--Revision:0,317fc85da5b606739266713546e799d6-->
+        <statement id="DAO00098_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TT_BENHNHAN_DIUNG_THUOC
+            where BENHNHAN_DI_UNGTHUOC_ID  = '$BENHNHAN_DI_UNGTHUOC_ID$'
+            order by BENHNHAN_DI_UNGTHUOC_ID
+        </statement>
+        <!--Revision:0,7e9f388520ab214ddd067ba22eed5eb9-->
+        <insert id="DAO00098_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            <selectKey property="ID" type="pre" resultClass="System.Int64">
+              select TT_BENHNHAN_DIUNG_THUOC_S.nextval as value from dual
+            </selectKey>
+            insert into TT_BENHNHAN_DIUNG_THUOC (
+            BENHNHAN_DI_UNGTHUOC_ID
+            , BENHNHAN_ID
+            , HOATCHAT_ID
+            <isPropertyAvailable prepend="," property="NGUOIPHATHIEN_ID">
+                NGUOIPHATHIEN_ID
+            </isPropertyAvailable>
+            , NGAYPHATHIEN
+            , TINHTRANG
+            , GHICHU
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , BENHVIEN_ID
+            ) values (
+            #ID#
+            , #BENHNHAN_ID#
+            , #HOATCHAT_ID#
+            <isPropertyAvailable prepend="," property="NGUOIPHATHIEN_ID">
+                #NGUOIPHATHIEN_ID#
+            </isPropertyAvailable>
+            , #NGAYPHATHIEN#
+            , #TINHTRANG#
+            , #GHICHU#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #BENHVIEN_ID#
+            )
+        </insert>
+        <!--Revision:0,d044f3b0f975f2e7279b200f9f76950d-->
+        <update id="DAO00098_Update" parameterClass="System.Collections.IDictionary">
+            update TT_BENHNHAN_DIUNG_THUOC set
+            HOATCHAT_ID = #HOATCHAT_ID#
+            <isPropertyAvailable prepend="," property="NGUOIPHATHIEN_ID">
+                NGUOIPHATHIEN_ID = #NGUOIPHATHIEN_ID#
+            </isPropertyAvailable>
+            , NGAYPHATHIEN = #NGAYPHATHIEN#
+            , TINHTRANG = #TINHTRANG#
+            , GHICHU = #GHICHU#
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            where
+            BENHNHAN_DI_UNGTHUOC_ID = '$BENHNHAN_DI_UNGTHUOC_ID$'
+            AND BENHNHAN_ID = '$BENHNHAN_ID$'
+        </update>
+        <!--Revision:0,f968907b3113a12f7fd4221b4d309594-->
+        <statement id="DAO00098_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_BENHNHAN_DIUNG_THUOC
+            where
+            BENHNHAN_DI_UNGTHUOC_ID = '$BENHNHAN_DI_UNGTHUOC_ID$'
+            AND BENHNHAN_ID = '$BENHNHAN_ID$'
+        </statement>
+        <!--Revision:0,c45c84dd6860327521d9b42bf6885eda-->
+        <statement id="DAO00098_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_BENHNHAN_DIUNG_THUOC
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="BENHNHAN_DI_UNGTHUOC_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.BENHNHAN_DI_UNGTHUOC_ID = '$BENHNHAN_DI_UNGTHUOC_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHNHAN_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.BENHNHAN_ID = '$BENHNHAN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="HOATCHAT_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.HOATCHAT_ID = '$HOATCHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYPHATHIEN">
+                        TT_BENHNHAN_DIUNG_THUOC.NGAYPHATHIEN = '$NGAYPHATHIEN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TINHTRANG">
+                        TT_BENHNHAN_DIUNG_THUOC.TINHTRANG = '$TINHTRANG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="GHICHU">
+                        TT_BENHNHAN_DIUNG_THUOC.GHICHU = '$GHICHU$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TT_BENHNHAN_DIUNG_THUOC.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TT_BENHNHAN_DIUNG_THUOC.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="BENHVIEN_ID">
+                        TT_BENHNHAN_DIUNG_THUOC.BENHVIEN_ID = '$BENHVIEN_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

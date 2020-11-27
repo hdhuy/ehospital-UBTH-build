@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="log4net" type="System.Configuration.IgnoreSectionHandler" />
+    <!--<section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" />-->
+  </configSections>
+  
+  <log4net>
+    <appender 
+      name="RollingLogFileAppender1" 
+      type="log4net.Appender.RollingFileAppender">
+      <param name="File" value="Logs/eHospital.log" />
+      <param name="AppendToFile" value="true" />
+      <param name="Encoding" value="utf-8" />
+      <param name="MaxSizeRollBackups" value="30" />
+      <param name="MaximumFileSize" value="100MB" />
+      <param name="RollingStyle" value="Date" />
+      <param name="DatePattern" value=".yyyyMMdd" />
+      <param name="StaticLogFileName" value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="Header" value="--------------------------------------------------------------------------------&#13;&#10;" type="log4net.Util.PatternString"/>
+        <param name="Footer" value="--------------------------------------------------------------------------------&#13;&#10;" type="log4net.Util.PatternString"/>
+        <param name="ConversionPattern" value="%d [%t] %-5p - %m%n" />
+      </layout>
+    </appender>
+        
+    <appender name="iBatisLogFileAppender" type="log4net.Appender.RollingFileAppender">
+      <param name="File" value="Logs/iBatis.log" />
+      <param name="AppendToFile" value="true" />
+      <param name="Encoding" value="utf-8" />
+      <param name="MaxSizeRollBackups" value="30" />
+      <param name="MaximumFileSize" value="100MB" />
+      <param name="RollingStyle" value="Date" />
+      <param name="DatePattern" value="yyyyMMdd" />
+      <param name="StaticLogFileName" value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="Header" value="--------------------------------------------------------------------------------&#13;&#10;" type="log4net.Util.PatternString"/>
+        <param name="Footer" value="--------------------------------------------------------------------------------&#13;&#10;" type="log4net.Util.PatternString"/>
+        <param name="ConversionPattern" value="%d [%t] %-5p - %m%n" />
+      </layout>
+    </appender>
+
+    <appender name="ElasticSearchAppender" type="log4stash.ElasticSearchAppender, log4stash">
+      <Server>10.86.222.72</Server>
+      <Port>9200</Port>
+      <IndexName>ehoslogs</IndexName>
+      <IndexType>logevent</IndexType>
+      <Template>
+        <Name>ehoslogs</Name>
+        <FileName>logtemplate.json</FileName>
+      </Template>
+      <ElasticFilters>
+        <!-- example of using filter with default parameters -->
+        <Add>
+          <Key>ClientName</Key>
+          <Value>%{HostName}</Value>
+        </Add>
+      <Add>
+          <Key>ClientThread</Key>
+          <Value>%{ThreadName}</Value>
+        </Add>
+      </ElasticFilters>
+    </appender>
+
+    <appender name="AdoNetAppender" type="log4net.Appender.AdoNetAppender">
+      <bufferSize value="100" />
+      <connectionType value="System.Data.SQLite.SQLiteConnection, System.Data.SQLite, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" />
+      <connectionString value="Data Source=D:\\Working\\eHospital\\trunk\\99.Build\\Last\\Winform\\Debug\\logs\\ehoslogdb.db;" />
+      <commandText value="INSERT INTO Log (ThreadId, Date, Level, Logger, Location, Message) VALUES (@Thread, @Date, @Level, @Logger, @Location, @Message)" />
+      <parameter>
+        <parameterName value="@Thread" />
+        <dbType value="Int64" />
+        <layout type="log4net.Layout.PatternLayout" value="%thread"/>
+      </parameter>
+      <parameter>
+        <parameterName value="@Date" />
+        <dbType value="DateTime" />
+        <layout type="log4net.Layout.RawTimeStampLayout" />
+      </parameter>
+      <parameter>
+        <parameterName value="@Level" />
+        <dbType value="String" />
+        <layout type="log4net.Layout.PatternLayout">
+          <conversionPattern value="%level" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@Logger" />
+        <dbType value="String" />
+        <layout type="log4net.Layout.PatternLayout">
+          <conversionPattern value="%logger" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@Message" />
+        <dbType value="String" />
+        <layout type="log4net.Layout.PatternLayout">
+          <conversionPattern value="%message" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@Location" />
+        <dbType value="String" />
+        <layout type="log4net.Layout.PatternLayout">
+          <conversionPattern value="%location" />
+        </layout>
+      </parameter>
+    </appender>
+    
+    <appender 
+      name="ColoredConsoleAppender" type="log4net.Appender.ColoredConsoleAppender">
+      <mapping>
+        <level value="ERROR" />
+        <foreColor value="White" />
+        <backColor value="Red" />
+      </mapping>
+      <mapping>
+        <level value="DEBUG" />
+        <backColor value="Green" />
+      </mapping>
+      <mapping>
+        <level value="INFO" />
+        <foreColor value="White" />
+      </mapping>
+  
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%-5p: %m%n" />
+      </layout>
+    </appender>
+  
+    <root>
+      <level value="ALL" />      
+      <!--<appender-ref ref="ElasticSearchAppender" />-->
+      <appender-ref ref="RollingLogFileAppender1" />
+      <!--<appender-ref ref="AdoNetAppender" />-->
+      <!--<appender-ref ref="ColoredConsoleAppender" />-->
+    </root>
+    
+    <!-- Print only messages of level DEBUG or above in the packages -->
+    <logger name="IBatisNet.DataMapper.Commands.DefaultPreparedCommand" additivity="False">
+      <level value="ON" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.DataMapper.Configuration.Cache.CacheModel" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.DataMapper.LazyLoadList" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.DataMapper.SqlMapSession" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.Common.Transaction.TransactionScope" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.DataAccess.DaoSession" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.DataAccess.Configuration.DaoProxy" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.DataMapper.Configuration.Statements.PreparedStatementFactory" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.DataMapper.Commands.IPreparedCommand" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.Common.Utilities.Resources" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.Common.Utilities.ConfigWatcherHandler" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.DataMapper.Configuration.DomSqlMapBuilder" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.DataMapper.TypeHandlers.TypeHandlerFactory" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.Common.Utilities.Objects.ObjectFactory" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.Common.Utilities.Objects.DelegateObjectFactory" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    <logger name="IBatisNet.Common.Utilities.Objects.FactoryLogAdapter" additivity="False">
+      <level value="OFF" />
+      <appender-ref ref="iBatisLogFileAppender" />
+    </logger>
+    
+  </log4net>
+</configuration>

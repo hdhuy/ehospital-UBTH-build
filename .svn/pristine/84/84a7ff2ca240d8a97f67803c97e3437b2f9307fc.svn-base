@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <statement id="DAO00312_GetAll" resultClass="DataObject">
+      select *
+      from TT_PHACDO_CHUKY_DUOC
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      order by CHUKY_DUOC_ID
+    </statement>
+    <statement id="DAO00312_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TT_PHACDO_CHUKY_DUOC
+      where TT_PHACDO_CHUKY_DUOC.CHUKY_DUOC_ID  = '$CHUKY_DUOC_ID$'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+      order by CHUKY_DUOC_ID
+    </statement>
+    <statement id="DAO00312_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+      insert into TT_PHACDO_CHUKY_DUOC (
+      CHUKY_ID
+      , PHACDO_ID
+      , PHIENBAN_ID
+      , DUOC_ID
+      , HOATCHAT_ID
+      , HAMLUONG
+      , SOLUONG
+      , SONGAY
+      , SOLANTRENNGAY
+      , SOLUONGTRENLAN
+      , SOLUONG_BUOISANG
+      , SOLUONG_BUOITRUA
+      , SOLUONG_BUOICHIEU
+      , SOLUONG_BUOITOI
+      , DUONGDUNG_ID
+      , GHICHU
+      , BENHVIEN_ID
+      , NGAYTAO
+      , NGUOITAO_ID
+      , NGAYCAPNHAT
+      , NGUOICAPNHAT_ID
+      ) values (
+      #CHUKY_ID#
+      , #PHACDO_ID#
+      , #PHIENBAN_ID#
+      , #DUOC_ID#
+      , #HOATCHAT_ID#
+      , #HAMLUONG#
+      , #SOLUONG#
+      , #SONGAY#
+      , #SOLANTRENNGAY#
+      , #SOLUONGTRENLAN#
+      , #SOLUONG_BUOISANG#
+      , #SOLUONG_BUOITRUA#
+      , #SOLUONG_BUOICHIEU#
+      , #SOLUONG_BUOITOI#
+      , #DUONGDUNG_ID#
+      , #GHICHU#
+      , #BENHVIEN_ID#
+      , #NGAYTAO#
+      , #NGUOITAO_ID#
+      , #NGAYCAPNHAT#
+      , #NGUOICAPNHAT_ID#
+      )
+      select SCOPE_identity() as value
+    </statement>
+
+    <update id="DAO00312_Update" parameterClass="System.Collections.IDictionary">
+      update TT_PHACDO_CHUKY_DUOC set
+      CHUKY_ID = #CHUKY_ID#
+      , PHACDO_ID = #PHACDO_ID#
+      , DUOC_ID = #DUOC_ID#
+      , HOATCHAT_ID = #HOATCHAT_ID#
+      , HAMLUONG = #HAMLUONG#
+      , SOLUONG = #SOLUONG#
+      , SONGAY = #SONGAY#
+      , SOLANTRENNGAY = #SOLANTRENNGAY#
+      , SOLUONGTRENLAN = #SOLUONGTRENLAN#
+      , SOLUONG_BUOISANG = #SOLUONG_BUOISANG#
+      , SOLUONG_BUOITRUA = #SOLUONG_BUOITRUA#
+      , SOLUONG_BUOICHIEU = #SOLUONG_BUOICHIEU#
+      , SOLUONG_BUOITOI = #SOLUONG_BUOITOI#
+      , DUONGDUNG_ID = #DUONGDUNG_ID#
+      , GHICHU = #GHICHU#
+      , BENHVIEN_ID = #BENHVIEN_ID#
+      , NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#
+      , NGAYCAPNHAT = #NGAYCAPNHAT#
+      , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+      where
+      CHUKY_DUOC_ID = '$CHUKY_DUOC_ID$'
+    </update>
+
+    <statement id="DAO00312_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_PHACDO_CHUKY_DUOC
+      where
+      CHUKY_DUOC_ID in (SELECT * FROM DBO.SPLIT('$CHUKY_DUOC_ID$',', '))
+    </statement>
+
+    <statement id="DAO00312_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+      delete from TT_PHACDO_CHUKY_DUOC
+      <dynamic prepend="where">
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="CHUKY_DUOC_ID">
+            TT_PHACDO_CHUKY_DUOC.CHUKY_DUOC_ID = '$CHUKY_DUOC_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="CHUKY_ID">
+            TT_PHACDO_CHUKY_DUOC.CHUKY_ID = '$CHUKY_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="PHACDO_ID">
+            TT_PHACDO_CHUKY_DUOC.PHACDO_ID = '$PHACDO_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUOC_ID">
+            TT_PHACDO_CHUKY_DUOC.DUOC_ID = '$DUOC_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOLUONG">
+            TT_PHACDO_CHUKY_DUOC.SOLUONG = '$SOLUONG$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SONGAY">
+            TT_PHACDO_CHUKY_DUOC.SONGAY = '$SONGAY$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOLANTRENNGAY">
+            TT_PHACDO_CHUKY_DUOC.SOLANTRENNGAY = '$SOLANTRENNGAY$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOLUONGTRENLAN">
+            TT_PHACDO_CHUKY_DUOC.SOLUONGTRENLAN = '$SOLUONGTRENLAN$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOLUONG_BUOISANG">
+            TT_PHACDO_CHUKY_DUOC.SOLUONG_BUOISANG = '$SOLUONG_BUOISANG$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOLUONG_BUOITRUA">
+            TT_PHACDO_CHUKY_DUOC.SOLUONG_BUOITRUA = '$SOLUONG_BUOITRUA$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOLUONG_BUOICHIEU">
+            TT_PHACDO_CHUKY_DUOC.SOLUONG_BUOICHIEU = '$SOLUONG_BUOICHIEU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="SOLUONG_BUOITOI">
+            TT_PHACDO_CHUKY_DUOC.SOLUONG_BUOITOI = '$SOLUONG_BUOITOI$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="DUONGDUNG_ID">
+            TT_PHACDO_CHUKY_DUOC.DUONGDUNG_ID = '$DUONGDUNG_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="GHICHU">
+            TT_PHACDO_CHUKY_DUOC.GHICHU = '$GHICHU$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="BENHVIEN_ID">
+            TT_PHACDO_CHUKY_DUOC.BENHVIEN_ID = '$BENHVIEN_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYTAO">
+            TT_PHACDO_CHUKY_DUOC.NGAYTAO = '$NGAYTAO$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOITAO_ID">
+            TT_PHACDO_CHUKY_DUOC.NGUOITAO_ID = '$NGUOITAO_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+            TT_PHACDO_CHUKY_DUOC.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+            TT_PHACDO_CHUKY_DUOC.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+          </isNotEmpty>
+        </isParameterPresent>
+      </dynamic>
+    </statement>
+    <statement id="DAO00312_GetList" resultClass="DataObject">
+      select *
+      from LST_DICTIONARY
+      where DICTIONARY_TYPE_CODE = 'DanhGiaPhacDo'
+      <isNotEmpty prepend="and" property="BENHVIEN_ID">
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+      </isNotEmpty>
+    </statement>
+  </statements>
+</sqlMap>

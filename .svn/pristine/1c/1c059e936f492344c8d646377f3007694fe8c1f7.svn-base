@@ -1,0 +1,1663 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>                   
+ <!--CHUNG TU-->
+      <statement id="DAO00322_CHUNGTU_ADD" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        insert into TT_MAU_CHUNGTU (
+        MACHUNGTU
+        , SOCHUNGTU
+        , NGAYCHUNGTU
+        , LOAICHUNGTU
+        , MUCDICHCHUNGTU
+        , NGUONHANG_ID
+        , NHACUNGCAP_ID
+        , KHOXUAT_ID
+        , NGUOIXUAT_ID
+        , KHONHAP_ID
+        , NGUOINHAP_ID
+        , SOSERI
+        , MAUHOADON
+        , SOHOADON
+        , NGAYHOADON
+        , DIENGIAI
+        , TYLEVAT
+        , GIATRIVAT
+        , GIATRI
+        , GIATRITHANHTOAN
+        , PHIEULINH_ID
+        , CHUNGTULIENQUAN_ID
+        , NGAYCHUNGTULIENQUAN
+        , SOCHUNGTULIENQUAN
+        , DIENGIAINGHIEPVUPHATSINH
+        , DVYEUCAU_ID
+        , IDCHUYEN
+        , TRANGTHAI
+        , BENHVIEN_ID
+        , NGAYTAO
+        , NGUOITAO_ID
+        , NGAYCAPNHAT
+        , NGUOICAPNHAT_ID
+        ) values (
+        #MACHUNGTU#
+        , #SOCHUNGTU#
+        , #NGAYCHUNGTU#
+        , #LOAICHUNGTU#
+        , #MUCDICHCHUNGTU#
+        , #NGUONHANG_ID#
+        , #NHACUNGCAP_ID#
+        , #KHOXUAT_ID#
+        , #NGUOIXUAT_ID#
+        , #KHONHAP_ID#
+        , #NGUOINHAP_ID#
+        , #SOSERI#
+        , #MAUHOADON#
+        , #SOHOADON#
+        , #NGAYHOADON#
+        , #DIENGIAI#
+        , #TYLEVAT#
+        , #GIATRIVAT#
+        , #GIATRI#
+        , #GIATRITHANHTOAN#
+        , #PHIEULINH_ID#
+        , #CHUNGTULIENQUAN_ID#
+        , #NGAYCHUNGTULIENQUAN#
+        , #SOCHUNGTULIENQUAN#
+        , #DIENGIAINGHIEPVUPHATSINH#
+        , #DVYEUCAU_ID#
+        , #IDCHUYEN#
+        , #TRANGTHAI#
+        , #BENHVIEN_ID#
+        , #NGAYTAO#
+        , #NGUOITAO_ID#
+        , #NGAYCAPNHAT#
+        , #NGUOICAPNHAT_ID#
+        )
+        select SCOPE_identity() as value
+      </statement>
+      <!--Revision:0-->
+      <update id="DAO00322_CHUNGTU_UPD" parameterClass="System.Collections.IDictionary">
+        update TT_MAU_CHUNGTU set
+        MACHUNGTU = #MACHUNGTU#
+        , SOCHUNGTU = #SOCHUNGTU#
+        , NGAYCHUNGTU = #NGAYCHUNGTU#
+        , LOAICHUNGTU = #LOAICHUNGTU#
+        , MUCDICHCHUNGTU = #MUCDICHCHUNGTU#
+        , NGUONHANG_ID = #NGUONHANG_ID#
+        , NHACUNGCAP_ID = #NHACUNGCAP_ID#
+        , KHOXUAT_ID = #KHOXUAT_ID#
+        , NGUOIXUAT_ID = #NGUOIXUAT_ID#
+        , KHONHAP_ID = #KHONHAP_ID#
+        , NGUOINHAP_ID = #NGUOINHAP_ID#
+        , SOSERI = #SOSERI#
+        , MAUHOADON = #MAUHOADON#
+        , SOHOADON = #SOHOADON#
+        , NGAYHOADON = #NGAYHOADON#
+        , DIENGIAI = #DIENGIAI#
+        , TYLEVAT = #TYLEVAT#
+        , GIATRIVAT = #GIATRIVAT#
+        , GIATRI = #GIATRI#
+        , GIATRITHANHTOAN = #GIATRITHANHTOAN#
+        , PHIEULINH_ID = #PHIEULINH_ID#
+        , CHUNGTULIENQUAN_ID = #CHUNGTULIENQUAN_ID#
+        , NGAYCHUNGTULIENQUAN = #NGAYCHUNGTULIENQUAN#
+        , SOCHUNGTULIENQUAN = #SOCHUNGTULIENQUAN#
+        , DIENGIAINGHIEPVUPHATSINH = #DIENGIAINGHIEPVUPHATSINH#
+        , DVYEUCAU_ID = #DVYEUCAU_ID#
+        , IDCHUYEN = #IDCHUYEN#
+        , TRANGTHAI = #TRANGTHAI#
+        , NGAYCAPNHAT = #NGAYCAPNHAT#
+        , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+        where
+        CHUNGTU_ID = '$CHUNGTU_ID$'
+      </update>
+  
+      <statement id="DAO00322_CHUNGTU_DEL" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_MAU_CHUNGTU
+            where
+            CHUNGTU_ID = '$CHUNGTU_ID$'
+      </statement>
+        
+      <statement id="DAO00322_GetDetail" parameterClass="System.String" resultClass="DataObject">
+            select *
+            from TT_MAU_CHUNGTU
+            where CHUNGTU_ID  = '$value$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+            order by CHUNGTU_ID
+        </statement>
+
+      <statement id="DAO00322_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_CHUNGTU
+        where BENHVIEN_ID = '$BENHVIEN_ID$'
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="CHUNGTU_ID">
+            CHUNGTU_ID = '$CHUNGTU_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="MACHUNGTU">
+            MACHUNGTU = '$MACHUNGTU$'
+          </isNotEmpty>         
+        </isParameterPresent>
+        order by CHUNGTU_ID
+      </statement>      
+      
+       <statement id="DAO00322_CHUNGTU_SEARCH" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select CHUNGTU_ID, MACHUNGTU, NGAYCHUNGTU, NGAYTAO, SOCHUNGTULIENQUAN, NGAYCHUNGTULIENQUAN, 
+         CASE
+            WHEN TRANGTHAI = 'PNCNK' THEN N'Chờ nhập kho'
+            WHEN TRANGTHAI = 'PNDNK' THEN N'Đã nhập kho'
+            WHEN TRANGTHAI = 'HUY' THEN N'Hủy'
+            WHEN TRANGTHAI = 'DXN' THEN N'Đã xác nhận'
+         END  AS TRANGTHAI
+        from TT_MAU_CHUNGTU
+        where BENHVIEN_ID = '$BENHVIEN_ID$'
+        <isParameterPresent>
+          <isNotEmpty prepend="and" property="CHUNGTU_ID">
+            CHUNGTU_ID = '$CHUNGTU_ID$'
+          </isNotEmpty>
+          <isNotEmpty prepend="and" property="TUKHOA">
+            MACHUNGTU LIKE '%' + #TUKHOA# + '%'
+          </isNotEmpty>  
+         <isNotEmpty prepend="and" property="MUCDICHCHUNGTU">
+            MUCDICHCHUNGTU = '$MUCDICHCHUNGTU$'
+          </isNotEmpty>  
+         <isNotEmpty prepend="and" property="KHONHAP_ID">
+            KHONHAP_ID = '$KHONHAP_ID$'
+          </isNotEmpty> 
+         <isNotEmpty prepend="and" property="KHOXUAT_ID">
+            KHOXUAT_ID = '$KHOXUAT_ID$'
+         </isNotEmpty> 
+         <isNotEmpty prepend="and" property="TUNGAY">
+            CONVERT(date, NGAYCHUNGTU) BETWEEN CONVERT(date, '$TUNGAY$')  and  CONVERT(date, '$DENNGAY$')
+         </isNotEmpty>
+        </isParameterPresent>
+        order by CHUNGTU_ID
+      </statement>      
+     
+      <!--Revision:0-->
+      <update id="DAO00322_UpdateChungTuLienQuan" parameterClass="System.Collections.IDictionary">
+        update
+        TT_MAU_CHUNGTU
+        set
+        CHUNGTULIENQUAN_ID = #CHUNGTULIENQUAN_ID#
+        where
+        CHUNGTU_ID = '$CHUNGTU_ID$'
+      </update>
+      <!--Revision:0-->
+      <update id="DAO00322_HOADON_UPD" parameterClass="System.Collections.IDictionary">
+        update
+        TT_MAU_CHUNGTU
+        set
+        MAUHOADON = #MAUHOADON#
+        ,SOHOADON = #SOHOADON#
+        ,SOSERI = #SOSERI#
+        ,NGAYHOADON = #NGAYHOADON#
+        ,NGAYCAPNHAT = #NGAYCAPNHAT#
+        ,NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+        where
+        CHUNGTU_ID = '$CHUNGTU_ID$'
+      </update>
+      <!--Revision:0-->
+      <statement id="DAO00322_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        delete from TT_MAU_CHUNGTU
+        where
+        CHUNGTU_ID = '$CHUNGTU_ID$'
+      </statement>
+ <!--END CHUNG TU-->
+      
+      <!--CHUNG TU CHI TIET-->
+      <statement id="DAO00322_CHUNGTUCHITIET_ADD" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        insert into TT_MAU_CHUNGTU_CHITIET (
+        CHUNGTU_ID
+        , MAU_ID
+        , TENMAU
+        , SOLONHAP_ID
+        , SOKIEMSOAT
+        , NGUONHANG_ID
+        , DONVITINH_ID
+        , SOLUONGYEUCAU
+        , SOLUONGDANHAP
+        , SOLUONGDAXUAT
+        , DONGIAMUA
+        , TYLEVAT
+        , DONGIAVAT
+        , DONGIAVON
+        , NGAYLAYMAU
+        , NGAYHETHAN
+        , NHOM_ABO
+        , NHOM_RH
+        , KHUYENMAI
+        , GUIKHO
+        , GHICHU
+        , BENHNHAN
+        , CHIDINH_ID
+        , PO_ID
+        , PO_DETAIL_ID
+        , TRANGTHAI
+        , TUCHUNG
+        , AHG
+        , GD_MUOI_ID
+        , SOLANXN
+        , KETLUAN
+        , BENHVIEN_ID
+        , NGAYTAO
+        , NGUOITAO_ID
+        , NGAYCAPNHAT
+        , NGUOICAPNHAT_ID
+        ) values (
+        #CHUNGTU_ID#
+        , #MAU_ID#
+        , #TENMAU#
+        , #SOLONHAP_ID#
+        , #SOKIEMSOAT#
+        , #NGUONHANG_ID#
+        , #DONVITINH_ID#
+        , #SOLUONGYEUCAU#
+        , #SOLUONGDANHAP#
+        , #SOLUONGDAXUAT#
+        , #DONGIAMUA#
+        , #TYLEVAT#
+        , #DONGIAVAT#
+        , #DONGIAVON#
+        , #NGAYLAYMAU#
+        , #NGAYHETHAN#
+        , #NHOM_ABO#
+        , #NHOM_RH#
+        , #KHUYENMAI#
+        , #GUIKHO#
+        , #GHICHU#
+        , #BENHNHAN#
+        , #CHIDINH_ID#
+        , #PO_ID#
+        , #PO_DETAIL_ID#
+        , #TRANGTHAI#
+        , #TUCHUNG#
+        , #AHG#
+        , #GD_MUOI_ID#
+        , #SOLANXN#
+        , #KETLUAN#
+        , #BENHVIEN_ID#
+        , #NGAYTAO#
+        , #NGUOITAO_ID#
+        , #NGAYCAPNHAT#
+        , #NGUOICAPNHAT_ID#
+        )
+        select SCOPE_identity() as value
+      </statement>
+
+      <statement id="DAO00322_GetChiTietMau" resultClass="DataObject">
+        SELECT M.MAU_ID, M.TENMAU, SLN.SOLONHAP_ID, SLN.SOKIEMSOAT, SLN.SOLONHAP,
+        SLN.NGUONHANG_ID, SLN.DONGIAMUA, SLN.TYLEVAT, SLN.DONGIAVON, SLN.NGAYLAYMAU, SLN.NGAYHETHAN,
+        M.NHOM_ABO, M.NHOM_RH
+        FROM TT_MAU_CHUNGTU_SOLONHAP SLN
+        INNER JOIN TM_MAU M ON M.MAU_ID = SLN.MAU_ID
+        WHERE
+        SLN.SOLONHAP_ID = $SOLONHAP_ID$
+      </statement>
+      <!--Revision:0-->
+   
+      <statement id="DAO00322_CHUNGTUCHITIET_DEL" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        delete from TT_MAU_CHUNGTU_CHITIET
+        <dynamic prepend="where">
+          <isParameterPresent>
+            <isNotEmpty prepend="and" property="CHUNGTUCHITIET_ID">
+              TT_MAU_CHUNGTU_CHITIET.CHUNGTUCHITIET_ID = '$CHUNGTUCHITIET_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="CHUNGTU_ID">
+              TT_MAU_CHUNGTU_CHITIET.CHUNGTU_ID = '$CHUNGTU_ID$'
+            </isNotEmpty>           
+          </isParameterPresent>
+        </dynamic>
+      </statement>
+ 
+      <statement id="DAO00322_CHUNGTUNHAP_CHITIET_GETLIST" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT
+        ctct.*,d.MAMAU, n.TENNGUONMAU as NGUONHANG, sln.SOLONHAP
+        FROM
+        TT_MAU_CHUNGTU_CHITIET ctct
+        INNER JOIN TT_MAU_CHUNGTU ct ON (ct.CHUNGTU_ID = ctct.CHUNGTU_ID)
+        INNER JOIN TT_MAU_CHUNGTU_SOLONHAP sln ON (sln.SOLONHAP_ID = ctct.SOLONHAP_ID)
+        INNER JOIN TM_MAU d ON (d.MAU_ID = ctct.MAU_ID)
+        INNER JOIN TM_NGUONMAU n ON (n.NGUONMAU_ID = ctct.NGUONHANG_ID)
+        <dynamic prepend="where">
+          <isParameterPresent>
+            <isNotEmpty prepend="and" property="CHUNGTU_ID">
+              ct.CHUNGTU_ID = '$CHUNGTU_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="BENHVIEN_ID">
+              ct.BENHVIEN_ID = '$BENHVIEN_ID$'
+            </isNotEmpty>
+          </isParameterPresent>
+        </dynamic>
+        order by CHUNGTUCHITIET_ID
+      </statement>
+
+      <statement id="DAO00322_CHUNGTUXUAT_CHITIET_GETLIST" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT
+        ctct.*,d.MAMAU, n.TENNGUONMAU as NGUONHANG, sln.SOLONHAP
+        FROM
+        TT_MAU_CHUNGTU_CHITIET ctct
+        INNER JOIN TT_MAU_CHUNGTU ct ON (ct.CHUNGTU_ID = ctct.CHUNGTU_ID)
+        INNER JOIN TT_MAU_CHUNGTU_SOLONHAP sln ON (sln.SOLONHAP_ID = ctct.SOLONHAP_ID)
+        INNER JOIN TM_MAU d ON (d.MAU_ID = ctct.MAU_ID)
+        INNER JOIN TM_NGUONMAU n ON (n.NGUONMAU_ID = ctct.NGUONHANG_ID)
+        <dynamic prepend="where">
+          <isParameterPresent>
+            <isNotEmpty prepend="and" property="CHUNGTU_ID">
+              ct.CHUNGTU_ID = '$CHUNGTU_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="BENHVIEN_ID">
+              ct.BENHVIEN_ID = '$BENHVIEN_ID$'
+            </isNotEmpty>
+          </isParameterPresent>
+        </dynamic>
+        order by CHUNGTUCHITIET_ID
+      </statement>
+   
+  <!--END CHUNG TU CHI TIET-->    
+ 
+  <!--SO LO NHAP-->
+      <statement id="DAO00322_SOLONHAP_Add" parameterClass="HashTable" resultClass="System.Int64">
+        insert into TT_MAU_CHUNGTU_SOLONHAP (
+          MAU_ID
+        , SOLONHAP
+        , SOKIEMSOAT
+        , NGUONHANG_ID
+        , NGAYLAYMAU
+        , NGAYHETHAN
+        , DONGIAMUA
+        , TYLEVAT
+        , DONGIAVON
+        , DONGIABAN
+        , BENHVIEN_ID
+        , NGAYTAO
+        , NGUOITAO_ID
+        , NGAYCAPNHAT
+        , NGUOICAPNHAT_ID
+        ) values (
+          #MAU_ID#
+        , #SOLONHAP#
+        , #SOKIEMSOAT#
+        , #NGUONHANG_ID#
+        , #NGAYLAYMAU#
+        , #NGAYHETHAN#        
+        , #DONGIAMUA#
+        , #TYLEVAT#
+        , #DONGIAVON#
+        , #DONGIABAN#
+        , #BENHVIEN_ID#
+        , #NGAYTAO#
+        , #NGUOITAO_ID#
+        , #NGAYCAPNHAT#
+        , #NGUOICAPNHAT_ID#
+        )
+        select SCOPE_identity() as value
+      </statement>
+      <!--Revision:0-->
+      <update id="DAO00322_SOLONHAP_Update" parameterClass="System.Collections.IDictionary">
+        update TT_MAU_CHUNGTU_SOLONHAP set
+        MAU_ID = #MAU_ID#
+        , SOLONHAP = #SOLONHAP#
+        , SOKIEMSOAT = #SOKIEMSOAT#
+        , NGUONHANG_ID = #NGUONHANG_ID#
+        , NGAYNHAP = #NGAYNHAP#
+        , NGAYSANXUAT = #NGAYSANXUAT#
+        , HANSUDUNG = #HANSUDUNG#
+        , DONGIAMUA = #DONGIAMUA#
+        , TYLEVAT = #TYLEVAT#
+        , DONGIAVON = #DONGIAVON#
+        , DONGIABAN = #DONGIABAN#               
+        , NGAYCAPNHAT = #NGAYCAPNHAT#
+        , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+        where
+        SOLONHAP_ID = '$SOLONHAP_ID$'
+      </update>
+      <!--Revision:0-->
+      <statement id="DAO00322_SOLONHAP_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        delete from TT_MAU_CHUNGTU_SOLONHAP
+        where
+        SOLONHAP_ID = '$SOLONHAP_ID$'
+      </statement>
+ 
+      
+      
+      <!--END SO LO NHAP-->
+           
+  <!--TON KHO-->
+      <statement id="DAO00322_MAUTONKHO_Add" parameterClass="HashTable" resultClass="System.Int64">
+        insert into TT_MAU_TONKHO (
+        KHOMAU_ID
+        , MAU_ID
+        , SOLONHAP_ID
+        , SOLUONG
+        , NGUONHANG_ID
+        , BENHVIEN_ID
+        , NGAYTAO
+        , NGUOITAO_ID
+        , NGAYCAPNHAT
+        , NGUOICAPNHAT_ID
+        ) values (
+        #KHOMAU_ID#
+        , #MAU_ID#
+        , #SOLONHAP_ID#
+        , #SOLUONG#
+        , #NGUONHANG_ID#
+        , #BENHVIEN_ID#
+        , #NGAYTAO#
+        , #NGUOITAO_ID#
+        , #NGAYCAPNHAT#
+        , #NGUOICAPNHAT_ID#
+        )
+      </statement>
+      <!--Revision:0-->
+      <update id="DAO00322_MAUTONKHO_Update" parameterClass="System.Collections.IDictionary">
+        update TT_MAU_TONKHO set
+        KHOMAU_ID = #KHOMAU_ID#
+        , MAU_ID = #MAU_ID#
+        , SOLONHAP_ID = #SOLONHAP_ID#
+        , SOLUONG = #SOLUONG#
+        , NGAYCAPNHAT = #NGAYCAPNHAT#
+        , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+        where
+        TONKHO_ID = '$TONKHO_ID$'
+      </update>
+      <!--Revision:0-->
+   
+     <statement id="DAO00322_MAUTONKHO_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TT_MAU_TONKHO
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="TONKHO_ID">
+                        TONKHO_ID = '$TONKHO_ID$'
+                    </isNotEmpty>                  
+                    <isNotEmpty prepend="and" property="KHOMAU_ID">
+                        KHOMAU_ID = '$KHOMAU_ID$'
+                    </isNotEmpty>     
+                    <isNotEmpty prepend="and" property="SOLONHAP_ID">
+                        SOLONHAP_ID = '$SOLONHAP_ID$'
+                    </isNotEmpty>  
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+     
+     <update id="DAO00322_MAUTONKHO_Tang" parameterClass="System.Collections.IDictionary">
+        IF EXISTS
+        (
+        SELECT TONKHO_ID
+        FROM TT_MAU_TONKHO
+        WHERE
+        KHOMAU_ID = #KHOMAU_ID#
+        AND MAU_ID = #MAU_ID#
+        AND  SOLONHAP_ID = #SOLONHAP_ID#
+        )
+        BEGIN
+        update TT_MAU_TONKHO set
+        SOLUONG = SOLUONG +  #SOLUONGTHAYDOI#
+        , NGAYCAPNHAT = #NGAYCAPNHAT#
+        , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+        where
+        KHOMAU_ID = #KHOMAU_ID#
+        AND MAU_ID = #MAU_ID#
+        AND  SOLONHAP_ID = #SOLONHAP_ID#
+        END
+        ELSE
+        BEGIN
+        insert into TT_MAU_TONKHO (
+        KHOMAU_ID
+        , MAU_ID
+        , SOLONHAP_ID
+        , SOLUONG
+        , NGUONHANG_ID
+        , BENHVIEN_ID
+        , NGAYTAO
+        , NGUOITAO_ID
+        , NGAYCAPNHAT
+        , NGUOICAPNHAT_ID
+        ) values (
+        #KHOMAU_ID#
+        , #MAU_ID#
+        , #SOLONHAP_ID#
+        , #SOLUONG#
+        , #NGUONHANG_ID#
+        , #BENHVIEN_ID#
+        , #NGAYTAO#
+        , #NGUOITAO_ID#
+        , #NGAYCAPNHAT#
+        , #NGUOICAPNHAT_ID#
+        )
+        END
+      </update>      
+   
+      <update id="DAO00322_MAUTONKHO_Giam" parameterClass="System.Collections.IDictionary">
+        update TT_MAU_TONKHO 
+        set
+        SOLUONG = SOLUONG - #SOLUONGTHAYDOI#
+        , NGAYCAPNHAT = #NGAYCAPNHAT#
+        , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+        where
+        KHOMAU_ID = #KHOMAU_ID#
+        AND MAU_ID = #MAU_ID#
+        AND SOLONHAP_ID = #SOLONHAP_ID#
+      </update>
+
+      <statement id="DAO00322_MAUTONKHO_GetSoTonTheoLo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT
+        MAU_ID,SOLONHAP_ID,
+        SUM(SOLUONG) AS SOLUONGTONLO
+        FROM
+        TT_MAU_TONKHO
+        WHERE
+        KHOMAU_ID = '$KHOMAU_ID$'
+        and MAU_ID IN ($LIST_MAU_ID$)
+        and SOLONHAP_ID IN ($LIST_SOLONHAP_ID$)
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        GROUP BY MAU_ID, SOLONHAP_ID
+      </statement>
+
+<!--END TON KHO-->     
+      
+      
+     <statement id="DAO00322_GetGiaNhapMauGanNhat" resultClass="DataObject">
+        SELECT TOP 1 DONGIAMUA
+        FROM
+        TT_MAU_CHUNGTU_SOLONHAP
+        WHERE
+        MAU_ID = '$MAU_ID$'
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        ORDER BY SOLONHAP_ID DESC
+      </statement>
+
+     <insert id="DAO00322_AddKeyDataMau" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        insert into LST_KEYDATA_MAU (
+        KEYTYPE
+        , KEYYEAR
+        , KEYMONTH
+        , KEYDAY
+        , SEGMENT_1
+        , SEGMENT_2
+        , SEGMENT_3
+        , KEYVALUE
+        , BENHVIEN_ID
+        ) values (
+        #KEYTYPE#
+        , #KEYYEAR#
+        , #KEYMONTH#
+        , #KEYDAY#
+        , #SEGMENT_1#
+        , #SEGMENT_2#
+        , #SEGMENT_3#
+        , #KEYVALUE#
+        , #BENHVIEN_ID#
+        )
+      </insert>      
+   
+     <update id="DAO00322_UpdateKeyDataMau" parameterClass="System.Collections.IDictionary">
+        update LST_KEYDATA_MAU set
+        KEYVALUE = #KEYVALUE#
+        where
+        KEYTYPE = '$KEYTYPE$'
+        AND KEYYEAR = '$KEYYEAR$'
+        AND KEYMONTH = '$KEYMONTH$'
+        AND KEYDAY = '$KEYDAY$'
+        AND SEGMENT_1 = '$SEGMENT_1$'
+        AND SEGMENT_2 = '$SEGMENT_2$'
+        AND SEGMENT_3 = '$SEGMENT_3$'
+      </update>
+     
+     <statement id="DAO00322_GetDetailKeyDataMau" resultClass="DataObject">
+        select KEYTYPE, KEYYEAR, KEYMONTH, KEYDAY, SEGMENT_1, SEGMENT_2, SEGMENT_3, KEYVALUE
+        from LST_KEYDATA_MAU as kd
+        <dynamic prepend="WHERE">
+          <isPropertyAvailable prepend="AND" property="KEYTYPE">
+            kd.KEYTYPE = '$KEYTYPE$'
+          </isPropertyAvailable>
+          <isPropertyAvailable prepend="AND" property="KEYYEAR">
+            kd.KEYYEAR = '$KEYYEAR$'
+          </isPropertyAvailable>
+          <isPropertyAvailable prepend="AND" property="KEYMONTH">
+            kd.KEYMONTH = '$KEYMONTH$'
+          </isPropertyAvailable>
+          <isPropertyAvailable prepend="AND" property="KEYDAY">
+            kd.KEYDAY = '$KEYDAY$'
+          </isPropertyAvailable>
+          <isPropertyAvailable prepend="AND" property="SEGMENT_1">
+            kd.SEGMENT_1 = '$SEGMENT_1$'
+          </isPropertyAvailable>
+          <isPropertyAvailable prepend="AND" property="SEGMENT_2">
+            kd.SEGMENT_2 = '$SEGMENT_2$'
+          </isPropertyAvailable>
+          <isPropertyAvailable prepend="AND" property="SEGMENT_3">
+            kd.SEGMENT_3 = '$SEGMENT_3$'
+          </isPropertyAvailable>
+          <isPropertyAvailable prepend="AND" property="KEYVALUE">
+            kd.KEYVALUE = '$KEYVALUE$'
+          </isPropertyAvailable>
+        </dynamic>
+      </statement>
+      
+     <statement id="DAO00322_KiemTraChungTuKhoaSo" resultClass="DataObject">
+            SELECT CHUNGTU_ID
+            FROM TT_MAU_CHUNGTU
+            WHERE
+            CHUNGTU_ID = '$CHUNGTU_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+            and
+            convert(date, NGAYCHUNGTU) &lt;=
+            (
+            SELECT TOP 1 convert(date, KHOADENNGAY)
+            FROM TT_MAU_KHOASOCHUNGTU
+            WHERE
+            KHOMAU_ID = '$KHOMAU_ID$'
+            and BENHVIEN_ID = '$BENHVIEN_ID$'
+            AND KHOASO = '1'
+            ORDER BY KHOADENNGAY DESC
+            )
+        </statement>
+  
+     <statement id="DAO00322_KiemTraChungTuDaChuyenKeToan" resultClass="DataObject">
+          SELECT CHUNGTU_ID
+          FROM TT_MAU_CHUNGTU
+          WHERE
+          CHUNGTU_ID = '$CHUNGTU_ID$'
+          and IDCHUYEN IS NOT NULL
+          and BENHVIEN_ID = '$BENHVIEN_ID$'
+        </statement>
+
+      <!--CACHED-->      
+      <statement id="DAO00322_GetListMauTonKhoForUpdate" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select  distinct TK.MAU_KEY,
+        LTRIM(TK.KHOMAU_ID) as KHOMAU_ID, M.MAU_ID, M.MAMAU, M.TENMAU, M.NHOM_ABO, M.NHOM_RH,
+        TK.SOLONHAP_ID, TK.SOLONHAP, TK.SOKIEMSOAT, M.PHAMVI, TK.NGUONHANG_ID, NG.TENNGUONMAU, M.BENHVIEN_ID
+        from TM_MAU M
+        inner join
+        (
+        select
+        LTRIM(A.KHOMAU_ID) + '_' + LTRIM(A.MAU_ID) + '_' + LTRIM(A.SOLONHAP_ID)+ '_' + LTRIM(ISNULL(A.NGUONHANG_ID,'')) as MAU_KEY,
+        A.KHOMAU_ID, A.MAU_ID ,a.NGUONHANG_ID, A.SOLONHAP_ID, A.SOLONHAP, A.SOKIEMSOAT
+        from
+        (
+        select KHOMAU_ID, TK.MAU_ID, TK.NGUONHANG_ID, SLN.SOLONHAP_ID, SLN.SOLONHAP,SLN.SOKIEMSOAT
+        from TT_MAU_TONKHO TK
+        inner join TT_MAU_CHUNGTU_SOLONHAP SLN ON TK.SOLONHAP_ID = SLN.SOLONHAP_ID
+        where TK.KHOMAU_ID in ($KHOMAU_ID$) and TK.MAU_ID in ($MAU_ID$)
+        ) A
+        where A.KHOMAU_ID in ($KHOMAU_ID$) and A.MAU_ID in ($MAU_ID$)
+        )TK on TK.MAU_ID = M.MAU_ID
+        LEFT JOIN TM_NGUONMAU NG ON NG.NGUONMAU_ID = TK.NGUONHANG_ID
+        WHERE M.BENHVIEN_ID = '$BENHVIEN_ID$'
+        and M.MAU_ID in ($MAU_ID$)
+        and M.TAMNGUNG = '0'
+      </statement>
+      <statement id="DAO00322_GetListMauTonKhoForCreateCached" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select
+        distinct TK.MAU_KEY,
+        LTRIM(TK.KHOMAU_ID) as KHOMAU_ID, M.MAU_ID, M.MAMAU, M.TENMAU, M.NHOM_ABO, M.NHOM_RH,
+        TK.SOLONHAP_ID, TK.SOLONHAP, TK.SOKIEMSOAT,M.PHAMVI, TK.NGUONHANG_ID, NG.TENNGUONMAU, M.BENHVIEN_ID
+        from TM_MAU M
+        inner join
+        (
+        select
+        LTRIM(A.KHOMAU_ID) + '_' + LTRIM(A.MAU_ID) + '_' + LTRIM(A.SOLONHAP_ID) + '_' + LTRIM(ISNULL(A.NGUONHANG_ID,'')) as MAU_KEY,
+        A.KHOMAU_ID, A.MAU_ID ,a.NGUONHANG_ID, A.SOLONHAP_ID, A.SOLONHAP, A.SOKIEMSOAT
+        from
+        (
+        select KHOMAU_ID, TK.MAU_ID, TK.NGUONHANG_ID, SLN.SOLONHAP_ID, SLN.SOLONHAP, SLN.SOKIEMSOAT
+        from TT_MAU_TONKHO TK
+        inner join TT_MAU_CHUNGTU_SOLONHAP SLN ON TK.SOLONHAP_ID = SLN.SOLONHAP_ID
+        where TK.SOLUONG > 0 AND TK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        ) A
+        )TK on TK.MAU_ID = M.MAU_ID
+        LEFT JOIN TM_NGUONMAU NG ON NG.NGUONMAU_ID = TK.NGUONHANG_ID
+        WHERE M.BENHVIEN_ID = '$BENHVIEN_ID$'
+        and M.TAMNGUNG = '0'
+      </statement>
+      <statement id="DAO00322_GetListMauTonKhoBangKhongForCreateCached" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select
+        distinct TK.MAU_KEY,
+        LTRIM(TK.KHOMAU_ID) as KHOMAU_ID, M.MAU_ID, M.MAMAU, M.TENMAU, M.NHOM_ABO, M.NHOM_RH,
+        TK.SOLONHAP_ID, TK.SOLONHAP, TK.SOKIEMSOAT,M.PHAMVI, TK.NGUONHANG_ID, NG.TENNGUONMAU, M.BENHVIEN_ID
+        from TM_MAU M
+        inner join
+        (
+        select
+        LTRIM(A.KHOMAU_ID) + '_' + LTRIM(A.MAU_ID) + '_' + LTRIM(A.SOLONHAP_ID) + '_' + LTRIM(ISNULL(A.NGUONHANG_ID,'')) as MAU_KEY,
+        A.KHOMAU_ID, A.MAU_ID ,a.NGUONHANG_ID, A.SOLONHAP_ID, A.SOLONHAP, A.SOKIEMSOAT
+        from
+        (
+        select KHOMAU_ID, TK.MAU_ID, TK.NGUONHANG_ID, SLN.SOLONHAP_ID, SLN.SOLONHAP, SLN.SOKIEMSOAT
+        from TT_MAU_TONKHO TK
+        inner join TT_MAU_CHUNGTU_SOLONHAP SLN ON TK.SOLONHAP_ID = SLN.SOLONHAP_ID
+        where TK.SOLUONG = 0 AND TK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        ) A
+        )TK on TK.MAU_ID = M.MAU_ID
+        LEFT JOIN TM_NGUONMAU NG ON NG.NGUONMAU_ID = TK.NGUONHANG_ID
+        WHERE M.BENHVIEN_ID = '$BENHVIEN_ID$'
+        and M.TAMNGUNG = '0'
+      </statement>
+      <!--END CACHED-->
+      
+      
+      
+      <!--KHOA SO CHUNG TU - TINH TON DAU KY-->
+      <statement id="DAO00322_TT_MAU_KYTONKHO_GetAll" resultClass="DataObject">
+        select *
+        from TT_MAU_KYTONKHO
+        BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by KYTONKHO_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KYTONKHO_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_KYTONKHO
+        <dynamic prepend="where">
+          <isParameterPresent>
+            <isNotEmpty prepend="and" property="KYTONKHO_ID">
+              TT_MAU_KYTONKHO.KYTONKHO_ID = '$KYTONKHO_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MAKYTONKHO">
+              TT_MAU_KYTONKHO.MAKYTONKHO = '$MAKYTONKHO$'
+            </isNotEmpty>
+          </isParameterPresent>
+        </dynamic>
+        order by KYTONKHO_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KYTONKHO_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_KYTONKHO
+        where TT_MAU_KYTONKHO.KYTONKHO_ID  = '$value$'
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by KYTONKHO_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KYTONKHO_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_KYTONKHO
+        where TT_MAU_KYTONKHO.KYTONKHO_ID  = '$KYTONKHO_ID$'
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by KYTONKHO_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KYTONKHO_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        IF NOT EXISTS
+        (
+        SELECT MAKYTONKHO
+        FROM TT_MAU_KYTONKHO
+        WHERE MAKYTONKHO = #MAKYTONKHO#
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        )
+        BEGIN
+        insert into TT_MAU_KYTONKHO (
+        MAKYTONKHO
+        , THANG
+        , NAM
+        , TUNGAY
+        , DENNGAY
+        , KHOASO
+        , BENHVIEN_ID
+        , NGAYTAO
+        , NGUOITAO_ID
+        , NGAYCAPNHAT
+        , NGUOICAPNHAT_ID
+        ) values (
+        #MAKYTONKHO#
+        , #THANG#
+        , #NAM#
+        , #TUNGAY#
+        , #DENNGAY#
+        , #KHOASO#
+        , #BENHVIEN_ID#
+        , #NGAYTAO#
+        , #NGUOITAO_ID#
+        , #NGAYCAPNHAT#
+        , #NGUOICAPNHAT_ID#
+        )
+        select SCOPE_identity() as value
+        END
+      </statement>
+      <!--Revision:0-->
+      <update id="DAO00322_TT_MAU_KYTONKHO_Update" parameterClass="System.Collections.IDictionary">
+        update TT_MAU_KYTONKHO set
+        MAKYTONKHO = #MAKYTONKHO#
+        , THANG = #THANG#
+        , NAM = #NAM#
+        , TUNGAY = #TUNGAY#
+        , DENNGAY = #DENNGAY#
+        , KHOASO = #KHOASO#
+        , NGAYCAPNHAT = #NGAYCAPNHAT#
+        , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+        where
+        KYTONKHO_ID = '$KYTONKHO_ID$'
+      </update>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KYTONKHO_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        delete from TT_MAU_KYTONKHO
+        where
+        KYTONKHO_ID = '$KYTONKHO_ID$'
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KYTONKHO_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        delete from TT_MAU_KYTONKHO
+        <dynamic prepend="where">
+          <isParameterPresent>
+            <isNotEmpty prepend="and" property="KYTONKHO_ID">
+              TT_MAU_KYTONKHO.KYTONKHO_ID = '$KYTONKHO_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MAKYTONKHO">
+              TT_MAU_KYTONKHO.MAKYTONKHO = '$MAKYTONKHO$'
+            </isNotEmpty>
+          </isParameterPresent>
+        </dynamic>
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_TONDAUKY_KiemTraChuaThucHienLanNao" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT TOP 1 MONTH(NGAYCHUNGTU) AS THANG, YEAR(NGAYCHUNGTU) AS NAM
+        FROM
+        TT_MAU_CHUNGTU
+        WHERE
+        ((KHONHAP_ID = '$KHOMAU_ID$' AND LOAICHUNGTU = 'N' and BENHVIEN_ID = '$BENHVIEN_ID$') or (KHOXUAT_ID = '$KHOMAU_ID$' AND LOAICHUNGTU = 'X' and BENHVIEN_ID = '$BENHVIEN_ID$'))
+        AND NOT EXISTS (SELECT * FROM TT_MAU_TONDAUKY WHERE KHOMAU_ID = '$KHOMAU_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$')
+        ORDER BY NGAYCHUNGTU ASC
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_TONDAUKY_LayKyChuaChuaThucHien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT * FROM
+        (
+        SELECT
+        TOP 1
+        KTK.THANG,
+        KTK.NAM,
+        '$THANG$' - KTK.THANG + (('$NAM$' - KTK.NAM)*12 ) as KHOANGCACHTHANG,
+        '$NAM$' - KTK.NAM as KHOANGCACHNAM
+        FROM
+        TT_MAU_TONDAUKY TDK
+        inner join TT_MAU_KYTONKHO KTK on TDK.KYTONKHO_ID = KTK.KYTONKHO_ID
+        WHERE
+        TDK.KHOMAU_ID = '$KHOMAU_ID$'
+        AND TDK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        ORDER BY KTK.KYTONKHO_ID DESC
+        )a
+        where
+        KHOANGCACHTHANG &gt; 1
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_TONDAUKY_TinhTonDauKy" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        DECLARE @THANGTRUOC Date
+        SET @THANGTRUOC = '$THANGTRUOCLIENKE$'
+        SELECT TDK.KHOMAU_ID, TDK.MAU_ID, TDK.SOLONHAP_ID,
+        SUM(TDK.SOLUONGNHAP) as SOLUONGNHAP, SUM(TDK.SOLUONGXUAT) as SOLUONGXUAT,
+        SUM(TDK.SOLUONGNHAP) - SUM(TDK.SOLUONGXUAT) AS SOLUONGTON,
+        SUM(TDK.TONDAUKY) as TONDAUKY,
+        SUM(TDK.TONDAUKY) + (SUM(TDK.SOLUONGNHAP) - SUM(TDK.SOLUONGXUAT)) AS TONCUOI
+        FROM
+        (
+        SELECT TDK.KHOMAU_ID, TDK.MAU_ID, TDK.SOLONHAP_ID,
+        TDK.SOLUONG AS TONDAUKY, 0 as SOLUONGNHAP, 0 as SOLUONGXUAT
+        FROM
+        TT_MAU_KYTONKHO KTK LEFT JOIN TT_MAU_TONDAUKY TDK ON TDK.KYTONKHO_ID = KTK.KYTONKHO_ID
+        WHERE
+        KTK.NAM = YEAR(@THANGTRUOC)
+        AND KTK.THANG = MONTH(@THANGTRUOC)
+        AND TDK.KHOMAU_ID IN ($LIST_KHOMAU_ID$)
+        AND TDK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        UNION ALL
+        SELECT   CT.KHONHAP_ID AS KHOMAU_ID, CTCT.MAU_ID, CTCT.SOLONHAP_ID,
+        0 AS TONDAUKY,SUM(CTCT.SOLUONGDANHAP) as SOLUONGNHAP, 0 as SOLUONGXUAT		 
+        FROM
+        TT_MAU_CHUNGTU CT INNER JOIN TT_MAU_CHUNGTU_CHITIET CTCT ON CT.CHUNGTU_ID = CTCT.CHUNGTU_ID
+        WHERE
+        MONTH(CT.NGAYCHUNGTU) = MONTH(@THANGTRUOC)
+        AND YEAR(CT.NGAYCHUNGTU) = YEAR(@THANGTRUOC)
+        AND CT.LOAICHUNGTU = 'N'
+        AND CTCT.SOLUONGDANHAP &gt; 0
+        AND CT.TRANGTHAI NOT IN ('PNCNK', 'HUY')
+        AND CT.KHONHAP_ID IN ($LIST_KHOMAU_ID$)
+        AND CT.BENHVIEN_ID = '$BENHVIEN_ID$'
+        GROUP BY CT.KHONHAP_ID, CTCT.MAU_ID, CTCT.SOLONHAP_ID
+        UNION ALL
+        SELECT  CT.KHOXUAT_ID AS KHOMAU_ID, CTCT.MAU_ID, CTCT.SOLONHAP_ID,
+        0 AS TONDAUKY, 0 AS SOLUONGNHAP, SUM(CTCT.SOLUONGDAXUAT) as SOLUONGXUAT
+        FROM
+        TT_MAU_CHUNGTU CT INNER JOIN TT_MAU_CHUNGTU_CHITIET CTCT ON CT.CHUNGTU_ID = CTCT.CHUNGTU_ID
+        WHERE
+        MONTH(CT.NGAYCHUNGTU) = MONTH(@THANGTRUOC)
+        AND YEAR(CT.NGAYCHUNGTU) = YEAR(@THANGTRUOC)
+        AND CT.LOAICHUNGTU = 'X'
+        AND CTCT.SOLUONGDAXUAT &gt; 0
+        AND CT.TRANGTHAI NOT IN ('CXN')
+        AND CT.KHOXUAT_ID IN ($LIST_KHOMAU_ID$)
+        AND CT.BENHVIEN_ID = '$BENHVIEN_ID$'
+        GROUP BY CT.KHOXUAT_ID, CTCT.MAU_ID, CTCT.SOLONHAP_ID
+        )TDK GROUP BY KHOMAU_ID, MAU_ID, SOLONHAP_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_BoSungTonKhoCacLoKyTruoc" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        insert into TT_MAU_TONDAUKY
+        select '$KYTONKHO_ID$' as KYTONKHO_ID, KHOMAU_ID, MAU_ID, SOLONHAP_ID,
+        SOLUONG, DONGIAMUA, DONGIAVON, BENHVIEN_ID, getdate(), '$NGUOITAO_ID$', getdate(), '$NGUOICAPNHAT_ID$'
+        from
+        TT_MAU_TONDAUKY As t1
+        where
+        t1.KYTONKHO_ID = '$KYTONKHO_ID$' -1
+        and t1.KHOMAU_ID in ($LIST_KHOMAU_ID$)
+        and NOT EXISTS (
+        select 1
+        from TT_MAU_TONDAUKY As t2
+        where t1.SOLONHAP_ID = t2.SOLONHAP_ID and t1.KHOMAU_ID = t2.KHOMAU_ID and t1.MAU_ID = t2.MAU_ID
+        and t2.KYTONKHO_ID = '$KYTONKHO_ID$'
+        and t2.KHOMAU_ID in ($LIST_KHOMAU_ID$)
+        )
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KYTONKHO_GetKyCuoi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT TOP 1
+        KTK.KYTONKHO_ID,
+        KTK.THANG,
+        KTK.NAM,
+        TDK.NGAYCAPNHAT as NGAYTAO,
+        NV.TENNHANVIEN as NGUOITAO,
+        CONVERT(VARCHAR, KTK.TUNGAY,103) AS TUNGAY,
+        CONVERT(VARCHAR, KTK.DENNGAY,103) AS DENNGAY,
+        TDK.KHOMAU_ID,
+        CASE
+        WHEN KS.KHOASO = 1 THEN 'X'
+        ELSE ''
+        END  AS KHOASO
+        FROM
+        TT_MAU_TONDAUKY TDK
+        INNER JOIN TT_MAU_KYTONKHO KTK on TDK.KYTONKHO_ID = KTK.KYTONKHO_ID
+        LEFT JOIN TT_MAU_KHOASOCHUNGTU KS on KS.KYTONKHO_ID = KTK.KYTONKHO_ID
+        LEFT JOIN TM_NHANVIEN NV on TDK.NGUOICAPNHAT_ID = NV.NHANVIEN_ID
+        WHERE
+        TDK.KHOMAU_ID = '$KHOMAU_ID$'
+        and TDK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        ORDER BY KTK.DENNGAY DESC
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KHOASOCHUNGTU_GetTrangThaiKhoSo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT
+        TOP 1
+        CASE
+        WHEN KHOASO = 1 THEN 'X'
+        ELSE ''
+        END  AS KHOASO
+        from TT_MAU_KHOASOCHUNGTU
+        where
+        KHOMAU_ID = '$KHOMAU_ID$'
+        and KYTONKHO ='$KYTONKHO$'
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        ORDER BY KYTONKHO_ID DESC
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KYTONKHO_Search" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT TOP 1
+        KTK.KYTONKHO_ID,
+        KTK.NGAYTAO,
+        NV.TENNHANVIEN as NGUOITAO,
+        CONVERT(VARCHAR, KTK.TUNGAY,103) AS TUNGAY,
+        CONVERT(VARCHAR, KTK.DENNGAY,103) AS DENNGAY,
+        TDK.KHOMAU_ID
+        FROM
+        TT_MAU_TONDAUKY TDK
+        INNER JOIN TT_MAU_KYTONKHO KTK on TDK.KYTONKHO_ID = KTK.KYTONKHO_ID
+        LEFT JOIN TM_NHANVIEN NV on KTK.NGUOITAO_ID = NV.NHANVIEN_ID
+        WHERE
+        TDK.KHOMAU_ID = '$KHOMAU_ID$'
+        and KTK.THANG =  '$THANG$'
+        and KTK.NAM =  '$NAM$'
+        and TDK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        ORDER BY KTK.DENNGAY DESC
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_TONDAUKY_GetAll" resultClass="DataObject">
+        select *
+        from TT_MAU_TONDAUKY
+        where BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by MAUTONDAUKY_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_TONDAUKY_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_TONDAUKY
+        <dynamic prepend="where">
+          <isParameterPresent>
+            <isNotEmpty prepend="and" property="MAUTONDAUKY_ID">
+              TT_MAU_TONDAUKY.MAUTONDAUKY_ID = '$MAUTONDAUKY_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="KYTONKHO_ID">
+              TT_MAU_TONDAUKY.KYTONKHO_ID = '$KYTONKHO_ID$'
+            </isNotEmpty>
+          </isParameterPresent>
+        </dynamic>
+        order by MAUTONDAUKY_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_TONDAUKY_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_TONDAUKY
+        where TT_MAU_TONDAUKY.MAUTONDAUKY_ID  = '$value$'
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by MAUTONDAUKY_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_TONDAUKY_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_TONDAUKY
+        where TT_MAU_TONDAUKY.MAUTONDAUKY_ID  = '$MAUTONDAUKY_ID$'
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by MAUTONDAUKY_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_TONDAUKY_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        delete
+        from TT_MAU_TONDAUKY
+        where
+        KYTONKHO_ID = #KYTONKHO_ID#
+        and KHOMAU_ID = #KHOMAU_ID#
+        and MAU_ID = #MAU_ID#
+        and SOLONHAP_ID = #SOLONHAP_ID#
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        insert into TT_MAU_TONDAUKY (
+        KYTONKHO_ID
+        , KHOMAU_ID
+        , MAU_ID
+        , SOLONHAP_ID
+        , DONGIAMUA
+        , DONGIAVON
+        , SOLUONG
+        , BENHVIEN_ID
+        , NGAYTAO
+        , NGUOITAO_ID
+        , NGAYCAPNHAT
+        , NGUOICAPNHAT_ID
+        ) values (
+        #KYTONKHO_ID#
+        , #KHOMAU_ID#
+        , #MAU_ID#
+        , #SOLONHAP_ID#
+        , #DONGIAMUA#
+        , #DONGIAVON#
+        , #SOLUONG#
+        , #BENHVIEN_ID#
+        , #NGAYTAO#
+        , #NGUOITAO_ID#
+        , #NGAYCAPNHAT#
+        , #NGUOICAPNHAT_ID#
+        )
+      </statement>
+      <!--Revision:0-->
+      <update id="DAO00322_TT_MAU_TONDAUKY_Update" parameterClass="System.Collections.IDictionary">
+        update TT_MAU_TONDAUKY set
+        KYTONKHO_ID = #KYTONKHO_ID#
+        , KHOMAU_ID = #KHOMAU_ID#
+        , MAU_ID = #MAU_ID#
+        , SOLONHAP_ID = #SOLONHAP_ID#
+        , DONGIAMUA = #DONGIAMUA#
+        , DONGIAVON = #DONGIAVON#
+        , SOLUONG = #SOLUONG#
+        <!--, BENHVIEN_ID = #BENHVIEN_ID#
+    , NGAYTAO = #NGAYTAO#
+    , NGUOITAO_ID = #NGUOITAO_ID#-->
+        , NGAYCAPNHAT = #NGAYCAPNHAT#
+        , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+        where
+        MAUTONDAUKY_ID = '$MAUTONDAUKY_ID$'
+      </update>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_TONDAUKY_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        delete from TT_MAU_TONDAUKY
+        where
+        MAUTONDAUKY_ID = '$MAUTONDAUKY_ID$'
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_TONDAUKY_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        delete from TT_MAU_TONDAUKY
+        <dynamic prepend="where">
+          <isParameterPresent>
+            <isNotEmpty prepend="and" property="MAUTONDAUKY_ID">
+              TT_MAU_TONDAUKY.MAUTONDAUKY_ID = '$MAUTONDAUKY_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="KYTONKHO_ID">
+              TT_MAU_TONDAUKY.KYTONKHO_ID = '$KYTONKHO_ID$'
+            </isNotEmpty>
+          </isParameterPresent>
+        </dynamic>
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KHOASOCHUNGTU_GetKyCuoi" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT TOP 1
+        KSCT.KHOASOCHUNGTU_ID,
+        KTK.KYTONKHO_ID,
+        KSCT.KHOASO,
+        KTK.TUNGAY,
+        KSCT.KHOADENNGAY as DENNGAY,
+        KSCT.KHOMAU_ID,
+        KSCT.NGUOIKHOA_ID,
+        NVK.TENNHANVIEN as NGUOIKHOA,
+        KSCT.NGAYKHOA,
+        KSCT.NGUOIMO_ID,
+        NVM.TENNHANVIEN as NGUOIMO,
+        KSCT.NGAYMO
+        FROM
+        TT_MAU_KHOASOCHUNGTU KSCT
+        inner join TT_MAU_KYTONKHO KTK on KSCT.KYTONKHO_ID = KTK.KYTONKHO_ID
+        left join TM_NHANVIEN NVK on NVK.NHANVIEN_ID = KSCT.NGUOIKHOA_ID
+        left join TM_NHANVIEN NVM on NVM.NHANVIEN_ID = KSCT.NGUOIMO_ID
+        WHERE
+        KHOMAU_ID = '$KHOMAU_ID$'
+        and KTK.THANG = '$THANG$'
+        and KTK.NAM = '$NAM$'
+        AND KSCT.BENHVIEN_ID = '$BENHVIEN_ID$'
+        ORDER BY KTK.DENNGAY DESC
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KHOASOCHUNGTU_LayKyChuaKhoaSo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT * FROM
+        (
+        SELECT
+        TOP 1
+        KSCT.KHOASOCHUNGTU_ID,
+        KSCT.KHOMAU_ID,
+        KTK.THANG,
+        KTK.NAM,
+        MONTH('$NGAYKIEMTRA$') - KTK.THANG + ((YEAR('$NGAYKIEMTRA$') - KTK.NAM)*12 ) as KHOANGCACHTHANG,
+        YEAR('$NGAYKIEMTRA$') - KTK.NAM as KHOANGCACHNAM
+        FROM
+        TT_MAU_KHOASOCHUNGTU KSCT
+        inner join TT_MAU_KYTONKHO KTK on KSCT.KYTONKHO_ID = KTK.KYTONKHO_ID
+        WHERE
+        KHOMAU_ID = '$KHOMAU_ID$'
+        and KSCT.KHOADENNGAY &lt;= '$NGAYKIEMTRA$'
+        and KSCT.KHOASO = 1
+        AND KSCT.BENHVIEN_ID = '$BENHVIEN_ID$'
+        ORDER BY KTK.DENNGAY DESC
+        )a
+        where
+        KHOANGCACHTHANG &gt; 1
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KHOASOCHUNGTU_LayKhoChuaTungKhoaSo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT TOP 1 MONTH(NGAYCHUNGTU) AS THANG, YEAR(NGAYCHUNGTU) AS NAM
+        FROM
+        TT_MAU_CHUNGTU
+        WHERE
+        ((KHONHAP_ID = '$KHOMAU_ID$' AND LOAICHUNGTU = 'N' and BENHVIEN_ID = '$BENHVIEN_ID$') or (KHOXUAT_ID = '$KHOMAU_ID$' AND LOAICHUNGTU = 'X' and BENHVIEN_ID = '$BENHVIEN_ID$'))
+        AND NOT EXISTS (SELECT * FROM TT_MAU_KHOASOCHUNGTU WHERE KHOMAU_ID = '$KHOMAU_ID$' and BENHVIEN_ID = '$BENHVIEN_ID$')
+        ORDER BY NGAYCHUNGTU ASC
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KHOASOCHUNGTU_LayKyDaKhoaSo" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT * FROM
+        (
+        SELECT
+        TOP 1
+        KSCT.KHOASOCHUNGTU_ID,
+        KSCT.KHOMAU_ID,
+        KTK.THANG,
+        KTK.NAM,
+        KTK.THANG - MONTH('$NGAYKIEMTRA$') + ((KTK.NAM - YEAR('$NGAYKIEMTRA$'))*12 ) as KHOANGCACHTHANG,
+        KTK.NAM - YEAR('$NGAYKIEMTRA$') as KHOANGCACHNAM
+        FROM
+        TT_MAU_KHOASOCHUNGTU KSCT
+        inner join TT_MAU_KYTONKHO KTK on KSCT.KYTONKHO_ID = KTK.KYTONKHO_ID
+        WHERE
+        KHOMAU_ID = '$KHOMAU_ID$'
+        AND KSCT.KHOADENNGAY &gt;= '$NGAYKIEMTRA$'
+        AND KSCT.KHOASO = 1
+        AND KSCT.BENHVIEN_ID = '$BENHVIEN_ID$'
+        ORDER BY KTK.DENNGAY DESC
+        )a
+        where
+        KHOANGCACHTHANG &gt; 0
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KHOASOCHUNGTU_GetAll" resultClass="DataObject">
+        select *
+        from TT_MAU_KHOASOCHUNGTU
+        where BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by KHOASOCHUNGTU_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KHOASOCHUNGTU_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_KHOASOCHUNGTU
+        <dynamic prepend="where">
+          <isParameterPresent>
+            <isNotEmpty prepend="and" property="KHOASOCHUNGTU_ID">
+              TT_MAU_KHOASOCHUNGTU.KHOASOCHUNGTU_ID = '$KHOASOCHUNGTU_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="KYTONKHO_ID">
+              TT_MAU_KHOASOCHUNGTU.KYTONKHO_ID = '$KYTONKHO_ID$'
+            </isNotEmpty>
+          </isParameterPresent>
+        </dynamic>
+        order by KHOASOCHUNGTU_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KHOASOCHUNGTU_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_KHOASOCHUNGTU
+        where TT_MAU_KHOASOCHUNGTU.KHOASOCHUNGTU_ID  = '$value$'
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by KHOASOCHUNGTU_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KHOASOCHUNGTU_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_KHOASOCHUNGTU
+        where TT_MAU_KHOASOCHUNGTU.KHOASOCHUNGTU_ID  = '$KHOASOCHUNGTU_ID$'
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by KHOASOCHUNGTU_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KHOASOCHUNGTU_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        insert into TT_MAU_KHOASOCHUNGTU (
+        KYTONKHO_ID
+        , KHOMAU_ID
+        , KYTONKHO
+        , KHOADENNGAY
+        , KHOASO
+        , NGAYKHOA
+        , NGUOIKHOA_ID
+        , NGAYMO
+        , NGUOIMO_ID
+        , NGAYTAO
+        , NGUOITAO_ID
+        , BENHVIEN_ID
+        ) values (
+        #KYTONKHO_ID#
+        , #KHOMAU_ID#
+        , #KYTONKHO#
+        , #KHOADENNGAY#
+        , #KHOASO#
+        , #NGAYKHOA#
+        , #NGUOIKHOA_ID#
+        , #NGAYMO#
+        , #NGUOIMO_ID#
+        , #NGAYTAO#
+        , #NGUOITAO_ID#
+        , #BENHVIEN_ID#
+        )
+      </statement>
+      <!--Revision:0-->
+      <update id="DAO00322_TT_MAU_KHOASOCHUNGTU_Upd" parameterClass="System.Collections.IDictionary">
+        update TT_MAU_KHOASOCHUNGTU set
+        KHOADENNGAY = #KHOADENNGAY#
+        , KHOASO = #KHOASO#
+        , NGAYKHOA = #NGAYKHOA#
+        , NGUOIKHOA_ID = #NGUOIKHOA_ID#
+        , NGAYMO = null
+        , NGUOIMO_ID = null
+        where
+        KHOASOCHUNGTU_ID = '$KHOASOCHUNGTU_ID$'
+      </update>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KHOASOCHUNGTU_MoSo" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        update TT_MAU_KHOASOCHUNGTU
+        set
+        KHOASO = '0'
+        , NGAYMO = #NGAYMO#
+        , NGUOIMO_ID = #NGUOIMO_ID#
+        where
+        KHOASOCHUNGTU_ID
+        IN
+        (
+        select
+        KHOASOCHUNGTU_ID
+        from
+        TT_MAU_KHOASOCHUNGTU
+        where
+        KYTONKHO = '$KYTONKHO$'
+        AND KHOASO = '1'
+        and BENHVIEN_ID ='$BENHVIEN_ID$'
+        AND KHOMAU_ID IN ($LIST_KHOMAU_ID$)
+        )
+      </statement>
+      <!--Revision:0-->
+
+      <statement id="DAO00322_LayChungTuPhatSinhTrongKyChuaHoanThien" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT
+        CHUNGTU_ID
+        FROM TT_MAU_CHUNGTU
+        WHERE
+        MONTH(NGAYCHUNGTU) = month('$KHOADENNGAY$')
+        AND YEAR(NGAYCHUNGTU) = year('$KHOADENNGAY$')
+        AND (KHOXUAT_ID = '$KHOMAU_ID$' OR KHONHAP_ID = '$KHOMAU_ID$')
+        AND (TRANGTHAI = 'PNCNK' or TRANGTHAI = 'CHUATHANHTOAN' or  TRANGTHAI = 'CXN')
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_KiemTraChungTuNhapNCCChuaHoanTat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT
+        CHUNGTU_ID, ct.MUCDICHCHUNGTU as DICTIONARY_CODE        
+        FROM TT_MAU_CHUNGTU ct
+        WHERE
+        MONTH(ct.NGAYCHUNGTU) = month('$KHOADENNGAY$') AND YEAR(ct.NGAYCHUNGTU) = year('$KHOADENNGAY$')
+        AND ct.MUCDICHCHUNGTU = 'N01'
+        AND ct.KHONHAP_ID = '$KHOMAU_ID$'
+        AND ct.TRANGTHAI = 'PNCNK'
+        AND ct.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_KiemTraChungTuTraNCCChuaHoanTat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT
+        CHUNGTU_ID, ct.MUCDICHCHUNGTU as DICTIONARY_CODE
+        FROM TT_MAU_CHUNGTU ct        
+        WHERE
+        MONTH(ct.NGAYCHUNGTU) = month('$KHOADENNGAY$') AND YEAR(ct.NGAYCHUNGTU) = year('$KHOADENNGAY$')
+        AND ct.MUCDICHCHUNGTU = 'X01'
+        AND ct.KHOXUAT_ID = '$KHOMAU_ID$'
+        AND ct.TRANGTHAI = 'CXN'
+        AND ct.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_KiemTraChungTuXuatNoiBoChuaNhapKho" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT
+        CHUNGTU_ID, ct.MUCDICHCHUNGTU as DICTIONARY_CODE
+        FROM TT_MAU_CHUNGTU ct
+        WHERE
+        MONTH(ct.NGAYCHUNGTU) = month('$KHOADENNGAY$') AND YEAR(ct.NGAYCHUNGTU) = year('$KHOADENNGAY$')
+        AND ct.MUCDICHCHUNGTU = 'X07'
+        AND ct.CHUNGTULIENQUAN_ID is null
+        AND ct.KHOXUAT_ID = '$KHOMAU_ID$'
+        AND ct.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_KiemTraChungTuHoanTraChuaNhapKho" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT
+        CHUNGTU_ID, ct.MUCDICHCHUNGTU as DICTIONARY_CODE
+        FROM TT_MAU_CHUNGTU ct
+        WHERE
+        MONTH(ct.NGAYCHUNGTU) = month('$KHOADENNGAY$') AND YEAR(ct.NGAYCHUNGTU) = year('$KHOADENNGAY$')
+        AND ct.MUCDICHCHUNGTU = 'X05'
+        AND ct.CHUNGTULIENQUAN_ID is null
+        AND ct.KHOXUAT_ID = '$KHOMAU_ID$'
+        AND ct.BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <statement id="DAO00322_LayKyKhoaSoTheoKho" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+          SELECT
+          KHOMAU_ID
+          FROM TT_MAU_KHOASOCHUNGTU
+          WHERE
+          KYTONKHO = '$KYTONKHO$'
+          AND KHOMAU_ID = '$KHOMAU_ID$'
+          AND KHOASO = '1'
+          and BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+    <!--END KHOA SO - TINH TON DAU KY-->
+      
+    <!-- KIEM KE-->
+
+      <statement id="DAO00322_TT_MAU_TONKHO_GetListKiemKe" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select TK.MAU_ID, D.TENMAU, D.DONVITINH_ID, sum(TK.SOLUONG) as SOLUONG
+        from TT_MAU_TONKHO TK
+        inner join TM_MAU D on D.MAU_ID =  TK.MAU_ID
+        WHERE
+        TK.KHOMAU_ID =  '$KHOMAU_ID$'
+        AND TK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        AND  CONVERT(date, TK.NGAYTAO) BETWEEN   CONVERT(date, '$TUNGAY$')  AND   CONVERT(date, '$DENNGAY$')
+        GROUP BY TK.MAU_ID, D.TENMAU, D.DONVITINH_ID
+        ORDER BY D.TENMAU
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_CheckExist" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        SELECT KK.*
+        FROM TT_MAU_KIEMKE KK
+        INNER JOIN TT_MAU_KYTONKHO KTK ON KK.KYKIEMKE_ID = KTK.KYTONKHO_ID
+        INNER JOIN TM_MAU D on D.MAU_ID =  KK.MAU_ID
+        WHERE
+        KTK.MAKYTONKHO = '$MAKYTONKHO$'
+        AND KK.KHOMAU_ID = '$KHOMAU_ID$'
+        AND KK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by
+        D.TENMAU
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_GetAll" resultClass="DataObject">
+        select *
+        from TT_MAU_KIEMKE
+        where CT.BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by MAUKIEMKE_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_KIEMKE
+        <dynamic prepend="where">
+          <isParameterPresent>
+            <isNotEmpty prepend="and" property="MAUKIEMKE_ID">
+              TT_MAU_KIEMKE.MAUKIEMKE_ID = '$MAUKIEMKE_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="KYKIEMKE_ID">
+              TT_MAU_KIEMKE.KYKIEMKE_ID = '$KYKIEMKE_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="KHOMAU_ID">
+              TT_MAU_KIEMKE.KHOMAU_ID = '$KHOMAU_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MAU_ID">
+              TT_MAU_KIEMKE.MAU_ID = '$MAU_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="SOLONHAP_ID">
+              TT_MAU_KIEMKE.SOLONHAP_ID = '$SOLONHAP_ID$'
+            </isNotEmpty>
+          </isParameterPresent>
+        </dynamic>
+        order by MAUKIEMKE_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_KIEMKE
+        where TT_MAU_KIEMKE.MAUKIEMKE_ID  = '$value$'
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by MAUKIEMKE_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+        select *
+        from TT_MAU_KIEMKE
+        where TT_MAU_KIEMKE.MAUKIEMKE_ID  = '$MAUKIEMKE_ID$'
+        and BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by MAUKIEMKE_ID
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+        insert into TT_MAU_KIEMKE (
+        KYKIEMKE_ID
+        , HOIDONGKIEMKE_ID
+        , KHOMAU_ID
+        , MAU_ID
+        , SOLONHAP_ID
+        , DONGIAMUA
+        , DONGIAVON
+        , SOLUONG
+        , TENMAU
+        , DONVITINH_ID
+        , SOKIEMSOAT
+        , NUOCSX
+        , THANHTIEN
+        , SOTHUCTE
+        , THUA
+        , THIEU
+        , HONG
+        , KIEMKETUNGAY
+        , KIEMKEDENNGAY
+        , GHICHU
+        , NGAYTAO
+        , NGUOITAO_ID
+        , NGAYCAPNHAT
+        , NGUOICAPNHAT_ID
+        , BENHVIEN_ID
+        ) values (
+        #KYKIEMKE_ID#
+        , #HOIDONGKIEMKE_ID#
+        , #KHOMAU_ID#
+        , #MAU_ID#
+        , #SOLONHAP_ID#
+        , #DONGIAMUA#
+        , #DONGIAVON#
+        , #SOLUONG#
+        , #TENMAU#
+        , #DONVITINH_ID#
+        , #SOKIEMSOAT#
+        , #NUOCSX#
+        , #THANHTIEN#
+        , #SOTHUCTE#
+        , #THUA#
+        , #THIEU#
+        , #HONG#
+        , #KIEMKETUNGAY#
+        , #KIEMKEDENNGAY#
+        , #GHICHU#
+        , #NGAYTAO#
+        , #NGUOITAO_ID#
+        , #NGAYCAPNHAT#
+        , #NGUOICAPNHAT_ID#
+        , #BENHVIEN_ID#
+        )
+      </statement>
+      <!--Revision:0-->
+      <update id="DAO00322_TT_MAU_KIEMKE_Update" parameterClass="System.Collections.IDictionary">
+        update TT_MAU_KIEMKE set
+        KYKIEMKE_ID = #KYKIEMKE_ID#
+        , HOIDONGKIEMKE_ID = #HOIDONGKIEMKE_ID#
+        , KHOMAU_ID = #KHOMAU_ID#
+        , MAU_ID = #MAU_ID#
+        , SOLONHAP_ID = #SOLONHAP_ID#
+        , DONGIAMUA = #DONGIAMUA#
+        , DONGIAVON = #DONGIAVON#
+        , SOLUONG = #SOLUONG#
+        , TENMAU = #TENMAU#
+        , DONVITINH_ID = #DONVITINH_ID#
+        , SOKIEMSOAT = #SOKIEMSOAT#
+        , NUOCSX = #NUOCSX#
+        , THANHTIEN = #THANHTIEN#
+        , SOTHUCTE = #SOTHUCTE#
+        , THUA = #THUA#
+        , THIEU = #THIEU#
+        , HONG = #HONG#
+        , GHICHU = #GHICHU#
+        , KIEMKETUNGAY = #KIEMKETUNGAY#
+        , KIEMKEDENNGAY = #KIEMKEDENNGAY#
+        <!--, NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#-->
+        , NGAYCAPNHAT = #NGAYCAPNHAT#
+        , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+        , BENHVIEN_ID = #BENHVIEN_ID#
+        where
+        MAUKIEMKE_ID = '$MAUKIEMKE_ID$'
+      </update>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        delete from TT_MAU_KIEMKE
+        where
+        MAUKIEMKE_ID = '$MAUKIEMKE_ID$'
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+        delete from TT_MAU_KIEMKE
+        <dynamic prepend="where">
+          <isParameterPresent>
+            <isNotEmpty prepend="and" property="MAUKIEMKE_ID">
+              TT_MAU_KIEMKE.MAUKIEMKE_ID = '$MAUKIEMKE_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="KYKIEMKE_ID">
+              TT_MAU_KIEMKE.KYKIEMKE_ID = '$KYKIEMKE_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="KHOMAU_ID">
+              TT_MAU_KIEMKE.KHOMAU_ID = '$KHOMAU_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="MAU_ID">
+              TT_MAU_KIEMKE.MAU_ID = '$MAU_ID$'
+            </isNotEmpty>
+            <isNotEmpty prepend="and" property="SOLONHAP_ID">
+              TT_MAU_KIEMKE.SOLONHAP_ID = '$SOLONHAP_ID$'
+            </isNotEmpty>
+          </isParameterPresent>
+        </dynamic>
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_GetKyTonKho_DieuChinhTang" resultClass="DataObject">
+        SELECT distinct KTK.*, KK.KHOMAU_ID, KD.TENKHO
+        FROM
+        TT_MAU_KYTONKHO KTK
+        inner join TT_MAU_KIEMKE KK on KTK.KYTONKHO_ID = KK.KYKIEMKE_ID
+        inner join TM_KHOMAU KD on KD.KHOMAU_ID = KK.KHOMAU_ID
+        WHERE
+        KK.THIEU &gt; 0
+        and KK.KHOMAU_ID = '$KHOMAU_ID$'
+        and KTK.MAKYTONKHO like '%' + #MAKYTONKHO# + '%'
+        AND KTK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by KTK.NGAYTAO DESC
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_GetKyTonKho_DieuChinhGiam" resultClass="DataObject">
+        SELECT distinct KTK.*, KK.KHOMAU_ID, KD.TENKHO
+        FROM
+        TT_MAU_KYTONKHO KTK
+        inner join TT_MAU_KIEMKE KK on KTK.KYTONKHO_ID = KK.KYKIEMKE_ID
+        inner join TM_KHOMAU KD on KD.KHOMAU_ID = KK.KHOMAU_ID
+        WHERE
+        KK.THUA &gt; 0
+        and KTK.MAKYTONKHO like '%' + #MAKYTONKHO# + '%'
+        and KK.KHOMAU_ID = '$KHOMAU_ID$'
+        AND KK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        order by KTK.NGAYTAO DESC
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_GetMAUThieu" resultClass="DataObject">
+        SELECT
+        KK.MAU_ID, SLN.NGUONHANG_ID AS NGUONMAU_ID,  SLN.SOKIEMSOAT,SLN.HANDUNG AS HANSUDUNG, SLN.NGAYNHAP,SLN.SOLONHAP, SLN.SOLONHAP_ID,
+        KK.DONGIAMUA, KK.THIEU AS SOLUONGTHUCTE, KK.DONGIAMUA* KK.THIEU AS THANHTIEN,
+        TK.SOLUONG
+        FROM
+        TT_MAU_KIEMKE KK
+        left join TT_MAU_CHUNGTU_SOLONHAP SLN on (KK.SOLONHAP_ID = SLN.SOLONHAP_ID AND KK.MAU_ID = SLN.MAU_ID )
+        left join TT_MAU_TONKHO TK ON (KK.MAU_ID = TK.MAU_ID and TK.KHOMAU_ID = KK.KHOMAU_ID and TK.SOLONHAP_ID = SLN.SOLONHAP_ID)
+        WHERE
+        KK.KYKIEMKE_ID = '$KYKIEMKE_ID$'
+        AND KK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        and KK.THIEU &gt; 0
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_TT_MAU_KIEMKE_GetMAUThua" resultClass="DataObject">
+        SELECT
+        KK.MAU_ID, SLN.NGUONHANG_ID AS NGUONMAU_ID,  SLN.SOKIEMSOAT, SLN.HANDUNG AS HANSUDUNG, SLN.NGAYNHAP,SLN.SOLONHAP, SLN.SOLONHAP_ID,
+        KK.DONGIAMUA, KK.THUA AS SOLUONGDAXUAT, KK.DONGIAMUA* KK.THUA AS THANHTIEN,
+        TK.SOLUONG
+        FROM
+        TT_MAU_KIEMKE KK
+        left join TT_MAU_CHUNGTU_SOLONHAP SLN on (KK.SOLONHAP_ID = SLN.SOLONHAP_ID AND KK.MAU_ID = SLN.MAU_ID )
+        left join TT_MAU_TONKHO TK ON (KK.MAU_ID = TK.MAU_ID and TK.KHOMAU_ID = KK.KHOMAU_ID and TK.SOLONHAP_ID = SLN.SOLONHAP_ID)
+        WHERE
+        KK.KYKIEMKE_ID = '$KYKIEMKE_ID$'
+        AND KK.BENHVIEN_ID = '$BENHVIEN_ID$'
+        and KK.THUA &gt; 0
+      </statement>
+      <statement id="DAO00322_GetHoiDongKiemNhap" resultClass="DataObject">
+        select *
+        from TM_HOIDONG_KIEMNHAP
+        where
+        HIEULUC = '1'
+        AND BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_GetHoiDongThanhLy" resultClass="DataObject">
+        select *
+        from TM_HOIDONG_THANHLY
+        where
+        HIEULUC = '1'
+        AND BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <!--Revision:0-->
+      <statement id="DAO00322_GetHoiDongKiemKe" resultClass="DataObject">
+        select *
+        from TM_HOIDONG_KIEMKE
+        where
+        HIEULUC = '1'
+        AND BENHVIEN_ID = '$BENHVIEN_ID$'
+      </statement>
+      <!--END KIEM KE-->
+    </statements>
+
+</sqlMap>

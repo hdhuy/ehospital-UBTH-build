@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--iBatis Map File-->
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <statements>
+        <!--Revision:0,d48147f64a89e0de4fa3729ec7ef3e1c-->
+        <statement id="DAO00042_GetAll" resultClass="DataObject">
+            select *
+            from TM_TUDIENKETQUA
+            order by TUDIENKETQUA_ID
+        </statement>
+        <!--Revision:0,a2ff8a37c2b3ff06d73b3408b7f3c8d9-->
+        <statement id="DAO00042_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_TUDIENKETQUA
+            where BENHVIEN_ID = '$BENHVIEN_ID$'
+            <isParameterPresent>
+                <isNotEmpty prepend="and" property="TUDIENKETQUA_ID">
+                    TM_TUDIENKETQUA.TUDIENKETQUA_ID = '$TUDIENKETQUA_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="MASO">
+                    TM_TUDIENKETQUA.MASO = '$MASO$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NHOMTUDIEN_ID">
+                    TM_TUDIENKETQUA.NHOMTUDIEN_ID = '$NHOMTUDIEN_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="DICHVU_ID">
+                    TM_TUDIENKETQUA.DICHVU_ID = '$DICHVU_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TENNOIDUNG">
+                    TM_TUDIENKETQUA.TENNOIDUNG = '$TENNOIDUNG$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KETQUA">
+                    TM_TUDIENKETQUA.KETQUA = '$KETQUA$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KETQUA_TEXT">
+                    TM_TUDIENKETQUA.KETQUA_TEXT = '$KETQUA_TEXT$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="KETLUAN">
+                    TM_TUDIENKETQUA.KETLUAN = '$KETLUAN$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="USER_ID">
+                    TM_TUDIENKETQUA.USER_ID = '$USER_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="LANGUAGE_ID">
+                    TM_TUDIENKETQUA.LANGUAGE_ID = '$LANGUAGE_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="SUDUNGCHUNG">
+                    TM_TUDIENKETQUA.SUDUNGCHUNG = '$SUDUNGCHUNG$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="TAMNGUNG">
+                    TM_TUDIENKETQUA.TAMNGUNG = '$TAMNGUNG$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="ATTRIBUTE1">
+                    TM_TUDIENKETQUA.ATTRIBUTE1 = '$ATTRIBUTE1$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="ATTRIBUTE2">
+                    TM_TUDIENKETQUA.ATTRIBUTE2 = '$ATTRIBUTE2$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="ATTRIBUTE3">
+                    TM_TUDIENKETQUA.ATTRIBUTE3 = '$ATTRIBUTE3$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="ATTRIBUTE4">
+                    TM_TUDIENKETQUA.ATTRIBUTE4 = '$ATTRIBUTE4$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGAYTAO">
+                    TM_TUDIENKETQUA.NGAYTAO = '$NGAYTAO$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                    TM_TUDIENKETQUA.NGUOITAO_ID = '$NGUOITAO_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                    TM_TUDIENKETQUA.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                    TM_TUDIENKETQUA.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                </isNotEmpty>
+                <isNotEmpty prepend="and" property="NHOMDICHVU_ID">
+                    TM_TUDIENKETQUA.NHOMDICHVU_ID = '$NHOMDICHVU_ID$'
+                </isNotEmpty>
+            </isParameterPresent>
+            order by TUDIENKETQUA_ID
+        </statement>
+        <!--Revision:0,86869b1c099a48f8df9ef8c31bed3f16-->
+        <statement id="DAO00042_GetDetail" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_TUDIENKETQUA
+            where TM_TUDIENKETQUA.TUDIENKETQUA_ID  = '$value$'
+            order by TUDIENKETQUA_ID
+        </statement>
+        <!--Revision:0,28f83c95e254cd866c8f36a56bcc3ffb-->
+        <statement id="DAO00042_GetDetailP" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+            select *
+            from TM_TUDIENKETQUA
+            where TM_TUDIENKETQUA.TUDIENKETQUA_ID  = '$TUDIENKETQUA_ID$'
+            <isNotEmpty prepend="and" property="NGUOITAO_ID">
+              TM_TUDIENKETQUA.NGUOITAO_ID = '$NGUOITAO_ID$'
+            </isNotEmpty>
+            order by TUDIENKETQUA_ID
+        </statement>
+        <!--Revision:0,8578a5fb1d901d17250e68e87b73ae72-->
+        <insert id="DAO00042_Add" parameterClass="System.Collections.IDictionary" resultClass="System.Int64">
+            insert into TM_TUDIENKETQUA (
+            TUDIENKETQUA_ID
+            , MASO
+            , NHOMTUDIEN_ID
+            , DICHVU_ID
+            , TENNOIDUNG
+            , KETQUA
+            , KETQUA_TEXT
+            , KETLUAN
+            , USER_ID
+            , LANGUAGE_ID
+            , SUDUNGCHUNG
+            , TAMNGUNG
+            , ATTRIBUTE1
+            , ATTRIBUTE2
+            , ATTRIBUTE3
+            , ATTRIBUTE4
+            , NGAYTAO
+            , NGUOITAO_ID
+            , NGAYCAPNHAT
+            , NGUOICAPNHAT_ID
+            , NHOMDICHVU_ID
+            ) values (
+            #TUDIENKETQUA_ID#
+            , #MASO#
+            , #NHOMTUDIEN_ID#
+            , #DICHVU_ID#
+            , #TENNOIDUNG#
+            , #KETQUA#
+            , #KETQUA_TEXT#
+            , #KETLUAN#
+            , #USER_ID#
+            , #LANGUAGE_ID#
+            , #SUDUNGCHUNG#
+            , #TAMNGUNG#
+            , #ATTRIBUTE1#
+            , #ATTRIBUTE2#
+            , #ATTRIBUTE3#
+            , #ATTRIBUTE4#
+            , #NGAYTAO#
+            , #NGUOITAO_ID#
+            , #NGAYCAPNHAT#
+            , #NGUOICAPNHAT_ID#
+            , #NHOMDICHVU_ID#
+            )
+        </insert>
+        <!--Revision:0,41f41b94ab2e67edc227ee8b511ae21d-->
+        <update id="DAO00042_Update" parameterClass="System.Collections.IDictionary">
+            update TM_TUDIENKETQUA set
+            MASO = #MASO#
+            , NHOMTUDIEN_ID = #NHOMTUDIEN_ID#
+            , DICHVU_ID = #DICHVU_ID#
+            , TENNOIDUNG = #TENNOIDUNG#
+            , KETQUA = #KETQUA#
+            , KETQUA_TEXT = #KETQUA_TEXT#
+            , KETLUAN = #KETLUAN#
+            , USER_ID = #USER_ID#
+            , LANGUAGE_ID = #LANGUAGE_ID#
+            , SUDUNGCHUNG = #SUDUNGCHUNG#
+            , TAMNGUNG = #TAMNGUNG#
+            , ATTRIBUTE1 = #ATTRIBUTE1#
+            , ATTRIBUTE2 = #ATTRIBUTE2#
+            , ATTRIBUTE3 = #ATTRIBUTE3#
+            , ATTRIBUTE4 = #ATTRIBUTE4#
+            <!--, NGAYTAO = #NGAYTAO#
+      , NGUOITAO_ID = #NGUOITAO_ID#-->
+            , NGAYCAPNHAT = #NGAYCAPNHAT#
+            , NGUOICAPNHAT_ID = #NGUOICAPNHAT_ID#
+            , NHOMDICHVU_ID = #NHOMDICHVU_ID#
+            where
+            TUDIENKETQUA_ID = '$TUDIENKETQUA_ID$'
+        </update>
+        <!--Revision:0,d44610dede0672b3735e01c40909ec4d-->
+        <statement id="DAO00042_Delete" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_TUDIENKETQUA
+            where
+            TUDIENKETQUA_ID = '$TUDIENKETQUA_ID$'
+        </statement>
+        <!--Revision:0,d84c2bab6d552a897c5038cc2e9d146b-->
+        <statement id="DAO00042_DeleteP" parameterClass="System.Collections.IDictionary" resultClass="System.Int32">
+            delete from TM_TUDIENKETQUA
+            <dynamic prepend="where">
+                <isParameterPresent>
+                    <isNotEmpty prepend="and" property="TUDIENKETQUA_ID">
+                        TM_TUDIENKETQUA.TUDIENKETQUA_ID = '$TUDIENKETQUA_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="MASO">
+                        TM_TUDIENKETQUA.MASO = '$MASO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHOMTUDIEN_ID">
+                        TM_TUDIENKETQUA.NHOMTUDIEN_ID = '$NHOMTUDIEN_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="DICHVU_ID">
+                        TM_TUDIENKETQUA.DICHVU_ID = '$DICHVU_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TENNOIDUNG">
+                        TM_TUDIENKETQUA.TENNOIDUNG = '$TENNOIDUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETQUA">
+                        TM_TUDIENKETQUA.KETQUA = '$KETQUA$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETQUA_TEXT">
+                        TM_TUDIENKETQUA.KETQUA_TEXT = '$KETQUA_TEXT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="KETLUAN">
+                        TM_TUDIENKETQUA.KETLUAN = '$KETLUAN$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="USER_ID">
+                        TM_TUDIENKETQUA.USER_ID = '$USER_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="LANGUAGE_ID">
+                        TM_TUDIENKETQUA.LANGUAGE_ID = '$LANGUAGE_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="SUDUNGCHUNG">
+                        TM_TUDIENKETQUA.SUDUNGCHUNG = '$SUDUNGCHUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="TAMNGUNG">
+                        TM_TUDIENKETQUA.TAMNGUNG = '$TAMNGUNG$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE1">
+                        TM_TUDIENKETQUA.ATTRIBUTE1 = '$ATTRIBUTE1$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE2">
+                        TM_TUDIENKETQUA.ATTRIBUTE2 = '$ATTRIBUTE2$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE3">
+                        TM_TUDIENKETQUA.ATTRIBUTE3 = '$ATTRIBUTE3$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="ATTRIBUTE4">
+                        TM_TUDIENKETQUA.ATTRIBUTE4 = '$ATTRIBUTE4$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYTAO">
+                        TM_TUDIENKETQUA.NGAYTAO = '$NGAYTAO$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOITAO_ID">
+                        TM_TUDIENKETQUA.NGUOITAO_ID = '$NGUOITAO_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGAYCAPNHAT">
+                        TM_TUDIENKETQUA.NGAYCAPNHAT = '$NGAYCAPNHAT$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NGUOICAPNHAT_ID">
+                        TM_TUDIENKETQUA.NGUOICAPNHAT_ID = '$NGUOICAPNHAT_ID$'
+                    </isNotEmpty>
+                    <isNotEmpty prepend="and" property="NHOMDICHVU_ID">
+                        TM_TUDIENKETQUA.NHOMDICHVU_ID = '$NHOMDICHVU_ID$'
+                    </isNotEmpty>
+                </isParameterPresent>
+            </dynamic>
+        </statement>
+    </statements>
+</sqlMap>

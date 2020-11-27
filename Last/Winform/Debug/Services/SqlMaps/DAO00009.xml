@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="eHospital" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+  <statements>       
+    <statement id="DAO00009_GetList" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select *
+      from TM_WFL_SCREEN_STATE_SETTINGS
+      where HOSPITAL_ID = '$HOSPITAL_ID$'
+    </statement>
+    <statement id="DAO00009_GetTiepNhanDoiTuong" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select distinct A.DOITUONG_ID, C.MADOITUONG as DOITUONGBHYT
+      from TT_TIEPNHAN A
+      left join TM_DOITUONG C on C.DOITUONG_ID = A.DOITUONG_ID and NHOMDICHVU in (SELECT [DICTIONARY_ID]
+      FROM [LST_DICTIONARY]
+      where DICTIONARY_TYPE_CODE = 'nhomdoituong' and DICTIONARY_CODE = 'BHYT')
+      where A.TIEPNHAN_ID = '$TIEPNHAN_ID$'
+    </statement>
+    <statement id="DAO00009_GetDichVuIdFromKhambenhNgoaiTru" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select distinct A.DICHVU_ID, A.DOITUONG_ID, C.MADOITUONG as DOITUONGBHYT, D.DVYEUCAU_ID
+      from TT_NGOAITRU_KHAMBENH A
+      left join TM_DOITUONG C on C.DOITUONG_ID = A.DOITUONG_ID and NHOMDICHVU in (SELECT [DICTIONARY_ID]
+      FROM [LST_DICTIONARY]
+      where DICTIONARY_TYPE_CODE = 'nhomdoituong' and DICTIONARY_CODE = 'BHYT')
+      inner join TT_DVYEUCAU D on D.DICHVU_ID = A.DICHVU_ID and D.TIEPNHAN_ID = A.TIEPNHAN_ID
+      where A.KHAMBENH_ID = '$KHAMBENH_ID$'
+    </statement>
+    <statement id="DAO00009_GetDichVuIdFromNgoaiTruToaThuoc" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select B.DICHVU_ID, B.DOITUONG_ID, C.SOTIEPNHAN, D.DVYEUCAU_ID from TT_NGOAITRU_KHAMBENH_TOATHUOC A
+      inner join TT_NGOAITRU_KHAMBENH B on B.KHAMBENH_ID = A.KHAMBENH_ID
+      inner join TT_TIEPNHAN C on C.TIEPNHAN_ID = B.TIEPNHAN_ID
+      inner join TT_DVYEUCAU D on D.DICHVU_ID = B.DICHVU_ID and D.TIEPNHAN_ID = B.TIEPNHAN_ID
+      where KHAMBENH_TOATHUOC_ID = '$KHAMBENH_TOATHUOC_ID$'
+    </statement>
+    <statement id="DAO00009_GetThutiensauDVThuthuat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.THUTIENSAU, B.SOTIEPNHAN, A.DICHVU_ID, A.DVYEUCAU_ID
+      from TT_DVYEUCAU A
+      inner join TT_TIEPNHAN B on B.TIEPNHAN_ID = A.TIEPNHAN_ID
+      where
+      A.DVYEUCAU_ID = '$DVYEUCAU_ID$'
+    </statement>
+    <statement id="DAO00009_GetThutiensauDVThuthuatKhamBenh" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.THUTIENSAU, B.SOTIEPNHAN, A.DICHVU_ID, A.DVYEUCAU_ID
+      from TT_DVYEUCAU A
+      inner join TT_TIEPNHAN B on B.TIEPNHAN_ID = A.TIEPNHAN_ID
+      left join TT_NGOAITRU_KHAMBENH C on A.TIEPNHAN_ID = C.TIEPNHAN_ID and A.DICHVU_ID = C.DICHVU_ID
+      where
+      C.KHAMBENH_ID = '$KHAMBENH_ID$'
+    </statement>
+    <statement id="DAO00009_GetThutiensauDVThuthuatCLS" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.THUTIENSAU, B.SOTIEPNHAN, A.DICHVU_ID, A.DVYEUCAU_ID
+      from TT_DVYEUCAU A
+      inner join TT_TIEPNHAN B on B.TIEPNHAN_ID = A.TIEPNHAN_ID
+      inner join TT_CLSKETQUA C on C.DVYEUCAU_ID = A.DVYEUCAU_ID
+      where C.CLSKETQUA_ID =  '$CLSKETQUA_ID$'
+    </statement>
+    <statement id="DAO00009_GetThutiensauDVThuthuatXN" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.THUTIENSAU, B.SOTIEPNHAN, A.DICHVU_ID, A.DVYEUCAU_ID
+      from TT_DVYEUCAU A
+      inner join TT_TIEPNHAN B on B.TIEPNHAN_ID = A.TIEPNHAN_ID
+      inner join TT_CLSKETQUACHITIET C on C.DVYEUCAU_ID = A.DVYEUCAU_ID
+      where C.CLSKETQUA_ID =  '$CLSKETQUA_ID$'
+    </statement>
+    <statement id="DAO00009_GetThutiensauDVThuthuatPhauThuat" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.THUTIENSAU, B.SOTIEPNHAN, A.DICHVU_ID, A.DVYEUCAU_ID
+      from TT_DVYEUCAU A
+      inner join TT_TIEPNHAN B on B.TIEPNHAN_ID = A.TIEPNHAN_ID
+      inner join TT_PHAUTHUAT_YEUCAU C on C.DVYEUCAU_ID = A.DVYEUCAU_ID
+      where C.PHAUTHUAT_ID =  '$PHAUTHUAT_ID$'
+    </statement>
+    <statement id="DAO00009_GetDichVuIdFromHoaDonId" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.DICHVU_ID, B.SOTIEPNHAN, B.DOITUONG_ID, C.MADOITUONG as DOITUONGBHYT, A.REF_ID as DVYEUCAU_ID, A.REF_TABLE, A.KHAMBENH_ID
+      from TT_VIENPHI A
+      inner join TT_TIEPNHAN B on B.TIEPNHAN_ID = A.TIEPNHAN_ID
+      left join TM_DOITUONG C on C.DOITUONG_ID = B.DOITUONG_ID and NHOMDICHVU in (SELECT [DICTIONARY_ID]
+      FROM [LST_DICTIONARY]
+      where DICTIONARY_TYPE_CODE = 'nhomdoituong' and DICTIONARY_CODE = 'BHYT')
+      where A.HOADON_ID = '$HOADON_ID$'
+    </statement>
+    
+    <statement id="DAO00009_GetDichVuIdFromXacNhanBHYT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select A.DICHVU_ID, B.DOITUONG_ID, B.SOTIEPNHAN, C.DVYEUCAU_ID
+      from TT_VIENPHI A
+      left join TT_TIEPNHAN B on B.TIEPNHAN_ID = A.TIEPNHAN_ID
+      inner join TT_DVYEUCAU C on C.TIEPNHAN_ID = A.TIEPNHAN_ID and C.DICHVU_ID = A.DICHVU_ID
+      where A.DICHVU_ID is not null and A.TIEPNHAN_ID = '$TIEPNHAN_ID$' and A.BENHVIEN_ID = '$BENHVIEN_ID$'     
+    </statement>
+  <statement id="DAO00009_GetTotalVienPhiNhanThuocBHYT" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+    select
+    (Sum(BENHNHAN_PHAITHANHTOAN) - SUM(GIATRI_BENHNHAN_DATHANHTOAN)) as BENHNHAN_PHAITHANHTOAN
+    from TT_VIENPHI
+    where TIEPNHAN_ID in (select TIEPNHAN_ID from TT_TIEPNHAN where SOTIEPNHAN = '$SOTIEPNHAN$') and (BENHAN_ID is null or BENHAN_ID = '') and BENHVIEN_ID = '$BENHVIEN_ID$'
+  </statement>
+    <statement id="DAO00009_TT_DVYEUCAU_Update" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      Update TT_DVYEUCAU set TRANGTHAI_WFL = '$STATUS_CODE$' where DVYEUCAU_ID = '$DVYEUCAU_ID$'
+    </statement>
+    <statement id="DAO00009_TT_TIEPNHAN_GetProcess" parameterClass="System.Collections.IDictionary" resultClass="DataObject">
+      select PROCESS_ID from TT_TIEPNHAN where SOTIEPNHAN = '$SOTIEPNHAN$'
+    </statement>
+  </statements>
+</sqlMap>
